@@ -1,0 +1,285 @@
+---
+title: "proyectos"
+output: html_document
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(echo = F, 
+message = F,
+warning = F, 
+fig.asp = 0.8, 
+fig.width = 7, 
+out.width = "100%",
+dpi = 300,
+collapse = TRUE,
+comment = "#>"
+) 
+```
+
+```{r setup}
+library(pacman)
+p_load(tidyverse, magrittr, highcharter, lubridate, devtools, randonNames)
+library(ggchicklet)
+library(randomNames)
+```
+
+
+
+# Iniciativa
+
+```{r}
+proyectos <- tibble( proyecto  = letters[1:26],
+                     grupo = sample(c("Presentado", "Debatido", "Aprobado"),
+                                    prob = c(.5,.3 ,.1), size = 26, replace = T),
+                     Iniciativa = sample(c("Congreso", "Ejecutivo"),prob = c(.7,.3 ), 
+                                         size = 26, replace = T),
+                     fecha = sample(seq(today()-10, today(), length.out = 11), size = 26, replace = T )) %>%
+  arrange(fecha)
+
+proyectos %>%
+  count(Iniciativa) %>%
+  ggplot(aes(x = fct_reorder(Iniciativa, n),y =n, label = n, fill = Iniciativa)) +
+  geom_chicklet(width = 0.55 )+
+  scale_fill_manual(values = c("#25664F", "#2B6170"))+
+  labs(x = "", y = "", title = "Proyectos aprobados")+
+  geom_text(nudge_y = -1, size =6, color = "white")+
+  theme_minimal() +coord_flip()+
+  theme(legend.position = "none",
+        panel.grid = element_blank(),
+        axis.text.x = element_blank(),
+        text=element_text(size=18, family="Avenir Next"))
+
+
+```
+
+## Temas
+
+
+```{r}
+pal <- colorRampPalette(c("#2B6170", "#93ACAF"))
+
+tibble(x = c("Economía", "Salud", "Finanzas", "Infraestructura",
+             "Gobierno", "Comunicación", "Transportes", "Hacienda", "Derechos humanos",
+             "Inversión", "Seguridad"),
+       n = sample(c(4:10), size = 11, replace = T)) %>%
+  arrange(desc(n)) %>%
+  hchart(hcaes(x = x,  value = n), type = "treemap")%>%
+  hc_plotOptions(treemap = list(borderRadius = 7, colorByPoint = T,
+                                dataLabels = list(style = list(fontFamily = "Avenir next", fontSize = "16px")))) %>%
+  hc_colors(colors = pal(11)) %>%
+  hc_chart(style = list(fontFamily = "Avenir next"
+  ))
+
+
+
+```
+
+## Estatus
+
+
+```{r}
+
+proyectos %>%  count(fecha, grupo) %>%
+  arrange(fecha) %>%
+  hchart(hcaes(x = fecha, y = n, group = grupo), type = "line") %>%
+  hc_plotOptions(line= list(lineWidth = 4,
+                            marker = list(radius =0),
+                            stickyTracking=F)) %>%
+  hc_xAxis(crosshair = T, title = list(text = "Fecha",  style = list(color = "#FFF")), type = "datetime",
+           lineWidth = 0, tickWidth  = 0, gridLineWidth =0,
+           showLastLabel= F,
+           labels = list(step = 3, style = list(fontSize = "16px", color = "#FFF") )) %>%
+  hc_yAxis(crosshair = F, title = list(text = "Total de proyectos", style = list(color = "#FFF")), tickAmount = 3, max = 6, min =0,
+           dashStyle = "dot",
+           gridLineWidth =.5, showFirstLabel = F, gridLineColor = "",
+           labels = list( style = list(fontSize = "12px") )) %>%
+  #title
+  hc_title(text = "<b>Proyectos de ley",  style = list(color = "#FFF")) %>%
+  #tooltip
+  hc_tooltip(
+    borderWidth= 0,
+    outside = T,
+    textOutline= "3px contrast",
+    shadow=F,
+    shared = T,
+    split = F,
+    headerFormat= '<span style="font-size: 10px">{point.key}</span><br/>'
+    # pointFormat = '<span style="color:{point.color}">●</span> <b> {point.candidato}<b><br> p. clave: {point.palabra}<br> {point.n} tuits <br> {point.rt} retuits<br> {point.favs} favoritos<br>'
+  ) %>%
+  hc_colors(colors = c("#2C6170", "#FF6B6B", "#FFE66D")) %>%
+  hc_chart(style = list(fontFamily = "Avenir next"
+  )) %>%
+  hc_annotations(
+    list(
+      labelOptions = list(y = 50, x = 0),
+      labels = list(
+        list(
+          backgroundColor = "#FFF",
+          borderWidth = 0,
+          style = list(fontSize = "16px"),
+          point = list(
+            x = highcharter::datetime_to_timestamp(today()-4.7),
+            y = 4.7,
+            xAxis = 0,
+            yAxis = 0
+          ),
+          text = "<b>A la fecha</b><br> 26 proyectos en total<br>
+                        13 presentados <br> 8 debatidos <br> 5 aprobados" )
+      )
+    )
+  )
+
+```
+
+## Proyectos por ministro
+
+
+```{r}
+colores <- c("#1d67ac",  "#ff4f4f", "#93c73d", "#6d4fa0",
+                "#6b4c2a", "#f9a819", "#019188", "#d34787",
+                "#164a80", "#F05647", "#0e4c42", "#3b005a", 
+                "#AD8156", "#fdc10e", "#00b140", "#e995bf" )
+library(randomNames)
+
+ministros <- list()
+
+ministros$nombres <- randomNames(11, gender=1, ethnicity=4, name.order="first.last", name.sep=" ")
+
+ministros <- as.tibble(ministros)
+min <- tibble(partidos = c("P. Liberal", "P. Conservador", "P. Cambio Radical", "P. de la U",
+             "P. Centro Democrático", "P. Alianza Verde", "Mov. Autoridades Indígenas", "P. Alianza Social Independiente", "P. Político Mira", 
+             "P. Polo Democrático", "Mov. Colombia Humana"),
+       n = sample(c(4:10), size = 11, replace = T)) 
+
+min$nombres <- ministros$nombres
+
+min %>%
+  ggplot(aes(x = fct_reorder(nombres, n),y =n, label = n, fill = nombres)) +
+  geom_chicklet(width = 0.55 )+
+  scale_fill_manual(values = colores)+
+  labs(x = "", y = "", title = "Proyectos presentados \npor ministros")+
+  geom_text(nudge_y = -1, size =6, color = "white")+
+  theme_minimal() +coord_flip()+
+  theme(legend.position = "none",
+        panel.grid = element_blank(),
+        axis.text.x = element_text(),
+        text=element_text(size=18, family="Avenir Next"))
+
+```
+
+
+
+
+## Citaciones
+
+
+
+```{r}
+
+cit <- tibble(partidos = c("P. Liberal", "P. Conservador", "P. Cambio Radical", "P. de la U",
+             "P. Centro Democrático", "P. Alianza Verde", "Mov. Autoridades Indígenas", "P. Alianza Social Independiente", "P. Político Mira", 
+             "P. Polo Democrático", "Mov. Colombia Humana"),
+       n = sample(c(4:10), size = 11, replace = T)) 
+
+cit %>%
+  ggplot(aes(x = fct_reorder(partidos, n),y =n, label = n, fill = partidos)) +
+  geom_chicklet(width = 0.55 )+
+  scale_fill_manual(values = colores)+
+  labs(x = "", y = "", title = "Citaciones por partido")+
+  geom_text(nudge_y = -1, size =6, color = "white")+
+  theme_minimal() +coord_flip()+
+  theme(legend.position = "none",
+        panel.grid = element_blank(),
+        axis.text.x = element_text(),
+        text=element_text(size=18, family="Avenir Next"))
+
+```
+
+
+## Autorías
+
+
+
+```{r}
+
+autorias <- tibble(partidos = c("P. Liberal", "P. Conservador", "P. Cambio Radical", "P. de la U",
+             "P. Centro Democrático", "P. Alianza Verde", "Mov. Autoridades Indígenas", "P. Alianza Social Independiente", "P. Político Mira", 
+             "P. Polo Democrático", "Mov. Colombia Humana"),
+       n = sample(c(4:10), size = 11, replace = T)) 
+
+autorias %>%
+  ggplot(aes(x = fct_reorder(partidos, n),y =n, label = n, fill = partidos)) +
+  geom_chicklet(width = 0.55 )+
+  scale_fill_manual(values = colores)+
+  labs(x = "", y = "", title = "Autorías de proyecto \npor partido")+
+  geom_text(nudge_y = -1, size =6, color = "white")+
+  theme_minimal() +coord_flip()+
+  theme(legend.position = "none",
+        panel.grid = element_blank(),
+        axis.text.x = element_text(),
+        text=element_text(size=18, family="Avenir Next"))
+
+```
+
+
+## Composición
+
+
+```{r}
+require(ggmosaic)
+data(Titanic)
+titanic <- as.data.frame(Titanic)
+titanic$Survived <- factor(titanic$Survived, levels=c("Yes", "No"))
+titanic <- titanic[1:25, ]
+titanic$edad <- c("De 20 a 30", "De 31 a 40", "De 41 a 50", "De 51 a 60", "Más de 60", 
+                  "De 20 a 30", "De 31 a 40", "De 41 a 50", "De 51 a 60", "Más de 60", 
+                  "De 20 a 30", "De 31 a 40", "De 41 a 50", "De 51 a 60", "Más de 60",
+                  "De 20 a 30", "De 31 a 40", "De 41 a 50", "De 51 a 60", "Más de 60", 
+                  "De 20 a 30", "De 31 a 40", "De 41 a 50", "De 51 a 60", "Más de 60")
+titanic$Sex <- as.character(titanic$Sex)
+ggplot(data=titanic) +
+  geom_mosaic(aes(x=product(edad, Sex), fill=edad, weight=Freq), na.rm=TRUE) +
+  scale_fill_manual(values=c("#174a80", "#00A896",
+             "#0f4c42", "#cb2833", "#91d400","#ffc200"))   +
+  labs(x = "", y = "", title = "Composición de los partidos \n en el congreso")+
+  theme_minimal() +
+  theme(panel.grid = element_blank(),
+        axis.text.x = element_blank(),
+        text=element_text(size=18, family="Avenir Next"))
+
+  
+
+
+```
+
+
+## Circunscripciones
+
+```{r}
+library(sf)
+library(leaflet)
+
+secc <- st_read("/Users/admin/Downloads/SUDAMERICA_ADM2/sudamerica_adm2.shp", stringsAsFactors = FALSE, quiet = TRUE) %>%
+  st_transform(4326) 
+
+secc <- filter(secc, ADM0=="COLOMBIA") 
+secc$n <- sample(c(0:500), 1119, replace = TRUE)
+
+
+labels <- sprintf(
+  "<strong>%s</strong><br/>%s",
+  paste("Estado: ", secc$ADM1, sep=""),
+  paste("Distrito: ", secc$ADM2, sep="")
+) %>% lapply(htmltools::HTML)
+leaflet() %>%
+  addProviderTiles(providers$CartoDB.Positron) %>%
+  addPolygons(
+    data=secc,
+     weight = 1,
+    fillOpacity = 1,
+    fillColor = ~colorQuantile("RdYlBu", n)(n),
+    opacity=2,
+    label= labels,
+    color="grey")
+
+```
