@@ -165,9 +165,11 @@ proyectos <- tibble( proyecto  = letters[1:50],
   arrange(fecha)
 
 proyectos %>% count(fecha, grupo) %>%
+  group_by(grupo) %>%  mutate(n = cumsum(n)) %>%
   filter(grupo == "Total") %>%
   hchart(hcaes(x = fecha, y  = n),name = "Total", type = "area", color = "#93ACAF") %>%
-  hc_add_series(proyectos %>% count(fecha, grupo) %>% filter(grupo != "Total"),
+  hc_add_series(proyectos %>% count(fecha, grupo) %>%
+                  group_by(grupo) %>%  mutate(n = cumsum(n))%>% filter(grupo != "Total"),
                 hcaes(x = fecha, y  = n), type = "line", color = "#2B6170", name = "Ley") %>%
   hc_yAxis(min = 0, title = list(text = "Proyectos" , style = list( fontSize = "16px", color = "#41657A")),
            gridLineWidth =0, tickAmount = 2,
@@ -240,27 +242,20 @@ tibble(fecha=seq(from = today()-23*365, to =today(), length.out = 8396 ),
   mutate(year = datetime_to_timestamp(year)) %>%
   hchart(hcaes(x = year, y = n, group = tema), type = "line") %>%
   hc_xAxis(type = "datetime") %>%
-  hc_yAxis(title = list(text = "Proyectos de ley"))
+  hc_yAxis(title = list(text = "Proyectos de ley")) %>%
 hc_tooltip(shared = T)
 
 
-# Tiempo de aprobación
-tibble(gob = c( "1998" ,"2001", "2004", "2007", "2010", "2013", "2016", "2019"),
-)
+# Tiempo de aprobación en días promedio por año
+tibble(year = c(1998:2021),
+       dias =sample(20:42, size = 24, replace = T),
+       min = dias-9,
+       max = dias +11) %>%
+  arrange(dias) %>%
+  hchart(hcaes(x = year, low = min, high = max), type = "columnrange") %>%
+  hc_plotOptions(columnrange = list(borderRadius = 8,pointWidth = 10)) %>%
+  hc_chart(inverted = T)
 
-aux<-  tibble(fecha=seq(from = today()-23*365, to =today(), length.out = 8396 ),
-              n = sample(c(0,1, 0,2, 0), size = 8396, replace = T))  %>%
-  mutate( year= floor_date(fecha, unit = "year"))
-tibble(fecha=seq(from = today()-23*365, to =today(), length.out = 8396 ),
-       n = sample(c(0,1, 0,2, 0), size = 8396, replace = T))  %>%
-  mutate( year= floor_date(fecha, unit = "year")) %>%
-  # group_by(year) %>%  summarise(n = sum(n)) %>%
-  ggplot()+
-  geom_boxplot(aes(x = year, y =n, group = year))
-
-
-hcboxplot(x = aux$year, var = aux$n)
-data_to_boxplot(data = aux, variable = n, group_var = year)
 
 
 
