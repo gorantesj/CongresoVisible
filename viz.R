@@ -140,7 +140,41 @@ camara = c(rep(c("Senadores", "Representantes"),20 ))) %>%
   # group_by(grupo) %>%
   arrange(desc(n)) %>%
   hchart(hcaes(label = partido, y = n, name = partido), type = "item") %>%
-  hc_title(text = "Asientos por partido")
+  hc_title(text = "Asientos por partido") %>%
+  hc_subtitle(text = "Senadores")
+
+tibble(partido =c("AICO", "AICO",
+                  "Alianza Verde", "Alianza Verde",
+                  "Bancada Afrocolombiana", "Bancada Afrocolombiana",
+                  "BLOQUE PACÍFICO","BLOQUE PACÍFICO",
+                  "Cambio Radical", "Cambio Radical",
+                  "Centro Democrático", "Centro Democrático",
+                  "Coalición Alternativa Santandereana", "Coalición Alternativa Santandereana",
+                  "Coalición Lista de la Decencia", "Coalición Lista de la Decencia",
+                  "Colombia Humana", "Colombia Humana",
+                  "Colombia Justa Libres", "Colombia Justa Libres",
+                  "CCACNPR", "CCACNPR",
+                  # "Consejo Comunitario Ancestral de Comunidades Negras Playa Renaciente", "Consejo Comunitario Ancestral de Comunidades Negras Playa Renaciente",
+                  "Consejo Comunitario La Mamuncia", "Consejo Comunitario La Mamuncia",
+                  "Conservador Colombiano", "Conservador Colombiano",
+                  "FARC", "FARC",
+                  "Liberal Colombiano", "Liberal Colombiano",
+                  "MAIS", "MAIS",
+                  "MIRA", "MIRA",
+                  "Opción Ciudadana", "Opción Ciudadana",
+                  "Partido de la U", "Partido de la U",
+                  "PDA", "PDA"
+),
+n = c(1,0, 9, 9, 3,18,23, 28,17, 30, 19, 32,0,1, 3, 2,
+      1,1, 3,1, 0,1, 0,1, 13,21, 5,4, 15,35, 1,2, 3,1,
+      1,4, 14,25, 6,2 ),
+camara = c(rep(c("Senadores", "Representantes"),20 ))) %>%
+  filter(camara == "Representantes") %>%
+  # group_by(grupo) %>%
+  arrange(desc(n)) %>%
+  hchart(hcaes(label = partido, y = n, name = partido), type = "item") %>%
+  hc_title(text = "Asientos por partido") %>%
+  hc_subtitle(text = "Representantes")
 
 
 
@@ -247,17 +281,17 @@ hc_tooltip(shared = T)
 
 
 # Tiempo de aprobación en días promedio por año
-tibble(year = c(1998:2021),
+aux <- tibble(year = c(1998:2021),
        dias =sample(20:42, size = 24, replace = T),
        min = dias-9,
        max = dias +11) %>%
-  arrange(dias) %>%
+  arrange(dias)
+aux %>%
   hchart(hcaes(x = year, low = min, high = max), type = "columnrange") %>%
+  hc_add_series(aux, hcaes(x = year, y = dias), type = "scatter") %>%
   hc_plotOptions(columnrange = list(borderRadius = 8,pointWidth = 10)) %>%
-  hc_chart(inverted = T)
-
-
-
+  hc_chart(inverted = T) %>%
+  hc_title(text = "Días promedio en aprobar proyectos de ley por año")
 
 
 
