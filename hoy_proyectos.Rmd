@@ -18,7 +18,7 @@ comment = "#>"
 
 ```{r setup}
 library(pacman)
-p_load(tidyverse, magrittr, highcharter, lubridate, devtools, randonNames)
+p_load(sf, tidyverse, magrittr, highcharter, lubridate, devtools, randonNames)
 library(ggchicklet)
 library(randomNames)
 ```
@@ -282,4 +282,203 @@ leaflet() %>%
     label= labels,
     color="grey")
 
+```
+
+
+# Proyectos aprobados por congresista
+
+```{r}
+proyectos <- tibble( proyecto  = letters[1:26],
+                     grupo = sample(c("No Aprobado", "Aprobado"),
+                                    prob = c(.5,.5), size = 26, replace = T),
+                     Iniciativa = sample(c("Congreso", "Ejecutivo"),prob = c(.7,.3 ), 
+                                         size = 26, replace = T),
+                     fecha = sample(seq(today()-10, today(), length.out = 11), size = 26, replace = T )) %>%
+  arrange(fecha)
+
+
+proyectos %>% 
+  count(fecha, grupo) %>%
+  arrange(fecha) %>%
+  hchart(hcaes(x = fecha, y = n, group = grupo), type = "line") %>%
+  hc_plotOptions(line= list(lineWidth = 4,
+                            marker = list(radius =0),
+                            stickyTracking=F)) %>%
+  hc_xAxis(crosshair = T, title = list(text = "Fecha",  style = list(color = "#FFF")), type = "datetime",
+           lineWidth = 0, tickWidth  = 0, gridLineWidth =0,
+           showLastLabel= F,
+           labels = list(step = 3, style = list(fontSize = "16px", color = "#FFF") )) %>%
+  hc_yAxis(crosshair = F, title = list(text = "Total de proyectos", style = list(color = "#FFF")), tickAmount = 3, max = 6, min =0,
+           dashStyle = "dot",
+           gridLineWidth =.5, showFirstLabel = F, gridLineColor = "",
+           labels = list( style = list(fontSize = "12px") )) %>%
+  #title
+  hc_title(text = "<b>Proyectos de ley",  style = list(color = "#FFF")) %>%
+  #tooltip
+  hc_tooltip(
+    borderWidth= 0,
+    outside = T,
+    textOutline= "3px contrast",
+    shadow=F,
+    shared = T,
+    split = F,
+    headerFormat= '<span style="font-size: 10px">{point.key}</span><br/>'
+    # pointFormat = '<span style="color:{point.color}">●</span> <b> {point.candidato}<b><br> p. clave: {point.palabra}<br> {point.n} tuits <br> {point.rt} retuits<br> {point.favs} favoritos<br>'
+  ) %>%
+  hc_colors(colors = c("#2C6170", "#FF6B6B")) %>%
+  hc_chart(style = list(fontFamily = "Avenir next"
+  )) %>%
+  hc_annotations(
+    list(
+      labelOptions = list(y = 50, x = 0),
+      labels = list(
+        list(
+          backgroundColor = "#FFF",
+          borderWidth = 0,
+          style = list(fontSize = "16px"),
+          point = list(
+            x = highcharter::datetime_to_timestamp(today()-4.7),
+            y = 4.7,
+            xAxis = 0,
+            yAxis = 0
+          ),
+          text = "<b>A la fecha</b><br> 26 proyectos en total<br>
+                        12 aprobados <br> 14 no aprobados" )
+      )
+    )
+  )
+
+
+```
+
+```{r}
+
+proyectos <- tibble(fecha = sample(seq(as.Date("1998/1/1"), as.Date("2021/4/1"), by = "quarter"), replace = T ), 
+                    total=sample(1:200, size=94, replace=T)) %>%
+  arrange(fecha) %>% 
+  mutate(fecha=ymd(fecha), 
+         fecha_final=floor_date(fecha, unit="year"))
+
+
+data_summary <- function(data, varname, groupnames){
+  require(plyr)
+  summary_func <- function(x, col){
+    c(mean = mean(x[[col]], na.rm=TRUE),
+      sd = sd(x[[col]], na.rm=TRUE))
+  }
+  data_sum<-ddply(data, groupnames, .fun=summary_func,
+                  varname)
+  data_sum <- rename(data_sum, c("mean" = varname))
+ return(data_sum)
+}
+
+df2 <- data_summary(proyectos, varname="total", 
+                    groupnames=c("fecha_final"))
+
+
+
+
+
+ ggplot(df2, aes(x=fecha_final, y=total)) + 
+ geom_line(color="red3") +
+ geom_point(color="red3", size=3) +
+ geom_errorbar(aes(ymin=total-sd, ymax=total+sd), width=.2,
+                 position=position_dodge(.9)) +
+  labs(title = "Total de congresistas mujeres por periodo")+
+  theme_minimal() +
+  theme(panel.grid = element_blank(),
+        # axis.text.x = element_blank(),
+        text=element_text(size=18, family="Avenir Next"))
+
+
+
+```
+
+## Años en el cargo
+
+
+
+```{r}
+colores <- c("#1d67ac",  "#ff4f4f", "#93c73d", "#6d4fa0",
+                "#6b4c2a", "#f9a819", "#019188", "#d34787",
+                "#164a80", "#F05647", "#0e4c42", "#3b005a", 
+                "#AD8156", "#fdc10e", "#00b140", "#e995bf" )
+
+ministros <- list()
+
+ministros$nombres <- randomNames(11, gender=1, ethnicity=4, name.order="first.last", name.sep=" ")
+
+ministros <- as.tibble(ministros)
+min <- tibble(partidos = c("P. Liberal", "P. Conservador", "P. Cambio Radical", "P. de la U",
+             "P. Centro Democrático", "P. Alianza Verde", "Mov. Autoridades Indígenas", "P. Alianza Social Independiente", "P. Político Mira", 
+             "P. Polo Democrático", "Mov. Colombia Humana"),
+       n = sample(c(4,8), size = 11, replace = T)) 
+
+min$nombres <- ministros$nombres
+
+min %>%
+  ggplot(aes(x = fct_reorder(nombres, n),y =n, label = n, fill = nombres)) +
+  geom_chicklet(width = 0.55 )+
+  scale_fill_manual(values = colores)+
+  labs(x = "", y = "", title = "Total de años en el cargo por ministro")+
+  geom_text(nudge_y = -1, size =6, color = "white")+
+  theme_minimal() +coord_flip()+
+  theme(legend.position = "none",
+        panel.grid = element_blank(),
+        axis.text.x = element_text(),
+        text=element_text(size=18, family="Avenir Next"))
+```
+
+
+# Mapa hexagonal
+
+```{r}
+
+library(viridis)
+library(hrbrthemes)
+library(mapdata)
+library(hexbin)
+library(geogrid)
+
+col <- st_read("/Users/admin/Downloads/depto/depto.shp", stringsAsFactors = FALSE, quiet = TRUE) %>%
+  st_transform(4326) 
+col$voto <- sample(c("A favor", "En contra"),
+                      prob = c(.7,.3), size = 33, replace = T)  
+    
+
+
+
+#first make our sf object into an sp object
+eu_sp <- as(col, 'Spatial')
+
+#then use the calculate_grid function. Note how we specify grid type to be "regular".
+eu_reg <- calculate_grid(shape = eu_sp, grid_type = "hexagonal", seed = 1)
+#assign the polygons
+eu_reg <- assign_polygons(eu_sp, eu_reg)
+
+#now turn it back into sf object for easy ggplot plotting
+eu_reg <- st_as_sf(eu_reg)
+
+
+
+ggplot() +
+  geom_sf(data = eu_reg, aes(fill = voto),alpha=0.3) +
+   scale_fill_manual(values=c("green4", "red3"))+
+            theme_void() +
+  labs(title="Voto por estado", fill="")+
+  theme(
+        panel.grid = element_blank(),
+        text=element_text(size=18, family="Avenir Next"))
+    
+
+
+  
+  
+```
+```{r}
+
+ggplot(data = col) +
+    geom_sf(aes(geometry=geometry, fill=voto), alpha=0.3) +
+   scale_fill_manual(values=c("green4", "red3"))+
+  theme_void()
 ```
