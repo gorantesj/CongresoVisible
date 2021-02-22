@@ -109,7 +109,7 @@ tibble(edad = sample(30:78, size = 172, replace = T),
   ))%>%
   hc_yAxis(labels= list(formatter = JS("function(){ return Math.abs(this.value); }")))
 
-#Profesion
+#Asientos por partido
 tibble(partido =c("AICO", "AICO",
                   "Alianza Verde", "Alianza Verde",
                   "Bancada Afrocolombiana", "Bancada Afrocolombiana",
@@ -140,10 +140,16 @@ camara = c(rep(c("Senadores", "Representantes"),20 ))) %>%
   # group_by(grupo) %>%
   arrange(desc(n)) %>%
   hchart(hcaes(label = partido, y = n, name = partido), type = "item") %>%
-  hc_title(text = "Congresistas con más proyectos de ley erradicados")
+  hc_title(text = "Asientos por partido")
 
 
 
+#Profesión
+tibble(partido =c("Derecho", "Economía", "Comunicación", "Ingeniería", "Otros"),
+n = c(104,22, 21,16 , 9)) %>%
+  arrange(desc(n)) %>%
+  hchart(hcaes(label = partido, y = n, name = partido), type = "item") %>%
+  hc_title(text = "Profesión")
 
 
 # Histórico ---------------------------------------------------------------
