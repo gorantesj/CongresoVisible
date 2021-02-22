@@ -5,8 +5,6 @@ library(highcharter)
 # Congreso hoy ------------------------------------------------------------
 # Congresistas ------------------------------------------------------------
 #Con más autorías
-
-#Con más citaciones
 tibble(congresista = c("Yenica Acosta", "Laureano Augusto", "Iván Agudelo",
                        "Richard Aguilar", "Modesto Aguilera", "Luis Albán",
                        "José Amar", "Miguel Amín", "Fabio Leduc", "Esperanza Martínez",
@@ -17,9 +15,10 @@ tibble(congresista = c("Yenica Acosta", "Laureano Augusto", "Iván Agudelo",
   # group_by(grupo) %>%
   arrange(desc(n)) %>%
   hchart(hcaes(x = congresista, y = n, group = grupo), type = "bar") %>%
-  hc_title(text = "Congresistas con más proyectos de ley erradicados")
+  hc_title(text = "Congresistas con más proyectos de ley como autor")
 
 
+#Con más citaciones
 tibble(congresista = c("Yenica Acosta", "Laureano Augusto", "Iván Agudelo",
                        "Richard Aguilar", "Modesto Aguilera", "Luis Albán",
                        "José Amar", "Miguel Amín", "Fabio Leduc", "Esperanza Martínez",
@@ -36,7 +35,7 @@ tibble(congresista = c("Yenica Acosta", "Laureano Augusto", "Iván Agudelo",
 
 # Partidos ----------------------------------------------------------------
 
-
+#Citaciones
 tibble(partido = c("CD", "CR", "AV","PDA", "PLC",
                    "CD", "CR", "PSUN", "PCC", "Decentes"),
        grupo = c("Gobierno", "Gobierno", "Oposición", "Oposición", "Independente",
@@ -48,9 +47,20 @@ tibble(partido = c("CD", "CR", "AV","PDA", "PLC",
   hchart(hcaes(x = partido, y = n, group = camara), type = "bar") %>%
   hc_title(text = "Partidos con más citaciones")
 
+#Autorías
+tibble(partido = c("CD", "CR", "AV","PDA", "PLC",
+                   "CD", "CR", "PSUN", "PCC", "Decentes"),
+       grupo = c("Gobierno", "Gobierno", "Oposición", "Oposición", "Independente",
+                 "Gobierno",  "Gobierno",  "Gobierno",  "Gobierno", "Oposición"),
+       n = c(sample(21:0, size = 10, replace = T)),
+       camara = c(rep(c("Senado"), 5), rep(c("Representantes"), 5)) )%>%
+  # group_by(grupo) %>%
+  arrange(desc(n)) %>%
+  hchart(hcaes(x = partido, y = n, group = camara), type = "bar") %>%
+  hc_title(text = "Partidos con más autorías")
 
 
-
+#Temas
 highchart() %>%
   hc_chart(type = 'sankey') %>%
   hc_add_series(
