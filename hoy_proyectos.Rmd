@@ -18,9 +18,10 @@ comment = "#>"
 
 ```{r setup}
 library(pacman)
-p_load(tidyverse, magrittr, highcharter, lubridate, devtools)
+p_load(tidyverse, magrittr, highcharter, lubridate, devtools, viridis, hrbrthemes, mapdata)
 library(ggchicklet)
 library(randomNames)
+
 ```
 # Congreso hoy 
 
@@ -32,7 +33,7 @@ library(randomNames)
 proyectos <- tibble( proyecto  = letters[1:26],
                      grupo = sample(c("Presentado", "Debatido", "Aprobado"),
                                     prob = c(.5,.3 ,.1), size = 26, replace = T),
-                     Iniciativa = sample(c("Cámara de Representantes", "Senado"),prob = c(.7,.3 ), 
+                     Iniciativa = sample(c("Cámara de \nRepresentantes", "Senado"),prob = c(.7,.3 ), 
                                          size = 26, replace = T),
                      fecha = sample(seq(today()-10, today(), length.out = 11), size = 26, replace = T )) %>%
   arrange(fecha)
@@ -146,7 +147,6 @@ colores <- c("#1d67ac",  "#ff4f4f", "#93c73d", "#6d4fa0",
                 "#6b4c2a", "#f9a819", "#019188", "#d34787",
                 "#164a80", "#F05647", "#0e4c42", "#3b005a", 
                 "#AD8156", "#fdc10e", "#00b140", "#e995bf" )
-library(randomNames)
 
 ministros <- list()
 
@@ -596,18 +596,19 @@ tibble(year = c(1998:2021),
 
 ```{r}
 
-
 tibble(hombres = sample(50:100, size = 24, replace = T),
        year = c(1998:2021),
        mujeres = 100-hombres) %>%  gather(sexo, n, c(hombres,mujeres )) %>%
-  hchart(hcaes(x = year, group= sexo, y =n), type = "area")
+  hchart(hcaes(x = year, group= sexo, y =n), type = "area") %>%
+  hc_plotOptions(area = list(stacking = T))
 
 ```
 
-### Edad promedio por año
+### Mediana de edad por año
 
 
 ```{r}
+# por año
 tibble( year = c(1998:2021),
         media = sample(40:87, size = 24, replace = T),
         q1 =round(quantile(media, probs = .25),2),
@@ -617,7 +618,7 @@ tibble( year = c(1998:2021),
   geom_bar( aes(x=fct_reorder(year,media) , y=media), stat="identity", fill="#720026", alpha=0.8, width=0.5) +
   geom_errorbar( aes(x=year, ymin=q1, ymax=q3), width=0.2, colour="black", alpha=0.9, size=.5) +
   #titulos
-  labs( y ="Promedio", x = "")+
+  labs( y ="Mediana", x = "", title = "Edad mediana por año")+
   # temas
   theme_minimal()+
   theme(legend.position="none",
@@ -894,9 +895,6 @@ tibble(votos = sample(30:78, size = 172, replace = T),
 
 ```{r}
 
-library(viridis)
-library(hrbrthemes)
-library(mapdata)
 library(hexbin)
 library(geogrid)
 
@@ -929,20 +927,36 @@ ggplot() +
   theme(
         panel.grid = element_blank(),
         text=element_text(size=18, family="Avenir Next"))
-    
-
-
   
+```
+
+
+
+```{r}
+
+pal <- 
+   colorFactor(palette = c("green4", "red3"), 
+               levels = c("A favor", "En contra"))
+
+labels <- sprintf(
+  "<strong>%s</strong>",
+  paste("Departamento: ", eu_reg$NOMBRE_DPT, sep="")
+) %>% lapply(htmltools::HTML)
+
+
+  leaflet() %>%
+  addPolygons(
+    data=eu_reg,
+     weight = 1,
+    fillOpacity = 8, 
+    fillColor = ~pal(voto), 
+    opacity=2,
+    label= labels,
+    color="white")
   
 ```
 
 ### Comparación
 
 
-```{r}
 
-ggplot(data = col) +
-    geom_sf(aes(geometry=geometry, fill=voto), alpha=0.3) +
-   scale_fill_manual(values=c("green4", "red3"))+
-  theme_void()
-```
