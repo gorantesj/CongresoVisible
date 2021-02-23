@@ -301,9 +301,10 @@ aux %>%
 tibble(hombres = sample(50:100, size = 24, replace = T),
        year = c(1998:2021),
        mujeres = 100-hombres) %>%  gather(sexo, n, c(hombres,mujeres )) %>%
-  hchart(hcaes(x = year, group= sexo, y =n), type = "area")
+  hchart(hcaes(x = year, group= sexo, y =n), type = "area") %>%
+  hc_plotOptions(area = list(stacking = T))
 
-#Edad promedio por año
+#Edad Mediana por año
 tibble( year = c(1998:2021),
         media = sample(40:87, size = 24, replace = T),
         q1 =round(quantile(media, probs = .25),2),
@@ -313,7 +314,7 @@ tibble( year = c(1998:2021),
   geom_bar( aes(x=fct_reorder(year,media) , y=media), stat="identity", fill="#720026", alpha=0.8, width=0.5) +
   geom_errorbar( aes(x=year, ymin=q1, ymax=q3), width=0.2, colour="black", alpha=0.9, size=.5) +
   #titulos
-  labs( y ="Promedio", x = "")+
+  labs( y ="Mediana", x = "", title = "Edad mediana por año")+
   # temas
   theme_minimal()+
   theme(legend.position="none",
