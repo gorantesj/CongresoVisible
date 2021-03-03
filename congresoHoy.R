@@ -182,7 +182,8 @@ tbl(con, "proyecto_leys") %>%
   filter(estado %in% c("Audiencia Pública" ,"Solicitud Audiencia Pública" )) %>%
   select(n) %>% summarise(n = sum(n)) %>%  show_query()
 
-#Proyectos de ley -> Resumen de la legislatura en cifras -> Debates de Control Político citados
+#Proyectos de ley -> Resumen de la legislatura en cifras ->
+# Debates de Control Político citados
 
 
 #Proyectos de ley -> Resumen de la legislatura en cifras -> Sentencias emitidas
@@ -276,7 +277,7 @@ tbl(con, "proyecto_ley_autors") %>%
 
 #Proyectos de ley -> Actividad por Partido Políticos ->
 # Temas recurrentes -> Representantes a la Cámara
-tbl(con, "proyecto_leys") %>%  collect()
+
 
 #Proyectos de ley -> Actividad por Partido Políticos ->
 # Temas recurrentes -> Senadores
