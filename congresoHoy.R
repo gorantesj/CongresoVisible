@@ -97,8 +97,20 @@ tbl(con, "proyecto_leys") %>%  count(tema_proyecto_ley_id)  %>%
   show_query()
 
 #Proyectos de ley -> Estado de los Proyectos de Ley -> Cámara de representantes
+tbl(con, "proyecto_leys") %>%
+  filter(camara_id == 1) %>%
+  # filter(activo == 1 && cuatrienio_id == 1) %>%
+  count(estado_actual_id) %>%
+  left_join(tbl(con, "estado_proyecto_leys") %>%
+              select(estado_actual_id = id, estado = nombre) ) %>%  show_query()
 
 #Proyectos de ley -> Estado de los Proyectos de Ley -> Senado de la república
+tbl(con, "proyecto_leys") %>%
+  filter(camara_id == 2) %>%
+  # filter(activo == 1 && cuatrienio_id == 1) %>%
+  count(estado_actual_id) %>%
+  left_join(tbl(con, "estado_proyecto_leys") %>%
+              select(estado_actual_id = id, estado = nombre) )%>%  show_query()
 
 
 #Proyectos de ley -> Total presentados por ministros -> Senado de la república
