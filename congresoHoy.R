@@ -12,4 +12,13 @@ con <- dbConnect(
 )
 
 
-dbListTables(con)
+# Congreso hoy ------------------------------------------------------------
+
+#Proyectos de ley -> Número de PL en en trámite -> Proyectos en Cámara
+tbl(con, "proyecto_leys") %>%
+  filter(activo == 1 && cuatrienio_id == 1) %>%
+  mutate(proyecto_ley_id = id) %>%
+  select(proyecto_ley_id, numero_camara) %>%
+  show_query()
+
+#Proyectos de ley -> Número de PL en en trámite -> Proyectos en Senado
