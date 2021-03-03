@@ -22,9 +22,21 @@ tbl(con, "proyecto_leys") %>%
   count(estado_actual_id) %>%
   left_join(tbl(con, "estado_proyecto_leys") %>%
               select(estado_actual_id = id, estado = nombre) ) %>%
-  #Esta lista puede cambiar
-  filter(estado %in% c("Aprobado Primer Debate", "Aprobado Segundo Debate",
-                       "Acto Legislativo")) %>%
+  #esta lista puede cambiar
+  filter(estado %in% c("Aprobada conciliación en Senado",
+                       "Aprobado Primer Debate",
+                       "Aprobado Segundo Debate",
+                       "Aprobado Cuarto Debate",
+                       "Archivado por Vencimiento de Términos",
+                       "Publicada Ponencia Primer Debate",
+                       "Publicada Ponencia Segundo Debate",
+                       "Publicada Ponencia Tercer Debate",
+                       "Publicada Ponencia Cuarto Debate",
+                       "Publicación",
+                       "Comisión Accidental",
+                       "Corrección de Texto",
+                       "Acumulado",
+                       "Concepto Institucional")) %>%
   summarise(n=sum(n)) %>%  show_query()
 
 #Proyectos de ley -> Número de PL en en trámite -> Proyectos en Senado
@@ -34,9 +46,21 @@ tbl(con, "proyecto_leys") %>%
   count(estado_actual_id) %>%
   left_join(tbl(con, "estado_proyecto_leys") %>%
               select(estado_actual_id = id, estado = nombre) ) %>%
-  #Esta lista puede cambiar
-  filter(estado %in% c("Aprobado Primer Debate", "Aprobado Segundo Debate",
-                       "Acto Legislativo")) %>%
+  #esta lista puede cambiar
+  filter(estado %in% c("Aprobada conciliación en Senado",
+                       "Aprobado Primer Debate",
+                       "Aprobado Segundo Debate",
+                       "Aprobado Cuarto Debate",
+                       "Archivado por Vencimiento de Términos",
+                       "Publicada Ponencia Primer Debate",
+                       "Publicada Ponencia Segundo Debate",
+                       "Publicada Ponencia Tercer Debate",
+                       "Publicada Ponencia Cuarto Debate",
+                       "Publicación",
+                       "Comisión Accidental",
+                       "Corrección de Texto",
+                       "Acumulado",
+                       "Concepto Institucional")) %>%
   summarise(n=sum(n)) %>%  show_query()
 
 #Proyectos de ley -> Origen de la iniciativa -> Legislativa
