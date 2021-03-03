@@ -15,31 +15,40 @@ con <- dbConnect(
 # Congreso hoy ------------------------------------------------------------
 
 #Proyectos de ley -> Número de PL en en trámite -> Proyectos en Cámara
+# Faltan definir los estatus
 tbl(con, "proyecto_leys") %>%
-  filter(activo == 1 && cuatrienio_id == 1) %>%
-  mutate(proyecto_ley_id = id) %>%
-  select(proyecto_ley_id, numero_camara) %>%
+  filter(periodo_id== 1) %>%
+  tally() %>%
+  select(n) %>%
   show_query()
 
 #Proyectos de ley -> Número de PL en en trámite -> Proyectos en Senado
 
 
 #Proyectos de ley -> Actividad por Partido Políticos -> Total de autorías
-tbl(con, "proyecto_ley_autors") %>% filter(activo == 1) %>%  left_join(
-  tbl(con, "congresistas") %>% select(id, corporacion_id, partido_id) %>%
-    left_join(
-      tbl(con, "partidos") %>% filter(activo == 1) %>% select(id, partido = nombre, grupo = posicion_ideologica),
-      by = c("partido_id" = "id")
-    ) %>%
-    left_join(
-      tbl(con, "corporacions") %>% filter(activo == 1) %>% select(id, corporacion = nombre),
-      by = c("corporacion_id" = "id")
-    ) %>% select(id, partido, grupo, corporacion) ,
-  by = c("congresista_id"="id")
-) %>% count(partido, corporacion) %>%  show_query()
+tbl(con, "proyecto_ley_autors") %>%
+  # filter(activo == 1) %>%
+  left_join(
+    tbl(con, "congresistas") %>%
+      select(id, corporacion_id, partido_id) %>%
+      left_join(
+        tbl(con, "partidos") %>%
+          # filter(activo == 1) %>%
+          select(id, partido = nombre, grupo = posicion_ideologica),
+        by = c("partido_id" = "id")
+      ) %>%
+      left_join(
+        tbl(con, "corporacions") %>%
+          # filter(activo == 1) %>%
+          select(id, corporacion = nombre),
+        by = c("corporacion_id" = "id")
+      ) %>% select(id, partido, grupo, corporacion) ,
+    by = c("congresista_id"="id")
+  ) %>% count(partido, corporacion) %>%  show_query()
 
 #Gráfica
-tbl(con, "proyecto_ley_autors") %>% filter(activo == 1) %>%  left_join(
+tbl(con, "proyecto_ley_autors") %>%
+  filter(activo == 1) %>%  left_join(
   tbl(con, "congresistas") %>% select(id, corporacion_id, partido_id) %>%
     left_join(
       tbl(con, "partidos") %>% filter(activo == 1) %>% select(id, partido = nombre, grupo = posicion_ideologica),
