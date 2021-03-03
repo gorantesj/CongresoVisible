@@ -23,12 +23,7 @@ tbl(con, "congresistas") %>% filter(activo == 1, es_representante_camara == 1, c
   count(genero_id,años) %>% left_join(tbl(con,"generos") %>%
   select(id, genero = nombre), by = c("genero_id" = "id")) %>%
   ungroup %>% select(genero, años, n) %>%
-  ggplot(pop, aes(x = años, y = n, fill = genero)) +
-  geom_col(data = subset(pop, genero == "Hombres") %>%
-  mutate(`Poblacion por Sexo` = -`Poblacion por Sexo`),
-  width = 0.5, fill = "blue") +
-  geom_col(data = subset(pop, genero == "Mujeres"), width = 0.5, fill = "pink") +
-  coord_flip()
+  gather(genero, años, -n)
 
 # Congresistas -> Pirámide Poblacional de Edad y sexo -> Senadores
 tbl(con, "congresistas") %>% filter(activo == 1, es_senador == 1, cuatrienio_id == 1) %>%

@@ -14,6 +14,8 @@ con <- dbConnect(
 
 # Composición ------------------------------------------------------------
 # Objetivo: Mostrar la distribución de los partidos y sus miembros dentro del congreso
+# Filtro: Legislatura
+
 
 # Partidos -> Distribución de asientos-Senadores
 tbl(con, "congresistas") %>% filter(activo == 1, es_senador == 1, cuatrienio_id == 1) %>%
@@ -34,3 +36,27 @@ tbl(con, "congresistas") %>% filter(activo == 1, cuatrienio_id == 1) %>%
   left_join(tbl(con,"partidos") %>% select(id,partido = nombre), by = c("partido_id" = "id")) %>% ungroup %>%
   select(genero,años,partido,n) %>%
   show_query()
+
+# Congresistas -> Pirámide Poblacional de Edad y sexo -> Representantes a la Cámara
+
+# Congresistas -> Pirámide Poblacional de Edad y sexo -> Senadores
+
+# Congresistas -> Pirámide Poblacional de Edad y sexo -> Por partido
+
+# Congresistas -> Cuatrienios en el Congreso -> Cuatrienios como Representantes
+
+# Congresistas -> Cuatrienios en el Congreso -> Cuatrienios como Senadores
+
+# Congresistas -> Georepresentación
+
+# Congresistas -> Investigaciones
+# "jalar" 3 tipos de investigaciones: silla vacía, renunció  a la curul y los que empiecen por Atención:
+# pérdida de investidura.
+
+# Congresistas -> Cantidad de PL presentados por sexo
+
+# Congresistas -> Partidos Políticos
+
+# Congresistas -> Circunscripción
+
+# Congresistas -> Minoría
