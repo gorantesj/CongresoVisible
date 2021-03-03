@@ -158,8 +158,8 @@ tbl(con, "proyecto_leys") %>%
 
 #Proyectos de ley -> Resumen de la legislatura en cifras -> Proyectos de Ley radicados
 tbl(con, "proyecto_leys") %>%
-  # filter(activo == 1 && cuatrienio_id == 1) %>%
-  count(estado_actual_id) %>%
+  anti_join(tbl(con, "proyecto_ley_publicacions") %>%  select(-id),
+            by = c("id" = "proyecto_ley_id") ) %>%
   left_join(tbl(con, "estado_proyecto_leys") %>%
               select(estado_actual_id = id, estado = nombre) ) %>%
   filter(estado %in% c("Radicado")) %>%
