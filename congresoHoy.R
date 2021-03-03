@@ -72,6 +72,36 @@ tbl(con, "proyecto_leys") %>%  count(tema_proyecto_ley_id)  %>%
 #Proyectos de ley -> Resumen de la legislatura en cifras -> Proyectos de Ley radicados
 
 
+#Proyectos de ley -> Congresistas más activos ->
+# Con mayor número de autorías de Proyectos de Ley -> Representantes a la Cámara
+
+#Proyectos de ley -> Congresistas más activos ->
+# Con mayor número de autorías de Proyectos de Ley -> Senadores
+
+#Proyectos de ley -> Congresistas más activos ->
+# Con mayor número de citaciones de Debates de Control Político-> Representantes a la Cámara
+
+#Proyectos de ley -> Congresistas más activos ->
+# Con mayor número de citaciones de Debates de Control Político -> Senadores
+
+
+#Proyectos de ley -> Actividad por Partido Políticos ->
+# Total de citaciones -> Representantes a la Cámara
+
+#Proyectos de ley -> Actividad por Partido Políticos ->
+# Total de citaciones -> Senadores
+
+#Proyectos de ley -> Actividad por Partido Políticos ->
+# Total de autorías -> Representantes a la Cámara
+
+#Proyectos de ley -> Actividad por Partido Políticos ->
+# Total de autorías -> Senadores
+
+#Proyectos de ley -> Actividad por Partido Políticos ->
+# Temas recurrentes -> Representantes a la Cámara
+
+#Proyectos de ley -> Actividad por Partido Políticos ->
+# Temas recurrentes -> Senadores
 
 
 
