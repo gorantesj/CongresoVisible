@@ -81,6 +81,13 @@ select(departamento_id = id, departamento = nombre),
 by = "departamento_id") %>%
 show_query()
 
+# Congresistas -> Investigaciones
+# "jalar" 3 tipos de investigaciones: silla vacía, renunció  a la curul y los que empiecen por Atención:
+# pérdida de investidura.
+tbl(con, "congresistas") %>% filter(activo == 1) %>%
+  select(congresista_id = id, congresista = nombre, investigado)
+
+
 # Congresistas -> Cantidad de PL presentados por sexo
 tbl(con, "proyecto_ley_autors") %>%
 select(proyecto_ley_autors_id = id, proyecto_ley_id, congresista_id) %>%
