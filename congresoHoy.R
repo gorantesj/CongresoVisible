@@ -271,9 +271,11 @@ tbl(con, "proyecto_ley_autors") %>%
 
 #Proyectos de ley -> Actividad por Partido Políticos ->
 # Total de autorías -> Representantes a la Cámara
+# Héctor
 
 #Proyectos de ley -> Actividad por Partido Políticos ->
 # Total de autorías -> Senadores
+#Héctor
 
 #Proyectos de ley -> Actividad por Partido Políticos ->
 # Temas recurrentes -> Representantes a la Cámara
