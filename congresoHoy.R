@@ -271,11 +271,71 @@ tbl(con, "proyecto_ley_autors") %>%
 
 #Proyectos de ley -> Actividad por Partido Políticos ->
 # Total de autorías -> Representantes a la Cámara
-# Héctor
+tbl(con,"proyecto_ley_autors") %>%
+  count(proyecto_ley_id, congresista_id) %>%
+  left_join(
+    tbl(con, "proyecto_leys") %>%
+      #filter(activo == 1) %>%
+      select(id, cuatrienio_id, tema_proyecto_ley_id),
+    by = c("proyecto_ley_id" = "id")
+  )  %>%
+  left_join(
+    tbl(con, "congresistas") %>%
+      select(id, partido_politico_id, corporacion_id),
+    by = c("congresista_id" = "id")
+  ) %>%
+  left_join(
+    tbl(con, "corporacions") %>%
+      select(id, camara = nombre),
+    by = c("corporacion_id" = "id")
+  ) %>%
+  left_join(
+    tbl(con, "partidos") %>%
+      select(id, partido = nombre),
+    by = c("partido_politico_id" = "id")
+  ) %>%
+  left_join(
+    tbl(con, "tema_proyecto_leys") %>%
+      select(id, tema = nombre),
+    by = c("tema_proyecto_ley_id" = "id")
+  ) %>%
+  filter(corporacion_id == 1) %>%
+  count(partido, tema) %>%
+  show_query()
 
 #Proyectos de ley -> Actividad por Partido Políticos ->
 # Total de autorías -> Senadores
-#Héctor
+tbl(con,"proyecto_ley_autors") %>%
+  count(proyecto_ley_id, congresista_id) %>%
+  left_join(
+    tbl(con, "proyecto_leys") %>%
+      #filter(activo == 1) %>%
+      select(id, cuatrienio_id, tema_proyecto_ley_id),
+    by = c("proyecto_ley_id" = "id")
+  )  %>%
+  left_join(
+    tbl(con, "congresistas") %>%
+      select(id, partido_politico_id, corporacion_id),
+    by = c("congresista_id" = "id")
+  ) %>%
+  left_join(
+    tbl(con, "corporacions") %>%
+      select(id, camara = nombre),
+    by = c("corporacion_id" = "id")
+  ) %>%
+  left_join(
+    tbl(con, "partidos") %>%
+      select(id, partido = nombre),
+    by = c("partido_politico_id" = "id")
+  ) %>%
+  left_join(
+    tbl(con, "tema_proyecto_leys") %>%
+      select(id, tema = nombre),
+    by = c("tema_proyecto_ley_id" = "id")
+  ) %>%
+  filter(corporacion_id == 2) %>%
+  count(partido, tema) %>%
+  show_query()
 
 #Proyectos de ley -> Actividad por Partido Políticos ->
 # Temas recurrentes -> Representantes a la Cámara
