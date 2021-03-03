@@ -170,9 +170,30 @@ tbl(con, "proyecto_leys") %>%
 
 #Proyectos de ley -> Congresistas más activos ->
 # Con mayor número de autorías de Proyectos de Ley -> Representantes a la Cámara
+tbl(con, "proyecto_ley_autors") %>%
+  left_join(tbl(con, "congresistas") %>% select(congresista_id =id,
+                                      congresista = nombre,
+                                      corporacion_id),
+          "congresista_id") %>%
+    left_join( tbl(con, "corporacions")  %>% select(id, corporacion = nombre),
+               by = c("corporacion_id" = "id")  ) %>%
+  filter(corporacion_id == 1) %>%
+  count(congresista) %>%  arrange(desc(n)) %>%
+  show_query()
+
 
 #Proyectos de ley -> Congresistas más activos ->
 # Con mayor número de autorías de Proyectos de Ley -> Senadores
+tbl(con, "proyecto_ley_autors") %>%
+  left_join(tbl(con, "congresistas") %>% select(congresista_id =id,
+                                                congresista = nombre,
+                                                corporacion_id),
+            "congresista_id") %>%
+  left_join( tbl(con, "corporacions")  %>% select(id, corporacion = nombre),
+             by = c("corporacion_id" = "id")  ) %>%
+  filter(corporacion_id == 2) %>%
+  count(congresista) %>%  arrange(desc(n)) %>%
+  show_query()
 
 #Proyectos de ley -> Congresistas más activos ->
 # Con mayor número de citaciones de Debates de Control Político-> Representantes a la Cámara
