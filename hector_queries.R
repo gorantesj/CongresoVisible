@@ -16,7 +16,7 @@ tbl(con, "proyecto_leys")
 
 # Queries estatus del proyecto por fecha
 tbl(con, "proyecto_leys") %>%
-  count(fecha_radicacion, estado_proyecto_ley_id,camara_id, legislatura_id) %>%
+  count(fecha_radicacion, estado_proyecto_ley_id,camara_id, cuatrienio_id) %>%
   left_join(
     tbl(con, "corporacions") %>%
       #filter(activo == 1) %>%
@@ -25,7 +25,7 @@ tbl(con, "proyecto_leys") %>%
   )  %>%
   filter( # filtro, puede cambiar
     camara == "Cámara de Representantes",
-    legislatura_id == 1
+    cuatrienio_id == 1
   ) %>%
   arrange(estado_proyecto_ley_id, fecha) %>%
   show_query()
@@ -53,12 +53,12 @@ tbl(con,"proyecto_ley_autors") %>%
     by = c("congresista_id"="id")
   ) %>%
   left_join(tbl(con, "proyecto_leys") %>%
-              select(id, legislatura_id),
+              select(id, cuatrienio_id),
             by = c("proyecto_ley_id" = "id")
   ) %>%
   filter( # filtro, puede cambiar
     camara == "Cámara de Representantes",
-    legislatura_id == 1
+    cuatrienio_id == 1
   )%>%
   count(congresista_id) %>%
   show_query()
@@ -68,7 +68,7 @@ tbl(con,"proyecto_ley_autors") %>%
 # Queries de tipo de proyecto
 
 tbl(con,"proyecto_leys") %>%
-  count(tipo_proyecto_id, camara_id, legislatura_id) %>%
+  count(tipo_proyecto_id, camara_id, cuatrienio_id) %>%
   left_join(
     tbl(con, "corporacions") %>%
       #filter(activo == 1) %>%
@@ -77,7 +77,7 @@ tbl(con,"proyecto_leys") %>%
   )  %>%
   filter( # filtro, puede cambiar
     camara == "Cámara de Representantes",
-    legislatura_id == 1
+    cuatrienio_id == 1
   ) %>%
   arrange(estado_proyecto_ley_id, fecha) %>%
   show_query()
@@ -95,7 +95,7 @@ tbl(con,"proyecto_ley_autors") %>%
   left_join(
     tbl(con, "proyecto_leys") %>%
       #filter(activo == 1) %>%
-      select(id, legislatura_id, tema_proyecto_ley_id, camara_id),
+      select(id, cuatrienio_id, tema_proyecto_ley_id, camara_id),
     by = c("proyecto_ley_id" = "id")
   )  %>%
   left_join(
@@ -110,6 +110,73 @@ tbl(con,"proyecto_ley_autors") %>%
   ) %>%
   filter( # filtro, puede cambiar
     camara == "Cámara de Representantes",
-    legislatura_id == 1
+    cuatrienio_id == 1
   )%>%
   show_query()
+
+
+
+## Query proporción de mujeres---------------
+tbl(con, "congresistas") %>%
+  select(cuatrienio_id , genero_id, es_representante_camara, es_senador) %>%
+  left_join(tbl(con, "cuatrienios") %>%
+            select(id, fecha_inicio),
+            by=c("cuatrienio_id"="id")) %>%
+  left_join(tbl(con, "generos") %>%
+            select(id, nombre),
+            by=c("genero_id"="id")) %>%
+  filter(es_representante_camara==1) %>%
+  group_by(cuatrienio_id,fecha_inicio, genero_id) %>%
+  summarise(total=n()) %>%
+  mutate(totales=sum(total, na.rm=T),
+         porc=round((total/totales)*100, 2)) %>%
+  show_query()
+
+
+#Query mediana de edad
+
+  tbl(con, "congresistas") %>%
+  select(cuatrienio_id , fechaNacimiento, es_representante_camara, es_senador) %>%
+  left_join(tbl(con, "cuatrienios") %>%
+            select(id, fecha_inicio),
+            by=c("cuatrienio_id"="id")) %>%
+  mutate(nac= round(DATEDIFF(CURDATE(), fechaNacimiento)/365),
+         cuatri=round(DATEDIFF(CURDATE(), fecha_inicio)/365),
+         edad=cuatri-nac) %>%
+  filter(es_representante_camara==1) %>%
+  group_by(fecha_inicio) %>%
+  summarise(median_edad=median(edad, na.rm=T))%>%
+    show_query()
+
+
+  ## Query partidos con más representación---------------
+
+  tbl(con, "congresistas") %>%
+    select(cuatrienio_id, partido_id, es_representante_camara, es_senador) %>%
+    left_join(tbl(con, "partidos") %>%
+              select(id, nombre),
+              by=c("partido_id"="id")) %>%
+    left_join(tbl(con, "cuatrienios") %>%
+                select(id, fecha_inicio),
+              by=c("cuatrienio_id"="id")) %>%
+    filter(es_representante_camara==1) %>%
+    group_by(cuatrienio_id, fecha_inicio, nombre) %>%
+    summarise(total=n())%>%
+    show_query()
+
+  ## Query total de citaciones---------------
+
+
+  tbl(con, "citacions") %>%
+    select(fecha_proposicion) %>%
+    count(fecha_proposicion) %>%
+    show_query()
+
+
+
+
+
+
+
+
+
