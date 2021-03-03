@@ -22,22 +22,47 @@ tbl(con, "proyecto_leys") %>%
   count(estado_actual_id) %>%
   left_join(tbl(con, "estado_proyecto_leys") %>%
               select(estado_actual_id = id, estado = nombre) ) %>%
-  #esta lista puede cambiar
-  filter(estado %in% c("Aprobada conciliación en Senado",
-                       "Aprobado Primer Debate",
-                       "Aprobado Segundo Debate",
-                       "Aprobado Tercer Debate",
-                       "Aprobado Cuarto Debate",
-                       "Archivado por Vencimiento de Términos",
-                       "Publicada Ponencia Primer Debate",
-                       "Publicada Ponencia Segundo Debate",
-                       "Publicada Ponencia Tercer Debate",
-                       "Publicada Ponencia Cuarto Debate",
-                       "Publicación",
-                       "Comisión Accidental",
-                       "Corrección de Texto",
-                       "Acumulado",
-                       "Concepto Institucional")) %>%
+  filter(estado %in% c(  "Acumulado",
+                         "Aprobada Conciliación"   ,
+                         "Aprobada conciliación en Cámara" ,
+                         "Aprobada conciliación en Senado"  ,
+                         "Aprobada Objeción"   ,
+                         "Aprobado Cuarto Debate"  ,
+                         "Aprobado Informe de Objeciones"  ,
+                         "Aprobado Octavo Debate" ,
+                         "Aprobado Primer Debate"  ,
+                         "Aprobado Primer y Tercer Debate" ,
+                         "Aprobado Quinto Debate"   ,
+                         "Aprobado Segundo Debate"  ,
+                         "Aprobado Séptimo Debate"   ,
+                         "Aprobado Sexto Debate" ,
+                         "Aprobado Tercer Debate" ,
+                         "Audiencia Pública"   ,
+                         "Comisión Accidental" ,
+                         "Concepto Institucional" ,
+                         "Corrección de Texto"  ,
+                         "Devuelto al Congreso",
+                         "En Conciliación" ,
+                         "Enviado a  la Corte para Control",
+                         "Enviado a Comisión para Primer Debate" ,
+                         "Informe Legislativo a las Objeciones del Ejecutivo",
+                         "Objeción Parcial del Ejecutivo" ,
+                         "Objeción Total del Ejecutivo" ,
+                         "Objeciones Presidenciales",
+                         "Publicación"  ,
+                         "Publicada Ponencia Cuarto Debate"   ,
+                         "Publicada Ponencia Octavo Debate"  ,
+                         "Publicada Ponencia Primer Debate"  ,
+                         "Publicada ponencia primer y tercer debate"   ,
+                         "Publicada Ponencia Quinto Debate" ,
+                         "Publicada Ponencia Segundo Debate" ,
+                         "Publicada Ponencia Séptimo Debate"  ,
+                         "Publicada Ponencia Sexto Debate"      ,
+                         "Publicada Ponencia Tercer Debate"      ,
+                         "Radicado"       ,
+                         "Revision Corte Constitucional",
+                         "Solicitud Audiencia Pública" ,
+                         "Texto Unificado" )) %>%
   summarise(n=sum(n)) %>%  show_query()
 
 #Proyectos de ley -> Número de PL en en trámite -> Proyectos en Senado
@@ -47,22 +72,47 @@ tbl(con, "proyecto_leys") %>%
   count(estado_actual_id) %>%
   left_join(tbl(con, "estado_proyecto_leys") %>%
               select(estado_actual_id = id, estado = nombre) ) %>%
-  #esta lista puede cambiar
-  filter(estado %in% c("Aprobada conciliación en Senado",
-                       "Aprobado Primer Debate",
-                       "Aprobado Segundo Debate",
-                       "Aprobado Tercer Debate",
-                       "Aprobado Cuarto Debate",
-                       "Archivado por Vencimiento de Términos",
-                       "Publicada Ponencia Primer Debate",
-                       "Publicada Ponencia Segundo Debate",
-                       "Publicada Ponencia Tercer Debate",
-                       "Publicada Ponencia Cuarto Debate",
-                       "Publicación",
-                       "Comisión Accidental",
-                       "Corrección de Texto",
-                       "Acumulado",
-                       "Concepto Institucional")) %>%
+  filter(estado %in% c(  "Acumulado",
+                         "Aprobada Conciliación"   ,
+                         "Aprobada conciliación en Cámara" ,
+                         "Aprobada conciliación en Senado"  ,
+                         "Aprobada Objeción"   ,
+                         "Aprobado Cuarto Debate"  ,
+                         "Aprobado Informe de Objeciones"  ,
+                         "Aprobado Octavo Debate" ,
+                         "Aprobado Primer Debate"  ,
+                         "Aprobado Primer y Tercer Debate" ,
+                         "Aprobado Quinto Debate"   ,
+                         "Aprobado Segundo Debate"  ,
+                         "Aprobado Séptimo Debate"   ,
+                         "Aprobado Sexto Debate" ,
+                         "Aprobado Tercer Debate" ,
+                         "Audiencia Pública"   ,
+                         "Comisión Accidental" ,
+                         "Concepto Institucional" ,
+                         "Corrección de Texto"  ,
+                         "Devuelto al Congreso",
+                         "En Conciliación" ,
+                         "Enviado a  la Corte para Control",
+                         "Enviado a Comisión para Primer Debate" ,
+                         "Informe Legislativo a las Objeciones del Ejecutivo",
+                         "Objeción Parcial del Ejecutivo" ,
+                         "Objeción Total del Ejecutivo" ,
+                         "Objeciones Presidenciales",
+                         "Publicación"  ,
+                         "Publicada Ponencia Cuarto Debate"   ,
+                         "Publicada Ponencia Octavo Debate"  ,
+                         "Publicada Ponencia Primer Debate"  ,
+                         "Publicada ponencia primer y tercer debate"   ,
+                         "Publicada Ponencia Quinto Debate" ,
+                         "Publicada Ponencia Segundo Debate" ,
+                         "Publicada Ponencia Séptimo Debate"  ,
+                         "Publicada Ponencia Sexto Debate"      ,
+                         "Publicada Ponencia Tercer Debate"      ,
+                         "Radicado"       ,
+                         "Revision Corte Constitucional",
+                         "Solicitud Audiencia Pública" ,
+                         "Texto Unificado" ))
   summarise(n=sum(n)) %>%  show_query()
 
 #Proyectos de ley -> Origen de la iniciativa -> Legislativa
@@ -152,8 +202,8 @@ tbl(con, "proyecto_leys") %>%
   left_join(tbl(con, "estado_proyecto_leys") %>%
               select(estado_actual_id = id, estado = nombre) ) %>%
   filter(estado %in% c("Objeción Parcial del Ejecutivo",
-  "Objeción Total del Ejecutivo", "Objeciones Presidenciales",
-  "Objetado Por Presidencia")) %>%
+                       "Objeción Total del Ejecutivo", "Objeciones Presidenciales",
+                       "Objetado Por Presidencia")) %>%
   select(n) %>%  summarise(n = sum(n))  %>%  show_query()
 
 #Proyectos de ley -> Resumen de la legislatura en cifras -> Proyectos de Ley radicados
@@ -172,11 +222,11 @@ tbl(con, "proyecto_leys") %>%
 # Con mayor número de autorías de Proyectos de Ley -> Representantes a la Cámara
 tbl(con, "proyecto_ley_autors") %>%
   left_join(tbl(con, "congresistas") %>% select(congresista_id =id,
-                                      congresista = nombre,
-                                      corporacion_id),
-          "congresista_id") %>%
-    left_join( tbl(con, "corporacions")  %>% select(id, corporacion = nombre),
-               by = c("corporacion_id" = "id")  ) %>%
+                                                congresista = nombre,
+                                                corporacion_id),
+            "congresista_id") %>%
+  left_join( tbl(con, "corporacions")  %>% select(id, corporacion = nombre),
+             by = c("corporacion_id" = "id")  ) %>%
   filter(corporacion_id == 1) %>%
   count(congresista) %>%  arrange(desc(n)) %>%
   show_query()
@@ -197,6 +247,13 @@ tbl(con, "proyecto_ley_autors") %>%
 
 #Proyectos de ley -> Congresistas más activos ->
 # Con mayor número de citaciones de Debates de Control Político-> Representantes a la Cámara
+#No encontré nada que una citaciones con congresista_i
+# tbl(con, "control_politico_citados") %>% collect()
+# tbl(con, "control_politicos") %>% collect()
+# tbl(con, "congresistas") %>% collect()
+# tbl(con, "comision_cargo_congresistas") %>% collect()
+# tbl(con, "citados") %>% collect()
+# tbl(con, "citacions") %>% collect()
 
 #Proyectos de ley -> Congresistas más activos ->
 # Con mayor número de citaciones de Debates de Control Político -> Senadores
@@ -219,6 +276,7 @@ tbl(con, "proyecto_ley_autors") %>%
 
 #Proyectos de ley -> Actividad por Partido Políticos ->
 # Temas recurrentes -> Representantes a la Cámara
+tbl(con, "proyecto_leys") %>%  collect()
 
 #Proyectos de ley -> Actividad por Partido Políticos ->
 # Temas recurrentes -> Senadores
