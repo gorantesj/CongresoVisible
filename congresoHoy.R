@@ -15,10 +15,29 @@ con <- dbConnect(
 # Congreso hoy ------------------------------------------------------------
 
 #Proyectos de ley -> Número de PL en en trámite -> Proyectos en Cámara
-
+#estado_actual_id, camara_id
+tbl(con, "proyecto_leys") %>%
+  filter(camara_id == 1) %>%
+  # filter(activo == 1 && cuatrienio_id == 1) %>%
+  count(estado_actual_id) %>%
+  left_join(tbl(con, "estado_proyecto_leys") %>%
+              select(estado_actual_id = id, estado = nombre) ) %>%
+  #Esta lista puede cambiar
+  filter(estado %in% c("Aprobado Primer Debate", "Aprobado Segundo Debate",
+                       "Acto Legislativo")) %>%
+  summarise(n=sum(n)) %>%  show_query()
 
 #Proyectos de ley -> Número de PL en en trámite -> Proyectos en Senado
-
+tbl(con, "proyecto_leys") %>%
+  filter(camara_id == 2) %>%
+  # filter(activo == 1 && cuatrienio_id == 1) %>%
+  count(estado_actual_id) %>%
+  left_join(tbl(con, "estado_proyecto_leys") %>%
+              select(estado_actual_id = id, estado = nombre) ) %>%
+  #Esta lista puede cambiar
+  filter(estado %in% c("Aprobado Primer Debate", "Aprobado Segundo Debate",
+                       "Acto Legislativo")) %>%
+  summarise(n=sum(n)) %>%  show_query()
 
 #Proyectos de ley -> Origen de la iniciativa -> Legislativa
 tbl(con, "proyecto_leys") %>%
