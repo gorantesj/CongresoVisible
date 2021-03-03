@@ -113,16 +113,30 @@ tbl(con, "proyecto_leys") %>%
               select(estado_actual_id = id, estado = nombre) )%>%  show_query()
 
 
-#Proyectos de ley -> Total presentados por ministros -> Senado de la república
+#Proyectos de ley -> Total presentados por ministros
+tbl(con, "proyecto_leys") %>%
+  # filter(activo == 1 && cuatrienio_id == 1, estado_proyecto_ley_id == 1) %>%
+  filter( iniciativa_id == 2) %>%
+  tally() %>%
+  show_query()
 
 
 #Proyectos de ley -> Resumen de la legislatura en cifras -> Audiencias Públicas citadas
+
 
 #Proyectos de ley -> Resumen de la legislatura en cifras -> Debates de Control Político citados
 
 #Proyectos de ley -> Resumen de la legislatura en cifras -> Sentencias emitidas
 
 #Proyectos de ley -> Resumen de la legislatura en cifras -> Objeciones presentadas
+tbl(con, "proyecto_leys") %>%
+  filter(camara_id == 1) %>%
+  # filter(activo == 1 && cuatrienio_id == 1) %>%
+  count(estado_actual_id) %>%
+  left_join(tbl(con, "estado_proyecto_leys") %>%
+              select(estado_actual_id = id, estado = nombre) ) %>%
+  filter(estado == "Objeción Total del Ejecutivo") %>%
+  select(n) %>%  collect() %>%  show_query()
 
 #Proyectos de ley -> Resumen de la legislatura en cifras -> Proyectos de Ley radicados
 
