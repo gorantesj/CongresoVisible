@@ -8,7 +8,7 @@ con <- dbConnect(
   host = "162.241.62.202",
   username = "prueba33_cv_user",
   password = "CongresoVisible2020",
-  port = 3306
+  port = 3306, timeout = 200, timezone = "America/Mexico_City"
 )
 
 tbl(con, "proyecto_leys") %>% filter(id == 1) %>% select(iniciativa_id) %>% collect()
@@ -24,6 +24,8 @@ dbListTables(con) %>% grep("corp",x = .,value = T)
 dbListTables(con) %>% grep("proy",x = .,value = T)
 dbListTables(con) %>% grep("tema",x = .,value = T)
 dbListTables(con) %>% grep("legis",x = .,value = T)
+dbListTables(con) %>% grep("cuatri",x = .,value = T)
+dbListTables(con) %>% grep("gen",x = .,value = T)
 
 tbl(con, "partidos") %>% view
 tbl(con, "congreso_partido_sectores") %>% view
@@ -208,3 +210,33 @@ tbl(con,"proyecto_leys") %>% filter(activo == 1) %>% select(id, tema_proyecto_le
     legislatura_id == 1
   ) %>%
   count(to = tema_proyecto_ley_id, from = partido) %>% show_query()
+
+
+# Composición -------------------------------------------------------------
+
+## Partidos
+### Distribución asientos Senadores
+tbl(con, "congresistas") %>% filter(activo == 1, es_senador == 1, cuatrienio_id == 1) %>%
+  count(partido_id) %>%
+  left_join(tbl(con,"partidos") %>% select(id,partido = nombre), by = c("partido_id" = "id")) %>% select(-partido_id) %>%
+  show_query()
+### Distribución asientos Representantes
+tbl(con, "congresistas") %>% filter(activo == 1, es_representante_camara == 1, cuatrienio_id == 1) %>% count(partido_id) %>%
+  left_join(tbl(con,"partidos") %>% select(id,partido = nombre), by = c("partido_id" = "id")) %>% select(-partido_id) %>%
+  show_query()
+### Sexo y Edad
+
+tbl(con, "congresistas") %>% filter(activo == 1, cuatrienio_id == 1) %>%
+  # left_join(tbl(con,"cuatrienios") %>% select(id,cuatrienio = nombre)) %>%
+  mutate(años = round(DATEDIFF(CURDATE(),fechaNacimiento)/365)) %>%
+  count(partido_id,genero_id,años) %>% left_join(tbl(con,"generos") %>% select(id,genero = nombre), by = c("genero_id" = "id")) %>%
+  left_join(tbl(con,"partidos") %>% select(id,partido = nombre), by = c("partido_id" = "id")) %>% ungroup %>% select(genero,años,partido,n)
+
+## Congresistas
+### Sexo
+
+tbl(con, "congresistas") %>% filter(activo == 1, cuatrienio_id == 1) %>%
+  # left_join(tbl(con,"cuatrienios") %>% select(id,cuatrienio = nombre)) %>%
+  mutate(años = round(DATEDIFF(CURDATE(),fechaNacimiento)/365)) %>%
+  count(años,genero_id) %>% left_join(tbl(con,"generos") %>% select(id,genero = nombre), by = c("genero_id" = "id")) %>%
+  ungroup %>% select(genero,años,n)
