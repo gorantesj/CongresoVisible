@@ -32,27 +32,26 @@ tbl(con, "proyecto_ley_autors") %>% filter(activo == 1) %>%  left_join(
       by = c("partido_id" = "id")
     ) %>%
     left_join(
-      tbl(con, "corporacions") %>% filter(activo == 1) %>% select(id, camara = nombre),
+      tbl(con, "corporacions") %>% filter(activo == 1) %>% select(id, corporacion = nombre),
       by = c("corporacion_id" = "id")
-    ) %>% select(id, partido, grupo, camara) ,
+    ) %>% select(id, partido, grupo, corporacion) ,
   by = c("congresista_id"="id")
-) %>% count(partido, camara) %>%  show_query()
+) %>% count(partido, corporacion) %>%  show_query()
 
 #Gráfica
-tbl(con, "proyecto_ley_autors") %>% filter(activo == 1) %>% count(congresista_id) %>% left_join(
+tbl(con, "proyecto_ley_autors") %>% filter(activo == 1) %>%  left_join(
   tbl(con, "congresistas") %>% select(id, corporacion_id, partido_id) %>%
     left_join(
       tbl(con, "partidos") %>% filter(activo == 1) %>% select(id, partido = nombre, grupo = posicion_ideologica),
       by = c("partido_id" = "id")
     ) %>%
     left_join(
-      tbl(con, "corporacions") %>% filter(activo == 1) %>% select(id, camara = nombre),
+      tbl(con, "corporacions") %>% filter(activo == 1) %>% select(id, corporacion = nombre),
       by = c("corporacion_id" = "id")
-    ) %>% select(id, partido, grupo, camara) ,
-  by = c("congresista_id"="id")
-) %>%
+    ) %>% select(id, partido, grupo, corporacion) ,
+  by = c("congresista_id"="id")) %>% count(partido, corporacion) %>%
   arrange(desc(n)) %>% collect() %>%
-  hchart(hcaes(x = partido, y = n, group = camara), type = "bar") %>%
+  hchart(hcaes(x = partido, y= n, group = corporacion), type = "bar") %>%
   hc_title(text = "Partidos con más autorías")
 
 
