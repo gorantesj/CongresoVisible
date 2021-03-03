@@ -32,4 +32,5 @@ tbl(con, "congresistas") %>% filter(activo == 1, cuatrienio_id == 1) %>%
   mutate(años = round(DATEDIFF(CURDATE(),fechaNacimiento)/365)) %>%
   count(partido_id,genero_id,años) %>% left_join(tbl(con,"generos") %>% select(id,genero = nombre), by = c("genero_id" = "id")) %>%
   left_join(tbl(con,"partidos") %>% select(id,partido = nombre), by = c("partido_id" = "id")) %>% ungroup %>%
-  select(genero,años,partido,n)
+  select(genero,años,partido,n) %>%
+  show_query()
