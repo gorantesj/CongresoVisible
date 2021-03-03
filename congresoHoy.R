@@ -271,6 +271,14 @@ tbl(con, "proyecto_ley_autors") %>%
 
 #Proyectos de ley -> Actividad por Partido Políticos ->
 # Total de autorías -> Representantes a la Cámara
+
+
+#Proyectos de ley -> Actividad por Partido Políticos ->
+# Total de autorías -> Senadores
+
+
+#Proyectos de ley -> Actividad por Partido Políticos ->
+# Temas recurrentes -> Representantes a la Cámara
 tbl(con,"proyecto_ley_autors") %>%
   count(proyecto_ley_id, congresista_id) %>%
   left_join(
@@ -304,7 +312,8 @@ tbl(con,"proyecto_ley_autors") %>%
   show_query()
 
 #Proyectos de ley -> Actividad por Partido Políticos ->
-# Total de autorías -> Senadores
+# Temas recurrentes -> Senadores
+
 tbl(con,"proyecto_ley_autors") %>%
   count(proyecto_ley_id, congresista_id) %>%
   left_join(
@@ -333,16 +342,9 @@ tbl(con,"proyecto_ley_autors") %>%
       select(id, tema = nombre),
     by = c("tema_proyecto_ley_id" = "id")
   ) %>%
-  filter(corporacion_id == 2) %>%
+  filter(corporacion_id ==2) %>%
   count(partido, tema) %>%
   show_query()
-
-#Proyectos de ley -> Actividad por Partido Políticos ->
-# Temas recurrentes -> Representantes a la Cámara
-
-
-#Proyectos de ley -> Actividad por Partido Políticos ->
-# Temas recurrentes -> Senadores
 
 
 
