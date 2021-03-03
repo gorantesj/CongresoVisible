@@ -12,7 +12,7 @@ con <- dbConnect(
 )
 
 
-# Congreso hoy ------------------------------------------------------------
+# Proyectos de ley  ------------------------------------------------------------
 
 #Proyectos de ley -> Número de PL en en trámite -> Proyectos en Cámara
 #estado_actual_id, camara_id
@@ -122,7 +122,7 @@ tbl(con, "proyecto_leys") %>%
   tally() %>%
   show_query()
 
-
+# Valuebox "Resumen de la legislatura en cifras" --------------------------
 #Proyectos de ley -> Resumen de la legislatura en cifras -> Audiencias Públicas citadas
 tbl(con, "proyecto_leys") %>%
   # filter(activo == 1 && cuatrienio_id == 1) %>%
@@ -165,6 +165,9 @@ tbl(con, "proyecto_leys") %>%
   filter(estado %in% c("Radicado")) %>%
   select(n)  %>%  show_query()
 
+
+# Congresistas más activos ------------------------------------------------
+
 #Proyectos de ley -> Congresistas más activos ->
 # Con mayor número de autorías de Proyectos de Ley -> Representantes a la Cámara
 
@@ -177,6 +180,9 @@ tbl(con, "proyecto_leys") %>%
 #Proyectos de ley -> Congresistas más activos ->
 # Con mayor número de citaciones de Debates de Control Político -> Senadores
 
+
+
+# Actividad por Partido Políticos -----------------------------------------
 
 #Proyectos de ley -> Actividad por Partido Políticos ->
 # Total de citaciones -> Representantes a la Cámara
