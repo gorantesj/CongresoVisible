@@ -271,10 +271,24 @@ tbl(con, "proyecto_ley_autors") %>%
 
 #Proyectos de ley -> Actividad por Partido Políticos ->
 # Total de autorías -> Representantes a la Cámara
+tbl(con, "proyecto_ley_autors")%>%
+  left_join(tbl(con, "congresistas") %>% select(congresista_id =id,
+                                                congresista = nombre,
+                                                corporacion_id, partido_id),
+            "congresista_id") %>%
+  filter(corporacion_id == 1) %>%
+  count(partido_id) %>%  show_query()
 
 
 #Proyectos de ley -> Actividad por Partido Políticos ->
 # Total de autorías -> Senadores
+tbl(con, "proyecto_ley_autors")%>%
+  left_join(tbl(con, "congresistas") %>% select(congresista_id =id,
+                                                congresista = nombre,
+                                                corporacion_id, partido_id),
+            "congresista_id") %>%
+  filter(corporacion_id == 2) %>%
+  count(partido_id) %>%  show_query()
 
 
 #Proyectos de ley -> Actividad por Partido Políticos ->
