@@ -15,44 +15,66 @@ con <- dbConnect(
 # Congreso hoy ------------------------------------------------------------
 
 #Proyectos de ley -> Número de PL en en trámite -> Proyectos en Cámara
-tbl(con, "proyecto_leys") %>%
-  filter(activo == 1 && cuatrienio_id == 1) %>%
-  tally() %>%
-  # mutate(proyecto_ley_id = id) %>%
-  # select(proyecto_ley_id, numero_camara) %>%
-  show_query()
+
 
 #Proyectos de ley -> Número de PL en en trámite -> Proyectos en Senado
 
 
-#Proyectos de ley -> Actividad por Partido Políticos -> Total de autorías
-tbl(con, "proyecto_ley_autors") %>% filter(activo == 1) %>%  left_join(
-  tbl(con, "congresistas") %>% select(id, corporacion_id, partido_id) %>%
-    left_join(
-      tbl(con, "partidos") %>% filter(activo == 1) %>% select(id, partido = nombre, grupo = posicion_ideologica),
-      by = c("partido_id" = "id")
-    ) %>%
-    left_join(
-      tbl(con, "corporacions") %>% filter(activo == 1) %>% select(id, corporacion = nombre),
-      by = c("corporacion_id" = "id")
-    ) %>% select(id, partido, grupo, corporacion) ,
-  by = c("congresista_id"="id")
-) %>% count(partido, corporacion) %>%  show_query()
+#Proyectos de ley -> Origen de la iniciativa -> Legislativa
+tbl(con, "proyecto_leys") %>%
+  # filter(activo == 1 && cuatrienio_id == 1, estado_proyecto_ley_id == 1) %>%
+  filter( iniciativa_id == 1) %>%
+  tally() %>%
+  show_query()
 
-#Gráfica
-tbl(con, "proyecto_ley_autors") %>% filter(activo == 1) %>%  left_join(
-  tbl(con, "congresistas") %>% select(id, corporacion_id, partido_id) %>%
-    left_join(
-      tbl(con, "partidos") %>% filter(activo == 1) %>% select(id, partido = nombre, grupo = posicion_ideologica),
-      by = c("partido_id" = "id")
-    ) %>%
-    left_join(
-      tbl(con, "corporacions") %>% filter(activo == 1) %>% select(id, corporacion = nombre),
-      by = c("corporacion_id" = "id")
-    ) %>% select(id, partido, grupo, corporacion) ,
-  by = c("congresista_id"="id")) %>% count(partido, corporacion) %>%
-  arrange(desc(n)) %>% collect() %>%
-  hchart(hcaes(x = partido, y= n, group = corporacion), type = "bar") %>%
-  hc_title(text = "Partidos con más autorías")
+#Proyectos de ley -> Origen de la iniciativa -> Gubernamental
+tbl(con, "proyecto_leys") %>%
+  # filter(activo == 1 && cuatrienio_id == 1, estado_proyecto_ley_id == 1) %>%
+  filter( iniciativa_id == 2) %>%
+  tally() %>%
+  show_query()
+
+#Proyectos de ley -> Origen de la iniciativa -> Mixta
+tbl(con, "proyecto_leys") %>%
+  # filter(activo == 1 && cuatrienio_id == 1, estado_proyecto_ley_id == 1) %>%
+  filter( iniciativa_id == 4) %>%
+  tally() %>%
+  show_query()
+
+#Proyectos de ley -> Origen de la iniciativa -> Otros
+tbl(con, "proyecto_leys") %>%
+  # filter(activo == 1 && cuatrienio_id == 1, estado_proyecto_ley_id == 1) %>%
+  filter( iniciativa_id == 3) %>%
+  tally() %>%
+  show_query()
+
+
+#Proyectos de ley -> Temas recurrentes
+tbl(con, "proyecto_leys") %>%  count(tema_proyecto_ley_id)  %>%
+  show_query()
+
+#Proyectos de ley -> Estado de los Proyectos de Ley -> Cámara de representantes
+
+#Proyectos de ley -> Estado de los Proyectos de Ley -> Senado de la república
+
+
+#Proyectos de ley -> Total presentados por ministros -> Senado de la república
+
+
+#Proyectos de ley -> Resumen de la legislatura en cifras -> Audiencias Públicas citadas
+
+#Proyectos de ley -> Resumen de la legislatura en cifras -> Debates de Control Político citados
+
+#Proyectos de ley -> Resumen de la legislatura en cifras -> Sentencias emitidas
+
+#Proyectos de ley -> Resumen de la legislatura en cifras -> Objeciones presentadas
+
+#Proyectos de ley -> Resumen de la legislatura en cifras -> Proyectos de Ley radicados
+
+
+
+
+
+
 
 
