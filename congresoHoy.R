@@ -26,6 +26,7 @@ tbl(con, "proyecto_leys") %>%
   filter(estado %in% c("Aprobada conciliación en Senado",
                        "Aprobado Primer Debate",
                        "Aprobado Segundo Debate",
+                       "Aprobado Tercer Debate",
                        "Aprobado Cuarto Debate",
                        "Archivado por Vencimiento de Términos",
                        "Publicada Ponencia Primer Debate",
@@ -50,6 +51,7 @@ tbl(con, "proyecto_leys") %>%
   filter(estado %in% c("Aprobada conciliación en Senado",
                        "Aprobado Primer Debate",
                        "Aprobado Segundo Debate",
+                       "Aprobado Tercer Debate",
                        "Aprobado Cuarto Debate",
                        "Archivado por Vencimiento de Términos",
                        "Publicada Ponencia Primer Debate",
@@ -122,24 +124,46 @@ tbl(con, "proyecto_leys") %>%
 
 
 #Proyectos de ley -> Resumen de la legislatura en cifras -> Audiencias Públicas citadas
-
-
-#Proyectos de ley -> Resumen de la legislatura en cifras -> Debates de Control Político citados
-
-#Proyectos de ley -> Resumen de la legislatura en cifras -> Sentencias emitidas
-
-#Proyectos de ley -> Resumen de la legislatura en cifras -> Objeciones presentadas
 tbl(con, "proyecto_leys") %>%
-  filter(camara_id == 1) %>%
   # filter(activo == 1 && cuatrienio_id == 1) %>%
   count(estado_actual_id) %>%
   left_join(tbl(con, "estado_proyecto_leys") %>%
               select(estado_actual_id = id, estado = nombre) ) %>%
-  filter(estado == "Objeción Total del Ejecutivo") %>%
-  select(n) %>%  collect() %>%  show_query()
+  filter(estado %in% c("Audiencia Pública" ,"Solicitud Audiencia Pública" )) %>%
+  select(n) %>% summarise(n = sum(n)) %>%  show_query()
+
+#Proyectos de ley -> Resumen de la legislatura en cifras -> Debates de Control Político citados
+
+
+#Proyectos de ley -> Resumen de la legislatura en cifras -> Sentencias emitidas
+tbl(con, "proyecto_leys") %>%
+  # filter(activo == 1 && cuatrienio_id == 1) %>%
+  count(estado_actual_id) %>%
+  left_join(tbl(con, "estado_proyecto_leys") %>%
+              select(estado_actual_id = id, estado = nombre) ) %>%
+  filter(estado %in% c("Declarado Exequible Parcial", "Declarado Exequible Total",
+                       "Declarado Inexequible Parcial", "Declarado Inexequible Total")) %>%
+  select(n) %>% summarise(n = sum(n)) %>%  show_query()
+
+#Proyectos de ley -> Resumen de la legislatura en cifras -> Objeciones presentadas
+tbl(con, "proyecto_leys") %>%
+  # filter(activo == 1 && cuatrienio_id == 1) %>%
+  count(estado_actual_id) %>%
+  left_join(tbl(con, "estado_proyecto_leys") %>%
+              select(estado_actual_id = id, estado = nombre) ) %>%
+  filter(estado %in% c("Objeción Parcial del Ejecutivo",
+  "Objeción Total del Ejecutivo", "Objeciones Presidenciales",
+  "Objetado Por Presidencia")) %>%
+  select(n) %>%  summarise(n = sum(n))  %>%  show_query()
 
 #Proyectos de ley -> Resumen de la legislatura en cifras -> Proyectos de Ley radicados
-
+tbl(con, "proyecto_leys") %>%
+  # filter(activo == 1 && cuatrienio_id == 1) %>%
+  count(estado_actual_id) %>%
+  left_join(tbl(con, "estado_proyecto_leys") %>%
+              select(estado_actual_id = id, estado = nombre) ) %>%
+  filter(estado %in% c("Radicado")) %>%
+  select(n)  %>%  show_query()
 
 #Proyectos de ley -> Congresistas más activos ->
 # Con mayor número de autorías de Proyectos de Ley -> Representantes a la Cámara
