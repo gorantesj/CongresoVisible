@@ -36,7 +36,7 @@ tbl(con, "proyecto_ley_autors") %>% filter(activo == 1) %>%  left_join(
       by = c("corporacion_id" = "id")
     ) %>% select(id, partido, grupo, camara) ,
   by = c("congresista_id"="id")
-) %>% count(partido) %>%  show_query()
+) %>% count(partido, camara) %>%  show_query()
 
 #Gráfica
 tbl(con, "proyecto_ley_autors") %>% filter(activo == 1) %>% count(congresista_id) %>% left_join(
