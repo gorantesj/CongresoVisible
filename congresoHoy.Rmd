@@ -175,5 +175,23 @@ Proyectos de Ley radicados: `r tbl(con, "proyecto_leys") %>%
   filter(estado %in% c("Radicado")) %>% count() %>% 
   select(n) %>%  collect()`
 
+# Congresistas más activos
 
+## Con mayor número de autorías de Proyectos de Ley
+```{r warning=FALSE, echo=FALSE, comment=FALSE, message=FALSE}
+tbl(con, "proyecto_ley_autors") %>%
+  left_join(tbl(con, "congresistas") %>% select(autor_id =id,
+                                                congresista = nombre,
+                                                corporacion_id),
+            "autor_id") %>%
+  left_join( tbl(con, "corporacions")  %>% select(id, corporacion = nombre),
+             by = c("corporacion_id" = "id")  ) %>%
+  count(corporacion, autor_id) %>%  arrange(desc(n)) %>% head(10) %>%  collect() %>% 
+  mutate(autor = as.character(autor_id)) %>% 
+  hchart(hcaes(x = autor, y = n, group = corporacion), type = "bar")
+````
 
+## Con mayor número de citaciones de Debates de Control Político
+No encontré nada que una citaciones con congresistas 
+
+## Total de autorías

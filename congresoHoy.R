@@ -163,36 +163,31 @@ tbl(con, "proyecto_ley_autors") %>%
             "congresista_id") %>%
   left_join( tbl(con, "corporacions")  %>% select(id, corporacion = nombre),
              by = c("corporacion_id" = "id")  ) %>%
-  filter(corporacion_id == 1) %>%
-  count(congresista) %>%  arrange(desc(n)) %>%
+  count(corporacion_id, congresista) %>%  arrange(desc(n)) %>%
   show_query()
 
 
 #Proyectos de ley -> Congresistas más activos ->
 # Con mayor número de autorías de Proyectos de Ley -> Senadores
 tbl(con, "proyecto_ley_autors") %>%
-  left_join(tbl(con, "congresistas") %>% select(congresista_id =id,
+  left_join(tbl(con, "congresistas") %>% select(autor_id =id,
                                                 congresista = nombre,
                                                 corporacion_id),
-            "congresista_id") %>%
+            "autor_id") %>%
   left_join( tbl(con, "corporacions")  %>% select(id, corporacion = nombre),
              by = c("corporacion_id" = "id")  ) %>%
-  filter(corporacion_id == 2) %>%
-  count(congresista) %>%  arrange(desc(n)) %>%
+  count(corporacion, autor_id) %>%  arrange(desc(n)) %>% head(10) %>%
   show_query()
 
-#Proyectos de ley -> Congresistas más activos ->
-# Con mayor número de citaciones de Debates de Control Político-> Representantes a la Cámara
-#No encontré nada que una citaciones con congresista_i
-# tbl(con, "control_politico_citados") %>% collect()
-# tbl(con, "control_politicos") %>% collect()
-# tbl(con, "congresistas") %>% collect()
-# tbl(con, "comision_cargo_congresistas") %>% collect()
-# tbl(con, "citados") %>% collect()
-# tbl(con, "citacions") %>% collect()
 
 #Proyectos de ley -> Congresistas más activos ->
 # Con mayor número de citaciones de Debates de Control Político -> Senadores
+tbl(con, "citacions")
+
+tbl(con, "citados")
+tbl(con, "control_politico_citados")
+tbl(con, "control_politicos")
+
 
 
 
