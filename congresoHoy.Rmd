@@ -135,7 +135,45 @@ tbl(con, "proyecto_leys") %>%
   hc_yAxis(reversedStacks = F)
 ````
 
+# Resumen de la legislatura en cifras
+Los siguientes datos son obtenidos de manera provisional a través de un filtro del estado del proyectos de ley, pero se debe generar la variable correspondiente.
 
+Audiencias públicas citadas: `r tbl(con, "proyecto_leys") %>%
+  # filter(activo == 1 && cuatrienio_id == 1) %>%
+  count(estado_actual_id) %>%
+  left_join(tbl(con, "estado_proyecto_leys") %>%
+              select(estado_actual_id = id, estado = nombre) ) %>%
+  filter(estado %in% c("Audiencia Pública" ,"Solicitud Audiencia Pública" )) %>%
+  select(n) %>% summarise(n = sum(n)) %>%  collect()`
+  
+Debates de Control Político citados: Este dato no se puede obtener
+
+Sentencias emitidas: `r tbl(con, "proyecto_leys") %>%
+  # filter(activo == 1 && cuatrienio_id == 1) %>%
+  count(estado_actual_id) %>%
+  left_join(tbl(con, "estado_proyecto_leys") %>%
+              select(estado_actual_id = id, estado = nombre) ) %>%
+  filter(estado %in% c("Declarado Exequible Parcial", "Declarado Exequible Total",
+                       "Declarado Inexequible Parcial", "Declarado Inexequible Total")) %>%
+  select(n) %>% summarise(n = sum(n)) %>%  collect()`
+  
+Objeciones presentadas: `r tbl(con, "proyecto_leys") %>%
+  # filter(activo == 1 && cuatrienio_id == 1) %>%
+  count(estado_actual_id) %>%
+  left_join(tbl(con, "estado_proyecto_leys") %>%
+              select(estado_actual_id = id, estado = nombre) ) %>%
+  filter(estado %in% c("Objeción Parcial del Ejecutivo",
+                       "Objeción Total del Ejecutivo", "Objeciones Presidenciales",
+                       "Objetado Por Presidencia")) %>%
+  select(n) %>%  summarise(n = sum(n)) %>%  collect()`
+
+Proyectos de Ley radicados: `r tbl(con, "proyecto_leys") %>%
+  anti_join(tbl(con, "proyecto_ley_publicacions") %>%  select(-id),
+            by = c("id" = "proyecto_ley_id") ) %>%
+  left_join(tbl(con, "estado_proyecto_leys") %>%
+              select(estado_actual_id = id, estado = nombre) ) %>%
+  filter(estado %in% c("Radicado")) %>% count() %>% 
+  select(n) %>%  collect()`
 
 
 

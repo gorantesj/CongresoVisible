@@ -148,7 +148,7 @@ tbl(con, "proyecto_leys") %>%
             by = c("id" = "proyecto_ley_id") ) %>%
   left_join(tbl(con, "estado_proyecto_leys") %>%
               select(estado_actual_id = id, estado = nombre) ) %>%
-  filter(estado %in% c("Radicado")) %>%
+  filter(estado %in% c("Radicado")) %>% count() %>%
   select(n)  %>%  show_query()
 
 
