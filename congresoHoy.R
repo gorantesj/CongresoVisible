@@ -1,6 +1,7 @@
 library(DBI)
 library(tidyverse)
 library(RMySQL)
+library(highcharter)
 
 con <- dbConnect(
   drv = RMariaDB::MariaDB(),
@@ -13,15 +14,18 @@ con <- dbConnect(
 
 
 # Proyectos de ley  ------------------------------------------------------------
-
+#Sgrupar por camara
+#Falta corporaciónid
 #Proyectos de ley -> Número de PL en en trámite -> Proyectos en Cámara
 #estado_actual_id, camara_id
+
 tbl(con, "proyecto_leys") %>%
-  filter(camara_id == 1) %>%
   # filter(activo == 1 && cuatrienio_id == 1) %>%
-  count(estado_actual_id) %>%
+  count(camara_id, estado_actual_id) %>%
   left_join(tbl(con, "estado_proyecto_leys") %>%
               select(estado_actual_id = id, estado = nombre) ) %>%
+  left_join(tbl(con, "corporacions") %>%
+              select(camara_id = id, corporacion = nombre), by = "camara_id" ) %>%
   filter(estado %in% c(  "Acumulado",
                          "Aprobada Conciliación"   ,
                          "Aprobada conciliación en Cámara" ,
@@ -63,114 +67,45 @@ tbl(con, "proyecto_leys") %>%
                          "Revision Corte Constitucional",
                          "Solicitud Audiencia Pública" ,
                          "Texto Unificado" )) %>%
-  summarise(n=sum(n)) %>%  show_query()
+  group_by(corporacion) %>%
+  summarise(n=sum(n)) %>% arrange(desc(n)) %>% show_query()
 
-#Proyectos de ley -> Número de PL en en trámite -> Proyectos en Senado
+
+#Proyectos de ley -> Origen de la iniciativa
 tbl(con, "proyecto_leys") %>%
-  filter(camara_id == 2) %>%
-  # filter(activo == 1 && cuatrienio_id == 1) %>%
-  count(estado_actual_id) %>%
+  left_join(tbl(con, "iniciativas") %>%
+              select(iniciativa_id= id, iniciativa = nombre) ) %>%
+  count(iniciativa) %>%  arrange(desc(n)) %>%
+  filter(iniciativa %in%c( "Legislativa ", "Gubernamental", "Mixta", "Otras entidades ")) %>%
+  show_query()
+
+
+#Filtro de lislatura
+#Señalar la legislatura 1, por ejemplo, si esa contiene información
+#Proyectos de ley -> Temas recurrentes
+tbl(con, "proyecto_leys") %>%
+  count(tema_principal_id) %>%
+  left_join( tbl(con, "temas") %>%  select(tema_principal_id = id, tema = nombre)) %>%
+  arrange(desc(n)) %>%  head(10) %>%  show_query()
+
+#Proyectos de ley -> Estado de los Proyectos de Ley ->
+tbl(con, "proyecto_leys") %>%
+  count(camara_id, estado_actual_id) %>%
   left_join(tbl(con, "estado_proyecto_leys") %>%
               select(estado_actual_id = id, estado = nombre) ) %>%
-  filter(estado %in% c(  "Acumulado",
-                         "Aprobada Conciliación"   ,
-                         "Aprobada conciliación en Cámara" ,
-                         "Aprobada conciliación en Senado"  ,
-                         "Aprobada Objeción"   ,
-                         "Aprobado Cuarto Debate"  ,
-                         "Aprobado Informe de Objeciones"  ,
-                         "Aprobado Octavo Debate" ,
-                         "Aprobado Primer Debate"  ,
-                         "Aprobado Primer y Tercer Debate" ,
-                         "Aprobado Quinto Debate"   ,
-                         "Aprobado Segundo Debate"  ,
-                         "Aprobado Séptimo Debate"   ,
-                         "Aprobado Sexto Debate" ,
-                         "Aprobado Tercer Debate" ,
-                         "Audiencia Pública"   ,
-                         "Comisión Accidental" ,
-                         "Concepto Institucional" ,
-                         "Corrección de Texto"  ,
-                         "Devuelto al Congreso",
-                         "En Conciliación" ,
-                         "Enviado a  la Corte para Control",
-                         "Enviado a Comisión para Primer Debate" ,
-                         "Informe Legislativo a las Objeciones del Ejecutivo",
-                         "Objeción Parcial del Ejecutivo" ,
-                         "Objeción Total del Ejecutivo" ,
-                         "Objeciones Presidenciales",
-                         "Publicación"  ,
-                         "Publicada Ponencia Cuarto Debate"   ,
-                         "Publicada Ponencia Octavo Debate"  ,
-                         "Publicada Ponencia Primer Debate"  ,
-                         "Publicada ponencia primer y tercer debate"   ,
-                         "Publicada Ponencia Quinto Debate" ,
-                         "Publicada Ponencia Segundo Debate" ,
-                         "Publicada Ponencia Séptimo Debate"  ,
-                         "Publicada Ponencia Sexto Debate"      ,
-                         "Publicada Ponencia Tercer Debate"      ,
-                         "Radicado"       ,
-                         "Revision Corte Constitucional",
-                         "Solicitud Audiencia Pública" ,
-                         "Texto Unificado" ))
-  summarise(n=sum(n)) %>%  show_query()
-
-#Proyectos de ley -> Origen de la iniciativa -> Legislativa
-tbl(con, "proyecto_leys") %>%
-  # filter(activo == 1 && cuatrienio_id == 1, estado_proyecto_ley_id == 1) %>%
-  filter( iniciativa_id == 1) %>%
-  tally() %>%
+  left_join(tbl(con, "corporacions") %>%
+              select(camara_id = id, corporacion = nombre), by = "camara_id" ) %>%
   show_query()
-
-#Proyectos de ley -> Origen de la iniciativa -> Gubernamental
-tbl(con, "proyecto_leys") %>%
-  # filter(activo == 1 && cuatrienio_id == 1, estado_proyecto_ley_id == 1) %>%
-  filter( iniciativa_id == 2) %>%
-  tally() %>%
-  show_query()
-
-#Proyectos de ley -> Origen de la iniciativa -> Mixta
-tbl(con, "proyecto_leys") %>%
-  # filter(activo == 1 && cuatrienio_id == 1, estado_proyecto_ley_id == 1) %>%
-  filter( iniciativa_id == 4) %>%
-  tally() %>%
-  show_query()
-
-#Proyectos de ley -> Origen de la iniciativa -> Otros
-tbl(con, "proyecto_leys") %>%
-  # filter(activo == 1 && cuatrienio_id == 1, estado_proyecto_ley_id == 1) %>%
-  filter( iniciativa_id == 3) %>%
-  tally() %>%
-  show_query()
-
-
-#Proyectos de ley -> Temas recurrentes
-tbl(con, "proyecto_leys") %>%  count(tema_proyecto_ley_id)  %>%
-  show_query()
-
-#Proyectos de ley -> Estado de los Proyectos de Ley -> Cámara de representantes
-tbl(con, "proyecto_leys") %>%
-  filter(camara_id == 1) %>%
-  # filter(activo == 1 && cuatrienio_id == 1) %>%
-  count(estado_actual_id) %>%
-  left_join(tbl(con, "estado_proyecto_leys") %>%
-              select(estado_actual_id = id, estado = nombre) ) %>%  show_query()
-
-#Proyectos de ley -> Estado de los Proyectos de Ley -> Senado de la república
-tbl(con, "proyecto_leys") %>%
-  filter(camara_id == 2) %>%
-  # filter(activo == 1 && cuatrienio_id == 1) %>%
-  count(estado_actual_id) %>%
-  left_join(tbl(con, "estado_proyecto_leys") %>%
-              select(estado_actual_id = id, estado = nombre) )%>%  show_query()
 
 
 #Proyectos de ley -> Total presentados por ministros
 tbl(con, "proyecto_leys") %>%
-  # filter(activo == 1 && cuatrienio_id == 1, estado_proyecto_ley_id == 1) %>%
-  filter( iniciativa_id == 2) %>%
-  tally() %>%
-  show_query()
+  # filter(legislatura_id ==24) %>%
+  left_join(tbl(con, "iniciativas") %>%
+              select(iniciativa_id= id, iniciativa = nombre) ) %>%
+  mutate(iniciativa2  = case_when(iniciativa %in% c("Gubernamental", "Mixta")~ "Ministros",
+                                  T~"Otros")) %>%
+  count(iniciativa2, iniciativa) %>%  show_query()
 
 # Valuebox "Resumen de la legislatura en cifras" --------------------------
 #Proyectos de ley -> Resumen de la legislatura en cifras -> Audiencias Públicas citadas
