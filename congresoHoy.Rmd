@@ -118,7 +118,8 @@ tbl(con, "proyecto_leys") %>%
   filter(n>9) %>% 
   # hchart(hcaes(from = corporacion, to  = estado, weight =n), type = "sankey") 
   hchart(hcaes(x = estado, y = n, group = corporacion), type = "bar")
-````
+
+```
 
 ## Total de proyectos presentados por ministros
 ```{r warning=FALSE, echo=FALSE, comment=FALSE, message=FALSE}
@@ -133,7 +134,7 @@ tbl(con, "proyecto_leys") %>%
   hchart(hcaes(x = iniciativa2, y = n, group = iniciativa),type = "bar") %>% 
   hc_plotOptions(bar = list(stacking = T)) %>% 
   hc_yAxis(reversedStacks = F)
-````
+```
 
 # Resumen de la legislatura en cifras
 Los siguientes datos son obtenidos de manera provisional a través de un filtro del estado del proyectos de ley, pero se debe generar la variable correspondiente.
@@ -189,9 +190,20 @@ tbl(con, "proyecto_ley_autors") %>%
   count(corporacion, autor_id) %>%  arrange(desc(n)) %>% head(10) %>%  collect() %>% 
   mutate(autor = as.character(autor_id)) %>% 
   hchart(hcaes(x = autor, y = n, group = corporacion), type = "bar")
-````
+```
 
 ## Con mayor número de citaciones de Debates de Control Político
 No encontré nada que una citaciones con congresistas 
 
 ## Total de autorías
+No se puede porque no hay info entre congrsista_id y autor_id 
+
+## Temas recurrentes
+```{r warning=FALSE, echo=FALSE, comment=FALSE, message=FALSE}
+
+tbl(con, "proyecto_leys") %>%  
+  count(tema_principal_id, camara_id) %>% 
+  left_join( tbl(con, "temas") %>%  select(tema_principal_id = id, tema = nombre)) %>% 
+  arrange(desc(n)) %>%  head(20) %>%  collect() %>% arrange(camara_id) %>% 
+  hchart(hcaes(x = tema, value = n, color = camara_id), type = "treemap")
+```
