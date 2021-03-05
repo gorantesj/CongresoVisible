@@ -73,5 +73,8 @@ convertir_grupo22 <- function(tablas, relaciones){
 # transformación ----------------------------------------------------------
 
 crear_bases(campos, tablas_res)
-convertir_grupo1("proyecto_leys", tablas_res,campos)
-convertir_grupo2("proyecto_leys", tablas_res,campos)
+
+# Variables nuevas
+proyecto_ley <- read_csv("Bases de datos nuevas/proyecto_leys.csv")
+proyecto_ley <- proyecto_ley %>%
+  mutate(nuevas_en_tramite=if_else(id_estado))
