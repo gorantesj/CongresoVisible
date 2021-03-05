@@ -782,7 +782,7 @@ num,seccion,tabla,campo,grupo,campo_gp,tabla_gp,transformar,observaciones
 139,proyecto,de_ley_estadodeproyectodeley,gaceta,1,gaceta_texto,proyecto_ley_estados,,
 139,proyecto,de_ley_estadodeproyectodeley,old_id,2,,,,
 139,proyecto,de_ley_estadodeproyectodeley,nota,2,,,,
-139,proyecto,de_ley_estadodeproyectodeley,camara_id,1,corporacion_id,,,
+139,proyecto,de_ley_estadodeproyectodeley,camara_id,1,corporacion_id,proyecto_ley_estados,,
 139,proyecto,de_ley_estadodeproyectodeley,numero_titulos,2,,,,
 139,proyecto,de_ley_estadodeproyectodeley,numero_articulos,2,,,,
 139,proyecto,de_ley_estadodeproyectodeley,observaciones,,,,,
@@ -807,7 +807,7 @@ num,seccion,tabla,campo,grupo,campo_gp,tabla_gp,transformar,observaciones
 144,proyecto,de_ley_proyectoley,edited_at,1,updated_at,proyecto_leys,,
 144,proyecto,de_ley_proyectoley,tipo_proyecto_id,1,tipo_proyecto_id,proyecto_leys,,
 144,proyecto,de_ley_proyectoley,titulo,1,titulo,proyecto_leys,,
-144,proyecto,de_ley_proyectoley,tema_principal_id,1,tema_proyecto_ley_id,proyecto_leys,,
+144,proyecto,de_ley_proyectoley,tema_principal_id,1,tema_id,proyecto_leys,,
 144,proyecto,de_ley_proyectoley,tema_secundario_id,2,,proyecto_leys,,Solamente se consider— tema principal
 144,proyecto,de_ley_proyectoley,sinapsis,1,sinopsis,proyecto_leys,,
 144,proyecto,de_ley_proyectoley,numero_camara,1,numero_camara,proyecto_leys,,

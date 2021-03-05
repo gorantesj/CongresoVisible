@@ -35,6 +35,7 @@ convertir_grupo1 <- function(tabla_nueva, tablas, relaciones){
   # transformar
   campos_nuevos <- tablas_viejas %>%
     map(~{
+      # browser()
       res <- tablas[[unique(.x$num)]] %>%
           select(.x$campo)
       names(res) <- .x$campo_gp
