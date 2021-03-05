@@ -49,8 +49,9 @@ proyecto_leys %>%
   # left_join(tbl(con, "iniciativas") %>%
   #             select(iniciativa_id= id, iniciativa = nombre) ) %>% 
   count(iniciativa_id) %>% 
+  left_join(iniciativa %>%  select(iniciativa_id = id, iniciativa= nombre)) %>% 
   # filter(iniciativa %in%c( "Legislativa ", "Gubernamental", "Mixta", "Otras entidades ")) %>% 
-  hchart(hcaes(x = iniciativa_id, y = n), type = "bar") %>% 
+  hchart(hcaes(x = iniciativa, y = n), type = "bar") %>% 
   hc_title(text = "Proyectos de ley por iniciativa")
 ```
 
@@ -65,6 +66,17 @@ proyecto_leys %>%
   # left_join(corporacions %>%  select(corporacion_id = id, corporacion  = nombre) ) 
   hchart(hcaes(x = tema, value = n), type = "treemap")
 ```
+## Principales temas por iniciativa
+```{r warning=FALSE, echo=FALSE, comment=FALSE, message=FALSE}
+proyecto_leys %>% 
+  # tbl(con, "proyecto_leys") %>%  
+  count(corporacion_id, tema_id) %>% 
+  left_join(temas %>%  select(tema_id = id, tema  = nombre)) %>% 
+  left_join(corporacions %>%  select(corporacion_id = id, corporacion  = nombre) ) %>% 
+  group_by(corporacion) %>%  top_n(wt = n, n = 5) %>% 
+  hchart(hcaes(from = tema, to = corporacion, weight = n), type = "sankey")
+```
+
 
 ## Estado de los proyectos
 
