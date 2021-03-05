@@ -47,6 +47,7 @@ convertir_grupo1 <- function(tabla_nueva, tablas, relaciones){
     }
       ) %>%
     reduce(bind_cols)
+  browser()
   write_csv(x = campos_nuevos,
             glue::glue("Bases de datos nuevas/{tabla_nueva}.csv"))
 }
@@ -76,6 +77,6 @@ convertir_grupo22 <- function(tablas, relaciones){
 crear_bases(campos, tablas_res)
 
 # Variables nuevas
+
 proyecto_ley <- read_csv("Bases de datos nuevas/proyecto_leys.csv")
-proyecto_ley <- proyecto_ley %>%
-  mutate(nuevas_en_tramite=if_else(id_estado))
+proyecto_ley %>% count(corporacion_id)
