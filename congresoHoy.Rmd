@@ -1,0 +1,209 @@
+---
+title: "Congreso Hoy"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+library(DBI)
+library(tidyverse)
+library(RMySQL)
+library(highcharter)
+
+con <- dbConnect(
+  drv = RMariaDB::MariaDB(),
+  dbname = "prueba33_congresovisible2",
+  host = "162.241.62.202",
+  username = "prueba33_cv_user",
+  password = "CongresoVisible2020",
+  port = 3306
+)
+
+```
+
+
+# Proyectos de ley
+
+## Número de proyectos de ley entrámite
+Se utilizó la variable de respaldo "camara_id". Hace falta la variable que señale si el proyecto de ley está en trámite.
+
+
+```{r warning=FALSE, echo=FALSE, comment=FALSE, message=FALSE}
+tbl(con, "proyecto_leys") %>%
+  # filter(activo == 1 && cuatrienio_id == 1) %>%
+  count(camara_id, estado_actual_id) %>%
+  left_join(tbl(con, "estado_proyecto_leys") %>%
+              select(estado_actual_id = id, estado = nombre) ) %>%
+  left_join(tbl(con, "corporacions") %>%
+              select(camara_id = id, corporacion = nombre), by = "camara_id" ) %>% 
+  filter(estado %in% c(  "Acumulado",
+                         "Aprobada Conciliación"   ,
+                         "Aprobada conciliación en Cámara" ,
+                         "Aprobada conciliación en Senado"  ,
+                         "Aprobada Objeción"   ,
+                         "Aprobado Cuarto Debate"  ,
+                         "Aprobado Informe de Objeciones"  ,
+                         "Aprobado Octavo Debate" ,
+                         "Aprobado Primer Debate"  ,
+                         "Aprobado Primer y Tercer Debate" ,
+                         "Aprobado Quinto Debate"   ,
+                         "Aprobado Segundo Debate"  ,
+                         "Aprobado Séptimo Debate"   ,
+                         "Aprobado Sexto Debate" ,
+                         "Aprobado Tercer Debate" ,
+                         "Audiencia Pública"   ,
+                         "Comisión Accidental" ,
+                         "Concepto Institucional" ,
+                         "Corrección de Texto"  ,
+                         "Devuelto al Congreso",
+                         "En Conciliación" ,
+                         "Enviado a  la Corte para Control",
+                         "Enviado a Comisión para Primer Debate" ,
+                         "Informe Legislativo a las Objeciones del Ejecutivo",
+                         "Objeción Parcial del Ejecutivo" ,
+                         "Objeción Total del Ejecutivo" ,
+                         "Objeciones Presidenciales",
+                         "Publicación"  ,
+                         "Publicada Ponencia Cuarto Debate"   ,
+                         "Publicada Ponencia Octavo Debate"  ,
+                         "Publicada Ponencia Primer Debate"  ,
+                         "Publicada ponencia primer y tercer debate"   ,
+                         "Publicada Ponencia Quinto Debate" ,
+                         "Publicada Ponencia Segundo Debate" ,
+                         "Publicada Ponencia Séptimo Debate"  ,
+                         "Publicada Ponencia Sexto Debate"      ,
+                         "Publicada Ponencia Tercer Debate"      ,
+                         "Radicado"       ,
+                         "Revision Corte Constitucional",
+                         "Solicitud Audiencia Pública" ,
+                         "Texto Unificado" )) %>%
+  group_by(corporacion) %>% 
+  summarise(n=sum(n)) %>% arrange(desc(n)) %>%  collect() %>% 
+  hchart(hcaes(x = corporacion, y = n), type = "bar") %>% 
+  hc_title(text = "Proyectos de ley en trámite")
+```
+
+## Origen de la iniciativa
+
+```{r warning=FALSE, echo=FALSE, comment=FALSE, message=FALSE}
+tbl(con, "proyecto_leys") %>% 
+  left_join(tbl(con, "iniciativas") %>%
+              select(iniciativa_id= id, iniciativa = nombre) ) %>% 
+  count(iniciativa) %>% 
+  filter(iniciativa %in%c( "Legislativa ", "Gubernamental", "Mixta", "Otras entidades ")) %>% 
+  collect() %>%  arrange(desc(n)) %>% 
+  hchart(hcaes(x = iniciativa, y = n), type = "bar") %>% 
+  hc_title(text = "Proyectos de ley por iniciativa")
+```
+
+## Temas recurrentes
+
+```{r warning=FALSE, echo=FALSE, comment=FALSE, message=FALSE}
+tbl(con, "proyecto_leys") %>%  
+  count(tema_principal_id) %>% 
+  left_join( tbl(con, "temas") %>%  select(tema_principal_id = id, tema = nombre)) %>% 
+  arrange(desc(n)) %>%  head(10) %>%  collect()%>% 
+  hchart(hcaes(x = tema, value = n), type = "treemap")
+
+```
+
+## Estado de los proyectos de ley
+```{r warning=FALSE, echo=FALSE, comment=FALSE, message=FALSE}
+tbl(con, "proyecto_leys") %>%
+    count(camara_id, estado_actual_id) %>%
+    left_join(tbl(con, "estado_proyecto_leys") %>%
+                  select(estado_actual_id = id, estado = nombre) ) %>%
+  left_join(tbl(con, "corporacions") %>%
+              select(camara_id = id, corporacion = nombre), by = "camara_id" ) %>%
+  collect() %>%  arrange(desc(n)) %>% 
+  filter(n>9) %>% 
+  # hchart(hcaes(from = corporacion, to  = estado, weight =n), type = "sankey") 
+  hchart(hcaes(x = estado, y = n, group = corporacion), type = "bar")
+
+```
+
+## Total de proyectos presentados por ministros
+```{r warning=FALSE, echo=FALSE, comment=FALSE, message=FALSE}
+tbl(con, "proyecto_leys") %>% 
+  # filter(legislatura_id ==24) %>% 
+  left_join(tbl(con, "iniciativas") %>%
+              select(iniciativa_id= id, iniciativa = nombre) ) %>% 
+  mutate(iniciativa2  = case_when(iniciativa %in% c("Gubernamental", "Mixta")~ "Ministros", 
+                                  T~"Otros")) %>%  
+  count(iniciativa2, iniciativa)  %>% 
+  collect() %>% arrange(desc(n)) %>%   mutate(pct = n*100/sum(n)) %>% 
+  hchart(hcaes(x = iniciativa2, y = n, group = iniciativa),type = "bar") %>% 
+  hc_plotOptions(bar = list(stacking = T)) %>% 
+  hc_yAxis(reversedStacks = F)
+```
+
+# Resumen de la legislatura en cifras
+Los siguientes datos son obtenidos de manera provisional a través de un filtro del estado del proyectos de ley, pero se debe generar la variable correspondiente.
+
+Audiencias públicas citadas: `r tbl(con, "proyecto_leys") %>%
+  # filter(activo == 1 && cuatrienio_id == 1) %>%
+  count(estado_actual_id) %>%
+  left_join(tbl(con, "estado_proyecto_leys") %>%
+              select(estado_actual_id = id, estado = nombre) ) %>%
+  filter(estado %in% c("Audiencia Pública" ,"Solicitud Audiencia Pública" )) %>%
+  select(n) %>% summarise(n = sum(n)) %>%  collect()`
+  
+Debates de Control Político citados: Este dato no se puede obtener
+
+Sentencias emitidas: `r tbl(con, "proyecto_leys") %>%
+  # filter(activo == 1 && cuatrienio_id == 1) %>%
+  count(estado_actual_id) %>%
+  left_join(tbl(con, "estado_proyecto_leys") %>%
+              select(estado_actual_id = id, estado = nombre) ) %>%
+  filter(estado %in% c("Declarado Exequible Parcial", "Declarado Exequible Total",
+                       "Declarado Inexequible Parcial", "Declarado Inexequible Total")) %>%
+  select(n) %>% summarise(n = sum(n)) %>%  collect()`
+  
+Objeciones presentadas: `r tbl(con, "proyecto_leys") %>%
+  # filter(activo == 1 && cuatrienio_id == 1) %>%
+  count(estado_actual_id) %>%
+  left_join(tbl(con, "estado_proyecto_leys") %>%
+              select(estado_actual_id = id, estado = nombre) ) %>%
+  filter(estado %in% c("Objeción Parcial del Ejecutivo",
+                       "Objeción Total del Ejecutivo", "Objeciones Presidenciales",
+                       "Objetado Por Presidencia")) %>%
+  select(n) %>%  summarise(n = sum(n)) %>%  collect()`
+
+Proyectos de Ley radicados: `r tbl(con, "proyecto_leys") %>%
+  anti_join(tbl(con, "proyecto_ley_publicacions") %>%  select(-id),
+            by = c("id" = "proyecto_ley_id") ) %>%
+  left_join(tbl(con, "estado_proyecto_leys") %>%
+              select(estado_actual_id = id, estado = nombre) ) %>%
+  filter(estado %in% c("Radicado")) %>% count() %>% 
+  select(n) %>%  collect()`
+
+# Congresistas más activos
+
+## Con mayor número de autorías de Proyectos de Ley
+```{r warning=FALSE, echo=FALSE, comment=FALSE, message=FALSE}
+tbl(con, "proyecto_ley_autors") %>%
+  left_join(tbl(con, "congresistas") %>% select(autor_id =id,
+                                                congresista = nombre,
+                                                corporacion_id),
+            "autor_id") %>%
+  left_join( tbl(con, "corporacions")  %>% select(id, corporacion = nombre),
+             by = c("corporacion_id" = "id")  ) %>%
+  count(corporacion, autor_id) %>%  arrange(desc(n)) %>% head(10) %>%  collect() %>% 
+  mutate(autor = as.character(autor_id)) %>% 
+  hchart(hcaes(x = autor, y = n, group = corporacion), type = "bar")
+```
+
+## Con mayor número de citaciones de Debates de Control Político
+No encontré nada que una citaciones con congresistas 
+
+## Total de autorías
+No se puede porque no hay info entre congrsista_id y autor_id 
+
+## Temas recurrentes
+```{r warning=FALSE, echo=FALSE, comment=FALSE, message=FALSE}
+
+tbl(con, "proyecto_leys") %>%  
+  count(tema_principal_id, camara_id) %>% 
+  left_join( tbl(con, "temas") %>%  select(tema_principal_id = id, tema = nombre)) %>% 
+  arrange(desc(n)) %>%  head(20) %>%  collect() %>% arrange(camara_id) %>% 
+  hchart(hcaes(x = tema, value = n, color = camara_id), type = "treemap")
+```
