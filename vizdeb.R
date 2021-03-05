@@ -106,7 +106,7 @@ tbl(con, "congresistas") %>%  mutate(congresista_id = id) %>%
 
 # congreso hoy -> Congresistas más activos -> Con mayor número de autorías de Proyectos de Ley
 # -> Senadores
-
+c
 
 
 # sandobox ----------------------------------------------------------------
