@@ -1,0 +1,48 @@
+id,created_at,updated_at,nombre,descripcion,activo
+3,2009-12-03 22:08:38.482325,2009-12-03 22:08:38.482365,Medio Ambiente,NA,TRUE
+5,2009-12-03 22:08:38.513520,2009-12-03 22:08:38.513563,Ordenamiento Territorial,NA,TRUE
+100,2009-12-03 22:08:53.125858,2010-03-03 16:30:45.883063,Tránsito y transporte,"aéreo, fluvial, masivo, código de tránsito, normas de tránsito, pico y placa,",TRUE
+38,2009-12-03 22:08:39.785592,2009-12-03 22:08:39.785649,Servicios Públicos,NA,TRUE
+55,2009-12-03 22:08:42.182651,2009-12-03 22:08:42.182707,Mujer,NA,TRUE
+63,2009-12-03 22:08:43.657830,2009-12-03 22:08:43.657884,Corrupción,NA,TRUE
+95,2009-12-03 22:08:51.390379,2009-12-03 22:08:51.390435,Familia,NA,TRUE
+106,2009-12-03 22:08:54.957934,2009-12-03 22:08:54.957973,Juegos Azar,NA,TRUE
+8,2009-12-03 22:08:38.568337,2010-02-25 17:23:49.813037,Agropecuario y agrícola,"agricultura, animales",TRUE
+116,2010-02-25 17:11:37.426020,2010-02-25 17:11:37.426061,Bienestar y pobreza,todo lo relacionado con política social,TRUE
+94,2009-12-03 22:08:51.294920,2010-02-25 17:24:07.662273,Derechos Humanos y DIH,NA,TRUE
+47,2009-12-03 22:08:41.189788,2010-02-25 17:16:44.887523,"Celebraciones, honores y monumentos","efemérides, patrimonio, conmemoraciones",TRUE
+53,2009-12-03 22:08:41.769393,2010-08-10 20:28:27.872880,"Comunicaciones, medios y tecnologías de la información","tecnologías de la información, televisión, satélites, radio",TRUE
+119,2010-02-25 17:19:11.399138,2010-02-25 17:19:11.399174,Conflicto armado,"procesos de paz, víctimas, justicia y paz, intercambio humanitario, desmovilización, reinserción",TRUE
+64,2009-12-03 22:08:43.706100,2010-02-25 17:19:31.885999,"Comercio, industria y turismo",consumidores,TRUE
+2,2009-12-03 22:08:38.469734,2010-08-10 19:44:57.129865,"Educación, cultura, ciencia y tecnología","ciencia, investigación, cultura",TRUE
+22,2009-12-03 22:08:38.953656,2010-02-25 17:25:55.234331,Laboral,"Salarios, sindicatos, huelgas, trabajo, empleo, prestaciones",TRUE
+108,2009-12-03 22:08:56.265574,2010-02-25 17:29:02.719468,Política Internacional,"relaciones internacionales, TLC, tratados, convenciones, acuerdos, migración, doble nacionalidad, fronteras",TRUE
+120,2010-02-25 19:46:46.978732,2010-02-25 19:46:46.978773,Minorías étnicas y sexuales,"indígenas, afros, LGBT",TRUE
+121,2010-02-25 19:59:47.931053,2010-02-25 19:59:47.931103,Rama Ejecutiva,"presidente, ministros, gobernadores, alcaldes, secretarías",TRUE
+122,2010-02-25 21:43:48.534116,2010-02-25 21:43:48.534143,Justicia,"cárceles, códigos, delitos, narcotráfico, extradición",TRUE
+123,2010-02-25 21:59:56.454073,2010-02-25 21:59:56.454111,"Seguridad, defensa y fuerza pública","servicio militar, seguridad ciudadana, armas",TRUE
+124,2010-02-26 21:31:07.536780,2010-02-26 21:31:07.536830,Asuntos administrativos,NA,FALSE
+28,2009-12-03 22:08:39.329437,2010-03-02 20:18:22.405261,Derechos Fundamentales,NA,TRUE
+111,2010-02-09 22:37:42.886776,2010-03-02 20:18:41.157344,Derechos de autor,propiedad intelectual,TRUE
+4,2009-12-03 22:08:38.494369,2010-03-02 20:27:31.665969,Estampillas,NA,TRUE
+73,2009-12-03 22:08:45.481866,2010-03-02 20:34:55.761384,Infraestructura,obras públicas,TRUE
+41,2009-12-03 22:08:39.934695,2010-03-02 20:26:08.348457,Economía,"hacienda y crédito público, desarrollo económico, impuestos, aduanas, presupuesto, regulación financiera, gasto público. contratación, exenciones. régimen monetario, Banco de la República, mercado de valores, regalías, juegos de azar, tasas de interés, economía informal",TRUE
+62,2009-12-03 22:08:43.430825,2010-03-02 20:41:10.998647,Notariado y registro,NA,TRUE
+56,2009-12-03 22:08:42.394920,2010-03-02 20:39:55.377379,Minas y energía,"combustibles, hidrocarburos",TRUE
+50,2009-12-03 22:08:41.656930,2010-03-02 20:41:39.577335,Organismos de Control y Ministerio público,"ministerio público, contraloría, procuraduría, defensoría",TRUE
+30,2009-12-03 22:08:39.412942,2010-03-02 20:43:22.945382,Participación ciudadana,"juntas, organizaciones comunitarias, mecanismos de participación",TRUE
+97,2009-12-03 22:08:52.850016,2010-03-02 20:45:14.424186,Plan Nacional de Desarrollo,NA,TRUE
+35,2009-12-03 22:08:39.544830,2010-03-03 16:09:24.571009,Profesiones,"códigos de ética, tarjetas profesionales,",TRUE
+67,2009-12-03 22:08:44.314098,2010-03-03 16:13:26.209876,Recreación y deporte,NA,TRUE
+20,2009-12-03 22:08:38.862285,2010-03-03 16:14:20.124630,Rama Legislativa,"senadores, representantes, reglamento del congreso, funcionarios del congreso",TRUE
+11,2009-12-03 22:08:38.621174,2010-03-03 16:14:37.734877,Rama Judicial,"cortes, jueces",TRUE
+125,2010-02-26 21:41:20.344027,2010-03-03 16:33:33.738240,Vivienda,"catastro, vivienda de interés social",FALSE
+128,2010-03-02 20:35:14.391466,2010-03-02 20:35:14.391502,Desastres y calamidades,NA,FALSE
+130,2010-03-02 20:44:49.444249,2010-03-02 20:44:49.444285,Partidos y movimientos,"campañas, elecciones, participación política, oposición",FALSE
+133,2010-04-22 21:12:02.277824,2010-05-24 07:53:23.151707,Presupuesto,NA,FALSE
+134,2010-04-22 21:35:38.434681,2010-04-22 21:35:38.434716,Impuestos,NA,FALSE
+10,2009-12-03 22:08:38.602678,2013-08-28 15:55:29.757048,Seguridad Social y salud,"pensiones, cesantías, salud, riesgos profesionales, cajas de previsión, hospitales, cajas compensación familiar",TRUE
+138,2010-08-11 20:59:05.192058,2010-08-11 20:59:05.192085,Administración pública,"Carrera administrativa, contratación pública",TRUE
+145,2016-10-28 17:24:16.604179,2016-10-28 17:24:16.604238,Infancia y adolescencia,NA,TRUE
+146,2016-12-14 15:49:46.615062,2016-12-14 15:49:46.615091,Implementación paz,Los relacionados con el posconflicto,TRUE
+101,2009-12-03 22:08:53.145221,2017-03-31 13:45:41.968430,Organización Electoral y elecciones,"candidatos, elecciones, registraduría, cédula, consejo nacional electoral, censo, tarjetones",TRUE
