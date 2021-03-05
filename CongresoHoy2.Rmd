@@ -30,7 +30,7 @@ Se bede hacer otra variable de estado de proyecto de ley
 
 ```{r warning=FALSE, echo=FALSE, comment=FALSE, message=FALSE}
 proyecto_leys %>% 
-  # filter(activo == 1 && cuatrienio_id == 1) %>%
+  filter(legislatura_id == 24) %>%
   count(corporacion_id, estado_proyecto_ley_id) %>%
   filter(estado_proyecto_ley_id %in% c(  12, 13 ,15, 17, 19, 21, 23 ,25 ,27, 29, 31, 37, 42, 43,
                          44, 45, 46, 47, 48, 49, 50, 51, 52, 54, 56, 58, 60 ,63, 64, 65, 66, 68,
@@ -46,6 +46,7 @@ proyecto_leys %>%
 
 ```{r warning=FALSE, echo=FALSE, comment=FALSE, message=FALSE}
 proyecto_leys %>% 
+  filter(legislatura_id == 24) %>%
   # left_join(tbl(con, "iniciativas") %>%
   #             select(iniciativa_id= id, iniciativa = nombre) ) %>% 
   count(iniciativa_id) %>% 
@@ -59,6 +60,7 @@ proyecto_leys %>%
 
 ```{r warning=FALSE, echo=FALSE, comment=FALSE, message=FALSE}
 proyecto_leys %>% 
+  filter(legislatura_id == 24) %>%
   # tbl(con, "proyecto_leys") %>%  
   count( tema_id) %>% 
   left_join(temas %>%  select(tema_id = id, tema  = nombre)) %>% 
@@ -69,6 +71,7 @@ proyecto_leys %>%
 ## Principales temas por iniciativa
 ```{r warning=FALSE, echo=FALSE, comment=FALSE, message=FALSE}
 proyecto_leys %>% 
+  filter(legislatura_id == 24) %>%
   # tbl(con, "proyecto_leys") %>%  
   count(corporacion_id, tema_id) %>% 
   left_join(temas %>%  select(tema_id = id, tema  = nombre)) %>% 
@@ -82,6 +85,7 @@ proyecto_leys %>%
 
 ```{r warning=FALSE, echo=FALSE, comment=FALSE, message=FALSE}
 proyecto_leys  %>%
+  filter(legislatura_id == 24) %>%
   count(corporacion_id, estado_proyecto_ley_id) %>%
   # left_join(proyecto_ley_estados %>%
   #             select(estado_proyecto_ley_id = id, estado = nombre),
@@ -98,6 +102,7 @@ proyecto_leys  %>%
 ## Total de proyectos presentados por ministros
 ```{r warning=FALSE, echo=FALSE, comment=FALSE, message=FALSE}
 proyecto_leys   %>% 
+  filter(legislatura_id == 24) %>%
   # filter(legislatura_id ==24) %>% 
   left_join(iniciativa %>%
               select(iniciativa_id= id, iniciativa = nombre) ) %>% 
@@ -114,6 +119,7 @@ proyecto_leys   %>%
 
 # Resumen de la legislatura en cifras
 Audiencias públicas citadas: `r proyecto_leys   %>% 
+filter(legislatura_id == 24) %>%
   count(estado_proyecto_ley_id) %>%
   # left_join(estado_proyecto_ley %>%
   #             select(estado_actual_id = id, estado = nombre) ) %>%
@@ -124,6 +130,7 @@ Audiencias públicas citadas: `r proyecto_leys   %>%
 Debates de Control Político citados: Este dato no se puede obtener
   
 Sentencias emitidas: `r proyecto_leys %>% 
+filter(legislatura_id == 24) %>%
   count(estado_proyecto_ley_id) %>%
   # left_join(estado_proyecto_ley %>%
   #             select(estado_actual_id = id, estado = nombre) ) %>%
@@ -132,6 +139,7 @@ Sentencias emitidas: `r proyecto_leys %>%
   select(n) %>% summarise(n = sum(n))`
 
 Objeciones presentadas: `r proyecto_leys %>% 
+filter(legislatura_id == 24) %>%
   count(estado_proyecto_ley_id) %>%
   # left_join(estado_proyecto_ley %>%
   #             select(estado_actual_id = id, estado = nombre) ) %>%
@@ -140,6 +148,7 @@ Objeciones presentadas: `r proyecto_leys %>%
   select(n) %>% summarise(n = sum(n))`
 
 Proyectos de Ley radicados:  `r proyecto_leys %>% 
+filter(legislatura_id == 24) %>%
   count(estado_proyecto_ley_id) %>%
   # left_join(estado_proyecto_ley %>%
   #             select(estado_actual_id = id, estado = nombre) ) %>%
@@ -157,6 +166,7 @@ Proyectos de Ley radicados:  `r proyecto_leys %>%
 ```{r warning=FALSE, echo=FALSE, comment=FALSE, message=FALSE}
 
 proyecto_leys %>% 
+  filter(legislatura_id == 24) %>%
   # tbl(con, "proyecto_leys") %>%  
   count(corporacion_id, tema_id) %>% 
   left_join(temas %>%  select(tema_id = id, tema  = nombre)) %>% 
