@@ -1,0 +1,8 @@
+id,nombre,enlace,activo,orden
+5,¿Qué es CongresoVisible?,http://www.congresovisible.org/quesomos/,TRUE,0
+2,Proyectos,http://www.congresovisible.org/proyectos/,TRUE,2
+3,Quienes nos apoyan,http://www.congresovisible.org/nuestroapoyo/,TRUE,3
+6,Nuestra Democracia,http://www.congresovisible.org/democracia/,TRUE,5
+7,Otras Publicaciones,http://www.congresovisible.org/publicaciones/,TRUE,6
+4,Pertenecer a CongresoVisible,http://www.congresovisible.org/pertenecer/,FALSE,4
+1,Nuestro Equipo,http://www.congresovisible.org/equipo/,TRUE,1
