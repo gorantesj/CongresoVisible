@@ -59,9 +59,11 @@ proyecto_leys %>%
 ```{r warning=FALSE, echo=FALSE, comment=FALSE, message=FALSE}
 proyecto_leys %>% 
   # tbl(con, "proyecto_leys") %>%  
-  count(tema_id) %>% 
-  arrange(desc(n)) %>%  head(10) %>%  collect()%>% 
-  hchart(hcaes(x = tema_id, value = n), type = "treemap")
+  count( tema_id) %>% 
+  left_join(temas %>%  select(tema_id = id, tema  = nombre)) %>% 
+  arrange(desc(n)) %>%  head(10) %>% 
+  # left_join(corporacions %>%  select(corporacion_id = id, corporacion  = nombre) ) 
+  hchart(hcaes(x = tema, value = n), type = "treemap")
 ```
 
 ## Estado de los proyectos
@@ -97,3 +99,57 @@ proyecto_leys   %>%
   hc_yAxis(reversedStacks = F)
 
 ```
+
+# Resumen de la legislatura en cifras
+Audiencias públicas citadas: `r proyecto_leys   %>% 
+  count(estado_proyecto_ley_id) %>%
+  # left_join(estado_proyecto_ley %>%
+  #             select(estado_actual_id = id, estado = nombre) ) %>%
+  # filter(estado %in% c("Audiencia Pública" ,"Solicitud Audiencia Pública" )) %>%
+  filter(estado_proyecto_ley_id %in% c(65 ,66)) %>%
+  select(n) %>% summarise(n = sum(n))`
+  
+Debates de Control Político citados: Este dato no se puede obtener
+  
+Sentencias emitidas: `r proyecto_leys %>% 
+  count(estado_proyecto_ley_id) %>%
+  # left_join(estado_proyecto_ley %>%
+  #             select(estado_actual_id = id, estado = nombre) ) %>%
+  # filter(estado %in% c("Audiencia Pública" ,"Solicitud Audiencia Pública" )) %>%
+  filter(estado_proyecto_ley_id %in% c(39, 81, 82)) %>%
+  select(n) %>% summarise(n = sum(n))`
+
+Objeciones presentadas: `r proyecto_leys %>% 
+  count(estado_proyecto_ley_id) %>%
+  # left_join(estado_proyecto_ley %>%
+  #             select(estado_actual_id = id, estado = nombre) ) %>%
+  # filter(estado %in% c("Audiencia Pública" ,"Solicitud Audiencia Pública" )) %>%
+  filter(estado_proyecto_ley_id %in% c(36, 76)) %>%
+  select(n) %>% summarise(n = sum(n))`
+
+Proyectos de Ley radicados:  `r proyecto_leys %>% 
+  count(estado_proyecto_ley_id) %>%
+  # left_join(estado_proyecto_ley %>%
+  #             select(estado_actual_id = id, estado = nombre) ) %>%
+  # filter(estado %in% c("Audiencia Pública" ,"Solicitud Audiencia Pública" )) %>%
+  filter(estado_proyecto_ley_id %in% c(15)) %>%
+  select(n) %>% summarise(n = sum(n))`
+
+## Congresitas más activos está pendiente: le faltan variables a proyecto_ley_autors y falta congresistas
+
+## Total citaciones está pendiente:  falta congresistas y citacions
+
+## Total autorías: le faltan variables a proyecto_ley_autors (autor, congresista, corporación)
+
+## Temas recurrentes
+```{r warning=FALSE, echo=FALSE, comment=FALSE, message=FALSE}
+
+proyecto_leys %>% 
+  # tbl(con, "proyecto_leys") %>%  
+  count(corporacion_id, tema_id) %>% 
+  left_join(temas %>%  select(tema_id = id, tema  = nombre)) %>% 
+  left_join(corporacions %>%  select(corporacion_id = id, corporacion  = nombre) ) %>% 
+  arrange(desc(n)) %>%  head(20) %>% 
+  hchart(hcaes(x = tema, value = n, color = corporacion_id), type = "treemap")
+```
+
