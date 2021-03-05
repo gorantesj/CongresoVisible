@@ -1,0 +1,67 @@
+---
+title: "Diagnóstico base de datos"
+author: "Gerardo Orantes"
+date: "4/3/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(readxl)
+library(stringr)
+```
+
+## Base de datos
+
+```{r bases_viejas}
+archivos <- list.files("~/Documents/Congreso Visible/",full.names = T)
+nombre_archivos <- str_remove(string = archivos, 
+                              pattern ="/Users/MorantConsultores/Documents/Congreso Visible//cvisible_public_") %>% 
+  str_remove(pattern = ".xlsx")
+clasificacion <- nombre_archivos %>% str_split_fixed(pattern="_",n=2) %>% 
+  as_tibble()
+names(clasificacion) <- c("seccion", "tabla")
+
+leer <- safely(read_xlsx)
+tablas <- archivos %>% map(~leer(.x))
+tablas_res <- tablas %>% transpose() %>% pluck("result")
+
+nDatos <- sum(tablas_res%>%  map_dbl(.x = .,
+                                     .f = ~{
+                                       if(is_empty(.x)) {
+                                        res <-  0
+                                       }
+                                       else{
+                                         res <- .x %>% dim() %>% reduce(`*`)
+                                         }
+                                       return(res)}))
+campos <- tablas_res%>%  map2_df(.x = ., 
+                                 .y=1:nrow(clasificacion),
+                                 .f = ~{
+                                       if(is_empty(.x)) {
+                                        res <-  tibble(campo=NULL) %>%
+                                          bind_cols(clasificacion[.y,], num=.y)
+                                       }
+                                       else{
+                                         res <- tibble(campo=names(.x), num=.y) %>% bind_cols(clasificacion[.y,])
+                                         }
+                                       return(res)}) 
+
+write_csv(campos, "campos.csv")
+```
+
+De la base de datos anterior, se identificaron `r scales::comma(length(nombre_archivos))` tablas que podrían tener información. Existen otras tablas procedimentales que no se tomaron en cuenta. En las tablas que sí se tomaron en cuenta, se encontraron `r scales::comma(nDatos)` datos distribuidas en `r scales::comma(length(campos$campo))`, de los cuáles `r scales::comma(n_distinct(campos$campo))` son únicos.
+
+### Proyectos de ley
+
+Para constuir el p
+
+```{r}
+
+
+
+```
+
+
+
