@@ -47,7 +47,7 @@ convertir_grupo1 <- function(tabla_nueva, tablas, relaciones){
     }
       ) %>%
     reduce(bind_cols)
-  browser()
+  # browser()
   write_csv(x = campos_nuevos,
             glue::glue("Bases de datos nuevas/{tabla_nueva}.csv"))
 }

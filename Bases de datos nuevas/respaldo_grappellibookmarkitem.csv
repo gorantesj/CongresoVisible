@@ -1,0 +1,58 @@
+id,bookmark_id,title,link,order
+1,6,Modificar congresista,/admin/congreso/congresista/96/,0
+4,31,Escoja Congresista/Candidato a modificar,/admin/congreso/congresista/,0
+5,36,Escoja Congresista/Candidato a modificar,/admin/congreso/congresista/?ot=desc&o=8,0
+8,32,Escoja Votación a modificar,/admin/proyecto_de_ley/votacion/,0
+10,65,Cambio de contraseña exitoso,/admin/password_change/done/,0
+11,66,Escoja Congresista/Candidato a modificar,/admin/congreso/congresista/,0
+14,111,Sitio administrativo,/admin/,0
+16,86,Escoja Congresista/Candidato a modificar,/admin/congreso/congresista/?ot=desc&o=4,0
+17,86,Escoja Congresista/Candidato a modificar,/admin/congreso/congresista/?ot=desc&o=8,1
+18,177,Escoja Congresista/Candidato a modificar,/admin/congreso/congresista/,0
+19,108,Escoja Congresista/Candidato a modificar,/admin/congreso/congresista/,0
+21,212,José Antonio Durán Ariza,/admin/congreso/congresista/?ot=desc&o=8,0
+22,215,Escoja Congresista/Candidato a modificar,/admin/congreso/congresista/?ot=asc&o=3,0
+23,229,Escoja Congresista/Candidato a modificar,/admin/congreso/congresista/?ot=asc&o=3,0
+24,229,Escoja Congresista/Candidato a modificar,/admin/congreso/congresista/?ot=desc&o=3,1
+25,233,Escoja Congresista/Candidato a modificar,/admin/congreso/congresista/?q=Carlos+Arturo+Echeverri+Molina,0
+26,9,Modificar Campaña,/admin/congreso/campania/413/,0
+27,139,Modificar Congresista/Candidato,/admin/congreso/congresista/284/,0
+28,133,Escoja Campaña a modificar,/admin/congreso/campania/?ot=asc&o=1,0
+33,127,Sitio administrativo,/admin/,0
+34,308,Modificar Congresista/Candidato,/admin/congreso/congresista/122/,0
+35,86,Escoja Congresista/Candidato a modificar,/admin/congreso/congresista/?ot=asc&o=8,2
+36,333,Cambio de contraseña exitoso,/admin/password_change/done/,0
+37,337,Alfonso Maria Nuñez Lapeira,/admin/congreso/congresista/,0
+39,271,Escoja Campaña a modificar,/admin/congreso/campania/?ot=asc&o=5,0
+40,271,Modificar Campaña,/admin/congreso/campania/311/,1
+41,219,Sitio administrativo,/admin/,0
+44,391,Escoja Campaña a modificar,/admin/congreso/campania/?q=senador,0
+45,392,Escoja Congresista/Candidato a modificar,/admin/congreso/congresista/?q=&ot=asc&o=8,0
+46,406,Modificar Congresista/Candidato,/admin/congreso/congresista/2246/,0
+47,406,Escoja Congresista/Candidato a modificar,/admin/congreso/congresista/,1
+48,406,Sitio administrativo,/admin/,2
+49,406,Escoja Seccion a modificar,/admin/blog/blog/,3
+50,3,Alfonso Valdivieso,/admin/congreso/congresista/,0
+51,408,Sitio administrativo,/admin/,0
+54,417,jose dario salazar ramos,/admin/congreso/congresista/,0
+55,419,Añadir Articulo,/admin/blog/post/add/,0
+56,419,Modificar Congresista/Candidato,/admin/congreso/congresista/2383/,1
+57,334,Sitio administrativo,/admin/,0
+59,237,Escoja Congresista/Candidato a modificar,/admin/congreso/congresista/,0
+60,374,Escoja Congresista/Candidato a modificar,/admin/congreso/congresista/?es_candidato__exact=1&partido_politico__id__exact=10&ot=asc&o=3&profesion__id__exact=175,0
+61,409,Escoja Congresista/Candidato a modificar,/admin/congreso/congresista/,0
+62,414,Añadir Campaña,/admin/congreso/campania/add/,0
+82,55,proyectos de ley,/admin/blog/blog/,0
+83,519,Sitio administrativo,/admin/,0
+94,22,Sitio administrativo,/admin/,0
+93,648,Escoja Aliado a modificar,/admin/grupo/grupo/?ot=asc&o=2,0
+67,480,Escoja Congresista/Candidato a modificar,/admin/congreso/congresista/?q=Liberal&partido_politico__id__exact=2&es_congresista__exact=1,0
+86,453,Modificar Articulo,/admin/blog/post/832/,0
+87,542,imagen,/admin/blog/blog/,0
+90,497,contacto,/admin/blog/blog/,1
+72,497,JUAN FELIPE LEMOS URIBE,/admin/congreso/congresista/,0
+91,609,Añadir Articulo,/admin/blog/post/add/,0
+75,515,Añadir Votación,/admin/proyecto_de_ley/votacion/add/,0
+97,648,Nuestro equipo,/admin/blog/blog/375/,1
+78,529,teresita garcia,/admin/congreso/congresista/,0
+98,474,Añadir Articulo,/admin/blog/post/add/,0
