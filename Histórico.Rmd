@@ -67,4 +67,19 @@ aux %>%
 # Composición partidista
 ```{r warning=FALSE, echo=FALSE, comment=FALSE, message=FALSE}
 
-``` 
+```
+
+# Relación Ejecutivo - Legislativo
+## Número de iniciativas gubernamentales por cuatrienio
+```{r warning=FALSE, echo=FALSE, comment=FALSE, message=FALSE}
+proyecto_leys   %>% 
+  left_join(iniciativa %>%
+              select(iniciativa_id= id, iniciativa = nombre) ) %>% 
+  mutate(fecha = floor_date(fecha_radicacion, unit = "year"),
+    iniciativa2  = case_when(iniciativa %in% c("Gubernamental", "Mixta")~ "Ministros", 
+                                  T~"Otros")) %>%  
+  count(iniciativa2,  fecha)  %>% 
+  # gather(tipo, grupo, iniciativa2:iniciativa) %>% 
+  hchart(hcaes(x = fecha, y = n, group =iniciativa2),type = "line") 
+
+```

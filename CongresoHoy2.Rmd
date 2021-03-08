@@ -19,6 +19,7 @@ corporacions <- read_csv(here("Bases de datos nuevas/corporacions.csv"))
 temas <- read_csv(here("Bases de datos nuevas/temas.csv"))
 proyecto_ley_estados <- read_csv(here("Bases de datos nuevas/proyecto_ley_estados.csv"))
 iniciativa <- read_csv(here("Bases de datos nuevas/iniciativas.csv"))
+partidos <- read_csv(here("Bases de datos nuevas/partidos.csv"))
 ```
 
 
@@ -174,4 +175,7 @@ proyecto_leys %>%
   arrange(desc(n)) %>%  head(20) %>% 
   hchart(hcaes(x = tema, value = n, color = corporacion_id), type = "treemap")
 ```
+# Actividad por partido político
+
+
 
