@@ -35,5 +35,36 @@ proyecto_leys %>%
 
 ``` 
 
-## Tiempo
+## Temas recurrentes
+```{r warning=FALSE, echo=FALSE, comment=FALSE, message=FALSE}
+proyecto_leys %>% 
+  count( tema_id) %>% 
+  left_join(temas %>%  select(tema_id = id, tema  = nombre)) %>% 
+  arrange(desc(n)) %>%  head(10) %>% 
+  hchart(hcaes(x = tema, value = n), type = "treemap")
 
+``` 
+
+# Días de aprobación
+```{r warning=FALSE, echo=FALSE, comment=FALSE, message=FALSE}
+aux <- proyecto_leys %>%
+  filter(estado_proyecto_ley_id ==40) %>%
+  mutate(fecha_actualizacion =as.Date(floor_date(updated_at, unit = "day"))) %>% 
+  # count(tipo_proyecto_id, fecha_radicacion, fecha_actualizacion) %>%
+  left_join(tipo_proyectos %>%  select(tipo_proyecto_id=id, tipo = nombre )) %>% 
+  group_by(tipo) %>%
+  summarise( dias_dif = round(mean(fecha_actualizacion- fecha_radicacion) %>%  as.numeric()),
+             dias_min =round(min(fecha_actualizacion- fecha_radicacion) %>%  as.numeric()),
+             dias_max =round(max(fecha_actualizacion- fecha_radicacion)) %>%  as.numeric()) %>% 
+  arrange(desc(dias_dif))
+aux %>%  
+  hchart(hcaes(x = tipo, low = dias_min, high= dias_max), type = "errorbar") %>% 
+  hc_add_series(aux, hcaes(x = tipo, y= dias_dif), type = "scatter") %>% 
+  hc_chart(inverted = T)
+  
+``` 
+
+# Composición partidista
+```{r warning=FALSE, echo=FALSE, comment=FALSE, message=FALSE}
+
+``` 
