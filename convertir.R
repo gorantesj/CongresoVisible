@@ -80,3 +80,8 @@ crear_bases(campos, tablas_res)
 
 proyecto_ley <- read_csv("Bases de datos nuevas/proyecto_leys.csv")
 proyecto_ley %>% count(corporacion_id)
+
+campos %>%
+  filter(grupo!="") %>%
+  pull(tabla) %>%
+  n_distinct()

@@ -1,0 +1,38 @@
+id,nombre,region_id
+2,Amazonas,6
+3,Antioquia,1
+4,Arauca,9
+6,Bolívar,4
+5,Atlántico,4
+7,Boyacá,1
+8,Caldas,1
+9,Caquetá,6
+10,Casanare,9
+11,Cauca,8
+12,Cesar,4
+13,Chocó,8
+15,Cundinamarca,1
+14,Córdoba,4
+1,Distrito Capital,1
+36,Extranjero,3
+16,Guainía,6
+18,Huila,1
+17,Guaviare,6
+20,Magdalena,4
+22,Meta,9
+23,Nariño,8
+38,Comunidades Afro,5
+24,Norte de Santander,1
+25,Putumayo,6
+26,Quindío,1
+27,Risaralda,1
+28,San Andrés y Providencia,10
+29,Santander,1
+30,Sucre,4
+31,Tolima,1
+32,Valle del Cauca,1
+33,Vaupés,6
+34,Vichada,9
+39,Comunidades Indígenas,5
+40,Minorías Políticas,5
+19,La Guajira,4
