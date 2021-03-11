@@ -67,7 +67,25 @@ convertir_grupo22 <- function(tablas, relaciones){
     })
 }
 
-
+graficar_relaciones <- function(carpeta="Base de datos/"){
+  archivos <- list.files(carpeta)
+  nodos <- tibble(id=stringr::str_replace(archivos,pattern = ".csv",replacement = ""))
+  nodos <- nodos %>% mutate(label=id,
+                            groups=if_ele)
+  aristas <- map_df(archivos, ~
+        {
+          relaciones <- tibble(to=read_csv(paste(carpeta, .x, sep="/")) %>%
+                                 select(ends_with("_id")) %>%
+                                 names() %>%
+                                 stringr::str_replace(string = .,
+                                                      pattern = "_id",
+                                                      replacement = "s"))
+          relaciones <- relaciones %>%
+            mutate(from=stringr::str_replace(.x,pattern = ".csv", replacement = ""))
+          }
+        )
+  return(list(nodos, aristas))
+}
 
 
 
@@ -76,12 +94,8 @@ convertir_grupo22 <- function(tablas, relaciones){
 
 crear_bases(campos, tablas_res)
 
-# Variables nuevas
+ja <- graficar_relaciones("Bases de datos nuevas")
 
-proyecto_ley <- read_csv("Bases de datos nuevas/proyecto_leys.csv")
-proyecto_ley %>% count(corporacion_id)
-
-campos %>%
-  filter(grupo!="") %>%
-  pull(tabla) %>%
-  n_distinct()
+visNetwork(ja[[1]], ja[[2]])%>%
+  visEdges(arrows = 'from') %>%
+  visOptions( nodesIdSelection = TRUE,highlightNearest = TRUE)
