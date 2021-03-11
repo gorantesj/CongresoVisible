@@ -4,9 +4,7 @@ output: html_document
 ---
 
 ```{r setup, include=FALSE}
-library(DBI)
 library(tidyverse)
-library(RMySQL)
 library(highcharter)
 library(readr)
 library(here)
