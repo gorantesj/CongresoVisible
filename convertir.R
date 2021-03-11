@@ -99,3 +99,14 @@ ja <- graficar_relaciones("Bases de datos nuevas")
 visNetwork(ja[[1]], ja[[2]])%>%
   visEdges(arrows = 'from') %>%
   visOptions( nodesIdSelection = TRUE,highlightNearest = TRUE)
+
+campos %>% group_by(num, seccion,  tabla) %>% count(grupo) %>%
+  complete(grupo=c(1,2,3,NA),fill=list(n=0)) %>%
+  pivot_wider(names_from = grupo, values_from = n,
+              names_glue = "Grupo {grupo}") %>%
+  rowwise() %>%
+  mutate(`Número de campos`=sum(c_across(starts_with("Grupo "))),
+         Observaciones=case_when(`Grupo 2`==`Número de campos`~"Tabla obsoleta",
+                                 `Grupo 1`==`Número de campos`~"Tabla migrada al 100%")) %>%
+
+write_csv("tablas_originales.csv")
