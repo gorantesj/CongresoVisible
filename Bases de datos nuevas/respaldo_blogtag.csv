@@ -1,0 +1,1968 @@
+id,nombre
+1,campaña
+2,gastos
+3,costos
+4,Internet
+5,Brazil
+6,Italia
+7,Estados Unidos
+8,Elecciones
+9,Elecciones
+10,Congreso Visible
+11,rectificacion
+12,milton rodriguez
+13,encuestas
+14,presidencia
+15,género
+16,mujeres
+17,Comisión Legal para la Equidad de la Mujer
+18,PL. 127/09 de Senado
+19,Congreso
+20,agenda
+21,control político
+22,proyectos de ley
+23,orden del día
+24,indigenas
+25,afro
+26,etnico
+27,minorías
+28,representación
+29,incentivos tributarios
+30,corrupción
+31,inversión
+32,Comisión Nacional de Desarrollo Integral
+33,Movimiento Cimarrón
+34,Agenda legislativa
+35,Votaciones
+36,Reforma a la salud
+37,Juventud
+38,jóvenes
+39,rendición de cuentas
+40,Modernización recinto senado
+41,Conflicto Armado
+42,Ley de bancadas
+43,Disciplina partidista
+44,Partidos políticos
+45,Comisión Reguladora de Energía y Gas
+46,energía eléctrica
+47,Política Social
+48,Derechos Económicos Sociales y Culturales (desc)
+49,Sistema político
+50,Ausentismo
+51,Referendo del agua
+52,Reglamento del Congreso
+53,Ley 375 de 1998
+54,Proyecto de ley 60/2009 Senado
+55,Estatuto de Juventud
+56,Política Pública de Juventud
+57,ley de cuotas
+58,Oposición
+59,Rama ejecutiva
+60,Rama legislativa
+61,Rama judicial
+62,acuerdo de unidad nacional
+63,Álvaro Uribe
+64,Juan Manuel Santos
+65,Luis Javier Orjuela
+66,Seguridad Democrática
+67,diplomacia
+68,LAPOP
+69,Opinión Pública
+70,Liberalismo
+71,Partido Liberal
+72,Partido Conservador
+73,Conservadurismo
+74,Bipartidismo
+75,Partido Verde
+76,Mockus
+77,Secretarios
+78,Mesas Directivas
+79,ciudadania
+80,tecnologia
+81,Senado
+82,Cámara de Representantes
+83,comisiones
+84,Comisiones legales
+85,Comisión de Ordenamiento Territorial
+86,metro
+87,Bogotá
+88,transporte público
+89,cundinamarca
+90,fiscalía
+91,medellín
+92,feria de las flores
+93,ASI
+94,Juan Valdés
+95,Juan Valdés
+96,Cámara de Representantes
+97,reforma
+98,sistema electoral
+99,terrorismo
+100,voto
+101,derecho al voto
+102,Cultura caucana
+103,angela robledo
+104,partido verde
+105,antanas mockus
+106,pedagogia politica y legislativa
+107,mockus
+108,ley
+109,ola verde
+110,Beatriz Uribe Botero
+111,Ministra de Medio Ambiente
+112,Control Político
+113,Ley de Tierras
+114,Voto nominal
+115,Acto Legislativo 01 de 2009
+116,Accountability
+117,Cauca
+118,Música
+119,Nuevo Congreso
+120,Carlos Julio Bonilla Soto
+121,Bancadas
+122,Dilian Francisca Toro
+123,CMJ
+124,Bicentenario
+125,03/10
+126,Justicia
+127,Nariño
+128,Indígenas
+129,Coalición legislativa
+130,Coalición de gobierno
+131,Felipe Botero Jaramillo
+132,Votaciones Nominales
+133,Circunscripciones unipersonales
+134,John Sudarsky
+135,Ciudadanía
+136,Voto preferente
+137,Financiación de campañas
+138,Lista cerrada
+139,Consulta Previa
+140,Recursos pesqueros
+141,Heriberto Arrechea
+142,Yahir Fernando Acuña Cardales
+143,Movimiento Popular Unido
+144,Afrovides
+145,Marco Aníbal Avirama Avirama
+146,Alianza Social Indígena
+147,Germán Bernardo Carlosama López
+148,Autoridades Indígenas de Colombia
+149,AICO
+150,Hernando Hernández Tapasco
+151,das
+152,La Cosa Política
+153,Aclaración
+154,"Gilma Jiménez, Adolescentes, Delincuncia,"
+155,"Gilma Jiménez, adolescentes delincuentes,"
+156,Aclaración de información
+157,Boletín
+158,"Prisión Perpetua, violadores, asesinos, niñ@s"
+159,mineria
+160,Ángela María Robledo
+161,Transparencia
+162,Participación Ciudadana
+163,mujer
+164,Bancada de Mujeres
+165,feminismo
+166,regalías
+167,narcotráfico
+168,minas y energía
+169,"Regalías, Hidrocarburos, Meta"
+170,Claudia Marcela Amaya
+171,"Salud Sexual y Reproductiva, Proyectos Víales"
+172,Salud Sexual y Reproductiva
+173,medio ambiente
+174,Fiscal
+175,Banco de la República
+176,Leonardo Villar
+177,Kenneth J. Arrow
+178,sanción
+179,piedad córdoba
+180,salud
+181,restitución de tierras
+182,descentralización
+183,chuzadas
+184,derechos humanos
+185,educación
+186,"PROYECTO DE LEY 073 DE 2010 CAMARA , Fútbol"
+187,"LOOT, Audiencias Públicas, Comisión Ordenamiento T"
+188,instituto colombiano de bienestar familiar
+189,Código de Infancia y Adolescencia
+190,minas antipersona
+191,ley de orden público
+192,ley de víctimas
+193,agro ingreso seguro
+194,rebaja de penas
+195,naciones unidas
+196,Parlamento Estudiantil
+197,televisión
+198,Asía
+199,Asia
+200,Internacional
+201,televisión
+202,Simpsons
+203,pobreza
+204,Matt Groening
+205,redes sociales
+206,Facebook
+207,Twitter
+208,presupuesto
+209,FARC
+210,paz
+211,Mono Jojoy
+212,guerrilla
+213,Fuerzas Aema
+214,Fuerzas Armadas
+215,Medófilo Medina
+216,razonpublica.com
+217,Sodoma
+218,Polo Democrático
+219,Jorge Iván Cuervo
+220,Unidad nacional
+221,izquierda
+222,Gobierno
+223,Política
+224,Amylkar Acosta
+225,TLC
+226,regalías
+227,Agricultura
+228,Ley de Tierras
+229,tarifas
+230,Colombia
+231,Bernardo Congote
+232,Patria
+233,historia
+234,mentalidad colectiva
+235,patologías nacionales
+236,violencia
+237,patriotismo
+238,Bolívar
+239,Gaitán
+240,Galán
+241,Francisco de Paula Santander
+242,Procedes
+243,ministerios
+244,Juegos Nacionales
+245,Fernando Garavito Pardo
+246,Ola Invernal
+247,Mauricio Aguilar Hurtado
+248,Vías
+249,Santander
+250,Armando Borrero Mansilla
+251,América Latina
+252,Latinoamérica
+253,Irán
+254,Chávez
+255,Venezuela
+256,uranio
+257,drogas
+258,California
+259,NARIÑO VISIBLE
+260,SENA
+261,marihuana
+262,legalización
+263,Francisco Thuomi
+264,Propuesta 19
+265,ley estatutaria
+266,Sandra Borda
+267,Barak Obama
+268,republicanos
+269,demócratas
+270,Elecciones en USA
+271,"Cumpleaños, Medellín, 335 años, Felicitaciones"
+272,Vías Santander
+273,Vía Bogotá Bucaramanga
+274,Giovanni Molano Cruz
+275,Control estupefacientes
+276,Mundo
+277,Legalización drogas Estados Unidos
+278,corte suprema de justicia
+279,reforma política
+280,LGBT
+281,Carolina Giraldo
+282,gay
+283,lesbianas
+284,bisexuales
+285,transgénero
+286,Parejas del mismo sexo
+287,matrimonio gay
+288,derechos patrimoniales lgbt
+289,adopción gay
+290,Ministerio de Medio Ambiente
+291,créditos
+292,movilidad
+293,Luis Enrique Orozco
+294,Consejo de Estado
+295,seguridad ciudadana
+296,Inversión extranjera
+297,boom minero
+298,hidrocarburos
+299,Yahir Klein
+300,paramilitares
+301,colegios
+302,reparación
+303,alucinógenos
+304,Elección del fiscal
+305,Hernando Gómez Buendía
+306,Carlos Arturo Correa
+307,gasolina
+308,combustible
+309,Red Nacional de Carreteras
+310,pico y placa
+311,INCODER
+312,Rodrigo Hurtado Sabogal
+313,Instituto Colombiano de Desarrollo Agropecuario
+314,CARLOS  AMAYA
+315,Partido de la U
+316,Marcela Prieto
+317,Juan Carlos Polau
+318,Juan Carlos Palou
+319,Andrés Pastrana
+320,vasectomía
+321,ligadura de trompas
+322,agua
+323,Ministerio de la mujer
+324,Hugo Chávez
+325,Colombia Venezuela
+644,Raúl Muñoz
+326,Relaciones binacionales
+327,José Gregorio Hernández
+328,Llanos orientales
+329,Vías férreas
+330,Roberto Burgos Cantor
+331,Ley de inteligencia
+332,Ley de primer empleo
+333,Empleo
+334,Yamile Salinas
+335,Mapiripán
+336,AUC
+337,San José del Guaviaré
+338,Reforma tributaria
+339,danmificados
+340,damnificados
+341,salud mental
+342,reforma a la salud
+343,Adriana María Lagos
+344,estatuto anticorrupción
+345,invierno
+346,fútbol colombiano
+347,sociedades anónimas
+348,Ministro de Hacienda
+349,Juan Carlos Echeverry
+350,asilo
+351,Panamá
+352,DAS
+353,Política exterior
+354,Martha Ardila
+355,competitividad
+356,región caribe
+357,Juan Tokatlián
+358,Brasil
+359,Dilma Rouseeff
+360,Día a la NO Violencia contra la Mujer
+361,Michael Reed
+362,Desmovilizados
+363,Procesos Penales
+364,Foro Mundial de Turismo
+365,María del Pilar Hurtado
+366,Ex directora del DAS
+367,ciudad
+368,"visitas, barrios, Medellín. Antioquia, gente"
+369,cascos
+370,motociclistas
+371,Marcela Anzona
+372,Julio Roberto Piza
+373,Carmenza Saldías
+374,Tragedia Invernal
+375,Tragedia Invernal Bogotá
+376,ONU
+377,Desorden ambiental
+378,Conferencia de la ONU sobre el clima
+379,Mauricio Cabrera Leal
+380,Votación ordinaria
+381,Fabian Sanabria
+382,Wikileaks
+383,Gustavo Wilches
+384,Referendo
+385,Germán Rey
+386,Fenómeno La Niña
+387,Manuel Guzmán Hennessey
+388,Cambio climático
+389,Iván Montenegro Trujillo
+390,Colombia economía
+391,Plan Nacional de Desarrollo 2010 - 2014
+392,Páramo de Santurbán
+393,Socorro Ramírez
+394,desaceleración
+395,crecimiento económico
+396,invierno colombia
+397,explotación recursos naturales
+398,Camilo González Posso
+399,Francesca Ramos
+400,Uribe Chávez
+401,Clara Rocio Rodríguez Pico
+402,Reforma 2009
+403,Reforma 2003
+404,Reforma 2004
+405,Salario mínimo
+406,Menores de edad
+407,Ley de Piscinas
+408,Vivian Morales nueva fical general de la nación
+409,Gloria María Borrero
+410,Emergencia invernal
+411,Útiles escolares
+412,Guillermo Rudas Lleras
+413,Héctor Fabio Cardona
+414,Silvestre Dangond
+415,CAR
+416,Corporación Autónoma Regional
+417,María Victoria Duque López
+418,homicidios
+419,criminalidad
+420,criminalidad
+421,inseguridad
+422,vivienda
+423,Ricardo García Duarte
+424,Francisco Cajiao
+425,Licencia de maternidad
+426,William Duica
+427,Ley de Justicia y Paz
+428,Gustavo Wilches Chaux
+429,José Manuel Restrepo Abondano
+430,Educación superior Colombia
+431,Universidades Colombia
+432,ciudadanos
+433,urbes
+434,ciudades Colombia
+435,Seguimiento
+436,Mario Hernández Álvarez
+437,Secuestrados
+438,Cultura
+439,Hay Festival Cartagena
+440,Myriam Bautista
+441,Hay Festival Cartagena 2011
+442,Jean Carlo Mejía Azuero
+443,Fuero militar
+444,Justicia penal militar
+445,militares
+446,Fiscalía
+447,CTI
+448,Código penal militares
+449,Mundo Islámico Egipto
+450,Juan Pablo Ruiz Soto
+451,Consecuencias desastre clima Colombia
+452,Miraismo
+453,Movimiento
+454,MIRA
+455,MIRA
+456,Miraismo
+457,Movimiento
+458,MIRA
+459,Miraismo
+460,Movimiento
+461,revolución
+462,Armando Novoa
+463,Constitución de 1991
+464,Constituyente
+465,Antonio Hernández Gamarra
+466,Luis Hernando Barreto Nieto
+467,cambio fiscal
+468,sostenimiento fiscal
+469,DIAN
+470,regalías
+471,Institucionalidad Fiscal
+472,Carga tributaria
+473,Movimiento social
+474,Bogotá
+475,Miraísmo
+476,Ideología
+477,democracia
+478,democracia
+479,Consejo Nacional de Seguridad
+480,Sistema de Seguridad Ciudadana
+481,Justicia Penal
+482,infraestructura
+483,infraestructura
+484,industria
+485,wikileaks
+486,guerra por la información
+487,Afganistán
+488,Francisco Thoumi
+489,narcotráfico
+490,cocaína
+491,coca Colombia
+492,Bolivia
+493,café
+494,comercio exterior
+495,exportaciones
+496,Droga
+497,Bruce Bagley
+498,Cartes de Juárez
+499,Narcotráfico México Colombia
+500,Sinaloa
+501,armas blancas
+502,balance gestiòn
+503,ley del fútbol
+504,fútbol colombiano
+505,Propuestas de la Bancada de Mujeres
+506,"Antanas, Voto Limpio"
+507,politiquería
+508,Medio Oriente
+509,represión
+510,protestas
+511,Greystar
+512,Páramo de Santurbán
+513,Santander
+514,Paramo Santurban
+515,extradición
+516,formalización
+517,informalidad
+518,Convención
+519,Presidente
+520,Nacional
+521,Mauricio Noguera Rojas
+522,Adopción parejas del mismo sexo
+523,homosexuales Colombia adopción
+524,derechos parejas del mismo sexo
+525,contratación
+526,administración pública
+527,calendario escolar
+528,Instituto de Ciencia Política
+529,Observatorio Legislativo
+530,Balance Legislativo
+531,Germán C. Prieto
+532,China Colombia
+533,Canal Interoceánico China Colombia
+534,Agenda Legislativa Bancada de Mujeres del Congreso
+535,Leonardo González
+536,Maltrato animal
+537,"Lucho Garzón, Páramo Santurbán"
+538,derechos animales Colombia
+539,lechuza pateada Colombia
+540,confianza
+541,Recuperemos la confianza
+542,Antanas Mockus
+543,Sergio Fajardo
+544,Angela María Robledo
+545,"Sello Verde, avales, información"
+546,afrodescendientes
+547,Boris Pinto
+548,Gloria Inés Ramírez
+549,Gloria Ines Ramírez
+550,gestión
+551,Marcela Prieto Botero
+552,"Mujer, retos"
+553,Jorge Eduardo Londoño
+554,Felix Valera
+555,Felix Valera
+556,megaproyectos
+557,Región Pacífico
+558,Departamento Nacional de Planeación
+559,alimentación
+560,BACRIM
+561,Jorge A. Restrepo
+562,Juan David González
+563,Alonso Tobón
+564,Humberto Molina
+565,Proyecto
+566,"Reactores  Nucleares, explosión, Japón"
+567,Antonio Sanguino
+568,Lucho Garzón
+569,Lucho Garzón
+570,Lucho Garzón
+571,terremoto japón tsunami
+572,cárcel
+573,Ministerio de Agricultura
+574,Jaime Tenjo
+575,empleo Colombia
+576,Código de Convivencia
+577,menores de edad
+578,Ley 124 de 1994
+579,licor
+580,Yolanda Puyana Villamizar
+581,Familias Colombia
+582,Libia
+583,Gadafi
+584,crédito
+585,riesgos energía
+586,PIB
+587,obras públicas
+588,DANE
+589,Unidad Nacional
+590,Ley 1429 de 2010
+591,economía
+592,Dirección de Cauca
+593,Jorge Iván González
+594,Edna Bonilla Sebá
+595,recursos públicos
+596,Ley 30 de 1992
+597,servicio público cultural Colombia
+598,comparendos
+599,Colombia Ecuador
+600,UNASUR
+601,Eugenio Prieto Soto
+602,Agencia Nacional de Movilidad
+603,Congreso de la República
+604,Movilidad
+605,Plan Nacional de Desarrollo
+606,Política de Movilidad
+607,Política de Transporte
+608,Prosperidad para todos
+609,Senado de la República
+610,Julio Fierro
+611,Oro
+612,La Colosa
+613,Marmato
+614,Oro Colombia
+615,armas
+616,Obama América Latina
+617,Obama Colombia
+618,Diana Marcela Rojas
+619,Virgüez
+620,Fuerza Pública
+621,Equidad
+622,Igualdad de Oportunidades
+623,foro
+624,las caras del senado
+625,exposición
+626,Carlos Baena
+627,Calentamiento Global
+628,Desarrollo Sostenible
+629,Servicios Públicos
+630,Control social
+631,Desigualdad
+632,Manuel Virgüez
+633,Corte Constitucional
+634,"Emergencia Económica, Social y Ecológica"
+635,Decretos Emergencia Invernal
+636,Facultades Legislativas
+637,Gloria Stella Díaz
+638,Comisión Accidental
+639,emergencia
+640,Boris Salazar
+641,Juez asesinada Colombia
+642,Juez asesinada
+643,Gloria Constanza Gaona
+718,Elecciones Perú
+645,víctimas
+646,Alejandro Pino Calad
+647,Mundial Juvenil 2011
+648,Barra del Indio Cúcuta
+649,FIFA
+650,CONPES 3623
+651,Coldeportes
+652,desplazamiento
+653,niños
+654,violencia sexual
+655,Ministerio de Defensa
+656,Ejército Nacional
+657,Ministerio del Interior y de Justicia
+658,Samuel Moreno Bogotá
+659,Bogotá desorden
+660,Empleo de emergencia
+661,Subsidio Exepcional
+662,alzas
+663,petróleo
+664,biocombustibles
+665,Quindío
+666,Risaralda
+667,Caldas
+668,Valle
+669,FAO
+670,IPC
+671,IPC
+672,nutrición
+673,mortalidad infantil
+674,indicadores
+675,Guajira
+676,desnutrición
+677,derechos fundamentales
+678,Ministerio de Educación
+679,educación pública
+680,actividad sindical
+681,magisterio
+682,www.razonpublica.com
+683,Fernando Bernal
+684,Montes de María
+685,guerra
+686,grupos armados
+687,movilización
+688,Huila
+689,política exterior
+690,locomotoras
+691,Luis Hernando Barreto Nieto
+692,Constitución Política
+693,señal en vivo
+694,streaming
+695,Canal del Congreso
+696,Policía Nacional
+697,Fuerzas Militares
+698,Ejército Nacional
+699,Misopostrol
+700,aborto Colombia
+701,Píldora aborto Colombia
+702,Conductores
+703,Ebrios
+704,victimas
+705,Tolemaida
+706,INPEC
+707,Ballesteros
+708,Puertos
+709,La Guajira
+710,Asesinatos LGBT Colombia
+711,homosexuales asesinados Colombia
+712,accidentes de transito
+713,Nemocón
+714,Proyecto de Ley 206 de 2011
+715,Gabriel Misas
+716,Ricardo Bonilla González
+717,TLC Colombia Estados Unidos
+719,Aldo Olano
+720,Estado
+721,Estado Social de Derecho
+722,asesinato hip hop Medellín
+723,Lukas Jaramillo
+724,Casa de Estrategias
+725,Mónica Roa
+726,Procurador
+727,vías terciarias
+728,infraestructura vial
+729,"PETRÓLEO, SAN ANDRÉS"
+730,"FÉLIX VALERA, PETRÓLEO, SAN ANDRÉS, SEAFLOWER"
+731,"PETROLEO, SAN ANDRES, UNESCO"
+732,conciencia
+733,"FELIX VALERA, PETROLEO, SAN ANDRES, UNESCO"
+734,convivencia
+735,prevención
+736,Ministro Transporte
+737,Germán Cardona
+738,desastres
+739,préstamos
+740,riesgo natural
+741,Consulta Popular
+742,Alfonso Prada
+743,June Marie Mow
+744,"Circulares, Resoluciones"
+745,paramilitarismo
+746,Obama
+747,capital social
+748,impuestos
+749,César González
+750,Reforma Juan Manuel Santos
+751,Sostenibilidad Social
+752,Proyectos de Ley
+753,Fabián Sanabria
+754,Colombia laíca laíco
+755,Colombia Religión Laico
+756,Iván Jaramillo Pérez
+757,Cartes EPS Colombia
+758,alcaldía de bogotá
+759,Procuraduría General de la Nación
+760,Presidencia de la República
+761,Transmilenio
+762,SITP Sistema integrado de transporte público
+763,Minería
+764,Explotación
+765,Paisaje Cultural Cafetero
+766,Patrimonio Cultural
+767,UNESCO
+768,SOAT
+769,Óscar José Mesa Sánchez
+770,Red Latinoamericana de Transparencia Legislativa
+771,Roxana Castellón
+772,Antonio Hill
+773,Emergencia invernal
+774,Colombia humanitaria
+775,Telefonía Celular
+776,Ministerio de TIC
+777,Audiencia Pública
+778,Adriana Delgado Gutiérrez
+779,Paul Bromberg
+780,Propiedad intelectual
+781,Senador Jorge Enrique Robledo
+782,Humedales
+783,Río Bogotá
+784,Urbanización
+785,María Camila Moreno
+786,Viviana Tacha
+787,carlos andres amaya
+788,Sandra Liliana Osses Rivera
+789,Equidad de género
+790,Senadora Claudia Wilches
+791,Ola Invernal
+792,Sector Salud
+793,educación
+794,Guillermo Hoyos Vásquez
+795,racismo
+796,discriminación
+797,medios de comunicación
+798,prosperidad democrática
+799,Gloria Ortega Pérez
+800,Derechos de autor
+801,Ley Lleras
+802,ley 1438
+803,seguridad social
+804,OMS
+805,NATALIDAD
+806,SUBSIDIO
+807,OBJETIVOS DEL MILENIO
+808,Patricia Linares Prieto
+809,Jorge Orlando Melo
+810,contrarreforma política
+811,UNIFEM
+812,Motos dos tiempos
+813,contaminación
+814,inscripción cédulas
+815,MOE
+816,observación electoral
+817,elecciones 2011
+818,MOE
+819,delitos
+820,riesgo electoral
+821,Román Ortiz
+822,Consulta interna
+823,Lukas Jaramilllo
+824,Juan Diego Jaramillo Morales
+825,Graffiti
+826,Medellín
+827,Dirección Nacional de Estupefacientes
+828,DNE
+829,Germán Vargas Lleras
+830,TPS
+831,emigrantes
+832,Colombianos en el exterior
+833,Mariana Salazar Posada
+834,Ollanta Humala
+835,Keiko Fujimori
+836,Cancillería
+837,tijeras
+838,Congreso
+839,Canales Privados
+840,Comisión Nacional de Televisión
+841,Contenidos
+842,Corrupción
+843,Germán Rey
+844,Pauta Publicitaria
+845,Reforma Institucional
+846,Carbón
+847,Congreso de la República
+848,Mauricio Cabrera Galvis
+849,desplazados
+850,revaluación
+851,Carmen Andrea Becerra Becerra
+852,despojo
+853,XV Encuentro de Mujeres de Negro
+854,Red de Mujeres de Negro
+855,Afrocolombianidad
+856,Aura Liliana López López
+857,Discriminización
+858,Racisimo
+859,Ana Fabricia Cordoba
+860,desinterés
+861,identidad
+862,Enrique Peñalosa
+863,José Fernando Flórez
+864,Empleados Provisionales
+865,Ana Córdoba
+866,Angelino Garzón
+867,Bacrim
+868,Buenaventura
+869,Guapi
+870,Quibdó
+871,Tumaco
+872,Timbiquí
+873,Iscuandé
+874,Apartadó
+875,Cartagena
+876,beneficio
+877,descuento
+878,vivienda
+879,suelo urbanizable
+880,suelo urbanizable
+881,macroproyectos de vivienda
+882,vivienda de interés social
+883,comunas Medellín
+884,Animales
+885,Michael Reed Hurtado
+886,Nini Johanna Soto
+887,territorio
+888,participación
+889,igualdad
+890,marcha orgullo gay Colombia
+891,Álvaro Pardo
+892,Confianza Inversionista
+893,Deducciones
+894,Extensiones
+895,Extenciones
+896,política minera
+897,Government Take
+898,Política tributaria
+899,Saludcoop
+900,Juan Pablo Ruiz Soto
+901,Juan Pablo Ruiz Soto
+902,ambientalismo
+903,Marcela Anzola
+904,Puerta del sol
+905,Jaime Wilches
+906,River Plate descenso
+907,fútbol Argentina
+908,Alexandra Moreno Piraquive
+909,Ley de maternidad
+910,parto
+911,madres
+912,cifras
+913,endurecimiento
+914,penas
+915,Informe Mundial sobre las Drogas 2011
+916,Colombia drogas
+917,Plan Colombia
+918,Tercer aniversario Razón Pública
+919,Decreto 1630
+920,Óscar Murillo Ramírez
+921,Rock al parque
+922,Colombia Rock
+923,comericantes
+924,Carlos Alberto Mejía Walker
+925,Saúl Franco
+926,Gerardo Ardila
+927,Camilo Herrera Mora
+928,Constitución
+929,Extrema derecha
+930,ideologías
+931,neonazis
+932,Reforma electoral
+933,tarifa diferenciada
+934,licencia por puntos
+935,ingenieria militar
+936,Juan Manuel Charry
+937,Congestión Judicial
+938,Concejo Superior de la Judicatura
+939,Consejo Superior de la Judicatura
+940,Reforma a la justicia
+941,Impunidad
+942,Claudia Hurtado Caycedo
+943,matrimonio igualitario
+944,iglesia derechos lgbt Colombia
+945,Bavaria
+946,Colombiano
+947,Eduardo Lara
+948,Fifa
+949,Fútbol
+950,James Rodríguez
+951,Joseph Blatter
+952,Política colombiana
+953,Mundial Sub-20 Colombia
+954,seguridad
+955,legislatura
+956,desempleo
+957,trámite legislativo
+958,Agustin Codazzi
+959,Comisión Segunda
+960,debates
+961,migraciones
+962,ordenamiento territorial
+963,periodismo
+964,Milly Dowler
+965,News Corporation
+966,poder mediático
+967,Tabloides
+968,Rupert Murdoch
+969,Rebekah Brooks
+970,candidatos
+971,paternidad
+972,ICBF
+973,Mauricio Puello Bedoya
+974,Clara López
+975,Claudia Gurisatti
+976,Mano negra
+977,Plinio Apuleyo Mendoza
+978,Rodrigo Lara Restrepo
+979,Política colombiana
+980,Alfonso Cano
+981,Carta abierta
+982,Conflicto armado
+983,Humberto de la Calle
+984,adulto mayor
+985,Hernando Llano Ángel
+986,Miguel Samper
+987,falsos positivos
+988,Fiscalía general
+989,violencia familiar
+990,embarazo adolescente
+991,regla fiscal
+992,inflación
+993,tasa de cambio
+994,Ministerio de Hacienda y Crédito Público
+995,gasto público
+996,finanzas públicas
+997,Sistema General de Participaciones
+998,grado de inversiones
+999,Inversión Extranjera Directa
+1000,Juan Carlos Echeverry
+1001,Revaluación
+1002,Sector Minero–Energético
+1003,Renovación Absoluta
+1004,Luis Alejandro Arévalo Rodríguez
+1005,elecciones locales
+1006,Valle del Cauca
+1007,Diego Otero
+1008,neoliberalismo
+1009,Bolillo Gómez
+1010,Oscar Mejía Quintana
+1011,los vices
+1012,fórmula
+1013,antioquia
+1014,Rafael Romero Piñeros
+1015,voluntad anticipida
+1016,asamblea
+1017,mundial
+1018,Consejos Consultivos
+1019,ministerio de relaciones exteriores
+1020,corte penal internacional
+1021,Ruta Pacífica de las Mujeres
+1022,intereses
+1023,Massimo de Ricco
+1024,Al Qaeda
+1025,Iraq
+1026,musulmanes
+1027,xenofobia
+1028,mal
+1029,masacres
+1030,Señores de La Guerra
+1031,Tortura
+1032,Hannah Arendt
+1033,Pluralismo Político
+1034,Agencia Nacional de Hidrocarburos
+1035,Armando Zamora
+1036,ANH
+1037,Claudia Navas Caputo
+1038,Armas de Fuego
+1039,Instituto Nacional Penitenciario y Carcelario
+1040,educación
+1041,Carlos Lemoine
+1042,Comunidades Indígenas
+1043,Código Minero
+1044,ICETEX
+1045,Javier Duque Daza
+1046,ministerio del interior
+1047,Finanzas
+1048,Carmenza Saldías Barreneche
+1049,Asesinatos
+1050,Persecuciones
+1051,Juan Guillermo Gómez
+1052,Jorge Noguera
+1053,Departamento Administrativo de Seguridad
+1054,Corporación Humanas
+1055,Paneleros
+1056,Panela
+1057,Hoya Río Suárez
+1058,Caleidoscopio
+1059,David Luna
+1060,Gustavo Petro
+1061,Alcaldía de Bogotá
+1062,Puerto Gaitán
+1063,Pacific Rubiales
+1064,Ecopetrol
+1065,Paloma Soria
+1066,Ley 1448 de 2011
+1067,Abuso de Autoridad
+1068,Delincuencia
+1069,Juan Carlos Ruiz Vásquez
+1070,Ministerio de Cultura
+1071,Ernesto Rojas Morales
+1072,Conferencia Nac. de Organizaciones Afrocolombianas
+1073,Justicia Transicional
+1074,interrupción del embarazo
+1075,Acto legislativo 06/11 Senado.
+1076,Ángel Beccassino
+1077,Clientelismo
+1078,Laura Gil
+1079,Rosalía Correa Young
+1080,Paulo Andrés Pérez
+1081,Annika Dalén
+1082,Diana Guzmán
+1083,reforma educación superior
+1084,Julio Silva Colmenares
+1085,Bavaria
+1086,Julio Mario Santo Domingo
+1087,Cerveza Águila
+1088,Astríd Martínez Ortíz
+1089,madres cabeza de familia
+1090,Jaime Tenjo G
+1091,Congreso Visible_Capítulo Antioquia
+1092,Santiago Pardo
+1093,Jorge Villegas Gaitán
+1094,Jorge Gaitán Villegas
+1095,Amnistía Internacional
+1096,Autoritarismo
+1097,Consejo Nacional de Transición
+1098,Massimo Di Ricco
+1099,Muamar El Gadafi
+1100,Otan
+1101,tarjeta electoral
+1102,tarjetón
+1103,Gerardo Durango
+1104,Consejo Nacional Electoral
+1105,Democracia
+1106,Elecciones Locales
+1107,Moe
+1108,Política
+1109,Voto Ciudadano
+1110,ETA
+1111,Kristian Herbolzheimer
+1112,votos nulos
+1113,Luis Enrique Orozco Silva
+1114,Universidad
+1115,Reforma Ley 30
+1116,Maria Fernanda Campo
+1117,Estudiantes
+1118,Sentencia C 750 Del 2008
+1119,Bloque De Constitucionalidad
+1120,Rodrigo Rojas
+1121,Fibra Optica
+1122,Ética
+1123,Comisión Global de política de drogas
+1124,Comisión Latinoamericana De Drogas Y Democracia
+1125,Guerra Contra Las Drogas
+1126,Juan Manuel Santos
+1127,Legalización
+1128,Carta al Presidente Juan Manuel Santos
+1129,Rural
+1130,Mujeres rurales
+1131,vías
+1132,Estatuto de ciudadanía Juvenil
+1133,Ministerio del Interior
+1134,penalizar
+1135,Red nacional de mujeres
+1136,cupos escolares
+1137,Bancos
+1138,Contraloría
+1141,Putumayo
+1142,condecoración
+1143,Ley de Victimas
+1144,Jaime Buenahora
+1145,Ley Retorno
+1146,Acompañamiento Institucional
+1147,Circunscripción Internacional
+1148,Álvaro Camacho Guizado
+1149,Rafael Colmenares
+1150,Jorge Andrés Hernández
+1151,Fabio Alberto Portilla
+1152,Papeto
+1153,Balance 2011
+1154,Alejandro Ordóñez
+1155,Juan Manuel Dávila
+1156,Valerie Domínguez
+1157,Derecho internacional Humanitario
+1158,Snaipd
+1159,Snaipd
+1160,Sentencia T 025
+1161,Código Electoral
+1162,Plan Nacional de Gobierno
+1163,pnd
+1164,Coyuntura
+1165,Globalización
+1166,Agenda Pública
+1167,Fondo Monetario Internacional
+1168,Fmi
+1169,Rodrigo Uprimny
+1170,Prohibición
+1171,Timoleón Jiménez
+1172,José Fernando Isaza
+1173,parafiscales
+1174,2012
+1175,Autoridad Nacional De Televisión Antv
+1176,La Comisión De Regulación De Comunicaciones Crc
+1177,Digital
+1178,Ley de televisión
+1179,Televisión Analógica
+1180,Mauricio Jaramillo Jassir
+1181,Ahmadinejad Mahmmoud
+1182,Argumentos Morales
+1183,consumo
+1184,dosis personal
+1185,La verdadera agenda
+1186,México
+1187,neo paramilitarismo
+1188,combates
+1189,violencia sindical
+1190,denuncia
+1191,POS
+1192,CRES
+1193,conectividad
+1194,prosperidad
+1195,Corridas de toros
+1196,Futbol Colombiano
+1197,Ley 1445
+1198,Ministro de Minas y Energía
+1199,Ministerio de Minas y Energía
+1200,estabilidad jurídica
+1201,multinacionales
+1202,"Ministerio de Comercio, Industria y Turismo"
+1203,porte de armas
+1204,desarme
+1205,Organización de las Naciones Unidas
+1206,gobernabilidad
+1207,Urabeños
+1208,exclusión social
+1209,violencia intrafamiliar
+1210,Avenida Longitudinal de Occidente
+1211,ALO
+1212,Antonio Navarro
+1213,IDU
+1214,Pacífico
+1215,transnacional
+1216,Cancillería
+1217,Armada Nacional
+1218,Antonio Navarro
+1219,Marco legal para la paz
+1220,salud pública
+1221,política criminal
+1222,tránsito
+1223,crisis económica
+1224,modernización
+1225,emprendimiento
+1226,Organización Internacional del Trabajo OIT
+1227,Viviane Morales
+1228,Carlos Alonso Lucio
+1229,tierra
+1230,reconciliación
+1231,Ministro de Agricultura y Desarrollo Rural
+1232,Juan Camilo Restrepo
+1233,Corea del Sur
+1234,desaparición forzada
+1235,TLC Colombia Corea del del Sur
+1236,Ministro de Defensa
+1237,Maritza Martínez
+1238,Juan Carlos Rizzetto
+1239,Doris Vega
+1240,Yensi Acosta
+1241,Sociedad Civil
+1242,Sistema General de Regalías
+1243,mafia
+1244,despenalización
+1245,agro
+1246,medicamentos
+1247,Ministerio de Salud
+1248,EPS
+1249,Senador Camilo Sánchez Ortega
+1250,Bancada Política Animalista ALTO
+1251,privatización
+1252,Ivan Name
+1253,Carlos Andrés Amaya
+1254,Gilma Jiménez
+1255,Jóvenes Partido Verde
+1256,Luis Fernando Alarcón Urrutia
+1257,Carlos Ramón González
+1258,Daniel García Colorado
+1259,JuventudEs Colombia
+1260,dólar
+1261,sistema nacional de migraciones
+1262,SRPA
+1263,Sistema de Responsabilidad Penal para Adolescentes
+1264,Senador Mauricio Ospina
+1265,Cumbre de las Américas
+1266,Relaciones Internacionales
+1267,vigencias futuras
+1268,Nación
+1269,Organismos de Control
+1270,Japón
+1271,cooperación
+1272,campesinos
+1273,Disciplina
+1274,Militar
+1275,Díaz
+1276,POS
+1277,SITP
+1278,Razón Pública
+1279,Cuba
+1280,Legislación Laboral
+1281,Ley
+1282,Batalla
+1283,Científico
+1284,Artístas
+1285,Sopa
+1286,PIPA
+1287,Emilia Frost
+1288,Estrategia Militar
+1289,Infraestructura para la Paz
+1290,Nicolás Chamat
+1291,Plan Nacional de Consolidación
+1292,Política de Seguridad
+1293,Polìtica de seguridad
+1294,Conflictos
+1295,desarrollo regional
+1296,seguridad jurídica
+1297,Aerocivil
+1298,consumidor
+1299,Corporación Nuevo Arco Iris
+1300,Sociedad
+1301,Pensiones
+1302,Ingreso
+1303,Ahorro
+1304,Cristianofobia
+1305,Prágmatismo
+1306,Burocráticos
+1307,Garavito
+1308,Jurisdicción Militar
+1309,Jurisdicción Militar
+1310,Casos
+1311,Plazas
+1312,Támara
+1313,Caguán
+1314,tiempo
+1315,fracaso
+1316,Unión Soviética
+1317,POT
+1318,VIVIR
+1319,Vendedores Ambulantes
+1320,digno
+1321,Transmilenio
+1322,Uribismo
+1323,Fosyga
+1324,HERIBERTO SANABRIA ASTUDILLO
+1325,DESEMPEÑO 2010-2011
+1326,BUENAVENTURA DISTRITO ESPECIAL
+1327,GLOBE INTERNACIONAL CAPITULO COLOMBIA
+1328,ASOCIACION DE NACIONES UNIDAS -COLOMBIA
+1329,FEDERACION MUNDIAL DE ASOCIACIONES DE NACIONES
+1330,EJE TEMATICO SALUD - SENADOR MAURICIO OSPINA
+1331,Igualdad Salarial
+1332,renuncia
+1333,Senador Carlos Ramiro Chavarro Cuéllar
+1334,Economía Colombiana
+1335,Conflicto y Paz
+1336,transmilenio
+1337,Transporte masivo
+1338,Paula Marcela Arias
+1339,Bogotá
+1340,Enrique Peñalosa
+1341,Gustavo Petro
+1342,Secretaria de Movilidad
+1343,Cemex
+1344,Transmilenio
+1345,Transmilenio
+1346,Transporte masivo
+1347,Paula Marcela Arias
+1348,Bogotá
+1349,Enrique Peñalosa
+1350,OEA
+1351,discapacidad
+1352,educación superior
+1353,inclusión
+1354,Timochenko
+1355,Carlos Medina Gallego
+1356,El Quimbo
+1357,Interés general
+1358,Chocó
+1359,ácidos
+1360,Tercer Canal
+1361,Germán Yances
+1362,Historia de la televisión en Colombia
+1363,Canales privados
+1364,CityTV
+1365,RCN
+1366,Caracol
+1367,planeta
+1368,Cátedra Congreso Universidad
+1369,Académicos
+1370,Guerra
+1371,Regulación de la confrontación
+1372,Hechos de Paz
+1373,Cesar
+1374,servicio militar
+1375,Observatorio de la Democracia
+1376,LAPOP
+1377,Cultura política
+1378,Luis Fernando Medina
+1379,Ejercito Nacional de Colombia
+1380,Conflicto
+1381,indigencia
+1382,Ley de Desarrollo Rural
+1383,Ministro de Justicia
+1384,África
+1385,Uganda
+1386,Lord’s Resistance Army
+1387,Joseph Kony
+1388,Alejandra Figueroa Suárez
+1389,Sistema penal policial
+1390,drogadicción
+1391,política social
+1392,Gobrnador
+1393,Héctor Fabio Useche
+1394,Unión Patriótica
+1395,Secuestro
+1396,Catalina Toro
+1397,Tolima
+1398,Cumbre de las Américas
+1399,Cátedra Congreso Universidad
+1400,Daniel Robelo
+1401,Federación Nacional de Municipios
+1402,Partido Cambio Radical
+1403,Ministro del Interior
+1404,El Espectador
+1405,DNP
+1406,BID
+1407,Mariana Sarmiento
+1408,Regiones
+1409,Ismael Molina Giraldo
+1410,Subsidio Familiar de Vivienda
+1411,Política Antidrogas
+1412,Coletta A. Youngers
+1413,WOLA
+1414,Día nacional de la memoria y la solidaridad con la
+1415,Representante Jose Gonzalo Gutierrez Triviño
+1416,Juan Carlos Esguerra
+1417,LGBTI
+1418,Derechos sexuales
+1419,Derechos reproductivos
+1420,Derechos reproductivos
+1421,Tradiciòn
+1422,Racionalismo secular
+1423,IVA
+1424,Legislativo
+1425,Canciller
+1426,Reporteros sin Fronteras
+1427,Fundación para la Libertad de Prensa
+1428,Salud
+1429,Gobernadores
+1430,Alcaldes
+1431,Dejusticia
+1432,Mauricio García Villegas
+1433,José Rafael Espinosa
+1434,Javier Zapata
+1435,Marcha Patriótica
+1436,Consumo de drogas
+1437,Santa Marta
+1438,Innovación
+1439,Libertad de Prensa
+1440,Libertad de Prensa
+1441,Llibre expresión
+1442,Atentado Fernando Londoño
+1443,Representante Esmeralda Sarria
+1444,Plan de Desarrollo Distrital
+1445,Metrovivienda
+1446,Caja de Vivienda Popular
+1447,LOOT
+1448,Sigilfredo López
+1449,Marco Jurídico para la Paz
+1450,Verdad
+1451,Presupuesto Militar
+1452,ACNUR
+1453,Roberto Angulo
+1454,Reelección
+1455,Ejército
+1456,Policía
+1457,Francisco Leal Buitrago
+1458,memoria
+1459,Human Rights Watch
+1460,Absalón Machado
+1461,cuota bancaria
+1462,Ministerio de Tecnologías de la Información y las
+1463,prevaricato
+1464,Código Nacional de Tránsito
+1465,parques nacionales
+1466,exenciones
+1467,Ministerio de Ambiente
+1468,JUAN SAMY MERHEG MARUN
+1469,Pablo Escobar
+1470,Nicolás Pernett
+1471,Narconovelas
+1472,Telenovela
+1473,Violencia de género
+1474,Rosa Elvira Cely
+1475,Javier Velasco
+1476,María Victoria Uribe
+1477,Violación
+1478,Parque Nacional
+1479,Mario Bernardo Figueroa
+1480,Derechización
+1481,Sufrimiento  social
+1482,Violencia contra las mujeres
+1483,Diferencia y castración
+1484,Alcalde de Bogotá
+1485,Bogotá Humana
+1486,Minerá a gran escala
+1487,Luisa Fernanda Trujillo
+1488,Daños ambientales
+1489,Gran Colombia Gold
+1490,Medoro
+1491,Debilidad Institucional
+1492,Plenarias
+1493,Plenaria
+1494,pensión familiar
+1495,Comunidad Europea
+1496,crímenes de lesa humanidad
+1497,aseo
+1498,UAESP
+1499,basuras
+1500,Caso Colmenares
+1501,Sistema Penal Acusatorio
+1502,Sistema Penal Acusatorio
+1503,Yecid Castro
+1504,"Conflicto, guerra y paz"
+1505,Rio +20
+1506,PNUMA
+1507,Umberto Pérez
+1508,Rock al Parque
+1509,Política Pública
+1510,Umberto Pérez
+1511,robo
+1512,Unión Europea
+1513,Superintendencia de Industria y Comercio
+1514,Río + 20
+1515,economía verde
+1516,biodiversidad
+1517,Santoyo
+1518,María Teresa Garcés
+1519,Revocatoria
+1520,Carlos Prieto
+1521,Justicia y paz
+1522,Socorro Ramirez
+1523,Derechos Sociales
+1524,Andres Molano
+1525,MERCOSUR
+1526,MERCOSUR
+1527,Paraguay
+1528,Ferdérico Franco
+1529,Cortes
+1530,Ejecutivo
+1531,Fritanga
+1532,Régimen Subsidiado
+1533,Vegetaniarismo
+1534,prosumidores
+1535,Tauromaquia
+1536,Comisión Séptima
+1537,Datos abiertos
+1538,Cine
+1539,Toribio
+1540,Guardia Indigena
+1541,CRIC
+1542,ACIN
+1543,Laureano Gómez
+1544,Derecha
+1545,Fernando Londoño
+1546,Puro Centro Democrático
+1547,Gustavo Duncan
+1548,comunitario
+1549,radio
+1550,Asamblea Nacional Constituyente
+1551,Superintendencia Nacional de Salud
+1552,videojuegos
+1553,Natalia Giraldo
+1554,Leyes
+1555,Jorge Mantilla
+1556,Freddy Cante
+1557,sistema electoral mixto
+1558,www.angelarobledo.com
+1559,Partido de Integración  Nacional
+1560,PIN
+1561,Progresistas
+1562,Piedad Zuccardi
+1563,Comisión Tercera de Senado
+1564,Comisión de Asuntos Económicos
+1565,Licencia ambiental
+1566,ANLA
+1567,Sesiones extra
+1568,extras
+1569,Internacional LIberal
+1570,internacional liberal
+1571,operación acordeón
+1572,Restitución de tierras
+1573,Reservas forestales
+1574,Magdalena
+1575,Motilones
+1576,Bolívar
+1577,feminicidio
+1578,Ley 100
+1579,Balance Gobierno
+1580,Beatriz Londoño
+1581,Luis Eduardo Celis
+1582,Milicias
+1583,Albert Berry
+1584,Piedad Cordoba
+1585,Libertad de Expresión
+1586,Noticias Uno
+1587,Alejandro Ordoñez
+1588,Tierras
+1589,Ministro de Trabajo
+1590,trabajo
+1591,tercera edad
+1592,hacinamiento
+1593,Ministerio de Justicia y del Derecho
+1594,telecomunicaciones
+1595,Agencia Nacional del Espectro
+1596,monopolio
+1597,Juegos Olímpicos
+1598,Mariana Pajón
+1599,Camilo Ernesto Bernal Sarmiento
+1600,Cárceles
+1601,Política Penitenciaria
+1602,Ministerio de Justicia
+1603,Código Penal
+1604,Pido la palabra
+1605,Movimientos Sociales
+1606,Historia de Colombia
+1607,Desarrollo
+1608,Modernidad
+1609,Enfermedad Holandesa
+1610,Guillermo A. Castaño
+1611,Ministerio de Medio Ambiente
+1612,Ministro de Medio Ambiente
+1613,Contraloría General de la República
+1614,Federación Nacional de Cafeteros
+1615,sector cafetero
+1616,4G
+1617,Lucho Bermúdez
+1618,Estampilla conmemorativa
+1619,Sincelejo
+1620,Encuentro nacional de bandas
+1621,Reforma a la Educación
+1622,Academia
+1623,ONG
+1624,reclutamiento forzado
+1625,Felipe Botero
+1626,Partido Comunista
+1627,Bancadas del Congreso
+1628,Doble Militancia
+1629,Julian Assange
+1630,Reino Unido
+1631,Ecuador
+1632,Carlos Andrés Echeverry
+1633,Eduardo Montealegre
+1634,Farcpolitica
+1635,Presunción de inocencia
+1636,Juan Pablo Ruiz
+1637,Área de reserva minera
+1638,Mauricio Cárdenas
+1639,Afro colombianos
+1640,INFIS
+1641,adopciones
+1642,niños
+1643,Cristina Plazas
+1644,Alta Consejería para la Equidad de Género
+1645,cálculos electorales
+1646,Nuevo gabinete
+1647,Desaparecidos
+1648,Mauricio Santoyo
+1649,Negociaciones
+1650,Convivir
+1651,Urabá
+1652,Terratenientes
+1653,Guillermo León Valencia
+1654,Elías Sevilla Casas
+1655,Antropología
+1656,Universidad de los Andes
+1657,Paul Rivet
+1658,Reichel Dolmatof
+1659,Universidad Nacional
+1660,Colciencias
+1661,Chile
+1662,México
+1663,Brasil
+1664,Unidad Agrícola Familiar
+1665,Comisión Colombiana de Juristas
+1666,ELN
+1667,Guerrillas
+1668,Proceso de Paz
+1669,La Habana
+1670,Oslo
+1671,Negociaciones
+1672,Juan Carlos Gazón
+1673,Partido Republicano
+1674,Mitt Romney
+1675,Clint Eastwood
+1676,Locomotora Minera
+1677,Cerromatoso
+1678,diálogos de paz
+1679,Wayuu
+1680,frases celebres
+1681,politica colombia
+1682,Adolfo Atehortúa
+1683,Carlos Alfonso Velásquez
+1684,Protestas Estudiantiles
+1685,MANE
+1686,Sistema de aseguramiento
+1687,Alejandro Gaviria
+1688,sector financiero
+1689,Michelle Bachelet
+1690,ONU Mujeres
+1691,Unidad Administrativa Especial de Servicios Públic
+1692,UAESP
+1693,Voluntad Política
+1694,Álvaro Villarraga Sarmiento
+1695,Historia Procesos de Paz
+1696,Miguel Hernández
+1697,Estado Laico
+1698,Carlos Duque
+1699,Marca País
+1700,Colombia es la respuesta
+1701,Diseño gráfico
+1702,Postconflicto
+1703,Aborto
+1704,Mario Morales
+1705,José Obdulio Gaviria
+1706,Ética periodística
+1707,El Tiempo
+1708,Las 40 principales
+1709,Gina Parody
+1710,Amazonia
+1711,Gabriel Uribe
+1712,Penalización
+1713,Anticoncepción
+1714,Alejandro Pino
+1715,Millonarios
+1716,Deportes
+1717,Francisco Azuero
+1718,Seguro de desempleo
+1719,Riesgo Moral
+1720,Aseguradores
+1721,Bicicletas
+1722,Motos
+1723,Acceso a la información
+1724,PL 228/12 Cámara; 156/11 Senado
+1725,transparencia legislativa
+1726,Ley de Distritos
+1727,Reservas Campesinas
+1728,Mauricio Cárdenas Santa María
+1729,Información Pública
+1730,Sucesión
+1731,eutanasia
+1732,Organización Nacional Indígena de Colombia ONIC
+1733,Sucre
+1734,Declaración Pública
+1735,Centro América
+1736,El Salvador
+1737,Guatemala
+1738,Nicaragua
+1739,Dirk Kruijt
+1740,Indignados
+1741,Iván Marquez
+1742,Carlos Novoa S.J.
+1743,Derecho a la vida
+1744,Iglesia Católica
+1745,Sistema de Salud
+1746,Cuidados Palativos
+1747,Alpher Rojas Carvajal
+1748,Alpher Rojas
+1749,burocracia
+1750,Comisiones de Paz
+1751,PNUD
+1752,Consejería para Bogotá
+1753,canasta familiar
+1754,Cerro Matoso
+1755,Córdoba
+1756,Comisión Primera
+1757,Yesid Castro Forero
+1758,Paro Judicial
+1759,Jueces
+1760,Sostenibilidad Fiscal
+1761,Ciencias Políticas
+1762,José Gonzalo Gutiérrez
+1763,extranjerización
+1764,seguridad alimentaria
+1765,madres comunitarias
+1766,Derecho de las víctimas
+1767,Reinserción
+1768,Ley 4a de 1992
+1769,Restricción Fiscal
+1770,Salarios
+1771,Trabajadores Estatales
+1772,Ley 5 de 1992
+1773,Juan Camilo Cárdenas
+1774,Justicia Redistributiva
+1775,Costa Caribe
+1776,la paz
+1777,dialogos de paz
+1778,"Presupuesto General de la Nación,"
+1779,gobierno
+1780,porte de armas
+1781,barranquilla
+1782,Raúl Fajardo Moreno
+1783,metodología
+1784,tren del Caribe
+1785,reducción de recursos
+1786,Sudarsky
+1787,sector agrario
+1788,impacto ambiental
+1789,autoridades competentes
+1790,Universidad Nacional Abierta y a Distancia
+1791,UNAD
+1792,Impuesto Verde
+1793,columas de opinión
+1794,Salomón Kalmanovitz
+1795,Intervención del Estado
+1796,Modelo Económico
+1797,Familias en acción
+1798,Jóvenes en acción
+1799,Miseria
+1800,Transferencias condicionadas
+1801,Banco Mundial
+1802,transfuguismo
+1803,economía de mercado
+1804,mercado de valores
+1805,Superintendencia Financiera
+1806,Corte Internacional de Justicia
+1807,tecnificación
+1808,Corte Internacional De La Haya
+1809,Pacto de Bogotá
+1810,Walter Arévalo
+1811,relaciones exteriores
+1812,San Andrés
+1813,Cese al fuego
+1814,Diálogos de paz
+1815,campo
+1816,Perú
+1817,crisis
+1818,Fallo de la Haya
+1819,Nacionalismo
+1820,Código civil
+1821,Militares
+1822,Cristianismo
+1823,Erwing Rodíguez-Salah
+1824,Parque Natural Regional
+1825,baldíos
+1826,afrocolombianos
+1827,áreas metropolitanas
+1828,Antioquia
+1829,Partido ASI
+1830,Polo Democrático Alternativo
+1831,César Torres del Río
+1832,Guerra Preventiva
+1833,Subempleo
+1834,valorización
+1835,información
+1836,primera oportunidad
+1837,DIH
+1838,Ministerio Público
+1839,Oxfam
+1840,Estatuto tributario
+1841,Centro Democrático
+1842,Alianza Social Independiente
+1843,paro cafetero
+1844,Chocó
+1845,Minería
+1846,Astrid Sanchez Montes de Oca
+1847,Astrid Sánchez Montes de Oca
+1848,Sucre
+1849,Código penitenciario
+1850,Comisión Asesora de Relaciones Exteriores
+1851,energía
+1852,energías renovables
+1853,Política Nacional de Energía Renovable
+1854,cultivos ilícitos
+1855,desarrollo rural
+1856,"luis fernando velasco, senado, gasolina"
+1857,marcha por la paz
+1858,Alianza Social Independiente
+1859,Guillermo Rivera
+1860,TICs
+1861,Comisión de Investigación y Acusación de la Cámara
+1862,repudio
+1863,Vocero
+1864,transporte
+1865,Ministerio de Transporte
+1866,Ministerio de Vivienda
+1867,comunicaciones
+1868,Alianza Pacífico
+1869,Alianza Social Independiente
+1870,Ministerio de Trabajo
+1871,obesidad
+1872,comercio
+1873,sistema financiero
+1874,emergencia social
+1875,emergencia carcelaria
+1876,Senado
+1877,Agencia Nacional de Seguridad Vial
+1878,Norte de Santander
+1879,Roberto Camacho
+1880,Concejal Bajo la Lupa
+1881,Partido conservador
+1882,Alvaro Munera Builes
+1883,Concejo Visible Medellin
+1884,Concejo de Medellin
+1885,Wilson Arias
+1886,Representante a la camara Wilson Arias
+1887,conductores ebrios
+1888,Defensoría del Pueblo´
+1889,Defensoría del Pueblo
+1890,Isagen
+1891,Segundo secretario
+1892,esmad
+1893,Alfredo Molina Triana
+1894,Representante por Cundinamarca Alfredo Molina
+1895,"indígena, MUIPC, Riosucio, Huila"
+1896,Salud
+1897,Salud Mental
+1898,Seguridad Alimentaria
+1899,Perdón
+1900,Desarrollo Regional
+1901,MIRA
+1902,Guillermina Bravo
+1903,Iván Duque
+1904,Debate Gasolina
+1905,Política Colombiana
+1906,Duque Senador
+1907,Reporte Macro
+1908,Cesantías
+1909,Noticias
+1910,Paola Holguín
+1911,Centro Democrático
+1912,Trabajadoras domésticas
+1913,Exhorto
+1914,Auxilio funerario
+1915,donación de órganos
+1916,Peñalosa
+1917,alcalde
+1918,Sistema carcelario
+1919,Plebiscito
+1920,Agua potable
+1921,Colombia Compra Eficiente
+1922,Crísis humanitaria Bronx
+1923,Crisis humanitaria Bronx
+1924,Paz
+1925,Cirugías plásticas
+1926,Licores
+1927,Electricaribe
+1928,Nobel de Paz
+1929,Cabildo Abierto
+1930,Víctimas
+1931,Tránsito y transporte
+1932,Diálogos ELN
+1933,Fotomultas
+1934,Derecho al agua
+1935,Medio Ambiente
+1936,Presupuesto de regalías
+1937,Habeas data
+1938,Enfoque de género
+1939,Seguridad
+1940,Mortalidad vial
+1941,Vendedores Informales
+1942,Alquiler de vientres
+1943,Minería
+1944,Salario congresistas
+1945,Título valores electrónicos
+1946,Nuevo Acuerdo de Paz
+1947,Sostenibilidad Ambiental
+1948,Minería
+1949,Inseminación artificial
+1950,Infancia y adolescencia
+1951,Refrendación
+1952,Refrendación Acuerdo de Paz
+1953,Acuerdo de Paz
+1954,Ley Yuliana
+1955,Adopción parejas homparentales
+1956,Ley del Vigilante
+1957,Pena de muerte
+1958,Páramos vivos
+1959,Fast Track
+1960,Desnutrición Infantil
+1961,amnistía
+1962,Implementación
+1963,demanda
+1964,Uber
+1965,aplicación
+1966,dejación de armas
+1967,reincorporación política
+1968,doble instancia
+1969,aforados

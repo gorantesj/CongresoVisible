@@ -1,0 +1,54 @@
+id,nombre
+74,Concepto Institucional
+41,Acto Legislativo
+77,Objeción Parcial del Ejecutivo
+76,Objeción Total del Ejecutivo
+12,Aprobada conciliación en Senado
+13,Aprobada conciliación en Cámara
+78,Informe Legislativo a las Objeciones del Ejecutivo
+15,Radicado
+79,Aprobado Informe de Objeciones
+17,Aprobado Primer Debate
+19,Aprobado Segundo Debate
+81,Declarado Exequible Total
+21,Aprobado Tercer Debate
+82,Declarado Exequible Parcial
+23,Aprobado Cuarto Debate
+83,Devuelto al Congreso
+25,Aprobado Quinto Debate
+27,Aprobado Sexto Debate
+29,Aprobado Séptimo Debate
+31,Aprobado Octavo Debate
+32,Archivado en Debate
+33,Archivado por Vencimiento de Términos
+34,Retirado por el Autor
+36,Objetado Por Presidencia
+37,En Conciliación
+38,Declarado Inexequible Parcial
+39,Declarado Inexequible Total
+40,Sancionado como Ley
+42,Publicada Ponencia Primer Debate
+43,Publicada Ponencia Segundo Debate
+44,Publicada Ponencia Tercer Debate
+45,Publicada Ponencia Cuarto Debate
+46,Publicada Ponencia Quinto Debate
+47,Publicada Ponencia Sexto Debate
+48,Publicada Ponencia Séptimo Debate
+49,Publicada Ponencia Octavo Debate
+50,Texto Unificado
+51,Enviado a Comisión para Primer Debate
+52,Enviado a  la Corte para Control
+54,Revision Corte Constitucional
+56,Publicación
+58,Objeciones Presidenciales
+60,Comisión Accidental
+63,Aprobada Conciliación
+64,Corrección de Texto
+65,Solicitud Audiencia Pública
+66,Audiencia Pública
+68,Acumulado
+69,Aprobada Objeción
+70,Archivado por Tránsito de Legislatura
+72,Publicada ponencia primer y tercer debate
+73,Aprobado Primer y Tercer Debate
+75,Rechazado informe de objeciones
