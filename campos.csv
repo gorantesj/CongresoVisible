@@ -227,8 +227,8 @@ num,seccion,tabla,campo,grupo,campo_gp,tabla_gp,transformar,observaciones
 38,congreso,comision,oficina,2,,comisions,,
 38,congreso,comision,telefono,2,,comisions,,
 38,congreso,comision,url,2,,comisions,,
-39,congreso,congresista,persona_ptr_id,3,,,,
-39,congreso,congresista,partido_politico_id,3,,,,
+39,congreso,congresista,persona_ptr_id,1,id,congresistas,,
+39,congreso,congresista,partido_politico_id,3,nombre,,,
 39,congreso,congresista,es_candidato,2,,,,
 39,congreso,congresista,orgullo,2,,,,
 39,congreso,congresista,se_identifica_id,,,,,
@@ -305,7 +305,7 @@ num,seccion,tabla,campo,grupo,campo_gp,tabla_gp,transformar,observaciones
 47,congreso,integrantecomision,id,1,id,comision_miembros,,
 47,congreso,integrantecomision,created_at,1,created_at,comision_miembros,,
 47,congreso,integrantecomision,edited_at,1,updated_at,comision_miembros,,
-47,congreso,integrantecomision,cargo_id,1,comision_cargo_id,comision_miembros,,
+47,congreso,integrantecomision,cargo_id,1,comision_cargo_congresista_id,comision_miembros,,Al nombre del campo le faltaba _congresista
 47,congreso,integrantecomision,fecha_inicio,3,fecha_inicio,comision_miembros,,
 47,congreso,integrantecomision,fecha_final,3,fecha_final,comision_miembros,,
 47,congreso,integrantecomision,congresista_id,3,,comision_miembros,,
@@ -442,10 +442,10 @@ num,seccion,tabla,campo,grupo,campo_gp,tabla_gp,transformar,observaciones
 62,congreso,reemplazo,partido_id,3,,,3,
 62,congreso,reemplazo,camara_id,3,,,3,
 62,congreso,reemplazo,comision_id,3,,,3,
-63,congreso,secretario,persona_ptr_id,3,,,3,
-63,congreso,secretario,fecha_inicio,3,,,3,
-63,congreso,secretario,fecha_final,3,,,3,
-63,congreso,secretario,comision_id,3,,,3,
+63,congreso,secretario,persona_ptr_id,3,,,3,Los campos no coinciden con el diccionario
+63,congreso,secretario,fecha_inicio,3,,,3,Los campos no coinciden con el diccionario
+63,congreso,secretario,fecha_final,3,,,3,Los campos no coinciden con el diccionario
+63,congreso,secretario,comision_id,3,,,3,Los campos no coinciden con el diccionario
 64,congreso,temaopinion,id,2,,,2,
 64,congreso,temaopinion,created_at,2,,,2,
 64,congreso,temaopinion,edited_at,2,,,2,
@@ -824,11 +824,11 @@ num,seccion,tabla,campo,grupo,campo_gp,tabla_gp,transformar,observaciones
 144,proyecto,de_ley_proyectoley,enlace_a_texto,2,,proyecto_leys,,
 144,proyecto,de_ley_proyectoley,enlace_a_informe_derecho_justo,2,,proyecto_leys,,
 144,proyecto,de_ley_proyectoley,estado_proyecto_ley_actual_id,3,,proyecto_leys,,"No entiendo para que sirve, parece un identificador"
-144,proyecto,de_ley_proyectoley,alias,1,alias,proyecto_leys,,Alias no esté en el diccionario
+144,proyecto,de_ley_proyectoley,alias,2,alias,proyecto_leys,,Alias no esté en el diccionario
 144,proyecto,de_ley_proyectoley,importancia,2,,proyecto_leys,,
 144,proyecto,de_ley_proyectoley,destacado,2,,proyecto_leys,,
-144,proyecto,de_ley_proyectoley,alcance,3,alcance,proyecto_leys,,Alcance no esté en el diccionario
-144,proyecto,de_ley_proyectoley,norma,2,,proyecto_leys,,
+144,proyecto,de_ley_proyectoley,alcance,3,alcance,proyecto_leys,,
+144,proyecto,de_ley_proyectoley,norma,2,,proyecto_leys,,Alcance no esté en el diccionario
 145,proyecto,de_ley_textos_comparacion,id,2,,,2,No se entiende. Se cree obsoleta la tabla completa
 145,proyecto,de_ley_textos_comparacion,base_id,2,,,2,No se entiende. Se cree obsoleta la tabla completa
 145,proyecto,de_ley_textos_comparacion,modificado_id,2,,,2,No se entiende. Se cree obsoleta la tabla completa
