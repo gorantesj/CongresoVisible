@@ -772,9 +772,9 @@ num,seccion,tabla,campo,grupo,campo_gp,tabla_gp,transformar,observaciones
 137,proyecto,de_ley_estadodeproyectodeley_comisiones,id,3,,,,
 137,proyecto,de_ley_estadodeproyectodeley_comisiones,estadodeproyectodeley_id,3,,,,
 137,proyecto,de_ley_estadodeproyectodeley_comisiones,comision_id,3,,,,
-138,proyecto,de_ley_estadodeproyectodeley_ponentes,id,3,,,,
-138,proyecto,de_ley_estadodeproyectodeley_ponentes,estadodeproyectodeley_id,3,,,,
-138,proyecto,de_ley_estadodeproyectodeley_ponentes,congresista_id,3,,,,
+138,proyecto,de_ley_estadodeproyectodeley_ponentes,id,1,id,proyecto_ley_ponentes,,
+138,proyecto,de_ley_estadodeproyectodeley_ponentes,estadodeproyectodeley_id,3,proyecto_ley_estado_id,proyecto_ley_ponentes,,
+138,proyecto,de_ley_estadodeproyectodeley_ponentes,congresista_id,3,congresista_id,proyecto_ley_ponentes,,La opción debe provenir de un catálogo
 139,proyecto,de_ley_estadodeproyectodeley,id,1,id,proyecto_ley_estados,,
 139,proyecto,de_ley_estadodeproyectodeley,fecha,1,fecha,proyecto_ley_estados,,
 139,proyecto,de_ley_estadodeproyectodeley,estado_id,1,estado_proyecto_ley_id,proyecto_ley_estados,,
@@ -795,7 +795,7 @@ num,seccion,tabla,campo,grupo,campo_gp,tabla_gp,transformar,observaciones
 142,proyecto,de_ley_legislatura,id,1,id,legislaturas,,
 142,proyecto,de_ley_legislatura,nombre,1,nombre,legislaturas,,
 142,proyecto,de_ley_legislatura,fecha_inicio,1,fechaInicio,legislaturas,,Se está cambiando de lógica de nombre de snake a camel
-142,proyecto,de_ley_legislatura,fecha_fin,1,fechaFin,legislaturas,,
+142,proyecto,de_ley_legislatura,fecha_fin,1,fechaFin,legislaturas,,Se está cambiando de lógica de nombre de snake a camel
 142,proyecto,de_ley_legislatura,cuatrienio_id,1,cuatrienio_id,legislaturas,,
 143,proyecto,de_ley_otroautor,id,3,,,,
 143,proyecto,de_ley_otroautor,created_at,3,,,,
@@ -807,7 +807,7 @@ num,seccion,tabla,campo,grupo,campo_gp,tabla_gp,transformar,observaciones
 144,proyecto,de_ley_proyectoley,edited_at,1,updated_at,proyecto_leys,,
 144,proyecto,de_ley_proyectoley,tipo_proyecto_id,1,tipo_proyecto_id,proyecto_leys,,
 144,proyecto,de_ley_proyectoley,titulo,1,titulo,proyecto_leys,,
-144,proyecto,de_ley_proyectoley,tema_principal_id,1,tema_id,proyecto_leys,,
+144,proyecto,de_ley_proyectoley,tema_principal_id,1,tema_proyecto_ley_id,proyecto_leys,,Se agregó proyecto_ley
 144,proyecto,de_ley_proyectoley,tema_secundario_id,2,,proyecto_leys,,Solamente se consider— tema principal
 144,proyecto,de_ley_proyectoley,sinapsis,1,sinopsis,proyecto_leys,,
 144,proyecto,de_ley_proyectoley,numero_camara,1,numero_camara,proyecto_leys,,
@@ -824,10 +824,10 @@ num,seccion,tabla,campo,grupo,campo_gp,tabla_gp,transformar,observaciones
 144,proyecto,de_ley_proyectoley,enlace_a_texto,2,,proyecto_leys,,
 144,proyecto,de_ley_proyectoley,enlace_a_informe_derecho_justo,2,,proyecto_leys,,
 144,proyecto,de_ley_proyectoley,estado_proyecto_ley_actual_id,3,,proyecto_leys,,"No entiendo para que sirve, parece un identificador"
-144,proyecto,de_ley_proyectoley,alias,1,alias,proyecto_leys,,
+144,proyecto,de_ley_proyectoley,alias,1,alias,proyecto_leys,,Alias no esté en el diccionario
 144,proyecto,de_ley_proyectoley,importancia,2,,proyecto_leys,,
 144,proyecto,de_ley_proyectoley,destacado,2,,proyecto_leys,,
-144,proyecto,de_ley_proyectoley,alcance,3,alcance,proyecto_leys,,
+144,proyecto,de_ley_proyectoley,alcance,3,alcance,proyecto_leys,,Alcance no esté en el diccionario
 144,proyecto,de_ley_proyectoley,norma,2,,proyecto_leys,,
 145,proyecto,de_ley_textos_comparacion,id,2,,,2,No se entiende. Se cree obsoleta la tabla completa
 145,proyecto,de_ley_textos_comparacion,base_id,2,,,2,No se entiende. Se cree obsoleta la tabla completa
@@ -842,8 +842,8 @@ num,seccion,tabla,campo,grupo,campo_gp,tabla_gp,transformar,observaciones
 146,proyecto,de_ley_textos_textoproyectoley,estado_proyecto_ley_id,2,,,2,Tabla obseleta.
 146,proyecto,de_ley_textos_textoproyectoley,texto_html,2,,,2,Tabla obseleta.
 146,proyecto,de_ley_textos_textoproyectoley,texto_plano,2,,,2,Tabla obseleta.
-147,proyecto,de_ley_tipoproyecto,id,1,id,tipo_proyectos,,
-147,proyecto,de_ley_tipoproyecto,nombre,1,nombre,tipo_proyectos,,
+147,proyecto,de_ley_tipoproyecto,id,1,id,tipo_proyectos,,La tabla debería llamarse tipo_proyecto_leys
+147,proyecto,de_ley_tipoproyecto,nombre,1,nombre,tipo_proyectos,,La tabla debería llamarse tipo_proyecto_leys
 148,proyecto,de_ley_tipovotacion,id,3,,,,A considerar
 148,proyecto,de_ley_tipovotacion,nombre,3,,,,A considerar
 148,proyecto,de_ley_tipovotacion,procedimental,3,,,,A considerar
