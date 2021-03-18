@@ -69,34 +69,34 @@ num,seccion,tabla,campo,grupo,campo_gp,tabla_gp,transformar,observaciones
 15,blog,blog,descripcion,3,contenido,contenido_multimedia,,
 15,blog,blog,tipo_blog_id,3,tipo_publicacion_id,contenido_multimedia,,
 15,blog,blog,destacado,2,,contenido_multimedia,,
-16,blog,boletin,id,3,,,,
-16,blog,boletin,orden,3,,,,
-16,blog,boletin,nombre,3,,,,
-16,blog,boletin,anio,3,,,,
-16,blog,boletin,objeto,3,,,,
-16,blog,boletin,destacar,3,,,,
-16,blog,boletin,archivo,3,,,,
+16,blog,boletin,id,3,id,res_blog_boletin ,,
+16,blog,boletin,orden,3,orden,res_blog_boletin ,,
+16,blog,boletin,nombre,3,nombre,res_blog_boletin ,,
+16,blog,boletin,anio,3,anio,res_blog_boletin ,,
+16,blog,boletin,objeto,3,objeto,res_blog_boletin ,,
+16,blog,boletin,destacar,3,destacar,res_blog_boletin ,,
+16,blog,boletin,archivo,3,archivo,res_blog_boletin ,,
 17,blog,post_tags,id,2,,,2,
 17,blog,post_tags,post_id,2,,,2,
 17,blog,post_tags,tag_id,2,,,2,
-18,blog,post,id,3,id,,,
-18,blog,post,created_at,3,created_at,,,
-18,blog,post,edited_at,3,updated_at,,,
-18,blog,post,blog_id,3,,,,
-18,blog,post,titulo,3,,,,
-18,blog,post,contenido,3,,,,
-18,blog,post,fecha_publicacion,3,,,,
-18,blog,post,esta_publicado,3,,,,
+18,blog,post,id,3,id,res_blog_post ,,
+18,blog,post,created_at,3,created_at,res_blog_post ,,
+18,blog,post,edited_at,3,updated_at,res_blog_post ,,
+18,blog,post,blog_id,3,blog_id,res_blog_post ,,
+18,blog,post,titulo,3,titulo,res_blog_post ,,
+18,blog,post,contenido,3,contenido,res_blog_post ,,
+18,blog,post,fecha_publicacion,3,fecha_publicacion,res_blog_post ,,
+18,blog,post,esta_publicado,3,esta_publicado,res_blog_post ,,
 18,blog,post,esta_vetado,2,,contenido_multimedia,,
 18,blog,post,destacado,2,,contenido_multimedia,,
-18,blog,post,imagen,3,,,,
+18,blog,post,imagen,3,imagen,res_blog_post ,,
 18,blog,post,imagen_menu,2,,contenido_multimedia,,
 18,blog,post,imagen_menu_seleccionada,2,,contenido_multimedia,,
-18,blog,post,ee,,,,,
+18,blog,post,ee,2,ee,res_blog_post ,,
 19,blog,tag,id,2,,,2,
 19,blog,tag,nombre,2,,,2,
-20,blog,tipoblog,id,3,,,,
-20,blog,tipoblog,nombre,3,,,,
+20,blog,tipoblog,id,3,id,res_blog_tipoblog ,,
+20,blog,tipoblog,nombre,3,nombre,res_blog_tipoblog ,,
 21,celery,periodictaskmeta,id,2,,,2,
 21,celery,periodictaskmeta,name,2,,,2,
 21,celery,periodictaskmeta,last_run_at,2,,,2,
@@ -186,30 +186,30 @@ num,seccion,tabla,campo,grupo,campo_gp,tabla_gp,transformar,observaciones
 32,congreso,candidatos_concejo,por_que_votar,2,,,2,
 32,congreso,candidatos_concejo,numero_lista,2,,,2,
 32,congreso,candidatos_concejo,actualmente_concejal,2,,,2,
-33,congreso,cargo,id,3,,,,
-33,congreso,cargo,created_at,3,,,,
-33,congreso,cargo,edited_at,3,,,,
-33,congreso,cargo,persona_id,3,,,,
-33,congreso,cargo,sector_id,3,,,,
-33,congreso,cargo,cargo,3,,,,
-33,congreso,cargo,entidad,3,,,,
-33,congreso,cargo,fecha_inicio,3,,,,
-33,congreso,cargo,fecha_final,3,,,,
-34,congreso,cargocamara,id,3,,,,
-34,congreso,cargocamara,nombre,3,,,,
+33,congreso,cargo,id,3,id,res_congreso_cargo ,,
+33,congreso,cargo,created_at,2,,res_congreso_cargo ,,
+33,congreso,cargo,edited_at,2,,res_congreso_cargo ,,
+33,congreso,cargo,persona_id,3,persona_id,res_congreso_cargo ,,
+33,congreso,cargo,sector_id,3,sector_id,res_congreso_cargo ,,
+33,congreso,cargo,cargo,3,cargo,res_congreso_cargo ,,
+33,congreso,cargo,entidad,3,entidad,res_congreso_cargo ,,
+33,congreso,cargo,fecha_inicio,3,fecha_inicio,res_congreso_cargo ,,
+33,congreso,cargo,fecha_final,3,fecha_final,res_congreso_cargo ,,
+34,congreso,cargocamara,id,3,id,res_congreso_cargocamara ,,
+34,congreso,cargocamara,nombre,3,nombre,res_congreso_cargocamara ,,
 35,congreso,cargocomision,id,1,id,cargos,,
 35,congreso,cargocomision,nombre,1,nombre,cargos,,
-36,congreso,cargopolitico,id,3,,,,
-36,congreso,cargopolitico,created_at,3,,,,
-36,congreso,cargopolitico,edited_at,3,,,,
-36,congreso,cargopolitico,persona_id,3,,,,
-36,congreso,cargopolitico,cargo,3,,,,
-36,congreso,cargopolitico,fecha_inicio,3,,,,
-36,congreso,cargopolitico,fecha_final,3,,,,
-36,congreso,cargopolitico,partido_id,3,,,,
-36,congreso,cargopolitico,resultado,3,,,,
-36,congreso,cargopolitico,camara_id,3,,,,
-36,congreso,cargopolitico,comision_id,3,,,,
+36,congreso,cargopolitico,id,3,id,res_congreso_cargopolitico ,,
+36,congreso,cargopolitico,created_at,2,,res_congreso_cargopolitico ,,duda
+36,congreso,cargopolitico,edited_at,2,,res_congreso_cargopolitico ,,duda
+36,congreso,cargopolitico,persona_id,3,persona_id,res_congreso_cargopolitico ,,
+36,congreso,cargopolitico,cargo,3,cargo,res_congreso_cargopolitico ,,
+36,congreso,cargopolitico,fecha_inicio,3,fecha_inicio,res_congreso_cargopolitico ,,
+36,congreso,cargopolitico,fecha_final,3,fecha_fin,res_congreso_cargopolitico ,,
+36,congreso,cargopolitico,partido_id,2,,res_congreso_cargopolitico ,,duda
+36,congreso,cargopolitico,resultado,2,,res_congreso_cargopolitico ,,duda
+36,congreso,cargopolitico,camara_id,2,,res_congreso_cargopolitico ,,duda
+36,congreso,cargopolitico,comision_id,2,,res_congreso_cargopolitico ,,duda
 37,congreso,circunscripcion,id,1,id,circuncripcions,,
 37,congreso,circunscripcion,nombre,1,nombre,circuncripcions,,
 37,congreso,circunscripcion,departamento_id,2,,circuncripcions,,
@@ -276,13 +276,13 @@ num,seccion,tabla,campo,grupo,campo_gp,tabla_gp,transformar,observaciones
 40,congreso,congresistadebancada,fecha_fin,2,,,2,
 40,congreso,congresistadebancada,congresista_id,2,,,2,
 40,congreso,congresistadebancada,bancada_id,2,,,2,
-41,congreso,congresistadepartido,id,3,,,,
-41,congreso,congresistadepartido,created_at,3,,,,
-41,congreso,congresistadepartido,edited_at,3,,,,
-41,congreso,congresistadepartido,fecha_inicio,3,,,,
-41,congreso,congresistadepartido,fecha_fin,3,,,,
-41,congreso,congresistadepartido,congresista_id,3,,,,
-41,congreso,congresistadepartido,partido_id,3,,,,
+41,congreso,congresistadepartido,id,3,id,res_congreso_congresistadepartido ,,
+41,congreso,congresistadepartido,created_at,3,,res_congreso_congresistadepartido ,,
+41,congreso,congresistadepartido,edited_at,3,,res_congreso_congresistadepartido ,,
+41,congreso,congresistadepartido,fecha_inicio,3,fecha_inicio,res_congreso_congresistadepartido ,,
+41,congreso,congresistadepartido,fecha_fin,3,fecha_fin,res_congreso_congresistadepartido ,,
+41,congreso,congresistadepartido,congresista_id,3,congresista_id,res_congreso_congresistadepartido ,,
+41,congreso,congresistadepartido,partido_id,3,partido_id,res_congreso_congresistadepartido ,,
 42,congreso,contadorcongresistas,id,2,,,2,
 42,congreso,contadorcongresistas,congresistas,2,,,2,
 42,congreso,contadorcongresistas,candidatos,2,,,2,
@@ -293,15 +293,15 @@ num,seccion,tabla,campo,grupo,campo_gp,tabla_gp,transformar,observaciones
 44,congreso,estadopartido,edited_at,2,,,2,
 44,congreso,estadopartido,nombre,2,,,2,
 44,congreso,estadopartido,es_activo,2,,,2,
-46,congreso,integrantecamara,id,3,,,,
-46,congreso,integrantecamara,created_at,3,,,,
-46,congreso,integrantecamara,edited_at,3,,,,
-46,congreso,integrantecamara,cargo_id,3,,,,
-46,congreso,integrantecamara,fecha_inicio,3,,,,
-46,congreso,integrantecamara,fecha_final,3,,,,
-46,congreso,integrantecamara,congresista_id,3,,,,
-46,congreso,integrantecamara,camara_id,3,,,,
-46,congreso,integrantecamara,periodo_id,3,,,,
+46,congreso,integrantecamara,id,3,id,res_congreso_integrantecamara ,,
+46,congreso,integrantecamara,created_at,3,created_at,res_congreso_integrantecamara ,,
+46,congreso,integrantecamara,edited_at,3,edited_at,res_congreso_integrantecamara ,,
+46,congreso,integrantecamara,cargo_id,3,cargo_id,res_congreso_integrantecamara ,,
+46,congreso,integrantecamara,fecha_inicio,3,fecha_inicio,res_congreso_integrantecamara ,,
+46,congreso,integrantecamara,fecha_final,3,fecha_final,res_congreso_integrantecamara ,,
+46,congreso,integrantecamara,congresista_id,3,congresista_id,res_congreso_integrantecamara ,,
+46,congreso,integrantecamara,camara_id,3,camara_id,res_congreso_integrantecamara ,,
+46,congreso,integrantecamara,periodo_id,3,periodo_id,res_congreso_integrantecamara ,,
 47,congreso,integrantecomision,id,1,id,comision_miembros,,Hace falta comision_tipo_congresista_id
 47,congreso,integrantecomision,created_at,1,created_at,comision_miembros,,Hace falta comision_tipo_congresista_id
 47,congreso,integrantecomision,edited_at,1,updated_at,comision_miembros,,Hace falta comision_tipo_congresista_id
@@ -330,7 +330,7 @@ num,seccion,tabla,campo,grupo,campo_gp,tabla_gp,transformar,observaciones
 51,congreso,partido,twitter,2,,partidos,,
 51,congreso,partido,telefono,2,,partidos,,
 51,congreso,partido,estatutos,1,estatutos,partidos,,"Estatutos anteriores es una liga, aqu’ es un texto largo"
-51,congreso,partido,lineamientos,1,,,,
+51,congreso,partido,lineamientos,1,lineamientos,partidos ,,
 51,congreso,partido,resenia_historica,2,,,,
 51,congreso,partido,propuestas,2,,,,
 51,congreso,partido,director_id,2,,,,
@@ -345,7 +345,7 @@ num,seccion,tabla,campo,grupo,campo_gp,tabla_gp,transformar,observaciones
 51,congreso,partido,celular_contacto,2,,partidos,,
 51,congreso,partido,correo_contacto,2,,partidos,,
 51,congreso,partido,direccion_contacto,2,,partidos,,
-51,congreso,partido,estado_id,3,,,,
+51,congreso,partido,estado_id,3,estado_id,res_congreso_partido ,,
 51,congreso,partido,nombre_contacto,2,,partidos,,
 51,congreso,partido,old_id,2,,partidos,,
 51,congreso,partido,usuario_id,2,,partidos,,
@@ -359,56 +359,56 @@ num,seccion,tabla,campo,grupo,campo_gp,tabla_gp,transformar,observaciones
 52,congreso,periodo,fecha_fin,1,fecha_final,cuatrienios,,
 52,congreso,periodo,old_id,2,,cuatrienios,,
 52,congreso,periodo,activo,1,activo,cuatrienios,,
-53,congreso,periodocongresista,id,3,,,,
-53,congreso,periodocongresista,created_at,3,,,,
-53,congreso,periodocongresista,edited_at,3,,,,
-53,congreso,periodocongresista,fecha_inicio,3,,,,
-53,congreso,periodocongresista,fecha_fin,3,,,,
-53,congreso,periodocongresista,tipo_periodo_id,3,,,,
-53,congreso,periodocongresista,periodo_id,3,,,,
-53,congreso,periodocongresista,partido_id,3,,,,
-53,congreso,periodocongresista,congresista_id,3,,,,
-53,congreso,periodocongresista,camara_id,3,,,,
+53,congreso,periodocongresista,id,3,id,res_congreso_periodo_congresista ,,
+53,congreso,periodocongresista,created_at,3,created_at,res_congreso_periodo_congresista ,,
+53,congreso,periodocongresista,edited_at,3,edited_at,res_congreso_periodo_congresista ,,
+53,congreso,periodocongresista,fecha_inicio,3,fecha_inicio,res_congreso_periodo_congresista ,,
+53,congreso,periodocongresista,fecha_fin,3,fecha_fin,res_congreso_periodo_congresista ,,
+53,congreso,periodocongresista,tipo_periodo_id,3,tipo_periodo_id,res_congreso_periodo_congresista ,,
+53,congreso,periodocongresista,periodo_id,3,periodo_id,res_congreso_periodo_congresista ,,
+53,congreso,periodocongresista,partido_id,3,partido_id,res_congreso_periodo_congresista ,,
+53,congreso,periodocongresista,congresista_id,3,congresista_id,res_congreso_periodo_congresista ,,
+53,congreso,periodocongresista,camara_id,3,camara_id,res_congreso_periodo_congresista ,,
 53,congreso,periodocongresista,depto_mayor_votacion_id,2,,,,
 53,congreso,periodocongresista,numero_lista,2,,,,
 53,congreso,periodocongresista,numero_votos,2,,,,
 53,congreso,periodocongresista,circunscripcion_id,2,,,,
-54,congreso,persona,id,3,,res_congreso_persona,,
-54,congreso,persona,created_at,3,,res_congreso_persona,,
-54,congreso,persona,edited_at,3,,res_congreso_persona,,
-54,congreso,persona,user_id,3,,res_congreso_persona,,
-54,congreso,persona,facebook_id,3,,res_congreso_persona,,
-54,congreso,persona,activation_key,3,,res_congreso_persona,,
-54,congreso,persona,nombres,3,,res_congreso_persona,,
-54,congreso,persona,apellidos,3,,res_congreso_persona,,
-54,congreso,persona,sitio_web,3,,res_congreso_persona,,
-54,congreso,persona,telefono,3,,res_congreso_persona,,
-54,congreso,persona,cedula,3,,res_congreso_persona,,
-54,congreso,persona,lugar_cedula_id,3,,res_congreso_persona,,
-54,congreso,persona,imagen,3,,res_congreso_persona,,
-54,congreso,persona,anio_nacimiento,3,annio_nacimiento,res_congreso_persona,,El campo está escrito con doble n en el catálogo
-54,congreso,persona,departamento_nacimiento_id,3,,res_congreso_persona,,
-54,congreso,persona,municipio_nacimiento_id,3,,res_congreso_persona,,
-54,congreso,persona,nivel_educativo,3,,res_congreso_persona,,
-54,congreso,persona,rango_edad_id,3,,res_congreso_persona,,
-54,congreso,persona,profesion_id,3,,res_congreso_persona,,
-54,congreso,persona,genero_id,3,,res_congreso_persona,,
-54,congreso,persona,fecha_fallecimiento,3,,res_congreso_persona,,
-54,congreso,persona,flickr_user,3,,res_congreso_persona,,
-54,congreso,persona,youtube_user,3,,res_congreso_persona,,
-54,congreso,persona,tumblr_user,3,,res_congreso_persona,,
-54,congreso,persona,twitter_user,3,,res_congreso_persona,,
-54,congreso,persona,linkedin_user,3,,res_congreso_persona,,
-54,congreso,persona,blogspot_user,3,,res_congreso_persona,,
-54,congreso,persona,posicion_ideologica,3,,res_congreso_persona,,
-54,congreso,persona,region_nacimiento_id,3,,res_congreso_persona,,
-54,congreso,persona,facebook_user,3,,res_congreso_persona,,
-54,congreso,persona,mini_bio,3,,res_congreso_persona,,
-54,congreso,persona,estrato,3,,res_congreso_persona,,
-54,congreso,persona,idrac,3,,res_congreso_persona,,
-54,congreso,persona,estado_civil,3,,res_congreso_persona,,
-54,congreso,persona,religion,3,,res_congreso_persona,,
-54,congreso,persona,frecuencia_actos_religiosos,3,,res_congreso_persona,,
+54,congreso,persona,id,3,id,res_congreso_persona,,La bd en el catálogo es de respaldo
+54,congreso,persona,created_at,3,created_at,res_congreso_persona,,La bd en el catálogo es de respaldo
+54,congreso,persona,edited_at,3,edited_at,res_congreso_persona,,La bd en el catálogo es de respaldo
+54,congreso,persona,user_id,3,user_id,res_congreso_persona,,La bd en el catálogo es de respaldo
+54,congreso,persona,facebook_id,3,facebook_id,res_congreso_persona,,La bd en el catálogo es de respaldo
+54,congreso,persona,activation_key,3,activation_key,res_congreso_persona,,La bd en el catálogo es de respaldo
+54,congreso,persona,nombres,3,nombres,res_congreso_persona,,La bd en el catálogo es de respaldo
+54,congreso,persona,apellidos,3,apellidos,res_congreso_persona,,La bd en el catálogo es de respaldo
+54,congreso,persona,sitio_web,3,sitio_web,res_congreso_persona,,La bd en el catálogo es de respaldo
+54,congreso,persona,telefono,3,telefono,res_congreso_persona,,La bd en el catálogo es de respaldo
+54,congreso,persona,cedula,3,cedula,res_congreso_persona,,La bd en el catálogo es de respaldo
+54,congreso,persona,lugar_cedula_id,3,lugar_cedula_id,res_congreso_persona,,La bd en el catálogo es de respaldo
+54,congreso,persona,imagen,3,imagen,res_congreso_persona,,La bd en el catálogo es de respaldo
+54,congreso,persona,anio_nacimiento,3,annio_nacimiento,res_congreso_persona,,El campo está escrito con doble n en el catálogo. La bd en el catálogo es de respaldo
+54,congreso,persona,departamento_nacimiento_id,3,departamento_nacimiento_id,res_congreso_persona,,La bd en el catálogo es de respaldo
+54,congreso,persona,municipio_nacimiento_id,3,municipio_nacimiento_id,res_congreso_persona,,La bd en el catálogo es de respaldo
+54,congreso,persona,nivel_educativo,3,nivel_educativo,res_congreso_persona,,La bd en el catálogo es de respaldo
+54,congreso,persona,rango_edad_id,3,rango_edad_id,res_congreso_persona,,La bd en el catálogo es de respaldo
+54,congreso,persona,profesion_id,3,profesion_id,res_congreso_persona,,La bd en el catálogo es de respaldo
+54,congreso,persona,genero_id,3,genero_id,res_congreso_persona,,La bd en el catálogo es de respaldo
+54,congreso,persona,fecha_fallecimiento,3,fecha_fallecimiento,res_congreso_persona,,La bd en el catálogo es de respaldo
+54,congreso,persona,flickr_user,3,flickr_user,res_congreso_persona,,La bd en el catálogo es de respaldo
+54,congreso,persona,youtube_user,3,youtube_user,res_congreso_persona,,La bd en el catálogo es de respaldo
+54,congreso,persona,tumblr_user,3,tumblr_user,res_congreso_persona,,La bd en el catálogo es de respaldo
+54,congreso,persona,twitter_user,3,twitter_user,res_congreso_persona,,La bd en el catálogo es de respaldo
+54,congreso,persona,linkedin_user,3,linkedin_user,res_congreso_persona,,La bd en el catálogo es de respaldo
+54,congreso,persona,blogspot_user,3,blogspot_user,res_congreso_persona,,La bd en el catálogo es de respaldo
+54,congreso,persona,posicion_ideologica,3,posicion_ideologica,res_congreso_persona,,La bd en el catálogo es de respaldo
+54,congreso,persona,region_nacimiento_id,3,region_nacimiento_id,res_congreso_persona,,La bd en el catálogo es de respaldo
+54,congreso,persona,facebook_user,3,facebook_user,res_congreso_persona,,La bd en el catálogo es de respaldo
+54,congreso,persona,mini_bio,3,mini_bio,res_congreso_persona,,La bd en el catálogo es de respaldo
+54,congreso,persona,estrato,3,estrato,res_congreso_persona,,La bd en el catálogo es de respaldo
+54,congreso,persona,idrac,3,idrac,res_congreso_persona,,La bd en el catálogo es de respaldo
+54,congreso,persona,estado_civil,3,estado_civil,res_congreso_persona,,La bd en el catálogo es de respaldo
+54,congreso,persona,religion,3,religion,res_congreso_persona,,La bd en el catálogo es de respaldo
+54,congreso,persona,frecuencia_actos_religiosos,3,frecuencia_actos_religiosos,res_congreso_persona,,La bd en el catálogo es de respaldo
 55,congreso,posicion,id,2,,,,
 55,congreso,posicion,created_at,2,,,,
 55,congreso,posicion,edited_at,2,,,,
@@ -426,22 +426,22 @@ num,seccion,tabla,campo,grupo,campo_gp,tabla_gp,transformar,observaciones
 60,congreso,problema,created_at,3,created_at,investigacions,,
 60,congreso,problema,edited_at,3,updated_at,investigacions,,
 60,congreso,problema,tipo_problema_id,3,tipo_problema_id,investigacions,,
-60,congreso,problema,descripcion,3,descripcion,,,
-60,congreso,problema,congresista_id,3,,,,
+60,congreso,problema,descripcion,3,descripcion,res_congreso_problema ,,
+60,congreso,problema,congresista_id,3,congresista_id,res_congreso_problema ,,
 61,congreso,proposicion,id,2,,,2,
 61,congreso,proposicion,created_at,2,,,2,
 61,congreso,proposicion,edited_at,2,,,2,
 61,congreso,proposicion,nombre,2,,,2,
-62,congreso,reemplazo,id,3,,,3,Se requiere valorar si se agrega congresistas con propiedades de remplazo o remplazos
-62,congreso,reemplazo,created_at,3,,,3,
-62,congreso,reemplazo,edited_at,3,,,3,
-62,congreso,reemplazo,congresista_reemplaza_id,3,,,3,
-62,congreso,reemplazo,congresista_reemplado_por_id,3,,,3,
-62,congreso,reemplazo,periodo_inicial,3,,,3,
-62,congreso,reemplazo,periodo_final,3,,,3,
-62,congreso,reemplazo,partido_id,3,,,3,
-62,congreso,reemplazo,camara_id,3,,,3,
-62,congreso,reemplazo,comision_id,3,,,3,
+62,congreso,reemplazo,id,3,id,res_congreso_reemplazo ,3,Se requiere valorar si se agrega congresistas con propiedades de remplazo o remplazos
+62,congreso,reemplazo,created_at,3,created_at,res_congreso_reemplazo ,3,
+62,congreso,reemplazo,edited_at,3,edited_at,res_congreso_reemplazo ,3,
+62,congreso,reemplazo,congresista_reemplaza_id,3,congresista_reemplaza_id,res_congreso_reemplazo ,3,
+62,congreso,reemplazo,congresista_reemplado_por_id,3,congresista_reem plado_por_id ,res_congreso_reemplazo ,3,
+62,congreso,reemplazo,periodo_inicial,3,periodo_inicial,res_congreso_reemplazo ,3,
+62,congreso,reemplazo,periodo_final,3,periodo_final,res_congreso_reemplazo ,3,
+62,congreso,reemplazo,partido_id,3,partido_id,res_congreso_reemplazo ,3,
+62,congreso,reemplazo,camara_id,3,camara_id,res_congreso_reemplazo ,3,
+62,congreso,reemplazo,comision_id,3,comision_id,res_congreso_reemplazo ,3,
 63,congreso,secretario,persona_ptr_id,2,,comision_secretarios ,3,Los campos no coinciden con el diccionario
 63,congreso,secretario,fecha_inicio,2,,comision_secretarios ,3,Los campos no coinciden con el diccionario
 63,congreso,secretario,fecha_final,2,,comision_secretarios ,3,Los campos no coinciden con el diccionario
@@ -459,9 +459,9 @@ num,seccion,tabla,campo,grupo,campo_gp,tabla_gp,transformar,observaciones
 66,congreso,tipocomision,nombre,1,nombre,tipo_comisions,,
 67,congreso,tipoperiodo,id,2,,,2,
 67,congreso,tipoperiodo,nombre,2,,,2,
-68,congreso,tipoproblema,id,3,,,,
-68,congreso,tipoproblema,nombre,3,,,,
-69,congreso,trayectoria,id,1,,,,
+68,congreso,tipoproblema,id,3,id,res_congreso_tipoproblema ,,
+68,congreso,tipoproblema,nombre,3,nombre,res_congreso_tipoproblema ,,
+69,congreso,trayectoria,id,2,,,,
 69,congreso,trayectoria,id_candidato_concejo_id,2,,,,
 69,congreso,trayectoria,trayectoria_anio,2,,,,
 69,congreso,trayectoria,cargo,2,,,,
@@ -591,9 +591,9 @@ num,seccion,tabla,campo,grupo,campo_gp,tabla_gp,transformar,observaciones
 90,django,site,id,2,,,2,
 90,django,site,domain,2,,,2,
 90,django,site,name,2,,,2,
-91,facebookconnect,facebookprofile,id,3,,,,
-91,facebookconnect,facebookprofile,user_id,3,,,,
-91,facebookconnect,facebookprofile,facebook_id,3,,,,
+91,facebookconnect,facebookprofile,id,3,,,,No hay tabla en diccionario
+91,facebookconnect,facebookprofile,user_id,3,,,,No hay tabla en diccionario
+91,facebookconnect,facebookprofile,facebook_id,3,,,,No hay tabla en diccionario
 93,general,departamento,id,1,id,regions,,
 93,general,departamento,nombre,1,nombre,regions,,
 93,general,departamento,region_id,1,region_id,regions,,
@@ -695,22 +695,22 @@ num,seccion,tabla,campo,grupo,campo_gp,tabla_gp,transformar,observaciones
 121,orden,del_dia_citacion_citantes,id,1,id,control_politico_citantes ,,
 121,orden,del_dia_citacion_citantes,citacion_id,1,control_politico_id ,control_politico_citantes ,,
 121,orden,del_dia_citacion_citantes,congresista_id,1,congresista_id,control_politico_citantes ,,
-122,orden,del_dia_citacion_otros_invitados,id,3,,,,
-122,orden,del_dia_citacion_otros_invitados,citacion_id,3,,,,
-122,orden,del_dia_citacion_otros_invitados,persona_id,3,,,,
+122,orden,del_dia_citacion_otros_invitados,id,3,id,res_orden_del_dia_citacion_otros_invitados ,,
+122,orden,del_dia_citacion_otros_invitados,citacion_id,3,citacion_id,res_orden_del_dia_citacion_otros_invitados ,,
+122,orden,del_dia_citacion_otros_invitados,persona_id,3,persona_id,res_orden_del_dia_citacion_otros_invitados ,,
 123,orden,del_dia_citacion,itemdeordendeldia_ptr_id,2,,,,
-123,orden,del_dia_citacion,tipo_id,3,,,,
-123,orden,del_dia_citacion,tema_principal_id,3,,,,
+123,orden,del_dia_citacion,tipo_id,3,tipo_id,res_orden_del_dia_citacion ,,
+123,orden,del_dia_citacion,tema_principal_id,3,tema_principal_id,res_orden_del_dia_citacion ,,
 123,orden,del_dia_citacion,tema_secundario_id,2,,,,
-123,orden,del_dia_citacion,plenaria,3,,,,
-123,orden,del_dia_citacion,tags,3,,,,
+123,orden,del_dia_citacion,plenaria,3,plenaria,res_orden_del_dia_citacion ,,
+123,orden,del_dia_citacion,tags,3,tags,res_orden_del_dia_citacion ,,
 123,orden,del_dia_citacion,fecha_proposicion,2,,,,
 123,orden,del_dia_citacion,old_id,2,,,,
 123,orden,del_dia_citacion,detalles,2,,,,
-123,orden,del_dia_citacion,gacetas,3,,,,
-123,orden,del_dia_citacion,cuestionario,3,,,,
+123,orden,del_dia_citacion,gacetas,3,gacetas,res_orden_del_dia_citacion ,,
+123,orden,del_dia_citacion,cuestionario,3,cuestionario,res_orden_del_dia_citacion ,,
 123,orden,del_dia_citacion,numero_proposicion,2,,,,
-123,orden,del_dia_citacion,respuesta,3,,,,
+123,orden,del_dia_citacion,respuesta,3,respuesta,res_orden_del_dia_citacion ,,
 123,orden,del_dia_citacion,duplicado,2,,,,
 124,orden,del_dia_citado,id,2,,,,
 124,orden,del_dia_citado,created_at,2,,,,
@@ -744,34 +744,34 @@ num,seccion,tabla,campo,grupo,campo_gp,tabla_gp,transformar,observaciones
 128,orden,del_dia_itemdeordendeldia,orden_del_dia_id,2,,,,
 128,orden,del_dia_itemdeordendeldia,realizado,2,,,,
 128,orden,del_dia_itemdeordendeldia,menu_realizado,2,,,,
-129,orden,del_dia_ordendeldia_camaras,id,3,,,,
-129,orden,del_dia_ordendeldia_camaras,ordendeldia_id,3,,,,
-129,orden,del_dia_ordendeldia_camaras,camara_id,3,,,,
-130,orden,del_dia_ordendeldia_comisiones,id,3,,,,
-130,orden,del_dia_ordendeldia_comisiones,ordendeldia_id,3,,,,
-130,orden,del_dia_ordendeldia_comisiones,comision_id,3,,,,
-131,orden,del_dia_ordendeldia,id,3,,,,
-131,orden,del_dia_ordendeldia,fecha_programada,3,,,,
-131,orden,del_dia_ordendeldia,fecha_realizada,3,,,,
-131,orden,del_dia_ordendeldia,comentarios,3,,,,
-131,orden,del_dia_ordendeldia,cuatrienio_id,3,,,,
-131,orden,del_dia_ordendeldia,realizado,3,,,,
+129,orden,del_dia_ordendeldia_camaras,id,1,id,votacion_camaras ,,
+129,orden,del_dia_ordendeldia_camaras,ordendeldia_id,1,votacion_id,votacion_camaras ,,
+129,orden,del_dia_ordendeldia_camaras,camara_id,1,camara_id,votacion_camaras ,,
+130,orden,del_dia_ordendeldia_comisiones,id,1,id,votacion_comisions ,,
+130,orden,del_dia_ordendeldia_comisiones,ordendeldia_id,1,votacion_id ,votacion_comisions ,,
+130,orden,del_dia_ordendeldia_comisiones,comision_id,1,comision_id,votacion_comisions ,,
+131,orden,del_dia_ordendeldia,id,1,id,votacions ,,
+131,orden,del_dia_ordendeldia,fecha_programada,1,fecha,votacions ,,
+131,orden,del_dia_ordendeldia,fecha_realizada,3,,votacions ,,Duda. No está en diccionario
+131,orden,del_dia_ordendeldia,comentarios,3,,votacions ,,Duda. No está en diccionario
+131,orden,del_dia_ordendeldia,cuatrienio_id,1,cuatrienio_id ,votacions ,,
+131,orden,del_dia_ordendeldia,realizado,3,,votacions ,,Duda. No está en diccionario
 132,orden,del_dia_proyectoenordendia,itemdeordendeldia_ptr_id,2,,,,
 132,orden,del_dia_proyectoenordendia,proyecto_id,2,,,,
-133,orden,del_dia_tipocitacion,id,3,,,,
-133,orden,del_dia_tipocitacion,nombre,3,,,,
+133,orden,del_dia_tipocitacion,id,1,id,estado_control_politicos ,,
+133,orden,del_dia_tipocitacion,nombre,1,nombre,estado_control_politicos ,,
 135,proyecto,de_ley_autorproyectoley,id,1,id,proyecto_ley_autors,,
 135,proyecto,de_ley_autorproyectoley,created_at,1,created_at,proyecto_ley_autors,,
 135,proyecto,de_ley_autorproyectoley,edited_at,1,updated_at,proyecto_ley_autors,,
 135,proyecto,de_ley_autorproyectoley,tipo_autor_id,1,tipo_autor_id,proyecto_ley_autors,,No se identifica a que se refiere
 135,proyecto,de_ley_autorproyectoley,autor_id,1,congresista_id,"proyecto_ley_autors, proyecto_ley_autor_otros",1,Se necesita identificar que autores son congresistas y cuales no
 135,proyecto,de_ley_autorproyectoley,proyecto_ley_id,1,proyecto_ley_id,proyecto_ley_autors,,
-136,proyecto,de_ley_clasevotacion,id,,,,,
-136,proyecto,de_ley_clasevotacion,nombre,,,,,
-136,proyecto,de_ley_clasevotacion,descripcion,,,,,
-137,proyecto,de_ley_estadodeproyectodeley_comisiones,id,3,,,,
-137,proyecto,de_ley_estadodeproyectodeley_comisiones,estadodeproyectodeley_id,3,,,,
-137,proyecto,de_ley_estadodeproyectodeley_comisiones,comision_id,3,,,,
+136,proyecto,de_ley_clasevotacion,id,2,id,res_proyecto_de_ley_clasevotacion ,,
+136,proyecto,de_ley_clasevotacion,nombre,2,nombre,res_proyecto_de_ley_clasevotacion ,,
+136,proyecto,de_ley_clasevotacion,descripcion,2,descripcion,res_proyecto_de_ley_clasevotacion ,,
+137,proyecto,de_ley_estadodeproyectodeley_comisiones,id,1,id,proyecto_ley_comisions ,,
+137,proyecto,de_ley_estadodeproyectodeley_comisiones,estadodeproyectodeley_id,1,proyecto_ley_id ,proyecto_ley_comisions ,,
+137,proyecto,de_ley_estadodeproyectodeley_comisiones,comision_id,1,comision_id ,proyecto_ley_comisions ,,
 138,proyecto,de_ley_estadodeproyectodeley_ponentes,id,1,id,proyecto_ley_ponentes,,
 138,proyecto,de_ley_estadodeproyectodeley_ponentes,estadodeproyectodeley_id,3,proyecto_ley_estado_id,proyecto_ley_ponentes,,
 138,proyecto,de_ley_estadodeproyectodeley_ponentes,congresista_id,3,congresista_id,proyecto_ley_ponentes,,La opción debe provenir de un catálogo
@@ -797,11 +797,11 @@ num,seccion,tabla,campo,grupo,campo_gp,tabla_gp,transformar,observaciones
 142,proyecto,de_ley_legislatura,fecha_inicio,1,fechaInicio,legislaturas,,Se está cambiando de lógica de nombre de snake a camel
 142,proyecto,de_ley_legislatura,fecha_fin,1,fechaFin,legislaturas,,Se está cambiando de lógica de nombre de snake a camel
 142,proyecto,de_ley_legislatura,cuatrienio_id,1,cuatrienio_id,legislaturas,,
-143,proyecto,de_ley_otroautor,id,3,,,,
-143,proyecto,de_ley_otroautor,created_at,3,,,,
-143,proyecto,de_ley_otroautor,edited_at,3,,,,
-143,proyecto,de_ley_otroautor,nombre,3,,,,
-143,proyecto,de_ley_otroautor,imagen,3,,,,
+143,proyecto,de_ley_otroautor,id,1,id,proyecto_ley_autor_otros ,,
+143,proyecto,de_ley_otroautor,created_at,3,created_at,proyecto_ley_autor_otros ,,
+143,proyecto,de_ley_otroautor,edited_at,3,edited_at,proyecto_ley_autor_otros ,,
+143,proyecto,de_ley_otroautor,nombre,1,nombre,proyecto_ley_autor_otros ,,
+143,proyecto,de_ley_otroautor,imagen,3,imagen,proyecto_ley_autor_otros ,,
 144,proyecto,de_ley_proyectoley,id,1,id,proyecto_leys,,
 144,proyecto,de_ley_proyectoley,created_at,1,created_at,proyecto_leys,,
 144,proyecto,de_ley_proyectoley,edited_at,1,updated_at,proyecto_leys,,
@@ -819,16 +819,16 @@ num,seccion,tabla,campo,grupo,campo_gp,tabla_gp,transformar,observaciones
 144,proyecto,de_ley_proyectoley,tags,1,tags,proyecto_leys,,
 144,proyecto,de_ley_proyectoley,old_id,2,,proyecto_leys,,
 144,proyecto,de_ley_proyectoley,se_acumula_a_id,1,se_acumula_a_id,proyecto_leys,,
-144,proyecto,de_ley_proyectoley,camara_id,1,corporacion_id,proyecto_leys,,
+144,proyecto,de_ley_proyectoley,camara_id,3,corporacion_id,proyecto_leys,,
 144,proyecto,de_ley_proyectoley,legislatura_id,1,legislatura_id,proyecto_leys,,
 144,proyecto,de_ley_proyectoley,enlace_a_texto,2,,proyecto_leys,,
 144,proyecto,de_ley_proyectoley,enlace_a_informe_derecho_justo,2,,proyecto_leys,,
 144,proyecto,de_ley_proyectoley,estado_proyecto_ley_actual_id,3,,proyecto_leys,,"No entiendo para que sirve, parece un identificador"
-144,proyecto,de_ley_proyectoley,alias,2,alias,proyecto_leys,,Alias no esté en el diccionario
+144,proyecto,de_ley_proyectoley,alias,3,alias,proyecto_leys,,Alias no esté en el diccionario
 144,proyecto,de_ley_proyectoley,importancia,2,,proyecto_leys,,
 144,proyecto,de_ley_proyectoley,destacado,2,,proyecto_leys,,
-144,proyecto,de_ley_proyectoley,alcance,3,alcance,proyecto_leys,,
-144,proyecto,de_ley_proyectoley,norma,2,,proyecto_leys,,Alcance no esté en el diccionario
+144,proyecto,de_ley_proyectoley,alcance,3,alcance,proyecto_leys,,Alcance no esté en el diccionario
+144,proyecto,de_ley_proyectoley,norma,2,,proyecto_leys,,
 145,proyecto,de_ley_textos_comparacion,id,2,,,2,No se entiende. Se cree obsoleta la tabla completa
 145,proyecto,de_ley_textos_comparacion,base_id,2,,,2,No se entiende. Se cree obsoleta la tabla completa
 145,proyecto,de_ley_textos_comparacion,modificado_id,2,,,2,No se entiende. Se cree obsoleta la tabla completa
@@ -844,45 +844,45 @@ num,seccion,tabla,campo,grupo,campo_gp,tabla_gp,transformar,observaciones
 146,proyecto,de_ley_textos_textoproyectoley,texto_plano,2,,,2,Tabla obseleta.
 147,proyecto,de_ley_tipoproyecto,id,1,id,tipo_proyectos,,La tabla debería llamarse tipo_proyecto_leys
 147,proyecto,de_ley_tipoproyecto,nombre,1,nombre,tipo_proyectos,,La tabla debería llamarse tipo_proyecto_leys
-148,proyecto,de_ley_tipovotacion,id,3,,,,A considerar
-148,proyecto,de_ley_tipovotacion,nombre,3,,,,A considerar
-148,proyecto,de_ley_tipovotacion,procedimental,3,,,,A considerar
-148,proyecto,de_ley_tipovotacion,descripcion,3,,,,A considerar
-149,proyecto,de_ley_votacion_camaras,id,1,,,,
-149,proyecto,de_ley_votacion_camaras,votacion_id,1,,,,
-149,proyecto,de_ley_votacion_camaras,camara_id,1,,,,
-150,proyecto,de_ley_votacion_comisiones,id,1,,,,
-150,proyecto,de_ley_votacion_comisiones,votacion_id,1,,,,
-150,proyecto,de_ley_votacion_comisiones,comision_id,1,,,,
-151,proyecto,de_ley_votacion_estados_proyecto,id,,,,,
-151,proyecto,de_ley_votacion_estados_proyecto,votacion_id,,,,,
-151,proyecto,de_ley_votacion_estados_proyecto,estadodeproyectodeley_id,,,,,
-152,proyecto,de_ley_votacion,id,1,,,,
-152,proyecto,de_ley_votacion,created_at,1,,,,
-152,proyecto,de_ley_votacion,edited_at,1,,,,
-152,proyecto,de_ley_votacion,fecha,1,,,,
-152,proyecto,de_ley_votacion,proyecto_id,1,,,,
-152,proyecto,de_ley_votacion,motivo,2,,,,
-152,proyecto,de_ley_votacion,a_favor,3,,,,
-152,proyecto,de_ley_votacion,en_contra,3,,,,
-152,proyecto,de_ley_votacion,votosFavor,2,,,,
-152,proyecto,de_ley_votacion,votosContra,2,,,,
-152,proyecto,de_ley_votacion,aprobado,2,,,,
-152,proyecto,de_ley_votacion,tipo_votacion_id,2,,,,
-152,proyecto,de_ley_votacion,gaceta,2,,,,
-152,proyecto,de_ley_votacion,acta,2,,,,
-152,proyecto,de_ley_votacion,observaciones,2,,,,
-152,proyecto,de_ley_votacion,votacion_en_dia,2,,,,
-152,proyecto,de_ley_votacion,destacada,2,,,,
-152,proyecto,de_ley_votacion,old_id,2,,,,
-152,proyecto,de_ley_votacion,aprobada,2,,,,
-152,proyecto,de_ley_votacion,cuatrienio_id,3,,,,
-152,proyecto,de_ley_votacion,votosAbstencion,2,,,,
-152,proyecto,de_ley_votacion,numero_no_asistencias,2,,,,
-152,proyecto,de_ley_votacion,clase_votacion_id,2,,,,
-152,proyecto,de_ley_votacion,numero_asistencias,3,,,,
-152,proyecto,de_ley_votacion,datos_importacion,2,,,,
-152,proyecto,de_ley_votacion,resultados_importacion,2,,,,
+148,proyecto,de_ley_tipovotacion,id,1,id,tipo_respuesta_votacions ,,A considerar
+148,proyecto,de_ley_tipovotacion,nombre,1,nombre,tipo_respuesta_votacions ,,A considerar
+148,proyecto,de_ley_tipovotacion,procedimental,2,,tipo_respuesta_votacions ,,duda
+148,proyecto,de_ley_tipovotacion,descripcion,2,,tipo_respuesta_votacions ,,duda
+149,proyecto,de_ley_votacion_camaras,id,1,id,votacion_camaras ,,
+149,proyecto,de_ley_votacion_camaras,votacion_id,1,votacion_id,votacion_camaras ,,
+149,proyecto,de_ley_votacion_camaras,camara_id,1,camara_id,votacion_camaras ,,
+150,proyecto,de_ley_votacion_comisiones,id,1,id,votacion_comisions ,,
+150,proyecto,de_ley_votacion_comisiones,votacion_id,1,votacion_id,votacion_comisions ,,
+150,proyecto,de_ley_votacion_comisiones,comision_id,1,comision_id,votacion_comisions ,,
+151,proyecto,de_ley_votacion_estados_proyecto,id,2,id,res_ proyecto_de_ley_votacion_estados_proyecto ,,
+151,proyecto,de_ley_votacion_estados_proyecto,votacion_id,2,votacion_id,res_ proyecto_de_ley_votacion_estados_proyecto ,,
+151,proyecto,de_ley_votacion_estados_proyecto,estadodeproyectodeley_id,2,estadodeproyectodeley_id,res_ proyecto_de_ley_votacion_estados_proyecto ,,
+152,proyecto,de_ley_votacion,id,1,id,votacions ,,
+152,proyecto,de_ley_votacion,created_at,1,created_at,votacions ,,
+152,proyecto,de_ley_votacion,edited_at,1,edited_at,votacions ,,
+152,proyecto,de_ley_votacion,fecha,1,fecha,votacions ,,
+152,proyecto,de_ley_votacion,proyecto_id,1,proyecto_de_ley_id ,votacions ,,
+152,proyecto,de_ley_votacion,motivo,2,,votacions ,,
+152,proyecto,de_ley_votacion,a_favor,2,,votacions ,,No hay tabla en diccionario
+152,proyecto,de_ley_votacion,en_contra,2,,votacions ,,No hay tabla en diccionario
+152,proyecto,de_ley_votacion,votosFavor,2,,votacions ,,
+152,proyecto,de_ley_votacion,votosContra,2,,votacions ,,
+152,proyecto,de_ley_votacion,aprobado,2,,votacions ,,
+152,proyecto,de_ley_votacion,tipo_votacion_id,2,,votacions ,,
+152,proyecto,de_ley_votacion,gaceta,1,urlGaceta ,votacions ,,
+152,proyecto,de_ley_votacion,acta,2,,votacions ,,
+152,proyecto,de_ley_votacion,observaciones,2,,votacions ,,
+152,proyecto,de_ley_votacion,votacion_en_dia,2,,votacions ,,
+152,proyecto,de_ley_votacion,destacada,2,,votacions ,,
+152,proyecto,de_ley_votacion,old_id,2,,votacions ,,
+152,proyecto,de_ley_votacion,aprobada,2,,votacions ,,
+152,proyecto,de_ley_votacion,cuatrienio_id,1,cuatrienio_id,votacions ,,No hay tabla en diccionario
+152,proyecto,de_ley_votacion,votosAbstencion,2,,votacions ,,
+152,proyecto,de_ley_votacion,numero_no_asistencias,2,,votacions ,,
+152,proyecto,de_ley_votacion,clase_votacion_id,2,,votacions ,,
+152,proyecto,de_ley_votacion,numero_asistencias,2,,votacions ,,No hay tabla en diccionario
+152,proyecto,de_ley_votacion,datos_importacion,2,,votacions ,,
+152,proyecto,de_ley_votacion,resultados_importacion,2,,votacions ,,
 153,proyecto,de_ley_votacionpartido,id,2,,,,
 153,proyecto,de_ley_votacionpartido,created_at,2,,,,
 153,proyecto,de_ley_votacionpartido,edited_at,2,,,,
@@ -892,22 +892,22 @@ num,seccion,tabla,campo,grupo,campo_gp,tabla_gp,transformar,observaciones
 153,proyecto,de_ley_votacionpartido,opcion_preferida,2,,,,
 153,proyecto,de_ley_votacionpartido,partido_id,2,,,,
 153,proyecto,de_ley_votacionpartido,votacion_id,2,,,,
-154,proyecto,de_ley_voto,id,3,,,,
-154,proyecto,de_ley_voto,created_at,3,,,,
-154,proyecto,de_ley_voto,edited_at,3,,,,
-154,proyecto,de_ley_voto,votacion_id,3,,,,
-154,proyecto,de_ley_voto,voto,3,,,,
-154,proyecto,de_ley_voto,congresista_id,3,,,,
+154,proyecto,de_ley_voto,id,3,id,res_proyecto_de_ley_voto ,,
+154,proyecto,de_ley_voto,created_at,3,,res_proyecto_de_ley_voto ,,
+154,proyecto,de_ley_voto,edited_at,3,,res_proyecto_de_ley_voto ,,
+154,proyecto,de_ley_voto,votacion_id,3,votacion_id,res_proyecto_de_ley_voto ,,
+154,proyecto,de_ley_voto,voto,3,voto,res_proyecto_de_ley_voto ,,
+154,proyecto,de_ley_voto,congresista_id,3,congresista_id,res_proyecto_de_ley_voto ,,
 155,proyecto,de_ley_votociudadano,id,2,,,,
 155,proyecto,de_ley_votociudadano,voto,2,,,,
 155,proyecto,de_ley_votociudadano,votante_id,2,,,,
 155,proyecto,de_ley_votociudadano,proyecto_id,2,,,,
-156,reportes,reporte,id,3,,,,
-156,reportes,reporte,nombre,3,,,,
-156,reportes,reporte,descripcion,3,,,,
-156,reportes,reporte,enlace,3,,,,
-156,reportes,reporte,activo,3,,,,
-156,reportes,reporte,orden,3,,,,
+156,reportes,reporte,id,3,,,,No hay tabla en diccionario
+156,reportes,reporte,nombre,3,,,,No hay tabla en diccionario
+156,reportes,reporte,descripcion,3,,,,No hay tabla en diccionario
+156,reportes,reporte,enlace,3,,,,No hay tabla en diccionario
+156,reportes,reporte,activo,3,,,,No hay tabla en diccionario
+156,reportes,reporte,orden,3,,,,No hay tabla en diccionario
 157,sentencias,articulo,id,2,,,2,
 157,sentencias,articulo,numero_articulo,2,,,2,
 157,sentencias,articulo,sentencia_id,2,,,2,
@@ -1048,29 +1048,29 @@ num,seccion,tabla,campo,grupo,campo_gp,tabla_gp,transformar,observaciones
 184,socialauth,authmeta,provider,2,,,2,
 184,socialauth,authmeta,is_email_filled,2,,,2,
 184,socialauth,authmeta,is_profile_modified,2,,,2,
-185,socialauth,facebookuserprofile,id,3,,,,
-185,socialauth,facebookuserprofile,facebook_uid,3,,,,
-185,socialauth,facebookuserprofile,user_id,3,,,,
-185,socialauth,facebookuserprofile,profile_image_url,3,,,,
-185,socialauth,facebookuserprofile,profile_image_url_big,3,,,,
-185,socialauth,facebookuserprofile,profile_image_url_small,3,,,,
-185,socialauth,facebookuserprofile,location,3,,,,
-185,socialauth,facebookuserprofile,url,3,,,,
-185,socialauth,facebookuserprofile,about_me,3,,,,
+185,socialauth,facebookuserprofile,id,3,,,,No hay tabla en diccionario
+185,socialauth,facebookuserprofile,facebook_uid,3,,,,No hay tabla en diccionario
+185,socialauth,facebookuserprofile,user_id,3,,,,No hay tabla en diccionario
+185,socialauth,facebookuserprofile,profile_image_url,3,,,,No hay tabla en diccionario
+185,socialauth,facebookuserprofile,profile_image_url_big,3,,,,No hay tabla en diccionario
+185,socialauth,facebookuserprofile,profile_image_url_small,3,,,,No hay tabla en diccionario
+185,socialauth,facebookuserprofile,location,3,,,,No hay tabla en diccionario
+185,socialauth,facebookuserprofile,url,3,,,,No hay tabla en diccionario
+185,socialauth,facebookuserprofile,about_me,3,,,,No hay tabla en diccionario
 187,socialauth,openidprofile,id,2,,,2,
 187,socialauth,openidprofile,openid_key,2,,,2,
 187,socialauth,openidprofile,user_id,2,,,2,
 187,socialauth,openidprofile,is_username_valid,2,,,2,
 187,socialauth,openidprofile,email,2,,,2,
 187,socialauth,openidprofile,nickname,2,,,2,
-188,socialauth,twitteruserprofile,id,3,,,,
-188,socialauth,twitteruserprofile,screen_name,3,,,,
-188,socialauth,twitteruserprofile,user_id,3,,,,
-188,socialauth,twitteruserprofile,access_token,3,,,,
-188,socialauth,twitteruserprofile,profile_image_url,3,,,,
-188,socialauth,twitteruserprofile,location,3,,,,
-188,socialauth,twitteruserprofile,url,3,,,,
-188,socialauth,twitteruserprofile,description,3,,,,
+188,socialauth,twitteruserprofile,id,3,,,,No hay tabla en diccionario
+188,socialauth,twitteruserprofile,screen_name,3,,,,No hay tabla en diccionario
+188,socialauth,twitteruserprofile,user_id,3,,,,No hay tabla en diccionario
+188,socialauth,twitteruserprofile,access_token,3,,,,No hay tabla en diccionario
+188,socialauth,twitteruserprofile,profile_image_url,3,,,,No hay tabla en diccionario
+188,socialauth,twitteruserprofile,location,3,,,,No hay tabla en diccionario
+188,socialauth,twitteruserprofile,url,3,,,,No hay tabla en diccionario
+188,socialauth,twitteruserprofile,description,3,,,,No hay tabla en diccionario
 189,south,migrationhistory,id,2,,,2,
 189,south,migrationhistory,app_name,2,,,2,
 189,south,migrationhistory,migration,2,,,2,
