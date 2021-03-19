@@ -186,26 +186,26 @@ num,seccion,tabla,campo,grupo,campo_gp,tabla_gp,transformar,observaciones
 32,congreso,candidatos_concejo,por_que_votar,2,,,2,
 32,congreso,candidatos_concejo,numero_lista,2,,,2,
 32,congreso,candidatos_concejo,actualmente_concejal,2,,,2,
-33,congreso,cargo,id,2,id,res_congreso_cargo ,,
-33,congreso,cargo,created_at,2,fecha_inicio,res_congreso_cargo ,,
-33,congreso,cargo,edited_at,2,fecha_fin,res_congreso_cargo ,,
-33,congreso,cargo,persona_id,2,persona_id,res_congreso_cargo ,,
-33,congreso,cargo,sector_id,2,sector_id,res_congreso_cargo ,,
-33,congreso,cargo,cargo,2,cargo,res_congreso_cargo ,,
-33,congreso,cargo,entidad,2,entidad,res_congreso_cargo ,,
-33,congreso,cargo,fecha_inicio,2,fecha_inicio,res_congreso_cargo ,,
-33,congreso,cargo,fecha_final,2,fecha_final,res_congreso_cargo ,,
-34,congreso,cargocamara,id,2,id,res_congreso_cargocamara ,,
-34,congreso,cargocamara,nombre,2,nombre,res_congreso_cargocamara ,,
-35,congreso,cargocomision,id,1,id,cargos,,
-35,congreso,cargocomision,nombre,1,nombre,cargos,,
-36,congreso,cargopolitico,id,3,id,res_congreso_cargopolitico ,,
+33,congreso,cargo,id,2,id,res_congreso_cargo ,,duda
+33,congreso,cargo,created_at,2,fecha_inicio,res_congreso_cargo ,,duda
+33,congreso,cargo,edited_at,2,fecha_fin,res_congreso_cargo ,,duda
+33,congreso,cargo,persona_id,2,persona_id,res_congreso_cargo ,,duda
+33,congreso,cargo,sector_id,2,sector_id,res_congreso_cargo ,,duda
+33,congreso,cargo,cargo,2,cargo,res_congreso_cargo ,,duda
+33,congreso,cargo,entidad,2,entidad,res_congreso_cargo ,,duda
+33,congreso,cargo,fecha_inicio,2,fecha_inicio,res_congreso_cargo ,,duda
+33,congreso,cargo,fecha_final,2,fecha_final,res_congreso_cargo ,,duda
+34,congreso,cargocamara,id,2,id,res_congreso_cargocamara ,,duda
+34,congreso,cargocamara,nombre,2,nombre,res_congreso_cargocamara ,,duda
+35,congreso,cargocomision,id,1,id,cargos,,duda
+35,congreso,cargocomision,nombre,1,nombre,cargos,,duda
+36,congreso,cargopolitico,id,3,id,res_congreso_cargopolitico ,,duda
 36,congreso,cargopolitico,created_at,2,,res_congreso_cargopolitico ,,duda
 36,congreso,cargopolitico,edited_at,2,,res_congreso_cargopolitico ,,duda
-36,congreso,cargopolitico,persona_id,3,persona_id,res_congreso_cargopolitico ,,
-36,congreso,cargopolitico,cargo,3,cargo,res_congreso_cargopolitico ,,
-36,congreso,cargopolitico,fecha_inicio,3,fecha_inicio,res_congreso_cargopolitico ,,
-36,congreso,cargopolitico,fecha_final,3,fecha_fin,res_congreso_cargopolitico ,,
+36,congreso,cargopolitico,persona_id,3,persona_id,res_congreso_cargopolitico ,,duda
+36,congreso,cargopolitico,cargo,3,cargo,res_congreso_cargopolitico ,,duda
+36,congreso,cargopolitico,fecha_inicio,3,fecha_inicio,res_congreso_cargopolitico ,,duda
+36,congreso,cargopolitico,fecha_final,3,fecha_fin,res_congreso_cargopolitico ,,duda
 36,congreso,cargopolitico,partido_id,2,,res_congreso_cargopolitico ,,duda
 36,congreso,cargopolitico,resultado,2,,res_congreso_cargopolitico ,,duda
 36,congreso,cargopolitico,camara_id,2,,res_congreso_cargopolitico ,,duda
@@ -215,7 +215,7 @@ num,seccion,tabla,campo,grupo,campo_gp,tabla_gp,transformar,observaciones
 37,congreso,circunscripcion,departamento_id,2,,circuncripcions,,
 38,congreso,comision,id,1,id,comisions,,
 38,congreso,comision,created_at,1,created_at,comisions,,
-38,congreso,comision,edited_at,1,updated_at,comisions,,
+38,congreso,comision,edited_at,2,updated_at,comisions,,
 38,congreso,comision,nombre,1,nombre,comisions,,
 38,congreso,comision,camara_id,1,corporacion_id,comisions,,
 38,congreso,comision,permanente,2,,comisions,,
@@ -269,20 +269,20 @@ num,seccion,tabla,campo,grupo,campo_gp,tabla_gp,transformar,observaciones
 39,congreso,congresista,pariente_politica,2,,congresistas,,
 39,congreso,congresista,ha_tenido_pariente_en_la_politica,2,,congresistas,,
 39,congreso,congresista,pariente_politica_inactivo,2,,congresistas,,
-40,congreso,congresistadebancada,id,2,,,2,
-40,congreso,congresistadebancada,created_at,2,,,2,
-40,congreso,congresistadebancada,edited_at,2,,,2,
-40,congreso,congresistadebancada,fecha_inicio,2,,,2,
-40,congreso,congresistadebancada,fecha_fin,2,,,2,
-40,congreso,congresistadebancada,congresista_id,2,,,2,
-40,congreso,congresistadebancada,bancada_id,2,,,2,
-41,congreso,congresistadepartido,id,3,id,res_congreso_congresistadepartido ,,
-41,congreso,congresistadepartido,created_at,3,,res_congreso_congresistadepartido ,,
-41,congreso,congresistadepartido,edited_at,3,,res_congreso_congresistadepartido ,,
-41,congreso,congresistadepartido,fecha_inicio,3,fecha_inicio,res_congreso_congresistadepartido ,,
-41,congreso,congresistadepartido,fecha_fin,3,fecha_fin,res_congreso_congresistadepartido ,,
-41,congreso,congresistadepartido,congresista_id,3,congresista_id,res_congreso_congresistadepartido ,,
-41,congreso,congresistadepartido,partido_id,3,partido_id,res_congreso_congresistadepartido ,,
+40,congreso,congresistadebancada,id,1,id,congreso_congresistadebancadas ,2,
+40,congreso,congresistadebancada,created_at,2,,congreso_congresistadebancadas ,2,
+40,congreso,congresistadebancada,edited_at,2,,congreso_congresistadebancadas ,2,
+40,congreso,congresistadebancada,fecha_inicio,2,fecha_inicio,congreso_congresistadebancadas ,2,
+40,congreso,congresistadebancada,fecha_fin,2,fecha_fin,congreso_congresistadebancadas ,2,
+40,congreso,congresistadebancada,congresista_id,2,congresista_id,congreso_congresistadebancadas ,2,
+40,congreso,congresistadebancada,bancada_id,2,bancada_id,congreso_congresistadebancadas ,2,
+41,congreso,congresistadepartido,id,2,id,res_congreso_congresistadepartido ,,
+41,congreso,congresistadepartido,created_at,2,,res_congreso_congresistadepartido ,,
+41,congreso,congresistadepartido,edited_at,2,,res_congreso_congresistadepartido ,,
+41,congreso,congresistadepartido,fecha_inicio,2,fecha_inicio,res_congreso_congresistadepartido ,,
+41,congreso,congresistadepartido,fecha_fin,2,fecha_fin,res_congreso_congresistadepartido ,,
+41,congreso,congresistadepartido,congresista_id,2,congresista_id,res_congreso_congresistadepartido ,,
+41,congreso,congresistadepartido,partido_id,2,partido_id,res_congreso_congresistadepartido ,,
 42,congreso,contadorcongresistas,id,2,,,2,
 42,congreso,contadorcongresistas,congresistas,2,,,2,
 42,congreso,contadorcongresistas,candidatos,2,,,2,
@@ -293,15 +293,15 @@ num,seccion,tabla,campo,grupo,campo_gp,tabla_gp,transformar,observaciones
 44,congreso,estadopartido,edited_at,2,,,2,
 44,congreso,estadopartido,nombre,2,,,2,
 44,congreso,estadopartido,es_activo,2,,,2,
-46,congreso,integrantecamara,id,3,id,res_congreso_integrantecamara ,,
-46,congreso,integrantecamara,created_at,3,created_at,res_congreso_integrantecamara ,,
-46,congreso,integrantecamara,edited_at,3,edited_at,res_congreso_integrantecamara ,,
-46,congreso,integrantecamara,cargo_id,3,cargo_id,res_congreso_integrantecamara ,,
-46,congreso,integrantecamara,fecha_inicio,3,fecha_inicio,res_congreso_integrantecamara ,,
-46,congreso,integrantecamara,fecha_final,3,fecha_final,res_congreso_integrantecamara ,,
-46,congreso,integrantecamara,congresista_id,3,congresista_id,res_congreso_integrantecamara ,,
-46,congreso,integrantecamara,camara_id,3,camara_id,res_congreso_integrantecamara ,,
-46,congreso,integrantecamara,periodo_id,3,periodo_id,res_congreso_integrantecamara ,,
+46,congreso,integrantecamara,id,2,id,res_congreso_integrantecamara ,,
+46,congreso,integrantecamara,created_at,2,created_at,res_congreso_integrantecamara ,,
+46,congreso,integrantecamara,edited_at,2,edited_at,res_congreso_integrantecamara ,,
+46,congreso,integrantecamara,cargo_id,2,cargo_id,res_congreso_integrantecamara ,,
+46,congreso,integrantecamara,fecha_inicio,2,fecha_inicio,res_congreso_integrantecamara ,,
+46,congreso,integrantecamara,fecha_final,2,fecha_final,res_congreso_integrantecamara ,,
+46,congreso,integrantecamara,congresista_id,2,congresista_id,res_congreso_integrantecamara ,,
+46,congreso,integrantecamara,camara_id,2,camara_id,res_congreso_integrantecamara ,,
+46,congreso,integrantecamara,periodo_id,2,periodo_id,res_congreso_integrantecamara ,,
 47,congreso,integrantecomision,id,1,id,comision_miembros,,Hace falta comision_tipo_congresista_id
 47,congreso,integrantecomision,created_at,1,created_at,comision_miembros,,Hace falta comision_tipo_congresista_id
 47,congreso,integrantecomision,edited_at,1,updated_at,comision_miembros,,Hace falta comision_tipo_congresista_id
