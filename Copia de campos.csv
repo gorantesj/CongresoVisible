@@ -212,16 +212,16 @@ num,seccion,tabla,campo,grupo,campo_gp,tabla_gp,transformar,observaciones
 36,congreso,cargopolitico,comision_id,2,,res_congreso_cargopolitico ,,duda
 37,congreso,circunscripcion,id,1,id,circuncripcions,,
 37,congreso,circunscripcion,nombre,1,nombre,circuncripcions,,
-37,congreso,circunscripcion,departamento_id,2,,circuncripcions,,
+37,congreso,circunscripcion,departamento_id,3,departamento_id,circuncripcions,,
 38,congreso,comision,id,1,id,comisions,,
 38,congreso,comision,created_at,1,created_at,comisions,,
-38,congreso,comision,edited_at,2,updated_at,comisions,,
+38,congreso,comision,edited_at,1,updated_at,comisions,,
 38,congreso,comision,nombre,1,nombre,comisions,,
 38,congreso,comision,camara_id,1,corporacion_id,comisions,,
-38,congreso,comision,permanente,2,,comisions,,
+38,congreso,comision,permanente,3,,comisions,,
 38,congreso,comision,descripcion,1,descripcion,comisions,,
-38,congreso,comision,imagen,2,,comisions,,
-38,congreso,comision,orden,2,,comisions,,
+38,congreso,comision,imagen,3,,comisions,,
+38,congreso,comision,orden,3,,comisions,,
 38,congreso,comision,tipo_comision_id,1,tipo_comision_id,comisions,1,
 38,congreso,comision,correo,2,,comisions,,
 38,congreso,comision,oficina,2,,comisions,,
@@ -232,40 +232,40 @@ num,seccion,tabla,campo,grupo,campo_gp,tabla_gp,transformar,observaciones
 39,congreso,congresista,es_candidato,2,,congresistas,,
 39,congreso,congresista,orgullo,2,,congresistas,,
 39,congreso,congresista,se_identifica_id,2,,congresistas,,
-39,congreso,congresista,ha_reemplazado,2,,congresistas,,Tiene puros falsos
-39,congreso,congresista,es_activo,1,activo,congresistas,,
+39,congreso,congresista,ha_reemplazado,3,,congresistas,,Tiene puros falsos
+39,congreso,congresista,es_activo,3,activo,congresistas,,
 39,congreso,congresista,cantidad_actividades,2,,congresistas,,
 39,congreso,congresista,cantidad_comentarios,2,,congresistas,,
-39,congreso,congresista,comision_actual_id,2,,congresistas,,
+39,congreso,congresista,comision_actual_id,3,,congresistas,,
 39,congreso,congresista,periodo_actual_id,1,cuatrienio_id,congresistas,,Se agregó el cuatrienio donde estaba el periodo
 39,congreso,congresista,es_congresista,2,,congresistas,,
 39,congreso,congresista,ha_sido_congresista,2,,congresistas,,
 39,congreso,congresista,numero_votos_partido,2,,congresistas,,
 39,congreso,congresista,vota_con_partido,2,,congresistas,,
 39,congreso,congresista,old_id,2,,congresistas,,
-39,congreso,congresista,investigado,2,,congresistas,,
+39,congreso,congresista,investigado,3,,congresistas,,
 39,congreso,congresista,slug,2,,congresistas,,
 39,congreso,congresista,biografia,3,,congresistas,,Este campo podría corresponder al de trayectoria
 39,congreso,congresista,campania_actual_id,2,,congresistas,,
 39,congreso,congresista,actividad_actual_id,2,,congresistas,,
-39,congreso,congresista,numero_oficina,2,,congresistas,,
-39,congreso,congresista,telefono_oficina,2,,congresistas,,
-39,congreso,congresista,ha_sido_reemplazo,2,,congresistas,,
+39,congreso,congresista,numero_oficina,3,,congresistas,,
+39,congreso,congresista,telefono_oficina,3,,congresistas,,
+39,congreso,congresista,ha_sido_reemplazo,3,,congresistas,,
 39,congreso,congresista,tiene_formula_electoral_aspirante_a_la_otra_camara,2,,congresistas,,
 39,congreso,congresista,formula_electoral,2,,congresistas,,
 39,congreso,congresista,partido_formula_electoral_id,2,,congresistas,,
 39,congreso,congresista,ha_estado_en_bancada_diferente,2,,congresistas,,
-39,congreso,congresista,ha_ejercido_cargo_diferente,3,,congresistas,,Este campo podría corresponder al de trayectoria
+39,congreso,congresista,ha_ejercido_cargo_diferente,2,,congresistas,,Este campo podría corresponder al de trayectoria
 39,congreso,congresista,cargo_popular,2,,congresistas,,
 39,congreso,congresista,ha_ejercido_cargo_en_rama_ejecutiva,2,,congresistas,,
 39,congreso,congresista,ha_sido_dirigente_sindical,2,,congresistas,,
 39,congreso,congresista,ha_sido_dirigente_gremial,2,,congresistas,,
 39,congreso,congresista,tiene_pariente_en_la_politica,2,,congresistas,,
-39,congreso,congresista,es_representante_camara,2,,congresistas,,
+39,congreso,congresista,es_representante_camara,3,,congresistas,,
 39,congreso,congresista,es_candidato_camara,2,,congresistas,,
-39,congreso,congresista,es_senador,2,,congresistas,,
+39,congreso,congresista,es_senador,3,corporacion_id,congresistas,,
 39,congreso,congresista,es_candidato_senador,2,,congresistas,,
-39,congreso,congresista,cargo_ejecutivo,2,,congresistas,,
+39,congreso,congresista,cargo_ejecutivo,3,,congresistas,,
 39,congreso,congresista,pariente_politica,2,,congresistas,,
 39,congreso,congresista,ha_tenido_pariente_en_la_politica,2,,congresistas,,
 39,congreso,congresista,pariente_politica_inactivo,2,,congresistas,,
@@ -293,15 +293,15 @@ num,seccion,tabla,campo,grupo,campo_gp,tabla_gp,transformar,observaciones
 44,congreso,estadopartido,edited_at,2,,,2,
 44,congreso,estadopartido,nombre,2,,,2,
 44,congreso,estadopartido,es_activo,2,,,2,
-46,congreso,integrantecamara,id,2,id,res_congreso_integrantecamara ,,
-46,congreso,integrantecamara,created_at,2,created_at,res_congreso_integrantecamara ,,
-46,congreso,integrantecamara,edited_at,2,edited_at,res_congreso_integrantecamara ,,
-46,congreso,integrantecamara,cargo_id,2,cargo_id,res_congreso_integrantecamara ,,
-46,congreso,integrantecamara,fecha_inicio,2,fecha_inicio,res_congreso_integrantecamara ,,
-46,congreso,integrantecamara,fecha_final,2,fecha_final,res_congreso_integrantecamara ,,
-46,congreso,integrantecamara,congresista_id,2,congresista_id,res_congreso_integrantecamara ,,
-46,congreso,integrantecamara,camara_id,2,camara_id,res_congreso_integrantecamara ,,
-46,congreso,integrantecamara,periodo_id,2,periodo_id,res_congreso_integrantecamara ,,
+46,congreso,integrantecamara,id,1,id,corporacion_miembros ,,
+46,congreso,integrantecamara,created_at,1,created_at,corporacion_miembros ,,
+46,congreso,integrantecamara,edited_at,1,updated_at,corporacion_miembros ,,
+46,congreso,integrantecamara,cargo_id,1,corporacion_cargo _congresista_id ,corporacion_miembros ,,
+46,congreso,integrantecamara,fecha_inicio,3,,corporacion_miembros ,,
+46,congreso,integrantecamara,fecha_final,3,,corporacion_miembros ,,
+46,congreso,integrantecamara,congresista_id,1,congresista_id,corporacion_miembros ,,
+46,congreso,integrantecamara,camara_id,1,corporacion_id,corporacion_miembros ,,
+46,congreso,integrantecamara,periodo_id,3,,corporacion_miembros ,,
 47,congreso,integrantecomision,id,1,id,comision_miembros,,Hace falta comision_tipo_congresista_id
 47,congreso,integrantecomision,created_at,1,created_at,comision_miembros,,Hace falta comision_tipo_congresista_id
 47,congreso,integrantecomision,edited_at,1,updated_at,comision_miembros,,Hace falta comision_tipo_congresista_id
@@ -323,23 +323,23 @@ num,seccion,tabla,campo,grupo,campo_gp,tabla_gp,transformar,observaciones
 51,congreso,partido,created_at,1,created_at,partidos,,
 51,congreso,partido,edited_at,1,updated_at,partidos,,
 51,congreso,partido,nombre,1,nombre,partidos,,
-51,congreso,partido,fecha_fundacion,1,fecha_fundacion,partidos,,
-51,congreso,partido,lugar_creacion,2,,partidos,,
+51,congreso,partido,fecha_fundacion,1,fechaDeCreacion,partidos,,"La lógica del nombre está mal, deberías ser snake."
+51,congreso,partido,lugar_creacion,1,lugar,partidos,,
 51,congreso,partido,direccion_sede_principal,1,direccion,partidos,,
 51,congreso,partido,sitio_web,1,direccion,partidos,,
 51,congreso,partido,twitter,2,,partidos,,
 51,congreso,partido,telefono,2,,partidos,,
 51,congreso,partido,estatutos,1,estatutos,partidos,,"Estatutos anteriores es una liga, aqu’ es un texto largo"
 51,congreso,partido,lineamientos,1,lineamientos,partidos ,,
-51,congreso,partido,resenia_historica,2,,,,
-51,congreso,partido,propuestas,2,,,,
-51,congreso,partido,director_id,2,,,,
-51,congreso,partido,secretario_id,2,,,,
-51,congreso,partido,representante_legal_id,2,,,,
-51,congreso,partido,fundador,2,,partidos,,
-51,congreso,partido,posicion_ideologica,2,,partidos,,
-51,congreso,partido,,2,,partidos,,
-51,congreso,partido,logo,2,,,,
+51,congreso,partido,resenia_historica,1,resenaHistorica,partidos ,,"La lógica del nombre está mal, deberías ser snake."
+51,congreso,partido,propuestas,2,,partidos ,,
+51,congreso,partido,director_id,2,,partidos ,,
+51,congreso,partido,secretario_id,2,,partidos ,,
+51,congreso,partido,representante_legal_id,2,,partidos ,,
+51,congreso,partido,fundador,2,,partidos ,,
+51,congreso,partido,posicion_ideologica,2,,partidos ,,
+51,congreso,partido,,2,,partidos ,,
+51,congreso,partido,logo,2,,partidos ,,
 51,congreso,partido,rango_edad_id,2,,partidos,,
 51,congreso,partido,telefono_contacto,2,,partidos,,
 51,congreso,partido,celular_contacto,2,,partidos,,
@@ -357,62 +357,62 @@ num,seccion,tabla,campo,grupo,campo_gp,tabla_gp,transformar,observaciones
 52,congreso,periodo,edited_at,1,updated_at,cuatrienios,,
 52,congreso,periodo,fecha_inicio,1,fecha_inicio,cuatrienios,,
 52,congreso,periodo,fecha_fin,1,fecha_final,cuatrienios,,
-52,congreso,periodo,old_id,2,,cuatrienios,,
+52,congreso,periodo,old_id,1,old_id,cuatrienios,,
 52,congreso,periodo,activo,1,activo,cuatrienios,,
-53,congreso,periodocongresista,id,3,id,res_congreso_periodo_congresista ,,
-53,congreso,periodocongresista,created_at,3,created_at,res_congreso_periodo_congresista ,,
-53,congreso,periodocongresista,edited_at,3,edited_at,res_congreso_periodo_congresista ,,
-53,congreso,periodocongresista,fecha_inicio,3,fecha_inicio,res_congreso_periodo_congresista ,,
-53,congreso,periodocongresista,fecha_fin,3,fecha_fin,res_congreso_periodo_congresista ,,
-53,congreso,periodocongresista,tipo_periodo_id,3,tipo_periodo_id,res_congreso_periodo_congresista ,,
-53,congreso,periodocongresista,periodo_id,3,periodo_id,res_congreso_periodo_congresista ,,
-53,congreso,periodocongresista,partido_id,3,partido_id,res_congreso_periodo_congresista ,,
-53,congreso,periodocongresista,congresista_id,3,congresista_id,res_congreso_periodo_congresista ,,
-53,congreso,periodocongresista,camara_id,3,camara_id,res_congreso_periodo_congresista ,,
+53,congreso,periodocongresista,id,2,id,res_congreso_periodo_congresista ,,
+53,congreso,periodocongresista,created_at,2,created_at,res_congreso_periodo_congresista ,,
+53,congreso,periodocongresista,edited_at,2,edited_at,res_congreso_periodo_congresista ,,
+53,congreso,periodocongresista,fecha_inicio,2,fecha_inicio,res_congreso_periodo_congresista ,,
+53,congreso,periodocongresista,fecha_fin,2,fecha_fin,res_congreso_periodo_congresista ,,
+53,congreso,periodocongresista,tipo_periodo_id,2,tipo_periodo_id,res_congreso_periodo_congresista ,,
+53,congreso,periodocongresista,periodo_id,2,periodo_id,res_congreso_periodo_congresista ,,
+53,congreso,periodocongresista,partido_id,2,partido_id,res_congreso_periodo_congresista ,,
+53,congreso,periodocongresista,congresista_id,2,congresista_id,res_congreso_periodo_congresista ,,
+53,congreso,periodocongresista,camara_id,2,camara_id,res_congreso_periodo_congresista ,,
 53,congreso,periodocongresista,depto_mayor_votacion_id,2,,,,
 53,congreso,periodocongresista,numero_lista,2,,,,
 53,congreso,periodocongresista,numero_votos,2,,,,
-53,congreso,periodocongresista,circunscripcion_id,2,,,,
-54,congreso,persona,id,3,id,res_congreso_persona,,La bd en el catálogo es de respaldo
-54,congreso,persona,created_at,3,created_at,res_congreso_persona,,La bd en el catálogo es de respaldo
-54,congreso,persona,edited_at,3,edited_at,res_congreso_persona,,La bd en el catálogo es de respaldo
-54,congreso,persona,user_id,3,user_id,res_congreso_persona,,La bd en el catálogo es de respaldo
-54,congreso,persona,facebook_id,3,facebook_id,res_congreso_persona,,La bd en el catálogo es de respaldo
-54,congreso,persona,activation_key,3,activation_key,res_congreso_persona,,La bd en el catálogo es de respaldo
-54,congreso,persona,nombres,3,nombres,res_congreso_persona,,La bd en el catálogo es de respaldo
-54,congreso,persona,apellidos,3,apellidos,res_congreso_persona,,La bd en el catálogo es de respaldo
-54,congreso,persona,sitio_web,3,sitio_web,res_congreso_persona,,La bd en el catálogo es de respaldo
-54,congreso,persona,telefono,3,telefono,res_congreso_persona,,La bd en el catálogo es de respaldo
-54,congreso,persona,cedula,3,cedula,res_congreso_persona,,La bd en el catálogo es de respaldo
-54,congreso,persona,lugar_cedula_id,3,lugar_cedula_id,res_congreso_persona,,La bd en el catálogo es de respaldo
-54,congreso,persona,imagen,3,imagen,res_congreso_persona,,La bd en el catálogo es de respaldo
-54,congreso,persona,anio_nacimiento,3,annio_nacimiento,res_congreso_persona,,El campo está escrito con doble n en el catálogo. La bd en el catálogo es de respaldo
-54,congreso,persona,departamento_nacimiento_id,3,departamento_nacimiento_id,res_congreso_persona,,La bd en el catálogo es de respaldo
-54,congreso,persona,municipio_nacimiento_id,3,municipio_nacimiento_id,res_congreso_persona,,La bd en el catálogo es de respaldo
-54,congreso,persona,nivel_educativo,3,nivel_educativo,res_congreso_persona,,La bd en el catálogo es de respaldo
-54,congreso,persona,rango_edad_id,3,rango_edad_id,res_congreso_persona,,La bd en el catálogo es de respaldo
-54,congreso,persona,profesion_id,3,profesion_id,res_congreso_persona,,La bd en el catálogo es de respaldo
-54,congreso,persona,genero_id,3,genero_id,res_congreso_persona,,La bd en el catálogo es de respaldo
-54,congreso,persona,fecha_fallecimiento,3,fecha_fallecimiento,res_congreso_persona,,La bd en el catálogo es de respaldo
-54,congreso,persona,flickr_user,3,flickr_user,res_congreso_persona,,La bd en el catálogo es de respaldo
-54,congreso,persona,youtube_user,3,youtube_user,res_congreso_persona,,La bd en el catálogo es de respaldo
-54,congreso,persona,tumblr_user,3,tumblr_user,res_congreso_persona,,La bd en el catálogo es de respaldo
-54,congreso,persona,twitter_user,3,twitter_user,res_congreso_persona,,La bd en el catálogo es de respaldo
-54,congreso,persona,linkedin_user,3,linkedin_user,res_congreso_persona,,La bd en el catálogo es de respaldo
-54,congreso,persona,blogspot_user,3,blogspot_user,res_congreso_persona,,La bd en el catálogo es de respaldo
-54,congreso,persona,posicion_ideologica,3,posicion_ideologica,res_congreso_persona,,La bd en el catálogo es de respaldo
-54,congreso,persona,region_nacimiento_id,3,region_nacimiento_id,res_congreso_persona,,La bd en el catálogo es de respaldo
-54,congreso,persona,facebook_user,3,facebook_user,res_congreso_persona,,La bd en el catálogo es de respaldo
-54,congreso,persona,mini_bio,3,mini_bio,res_congreso_persona,,La bd en el catálogo es de respaldo
-54,congreso,persona,estrato,3,estrato,res_congreso_persona,,La bd en el catálogo es de respaldo
-54,congreso,persona,idrac,3,idrac,res_congreso_persona,,La bd en el catálogo es de respaldo
-54,congreso,persona,estado_civil,3,estado_civil,res_congreso_persona,,La bd en el catálogo es de respaldo
-54,congreso,persona,religion,3,religion,res_congreso_persona,,La bd en el catálogo es de respaldo
-54,congreso,persona,frecuencia_actos_religiosos,3,frecuencia_actos_religiosos,res_congreso_persona,,La bd en el catálogo es de respaldo
+53,congreso,periodocongresista,circunscripcion_id,3,,congresistas,,
+54,congreso,persona,id,3,id,persona,,La bd en el catálogo es de respaldo
+54,congreso,persona,created_at,3,created_at,persona,,La bd en el catálogo es de respaldo
+54,congreso,persona,edited_at,3,updated_at,persona,,La bd en el catálogo es de respaldo
+54,congreso,persona,user_id,2,,persona,,La bd en el catálogo es de respaldo
+54,congreso,persona,facebook_id,2,,persona,,La bd en el catálogo es de respaldo
+54,congreso,persona,activation_key,2,,persona,,La bd en el catálogo es de respaldo
+54,congreso,persona,nombres,3,nombres,persona,,La bd en el catálogo es de respaldo
+54,congreso,persona,apellidos,3,apellidos,persona,,La bd en el catálogo es de respaldo
+54,congreso,persona,sitio_web,3,,persona,,La bd en el catálogo es de respaldo
+54,congreso,persona,telefono,3,,persona,,La bd en el catálogo es de respaldo
+54,congreso,persona,cedula,3,,persona,,La bd en el catálogo es de respaldo
+54,congreso,persona,lugar_cedula_id,2,,persona,,La bd en el catálogo es de respaldo
+54,congreso,persona,imagen,3,,persona,,La bd en el catálogo es de respaldo
+54,congreso,persona,anio_nacimiento,3,fechaNacimiento,persona,,Está en camel
+54,congreso,persona,departamento_nacimiento_id,3,departamento_id,persona,,Está en camel
+54,congreso,persona,municipio_nacimiento_id,3,,persona,,La bd en el catálogo es de respaldo
+54,congreso,persona,nivel_educativo,3,grado_estudios,persona,,La bd en el catálogo es de respaldo
+54,congreso,persona,rango_edad_id,3,grupo_edads,persona,,La bd en el catálogo es de respaldo
+54,congreso,persona,profesion_id,3,,persona,,La bd en el catálogo es de respaldo
+54,congreso,persona,genero_id,3,genero_id,persona,,La bd en el catálogo es de respaldo
+54,congreso,persona,fecha_fallecimiento,3,,persona,,La bd en el catálogo es de respaldo
+54,congreso,persona,flickr_user,3,,persona,,La bd en el catálogo es de respaldo
+54,congreso,persona,youtube_user,3,,persona,,La bd en el catálogo es de respaldo
+54,congreso,persona,tumblr_user,3,,persona,,La bd en el catálogo es de respaldo
+54,congreso,persona,twitter_user,3,,persona,,La bd en el catálogo es de respaldo
+54,congreso,persona,linkedin_user,3,,persona,,La bd en el catálogo es de respaldo
+54,congreso,persona,blogspot_user,3,,persona,,La bd en el catálogo es de respaldo
+54,congreso,persona,posicion_ideologica,2,,persona,,La bd en el catálogo es de respaldo
+54,congreso,persona,region_nacimiento_id,3,,persona,,La bd en el catálogo es de respaldo
+54,congreso,persona,facebook_user,3,,persona,,La bd en el catálogo es de respaldo
+54,congreso,persona,mini_bio,3,,persona,,La bd en el catálogo es de respaldo
+54,congreso,persona,estrato,2,,persona,,La bd en el catálogo es de respaldo
+54,congreso,persona,idrac,2,,persona,,La bd en el catálogo es de respaldo
+54,congreso,persona,estado_civil,2,,persona,,La bd en el catálogo es de respaldo
+54,congreso,persona,religion,2,,persona,,La bd en el catálogo es de respaldo
+54,congreso,persona,frecuencia_actos_religiosos,2,,persona,,La bd en el catálogo es de respaldo
 55,congreso,posicion,id,2,,,,
-55,congreso,posicion,created_at,2,,,,
-55,congreso,posicion,edited_at,2,,,,
-55,congreso,posicion,congresista_id,2,,,,
+55,congreso,posicion,created_at,3,created_at,,,
+55,congreso,posicion,edited_at,3,updated_at,,,
+55,congreso,posicion,congresista_id,3,congresista_id,,,
 55,congreso,posicion,a_favor,2,,,,
 55,congreso,posicion,comentario,2,,,,
 57,congreso,posicionproposicion,posicion_ptr_id,2,,,,
