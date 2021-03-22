@@ -6,6 +6,7 @@ leer <- safely(read_xlsx)
 tablas <- archivos %>% map(~leer(.x))
 tablas_res <- tablas %>% transpose() %>% pluck("result")
 
+# Leer campos
 campos <- read_csv("campos.csv")
 
 # funciones ---------------------------------------------------------------
@@ -88,6 +89,32 @@ graficar_relaciones <- function(carpeta="Base de datos/"){
 }
 
 
+
+# Construir blog-------------------------------------------------------------------------
+tablas_res[[15]]
+# hay que hacer un join con autores
+tablas_res[[20]]
+tablas_res[[54]]
+
+posts <- tablas_res[[18]] %>%
+  inner_join(tablas_res[[15]], by=c("blog_id"="id")) %>%
+  select(-id,-blog_id, -destacado.x, -destacado.y) %>%
+  rename(`titulo_post`=titulo.x,
+         `titulo_blog`=titulo.y)
+
+posts <- inner_join(posts,
+           tablas_res[[10]] %>%
+  select(id,username,first_name,last_name,email),
+  by=c("autor_id"="id"))
+posts %>% inner_join(tablas_res[[20]], by=c("tipo_blog_id"="id"))
+
+# Cargo -------------------------------------------------------------------------
+# Solamente las personas pueden tener cargos
+tablas_res[[33]]
+tablas_res[[34]]
+tablas_res[[35]]
+tablas_res[[36]]
+tablas_res[[54]]
 
 
 # transformación ----------------------------------------------------------
