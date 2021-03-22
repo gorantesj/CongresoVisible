@@ -7,7 +7,7 @@ tablas <- archivos %>% map(~leer(.x))
 tablas_res <- tablas %>% transpose() %>% pluck("result")
 
 # Leer campos
-campos <- read_csv("campos.csv")
+campos <- read_csv("paralafinal.csv")
 
 # funciones ---------------------------------------------------------------
 crear_bases<- function(relaciones, tablas){
@@ -49,8 +49,8 @@ convertir_grupo1 <- function(tabla_nueva, tablas, relaciones){
       ) %>%
     reduce(bind_cols)
   # browser()
-  write_csv(x = campos_nuevos,
-            glue::glue("Bases de datos nuevas/{tabla_nueva}.csv"))
+  write_excel_csv(x = campos_nuevos,
+            glue::glue("Bases de datos nuevas/{tabla_nueva}.csv"),)
 }
 
 convertir_grupo22 <- function(tablas, relaciones){
@@ -63,7 +63,7 @@ convertir_grupo22 <- function(tablas, relaciones){
     map(~{
       tablas_nuevas <- tablas[[unique(.x$num)]]
       nombre_tabla <- unique(paste0("respaldo_",.x$seccion, .x$tabla))
-      write_csv(x = tablas_nuevas,
+      write_excel_csv(x = tablas_nuevas,
                 glue::glue("Bases de datos nuevas/{nombre_tabla}.csv"))
     })
 }
@@ -91,11 +91,9 @@ graficar_relaciones <- function(carpeta="Base de datos/"){
 
 
 # Construir blog-------------------------------------------------------------------------
-tablas_res[[15]]
-# hay que hacer un join con autores
-tablas_res[[20]]
-tablas_res[[54]]
 
+# Blogs
+# Blog, posts, tipo_blogs, autor
 posts <- tablas_res[[18]] %>%
   inner_join(tablas_res[[15]], by=c("blog_id"="id")) %>%
   select(-id,-blog_id, -destacado.x, -destacado.y) %>%
@@ -106,20 +104,46 @@ posts <- inner_join(posts,
            tablas_res[[10]] %>%
   select(id,username,first_name,last_name,email),
   by=c("autor_id"="id"))
-posts %>% inner_join(tablas_res[[20]], by=c("tipo_blog_id"="id"))
 
+posts <- posts %>% inner_join(tablas_res[[20]], by=c("tipo_blog_id"="id")) %>%
+  mutate(autor=paste(first_name, last_name)) %>%
+  select(fecha_publicacion,
+         tipo_blog=nombre,
+         titulo_blog,
+         descripcion,
+         titulo_post,
+         autor,
+         email_autor=email,
+         esta_publicado:ee )
+write_excel_csv(posts,"finales/para CV/posts.csv")
+
+# Boletines
+boletin <- tablas_res[[16]] %>% select(nombre, año=anio, objeto, archivo)
+write_excel_csv(boletin,"finales/para CV/boletin.csv")
 # Cargo -------------------------------------------------------------------------
 # Solamente las personas pueden tener cargos
-tablas_res[[33]]
-tablas_res[[34]]
-tablas_res[[35]]
-tablas_res[[36]]
-tablas_res[[54]]
+# Hay que juntar cargo=sector_id, cargo, entidad
+tablas_res[[33]] %>%
+  full_join(tablas_res[[99]], by = c("sector_id"= "id")) %>%
+  replace_na(replace = list(nombre="", cargo="", entidad="")) %>%
+  mutate(cargo=paste(nombre, cargo, entidad))
 
+# Cargo político
+# Para la migración hay que eliminar los cargos de cámaras
+tablas_res[[36]]
+
+
+
+# Congresista -------------------------------------------------------------
+tablas_res[[39]] %>% count(ha_ejercido_cargo_diferente)
 
 # transformación ----------------------------------------------------------
 
 crear_bases(campos, tablas_res)
+
+
+# Sandbox -----------------------------------------------------------------
+
 
 ja <- graficar_relaciones("Bases de datos nuevas")
 
@@ -136,4 +160,4 @@ campos %>% group_by(num, seccion,  tabla) %>% count(grupo) %>%
          Observaciones=case_when(`Grupo 2`==`Número de campos`~"Tabla obsoleta",
                                  `Grupo 1`==`Número de campos`~"Tabla migrada al 100%")) %>%
 
-write_csv("tablas_originales.csv")
+write_excel_csv("tablas_originales.csv")
