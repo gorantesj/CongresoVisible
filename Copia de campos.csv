@@ -193,7 +193,7 @@ num,seccion,tabla,campo,grupo,campo_gp,tabla_gp,transformar,observaciones
 33,congreso,cargo,sector_id,3,,congresista_trayectoria_privadas ,,"Se van a juntar sector_id, cargo y entidad"
 33,congreso,cargo,cargo,3,,congresista_trayectoria_privadas ,,"Se van a juntar sector_id, cargo y entidad"
 33,congreso,cargo,entidad,3,,congresista_trayectoria_privadas ,,"Se van a juntar sector_id, cargo y entidad"
-33,congreso,cargo,fecha_inicio,2,fecha,congresista_trayectoria_privadas ,,duda
+33,congreso,cargo,fecha_inicio,1,fecha,congresista_trayectoria_privadas ,,duda
 33,congreso,cargo,fecha_final,3,,congresista_trayectoria_privadas ,,duda
 34,congreso,cargocamara,id,3,id,cargo_corporacions,,duda
 34,congreso,cargocamara,nombre,3,nombre,cargo_corporacions,,duda
@@ -461,13 +461,13 @@ num,seccion,tabla,campo,grupo,campo_gp,tabla_gp,transformar,observaciones
 67,congreso,tipoperiodo,nombre,2,,res_congreso_tipoperiodo ,2,
 68,congreso,tipoproblema,id,3,id,res_congreso_tipoproblema ,,
 68,congreso,tipoproblema,nombre,3,nombre,res_congreso_tipoproblema ,,
-69,congreso,trayectoria,id,2,,,,
-69,congreso,trayectoria,id_candidato_concejo_id,2,,,,
-69,congreso,trayectoria,trayectoria_anio,2,,,,
-69,congreso,trayectoria,cargo,2,,,,
-69,congreso,trayectoria,partido,2,,,,
-69,congreso,trayectoria,votos,2,,,,
-69,congreso,trayectoria,es_electo,2,,,,
+69,congreso,trayectoria,id,2,,,,Solamente se tiene un registro de trayectoria
+69,congreso,trayectoria,id_candidato_concejo_id,2,,,,Solamente se tiene un registro de trayectoria
+69,congreso,trayectoria,trayectoria_anio,2,,,,Solamente se tiene un registro de trayectoria
+69,congreso,trayectoria,cargo,2,,,,Solamente se tiene un registro de trayectoria
+69,congreso,trayectoria,partido,2,,,,Solamente se tiene un registro de trayectoria
+69,congreso,trayectoria,votos,2,,,,Solamente se tiene un registro de trayectoria
+69,congreso,trayectoria,es_electo,2,,,,Solamente se tiene un registro de trayectoria
 70,corte,sentencia,id,2,,,2,
 70,corte,sentencia,proyecto_id,2,,,2,
 70,corte,sentencia,anio,2,,,2,
