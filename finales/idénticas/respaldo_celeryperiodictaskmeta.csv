@@ -1,0 +1,2 @@
+﻿id,name,last_run_at,total_run_count
+1,celery.delete_expired_task_meta,2010-04-23 17:47:44.983498,25
