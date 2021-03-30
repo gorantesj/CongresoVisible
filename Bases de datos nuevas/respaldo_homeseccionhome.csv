@@ -1,6 +1,0 @@
-id,nombre,nombre_template,activo,orden
-5,"Noticias, investigaciones y orden del di",home/secciones/noticias_orden.html,TRUE,0
-3,Eventos,home/secciones/eventos.html,FALSE,4
-1,Congresistas,home/secciones/congresistas.html,TRUE,2
-4,Elecciones,home/secciones/elecciones.html,FALSE,1
-2,Actividad Legislativa,home/secciones/actividad_legislativa.html,FALSE,3
