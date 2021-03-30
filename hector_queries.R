@@ -11,7 +11,7 @@ con <- dbConnect(
   port = 3306
 )
 
-dbListTables(con)
+
 tbl(con, "proyecto_leys")
 
 #Congreso hoy -> proyectos de ley -----------
@@ -20,50 +20,51 @@ colores <- c("#1d67ac",  "#ff4f4f", "#93c73d", "#6d4fa0",
              "#164a80", "#F05647", "#0e4c42", "#3b005a",
              "#AD8156", "#fdc10e", "#00b140", "#e995bf" )
 # Queries estatus del proyecto por fecha
-tbl(con, "proyecto_leys") %>%
-  count(fecha_radicacion, estado_proyecto_ley_id,camara_id, cuatrienio_id) %>%
-  left_join(
-    tbl(con, "corporacions") %>%
-      #filter(activo == 1) %>%
-      select(id, camara = nombre),
-    by = c("camara_id" = "id")
-  )  %>%
-  filter( # filtro, puede cambiar
-    camara == "Cámara de Representantes",
-    cuatrienio_id == 1
-  ) %>%
-  arrange(estado_proyecto_ley_id, fecha_radicacion) %>%
-  count(fecha_radicacion, estado_proyecto_ley_id) %>%
-  show_query() %>%
-  collect() %>%
-  hchart(hcaes(x = fecha_radicacion, y = n, group = estado_proyecto_ley_id), type = "line") %>%
-  hc_plotOptions(line= list(lineWidth = 4,
-                            marker = list(radius =0),
-                            stickyTracking=F)) %>%
-  hc_xAxis(crosshair = T, title = list(text = "Fecha",  style = list(color = "#FFF")), type = "datetime",
-           lineWidth = 0, tickWidth  = 0, gridLineWidth =0,
-           showLastLabel= F,
-           labels = list(step = 3, style = list(fontSize = "16px", color = "#FFF") )) %>%
-  hc_yAxis(crosshair = F, title = list(text = "Total de proyectos", style = list(color = "#FFF")), tickAmount = 3, max = 6, min =0,
-           dashStyle = "dot",
-           gridLineWidth =.5, showFirstLabel = F, gridLineColor = "",
-           labels = list( style = list(fontSize = "12px") )) %>%
-  #title
-  hc_title(text = "<b>Proyectos de ley",  style = list(color = "#FFF")) %>%
-  #tooltip
-  hc_tooltip(
-    borderWidth= 0,
-    outside = T,
-    textOutline= "3px contrast",
-    shadow=F,
-    shared = T,
-    split = F,
-    headerFormat= '<span style="font-size: 10px">{point.key}</span><br/>'
-    # pointFormat = '<span style="color:{point.color}">●</span> <b> {point.candidato}<b><br> p. clave: {point.palabra}<br> {point.n} tuits <br> {point.rt} retuits<br> {point.favs} favoritos<br>'
-  ) %>%
-  hc_colors(colors = c("#2C6170", "#FF6B6B", "#FFE66D")) %>%
-  hc_chart(style = list(fontFamily = "Avenir next"
-  ))
+# Ya no es necesario - aún
+# tbl(con, "proyecto_leys") %>%
+#   count(fecha_radicacion, estado_proyecto_ley_id,camara_id, cuatrienio_id) %>%
+#   left_join(
+#     tbl(con, "corporacions") %>%
+#       #filter(activo == 1) %>%
+#       select(id, camara = nombre),
+#     by = c("camara_id" = "id")
+#   )  %>%
+#   filter( # filtro, puede cambiar
+#     camara == "Cámara de Representantes",
+#     cuatrienio_id == 1
+#   ) %>%
+#   arrange(estado_proyecto_ley_id, fecha_radicacion) %>%
+#   count(fecha_radicacion, estado_proyecto_ley_id) %>%
+#   show_query() %>%
+#   collect() %>%
+#   hchart(hcaes(x = fecha_radicacion, y = n, group = estado_proyecto_ley_id), type = "line") %>%
+#   hc_plotOptions(line= list(lineWidth = 4,
+#                             marker = list(radius =0),
+#                             stickyTracking=F)) %>%
+#   hc_xAxis(crosshair = T, title = list(text = "Fecha",  style = list(color = "#FFF")), type = "datetime",
+#            lineWidth = 0, tickWidth  = 0, gridLineWidth =0,
+#            showLastLabel= F,
+#            labels = list(step = 3, style = list(fontSize = "16px", color = "#FFF") )) %>%
+#   hc_yAxis(crosshair = F, title = list(text = "Total de proyectos", style = list(color = "#FFF")), tickAmount = 3, max = 6, min =0,
+#            dashStyle = "dot",
+#            gridLineWidth =.5, showFirstLabel = F, gridLineColor = "",
+#            labels = list( style = list(fontSize = "12px") )) %>%
+#   #title
+#   hc_title(text = "<b>Proyectos de ley",  style = list(color = "#FFF")) %>%
+#   #tooltip
+#   hc_tooltip(
+#     borderWidth= 0,
+#     outside = T,
+#     textOutline= "3px contrast",
+#     shadow=F,
+#     shared = T,
+#     split = F,
+#     headerFormat= '<span style="font-size: 10px">{point.key}</span><br/>'
+#     # pointFormat = '<span style="color:{point.color}">●</span> <b> {point.candidato}<b><br> p. clave: {point.palabra}<br> {point.n} tuits <br> {point.rt} retuits<br> {point.favs} favoritos<br>'
+#   ) %>%
+#   hc_colors(colors = c("#2C6170", "#FF6B6B", "#FFE66D")) %>%
+#   hc_chart(style = list(fontFamily = "Avenir next"
+#   ))
 
 # Queries de proyectos de ley presentados por ministros
 
@@ -152,29 +153,31 @@ tbl(con,"proyecto_ley_autors") %>%
   left_join(
     tbl(con, "proyecto_leys") %>%
       #filter(activo == 1) %>%
-      select(id, cuatrienio_id, tema_proyecto_ley_id, camara_id),
+      select(id, cuatrienio_id, tema_proyecto_ley_id),
     by = c("proyecto_ley_id" = "id")
   )  %>%
   left_join(
-    tbl(con, "corporacions") %>%
-      select(id, camara = nombre),
-    by = c("camara_id" = "id")
-  ) %>%
-  left_join(
     tbl(con, "congresistas") %>%
-      select(id, genero_id),
+      select(id, partido_politico_id, corporacion_id),
     by = c("congresista_id" = "id")
   ) %>%
+    left_join(
+      tbl(con, "corporacions") %>%
+        select(id, camara = nombre),
+      by = c("corporacion_id" = "id")
+    ) %>%
   left_join(
-    tbl(con, "generos") %>%
-      select(id, nombre),
-    by = c("genero_id" = "id")
+    tbl(con, "partidos") %>%
+      select(id, partido = nombre),
+    by = c("partido_politico_id" = "id")
   ) %>%
-  filter( # filtro, puede cambiar
-    camara == "Cámara de Representantes",
-    cuatrienio_id == 1
+  left_join(
+    tbl(con, "tema_proyecto_leys") %>%
+      select(id, tema = nombre),
+    by = c("tema_proyecto_ley_id" = "id")
   ) %>%
-  count(tema_proyecto_ley_id, nombre) %>%
+  filter(corporacion_id == 1) %>%
+  count(partido, tema) %>%
   show_query()
 
 
