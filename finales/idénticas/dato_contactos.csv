@@ -1,0 +1,5 @@
+﻿id,nombre,Tipo,activo,usercreated,usermodified,created_at,updated_at
+1,correo,1,,,,,
+2,oficina,1,,,,,
+3,telefono,1,,,,,
+4,url,2,,,,,

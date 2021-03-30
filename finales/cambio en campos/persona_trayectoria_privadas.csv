@@ -1,0 +1,1146 @@
+id,persona_id,cargo,fecha,fecha_final,usercreated,usermodified,created_at,updated_at
+1,244,Otros Servicios Director Dirección administrativa de Trásito y trasporte,01/01/75,NA,,,2009-12-07T16:02:59Z,2009-12-07T16:02:59Z
+2,244,Otros Servicios Jefe de planeación Departamento administrativo del servicio civil,01/01/79,NA,,,2009-12-07T16:02:59Z,2009-12-07T16:02:59Z
+564,1675,Otros Servicios PRESIDENTE DE EL SINDICATO FALABELLA DE COLOMBIA S.A.,01/05/08,08/02/10,,,2010-02-07T16:51:24Z,2010-02-07T16:51:24Z
+4,141,Otros Servicios Gerente Administrativo Seapto Ltda.,01/01/91,01/01/92,,,2009-12-09T21:29:28Z,2009-12-09T21:29:28Z
+5,141,Otros Servicios Inspector Primero Municipal de Policía Municipio del Guamo - Tolima,01/01/88,01/01/89,,,2009-12-09T21:29:28Z,2009-12-09T21:29:28Z
+6,141,Otros Servicios Juez Octavo de Instrucción Criminal (E) Municipio de Ibagué - Tolima,01/01/87,31/12/87,,,2009-12-09T21:29:28Z,2009-12-09T21:29:28Z
+7,141,Otros Servicios Juez Promiscuo Municipal Municipio de Herveo - Tolima,01/01/87,31/12/87,,,2009-12-09T21:29:28Z,2009-12-09T21:29:28Z
+8,8,Educacion y Conocimiento Secretario General Universidad Francisco José de Caldas,01/06/93,15/05/97,,,2009-12-14T16:50:42Z,2010-05-24T19:28:50Z
+9,90,Otros Servicios Ejercicio Profesional como Abogado ,16/02/03,20/07/08,,,2009-12-16T22:50:24Z,2009-12-16T22:50:24Z
+10,90,Otros Servicios Socio Director Baker Tilly Colombia Baker Tilly Colombia,01/06/06,NA,,,2009-12-16T22:50:24Z,2009-12-16T22:50:24Z
+11,90,Otros Servicios Arbitraje Comercial y Administrativo Camara de Comercio de Bogotá,NA,NA,,,2009-12-16T22:50:24Z,2009-12-16T22:50:24Z
+12,90,Educacion y Conocimiento Profesor Facultad de Ciencia Política y RR.II Universidad Javeriana,01/09/04,30/11/05,,,2009-12-16T22:50:24Z,2009-12-16T22:50:24Z
+13,90,Otros Servicios Embajador de Colombia ante las Naciones Unidas Ministerio de Relaciones Exteriores,15/09/98,14/01/03,,,2009-12-16T22:50:24Z,2009-12-16T22:50:24Z
+14,90,Otros Servicios Fiscal General de la Nación Ficalia General de la Nación,18/08/94,08/05/97,,,2009-12-16T22:50:24Z,2009-12-16T22:50:24Z
+15,90,Otros Servicios Embajador de Colombia ante el Gobierno de Israel Ministerio de Relaciones Exteriores,01/02/92,20/03/93,,,2009-12-16T22:50:24Z,2009-12-16T22:50:24Z
+16,90,Otros Servicios Ministro de Educación Nacional Presidencia de la República,16/08/90,16/11/91,,,2009-12-16T22:50:24Z,2009-12-16T22:50:24Z
+17,90,Otros Servicios Secretario General Gobernación de Santander Gobernación de Santander,16/02/77,16/08/78,,,2009-12-16T22:50:24Z,2009-12-16T22:50:24Z
+18,90,Educacion y Conocimiento Secretario Facultad de Derecho Universidad Autonoma de Bucaramanga,15/01/76,NA,,,2009-12-16T22:56:23Z,2009-12-16T22:56:23Z
+19,90,Educacion y Conocimiento Profesor Universitario Universidad Autonoma de Bucaramanga,15/01/76,15/12/87,,,2009-12-16T22:56:23Z,2009-12-16T22:56:23Z
+20,90,Otros Servicios Director Ejecutivo FUNDESAN Fundación para el Desarrollo de Santander,16/06/76,16/12/89,,,2009-12-16T22:56:23Z,2009-12-16T22:56:23Z
+21,90,Otros Servicios Investigador Programa Institucional en Desarrollo FEDESARROLLO,16/06/73,16/12/74,,,2009-12-16T23:31:13Z,2009-12-16T23:31:13Z
+22,90,"Otros Servicios Redactor Sección Internacional, EL TIEMPO Diario EL TIEMPO",16/07/70,16/03/72,,,2009-12-16T23:31:13Z,2009-12-16T23:31:13Z
+23,142,Otros Servicios Coordinadora Nacional de Capacitación MIRA,NA,NA,,,2010-01-13T17:30:06Z,2010-01-13T17:30:06Z
+24,142,Otros Servicios Directora Política Nacional MIRA,NA,NA,,,2010-01-13T17:30:07Z,2010-01-13T17:30:07Z
+25,11,Educacion y Conocimiento Asesor Consultor del Banco Interamericano de Desarrollo B,NA,NA,,,2010-01-13T18:12:17Z,2010-01-13T18:12:17Z
+27,295,Educacion y Conocimiento profesor de cátedra Universidad de la Sabana,01/01/07,30/06/09,,,2010-01-13T19:43:38Z,2010-01-13T19:43:38Z
+28,295,Educacion y Conocimiento Investigador Georgetown University,01/01/05,31/12/07,,,2010-01-13T19:43:38Z,2010-01-13T19:43:38Z
+29,295,Otros Servicios Director TGI fridays,01/01/07,31/12/09,,,2010-01-13T19:43:38Z,2010-01-13T19:43:38Z
+30,60,Otros Servicios Abogada Litigante Independiente,20/01/99,06/12/01,,,2010-01-14T20:43:59Z,2010-01-14T20:47:57Z
+31,77,"Educacion y Conocimiento Profesor de tiempo completo Universidad Nacional de Colombia, sede Manizales",01/01/76,30/06/02,,,2010-01-15T21:28:55Z,2010-01-15T21:28:55Z
+32,77,Agricola Coordinador Nacional Unión Cafetera,01/01/85,31/12/92,,,2010-01-15T21:28:55Z,2010-01-15T21:28:55Z
+33,77,"Ingenieria y Servicios de Construccion Miembro Comité Técnico, Consejo de Monumentos Nacionales",01/01/96,30/06/02,,,2010-01-15T21:28:55Z,2010-01-15T21:28:55Z
+279,99,Otros Servicios Director Departamento Jurídico y de Relaciones Industriales del Banco de Caldas Banco de Caldas,15/11/68,06/10/72,,,2010-01-17T17:35:00Z,2010-01-30T17:01:53Z
+347,1214,Estatal Director General (E) y Secretario General de Junta Directiva Fondo Rotatorio de Aduanas,01/11/83,31/01/85,,,2010-01-17T17:35:01Z,2010-04-08T21:13:12Z
+348,1214,Estatal Director General del Trabajo Ministerio del Trabajo y Seguridad Social,01/01/85,30/09/85,,,2010-01-17T17:35:01Z,2010-04-08T21:13:12Z
+280,99,Estatal Delegado con Rango de Embajador Plenipotenciario al Congreso de Países No Alineados Gobierno Nacional,28/05/83,10/06/83,,,2010-01-17T17:35:00Z,2010-01-30T17:01:53Z
+281,99,Estatal Delegado con Rango de Embajador Plenipotenciario al Grupo de Consulta de París Gobierno Nacional,12/08/83,10/09/83,,,2010-01-17T17:35:00Z,2010-01-30T17:01:53Z
+282,99,Estatal Miembro Junta Directiva Beneficencia de Manizales Municipio de Manizales,01/01/80,31/12/80,,,2010-01-17T17:35:01Z,2010-01-30T17:01:53Z
+571,162,Otros Servicios Psiquiatra Practica Privada,01/01/72,31/12/06,,,2010-02-09T19:08:47Z,2010-02-09T19:08:47Z
+417,1295,Estatal Subgerente Gestión urbana y asistencia técnica Inurbe-Ministerio de Desarrollo Económico,02/04/01,01/04/02,,,2010-01-17T17:35:02Z,2010-04-08T21:22:56Z
+419,1295,Estatal Alcalde Local Encargado Alcaldía local de Bosa,15/05/06,16/10/06,,,2010-01-17T17:35:02Z,2010-04-08T21:22:56Z
+67,398,Educacion y Conocimiento Catedrático Universidad Incca de Colombia,10/09/86,02/06/87,,,2010-01-17T17:34:58Z,2010-02-05T15:10:57Z
+68,398,Estatal Gerente General Centrales Eléctricas de Nariño,01/02/99,30/06/00,,,2010-01-17T17:34:58Z,2010-02-05T15:10:57Z
+868,2462,Articulos Industriales Jefe de Producción TRIMCO S.A.,NA,NA,,,2010-10-28T21:00:45Z,2010-10-28T21:00:45Z
+45,313,Minerales Diseñador en Regulación Electrónica Sistinel Ltda,06/12/05,06/12/05,,,2010-01-17T17:34:58Z,2010-02-12T20:22:39Z
+42,310,Estatal Gobernador Gobernación de Nariño,01/01/82,31/12/83,,,2010-01-17T17:34:58Z,2010-02-18T16:25:19Z
+43,310,Estatal Alcalde Alcaldía de Pasto,01/01/80,31/12/81,,,2010-01-17T17:34:58Z,2010-02-18T16:25:19Z
+26,11,Servicios de Salud Jefe Ginecología Hospital  Nuestra Señora del Rosario Riohacha,NA,NA,,,2010-01-13T18:12:17Z,2010-01-19T16:00:58Z
+60,391,Educacion y Conocimiento Psicóloga Inem,22/12/75,24/01/83,,,2010-01-17T17:34:58Z,2010-01-27T19:47:07Z
+61,391,Otros Servicios Directora Ejecutiva de la Asociación para la Promoción de las Artes Proartes,16/05/83,18/09/89,,,2010-01-17T17:34:58Z,2010-01-27T19:47:07Z
+62,391,Otros Servicios Directora del Festival de Arte de Cali Proartes,17/03/86,24/07/89,,,2010-01-17T17:34:58Z,2010-01-27T19:47:07Z
+65,398,Educacion y Conocimiento Director Regional Sena-Nariño,01/04/95,31/08/97,,,2010-01-17T17:34:58Z,2010-01-28T14:39:57Z
+66,398,Educacion y Conocimiento Tutor Universidad Mariana,06/08/93,11/12/93,,,2010-01-17T17:34:58Z,2010-01-28T14:39:57Z
+869,2462,Minerales Asesor Comercial Calizas y Granitos de Santander,NA,NA,,,2010-10-28T21:00:45Z,2010-10-28T21:00:45Z
+565,357,Telecomunicaciones Director Radio santafe,NA,NA,,,2010-02-08T20:02:51Z,2010-02-08T20:02:51Z
+566,357,Telecomunicaciones Moderador de La escalera Radio Super,NA,NA,,,2010-02-08T20:02:51Z,2010-02-08T20:02:51Z
+567,357,Telecomunicaciones Conductor del programa La Luciérnaga Caracol,NA,NA,,,2010-02-08T20:02:51Z,2010-02-08T20:02:51Z
+97,482,Estatal Asesor Ministro Ministerio de Agricultura,01/01/98,31/12/98,,,2010-01-17T17:34:58Z,2010-02-16T19:05:13Z
+283,99,Estatal Miembro Junta Directiva Lotería de Manizales Municipio de Manizales,01/01/81,31/12/81,,,2010-01-17T17:35:01Z,2010-01-30T17:01:53Z
+284,99,Estatal Miembro Junta Directiva Industria Licorera de Caldas Departamento de Caldas,01/01/82,31/12/82,,,2010-01-17T17:35:01Z,2010-01-30T17:01:53Z
+285,99,"Estatal Miembro Junta de Hacienda, Valorización y Empresas Públicas de Manizales Municipio de Manizales",01/01/72,31/12/72,,,2010-01-17T17:35:01Z,2010-01-30T17:01:53Z
+286,99,Estatal Subgerente Banco de Caldas Banco de Caldas,15/11/68,31/12/70,,,2010-01-17T17:35:01Z,2010-05-10T19:16:54Z
+287,99,Estatal Secretario Hacienda Municipio de Manizales Municipio de Manizales,01/01/72,31/12/72,,,2010-01-17T17:35:01Z,2010-01-30T17:01:53Z
+91,28,"Estatal Viceministro Europa, Asia, África y Oceania Ministerio de Relaciones Exteriores",10/10/95,13/09/96,,,2010-01-17T17:34:58Z,2010-05-04T19:22:22Z
+92,28,Estatal Cónsul General en Caracas Ministerio de Relaciones Exteriores,01/06/92,05/11/93,,,2010-01-17T17:34:58Z,2010-05-04T19:22:22Z
+93,28,Estatal Consejero para las Comunicaciones Presidencia de la República,09/08/94,09/10/95,,,2010-01-17T17:34:58Z,2010-05-04T19:22:23Z
+96,28,Estatal Embajador de Colombia ante el Gobierno de Grecia Ministerio de Relaciones Exteriores,01/10/96,01/10/97,,,2010-01-17T17:34:58Z,2010-05-04T19:22:23Z
+73,441,"Estatal Asesora Presidencia de la República, Despacho del Alto Comisionado para la Paz",01/11/98,01/08/99,,,2010-01-17T17:34:58Z,2010-04-08T21:57:58Z
+260,87,Estatal Concejal Concejo Municipal,01/01/84,01/12/88,,,2010-01-17T17:35:00Z,2010-02-03T16:42:55Z
+119,512,Estatal Subgerente Incora,01/01/98,31/12/01,,,2010-01-17T17:34:59Z,2010-02-04T16:12:52Z
+120,512,Estatal Director De Desarrollo Rural Ministerio de Agricultura,09/10/01,09/01/02,,,2010-01-17T17:34:59Z,2010-04-23T15:08:28Z
+121,512,Otros Servicios Subgerente Inurbe,01/01/94,31/12/96,,,2010-01-17T17:34:59Z,2010-02-04T16:12:52Z
+74,441,Estatal Vicepresidenta Comisión Primera Constitucional Permanente Cámara de Representantes,20/07/07,20/07/08,,,2010-01-17T17:34:58Z,2010-04-08T21:57:58Z
+123,512,Vehiculos y otros medios de transporte Director Instituto Tránsito Huila,01/01/92,31/12/94,,,2010-01-17T17:34:59Z,2010-02-04T16:12:52Z
+556,1406,Otros Servicios Asesor  Programa  de Créditos ,01/01/05,31/01/10,,,2010-02-05T15:02:02Z,2010-08-18T15:38:08Z
+557,1406,"Otros Servicios Asesor  Programa  de Tenderos,  Coordinador Programa  De Créditos Fundación  para el Desarrollo Económico del  Litoral  Pacífico  Fundelpacífico",01/01/91,01/01/00,,,2010-02-05T15:02:02Z,2010-08-18T15:38:08Z
+870,2462,Otros Servicios Tesorero Acueducto Metropolitano de Bucaramanga S.A. E.S.P,NA,NA,,,2010-10-28T21:00:45Z,2010-10-28T21:00:45Z
+871,2462,Educacion y Conocimiento Catedrático Área de Ciencia y Tecnología Universidad Santo Tomás,NA,NA,,,2010-10-28T21:00:45Z,2010-10-28T21:00:45Z
+873,571,"Estatal Gerente Empresa Antioqueña de Energía S.A. E.S.P., EADE.",01/01/98,31/12/98,,,2010-12-09T21:43:04Z,2010-12-09T21:43:04Z
+846,753,Estatal Ministro Ministerio de Salud,01/01/90,31/12/90,,,2010-09-16T15:39:48Z,2010-09-16T15:39:48Z
+847,748,"Estatal Alto Comisionado para la Paz Alcaldía de Cali, Valle del Cauca",01/01/95,31/12/97,,,2010-09-16T15:41:28Z,2010-09-16T15:41:28Z
+872,405,"Estatal Secretario Concejo de Cali, Valle",01/01/95,31/12/97,,,2010-12-01T16:08:41Z,2010-12-01T16:08:41Z
+849,679,Servicios de Salud Coordinador Neurocirugía Uniclínicas,01/01/94,31/12/95,,,2010-09-16T16:01:11Z,2010-09-16T16:01:11Z
+850,679,Servicios de Salud Neurocirujano Clínica La Asunción Barranquilla,01/01/94,31/12/93,,,2010-09-16T16:01:11Z,2010-09-16T16:01:11Z
+851,679,Servicios de Salud Neurocirujano Clínica General del Norte Barranquilla,01/01/92,31/12/92,,,2010-09-16T16:01:11Z,2010-09-16T16:01:11Z
+852,679,Servicios de Salud Neurocirujano Sanatorio Lanus,01/01/92,31/12/92,,,2010-09-16T16:01:11Z,2010-09-16T16:01:11Z
+127,547,Otros Servicios Consejero Intendencial Periodos Constitucionales Consejo Intendencial,01/01/86,31/12/91,,,2010-01-17T17:34:59Z,2010-01-22T17:52:05Z
+128,547,Otros Servicios Presidente del Consejo Intendencial de San Andres Y Providencia Consejo Intendencial De San Andr?S Y Providencia,01/01/88,31/12/89,,,2010-01-17T17:34:59Z,2010-01-22T17:52:05Z
+129,547,Estatal Miembro de la Comisión del Archipielago de San Andrés ante la Asamblea Nal Constituyente Asamblea Nacional Constituyente,01/01/91,31/12/91,,,2010-01-17T17:34:59Z,2010-01-22T17:52:05Z
+130,547,Estatal Director del Instituto de Seguros Sociales De San Andrés Islas Seguros Sociales,01/01/79,31/12/85,,,2010-01-17T17:34:59Z,2010-01-22T17:52:05Z
+105,494,Telecomunicaciones Gerente Gerencia Teletolima,01/01/83,31/12/89,,,2010-01-17T17:34:59Z,2010-01-25T16:48:16Z
+106,494,Otros Servicios Director Directorio Planeación De Ibague,01/01/72,31/12/73,,,2010-01-17T17:34:59Z,2010-01-25T16:48:16Z
+107,494,Estatal Secretario Secretaría Planeación De Tolima,01/01/78,31/12/80,,,2010-01-17T17:34:59Z,2010-01-25T16:48:16Z
+124,519,Estatal Asistente Senado,01/01/78,31/12/86,,,2010-01-17T17:34:59Z,2010-01-27T17:02:02Z
+110,511,Estatal Diputado Asamblea Departamental del Huila,01/01/82,30/12/84,,,2010-01-17T17:34:59Z,2010-05-19T20:46:24Z
+111,511,Educacion y Conocimiento Vicepresidente Confederación de Educadores Americanos,01/01/92,30/12/94,,,2010-01-17T17:34:59Z,2010-05-19T20:46:24Z
+112,511,Educacion y Conocimiento Miembro Fondo Nacional de Prestaciones Sociales del Magisterio,01/01/90,30/12/94,,,2010-01-17T17:34:59Z,2010-05-19T20:46:24Z
+115,511,Estatal Vicepresidente Senado de la Republica,20/07/99,20/07/00,,,2010-01-17T17:34:59Z,2010-05-19T20:46:24Z
+225,843,Estatal Director (Villeta) Corporación Autónoma CAR,01/01/95,31/12/97,,,2010-01-17T17:35:00Z,2010-05-05T15:21:23Z
+226,843,Estatal Revisor Fiscal Contraloría Cundinamarca,01/01/78,31/12/82,,,2010-01-17T17:35:00Z,2010-02-05T16:35:01Z
+568,1618,Estatal Asistente de la Gerencia General INURBE,01/11/90,01/11/91,,,2010-02-09T00:00:29Z,2010-02-09T00:00:29Z
+569,1618,Educacion y Conocimiento Consultura e Investigadora UNESCO,30/06/98,30/06/04,,,2010-02-09T00:00:33Z,2010-02-09T00:00:33Z
+166,623,Estatal Secretario Gobierno Gobernación del Meta,01/01/82,31/12/83,,,2010-01-17T17:34:59Z,2010-05-19T16:05:58Z
+258,87,"Otros Servicios Consultora En Salud, Programa de Mejoramiento. Banco Interamericano de Desarrollo - Bid",01/01/99,01/06/99,,,2010-01-17T17:35:00Z,2010-05-10T20:43:40Z
+259,87,Estatal Senadora Senado de la República,01/01/02,01/12/06,,,2010-01-17T17:35:00Z,2010-04-07T17:03:50Z
+261,87,Estatal Alcaldesa Alcaldía de Guacarí,01/01/92,31/12/94,,,2010-01-17T17:35:00Z,2010-04-07T17:03:50Z
+262,87,Estatal Secretaria de Salud Departamental Gobernación del Valle Del Cauca,01/01/95,31/12/97,,,2010-01-17T17:35:00Z,2010-05-10T20:43:40Z
+156,601,Servicios de Salud Médico General Clínica ISS Santa Gertrudis de Envigado Antioquia,01/08/89,01/06/90,,,2010-01-17T17:34:59Z,2010-05-19T16:13:24Z
+157,601,Servicios de Salud Médico Rural y Director (E) Hospital Girardota Antioquia,01/08/87,31/08/88,,,2010-01-17T17:34:59Z,2010-05-19T16:13:24Z
+502,249,Servicios de Salud Secretario de Salud Gobernación del Magdalena,01/01/96,31/12/97,,,2010-01-30T20:41:15Z,2010-01-30T20:41:15Z
+515,1624,Medio Ambiente Director General CORPONOR,01/01/04,31/12/06,,,2010-02-02T22:52:58Z,2010-02-02T22:52:58Z
+516,1624,Medio Ambiente Gerente Plan Nacional de Desarrollo Forestal,01/02/02,30/12/02,,,2010-02-02T22:52:58Z,2010-02-02T22:52:58Z
+517,1624,"Educacion y Conocimiento Rector, Vicerrector, Decano y Profesor Universidad Distrital",02/11/83,31/05/99,,,2010-02-02T22:52:58Z,2010-02-02T22:52:58Z
+57,7,Estatal Director Valorización Municipio de Armenia,11/12/86,21/12/87,,,2010-01-17T17:34:58Z,2010-04-30T20:12:51Z
+538,1446,Textiles y Confecciones Presidente Lizarazo Felpas,1001-10-16,31/10/05,,,2010-02-04T15:36:44Z,2010-02-04T15:36:44Z
+570,1618,Estatal Asesora Secretaria de Integración Social Bogotá,01/04/08,01/08/09,,,2010-02-09T00:00:33Z,2010-02-09T00:00:33Z
+158,601,Servicios de Salud Medico Rural Municipio de Girardota Antioquia,01/08/87,01/08/88,,,2010-01-17T17:34:59Z,2010-05-19T16:13:24Z
+147,591,Estatal Viceministro Ministerio de Gobierno,01/01/90,31/12/91,,,2010-01-17T17:34:59Z,2010-05-19T16:19:22Z
+295,1063,Otros Servicios Gerente Lsa Andina de Chile S.A,01/10/03,31/03/04,,,2010-01-17T17:35:01Z,2010-05-20T22:09:28Z
+543,1419,Estatal Asesora diseño arreglo institucional Agenda Interna de Competitividad BOT Ltda. Consultores  – PNUD,02/01/06,29/06/06,,,2010-02-04T16:32:09Z,2010-02-04T16:32:09Z
+544,1419,Estatal Investigadora “Diseño de una propuesta de competitividad para cuatro regiones del departamento Cundinamarca” Centro de Estudios para el Desarrollo Económico. Universidad de los Andes,01/03/04,30/06/04,,,2010-02-04T16:32:09Z,2010-02-04T16:32:09Z
+546,1419,Estatal Colsultora Fundación Ideas para la Paz – Fundación Ford. BOGOTA - USAID,03/08/04,23/08/05,,,2010-02-04T16:32:09Z,2010-02-04T16:32:09Z
+545,1419,Estatal Directora “Diseño de un sistema de instrumentos e incentivos para el desarrollo empresarial y la creación de empresas” DAPD Universidad de los Andes. Centro de Estudios para el Desarrollo Económico.,02/02/04,23/09/04,,,2010-02-04T16:32:09Z,2010-02-04T16:42:08Z
+148,591,Estatal Ministro Ministerio Justicia,01/01/91,31/12/94,,,2010-01-17T17:34:59Z,2010-05-19T16:19:22Z
+149,591,Estatal Gobernador Gobernación de Cundinamarca,01/01/91,31/12/92,,,2010-01-17T17:34:59Z,2010-05-19T16:19:22Z
+169,289,Otros Servicios Indefinido Fenalco Risaralda,01/01/88,31/12/90,,,2010-01-17T17:34:59Z,2010-05-03T21:40:04Z
+170,289,Estatal Secretario Secretaría de Gobierno de Risaralda,01/01/80,31/12/81,,,2010-01-17T17:34:59Z,2010-05-03T21:40:04Z
+180,706,Estatal Alcalde Municipal de Armenia Departamento del Quindío,29/08/83,08/09/84,,,2010-01-17T17:34:59Z,2010-05-04T18:41:12Z
+181,706,Estatal Director de Valorización Departamental Departamento del Quindío,11/07/80,23/07/81,,,2010-01-17T17:34:59Z,2010-05-04T18:41:12Z
+150,591,Estatal Asesor Presidencia de la República,01/01/79,31/12/82,,,2010-01-17T17:34:59Z,2010-05-19T16:19:22Z
+151,591,Estatal Secretario de Educación Gobernación de Cundinamarca,01/01/82,31/12/83,,,2010-01-17T17:34:59Z,2010-05-19T16:19:22Z
+145,582,Estatal Ministro de Transporte Ministerio de Transporte,01/01/94,31/12/96,,,2010-01-17T17:34:59Z,2010-05-19T16:24:29Z
+162,612,Otros Servicios Presidenta Comité Intergremial de Caldas,26/05/96,27/06/97,,,2010-01-17T17:34:59Z,2010-05-03T20:33:54Z
+75,441,Estatal Directora Ejecutiva (Organización y Coordinación Campaña Alvaro Uribe Vélez) Asociación Primero Colombia,01/09/00,06/07/01,,,2010-01-17T17:34:58Z,2010-04-08T21:57:58Z
+364,1234,Estatal Ministra Ministerio de Comercio Exterior,01/08/98,15/06/02,,,2010-01-17T17:35:01Z,2010-05-24T21:58:00Z
+164,615,Estatal Subdirector Administrativo Y Financiero Incomex,04/01/82,03/12/85,,,2010-01-17T17:34:59Z,2010-02-09T19:48:04Z
+582,1805,"Articulos de hogar, oficina, hoteles y hospitales Presidente Industrias Spring",05/02/79,11/02/10,,,2010-02-11T18:36:07Z,2010-02-11T18:36:07Z
+365,1234,Estatal Ministra Ministerio de Defensa,01/08/02,10/11/03,,,2010-01-17T17:35:01Z,2010-05-24T21:58:00Z
+366,1234,Estatal Embajadora De Colombia En Francia Ministerio de Relaciones Exteriores,01/02/02,25/07/02,,,2010-01-17T17:35:01Z,2010-05-24T21:58:00Z
+853,679,Servicios de Salud Neurocirujano Hospital Eva Perón,01/01/90,01/01/92,,,2010-09-16T16:01:11Z,2010-09-16T16:01:11Z
+368,1234,Otros Servicios Presidenta Ejecutiva Invercolsa,01/01/97,30/06/98,,,2010-01-17T17:35:01Z,2010-02-05T15:35:33Z
+183,721,Otros Servicios Representante a la Camara Cámara de Representantes,07/01/02,22/12/06,,,2010-01-17T17:34:59Z,2010-05-04T19:00:21Z
+219,834,Estatal Secretario Privado Gobernación de Antioquia,15/11/95,20/10/97,,,2010-01-17T17:35:00Z,2010-01-25T21:57:54Z
+220,834,Estatal Vicepresidente Federación Colombiana de Municipios,22/04/92,08/05/94,,,2010-01-17T17:35:00Z,2010-01-25T21:57:54Z
+221,834,Estatal Secretario Departamental de Desarrollo Gobernación de Antioquia,22/04/90,20/10/91,,,2010-01-17T17:35:00Z,2010-01-25T21:57:54Z
+193,793,Estatal Asesora de la Representante María Isabel Rueda Cámara de Representantes,01/01/98,31/12/00,,,2010-01-17T17:35:00Z,2010-01-26T16:45:02Z
+184,756,Otros Servicios Vicepresidente Administrativo Coltefinanciera S.A.,05/09/96,31/07/97,,,2010-01-17T17:34:59Z,2010-01-26T17:21:16Z
+185,756,Estatal Subjefe de Gabinete y Asesor Especial del Secretario General Organización de los Estados Américanos O.E.A,12/11/94,12/07/96,,,2010-01-17T17:34:59Z,2010-05-04T20:07:25Z
+186,756,Estatal Subsecretario General Presidencia de la Répública de Colombia,01/01/93,06/08/94,,,2010-01-17T17:34:59Z,2010-01-26T17:21:16Z
+187,756,Estatal Director Regional Instituto Colombiano de Bienestar Famliar,01/12/86,06/11/88,,,2010-01-17T17:34:59Z,2010-09-14T19:25:52Z
+76,441,Estatal Asesora del Subsecretario General Presidencia de la República,01/11/90,01/08/91,,,2010-01-17T17:34:58Z,2010-04-08T21:57:58Z
+222,842,Otros Servicios Gerente Caja de Previsión Departamental - Boyacá,10/06/78,01/11/79,,,2010-01-17T17:35:00Z,2010-01-26T19:35:56Z
+223,842,Estatal Director Coldeportes Boyacá,10/02/76,20/04/77,,,2010-01-17T17:35:00Z,2010-01-26T19:35:56Z
+224,842,Estatal Gerente Instituto Nacional de Tránsito de Boyacá,01/06/82,20/11/83,,,2010-01-17T17:35:00Z,2010-01-26T19:35:56Z
+208,814,Otros Servicios Consultor Internacional Chemonics International Inc,01/01/00,31/12/00,,,2010-01-17T17:35:00Z,2010-01-27T16:17:00Z
+209,814,Estatal Secretario General Ministerio de Agricultura,01/01/87,31/12/88,,,2010-01-17T17:35:00Z,2010-01-27T16:17:00Z
+210,814,Estatal Gerente General Centro de Convenciones Gonzalo Jimenez De Quesada - Proexpo,01/01/86,31/12/87,,,2010-01-17T17:35:00Z,2010-01-27T16:17:00Z
+211,814,Estatal Director Adminstrativo Ministerio de Desarrollo Economico,01/01/85,31/12/86,,,2010-01-17T17:35:00Z,2010-01-27T16:17:00Z
+212,814,Estatal Director Administrativo Ministerio de Desarrollo y Agricultura,01/01/83,31/12/85,,,2010-01-17T17:35:00Z,2010-01-27T16:17:00Z
+213,814,Estatal Agente Fiscal Del Departamento Del Cesar En Bogot Gobernación del  Departamento Del Cesar,01/01/82,31/12/83,,,2010-01-17T17:35:00Z,2010-01-27T16:17:00Z
+214,814,Estatal Secretario General Y Subdirector Nacinal De Personal ISS,01/01/91,31/12/92,,,2010-01-17T17:35:00Z,2010-05-25T16:12:49Z
+215,814,Estatal Auditor Operativo Nacional Idema,01/01/88,31/12/90,,,2010-01-17T17:35:00Z,2010-01-27T16:17:00Z
+216,814,Estatal Director General DRI,01/01/92,31/12/94,,,2010-01-17T17:35:00Z,2010-05-25T16:12:49Z
+218,814,Otros Servicios Asesor De La Unidad Para La Promoci?N De La Democracia OEA,01/07/01,31/12/01,,,2010-01-17T17:35:00Z,2010-05-25T16:12:49Z
+204,809,"Otros Servicios Gerente Regional de Seguros, Gerente de Ventas, Revisor Fiscal,Director Comercial de Seguros Seguros Universal,Colseguros, La Nacional De Seguros, Provica",03/11/73,10/09/90,,,2010-01-17T17:35:00Z,2010-05-04T22:06:47Z
+172,171,Otros Servicios Jefe Planeacion Municipal de Neiva,03/06/92,30/10/93,,,2010-01-17T17:34:59Z,2010-06-02T21:17:14Z
+854,679,Servicios de Salud Residente Neurocirujano Hospital General de Agudos Argentina,01/01/89,01/01/90,,,2010-09-16T16:01:11Z,2010-09-16T16:01:11Z
+855,47,Estatal Presidente Findeter,01/01/92,31/12/93,,,2010-09-16T16:19:51Z,2010-09-16T16:19:51Z
+856,47,Estatal Viceministro Ministerio de Agricultura,01/01/89,31/12/90,,,2010-09-16T16:19:51Z,2010-09-16T16:19:51Z
+276,99,Estatal Miembro Junta Directiva de la Central Hidroeléctrica de Caldas Departamento de Caldas,01/01/83,31/12/83,,,2010-01-17T17:35:00Z,2010-01-30T17:01:53Z
+277,99,Estatal Juez Segundo Civil Municipal de Manizales Rama Judicial Caldas,12/01/63,18/02/64,,,2010-01-17T17:35:00Z,2010-01-30T17:01:53Z
+278,99,Estatal Secretario de Educación de Caldas Gobernacion de Caldas,23/10/66,15/08/68,,,2010-01-17T17:35:00Z,2010-01-30T17:01:53Z
+264,968,Estatal Secretario Concejo de Medellín Municipio de Medellín,01/01/95,31/12/97,,,2010-01-17T17:35:00Z,2010-01-30T19:52:03Z
+265,968,Estatal Jefe de Orden Público Departamento de Antioquia,01/01/98,31/12/01,,,2010-01-17T17:35:00Z,2010-01-30T19:52:03Z
+266,968,Estatal Gerente Aeropuerto Departamento de Antioquia,01/01/93,31/12/95,,,2010-01-17T17:35:00Z,2010-01-30T19:52:03Z
+267,968,Estatal Auditor Contraloría Medellín y Departamento,01/01/87,31/12/91,,,2010-01-17T17:35:00Z,2010-01-30T19:52:03Z
+192,790,Estatal Ministro de Defensa Nacional Ministerio de Defensa,01/01/91,31/12/94,,,2010-01-17T17:35:00Z,2010-04-07T14:40:48Z
+243,85,Estatal Secretario Consejo Consultivo Parlamento Latinoamericano,09/12/04,15/02/06,,,2010-01-17T17:35:00Z,2010-02-01T14:59:29Z
+227,843,Estatal Jefe División Financiera Corporación Social Cundinamarca,01/01/84,31/12/86,,,2010-01-17T17:35:00Z,2010-02-05T16:35:01Z
+857,47,Otros Servicios Director Ejecutivo Fedepalma,01/01/82,31/12/89,,,2010-09-16T16:19:51Z,2010-09-16T16:19:51Z
+292,1063,Otros Servicios Gerente General Lsa Colombia,01/07/98,30/09/03,,,2010-01-17T17:35:01Z,2010-02-09T19:44:17Z
+572,1423,Servicios de Salud JEFE DEPARTAMENTO DE CIRUGÍA GENERAL HOSPITALUNIVERSITARIO DE LA SAMARITANA,01/06/97,26/03/09,,,2010-02-10T21:37:20Z,2010-02-10T21:37:20Z
+573,1423,Servicios de Salud FUNDADOR Y PRIMER PRESIDENTE DEL COLEGIO MÉDICO COLOMBIANO COLEGIO MÉDICO COLOMBIANO,24/04/03,26/03/09,,,2010-02-10T21:37:20Z,2010-02-10T21:37:20Z
+574,1423,Servicios de Salud PRESIDENTE DE LA SOCIEDAD COLOMBIANA DE CIRUGÍA ASOCIACIÓN COLOMBIANA DE CIRUGÍA,15/08/03,15/08/07,,,2010-02-10T21:37:20Z,2010-02-10T21:37:20Z
+584,1805,Educacion y Conocimiento Docente Universidad de Los Andes,15/01/70,15/12/92,,,2010-02-11T18:38:20Z,2010-02-11T18:38:20Z
+590,2112,Estatal Abogado sustanciador Contraloría General de La Guajira,01/01/93,31/12/94,,,2010-02-11T21:58:05Z,2010-02-11T21:58:05Z
+583,1805,Estatal Consejero Distrital para la Planeación Participativa Planeación Distrital- Bogotá,01/01/01,31/12/03,,,2010-02-11T18:38:20Z,2010-02-11T19:25:24Z
+603,1763,Servicios de Salud Asesor INC,01/06/06,31/12/08,,,2010-02-13T17:00:54Z,2010-02-13T17:00:54Z
+604,1763,Servicios de Salud Asesor AGS-Fosyga,01/11/03,12/03/07,,,2010-02-13T17:00:54Z,2010-02-13T17:00:54Z
+244,85,Estatal Miembro Parlamento Latinoamericano,07/11/94,15/02/06,,,2010-01-17T17:35:00Z,2010-02-01T14:59:29Z
+245,85,Estatal Reelegido Miembro Del Consejo Consultivo Parlamento Latinoamericano,09/12/04,15/02/06,,,2010-01-17T17:35:00Z,2010-02-01T14:59:29Z
+246,85,Estatal Secretario General Instituto de los Seguros Sociales,02/12/98,07/08/00,,,2010-01-17T17:35:00Z,2010-06-08T18:33:38Z
+228,844,Estatal Alcalde Alcaldia Municipal Bosconia - Cesar,01/01/91,31/12/93,,,2010-01-17T17:35:00Z,2010-05-05T15:33:56Z
+232,75,Estatal Jefe de Distrito No. 2 Gobernación del Valle,01/01/91,31/12/94,,,2010-01-17T17:35:00Z,2010-05-05T18:47:07Z
+233,75,Servicios Turisticos Cordinadora Eventos Regionales Cortuvalle,01/01/86,31/12/91,,,2010-01-17T17:35:00Z,2010-05-05T18:47:07Z
+273,999,Estatal Gerente Instituto para el Desarrollo Santander,01/01/89,31/12/91,,,2010-01-17T17:35:00Z,2010-05-07T22:16:28Z
+274,999,Estatal Jefe Alumbrado Público Electrificadora Santander,01/01/78,31/12/88,,,2010-01-17T17:35:00Z,2010-05-07T22:16:28Z
+275,1009,Estatal Secretario de Gobierno Alcaldía de Santa Marta,01/01/88,31/12/88,,,2010-01-17T17:35:00Z,2010-05-10T15:27:08Z
+297,1091,Otros Servicios Presidente Grupo R.E Ltda,01/01/93,19/01/06,,,2010-01-17T17:35:01Z,2010-05-10T22:05:13Z
+298,1091,Otros Servicios Vale Dictor Xlix Incae Costa Rica,06/07/99,06/08/99,,,2010-01-17T17:35:01Z,2010-05-10T22:05:13Z
+77,441,Estatal Asesora Consejería para Asuntos Internacionales Presidencia de la República,01/08/91,01/10/92,,,2010-01-17T17:34:58Z,2010-04-08T21:57:58Z
+78,441,Estatal Jefe de la Oficina para Asuntos Internacionales Ministerio de Justicia,01/10/92,01/03/93,,,2010-01-17T17:34:58Z,2010-04-08T21:57:58Z
+79,441,Estatal Asesora Despacho del Canciller Ministerio de Relaciones Exteriores,01/04/93,01/12/94,,,2010-01-17T17:34:58Z,2010-04-08T21:57:58Z
+858,47,Minerales Analista departamento de crédito Ecominas,01/01/81,01/01/81,,,2010-09-16T16:19:51Z,2010-09-16T16:19:51Z
+235,874,Estatal Gerente Corporación Social de Cundinamarca,01/01/91,31/12/92,,,2010-01-17T17:35:00Z,2010-01-26T19:06:08Z
+288,1055,Otros Servicios Consultor Fundación Cundinamarca,15/01/91,15/12/02,,,2010-01-17T17:35:01Z,2010-01-27T19:35:32Z
+859,578,Estatal Secretario de Obras Públicas Gobernación del Tolima,01/01/92,31/12/93,,,2010-09-16T16:38:11Z,2010-09-16T16:38:11Z
+860,563,Estatal Secretario General Gobernación de Cundinamarca,01/01/95,31/12/96,,,2010-09-16T16:43:29Z,2010-09-16T16:43:29Z
+239,906,Estatal Presidente Comisión Tercera del Senado,20/07/01,20/06/02,,,2010-01-17T17:35:00Z,2010-01-29T19:13:03Z
+240,906,Estatal Presidente Comisión de Etica Senado,01/07/04,19/07/05,,,2010-01-17T17:35:00Z,2010-01-29T19:13:03Z
+247,85,Estatal Asesor Para Asuntos Pol?Ticos Presidencia de la República,05/09/00,05/12/01,,,2010-01-17T17:35:00Z,2010-02-01T14:59:29Z
+248,85,Estatal Subgerente Administrativo Nacional IDEMA,26/10/90,03/12/90,,,2010-01-17T17:35:00Z,2010-02-01T14:59:29Z
+249,85,Estatal Jefe Departamento de Valorización Municipal de Manizales,01/11/84,06/10/85,,,2010-01-17T17:35:00Z,2010-02-01T14:59:29Z
+238,894,Estatal Asesor del POT Concejo de Bogotá,02/02/97,12/02/97,,,2010-01-17T17:35:00Z,2010-02-01T15:20:19Z
+250,927,Estatal Notario Notaría 38,01/01/72,31/12/77,,,2010-01-17T17:35:00Z,2010-02-01T15:46:24Z
+251,927,Otros Servicios Magistrado Tribunal,01/01/92,31/12/96,,,2010-01-17T17:35:00Z,2010-02-01T15:46:24Z
+252,927,Estatal Embajador Ministerio De Relaciones Exteriores,01/01/82,31/12/83,,,2010-01-17T17:35:00Z,2010-02-01T15:46:24Z
+508,205,Estatal Gerente Caja de Previsión Social del Distrito,01/07/79,31/12/80,,,2010-02-01T20:28:32Z,2010-02-01T20:28:32Z
+509,205,Estatal Subsecretario Secretaria de Educación del Distrito,01/01/70,30/06/71,,,2010-02-01T20:28:32Z,2010-02-01T20:28:32Z
+241,906,Otros Servicios Presidente Partido Liberal Colombiano,01/12/03,30/07/04,,,2010-01-17T17:35:00Z,2010-02-02T21:02:24Z
+518,1438,Estatal Asesor Ministro de Educación Ministerio de Educación,01/08/97,31/08/98,,,2010-02-03T07:09:42Z,2010-02-03T07:09:42Z
+519,1438,Educacion y Conocimiento Director Nacional de Informática y Comunicaciones Universidad Nacional,22/10/03,15/08/06,,,2010-02-03T07:09:42Z,2010-02-03T07:09:42Z
+520,1438,Educacion y Conocimiento Director de Tecnología Politécnico Grancolombiano,16/08/06,31/08/09,,,2010-02-03T07:09:42Z,2010-02-03T07:09:42Z
+303,1178,Estatal Secretario de Tránsito Secretaría de Tránsito Municipal de Santiago de Cali,01/01/04,28/02/05,,,2010-01-17T17:35:01Z,2010-04-28T17:04:18Z
+861,563,Estatal Director Icetex,01/01/91,31/12/92,,,2010-09-16T16:43:29Z,2010-09-16T16:43:29Z
+559,1404,Estatal Unidad de apoyo Asamblea Departamental,08/01/08,12/06/09,,,2010-02-05T16:22:21Z,2010-02-09T21:42:06Z
+575,1416,Ingenieria y Servicios de Construccion Asesora Externa Condominio Casa del Mar,NA,NA,,,2010-02-10T21:45:40Z,2010-02-10T21:45:40Z
+576,1416,Editorial e Industria Grafica Asesora Externa Publicar S.A.,NA,NA,,,2010-02-10T21:45:40Z,2010-02-10T21:45:40Z
+577,1416,Otros Servicios Gerente General Fundación Victor Salvi,NA,NA,,,2010-02-10T21:45:40Z,2010-02-10T21:45:40Z
+253,932,Estatal Subdirector Sena - Boyacá,01/01/89,31/12/95,,,2010-01-17T17:35:00Z,2010-04-06T20:16:34Z
+256,87,Estatal Secretaria de Salud Departamental Gobernación del Valle del Cauca,01/01/95,31/12/97,,,2010-01-17T17:35:00Z,2010-04-07T17:03:50Z
+257,87,Estatal Presidenta del Congreso Congreso de la República,01/07/06,30/07/07,,,2010-01-17T17:35:00Z,2010-05-10T20:43:40Z
+503,205,Estatal Secretario Privado Presidencia de la República,01/07/73,06/08/74,,,2010-02-01T20:28:32Z,2010-04-08T22:07:49Z
+504,205,Estatal Cónsul del Gobierno de Colombia ante el Gobierno de Rumania Ministerio de Relaciones Exteriores,01/07/77,30/06/79,,,2010-02-01T20:28:32Z,2010-04-08T22:07:49Z
+505,205,Estatal Cónsul del Gobierno de Colombia ante el gobierno de Suecia Ministerio de Relaciones Exteriores,09/08/74,30/06/77,,,2010-02-01T20:28:32Z,2010-04-08T22:07:49Z
+506,205,Estatal Director Departamento Administrativo de Acción Comunal del Distrito Capital,01/07/71,30/06/73,,,2010-02-01T20:28:32Z,2010-04-08T22:07:49Z
+507,205,Estatal Embajador Plenipotenciario del Gobierno de Colombia ante el Reino de los Países Bajos(Haya-Holanda) Ministerio de Relaciones Exteriores,01/01/99,19/07/02,,,2010-02-01T20:28:32Z,2010-04-08T22:07:49Z
+322,248,Editorial e Industria Grafica Columnista Periodico La Tarde,01/02/86,31/12/90,,,2010-01-17T17:35:01Z,2010-01-30T20:08:21Z
+323,248,Estatal Jefe Administrativo Terminal de Transporte de Pereira,01/07/90,01/08/91,,,2010-01-17T17:35:01Z,2010-01-30T20:08:21Z
+324,248,Estatal Coordinador Programa de Reinserción de Risaralda Presidencia de la República,05/08/91,31/12/93,,,2010-01-17T17:35:01Z,2010-01-30T20:08:21Z
+578,1416,Otros Servicios Fundadora Festival Internacional de Musica de Cartagena,NA,NA,,,2010-02-10T21:45:40Z,2010-02-10T21:45:40Z
+579,1416,Servicios Turisticos Gerente Promotora de Turismo,NA,NA,,,2010-02-10T21:45:40Z,2010-02-10T21:45:40Z
+585,1805,Estatal Asesor Departamento Nacional de Planeación,01/09/94,31/05/96,,,2010-02-11T19:01:37Z,2010-02-11T19:01:37Z
+510,1405,Servicios de Salud Enfermera Instituto de Seguros Sociale,01/02/70,15/12/08,,,2010-02-01T22:13:48Z,2010-02-01T22:13:48Z
+862,563,"Estatal Cónsul Berlín, Alemania Ministerio de Relaciones Exteriores",01/01/88,31/12/90,,,2010-09-16T16:43:29Z,2010-09-16T16:43:29Z
+586,1805,Estatal Representante del Presidente de la República al Comité Interinstitucional de Participación (CIP) Mininterior,15/02/96,15/03/98,,,2010-02-11T19:01:37Z,2010-02-11T19:01:37Z
+591,1954,Estatal Secretario General Instituto para el Desarrollo de Antioquia - IDEA,NA,NA,,,2010-02-11T22:17:08Z,2010-02-11T22:17:08Z
+521,1438,Otros Servicios Director de Sistemas y Consultor Bancafe,01/04/99,15/11/01,,,2010-02-03T07:21:23Z,2010-02-03T07:21:23Z
+522,1438,"Educacion y Conocimiento Profesor de Catedra Univ Andes, Javeriana, Piloto, Central",30/01/98,30/11/03,,,2010-02-03T07:21:23Z,2010-02-03T07:21:23Z
+523,1438,Educacion y Conocimiento Presidente Red Nacional de Universidades - RENATA,16/08/06,15/08/08,,,2010-02-03T07:21:23Z,2010-02-03T07:21:23Z
+325,1202,Estatal Secretario Desarrollo Comunitario Municipio De Belen De Umbria,02/06/98,02/07/99,,,2010-01-17T17:35:01Z,2010-01-26T17:30:56Z
+863,563,Estatal Asistente Luis Carlos Galán Concejo de Bogotá,01/01/82,31/12/86,,,2010-09-16T16:43:29Z,2010-09-16T16:43:29Z
+336,113,Servicios de Salud Empresario Droguista Sector Droguista,01/01/72,31/01/97,,,2010-01-17T17:35:01Z,2010-02-03T14:02:49Z
+304,1182,"Educacion y Conocimiento Miembro De La Junta Directiva De La Asociación Colombiana Para El Avance De La Ciencia, Acac La Asociación Colombiana Para El Avance De La Ciencia, Acac",01/09/02,31/10/04,,,2010-01-17T17:35:01Z,2010-06-21T19:36:10Z
+305,1182,Estatal Miembro De La Junta Directiva Del Icfes Icfes,01/06/02,01/09/03,,,2010-01-17T17:35:01Z,2010-02-03T17:07:25Z
+306,1182,"Estatal Miembro Del Consejo Nacional De Acreditaci?N, Cna Cna",09/10/03,30/04/05,,,2010-01-17T17:35:01Z,2010-02-03T17:07:25Z
+307,1182,"Educacion y Conocimiento Miembro De La Junta Directiva De La Corporaci?N Para Investigaciones Biol?Gicas, Cib Corporaci?N Para Investigaciones Biol?Gicas, Cib",01/08/02,02/03/06,,,2010-01-17T17:35:01Z,2010-02-03T17:07:25Z
+308,1182,Otros Servicios Miembro Del Consejo Directivo De Proantioquia Proantioquia,01/04/03,08/03/06,,,2010-01-17T17:35:01Z,2010-02-03T17:07:25Z
+864,350,"Otros Servicios Gerente Instituto de Valorización de Manizales, INVAMA",26/05/82,31/08/82,,,2010-09-22T16:29:38Z,2010-09-22T16:29:38Z
+310,1182,Estatal Rector De La Universidad De Antioquia Universidad De Antioquia,23/12/94,01/08/02,,,2010-01-17T17:35:01Z,2010-02-03T17:07:25Z
+531,1370,Otros Servicios Subdirectora Operativa y de Proyectos Pastoral Social,15/02/06,28/02/09,,,2010-02-03T19:56:08Z,2010-02-03T19:56:08Z
+532,1370,Otros Servicios Directora Gestion de Soluciones FUNDAMIEL,31/03/09,NA,,,2010-02-03T19:56:08Z,2010-02-03T19:56:08Z
+533,1370,Editorial e Industria Grafica Analista Económico EDITORIAL EN LINEA RECTA,31/12/09,NA,,,2010-02-03T19:56:08Z,2010-02-03T19:56:08Z
+357,164,Otros Servicios Auxiliar Judicial Oficina de Abogados Claudio Tobo Abogados Asociados,02/02/98,18/12/98,,,2010-01-17T17:35:01Z,2010-06-21T18:13:41Z
+358,164,Otros Servicios Asesor del Representante Legal Cales Boyacá,01/08/96,30/11/97,,,2010-01-17T17:35:01Z,2010-06-21T18:13:41Z
+299,1091,Estatal Secretario de Transito y Transporte Alcaldía de Sogamoso,01/01/91,31/12/92,,,2010-01-17T17:35:01Z,2010-05-10T22:05:13Z
+300,1091,Estatal Secretario General Concejo de Sogamoso,01/01/86,31/12/88,,,2010-01-17T17:35:01Z,2010-05-10T22:05:13Z
+359,164,Educacion y Conocimiento Catedrático Fundacion Universitaria de Boyacá,01/07/03,01/12/03,,,2010-01-17T17:35:01Z,2010-06-21T18:13:41Z
+539,1419,Estatal Consultora Organización de las Naciones Unidas para el Desarrollo Industrial – ONUDI,04/09/06,31/10/07,,,2010-02-04T16:07:38Z,2010-02-04T16:07:38Z
+547,1419,Estatal Consultora “Diseño de una estrategia de descentralización para la política de Comercio Exterior del Perú” MINISTERIO DE COMERCIO EXTERIOR PERÚ – BID. LIMA,03/11/03,14/01/04,,,2010-02-04T16:42:08Z,2010-02-04T16:42:08Z
+548,1419,"Estatal Autora“Lecciones de Colombia enla Política de Productividad y Competitividad y Estrategia Descentralización yCreación de CulturaExportadora"" División de Desarrollo Productivo y Empresarial-CEPAL Naciones Unidas",03/03/03,30/09/03,,,2010-02-04T16:42:08Z,2010-02-04T16:42:08Z
+549,1419,Estatal Investigadora “Imperfecciones de mercado que afectan de manera diferencial a la mipyme en Colombia” Centro de Estudios para el Desarrollo Económico. Universidad de los Andes.,03/06/03,29/08/03,,,2010-02-04T16:42:08Z,2010-02-04T16:42:08Z
+550,1419,"Estatal •	Co-Directora “Estructura económica del departamento Casanare y posibilidades futuras de crecimiento y competitividad” British Petroleum Centro de Estudios para el Desarrollo Económico. Universidad de los Andes",01/10/03,29/10/04,,,2010-02-04T16:42:08Z,2010-02-04T16:42:08Z
+361,1234,Estatal Directora General Incomex,15/05/90,15/06/91,,,2010-01-17T17:35:01Z,2010-02-05T15:35:33Z
+865,1027,Estatal Asistente III UTL Dr. Santiago Castro Congreso de la República,01/01/98,20/07/99,,,2010-09-23T19:13:33Z,2010-09-23T19:13:33Z
+866,2812,Educacion y Conocimiento Director de la Revista Economía Colombiana ,NA,NA,,,2010-10-08T21:41:08Z,2010-10-08T21:41:08Z
+416,1295,Estatal Subdirector de construcciones Inpec-Ministerio De Justicia,01/04/98,01/04/99,,,2010-01-17T17:35:02Z,2010-02-05T17:09:28Z
+418,1295,Estatal Alcalde Local Alcaldía Local de Ciudad Bolívar,01/03/95,01/03/97,,,2010-01-17T17:35:02Z,2010-02-05T17:09:28Z
+560,1414,Servicios Turisticos Gerente Agencia Marítima,01/01/02,30/11/08,,,2010-02-05T19:37:23Z,2010-02-05T19:37:23Z
+80,441,Estatal Coordinadora Programa Pedagogía de la Tolerancia Gobernación de Antioquia,01/03/96,01/12/97,,,2010-01-17T17:34:58Z,2010-04-08T21:57:58Z
+587,1805,Educacion y Conocimiento Director Programa Exedu,01/03/86,30/11/91,,,2010-02-11T19:05:59Z,2010-02-11T19:05:59Z
+551,1349,Otros Servicios Secretaria Mira,14/03/09,NA,,,2010-02-04T22:35:53Z,2010-02-15T21:57:55Z
+373,1248,Otros Servicios Director Administrativo Caja de Compensación Familiar Camacol,26/05/78,31/08/05,,,2010-01-17T17:35:01Z,2010-02-19T21:55:46Z
+405,1277,Estatal Secretaria de Gobierno Municipio de Valledupar Cesar,09/06/92,20/04/93,,,2010-01-17T17:35:02Z,2010-05-25T19:40:39Z
+406,1277,Estatal Directora De Relaciones Industriales Ministerio de Obras Públicas y Transportes,01/04/93,31/12/94,,,2010-01-17T17:35:02Z,2010-02-01T20:56:36Z
+407,1277,Estatal Secretaria General Administrativa Instituto Nacional de Vias,01/01/94,30/08/98,,,2010-01-17T17:35:02Z,2010-02-01T20:56:36Z
+408,1277,"Estatal Asesora Ministerio de Transporte, Comunicaciones, Vivienda Y Construccion De La Republica De Peru",30/08/98,01/09/99,,,2010-01-17T17:35:02Z,2010-05-25T19:40:39Z
+867,2812,Educacion y Conocimiento Profesor Universitario ,NA,NA,,,2010-10-08T21:41:08Z,2010-10-08T21:41:08Z
+337,1214,Estatal Defensor del Pueblo Defensoría del Pueblo,01/09/06,31/08/00,,,2010-01-17T17:35:01Z,2010-06-08T18:23:07Z
+338,1214,Estatal Subgerente Administrativo Empresa de Teléfonos de Bogotá,01/10/87,31/10/88,,,2010-01-17T17:35:01Z,2010-04-08T21:13:12Z
+339,1214,Estatal Miembro de Junta Directiva Prosocial,01/01/85,31/12/86,,,2010-01-17T17:35:01Z,2010-04-08T21:13:12Z
+340,1214,Estatal Superintendente de Servicios Públicos Superintendencia de Servicios Públicos,01/11/94,31/08/96,,,2010-01-17T17:35:01Z,2010-04-08T21:13:12Z
+410,1277,Otros Servicios Asesora Juridica Gaviria Correa & Asociados Ltda,01/09/99,01/07/00,,,2010-01-17T17:35:02Z,2010-02-01T20:56:36Z
+511,1402,Estatal Fiscal Seccional Fiscalía General de la Nación,01/07/92,01/01/04,,,2010-02-02T15:09:22Z,2010-02-02T16:00:02Z
+512,1402,Estatal Juez Penal Rama Judicial,15/11/81,30/06/92,,,2010-02-02T15:09:22Z,2010-02-02T16:00:02Z
+524,102,Otros Servicios Monitor Área de Derecho Civil del Consultorio Jurídico Facultad de Derecho de la Corporación UNICOSTA,01/01/82,31/12/83,,,2010-02-03T15:37:38Z,2010-02-03T15:37:38Z
+525,102,Otros Servicios Gerente Inversiones y Arriendos del Norte Ltda,01/01/79,31/12/88,,,2010-02-03T15:37:38Z,2010-02-03T15:37:38Z
+526,102,Educacion y Conocimiento Profesor Universitario en Ciencias Políticas y Legislación Colombiana Universidad Metropolitana,01/01/82,31/12/82,,,2010-02-03T15:37:38Z,2010-02-03T15:37:38Z
+514,122,Estatal Director Instituto Colombiano de Bienestar Familiar - Regional Bogot,01/01/91,30/06/94,,,2010-02-02T21:43:12Z,2010-04-13T21:07:31Z
+679,2487,Estatal Abogado Jefe de Bienes Personería Distrital Cartagena,01/01/81,31/12/85,,,2010-04-20T17:21:34Z,2010-04-20T17:21:34Z
+680,2487,Estatal Jefe Personal - Secretario Despacho Gobernación de Bolívar,01/01/86,31/12/90,,,2010-04-20T17:21:34Z,2010-04-20T17:21:34Z
+874,182,Otros Servicios Subgerente Financiero Instituto para el Desarrollo de Antioquia (IDEA),01/02/01,01/04/02,,,2011-03-09T12:47:32Z,2011-03-09T12:47:32Z
+527,102,Educacion y Conocimiento Profesor en Derecho Constitucional General Universidad del Norte,01/01/85,31/12/85,,,2010-02-03T15:37:38Z,2010-02-03T15:37:38Z
+528,102,Servicios de Salud Director Administrativo Hospital Universitario Metropolitano,01/01/85,31/12/88,,,2010-02-03T15:37:38Z,2010-02-03T15:37:38Z
+529,102,Estatal Gerente Caja de Previsión Social del Departamento del Atlántico,31/12/88,31/12/89,,,2010-02-03T15:37:38Z,2010-02-03T15:37:38Z
+530,102,Educacion y Conocimiento Gerente Servicio Nacional de Aprendizaje SENA Regional Atlántico,01/01/90,31/12/91,,,2010-02-03T15:37:38Z,2010-02-03T15:37:38Z
+427,101,Telecomunicaciones Gerente de Cinco Estrellas LTDA Cinco Estrellas LTDA,NA,NA,,,2010-01-18T20:32:47Z,2010-01-18T20:32:47Z
+296,142,Otros Servicios Abogada grado 2 Fiduciaria Popular,01/03/87,15/03/93,,,2010-01-17T17:35:01Z,2010-01-18T23:28:39Z
+428,142,Otros Servicios Analista Técnico Banco Popular,01/08/81,28/02/87,,,2010-01-18T23:28:39Z,2010-01-18T23:28:39Z
+234,77,Agricola Coordinador Nacional Unidad Cafetera,31/12/92,19/07/01,,,2010-01-17T17:35:00Z,2010-01-19T13:30:08Z
+429,11,Servicios de Salud Médico General Instituto Seguro Social Riohacha,NA,NA,,,2010-01-19T16:00:58Z,2010-01-19T16:00:58Z
+430,55,Medio Ambiente Ministra Medio Ambiente,07/08/94,08/08/95,,,2010-01-19T16:09:57Z,2010-01-19T16:09:57Z
+431,55,Agricola Ministra Agricultura,08/08/95,01/04/97,,,2010-01-19T16:09:57Z,2010-01-19T16:09:57Z
+432,55,Otros Servicios Ministra Planeación Nacional,01/04/97,07/08/98,,,2010-01-19T16:09:57Z,2010-01-19T16:09:57Z
+480,157,Estatal Presidente Asamblea del Valle Asamblea de Valle,01/01/96,01/01/98,,,2010-01-25T20:02:21Z,2010-01-25T20:02:21Z
+433,246,Otros Servicios Consejero Presidencial para la Juventud Presidencia de la República,09/08/02,09/09/04,,,2010-01-19T22:05:11Z,2010-01-19T22:05:11Z
+434,246,Educacion y Conocimiento Profesor de cátedra Universidad de la Sabana - Facultad de Derecho,01/06/09,31/01/10,,,2010-01-19T22:05:11Z,2010-01-19T22:05:11Z
+435,46,Servicios de Salud Hospital Universitario de Neiva Psicólogo clínico,01/01/97,31/12/98,,,2010-01-21T19:18:20Z,2010-05-25T19:29:53Z
+436,46,Educacion y Conocimiento Colegio Pio XII Vicerector Académico,01/01/94,31/12/96,,,2010-01-21T19:18:20Z,2010-05-25T19:29:53Z
+437,46,"Educacion y Conocimiento Universidades Antonio Nariño, Univalle, Surcolombiana Profesor",01/01/93,31/12/00,,,2010-01-21T19:18:20Z,2010-01-21T19:18:20Z
+396,1262,Servicios de Salud Gerente Centro Ambulatario,04/05/95,05/04/98,,,2010-01-17T17:35:02Z,2010-01-23T15:43:09Z
+397,1262,Servicios de Salud Medico General E. S. E. Hospital San Rafael,01/02/91,01/03/95,,,2010-01-17T17:35:02Z,2010-01-23T15:43:09Z
+398,1262,Servicios de Salud Gerente E. S. E. Hospital San Rafael,03/04/94,04/03/95,,,2010-01-17T17:35:02Z,2010-01-23T15:43:09Z
+386,36,Educacion y Conocimiento Docente Institucion Educativa Agrícola Panan (Nariño),31/12/99,31/12/00,,,2010-01-17T17:35:02Z,2010-01-26T17:11:09Z
+387,1255,"Educacion y Conocimiento Conferencista Internacional. Tema: Mujer y Familia Sur, Centro Y Norteamérica",20/01/89,14/07/03,,,2010-01-17T17:35:02Z,2010-01-27T20:18:05Z
+388,1255,Otros Servicios Miembro Fundador Partido Nacional Cristiano,07/01/89,02/02/07,,,2010-01-17T17:35:02Z,2010-01-27T20:18:05Z
+390,29,Minerales Presidente Fendipetroleo,01/01/99,01/01/00,,,2010-01-17T17:35:02Z,2010-01-28T19:18:25Z
+391,29,Estatal Ministro Ministerio de Justicia y del Derecho,01/01/98,01/01/99,,,2010-01-17T17:35:02Z,2010-05-25T20:12:50Z
+392,29,Educacion y Conocimiento Docente Universitario Universidad de Nariño,01/01/70,01/01/72,,,2010-01-17T17:35:02Z,2010-05-25T20:12:50Z
+411,255,Servicios de Salud Jefe de Mercadeo y Calidad Instituto de Seguro Social - Cúcuta,12/10/95,26/11/96,,,2010-01-17T17:35:02Z,2010-01-30T16:35:23Z
+412,255,Servicios de Salud Gerente CAB Instituto de Seguro Social - Los Patios,13/12/96,28/02/97,,,2010-01-17T17:35:02Z,2010-01-30T16:35:23Z
+399,1276,Estatal Jefe De Compras Secretaria De Obras PúBlicas Valle Del Cauca,01/01/79,01/01/80,,,2010-01-17T17:35:02Z,2010-05-06T16:39:14Z
+413,255,Servicios de Salud Médica General Instituto de Seguro Social - Cúcuta,24/05/94,16/11/94,,,2010-01-17T17:35:02Z,2010-01-30T16:35:23Z
+414,255,Servicios de Salud Médica General Ministerio de Obras Públicas,01/01/88,31/01/89,,,2010-01-17T17:35:02Z,2010-01-30T16:35:23Z
+415,255,Servicios de Salud Asesora Caja de Previsión Social Municipal - Cúcuta,02/10/88,06/09/89,,,2010-01-17T17:35:02Z,2010-01-30T16:35:23Z
+540,1419,Estatal Consultora para el diseño estratégico del componente de apoyo a la Pequeña y Mediana Empresas del Proyecto MIDAS ARD – USAID,01/02/06,29/06/06,,,2010-02-04T16:14:57Z,2010-02-04T16:14:57Z
+541,1419,Estatal Consultora BANCO MUNDIAL – División de Infraestructura Latinoamérica y El Caribe,01/03/06,28/04/06,,,2010-02-04T16:14:57Z,2010-02-04T16:14:57Z
+552,1349,Estatal Inspectora Local de Policia Municipio El Carmen de Atrato,24/02/03,NA,,,2010-02-04T22:35:53Z,2010-02-04T22:35:53Z
+438,46,Servicios de Salud Ejercicio Independiente Consultorio Privado,01/01/96,01/01/01,,,2010-01-21T19:18:20Z,2010-01-21T19:18:20Z
+681,2487,Estatal Asesor Despacho - Gerente Lotería Alcaldía Mayor Cartagena,01/01/90,31/12/93,,,2010-04-20T17:21:34Z,2010-04-20T17:21:34Z
+440,41,Estatal Gerente Lotería del Cauca,02/07/82,02/07/85,,,2010-01-21T21:49:48Z,2010-01-21T21:49:48Z
+441,41,Estatal Senador de la República Senado de la República,01/01/94,01/01/94,,,2010-01-21T21:49:48Z,2010-01-21T21:49:48Z
+442,41,Estatal Representante a la Cámara Honorable Cámara de Representantes,20/07/86,20/07/06,,,2010-01-21T21:49:48Z,2010-01-21T21:49:48Z
+443,41,Estatal Gerente Industria Licorera del Cauca,02/02/80,02/02/82,,,2010-01-21T21:49:48Z,2010-01-21T21:49:48Z
+444,41,Estatal Miembro Comisión Constitucional Redactora Para La Reforma Penal Entidades Varias,01/01/03,01/01/03,,,2010-01-21T21:49:48Z,2010-01-21T21:49:48Z
+682,2487,Estatal Abogado consultor Personería Distrital Cartagena,01/03/79,31/12/81,,,2010-04-20T17:21:34Z,2010-04-20T17:21:34Z
+445,41,Educacion y Conocimiento Profesor de Derecho Universidad del Cauca,25/01/73,05/03/08,,,2010-01-21T21:49:48Z,2010-01-21T21:53:45Z
+875,182,Otros Servicios Gerente Instituto para el Desarrollo de Antioquia (IDEA),01/04/02,31/12/03,,,2011-03-09T12:47:32Z,2011-03-09T12:47:32Z
+448,41,"Estatal Juez Penal Munipal de Popay Juzgado 1, Penal Municipal",25/02/73,25/02/74,,,2010-01-21T21:49:48Z,2010-01-21T21:53:45Z
+449,41,"Estatal Juez Penal del Circuito Juzgado 1, Penal del Circuito",25/02/74,25/02/75,,,2010-01-21T21:49:48Z,2010-01-21T21:53:45Z
+450,41,Estatal Miembro Comisión Revisora del Proyecto de Código de Procedimiento Penal Congreso de la República,01/01/87,01/01/87,,,2010-01-21T21:49:48Z,2010-01-21T21:53:45Z
+683,2039,"Estatal Asesor Elaboración de Programas con Grupos Vulnerables para la  institucionalización de una Política Social del Municipio de La Unión, Valle",01/08/99,31/12/99,,,2010-04-20T21:01:43Z,2010-04-20T21:01:43Z
+452,41,Estatal Director Consultorio Jurídico Universidad del Cauca,25/02/77,25/11/77,,,2010-01-21T21:49:48Z,2010-01-21T21:53:45Z
+453,1334,Servicios de Salud Director Hospitala San Rafael de Tunja,20/01/93,22/12/93,,,2010-01-22T04:09:39Z,2010-01-22T04:09:39Z
+454,1334,Servicios de Salud Director Instituto Nacional de Salud,20/02/04,24/10/06,,,2010-01-22T04:09:39Z,2010-01-22T04:09:39Z
+455,1334,Servicios de Salud Gerente Clinca Santa Catalina Tunja,15/01/08,15/01/09,,,2010-01-22T04:09:39Z,2010-01-22T04:09:39Z
+456,196,Otros Servicios Gerente General Centrales Eléctricas del Cauca. Sa Esp,01/02/95,30/06/97,,,2010-01-22T17:28:41Z,2010-01-22T17:28:41Z
+457,196,Otros Servicios Gerente General Acueducto y Alcantarillado de Popayán Sa Esp,01/01/92,31/12/94,,,2010-01-22T17:28:41Z,2010-01-22T17:28:41Z
+458,196,Otros Servicios Subgerente Administrativo y Financiero Acueducto y Alcantarillado De Popayán Sa Esp,01/06/90,31/12/91,,,2010-01-22T17:28:41Z,2010-01-22T17:28:41Z
+459,38,"Telecomunicaciones Corresponsal de Noticias CARACOL RADIO, París, Francia.",01/06/96,30/09/96,,,2010-01-22T17:33:24Z,2010-01-22T17:33:24Z
+460,38,"Otros Servicios Consultor Político, Comunicaciones Estratégicas SHEPARDSON, STERN & KAMINKSY, Bogotá, Colombia",01/07/97,31/12/97,,,2010-01-22T17:33:24Z,2010-01-22T17:33:24Z
+461,38,"Otros Servicios Director de Juventudes, Campaña Presidencia de Andrés Pastrana GRAN ALIANZA POR EL CAMBIO",01/04/98,30/08/98,,,2010-01-22T17:33:24Z,2010-01-22T17:33:24Z
+462,38,Estatal Viceministro de Educación y Juventud Ministerio de Educación Naciona,01/08/98,30/05/00,,,2010-01-22T17:33:24Z,2010-01-22T17:33:24Z
+463,38,"Estatal Director "" Colombia Joven"" Presidencia de la Republica",01/05/00,30/08/01,,,2010-01-22T17:33:24Z,2010-01-22T17:33:24Z
+464,38,"Telecomunicaciones Corresponsal de noticias TODELAR RADIO, Washington DC",01/08/01,31/12/01,,,2010-01-22T17:33:24Z,2010-01-22T17:33:24Z
+465,38,Telecomunicaciones Analista Internacional Principal RCN ( Radio Cadena Nacional),01/03/02,30/08/04,,,2010-01-22T17:33:24Z,2010-01-22T17:33:24Z
+466,38,"Otros Servicios Consultor Banco Mundial, Washington DC.",01/01/03,30/07/03,,,2010-01-22T17:33:24Z,2010-01-22T17:33:24Z
+467,38,Estatal Ministro Plenipotenciario Ministerio de Relaciones Exteriores (Embajada en Londres),16/08/04,01/09/05,,,2010-01-22T17:33:24Z,2010-01-22T17:33:24Z
+876,182,Otros Servicios Presidente Fiduciaria Central S.A,01/02/04,28/02/05,,,2011-03-09T12:47:32Z,2011-03-09T12:47:32Z
+468,4,Estatal Secretario General Contraloría del Huila,01/01/90,01/01/90,,,2010-01-22T21:05:02Z,2010-05-21T20:06:24Z
+469,4,Educacion y Conocimiento Docente Universidad Libre,01/01/83,01/01/86,,,2010-01-22T21:05:02Z,2010-01-22T21:05:02Z
+471,180,Otros Servicios Asistente jurídico Luna Visbal Abogados,01/01/95,31/12/95,,,2010-01-23T05:03:15Z,2010-01-23T05:03:15Z
+472,180,Otros Servicios Asistente jurídico y conciliador Cámara de Comercio,01/01/96,31/12/97,,,2010-01-23T05:03:15Z,2010-01-23T05:03:15Z
+473,58,Educacion y Conocimiento Profesora Universidad Tecnológica de Pereira,01/01/83,31/12/86,,,2010-01-25T16:16:29Z,2010-05-14T16:52:32Z
+476,183,Otros Servicios Directora Centro de Extensión a la Comunidad Instituto Tolimense de Formación Técnica Profesional,01/01/94,31/12/97,,,2010-01-25T19:41:46Z,2010-01-25T19:41:46Z
+477,183,Otros Servicios Cónsul Primera Clase en Colón -Panamá Ministerio de Relaciones Exteriores,01/01/97,31/12/01,,,2010-01-25T19:41:46Z,2010-01-25T19:41:46Z
+479,157,Estatal Diputado a la Asamblea del Valle Asamblea de Valle,01/01/92,01/01/01,,,2010-01-25T20:02:21Z,2010-01-25T20:02:21Z
+98,482,Estatal Indefinido Carbocol,01/01/96,31/12/97,,,2010-01-17T17:34:58Z,2010-02-16T19:05:13Z
+481,157,Estatal Vicepresidente Asociación Nacional de Diputados Asociación Nacional de Diputados,01/01/01,01/01/03,,,2010-01-25T20:02:21Z,2010-01-25T20:02:21Z
+478,157,Estatal Concejal de Andalucía Concejo de Andalucía,01/01/82,01/01/84,,,2010-01-25T20:02:21Z,2010-01-25T20:03:19Z
+482,1345,Educacion y Conocimiento Docente Universidad Libre,02/02/79,25/01/10,,,2010-01-25T20:05:52Z,2010-01-25T20:05:52Z
+483,1345,Estatal Magistrado Tribunal Superior de Bogotá Rama Judicial,28/09/89,31/05/91,,,2010-01-25T20:05:52Z,2010-01-25T20:05:52Z
+484,1345,Estatal Secretario General  del Fondo DRI Fondo de Desarrollo Rural Integrado,28/09/88,29/09/89,,,2010-01-25T20:05:52Z,2010-01-25T20:05:52Z
+485,1345,"Estatal Procurador Delegado para la Vigilancia Judicial, Fuerzas Militares, ante el Consejo de Estado y ante la Corte Suprema de Justicia Procuraduria General de la Nación.",01/06/91,12/08/96,,,2010-01-25T20:05:52Z,2010-01-25T20:05:52Z
+489,1355,Otros Servicios Jefe de Prensa Petrobras Colombia Limited,NA,NA,,,2010-01-26T13:48:26Z,2010-01-26T13:48:26Z
+490,1355,Otros Servicios Jefe de Mercadeo Ensicom,NA,NA,,,2010-01-26T13:48:26Z,2010-01-26T13:48:26Z
+491,1355,Otros Servicios Jefe de Comunicaciones Adecco Colombia,NA,NA,,,2010-01-26T13:48:26Z,2010-01-26T13:48:26Z
+492,1355,Otros Servicios Jefe de Comunicaciones FCB Colombia,NA,NA,,,2010-01-26T13:48:26Z,2010-01-26T13:48:26Z
+493,1355,Otros Servicios Jefe de Comunicaciones Mcann Erickson de Colombia,NA,NA,,,2010-01-26T13:48:26Z,2010-01-26T13:48:26Z
+236,874,Estatal Asesora del despacho Ministerio de Educación,01/01/89,31/12/90,,,2010-01-17T17:35:00Z,2010-01-26T19:06:08Z
+237,874,Estatal Auxiliar Ministerio de Justicia,01/01/86,31/12/88,,,2010-01-17T17:35:00Z,2010-01-26T19:06:08Z
+494,842,Otros Servicios Gerente Caja de Previsión Nacional - Seccional Boyacá,28/02/80,16/04/82,,,2010-01-26T19:35:56Z,2010-01-26T19:35:56Z
+176,686,Estatal Secretario Privado Alcaldía Pasto,01/01/72,31/12/72,,,2010-01-17T17:34:59Z,2010-05-14T18:24:39Z
+474,61,Estatal Ministro Ministerio de Trabajo y Seguridad Social,18/03/97,31/01/98,,,2010-01-25T16:55:30Z,2010-05-25T20:39:39Z
+475,61,Estatal Viceministro Ministerio de Salud,04/08/94,17/03/97,,,2010-01-25T16:55:30Z,2010-05-25T20:39:39Z
+496,207,Estatal Alcalde Municipio de Villavicencio,01/01/87,31/12/88,,,2010-01-26T20:37:19Z,2010-01-26T20:37:19Z
+497,207,Estatal Director Regional Contraloría General,01/01/92,31/12/93,,,2010-01-26T20:37:19Z,2010-01-26T20:37:19Z
+498,66,Estatal Superintendente delegado en Telecomunicaciones Superintendencia de Servicios Públicos Domiciliarios,01/08/99,05/09/99,,,2010-01-26T21:21:16Z,2010-09-15T19:08:22Z
+217,814,Otros Servicios Consultor Internacional En Washington Banco Interamericano de Desarrollo-Bid,01/01/00,31/12/01,,,2010-01-17T17:35:00Z,2010-05-25T16:12:49Z
+63,391,Editorial e Industria Grafica Directora Editorial de Publicaciones Semanales Periódico El Pueblo,19/05/75,26/08/85,,,2010-01-17T17:34:58Z,2010-01-27T19:47:07Z
+64,391,Estatal Presidenta del Senado de la República Senado de la República,20/07/05,20/07/06,,,2010-01-17T17:34:58Z,2010-01-27T19:47:07Z
+499,1332,Estatal Asesor Senado de la República,04/08/04,20/07/06,,,2010-01-28T14:32:18Z,2010-01-28T14:32:18Z
+500,1332,Estatal Pasante Corte Penal Internacional,15/10/07,15/01/08,,,2010-01-28T14:32:18Z,2010-01-28T14:32:18Z
+501,1332,Estatal Asesor Ministerio de Relaciones Exteriores,04/08/08,04/08/09,,,2010-01-28T14:32:18Z,2010-01-28T14:32:18Z
+242,906,Otros Servicios Coodirector Partido Liberal Colombiano,01/07/03,30/06/05,,,2010-01-17T17:35:00Z,2010-01-29T19:13:03Z
+513,282,Educacion y Conocimiento Secretario General Comisión Vallecaucana por la Educación,01/01/01,01/04/03,,,2010-02-02T16:26:36Z,2010-02-02T16:32:07Z
+3,244,Otros Servicios Vicepresidente Junta directiva del acueducto,01/01/86,01/01/88,,,2009-12-07T16:02:59Z,2010-02-03T16:33:51Z
+534,273,Educacion y Conocimiento Decano Facultad de Ingeniería Universidad El Bosque,NA,NA,,,2010-02-04T14:41:13Z,2010-02-04T14:41:13Z
+553,1472,Estatal Asesor UTL Senado de la República,01/12/05,31/12/06,,,2010-02-05T01:20:26Z,2010-02-05T01:20:26Z
+554,1472,Estatal Asesor UTL Cámara de Representantes,15/02/08,16/12/08,,,2010-02-05T01:20:26Z,2010-02-05T01:20:26Z
+555,1472,Otros Servicios Abogado Consultor Varias,01/01/95,30/09/09,,,2010-02-05T01:20:26Z,2010-02-05T01:20:26Z
+580,1762,Otros Servicios COORDINADOR FONDO DE EMPLEADOS UNIANDES,01/11/01,01/07/07,,,2010-02-11T17:49:02Z,2010-02-11T17:49:02Z
+581,1762,Otros Servicios DIRECTOR ,NA,NA,,,2010-02-11T17:49:02Z,2010-02-11T17:49:02Z
+588,1805,Educacion y Conocimiento Miembro Comité de Sociología Política de la Asociación Internacional de Sociología,05/07/82,11/02/10,,,2010-02-11T19:05:59Z,2010-02-11T19:11:05Z
+589,1805,"Educacion y Conocimiento Director Executive Assesment Center, con Marvin Dunnette, University  of Minnessota",01/02/71,30/11/71,,,2010-02-11T19:11:05Z,2010-02-11T19:11:05Z
+592,1954,Estatal Gerente Departamental Contraloría General de la República,01/02/08,01/02/09,,,2010-02-11T22:17:08Z,2010-02-11T22:17:08Z
+593,288,Estatal Secretario Encargado Fondo Nacional de Caminos Vecinales,01/01/90,30/01/91,,,2010-02-12T12:29:06Z,2010-02-12T12:29:06Z
+558,1403,"Estatal Secretaria Mujer, Juventud y Familia Municipio de Palmira",25/08/03,31/12/03,,,2010-02-05T16:11:12Z,2010-02-12T13:25:03Z
+594,1403,Estatal Asesora Contraloría Municipal Municipio de Palmira,27/01/03,27/07/03,,,2010-02-12T13:25:03Z,2010-02-12T13:25:03Z
+595,1403,Estatal Personera para asuntos Derechos Humanos Municipio de Palmira,28/05/98,02/04/01,,,2010-02-12T13:25:03Z,2010-02-12T13:25:03Z
+596,1403,Estatal Personera Delegada Personería Cali,27/11/92,26/05/98,,,2010-02-12T13:25:03Z,2010-02-12T13:25:03Z
+597,288,Otros Servicios Abogado Ejercicio Independiente,01/02/91,31/12/00,,,2010-02-12T13:57:29Z,2010-02-12T13:57:29Z
+598,2117,Estatal Magistrado Corte Constitucional Corte Constitucional,01/01/93,31/12/01,,,2010-02-12T14:02:17Z,2010-02-12T14:02:17Z
+599,2117,Educacion y Conocimiento Vicerector Universidad de Antioquia,28/09/89,31/12/92,,,2010-02-12T14:02:17Z,2010-02-12T14:02:17Z
+877,2520,Servicios de Salud Coordinador Médico Policía Nacional Santander,NA,NA,,,2011-04-14T19:54:35Z,2011-04-14T19:54:35Z
+772,516,Estatal Notario Medellín Ministerio de Justicia,01/01/89,31/12/91,,,2010-09-14T20:31:57Z,2010-09-14T20:31:57Z
+425,1309,Estatal Ingeniero Director De Carreteras Secretaria de Obras Públicas del departamento del Huila,01/01/83,31/01/89,,,2010-01-17T17:35:02Z,2010-02-12T20:01:01Z
+426,1309,Estatal Secretario de Obras Públicas del departamento del Huila Secretaria de Obras Públicas de departamento Del Huila,01/01/92,31/12/92,,,2010-01-17T17:35:02Z,2010-02-12T20:01:01Z
+174,686,Estatal Secretario de Gobierno Gobernación Nariño,01/01/79,31/12/80,,,2010-01-17T17:34:59Z,2010-05-14T18:24:39Z
+600,1799,"Ingenieria y Servicios de Construccion Ingeniero de Mantenimiento, Ingeniero de Obras, Ingeniero de distribución Entidades Privadas y Electrificadora zona del Meta",07/06/73,09/07/82,,,2010-02-13T00:45:14Z,2010-02-13T00:45:14Z
+601,1799,Educacion y Conocimiento Profesor universitario Universidad Francisco de Paula Santander,02/01/78,24/11/78,,,2010-02-13T00:45:14Z,2010-02-13T00:45:14Z
+602,1799,"Ingenieria y Servicios de Construccion Socio Gerente, Director ejecutivo, Gerente C.I.E. Ingenieros LTDA, CIELECTRICA LTDA, CIETSE LTDA",10/04/82,02/12/10,,,2010-02-13T00:45:14Z,2010-02-13T00:45:14Z
+605,1763,Otros Servicios Coordinador Movimiento Político MIRA,01/01/09,07/07/09,,,2010-02-13T17:00:54Z,2010-02-13T17:00:54Z
+606,2125,Agricola Jefe Planeacion Ministerio de Agricultura,25/05/70,22/06/74,,,2010-02-13T20:15:00Z,2010-02-13T20:15:00Z
+607,2125,Educacion y Conocimiento Director Organizacion y Metodos Ministerio de Educacion,16/08/66,06/10/70,,,2010-02-13T20:15:00Z,2010-02-13T20:15:00Z
+608,2125,Estatal Secretario General Alcadia Mayor de Bogota,15/11/74,25/12/75,,,2010-02-13T20:15:00Z,2010-02-13T20:15:00Z
+609,284,Otros Servicios Coordinador Minorias Etnicas Partido U,15/12/08,31/12/09,,,2010-02-15T05:56:12Z,2010-02-15T05:56:12Z
+561,1852,Otros Servicios auxiliar Seguridad Nacional al Transporte Ltda.,NA,NA,,,2010-02-06T22:16:30Z,2014-05-15T22:20:45Z
+562,1852,Farmaceuticos auxiliar Industrias Seyvor Ltda.,NA,NA,,,2010-02-06T22:16:30Z,2014-05-15T22:20:45Z
+563,1852,Otros Servicios auxiliar Comercializadora Producplasticos Ltda.,NA,NA,,,2010-02-06T22:16:30Z,2014-05-15T22:20:45Z
+99,482,Estatal Director Pecuario Ministerio de Agricultura,01/01/98,31/12/99,,,2010-01-17T17:34:58Z,2010-02-16T19:05:13Z
+610,2087,Metalmecanica Gerente CEDAL S.A.,NA,NA,,,2010-02-17T00:02:19Z,2010-02-17T00:02:19Z
+612,2092,Servicios de Salud odontologó Independiente  - practica privada,16/12/00,17/02/10,,,2010-02-17T21:40:12Z,2010-02-17T21:40:12Z
+613,2092,Educacion y Conocimiento docente  carrera técnica laboral Auxliares admisntirativos de salud CAMPOALTO,04/08/09,17/02/10,,,2010-02-17T21:40:12Z,2010-02-17T21:40:12Z
+614,2092,Servicios de Salud odontólogo U. Movil Coop.Intrasalud-Hospitla Centro Oriente ESE II,16/06/03,18/11/03,,,2010-02-17T21:40:12Z,2010-02-17T21:40:12Z
+615,2092,"Servicios de Salud Fundador, asesor, consultor en  el área de garantia de calidad, y en el desarrollo de planes, progrmas y proyectos de salud SACAVI CTA",01/06/02,15/06/03,,,2010-02-17T21:40:12Z,2010-02-17T21:40:12Z
+616,2092,Servicios de Salud odontólogo Servicio Social Obligatorio Hospital Centro Oriente ESE Nivel II,04/01/01,04/01/02,,,2010-02-17T21:40:12Z,2010-02-17T21:40:12Z
+617,1058,Estatal Secretario General Gobernación del Cesar,01/01/99,01/01/00,,,2010-02-18T18:14:41Z,2010-02-18T18:14:41Z
+618,1742,Educacion y Conocimiento SUBDIRECTORA DE PERSONAL ESE MARCO FIDEL SUAREZ BELLO,NA,NA,,,2010-02-21T03:35:52Z,2010-02-21T03:35:52Z
+619,1742,Estatal SUBDIRECTORA DE PERSONAL ESE MUNICIPIO DE LA CEJA,NA,NA,,,2010-02-21T03:35:52Z,2010-02-21T03:35:52Z
+620,1742,"Otros Servicios ABOGADA LITIGANTE, ASESORA JURÍDICA INDEPENDIENTE",NA,NA,,,2010-02-21T03:35:52Z,2010-02-21T03:35:52Z
+621,1336,Otros Servicios Administrador LETROGOLFO,NA,NA,,,2010-02-21T04:04:39Z,2010-02-21T04:04:39Z
+622,1342,Articulos Industriales Ingeniero Electricista IMAN LIMITADA,NA,NA,,,2010-02-21T04:25:47Z,2010-02-21T04:25:47Z
+623,1342,Articulos Industriales Ingeniero Electricista VISUAL INGENIERÍA,NA,NA,,,2010-02-21T04:25:47Z,2010-02-21T04:25:47Z
+624,2268,"Ingenieria y Servicios de Construccion Asesor ESPY, Yumbo",06/06/06,31/12/07,,,2010-02-21T17:30:34Z,2010-02-21T17:30:34Z
+625,1455,Telecomunicaciones Aprendiz E.P.M.,NA,NA,,,2010-02-21T23:16:28Z,2010-02-21T23:16:28Z
+626,1455,Telecomunicaciones Ejecutivo Comercial Movistar,NA,NA,,,2010-02-21T23:16:28Z,2010-02-21T23:16:28Z
+627,1339,Otros Servicios ASESORA JURÍDICA Coperativa Forjar,NA,NA,,,2010-02-21T23:29:49Z,2010-02-21T23:29:49Z
+628,1339,Otros Servicios Abogada Litigante Independiente,NA,NA,,,2010-02-21T23:29:49Z,2010-02-21T23:29:49Z
+629,1339,Estatal Asistente de Fiscalía Fiscalía,NA,NA,,,2010-02-21T23:29:49Z,2010-02-21T23:29:49Z
+630,1339,Estatal ASISTENTE DE ALCALDIA MUNICIPIO SEGOVIA Municipio Segovia,NA,NA,,,2010-02-21T23:29:49Z,2010-02-21T23:29:49Z
+631,1347,Otros Servicios Comerciante Independiente,NA,NA,,,2010-02-21T23:47:13Z,2010-02-21T23:47:13Z
+632,1566,Muebles y Maderas Gerente PUERTAS Y DECORACIONES,NA,NA,,,2010-02-22T00:00:28Z,2010-02-22T00:00:28Z
+633,1340,Telecomunicaciones AGENTE TELEFONICA Solución,NA,NA,,,2010-02-22T00:15:49Z,2010-02-22T00:15:49Z
+634,1340,Artesanias y Regalos ASESORA DE VENTAS BORDADOS LIZ,NA,NA,,,2010-02-22T00:15:49Z,2010-02-22T00:15:49Z
+635,1341,Textiles y Confecciones ELECTRICISTA DE PLANTA LEONISA,NA,NA,,,2010-02-22T00:27:41Z,2010-02-22T00:27:41Z
+636,1341,Telecomunicaciones TECNICO DE TELÉFONOS CELSA,NA,NA,,,2010-02-22T00:27:41Z,2010-02-22T00:27:41Z
+642,1338,Otros Servicios CONTRATISTA DE OBRA CIVIL INDEPENDIENTE,NA,NA,,,2010-02-22T00:59:17Z,2010-02-22T00:59:17Z
+637,1337,Otros Servicios GERENTE ADMINISTRATIVO Cooperativa Fianciera COOPIANTIOQUIA,NA,NA,,,2010-02-22T00:35:59Z,2010-02-22T00:35:59Z
+638,1337,Servicios de Salud Asesor Administrativo ESE RAFAEL URIBE COOPERATIVA INTEGRA,NA,NA,,,2010-02-22T00:35:59Z,2010-02-22T00:35:59Z
+639,1337,Otros Servicios BAU Administrador cadena de restaurantes,NA,NA,,,2010-02-22T00:35:59Z,2010-02-22T00:35:59Z
+640,1344,Otros Servicios ESCOLTA DEPARTAMENTO ADMINISTRATIVO DE SEGURIDAD DAS,NA,NA,,,2010-02-22T00:49:30Z,2010-02-22T00:49:30Z
+641,1344,Otros Servicios FRANQUICIA JUEGOS DE AZAR INDEPENDIENTE,NA,NA,,,2010-02-22T00:49:30Z,2010-02-22T00:49:30Z
+643,1338,Otros Servicios AUXILIAR DE ALMACEN MEJIA ACEVEDO,NA,NA,,,2010-02-22T00:59:17Z,2010-02-22T00:59:17Z
+644,1338,Otros Servicios CONTRATISTA DE OBRA CIVIL INDEPENDIENTE,NA,NA,,,2010-02-22T01:00:23Z,2010-02-22T01:00:23Z
+645,1338,Otros Servicios AUXILIAR DE ALMACEN MEJIA ACEVEDO,NA,NA,,,2010-02-22T01:00:23Z,2010-02-22T01:00:23Z
+646,1338,Otros Servicios CONTRATISTA DE OBRA CIVIL INDEPENDIENTE,NA,NA,,,2010-02-22T01:00:32Z,2010-02-22T01:00:32Z
+647,1338,Otros Servicios AUXILIAR DE ALMACEN MEJIA ACEVEDO,NA,NA,,,2010-02-22T01:00:32Z,2010-02-22T01:00:32Z
+648,286,Otros Servicios Abogado Asociado Proskauer Rose LLP,15/09/08,30/09/09,,,2010-02-22T21:35:07Z,2010-02-22T21:35:07Z
+649,286,Otros Servicios Practicante Legal Ayuda Inc.,07/01/08,25/04/08,,,2010-02-22T21:35:07Z,2010-02-22T21:35:07Z
+650,286,Otros Servicios Departamento Legal Major League Soccer L.L.C.,14/05/07,24/08/07,,,2010-02-22T21:35:07Z,2010-02-22T21:35:07Z
+651,286,Otros Servicios Consultor Akiris de Colombia S.A.,04/10/04,30/06/05,,,2010-02-22T21:35:07Z,2010-02-22T21:35:07Z
+652,2263,Otros Servicios Presidente Empresa de Energia del Quindio,NA,NA,,,2010-02-23T02:18:14Z,2010-02-23T02:18:14Z
+653,2322,Agricola gerente seccSan Salberto Fedearroz,NA,NA,,,2010-02-24T17:56:06Z,2010-02-24T17:56:06Z
+654,2322,Estatal Recaudacion Dian,NA,NA,,,2010-02-24T17:56:06Z,2010-02-24T17:56:06Z
+655,2322,Otros Servicios Asesor financiero independiente varios,NA,NA,,,2010-02-24T17:56:06Z,2010-02-24T17:56:06Z
+656,1378,Servicios de Salud Coordinadora de PYP IMSALUD,NA,NA,,,2010-02-26T21:48:19Z,2010-02-26T21:48:19Z
+657,1378,Servicios de Salud Recursos Humanos SISO LTDA.,NA,NA,,,2010-02-26T21:48:19Z,2010-02-26T21:48:19Z
+658,2345,Ingenieria y Servicios de Construccion AXILIAR DEL INGENIERO ELECTRICO JUMELEC,03/02/07,01/05/09,,,2010-02-28T05:53:18Z,2010-02-28T05:53:18Z
+659,2345,Ingenieria y Servicios de Construccion CONTRATISTA INDEPENDIENTE,15/01/02,NA,,,2010-02-28T05:53:18Z,2010-02-28T05:53:18Z
+660,2345,Ingenieria y Servicios de Construccion SUPERVISOR ASENTEL MEDELLIN L.T.D.A,15/06/09,15/12/09,,,2010-02-28T05:53:18Z,2010-02-28T05:53:18Z
+661,2361,Educacion y Conocimiento Profesor Pontificia Universidad Javeriana,NA,NA,,,2010-03-01T19:26:47Z,2010-03-01T19:26:47Z
+662,2361,Educacion y Conocimiento Profesor Universidad de la Salle,NA,NA,,,2010-03-01T19:26:47Z,2010-03-01T19:26:47Z
+663,2361,Medio Ambiente Consultor en planeación Urbana y regional independiente,NA,NA,,,2010-03-01T19:26:47Z,2010-03-01T19:26:47Z
+664,2305,Estatal ASESORA JURIDICA Alcaldía de Puerto Nariño (Amazonas),01/01/98,31/08/98,,,2010-03-03T01:21:52Z,2010-03-03T01:21:52Z
+665,2305,"Estatal COORDINADORA DE CONVENIOS Alcaldías de Boyacá, Casanare y Sucre",01/01/99,31/12/99,,,2010-03-03T01:21:52Z,2010-03-03T01:21:52Z
+666,2305,Estatal COORDINADORA DE CONVENIO Contraloria General de la República,01/12/98,31/08/99,,,2010-03-03T01:35:03Z,2010-03-03T01:35:03Z
+667,2305,Estatal ASISTENTE UNIDAD DE TRABAJO LEGISLATIVO Senado de la República,01/07/00,31/08/01,,,2010-03-03T01:35:03Z,2010-03-03T01:35:03Z
+668,2305,Estatal ASISTENTE UNIDAD DE TRABAJO LEGISLATIVO Senado de la República,01/09/01,31/08/05,,,2010-03-03T01:35:03Z,2010-03-03T01:35:03Z
+672,1894,Otros Servicios Codirector Nacional Partido Verde,02/10/09,01/04/10,,,2010-03-03T19:02:33Z,2010-03-03T19:02:33Z
+673,1894,Otros Servicios Consultor PNUD IDEA,01/01/07,NA,,,2010-03-03T19:02:33Z,2010-03-03T19:02:33Z
+674,1894,Otros Servicios Director IDRD,NA,NA,,,2010-03-03T19:02:33Z,2010-03-03T19:02:33Z
+675,1498,Educacion y Conocimiento promotora comunitaria fundacion gotas de amor,15/03/03,15/01/04,,,2010-03-07T20:18:36Z,2010-03-07T20:18:36Z
+676,1498,Educacion y Conocimiento agente comunitaria fundacion  REI,01/03/08,28/02/10,,,2010-03-07T20:18:36Z,2010-03-07T20:18:36Z
+677,1498,Educacion y Conocimiento agente educativa FUDESCO,09/01/98,30/06/98,,,2010-03-07T20:18:36Z,2010-03-07T20:18:36Z
+678,2383,Estatal Asesor para la implementación de la Política Pública LGBT Alcaldía Mayor de Bogotá,NA,NA,,,2010-03-08T23:36:19Z,2010-03-08T23:39:25Z
+100,484,"Servicios de Salud Gineco Obstetra de Guardia Sanatorio 15 De Diciembre, Buenos Aires, Argentina",07/11/93,12/12/94,,,2010-01-17T17:34:59Z,2010-04-06T16:34:08Z
+101,484,"Servicios de Salud Gineco Obstetra de Guardia Clínica Ravvson, Buenos Aires, Argentina",02/08/92,12/12/94,,,2010-01-17T17:34:59Z,2010-04-06T16:34:08Z
+102,484,"Servicios de Salud Director Hospital San Agustín-Fonseca, La Guajira",09/02/89,20/03/91,,,2010-01-17T17:34:59Z,2010-04-06T16:34:08Z
+704,2111,Estatal Asesor Ministerio de Hacienda,01/01/01,31/12/01,,,2010-04-30T15:15:00Z,2010-04-30T15:15:00Z
+103,484,"Servicios de Salud Gineco-Obstetra de Planta Hospital San Rafael, San Juan del Cesar, La Guajira",10/02/95,15/04/97,,,2010-01-17T17:34:59Z,2010-04-06T16:34:08Z
+104,484,"Servicios de Salud Gineco Obstetra de Planta Hospital San Agustí, Fonseca, La Guajira",10/02/95,15/04/97,,,2010-01-17T17:34:59Z,2010-04-06T16:34:08Z
+272,992,Envases  y Empaques Gerente General Idema,01/01/72,31/12/73,,,2010-01-17T17:35:00Z,2010-04-06T22:05:22Z
+189,790,Estatal Consejero de Seguridad Nacional Presidencia de la República,01/01/90,31/12/91,,,2010-01-17T17:34:59Z,2010-04-07T14:40:48Z
+190,790,Estatal Director del Plan Nacional de Rehabilitaci?N Presidencia de la República,01/01/86,31/12/88,,,2010-01-17T17:34:59Z,2010-04-07T14:40:48Z
+191,790,Estatal Consejero Presidencial para la Paz Presidencia de la República,01/01/88,31/12/90,,,2010-01-17T17:35:00Z,2010-04-07T14:40:48Z
+353,1222,Estatal Miembro de la Junta Directiva Asoholstein Nacional,01/06/93,31/05/95,,,2010-01-17T17:35:01Z,2010-04-08T15:59:39Z
+354,1222,Servicios de Salud Presidente Colegio de Médicos Veterinarios de Boyacá,01/01/91,31/12/94,,,2010-01-17T17:35:01Z,2010-04-08T15:59:39Z
+355,1222,Estatal Vicepresidente Asociación Departamental de Alcaldes De Boyaca,01/01/88,31/12/90,,,2010-01-17T17:35:01Z,2010-04-08T15:59:39Z
+356,1222,Estatal Presidente Centro de Atención Integral al Sector Agropecuario,01/05/95,31/12/95,,,2010-01-17T17:35:01Z,2010-04-08T15:59:39Z
+312,1192,Estatal Subdirector Territorial Nacional Instituto Colombiano De Bienestar Familiar,01/01/03,01/09/04,,,2010-01-17T17:35:01Z,2010-04-08T16:29:56Z
+313,1192,Estatal Director Regional Antioquia Instituto Colombiano De Bienestar Familiar,15/09/04,31/12/04,,,2010-01-17T17:35:01Z,2010-04-08T16:29:56Z
+314,1192,Estatal Secretario de Salud Departamento Del  Tolima,01/01/90,31/12/92,,,2010-01-17T17:35:01Z,2010-04-08T16:29:56Z
+315,1192,Estatal Director Instituto Colombiano De Bienestar Familiar,01/01/92,31/12/02,,,2010-01-17T17:35:01Z,2010-04-08T16:29:56Z
+316,1192,Estatal Subdirector Territorial Nacional Instituto Colombiano De Bienestar Familiar,01/01/04,31/07/05,,,2010-01-17T17:35:01Z,2010-04-08T16:29:56Z
+317,1192,Estatal Medico Rural y Auxiliar Hospital San Juan Bautista De Caparral Tolima,30/09/80,30/12/81,,,2010-01-17T17:35:01Z,2010-04-08T16:29:56Z
+318,1192,Estatal Director Hospital La Candelaria De Purificaci?N Tolima,31/12/84,31/12/90,,,2010-01-17T17:35:01Z,2010-04-08T16:29:56Z
+44,313,Instrumentos y Aparatos Gerente de Mantenimiento Máquinas Registradoras Hugin Acepala Ltda,06/12/05,06/12/05,,,2010-01-17T17:34:58Z,2010-04-08T17:54:23Z
+46,313,Otros Servicios Ingeniero de Mantenimiento en el área de Instrumentación Analítica Instrumentación S.A.,06/12/05,06/12/05,,,2010-01-17T17:34:58Z,2010-04-08T17:54:23Z
+47,313,Otros Servicios Ingeniero de Mantenimiento Idear De Colombia,06/12/05,06/12/05,,,2010-01-17T17:34:58Z,2010-04-08T17:54:23Z
+341,1214,Estatal Capitán de la Reserva Ejército Nacional,20/07/06,20/07/06,,,2010-01-17T17:35:01Z,2010-04-08T21:13:12Z
+342,1214,Estatal Coordinador Internacional Campaña a la Presidencia de la República del Doctor Luis Carlos Galán Sarmiento,01/06/81,20/07/82,,,2010-01-17T17:35:01Z,2010-04-08T21:13:12Z
+343,1214,Estatal Miembro de Junta Directiva Instituto Colombiano de Bienestar Familiar,01/01/85,31/12/86,,,2010-01-17T17:35:01Z,2010-04-08T21:13:12Z
+344,1214,Estatal Secretario de Tránsito y Transportes de Bogotá Secretaría de Tránsito y Transportes de Bogotá,01/06/90,30/06/91,,,2010-01-17T17:35:01Z,2010-04-08T21:13:12Z
+345,1214,Estatal Superintendente del Subsidio Familiar Superintendencia de Subsidio Familiar,01/09/85,30/09/86,,,2010-01-17T17:35:01Z,2010-04-08T21:13:12Z
+346,1214,Estatal Superintendente de Sociedades Ad-Hoc Superintendencia de Sociedades,01/08/85,31/08/85,,,2010-01-17T17:35:01Z,2010-04-08T21:13:12Z
+706,847,Estatal Ministro de Comercio Ministerio de Comercio,01/01/95,31/12/96,,,2010-05-13T17:15:16Z,2010-05-13T17:15:16Z
+707,847,Estatal Secretario de Hacienda Alcaldía de Medellín,01/01/78,31/12/80,,,2010-05-13T17:15:16Z,2010-05-13T18:09:41Z
+708,847,Estatal Canciller Ministerio de Relaciones Exteriores,01/01/98,31/12/01,,,2010-05-13T17:15:16Z,2010-05-13T18:09:41Z
+182,713,Telecomunicaciones Fundador y Presidente Cable Unión de Occidente S.A.,01/01/00,30/08/01,,,2010-01-17T17:34:59Z,2010-05-14T16:37:38Z
+175,686,Estatal Personero Personería Depto Nariño,01/01/73,31/12/74,,,2010-01-17T17:34:59Z,2010-05-14T18:24:39Z
+165,623,Estatal Secretario de Educación Gobernación del Meta,01/01/75,31/12/76,,,2010-01-17T17:34:59Z,2010-05-19T16:05:58Z
+167,623,Otros Servicios Director Caja de Compensación Familiar del Meta,01/01/84,31/12/85,,,2010-01-17T17:34:59Z,2010-05-19T16:05:58Z
+168,623,Estatal Delegado F.E.R Meta Ministerio de Educación,01/01/74,31/12/75,,,2010-01-17T17:34:59Z,2010-05-19T16:05:58Z
+159,601,"Servicios de Salud Jefe Atención Médica Caprecom Regional Antioquia, Córdoba y Chocó",01/08/92,31/12/92,,,2010-01-17T17:34:59Z,2010-05-19T16:13:24Z
+709,370,"Estatal Personero Persobnería Ovejas, Sucre",01/01/87,31/12/87,,,2010-05-19T19:33:46Z,2010-05-19T19:33:46Z
+710,370,"Estatal Director Administrativo y Financiero Inscredial, Sucre",01/12/88,21/02/89,,,2010-05-19T19:33:46Z,2010-05-19T19:40:45Z
+711,370,"Estatal Auditor Regional de Salud Pública, Sucre Contraloría General de la Nación",24/08/89,31/10/90,,,2010-05-19T19:33:46Z,2010-05-19T19:40:45Z
+712,370,Estatal Delegado del Ministerio de Educación Nacional Fondo Educativo Regional de Sucre,01/11/90,01/11/93,,,2010-05-19T19:33:46Z,2010-05-19T19:40:45Z
+684,2039,"Estatal Asesor Interventoría al Plan Ambiental Indígena del Departamento, comunidades de la cuenca del Río Cauca. Gobernación del Cauca",01/12/99,30/11/00,,,2010-04-20T21:01:43Z,2010-04-20T21:01:43Z
+685,2039,Estatal Asesor Interventoría covenio interadministrativo Municipio de Jambaló y Gobernación del Cauca para la ejecución de los recursos EPS,01/12/99,31/01/01,,,2010-04-20T21:01:43Z,2010-04-20T21:01:43Z
+686,2039,Estatal Coordinador Regional Delegación Red de Solidaridad del Valle del Cauca,01/01/95,30/05/99,,,2010-04-20T21:01:43Z,2010-04-20T21:01:43Z
+687,2039,Estatal Coordinador Regional Cauca Plan Nacional de Rehabilitación,01/01/94,31/12/94,,,2010-04-20T21:01:43Z,2010-04-20T21:01:43Z
+122,512,Estatal Secretario Secretaría de Obras Públicas de Campoalegre,01/01/92,31/12/98,,,2010-01-17T17:34:59Z,2010-04-23T15:08:28Z
+326,1202,Estatal Gerente y Creador  de la Empresa de Servicios Públicos del Municipio de Belén de Umbría Empresa Municipal  de Servicios Públicos Belén de Umbría,02/09/99,05/09/00,,,2010-01-17T17:35:01Z,2010-04-26T21:00:46Z
+688,348,Estatal Contralor Departamental Gobernación de Santander,01/07/85,31/12/87,,,2010-04-27T19:15:17Z,2010-04-27T19:15:17Z
+689,348,Estatal Cónsul Miami Ministerio de Relaciones Exteriores,01/01/82,31/12/83,,,2010-04-27T19:15:17Z,2010-04-27T19:15:17Z
+690,2520,Estatal Secretario Desarrollo Gobernación de Santander,01/01/04,31/12/07,,,2010-04-27T20:19:21Z,2010-04-27T20:19:21Z
+691,2521,Estatal Secretario de Gobierno Gobernación de Santander,01/01/04,31/12/06,,,2010-04-27T20:34:20Z,2010-04-27T20:34:20Z
+692,2539,Estatal Secretario de Educación Alcaldía de Buenaventura,01/01/08,28/02/09,,,2010-04-28T18:55:56Z,2010-04-28T18:55:56Z
+693,118,Estatal Jefe Departamento de Planeación de Tierras Inscredial,01/11/80,25/07/94,,,2010-04-29T14:49:16Z,2010-04-29T14:49:16Z
+694,118,Otros Servicios Presidente Fenaltrase,01/03/95,25/03/02,,,2010-04-29T14:49:16Z,2010-04-29T14:49:16Z
+695,407,Estatal Director Administración Postal Nacional,01/01/80,31/12/82,,,2010-04-29T15:41:57Z,2010-04-29T15:41:57Z
+696,407,Estatal Director Dirección de Impuestos Distritales,01/01/79,31/12/79,,,2010-04-29T15:41:57Z,2010-04-29T15:41:57Z
+697,407,Estatal Director Acción Comunal Cundinamarca,01/01/77,31/12/78,,,2010-04-29T15:41:57Z,2010-04-29T15:41:57Z
+698,128,Educacion y Conocimiento Coordinador Comité Divulgación Cívica Cámara de Comercio de Cali,18/01/88,31/07/89,,,2010-04-29T16:47:39Z,2010-04-29T16:47:39Z
+699,128,"Otros Servicios Director Ejecutivo Fundación por Colombia, Capítulo Valle",15/08/89,15/08/90,,,2010-04-29T16:47:39Z,2010-04-29T16:47:39Z
+700,128,Otros Servicios Asistente de Presidencia Fundaprogreso,01/10/90,31/08/92,,,2010-04-29T16:47:39Z,2010-04-29T16:47:39Z
+701,128,Otros Servicios Secretario general Concurso Alcalde del Año,01/02/91,31/12/92,,,2010-04-29T16:47:39Z,2010-04-29T16:47:39Z
+702,493,Estatal Jefe de control posterior Auditoria Emcali,01/01/80,31/12/88,,,2010-04-29T21:19:26Z,2010-04-29T21:19:26Z
+703,493,Estatal Auditoria Contraloría Gobernación del Valle,01/01/71,31/12/78,,,2010-04-29T21:19:26Z,2010-04-29T21:19:26Z
+109,510,Estatal Director Casa de Cultura Alcaldía de Curumaní,01/01/90,31/12/91,,,2010-01-17T17:34:59Z,2010-04-30T16:05:35Z
+54,346,Otros Servicios Fundador y Presidente Movimiento Juventud por el Guaviare,22/01/92,31/12/94,,,2010-01-17T17:34:58Z,2010-04-30T19:56:53Z
+55,346,Otros Servicios Secretario de Cultura Gobernación del Guaviare,01/04/98,31/03/99,,,2010-01-17T17:34:58Z,2010-04-30T19:56:53Z
+56,7,Estatal Jefe de Valorización Gobernación del Quindío,21/10/82,06/05/85,,,2010-01-17T17:34:58Z,2010-04-30T20:12:51Z
+439,41,Estatal Asesor Consejería Presidencial para la Paz,01/01/92,01/01/93,,,2010-01-21T21:49:48Z,2010-05-03T18:38:35Z
+446,41,Estatal Conjuez Sala Penal Honorable Tribunal Superior De Popay Tribunal Superior de Popayán,02/07/85,02/06/86,,,2010-01-21T21:49:48Z,2010-05-03T18:38:35Z
+447,41,Estatal Senador De La República Senado de la República,20/07/06,20/07/10,,,2010-01-21T21:49:48Z,2010-05-03T18:38:35Z
+451,41,Estatal Gobernador Gobernación del Cauca,01/01/90,01/01/91,,,2010-01-21T21:49:48Z,2010-05-03T18:38:35Z
+163,612,Estatal Cónsul General de Colombia en Barcelona (España) Ministerio de Relaciones Exteriores,10/01/92,30/11/93,,,2010-01-17T17:34:59Z,2010-05-03T20:33:54Z
+171,289,Estatal Secretario Secretaría Privada Cancillería Colombiana,01/01/84,31/12/86,,,2010-01-17T17:34:59Z,2010-05-03T21:40:04Z
+705,647,Vehiculos y otros medios de transporte Gerente General Transportes Montejo,18/08/01,15/12/01,,,2010-05-04T14:56:50Z,2010-05-04T14:56:50Z
+94,28,Estatal Secretario Privado Ministerio de Desarrollo Economico,01/07/90,30/11/91,,,2010-01-17T17:34:58Z,2010-05-04T19:22:23Z
+95,28,Estatal Jefe de Comunicaciones Asociación Colombiana Moderna,06/07/93,30/07/94,,,2010-01-17T17:34:58Z,2010-05-04T19:22:23Z
+188,756,Otros Servicios Secretario General y Vicepresidente de Recursos Humanos Banco Popular,07/01/90,31/12/92,,,2010-01-17T17:34:59Z,2010-05-04T20:07:25Z
+400,1276,Otros Servicios Presidente Colcoke S.A.,01/01/02,01/01/03,,,2010-01-17T17:35:02Z,2010-05-06T16:39:14Z
+401,1276,Acuicola y Pesquero Presidente Comercializadora Catalina Fish,01/01/99,01/01/01,,,2010-01-17T17:35:02Z,2010-05-06T16:39:14Z
+402,1276,Audiovisuales Gerente Oiga Vea Television - TelepacíFico,01/01/89,01/01/93,,,2010-01-17T17:35:02Z,2010-05-06T16:39:14Z
+403,1276,Otros Servicios Piloto Comercial Sector Privado,01/01/83,01/01/88,,,2010-01-17T17:35:02Z,2010-05-06T16:39:14Z
+404,1276,Estatal Gerente Mincesar S.A.,01/01/05,01/01/07,,,2010-01-17T17:35:02Z,2010-05-06T16:39:14Z
+301,1091,Estatal Inspector Tercero Municipal Alcaldía de Sogamoso,01/01/89,31/12/90,,,2010-01-17T17:35:01Z,2010-05-10T22:05:13Z
+302,1091,Courriers Presidente Servipostal R.E Ltda,01/01/93,31/12/05,,,2010-01-17T17:35:01Z,2010-05-10T22:05:13Z
+289,1055,Estatal Gobernador Encargado Gobernación de Cundinamarca,16/12/95,20/06/96,,,2010-01-17T17:35:01Z,2010-05-19T20:30:51Z
+290,1055,Estatal Secretario de Gobierno Gobernación de Cundinamarca,02/01/95,11/05/97,,,2010-01-17T17:35:01Z,2010-05-19T20:30:51Z
+113,511,Estatal Miembro Comision Tercera Constitucional de Asuntos Económicos Senado de la República,20/07/98,13/02/08,,,2010-01-17T17:34:59Z,2010-05-19T20:46:24Z
+114,511,Estatal Miembro Comision  Accidental  de Reforma al Sistema Político y Electoral Colombiano  Senado de la República,01/10/07,13/02/08,,,2010-01-17T17:34:59Z,2010-05-19T20:46:24Z
+116,511,Estatal Miembro Comisión de Administracion  Senado de la República,20/07/98,13/02/08,,,2010-01-17T17:34:59Z,2010-05-19T20:46:24Z
+117,511,Estatal Presidente Comision de Seguimiento a Órganos de Control Senado de la República,20/07/07,13/02/08,,,2010-01-17T17:34:59Z,2010-05-19T20:46:24Z
+118,511,Estatal Presidente Federacion Colombiana de Educadores Fecode,01/01/90,30/12/94,,,2010-01-17T17:34:59Z,2010-05-19T20:46:24Z
+83,451,Estatal Alcalde Municipal Alcaldía de Pamplona,01/01/83,31/12/84,,,2010-01-17T17:34:58Z,2010-05-20T15:36:41Z
+291,1063,Estatal Asesor Externo De Mercadeo Y Publicidad Florenciana de Licores Ltda,01/01/91,01/01/03,,,2010-01-17T17:35:01Z,2010-05-20T22:09:28Z
+293,1063,Estatal Asesor Congreso de la República,01/01/90,01/01/92,,,2010-01-17T17:35:01Z,2010-05-20T22:09:28Z
+294,1063,Estatal Asesor Externo de Mercadeo Y Publicidad Distribuidora de Licores San Agustin,01/01/93,01/01/03,,,2010-01-17T17:35:01Z,2010-05-20T22:09:28Z
+713,1061,Estatal Secretario de Gobierno Alcaldía Cartagena,01/01/98,31/12/00,,,2010-05-21T15:34:48Z,2010-05-21T15:34:48Z
+714,14,Otros Servicios Presidente Sindicato Nacional de Trabajadores de la Caja Agraria.,01/01/92,31/12/99,,,2010-05-21T15:48:11Z,2010-05-21T15:48:11Z
+715,329,Otros Servicios Director Caprecom,01/01/86,31/12/89,,,2010-05-21T18:52:08Z,2010-05-21T18:52:08Z
+716,329,Estatal Secretario de Fomento y Economía Gobernación de Cundinamarca,01/01/65,31/12/65,,,2010-05-21T18:52:08Z,2010-05-21T18:52:08Z
+470,4,Educacion y Conocimiento Docente Universidad Cooperativa de Colombia,01/01/97,01/01/00,,,2010-01-22T21:05:02Z,2010-05-21T20:06:24Z
+362,1234,Otros Servicios Gerente General Ramírez & Orozco International Strategy Consultants,01/04/04,31/01/98,,,2010-01-17T17:35:01Z,2010-05-24T21:58:00Z
+363,1234,Estatal Viceministra Ministerio de Comercio Exterior,01/08/91,15/06/93,,,2010-01-17T17:35:01Z,2010-05-24T21:58:00Z
+367,1234,Otros Servicios Gerente General Marta Lucía Ramírez de Rincón y Asociados,30/06/93,30/12/96,,,2010-01-17T17:35:01Z,2010-05-24T21:58:00Z
+717,13,Estatal Secretario General del Espacio Público Intra,01/01/92,31/12/93,,,2010-05-24T22:09:03Z,2010-05-24T22:09:03Z
+718,13,Estatal Vicepresidente Comercial Ecosalud,01/01/96,31/12/97,,,2010-05-24T22:09:03Z,2010-05-24T22:09:03Z
+719,2600,Estatal Cónsul de Colombia en Nueva York Ministerio de Relaciones Exteriores,01/01/99,06/12/05,,,2010-05-25T15:33:56Z,2010-05-25T15:33:56Z
+720,96,Estatal Director Aeronáutica Civil,01/01/01,31/12/05,,,2010-05-25T16:19:26Z,2010-05-25T16:19:26Z
+721,96,Servicios Turisticos Presidente ANATO,01/01/06,31/05/07,,,2010-05-25T16:19:26Z,2010-05-25T16:19:26Z
+722,25,Estatal Junta de Planeación departamental Gobernación de Antioquia,01/01/86,31/12/87,,,2010-05-25T18:24:15Z,2010-05-25T18:26:53Z
+723,25,Estatal Junta Directiva Beneficiencia Gobernación de Antioquia,01/01/93,31/12/94,,,2010-05-25T18:26:53Z,2010-05-25T18:26:53Z
+724,25,Servicios Turisticos Miembro Junta Directiva Corporación de Fomento y Turismo de Medellín,01/01/96,31/12/97,,,2010-05-25T18:26:53Z,2010-05-25T18:26:53Z
+409,1277,Otros Servicios Primera Dama Departamento de Antioquia Gobernacion De Antioquia,01/01/01,05/05/03,,,2010-01-17T17:35:02Z,2010-05-25T19:40:39Z
+725,811,Estatal Embajador de Colombia en Bélgica Ministerio de Relaciones Exteriores,01/01/94,31/12/96,,,2010-05-25T20:46:20Z,2010-05-25T20:46:20Z
+726,660,Estatal Viceministro Ministerio de Agricultura,01/01/78,31/12/80,,,2010-06-03T19:08:16Z,2010-06-03T19:08:16Z
+727,660,Estatal Gobernador Gobernación del Valle del Cauca,31/12/80,31/12/81,,,2010-06-03T19:08:16Z,2010-06-03T19:08:16Z
+728,660,Estatal Ministro Ministerio de Agricultura,31/12/81,31/12/82,,,2010-06-03T19:08:16Z,2010-06-03T19:08:16Z
+729,1026,Estatal Secretaria de Educación Gobernación del Valle del Cauca,01/01/76,31/12/78,,,2010-06-03T20:42:26Z,2010-06-03T20:42:26Z
+730,1026,Estatal Secretaria de Educación Gobernación del Valle del Cauca,01/01/87,31/12/89,,,2010-06-03T20:42:26Z,2010-06-03T20:42:26Z
+731,580,Editorial e Industria Grafica Gerente Periódico El Siglo,01/01/63,01/01/81,,,2010-06-15T19:43:33Z,2010-06-15T19:43:33Z
+732,297,Estatal Ministro Ministerio de Agricultura,01/08/99,01/08/02,,,2010-06-15T20:25:20Z,2010-06-15T20:25:20Z
+733,297,Estatal Gerente Incora,01/01/98,01/01/99,,,2010-06-15T20:25:20Z,2010-06-15T20:25:20Z
+734,388,Estatal Asesora Ministerio de Comercio Exterior,01/01/92,31/12/94,,,2010-06-15T20:34:05Z,2010-06-15T20:34:05Z
+735,388,Estatal Asesora Ministerio de Hacienda y Crédito Público,01/01/90,31/12/92,,,2010-06-15T20:34:05Z,2010-06-15T20:34:05Z
+737,992,"Estatal Embajador ante El Salvador, Noruega e Islandia Ministerio de Relaciones Exteriores",08/08/82,31/12/86,,,2010-06-18T20:35:23Z,2010-06-18T20:35:23Z
+738,992,Estatal Ministro Plenipotenciario en Washington Ministerio de Relaciones Exteriores,02/08/78,07/08/82,,,2010-06-18T20:35:23Z,2010-06-18T20:35:23Z
+309,1182,"Educacion y Conocimiento Director De La Corporación Para Investigaciones Biológicas, CIB Corporación Para Investigaciones Biológicas, CIB",01/09/02,02/03/06,,,2010-01-17T17:35:01Z,2010-06-21T19:36:10Z
+736,731,Estatal Asistente del secretario de Gobierno de Bogotá Ministerio de Desarrollo,NA,NA,,,2010-06-15T20:45:38Z,2014-04-23T11:01:33Z
+311,1182,Educacion y Conocimiento Director Ejecutivo Interino Del Centro Mundial De Investigación y Capacitación En Solución De Conflictos Centro Mundial De Investigación Y Capacitación,04/07/03,31/12/03,,,2010-01-17T17:35:01Z,2010-06-21T19:36:10Z
+739,1168,Estatal Jefe División Administrativa Empresa de Energía de Amazonas,17/01/97,18/09/98,,,2010-06-21T19:43:51Z,2010-06-21T19:43:51Z
+740,1168,"Estatal Secretario de Obras Públicas Alcaldía Leticia, Amazonas",03/01/95,30/12/97,,,2010-06-21T19:43:51Z,2010-06-21T19:43:51Z
+741,1168,Estatal Secretario de Obras Públicas Gobernación Amazonas,24/08/94,31/12/94,,,2010-06-21T19:43:51Z,2010-06-21T19:43:51Z
+742,1264,Estatal Coordinador Sisben Gobernación Bolívar,10/02/04,28/02/05,,,2010-06-21T21:20:51Z,2010-06-21T21:20:51Z
+743,1264,"Estatal Director Recursos Humanos Alcaldía María la Baja, Bolívar",01/01/97,01/01/99,,,2010-06-21T21:20:51Z,2010-06-21T21:20:51Z
+744,2517,Vehiculos y otros medios de transporte Socio-fundador Cooperativa de Transporte en Barrancabermeja,30/05/93,NA,,,2010-07-17T05:18:58Z,2010-07-17T05:18:58Z
+745,2517,Ingenieria y Servicios de Construccion Socio-fundador Asesores y Constructores,30/01/94,NA,,,2010-07-17T05:18:58Z,2010-07-17T05:18:58Z
+746,2039,Estatal Asesor Gobernación del Cauca,17/03/08,01/01/09,,,2010-08-02T02:47:10Z,2010-08-02T02:47:10Z
+748,2448,Educacion y Conocimiento Decana Académica Universidad Javeriana,NA,NA,,,2010-08-17T18:09:29Z,2010-08-17T18:09:29Z
+749,97,Educacion y Conocimiento Dircetor de Proyectos Especiales Universidad Santiago de Cali,NA,NA,,,2010-08-20T19:04:03Z,2010-08-20T19:04:03Z
+750,1803,Estatal Secretaria General Beneficencia de Cundinamarca,01/01/00,31/12/03,,,2010-09-02T20:05:07Z,2010-09-02T20:05:07Z
+752,251,Estatal Secretario General Personería de Bogotá,01/01/93,01/01/95,,,2010-09-14T18:50:36Z,2010-09-14T18:50:36Z
+753,251,Estatal Secretario General Abastos de Bogotá,01/01/90,31/12/92,,,2010-09-14T18:50:36Z,2010-09-14T18:50:36Z
+754,251,Educacion y Conocimiento Asesor Económico Universidad Javeriana,01/01/84,31/12/89,,,2010-09-14T18:50:36Z,2010-09-14T18:50:36Z
+755,919,Otros Servicios Abogado Schultz Abogados,01/01/78,31/12/98,,,2010-09-14T19:03:08Z,2010-09-14T19:03:08Z
+756,1220,Otros Servicios Gerente Asociación popular de Vivienda Jeansum Wister,01/01/98,01/01/02,,,2010-09-14T19:08:57Z,2010-09-14T19:08:57Z
+757,836,Servicios de Salud Médico general Consultorio privado,01/01/82,31/12/95,,,2010-09-14T19:18:47Z,2010-09-14T19:18:47Z
+758,836,Estatal Jefe Departamento de Medicina Interna Unidad Regional de Salud N° 3 de Magangué,01/01/82,31/12/82,,,2010-09-14T19:18:47Z,2010-09-14T19:18:47Z
+759,836,Estatal Jefe de Atención Médica Unidad Regional de Salud N° 3 de Magangué,01/01/83,31/12/87,,,2010-09-14T19:18:47Z,2010-09-14T19:18:47Z
+760,836,Estatal Secretario privado ad honorem Gobernación de Bolívar,01/01/98,31/12/98,,,2010-09-14T19:18:47Z,2010-09-14T19:18:47Z
+761,793,Otros Servicios Asesora jurídica Intertug,01/01/94,31/12/96,,,2010-09-14T19:23:09Z,2010-09-14T19:23:09Z
+762,1239,Estatal Juez Rama Judicial,01/01/80,31/12/80,,,2010-09-14T19:32:56Z,2010-09-14T19:32:56Z
+763,1239,Estatal Asesor Jurídico Contraloría General de la República,01/01/81,31/12/81,,,2010-09-14T19:32:56Z,2010-09-14T19:32:56Z
+764,1239,Estatal Ministerio de Trabajo Coordinador,01/01/82,31/12/82,,,2010-09-14T19:32:56Z,2010-09-14T19:32:56Z
+765,1239,Estatal Secretario de gobierno Gobernación de Cesar,01/01/93,31/12/94,,,2010-09-14T19:32:56Z,2010-09-14T19:32:56Z
+766,722,Estatal Jefe Planta Central de Betania Electrohuila,01/01/87,31/12/91,,,2010-09-14T19:47:52Z,2010-09-14T19:47:52Z
+767,722,"Estatal Central Hidroeléctrica de Huila CHB Jefe planeación, operación y mantenimiento electromecánico",01/01/81,01/01/87,,,2010-09-14T19:47:52Z,2010-09-14T19:47:52Z
+768,722,Estatal Electrohuila Ingeniero Unidad proyecto central hidroeléctrica Betania,01/01/79,01/01/81,,,2010-09-14T19:47:52Z,2010-09-14T19:47:52Z
+769,722,Estatal Ingeniero diseño trolebus. Mantenimiento Red Empresa Distrital de Transporte Urbano de Bogotá EDTU,01/01/74,01/01/79,,,2010-09-14T19:47:52Z,2010-09-14T19:47:52Z
+770,707,Estatal Asesora Jurídica Industria Licorera de Nariño,01/01/90,31/12/91,,,2010-09-14T20:02:03Z,2010-09-14T20:02:03Z
+771,707,Estatal Directora Jurídica Administrativa proyecto de ampliación Industria Licorera de Nariño,01/01/90,31/12/91,,,2010-09-14T20:02:03Z,2010-09-14T20:02:03Z
+878,1785,Estatal Jefe de Archivo Antioquia ,01/11/84,24/10/86,,,2011-05-04T16:12:41Z,2011-05-04T16:12:41Z
+773,516,"Estatal Alcalde Alcaldía de Frontino, Antioquia",01/01/80,31/12/86,,,2010-09-14T20:31:57Z,2010-09-14T20:32:37Z
+774,485,Estatal Gerente Metrosalud,01/01/97,31/12/99,,,2010-09-14T20:40:45Z,2010-09-14T20:40:45Z
+775,485,Estatal Secretario de Salud Municipio de Medellín,01/01/96,01/01/97,,,2010-09-14T20:40:45Z,2010-09-14T20:40:45Z
+776,485,Estatal Gerente Hospital General de Medellín,01/01/92,31/12/96,,,2010-09-14T20:40:45Z,2010-09-14T20:40:45Z
+777,454,Estatal Gerente Acueducto y Alcantarillado Emcali,01/01/83,31/12/84,,,2010-09-14T20:51:11Z,2010-09-14T20:51:11Z
+778,454,Estatal Jefe Departamento de Alcantarillado Emcali,01/01/81,01/01/83,,,2010-09-14T20:51:11Z,2010-09-14T20:51:11Z
+779,454,Estatal Jefe Sección Alcantarillado Emcali,01/01/79,01/01/81,,,2010-09-14T20:51:11Z,2010-09-14T20:51:11Z
+780,2842,Estatal Secretario de gobierno Municipio de Cúcuta,01/01/80,31/12/81,,,2010-09-14T20:56:58Z,2010-09-14T20:56:58Z
+781,2842,Estatal Asesor Instituto de Crédito Territorial,01/01/78,31/12/78,,,2010-09-14T20:56:58Z,2010-09-14T20:56:58Z
+782,452,Estatal Contralor Contraloría de Bogotá,01/01/98,31/12/00,,,2010-09-14T21:01:27Z,2010-09-14T21:01:27Z
+783,452,Estatal Gerente Administrativo ISS Bogotá Cundinamarca,01/01/94,31/12/96,,,2010-09-14T21:01:27Z,2010-09-14T21:01:27Z
+784,452,Estatal Gerente Regional Caprecom,01/01/92,01/01/94,,,2010-09-14T21:01:27Z,2010-09-14T21:01:27Z
+785,452,Estatal Jefe de Unidad Jurisdicción Coactiva Contraloría de Bogotá,01/01/92,31/12/92,,,2010-09-14T21:01:27Z,2010-09-14T21:01:27Z
+786,452,Estatal Profesional especializado XII C Contraloría de Bogotá,01/01/91,31/12/91,,,2010-09-14T21:01:27Z,2010-09-14T21:01:27Z
+787,452,Estatal Jefe Unidad División de Juicios Fiscales Contraloría de Bogotá,01/01/91,31/12/91,,,2010-09-14T21:01:27Z,2010-09-14T21:01:27Z
+788,1030,Estatal Gerente Invisan,01/01/94,31/12/94,,,2010-09-14T21:06:09Z,2010-09-14T21:06:09Z
+789,1030,Estatal Secretario de Educación Departamento del Magdalena,01/01/93,01/01/94,,,2010-09-14T21:06:09Z,2010-09-14T21:06:09Z
+790,1030,Otros Servicios Secretario general Gran Abastos,01/01/92,01/01/93,,,2010-09-14T21:06:09Z,2010-09-14T21:06:09Z
+791,366,Estatal Secretario de Hacienda Gobernación del Meta,01/01/82,01/01/83,,,2010-09-14T21:32:34Z,2010-09-14T21:32:34Z
+792,366,Estatal Ingeniero Ministerio de Obras Públicas,01/01/78,01/01/82,,,2010-09-14T21:32:34Z,2010-09-14T21:32:34Z
+793,366,Estatal Ingeniero Jefe de Distrito Gobernación del Meta,01/01/77,01/01/78,,,2010-09-14T21:32:34Z,2010-09-14T21:32:34Z
+794,366,Otros Servicios Administrador Cesar Echeverry y Cia.,01/01/95,01/01/97,,,2010-09-14T21:33:27Z,2010-09-14T21:33:27Z
+795,431,Ingenieria y Servicios de Construccion Gerente general Computadores Compatibles Ltda.,01/01/87,31/12/98,,,2010-09-14T21:47:03Z,2010-09-14T21:47:03Z
+796,498,Estatal Jefe de Sección Contraloría Municipal de Bucaramanga,01/01/91,31/12/91,,,2010-09-14T21:51:33Z,2010-09-14T21:51:33Z
+797,498,Estatal Auxiliar Contraloría Departamental de Santander,01/01/80,31/12/82,,,2010-09-14T21:51:33Z,2010-09-14T21:51:33Z
+798,498,Estatal Auxiliar Servicio de Salud de Santander,31/12/82,01/01/86,,,2010-09-14T21:51:33Z,2010-09-14T21:51:33Z
+799,576,Otros Servicios Docente de juzgamiento Coldeportes Antioquia,01/01/86,31/12/94,,,2010-09-14T21:58:13Z,2010-09-14T21:58:13Z
+800,576,Otros Servicios Gerente Deportivas JMG,01/01/91,01/01/00,,,2010-09-14T21:58:13Z,2010-09-14T21:58:13Z
+801,576,Otros Servicios Juez profesional e internacional Dimayor y FIFA,01/01/80,31/12/96,,,2010-09-14T21:58:13Z,2010-09-14T21:58:13Z
+802,646,Otros Servicios Coordinador de prestaciones sociales Entidades varias,01/01/79,01/01/82,,,2010-09-15T16:49:25Z,2010-09-15T16:49:25Z
+803,646,Estatal Auditor Empresas Públicas de Medellín,01/01/78,01/01/79,,,2010-09-15T16:49:25Z,2010-09-15T16:49:25Z
+804,646,Estatal Contraloría Revisor de documentos,01/01/72,01/01/78,,,2010-09-15T16:49:25Z,2010-09-15T16:49:25Z
+805,181,Estatal Inspector Dirección de Tránsito de Santander,01/01/85,31/12/86,,,2010-09-15T18:35:50Z,2010-09-15T18:35:50Z
+611,1750,Otros Servicios Asesor LUISE ACCESORIOS Y BOMBAS,14/01/93,16/12/13,,,2010-02-17T15:36:06Z,2013-12-16T19:36:10Z
+806,181,Estatal Jefe de Ejecuciones Fiscales Dirección de Tránsito de Santander,01/01/84,01/01/85,,,2010-09-15T18:35:50Z,2010-09-15T18:35:50Z
+807,809,Otros Servicios Nacional de Seguros Gerente Nacional de Ventas,01/01/80,31/12/84,,,2010-09-15T19:20:53Z,2010-09-15T19:20:53Z
+808,809,Otros Servicios Seguros Universal Gerente Regional,01/01/85,31/12/90,,,2010-09-15T19:20:54Z,2010-09-15T19:20:54Z
+809,809,Otros Servicios IDEA Gerente,01/01/92,31/12/93,,,2010-09-15T19:20:54Z,2010-09-15T19:20:54Z
+810,809,Estatal Secretario de Hacienda Secretaría de Hacienda Departamental,31/12/93,31/12/94,,,2010-09-15T19:20:54Z,2010-09-15T19:20:54Z
+811,809,Otros Servicios IDEA Gerente,01/01/95,31/12/97,,,2010-09-15T19:20:54Z,2010-09-15T19:20:54Z
+812,811,Estatal Asesor de Despacho Gobernación de Cundinamarca,01/01/90,31/12/91,,,2010-09-15T19:24:47Z,2010-09-15T19:24:47Z
+813,811,Estatal Personero Municipio de Zipaquirá,01/01/81,31/12/81,,,2010-09-15T19:24:47Z,2010-09-15T19:24:47Z
+814,811,Estatal Asesor proyectos cooperación internacional Defensoría del Pueblo,01/01/96,01/01/96,,,2010-09-15T19:24:47Z,2010-09-15T19:24:47Z
+815,905,Estatal Subgerente Caja de Previsión Social de Bogotá,01/01/90,31/12/92,,,2010-09-15T19:38:02Z,2010-09-15T19:38:02Z
+816,905,Estatal Subdirector Acción Comunal,01/01/80,31/12/81,,,2010-09-15T19:38:02Z,2010-09-15T19:38:02Z
+817,92,Estatal Gerente Programa Plan Sur Presidencia de la República,01/01/96,31/12/97,,,2010-09-15T19:42:44Z,2010-09-15T19:42:44Z
+818,92,Estatal Director Dirección Nacional de Atención y Prevención de Desastres,01/01/95,31/12/95,,,2010-09-15T19:42:44Z,2010-09-15T19:42:44Z
+819,92,Estatal Secretario de Gobierno Departamental Gobernación del Cauca,01/01/90,31/12/91,,,2010-09-15T19:42:44Z,2010-09-15T19:42:44Z
+820,92,Otros Servicios Director Programa para el Desarrollo Microempresarial del Cauca,01/01/88,01/01/90,,,2010-09-15T19:42:44Z,2010-09-15T19:42:44Z
+821,1820,Estatal Oficial mayor Rama Judicial,01/01/75,01/01/80,,,2010-09-15T20:31:15Z,2010-09-15T20:31:15Z
+822,1820,Vehiculos y otros medios de transporte Abogado Expreso Palmira,01/01/98,01/01/99,,,2010-09-15T20:31:15Z,2010-09-15T20:31:15Z
+823,93,Otros Servicios Gerente Cooperativa Hospitales de Antioquia,01/01/84,01/01/86,,,2010-09-15T21:04:56Z,2010-09-15T21:04:56Z
+824,93,Estatal Secretario General Concejo de Medellín,01/01/80,01/01/82,,,2010-09-15T21:04:56Z,2010-09-15T21:04:56Z
+825,93,Estatal Secretario general Contraloría General de Antioquia,01/01/78,01/01/80,,,2010-09-15T21:04:56Z,2010-09-15T21:04:56Z
+826,93,Estatal Auditor Ministerio de Hacienda Administración de Impuestos Medellín,01/01/72,01/01/75,,,2010-09-15T21:04:56Z,2010-09-15T21:04:56Z
+827,956,Estatal Secretario de gobierno Gobernación del Valle,01/01/89,31/12/89,,,2010-09-15T21:08:53Z,2010-09-15T21:08:53Z
+828,956,Estatal Contralor municipal Contraloría Municipal de Cali,01/06/88,31/12/88,,,2010-09-15T21:08:53Z,2010-09-15T21:08:53Z
+829,956,Estatal Secretario de Educación Gobernación del Valle,01/01/88,01/06/88,,,2010-09-15T21:08:53Z,2010-09-15T21:08:53Z
+830,921,Estatal Gerente Electrificadora de Santander,01/01/69,01/01/78,,,2010-09-15T21:40:06Z,2010-09-15T21:40:06Z
+831,896,Estatal Segundo secretario Embajada Paraguay Ministerio de Relaciones Exteriores,01/01/85,31/12/87,,,2010-09-16T14:52:02Z,2010-09-16T14:52:02Z
+832,896,Estatal Cónsul Embajada Paraguay Ministerio de Relaciones Exteriores,01/01/83,01/01/85,,,2010-09-16T14:52:02Z,2010-09-16T14:52:02Z
+833,896,Estatal Jefe escalafón y carreras docentes Ministerio de Educación,01/01/81,01/01/83,,,2010-09-16T14:52:02Z,2010-09-16T14:52:02Z
+834,834,"Estatal Tesorero Municipio Rionegro, Antioquia",01/01/87,31/12/87,,,2010-09-16T15:01:39Z,2010-09-16T15:01:39Z
+835,834,"Estatal Personero delegado en lo penal Municipio Rionegro, Antioquia",01/01/85,31/12/86,,,2010-09-16T15:01:39Z,2010-09-16T15:01:39Z
+836,817,Estatal Embajador Plenipotenciario ONU Ministerio de Relaciones Exteriores,01/01/88,31/12/88,,,2010-09-16T15:05:14Z,2010-09-16T15:05:14Z
+837,776,Estatal Director Colcultura,01/01/90,31/12/91,,,2010-09-16T15:23:24Z,2010-09-16T15:23:24Z
+838,776,Otros Servicios Resurgir Director Ejecutivo,01/01/86,31/12/86,,,2010-09-16T15:23:24Z,2010-09-16T15:23:24Z
+839,776,Estatal Consejero Presidencia de la República,01/01/85,31/12/85,,,2010-09-16T15:23:24Z,2010-09-16T15:23:24Z
+840,776,Estatal Subgerente cultural Banco de la República,01/01/83,01/01/85,,,2010-09-16T15:23:24Z,2010-09-16T15:23:24Z
+841,776,Estatal Secretario General Ministerio de Agricultura,01/01/82,31/12/82,,,2010-09-16T15:23:24Z,2010-09-16T15:23:24Z
+842,766,Estatal Director General ICBF,30/11/93,31/12/97,,,2010-09-16T15:31:59Z,2010-09-16T15:31:59Z
+843,766,Estatal Director Fondo de Solidaridad Presidencia de la República,01/01/93,30/11/93,,,2010-09-16T15:31:59Z,2010-09-16T15:31:59Z
+844,766,Estatal Viceministro Ministerio de Educación,01/01/91,01/01/93,,,2010-09-16T15:31:59Z,2010-09-16T15:31:59Z
+845,766,Estatal Jefe Unidad de Industria Departamento Nacional de Planeación,01/01/90,01/01/91,,,2010-09-16T15:31:59Z,2010-09-16T15:31:59Z
+879,2080,"Otros Servicios Delegado Superintendencia de Puertos, Transito y Transporte",NA,NA,,,2011-05-24T17:27:47Z,2011-05-24T17:27:47Z
+880,2080,Otros Servicios Secretario General Contraloría Municipal de Riohacha,NA,NA,,,2011-05-24T17:27:47Z,2011-05-24T17:27:47Z
+881,2080,Otros Servicios Gerente Lotería de la Guajira,NA,NA,,,2011-05-24T17:27:47Z,2011-05-24T17:27:47Z
+882,2500,Educacion y Conocimiento Docente Departamento del Guainía,NA,NA,,,2011-06-09T17:46:59Z,2011-06-09T17:46:59Z
+883,2500,Estatal Secretario de Educación Departamento del Guainía,NA,NA,,,2011-06-09T17:46:59Z,2011-06-09T17:46:59Z
+884,2500,Estatal Gobernador encargado Departamento del Guainía,NA,NA,,,2011-06-09T17:46:59Z,2011-06-09T17:46:59Z
+885,2514,Otros Servicios Director Administrativo Comfamiliar del Putumayo,NA,05/03/09,,,2011-06-21T15:35:08Z,2011-06-21T15:35:08Z
+886,4993,"Educacion y Conocimiento Bibliotecóloga Sindicato de Educadores de Santander, SES.",01/01/78,31/12/03,,,2012-02-03T15:01:01Z,2012-02-03T15:07:28Z
+887,1200,Otros Servicios Vicerrectoria Instituto para el Desarrollo del potencial Humano,NA,NA,,,2012-06-21T20:37:36Z,2012-06-21T20:37:36Z
+888,2761,Servicios de Salud Gerente Regional EMSSANAR EPS del Régimen Subsidiado,NA,NA,,,2012-06-25T16:08:31Z,2012-06-25T16:08:31Z
+889,2761,Servicios de Salud Gerente Regional EMSSANAR EPS del Régimen Subsidiado,NA,NA,,,2012-06-25T16:08:31Z,2012-06-25T16:08:31Z
+890,106,Estatal JEFE SECCION TECNICA FONDO ROTATORIO VALORIZACION MUNICIPAL,19/07/73,31/12/77,,,2012-06-29T15:58:10Z,2012-06-29T15:58:10Z
+891,106,Estatal SECRETARIO DE URBANISMO Y PLANEACION SECRETARIA DE URBANISMO MUNICIPAL,24/09/82,22/12/83,,,2012-06-29T15:58:10Z,2012-06-29T15:58:10Z
+893,1260,Educacion y Conocimiento Educadora ,NA,NA,,,2012-08-02T20:31:56Z,2012-08-02T20:31:56Z
+894,35,Educacion y Conocimiento Profesor Universidad Pedagógica y Tecnológica de Colombia UPTC de Sogamoso (Boyacá),NA,NA,,,2012-09-04T17:38:00Z,2012-09-04T17:38:00Z
+895,35,Minerales Sub-Secretario de Minas y Energía Departamento de Boyacá,NA,NA,,,2012-09-04T17:38:00Z,2012-09-04T17:38:00Z
+896,2502,Telecomunicaciones Coordinador Regional de Asuntos de Television por Suscripcion TELMEX,03/07/07,31/12/09,,,2013-10-21T22:15:25Z,2013-10-21T22:15:25Z
+897,2502,Telecomunicaciones Secretario General Superview S.A.,03/10/05,30/04/07,,,2013-10-21T22:15:26Z,2013-10-21T22:15:26Z
+898,7332," Asesor para la reforma constitucional 1991, Gobierno Nacional ",15/07/90,30/06/91,,,2013-12-16T16:47:51Z,2013-12-16T16:47:51Z
+899,7332," Magistrado Auxiliar, Corte Constitucional ",12/12/91,31/01/96,,,2013-12-16T16:47:51Z,2013-12-16T16:47:51Z
+900,7332," Profesor de Derecho, Universidad de los Andes ",01/08/88,30/11/95,,,2013-12-16T16:47:51Z,2013-12-16T16:47:51Z
+901,7332, Magistrado Auxiliar de la Corte Constitucional ,01/03/01,13/01/04,,,2013-12-16T16:47:51Z,2013-12-16T16:47:51Z
+902,7332," Profesor de Derecho, Universidad Nacional de Colombia ",15/02/05,18/10/07,,,2013-12-16T16:47:51Z,2013-12-16T16:47:51Z
+903,7332," Profesor de Derecho, Universidad Externado de Colombia ",15/02/05,30/01/06,,,2013-12-16T16:47:51Z,2013-12-16T16:47:51Z
+904,7332," Profesor de Filosofía, Universidad de los Andes ",17/01/05,16/12/13,,,2013-12-16T16:47:51Z,2013-12-16T16:47:51Z
+905,7323, Director Socio SI Consulting ,01/07/09,16/12/13,,,2013-12-16T17:22:45Z,2013-12-16T17:22:45Z
+906,7323, Gerente Responsabilidad Social ANDI ,15/01/06,15/12/08,,,2013-12-16T17:22:45Z,2013-12-16T17:22:45Z
+907,7323, Gerente ANDI Bogota - Cundinamarca ,15/01/02,15/12/06,,,2013-12-16T17:22:45Z,2013-12-16T17:22:45Z
+908,7570, Director de los Municipios Asociados del Valle del Aburrá ,02/04/04,26/10/06,,,2013-12-20T16:03:41Z,2013-12-20T16:03:41Z
+909,7570, Abogado Asesor de la Contraloría General de Antioquia ,03/05/99,12/06/00,,,2013-12-20T16:03:41Z,2013-12-20T16:03:41Z
+910,7320, Fundador Fundación Yo Amo Respeto y Cuido ,01/02/13,NA,,,2014-01-08T00:32:50Z,2014-01-08T00:32:50Z
+911,7320, vicepresidente de mercadeo Organización Santa María ,16/02/08,31/01/13,,,2014-01-08T00:32:50Z,2014-01-08T00:32:50Z
+912,7320, vicepresidente de mercadeo Grupo 55 ,01/01/06,15/02/08,,,2014-01-08T00:32:50Z,2014-01-08T00:32:50Z
+913,7320, Fellowship MacDonald Hotels ,01/01/04,31/12/05,,,2014-01-08T00:32:50Z,2014-01-08T00:32:50Z
+914,7696,Ingenieria y Servicios de Construccion Consultora en Relaciones Interinstitucionales y Seguridad Fundación Bacata,01/11/11,14/01/14,,,2014-01-08T00:32:50Z,2014-01-14T20:46:03Z
+915,7785, Universidad de San Buenaventura ,15/07/11,15/12/13,,,2014-01-16T03:14:39Z,2014-01-16T03:14:39Z
+916,7785, Universidad Javeriana ,13/01/99,15/12/12,,,2014-01-16T03:14:39Z,2014-01-16T03:14:39Z
+917,7470," Director del Departamento Administrativo del Medio ambiente -DAMA-, Gobernación del Antioquia ",NA,NA,,,2014-01-16T23:35:00Z,2014-01-16T23:35:00Z
+918,7470, Presidente del Consejo Directivo de CORANTIOQUIA y CORNARE. ,NA,NA,,,2014-01-16T23:35:00Z,2014-01-16T23:35:00Z
+919,7470, Docente Universitario. ,NA,NA,,,2014-01-16T23:35:00Z,2014-01-16T23:35:00Z
+920,7679, Integrante del Colectivo de Abogados José Alvear Restrepo Uribe ,30/11/90,30/11/13,,,2014-01-17T16:51:59Z,2014-01-17T16:51:59Z
+486,209,Otros Servicios Secretario de Minas de Antioquia Caprecom,01/02/93,31/12/94,,,2010-01-25T20:34:45Z,2014-01-17T20:06:56Z
+487,209,Estatal Director Regional CAPRECOM Alcaldía de Medellín,01/03/92,31/10/92,,,2010-01-25T20:34:45Z,2014-01-17T20:06:56Z
+488,209,Estatal Secretario de Gobierno de Medellín Gobernación de Antioquia,01/06/88,31/05/90,,,2010-01-25T20:34:45Z,2014-01-17T20:06:56Z
+921,7722, Fundadora y  Directora Ejecutiva de Alisos Alianzas para la Sostenibilidad ,01/02/10,31/12/13,,,2014-01-17T19:28:23Z,2014-01-17T20:33:39Z
+922,7722," Representante, Fundación AVINA en Colombia ",01/10/05,28/02/10,,,2014-01-17T20:33:39Z,2014-01-17T20:33:39Z
+923,7722," Directora, Dirección de Responsabilidad Social de la Casa Editorial El Tiempo ",01/10/97,31/10/05,,,2014-01-17T20:33:39Z,2014-01-17T20:33:39Z
+924,7722," Coordinadora, Proyecto Cartagena Convida. Conservation International ",01/01/95,31/12/97,,,2014-01-17T20:33:39Z,2014-01-17T20:33:39Z
+925,7723, gerente de empresa de confeccion ,NA,NA,,,2014-01-17T22:19:50Z,2014-01-17T22:19:50Z
+926,7723, asesor agricola ,NA,NA,,,2014-01-17T22:19:50Z,2014-01-17T22:19:50Z
+927,7750, Director de Cooperacion Internacional enla Defensoria del Pueblo ,NA,NA,,,2014-01-17T22:45:09Z,2014-01-17T22:45:09Z
+928,7750, Defensor del Pueblo de Nariño ,NA,NA,,,2014-01-17T22:45:09Z,2014-01-17T22:45:09Z
+929,7750, Profesor Universitario ,NA,NA,,,2014-01-17T22:45:09Z,2014-01-17T22:45:09Z
+930,7685,Otros Servicios Inclusor Social Asociación de Integración Comunitaria –ASOINCO-,01/06/12,31/10/12,,,2014-01-18T14:22:53Z,2014-01-18T14:22:53Z
+931,7685,Otros Servicios Co-Investigagor Asociación para el Desarrollo y la Participación –ASODA-.,15/01/11,15/05/11,,,2014-01-18T14:35:43Z,2014-01-18T14:35:43Z
+932,7685,"Estatal Profesional Social Dirección Territorial Amazonia –DTAM-, Unidad Administrativa Especial del Sistema de Parques Nacionales Naturales de Colombia –UAESPNN-",14/01/10,13/12/10,,,2014-01-18T14:37:42Z,2014-01-18T14:37:42Z
+933,7685,Estatal Asesor investigador Centro Alternativo de Investigación y Protección de los Derechos Fundamentales en Colombia –CINPRODEC-,19/04/09,18/07/09,,,2014-01-18T14:40:32Z,2014-01-18T14:40:32Z
+934,7685,Estatal Coordinador Local Participación y Redes Sociales Secretaria Distrital de Integración Social SDIS,20/05/08,26/02/09,,,2014-01-18T14:42:19Z,2014-01-18T14:42:19Z
+935,7685,Estatal Tejedor Formador Secretaria Distrital de Integración Social SDIS,06/12/06,20/04/08,,,2014-01-18T14:44:31Z,2014-01-18T14:44:31Z
+936,7685,Otros Servicios Asesor investigador Corporación de Servicios Profesionales Comunitarios –SEMBRAR,01/08/04,20/12/05,,,2014-01-18T14:46:32Z,2014-01-18T14:46:32Z
+937,7685,Estatal Operador en Calle Proyecto Misión Bogotá Alcaldía Mayor de Bogotá.,12/12/02,20/07/04,,,2014-01-18T14:48:57Z,2014-01-18T14:48:57Z
+938,7685,Otros Servicios Escritor publico Centro de Investigación y Educación Popular –CINEP-,01/04/03,30/03/04,,,2014-01-18T14:52:02Z,2014-01-18T14:52:02Z
+939,2305, ALCALDESA LOCAL DE CHAPINERO ,11/01/05,10/12/08,,,2014-01-19T07:03:07Z,2014-01-19T07:03:07Z
+940,206, personero distrital de cartagena ,01/01/98,01/01/01,,,2014-01-21T20:20:10Z,2014-01-21T20:20:10Z
+941,206, secretario superintendencia de subsidio familiar ,01/01/01,01/05/02,,,2014-01-21T20:20:10Z,2014-01-21T20:20:10Z
+942,7774, Asesora en el Congreso de la República ,12/04/98,10/04/00,,,2014-01-22T00:28:14Z,2014-01-22T00:28:14Z
+943,7774, Asesora del Director de la CAR ,05/05/01,03/03/02,,,2014-01-22T00:28:14Z,2014-01-22T00:28:14Z
+944,7774, Secretaria de Agricultura ,01/01/04,20/04/13,,,2014-01-22T00:28:14Z,2014-01-22T00:28:14Z
+945,7774, Asesora del despacho del Gobernador de Cundinamarca ,02/02/08,21/01/12,,,2014-01-22T00:28:14Z,2014-01-22T00:28:14Z
+946,8135, Decano Facultad Nacional de Salud Pública Universidad de Antioquia ,05/10/09,04/10/12,,,2014-01-22T03:45:00Z,2014-01-22T03:45:00Z
+947,8135, Profesor Universidad de Antioquia ,16/10/95,04/10/12,,,2014-01-22T03:45:00Z,2014-01-22T03:45:00Z
+948,8135, Director Ejecutivo Agencia de Cooperación Internacional de Medellín ,06/05/03,05/02/04,,,2014-01-22T03:45:00Z,2014-01-22T03:45:00Z
+949,7539, Comunicador Secretaría de Minas Gobernación de Antioquia ,09/04/12,20/09/12,,,2014-01-22T17:42:34Z,2014-01-22T17:42:34Z
+950,7539, Comunicador Liga Antioqueña de Fútbol ,02/07/08,23/12/08,,,2014-01-22T17:42:34Z,2014-01-22T17:42:34Z
+951,7539, Oficial Mayor Juzgado 1ero Civil Municipal de Envigado - Rama Judicial ,10/07/00,10/05/04,,,2014-01-22T17:42:34Z,2014-01-22T17:42:34Z
+952,7548, Postdoctoral research fellow - West Virginia University ,01/07/08,30/06/13,,,2014-01-22T18:01:38Z,2014-01-22T18:06:36Z
+953,7548, Visiting Professor - West Virginia University ,01/05/08,30/06/08,,,2014-01-22T18:06:36Z,2014-01-22T18:06:36Z
+954,7548, Profesor - Universidad Pontificia Bolivariana ,01/07/07,30/06/08,,,2014-01-22T18:06:36Z,2014-01-22T18:06:36Z
+955,7548, Research and teaching assistant - West Virginia University ,01/08/04,30/06/07,,,2014-01-22T18:06:36Z,2014-01-22T18:06:36Z
+956,7548, Profesor - Universidad Pontificia Bolivariana ,01/10/03,30/06/04,,,2014-01-22T18:06:36Z,2014-01-22T18:06:36Z
+957,7769, Rector Institución Educativa Seminario Menor San José ,07/01/10,31/12/11,,,2014-01-23T04:10:25Z,2014-01-23T04:10:25Z
+958,7769, Alto Consejero para la Educación Superior de Norte de Santander ,02/01/12,15/01/13,,,2014-01-23T04:10:25Z,2014-01-23T04:10:25Z
+962,8034, Director Administrativo ICETEX ,10/04/95,10/10/96,,,2014-01-23T16:40:26Z,2014-01-23T16:40:26Z
+963,8034, Director CORCUMVI ,23/10/07,12/02/09,,,2014-01-23T16:40:26Z,2014-01-23T16:40:26Z
+964,2017,Estatal Subsecretario de Educación Alcaldía de Medellín,01/01/04,09/12/05,,,2014-01-24T04:30:54Z,2014-01-24T04:30:54Z
+965,2017,Estatal Secretario de Cultura Ciudadana Alcaldía de Medellín,15/08/07,31/12/07,,,2014-01-24T04:32:22Z,2014-01-24T04:32:22Z
+966,2017,Educacion y Conocimiento Coordinador de Educación Fundación Proantioquia,15/02/96,15/12/03,,,2014-01-24T04:34:09Z,2014-01-24T04:34:09Z
+967,2017,Estatal Gerente  Plan Nacional Decenal de Educación Ministerio de Educación Nacional,01/09/06,30/06/07,,,2014-01-24T04:36:41Z,2014-01-24T04:36:41Z
+968,8182, Bibliotecario ,11/01/06,11/12/13,,,2014-01-24T12:49:46Z,2014-01-24T12:49:46Z
+969,281, Codirector Banco de la Republica ,01/01/03,01/01/09,,,2014-01-24T16:17:01Z,2014-01-24T16:17:01Z
+970,281, Director General de Crédito Publico ,01/01/99,01/01/03,,,2014-01-24T16:17:01Z,2014-01-24T16:17:01Z
+971,281, Viceministro de Hacienda ,01/01/98,01/01/99,,,2014-01-24T16:17:01Z,2014-01-24T16:17:01Z
+972,7915, Profesional de productividad y proyectos ,05/04/13,NA,,,2014-01-24T16:44:16Z,2014-01-24T16:44:16Z
+973,7915, Gerente ,04/03/12,29/03/13,,,2014-01-24T16:44:16Z,2014-01-24T16:44:16Z
+974,7915, Asesor oficina sistemas de información y garantía de la calidad ,04/07/11,29/02/12,,,2014-01-24T16:44:16Z,2014-01-24T16:44:16Z
+975,7915, Sales Control Auditor ,03/03/08,29/07/11,,,2014-01-24T16:44:16Z,2014-01-24T16:44:16Z
+976,8366, Gerente Unidad de Negocios ,21/01/08,11/01/13,,,2014-01-24T17:15:35Z,2014-01-24T17:15:35Z
+977,8366, Gerente Mercado ,24/07/06,01/11/08,,,2014-01-24T17:15:35Z,2014-01-24T17:15:35Z
+978,8366, Coordinador de Mercadeo ,01/11/05,21/06/06,,,2014-01-24T17:15:35Z,2014-01-24T17:15:35Z
+979,8266, Jefe Oficina Jurídica MDN ,01/01/90,31/12/92,,,2014-01-24T23:10:49Z,2014-01-24T23:10:49Z
+980,8266, Director de la Justicia Penal Militar ,01/01/00,31/12/02,,,2014-01-24T23:10:50Z,2014-01-24T23:10:50Z
+981,8266, Director General Defensa Civil Colombiana ,01/12/06,13/02/13,,,2014-01-24T23:10:50Z,2014-01-24T23:10:50Z
+982,8266, Agregado Militar Rusia ,01/01/97,01/01/98,,,2014-01-24T23:10:50Z,2014-01-24T23:10:50Z
+983,8266, Inspector General del Ejercito ,01/12/04,01/04/05,,,2014-01-24T23:10:50Z,2014-01-24T23:10:50Z
+984,7528, Directora Técnica empresa ECOHUMUS SAS ,01/01/11,23/01/14,,,2014-01-25T06:07:04Z,2014-01-25T06:07:04Z
+985,7528, Docente catedrática Fundación Univesitaria de San Gil UNISANGIL ,01/03/13,30/11/13,,,2014-01-25T06:07:04Z,2014-01-25T06:07:04Z
+986,7528, Coordinadora Ambiental Proyecto Piloto de Responsabilidad Social Bolsa Ecológica del Fonce Liderado por Coohilados del Fonce y Fenalco ,15/10/12,28/12/13,,,2014-01-25T06:07:04Z,2014-01-25T06:07:04Z
+987,7528, Coordinadora General del Programa de Radio AMBIENTALIZANDO  en la Emisora La Cometa 107.2 FM ,07/09/12,15/12/13,,,2014-01-25T06:07:04Z,2014-01-25T06:07:04Z
+988,7528, Asesora Ambiental de Asociación de Areneros de Mogotes AREMOS ,15/10/12,31/12/13,,,2014-01-25T06:07:04Z,2014-01-25T06:07:04Z
+989,7528, Consultora Ambiental Independiente ,01/01/05,31/12/13,,,2014-01-25T06:07:04Z,2014-01-25T06:07:04Z
+990,7528, Representante Legal de la Asociación de Profesionales y Granjeros Agroecológicos ASOGRAS ,15/11/07,23/01/14,,,2014-01-25T06:07:04Z,2014-01-25T06:07:04Z
+991,7528, Insctuctora Líder el Area Ambiental SENA Centro Agroturístico Regional Santander ,15/09/08,17/12/11,,,2014-01-25T06:07:04Z,2014-01-25T06:07:04Z
+992,7528, Coordinadora del Area Técnica del Instituto Técnico para el Desarrollo Rural IDEAR ,01/04/04,30/06/08,,,2014-01-25T06:07:04Z,2014-01-25T06:07:04Z
+993,7528, Asesora Técnica del Secretariado Diocesano de Pastoral Social SEPAS ,01/05/00,30/04/04,,,2014-01-25T06:07:04Z,2014-01-25T06:07:04Z
+994,7528, Auxiliar del Plan de Atención Básica PAB en el Municipio de Mogotes Santander ,01/02/99,31/12/00,,,2014-01-25T06:07:04Z,2014-01-25T06:07:04Z
+995,7528, Agente educador del COESAN LTDA ,17/12/95,31/12/98,,,2014-01-25T06:07:04Z,2014-01-25T06:07:04Z
+996,8358, sargento de la policia ,12/02/90,24/12/12,,,2014-01-25T16:09:50Z,2014-01-25T16:09:50Z
+997,8211, Jefe Seccion Banco de la República Departamento Internacional ,02/01/86,31/12/93,,,2014-01-25T20:48:41Z,2014-01-25T20:48:41Z
+998,8211, Gerente Banco de la República Sucursal Cúcuta ,01/01/94,02/01/97,,,2014-01-25T20:48:41Z,2014-01-25T20:48:41Z
+999,7365,Educacion y Conocimiento docente ,13/06/09,07/12/09,,,2014-01-25T20:48:41Z,2014-01-28T01:33:32Z
+1000,7347," Jefe de Personal, Asesora y Directora Comercial  de la Gobernación de Antioquia ",15/12/94,28/11/98,,,2014-01-28T03:52:24Z,2014-01-28T03:52:24Z
+1001,7347, Jefe División de Relaciones Industriales en EADE ,04/05/00,05/04/01,,,2014-01-28T03:52:24Z,2014-01-28T03:52:24Z
+1002,7347," Jefe de Recursos Humanos Medellín,Colombiana Kimberly Colpapepel S.A. ",08/04/01,22/12/02,,,2014-01-28T03:52:24Z,2014-01-28T03:52:24Z
+1003,7347," Asistente de Proyectos, en ISA Bolivia ",27/09/04,15/03/05,,,2014-01-28T03:52:24Z,2014-01-28T03:52:24Z
+1004,7347," Gerente Liquidador, en Alianza Empresarial ",15/06/05,26/11/06,,,2014-01-28T03:52:24Z,2014-01-28T03:52:24Z
+1005,7347, Asesoraen Departamento Nacional de Planeación ,01/12/06,30/11/10,,,2014-01-28T03:52:24Z,2014-01-28T03:52:24Z
+1006,7347, Agente comercial en la Empresa Nucleo DF ,03/06/13,NA,,,2014-01-28T03:52:24Z,2014-01-28T03:52:24Z
+1007,7347, Agente comercial en Scotwork Colombia ,22/08/13,NA,,,2014-01-28T03:52:24Z,2014-01-28T03:52:24Z
+1008,7347," Jefe de Personal, Asesora y Directora Comercial  de la Gobernación de Antioquia ",15/12/94,28/11/98,,,2014-01-28T03:59:54Z,2014-01-28T03:59:54Z
+1009,7347, Jefe División de Relaciones Industriales en EADE ,04/05/00,05/04/01,,,2014-01-28T03:59:54Z,2014-01-28T03:59:54Z
+1010,7347," Jefe de Recursos Humanos Medellín,Colombiana Kimberly Colpapepel S.A. ",08/04/01,22/12/02,,,2014-01-28T03:59:54Z,2014-01-28T03:59:54Z
+1011,7347," Asistente de Proyectos, en ISA Bolivia ",27/09/04,15/03/05,,,2014-01-28T03:59:54Z,2014-01-28T03:59:54Z
+1012,7347," Gerente Liquidador, en Alianza Empresarial ",15/06/05,26/11/06,,,2014-01-28T03:59:54Z,2014-01-28T03:59:54Z
+1013,7347, Asesoraen Departamento Nacional de Planeación ,01/12/06,30/11/10,,,2014-01-28T03:59:54Z,2014-01-28T03:59:54Z
+1014,7347, Agente comercial en la Empresa Nucleo DF ,03/06/13,NA,,,2014-01-28T03:59:54Z,2014-01-28T03:59:54Z
+1015,7347, Agente comercial en Scotwork Colombia ,22/08/13,NA,,,2014-01-28T03:59:54Z,2014-01-28T03:59:54Z
+1016,8351, Gerencia Comercial ,09/01/12,10/11/14,,,2014-01-28T15:27:21Z,2014-01-28T15:27:21Z
+1017,8351, Director Comercial ,03/01/11,30/12/11,,,2014-01-28T15:27:21Z,2014-01-28T15:27:21Z
+1018,8351, Asesor comercial ,14/01/08,30/12/10,,,2014-01-28T15:27:21Z,2014-01-28T15:27:21Z
+1019,7882, Personero delegado ,16/07/90,16/07/96,,,2014-01-29T03:46:23Z,2014-01-29T03:46:23Z
+1020,7882, Director Nacional Fundación Foro Cívico ,18/07/97,28/01/14,,,2014-01-29T03:46:23Z,2014-01-29T03:46:23Z
+1021,8099,Otros Servicios Catedrático universitario FOUNDATION OF THE AMERICAS,10/06/05,12/01/08,,,2014-01-29T03:46:23Z,2014-01-29T15:06:03Z
+1026,8059, Secretaria Ejecutiva en ONG de Derechos Humanos ,10/03/00,10/03/10,,,2014-01-30T15:11:40Z,2014-01-30T15:11:40Z
+1027,8059, Docente catedrática en Universidad Tecnologica de Pereira ,27/01/08,03/02/14,,,2014-01-30T15:11:40Z,2014-01-30T15:11:40Z
+1022,8099,Otros Servicios DEFENSORA DE DERECHOS HUMANOS FOUNDATION OF THE AMERICAS,10/06/05,29/01/14,,,2014-01-29T15:26:23Z,2014-01-29T15:27:26Z
+1023,7887, Presidente Confederacion Social Cristiana ,07/06/07,29/01/14,,,2014-01-29T19:31:50Z,2014-01-29T19:31:50Z
+1024,7519, Asesor Negocios Forestales ,30/07/08,09/03/14,,,2014-01-29T20:27:11Z,2014-01-29T20:27:11Z
+1025,7519, Subdirector General CORPOURABA ,02/06/93,30/07/08,,,2014-01-29T20:27:11Z,2014-01-29T20:27:11Z
+1028,8112, Docente ,01/12/69,01/01/94,,,2014-01-30T15:56:58Z,2014-01-30T15:56:58Z
+1031,8145, Asesor de Proyectos Metropolitanos ,15/04/08,06/02/12,,,2014-02-01T19:57:33Z,2014-02-01T19:57:33Z
+1032,7367, Docente de cátedra de la universidad de Antioquia ,14/07/10,14/12/12,,,2014-02-03T16:21:13Z,2014-02-03T16:21:13Z
+1033,8360," Asesor político de Michel Maya, concejal de Cali ",NA,04/02/14,,,2014-02-04T15:09:18Z,2014-02-04T15:09:18Z
+1030,7356,Educacion y Conocimiento Fundador MAREA MAREA,NA,NA,,,2014-01-30T22:26:48Z,2014-02-04T22:09:19Z
+1239,731, Fiscal General de la Nación ,NA,NA,,,2014-04-23T11:01:33Z,2014-04-23T11:01:33Z
+1034,8360, Co - Creador y Gerente del proyecto Chao Racismo y chaoracismo.com ,NA,NA,,,2014-02-04T15:09:18Z,2014-02-04T15:09:18Z
+1035,8360," Escritor, investigador y analista político ",NA,04/02/14,,,2014-02-04T15:09:18Z,2014-02-04T15:09:18Z
+1029,7356,Agricola Vocero Nacional Dignidad Cafetera Dignidad Cafetera,NA,NA,,,2014-01-30T22:26:17Z,2014-02-04T22:09:19Z
+1036,7356, Activista Social en Salud ,NA,NA,,,2014-02-04T22:04:58Z,2014-02-04T22:09:19Z
+1037,8236, Superintendente delegado de la Superintendencia de Industria y Comercio ,NA,NA,,,2014-02-07T13:34:59Z,2014-02-07T13:34:59Z
+1038,8236, Subdirector de Estupefacientes ,NA,NA,,,2014-02-07T13:34:59Z,2014-02-07T13:34:59Z
+1041,7812, Presidente de la asociación de Médicos Generales ,NA,NA,,,2014-02-07T15:48:50Z,2014-02-07T15:48:50Z
+1039,8233, Profesional Alta Consejería para la Reintegración ,05/01/10,30/11/10,,,2014-02-07T14:39:30Z,2014-02-07T18:10:50Z
+1042,8233, Consultora Gestión Publica ,05/12/10,30/07/12,,,2014-02-07T18:10:50Z,2014-02-07T18:10:50Z
+1043,8233, Profesional Agencia Colombiana para la Reintegración ,01/08/12,30/11/12,,,2014-02-07T18:10:50Z,2014-02-07T18:10:50Z
+1044,8233, Consultora Conferenciasta Servicio al Ciudadano ,02/12/12,01/06/13,,,2014-02-07T18:10:50Z,2014-02-07T18:10:50Z
+1045,8190, Empresaria: H&R Servicios Especializados ,NA,NA,,,2014-02-07T21:06:29Z,2014-02-07T21:06:29Z
+1046,8190, Secretaria General del Consejo Municipal de Ibagué ,NA,NA,,,2014-02-07T21:06:29Z,2014-02-07T21:06:29Z
+1047,8190," Profesional en Salud Ocupacional del Municipio de Ibagué, Secretaria de Salud Municipal ",NA,NA,,,2014-02-07T21:06:29Z,2014-02-07T21:06:29Z
+1048,8190," Asistente de la Unidad de Trabajo Legislativo, Comisión 7ma. Senado de la República ",NA,NA,,,2014-02-07T21:06:29Z,2014-02-07T21:06:29Z
+1049,7547, Asesor Jurídico ,01/08/10,30/07/12,,,2014-02-07T21:51:31Z,2014-02-07T22:02:38Z
+1050,7721, Gerente - Trade and Marketing ,15/07/03,30/12/10,,,2014-02-09T05:08:50Z,2014-02-09T05:08:50Z
+1051,7721, Director Ejecutivo - Intern Group ,05/01/11,30/06/13,,,2014-02-09T05:08:50Z,2014-02-09T05:08:50Z
+1052,7527, Medico Veterinario y Cirujano- U de A ,01/02/13,05/09/13,,,2014-02-10T01:08:17Z,2014-02-10T01:08:17Z
+1053,7527, Medio Veterinario y Cirujano - La Salle ,01/01/10,30/12/11,,,2014-02-10T01:08:17Z,2014-02-10T01:08:17Z
+1054,7527, Medico Veterinario y Cirujano - U. CES ,01/08/09,30/11/10,,,2014-02-10T01:08:17Z,2014-02-10T01:08:17Z
+1055,7527, Medico Veterinario y Cirujano - Fundación Bienestar Animal ,01/02/05,30/09/13,,,2014-02-10T01:08:17Z,2014-02-10T01:08:17Z
+1056,7527, Medico Veterinario y Cirujano - Sociedad Protectora de Animales ,03/02/97,30/09/03,,,2014-02-10T01:08:17Z,2014-02-10T01:08:17Z
+1057,7541, Facilitador Empresarial ,15/02/10,17/12/10,,,2014-02-10T01:30:20Z,2014-02-10T01:30:20Z
+1058,7541, Practicante Mercadeo ,24/01/11,24/07/11,,,2014-02-10T01:30:20Z,2014-02-10T01:30:20Z
+1059,7541, Instructor SENA ,19/10/11,30/08/13,,,2014-02-10T01:30:20Z,2014-02-10T01:30:20Z
+1060,8355, Intendente de Casanare ,NA,NA,,,2014-02-10T16:07:30Z,2014-02-10T16:07:30Z
+1061,8140, Directora ejecutiva de la Confederación Nacional de Mineros (Conalminercol) ,NA,NA,,,2014-02-10T17:06:47Z,2014-02-10T17:06:47Z
+1062,7701, ASESOR DEL CONGRESO ,02/08/06,19/07/10,,,2014-02-10T22:50:56Z,2014-02-10T22:50:56Z
+1040,7820, Secretaria de Educación del Atlántico ,10/07/92,31/10/94,,,2014-02-07T14:52:30Z,2014-02-11T02:14:55Z
+1063,7820, Directora Regional Esap Atlántico ,15/07/99,05/02/02,,,2014-02-11T02:14:55Z,2014-02-11T02:14:55Z
+1064,7820, Alcaldesa Local de Santa Fe Bogotá ,05/08/05,19/04/08,,,2014-02-11T02:14:55Z,2014-02-11T02:14:55Z
+1065,8439, Director Aeronáutica Civil ,NA,NA,,,2014-02-11T14:52:08Z,2014-02-11T14:52:08Z
+1066,7520, Ex Director de la Comisión de Regulación de Telecomunicaciones ,NA,NA,,,2014-02-11T14:55:42Z,2014-02-11T14:55:42Z
+1067,7520, Ex Gerente de RTVC ,NA,NA,,,2014-02-11T14:55:42Z,2014-02-11T14:55:42Z
+1068,7520, Fundador y Presidente de la Asociación Colombiana de Usuarios de Tecnologías ASONET ,NA,NA,,,2014-02-11T14:55:42Z,2014-02-11T14:55:42Z
+1069,7520, Profesor Universitario ,NA,NA,,,2014-02-11T21:51:58Z,2014-02-11T21:51:58Z
+1070,7520, Consultor de Derecho Minero y Nuevas Tecnologías de la Información y la Comunicación TIC ,NA,NA,,,2014-02-11T21:51:58Z,2014-02-11T21:51:58Z
+1071,7717, Directora de la Organización Nacional de Mujeres Liberales ,01/12/11,01/12/13,,,2014-02-12T16:51:36Z,2014-02-12T16:51:36Z
+1072,7338,Otros Servicios Relaciones Públicas ONG ORIGEN,NA,01/12/11,,,2014-02-12T16:51:36Z,2014-02-12T17:35:13Z
+1073,7338,Otros Servicios Asesora Gestión del Talento Humano y la Productividad Varias,01/02/07,03/06/13,,,2014-02-12T17:41:26Z,2014-02-12T17:41:26Z
+1074,7554, Directora Local de Recursos Humanos ,NA,NA,,,2014-02-13T13:25:26Z,2014-02-13T13:25:26Z
+1075,7554, Directora Territorial de Proyectos ,NA,NA,,,2014-02-13T13:25:26Z,2014-02-13T13:25:26Z
+1076,7554, Asesora en Extanjería - Hipana Legal S.L. ,NA,NA,,,2014-02-13T13:25:26Z,2014-02-13T13:25:26Z
+1077,7554, Directora Nacional de Competitividad ,NA,NA,,,2014-02-13T13:25:26Z,2014-02-13T13:25:26Z
+1078,7554, Portavoz Asociación Amigos MIRA ,NA,NA,,,2014-02-13T13:25:26Z,2014-02-13T13:25:26Z
+1079,8510, Presidente Organización Nacional Indígena de Colombia ONIC ,15/10/03,17/09/12,,,2014-02-13T15:50:03Z,2014-02-13T15:50:03Z
+1080,8510, Presidente Fondo para el Desarrollo de los Pueblos Indígenas de América Latina y el Caribe ,NA,NA,,,2014-02-13T15:50:03Z,2014-02-13T15:50:03Z
+1081,8532, Asesor del Programa de Gobierno Colombia Nos Une ,01/02/13,31/08/13,,,2014-02-13T16:20:43Z,2014-02-13T16:20:43Z
+1082,8223, Asesora del Viceministerio de Vivienda y Desarrollo Territorial ,01/03/04,01/02/05,,,2014-02-13T16:42:32Z,2014-02-13T16:42:32Z
+1083,8223, Directora del Departamento Administrativo de Acción Comunal de Bogotá ,01/01/98,08/01/00,,,2014-02-13T16:42:32Z,2014-02-13T16:42:32Z
+1084,8223, Alcaldes (e) localidad de Santa Fe ,01/02/98,01/06/98,,,2014-02-13T16:42:32Z,2014-02-13T16:42:32Z
+1085,9202, Gerente Industria de Licores del Valle ,NA,NA,,,2014-02-13T16:46:28Z,2014-02-13T16:46:28Z
+1086,8532, Asesor del Programa de Gobierno Colombia Nos Une ,01/02/13,31/08/13,,,2014-02-13T16:51:43Z,2014-02-13T16:51:43Z
+1087,8532, Coordinador  de Proyectos en España ,01/02/07,30/09/12,,,2014-02-13T16:51:43Z,2014-02-13T16:51:43Z
+1088,8532, Presidente y Fundador de ARCEX ,10/02/10,13/02/14,,,2014-02-13T16:51:43Z,2014-02-13T16:51:43Z
+1089,8223, Asistente de la Dirección de Participación Ciudadana de la Contraloría Distrital de Bogotá ,01/03/95,01/05/97,,,2014-02-13T16:57:00Z,2014-02-13T16:57:00Z
+1090,9249, Pastor del Centro de Alabanza Oasis ,NA,NA,,,2014-02-13T17:03:19Z,2014-02-13T17:03:19Z
+1092,8473, Fundación Mariano Ospina P ,01/06/97,01/01/02,,,2014-02-13T21:11:01Z,2014-02-13T21:11:01Z
+1093,8473, Asesor Consejería equidad de la Mujer ,01/04/03,01/10/07,,,2014-02-13T21:11:01Z,2014-02-13T21:11:01Z
+1094,8473, Asesor Min Interior ,01/10/07,01/04/09,,,2014-02-13T21:11:01Z,2014-02-13T21:11:01Z
+1095,8473, Consejera Presidencial ,01/05/09,07/08/10,,,2014-02-13T21:11:01Z,2014-02-13T21:11:01Z
+1096,8473, Asesora Incoder ,01/05/12,01/07/13,,,2014-02-13T21:11:01Z,2014-02-13T21:11:01Z
+1097,7329, Abogada ,03/05/94,13/02/14,,,2014-02-13T22:48:19Z,2014-02-13T22:48:19Z
+1098,8280, Presentadora de Noticias Univisión ,NA,NA,,,2014-02-13T23:17:51Z,2014-02-13T23:17:51Z
+1099,8280, Presentadora de Noticias Caracol ,NA,NA,,,2014-02-13T23:17:51Z,2014-02-13T23:17:51Z
+1100,8280, Empresaria RM Corcho Comunicaciones ,NA,NA,,,2014-02-13T23:17:51Z,2014-02-13T23:17:51Z
+1102,7629, Liquidadora – Representante Legal GAVEL LTDA ,15/09/10,14/02/14,,,2014-02-14T18:04:32Z,2014-02-14T18:04:32Z
+1103,7629," Asesora externa UTL, JOSÉ DARIO SALAZAR ",05/09/10,20/09/11,,,2014-02-14T18:04:32Z,2014-02-14T18:04:32Z
+1104,7629, Gerente - Representante Legal GAVEL LTDA ,15/09/10,20/09/11,,,2014-02-14T18:04:32Z,2014-02-14T18:04:32Z
+1105,8120, Topografo ,07/09/92,13/10/00,,,2014-02-14T18:57:31Z,2014-02-14T18:57:31Z
+1106,8120, Tecnologo en Obras Civiles ,15/05/98,22/11/02,,,2014-02-14T18:57:31Z,2014-02-14T18:57:31Z
+1107,8522, DIRECTORA EJECUTIVA UNION DE COMERCIANTES UNDECO ,10/01/89,14/02/14,,,2014-02-14T19:23:06Z,2014-02-14T19:23:06Z
+1108,9331, Secretario general del Partido Comunista ,NA,NA,,,2014-02-14T19:23:12Z,2014-02-14T19:23:12Z
+1109,9365, Secretaria Nacional se Solidaridad y Derechos humanos de la Federación Nacional Sindical Unitaria Agropecuaria- FENSUAGRO ,NA,NA,,,2014-02-14T19:48:47Z,2014-02-14T19:48:47Z
+1110,9307, Dirigente sindical de la CUT ,NA,NA,,,2014-02-14T20:07:54Z,2014-02-14T20:07:54Z
+1111,9305, Personero de Bogotá ,NA,NA,,,2014-02-14T20:13:16Z,2014-02-14T20:13:16Z
+1091,8732, Consultor del Banco Mundial para América Latina ,10/06/02,10/06/03,,,2014-02-13T20:54:55Z,2014-02-15T00:37:39Z
+1101,8732, Director Fundaciòn ZIO AI ,12/08/95,08/08/09,,,2014-02-14T16:55:55Z,2014-02-15T00:37:39Z
+1112,8732, Asesor de organizaciones indígenas ,16/07/86,14/02/14,,,2014-02-15T00:37:39Z,2014-02-15T00:37:39Z
+1113,8732, Secretario General de la Organización Indígena Zonal del Putumayo OZIP ,14/09/89,14/09/91,,,2014-02-15T00:37:39Z,2014-02-15T00:37:39Z
+1114,8732, Fiscal de la Organización Nacional Indígena de Colombia ,21/10/91,21/06/92,,,2014-02-15T00:37:39Z,2014-02-15T00:37:39Z
+1115,8732, Asesor del Congresista Gabriel Muyui ,20/07/92,20/07/93,,,2014-02-15T00:37:39Z,2014-02-15T00:37:39Z
+1116,1423, PROFESOR EMÉRITO UNIVERSIDAD NACIONAL DE COLOMBIA ,NA,NA,,,2014-02-16T00:08:55Z,2014-02-16T00:08:55Z
+1117,8575, Asesor del Director del Protocolo - Ministerio de Relaciones Exteriores ,11/04/11,12/12/11,,,2014-02-16T01:05:23Z,2014-02-16T01:05:23Z
+1118,8575, Secretario Privado del Presidente Ejecutivo - Cámara de Comercio de Cartagena ,22/07/12,11/01/13,,,2014-02-16T01:05:23Z,2014-02-16T01:05:23Z
+1119,8575, Asesor del Director del Protocolo - Ministerio de Relaciones Exteriores ,15/01/13,18/07/13,,,2014-02-16T01:05:23Z,2014-02-16T01:05:23Z
+1120,8575, Asesor de la Secretaria General - Ministerio de Relaciones Exteriores ,27/07/13,27/11/13,,,2014-02-16T01:05:23Z,2014-02-16T01:05:23Z
+1121,7775, Tecnico urbano Planeacion Distrital Bogota ,01/02/72,31/10/74,,,2014-02-16T01:23:17Z,2014-02-16T01:23:17Z
+1122,7775, Director Proyecto Usatama Bogota ,10/03/75,22/12/77,,,2014-02-16T01:23:17Z,2014-02-16T01:23:17Z
+1123,7775, Asesor arquitectura y construccion Intercor ,16/10/79,14/12/83,,,2014-02-16T01:23:17Z,2014-02-16T01:23:17Z
+1124,7753, director NotiCali ,10/02/10,16/02/14,,,2014-02-16T06:33:22Z,2014-02-16T06:33:22Z
+1125,7753, director NotiCali ,10/02/10,16/02/14,,,2014-02-16T06:33:29Z,2014-02-16T06:33:29Z
+1126,1446, Gerente comercial en empresas de plásticos ,06/02/12,06/12/13,,,2014-02-17T14:49:03Z,2014-02-17T14:49:03Z
+1127,9302, Educadora Popular ,03/02/12,01/06/14,,,2014-02-17T15:48:19Z,2014-02-17T15:48:19Z
+1128,9302, Investgadora ,15/02/10,31/12/11,,,2014-02-17T15:48:20Z,2014-02-17T15:48:20Z
+1129,8470, CEO ALCANCE TALENTO LTD ,10/01/07,NA,,,2014-02-17T21:42:53Z,2014-02-17T21:42:53Z
+1130,8470, DOCENTE POSTGR POLITECNICO GRANCOLOMBIANO ,01/08/00,NA,,,2014-02-17T21:42:53Z,2014-02-17T21:42:53Z
+1131,8470, GERENTE PROYECTOS & TECNOLOGIA ,10/08/92,16/01/00,,,2014-02-17T21:42:53Z,2014-02-17T21:42:53Z
+1132,7695," Asesora de campañas internacionales, Cristina Reyes a la Asamblea ",01/01/13,31/03/14,,,2014-02-17T22:20:44Z,2014-02-17T22:20:44Z
+1133,7695," Asesora de Gerencia, Smart Projec Group ",01/10/10,31/05/11,,,2014-02-17T22:20:45Z,2014-02-17T22:20:45Z
+1134,7695, Candidatuta al Parlamento Andino ,01/10/08,30/03/09,,,2014-02-17T22:20:45Z,2014-02-17T22:20:45Z
+1135,1865," Directora, Acción Social Integral ",20/03/09,30/12/12,,,2014-02-17T23:21:04Z,2014-02-17T23:21:04Z
+1136,1865," Directora Recursos Humanos, Concorcio homeopático ",05/02/99,20/02/09,,,2014-02-17T23:21:04Z,2014-02-17T23:21:04Z
+1137,7785, Fundación Juliana ,10/11/99,17/02/14,,,2014-02-18T00:34:28Z,2014-02-18T00:34:28Z
+1138,7359, Subdirector Académico Unisangil ,16/07/99,17/01/14,,,2014-02-18T02:13:11Z,2014-02-18T02:13:11Z
+1139,7359, Comerciante ,02/01/98,15/07/99,,,2014-02-18T02:13:11Z,2014-02-18T02:13:11Z
+1140,7359, Asesor Gobernación de Casanare ,16/07/96,30/03/98,,,2014-02-18T02:13:11Z,2014-02-18T02:13:11Z
+1141,7359, Profesional Especializado INURBE ,16/09/80,15/07/96,,,2014-02-18T02:13:11Z,2014-02-18T02:13:11Z
+1142,7622, Contralor Delegado CGR ,03/10/12,07/03/13,,,2014-02-18T12:00:58Z,2014-02-18T12:00:58Z
+1143,7622, Subsecretario Hábitat ,04/11/09,08/10/10,,,2014-02-18T12:00:58Z,2014-02-18T12:00:58Z
+1144,7622, Director General Caprecom ,21/10/01,25/07/02,,,2014-02-18T12:00:58Z,2014-02-18T12:00:58Z
+1145,8241, ASESOR JURIDICO ,10/02/13,10/12/13,,,2014-02-18T16:46:27Z,2014-02-18T16:46:27Z
+1146,8241, DOCENTE ECSAN ,15/01/12,28/12/12,,,2014-02-18T16:46:27Z,2014-02-18T16:46:27Z
+1147,8241, DOCENTE UGC ,15/01/11,15/12/11,,,2014-02-18T16:46:27Z,2014-02-18T16:46:27Z
+1148,8241, FUNCIONARIO RAMA JUDICIAL ,15/01/09,15/01/11,,,2014-02-18T16:46:27Z,2014-02-18T16:46:27Z
+1149,2233, Gerente Instituto para el Desarrollo de Antioquia IDEA ,01/01/02,01/10/06,,,2014-02-18T17:59:51Z,2014-02-18T17:59:51Z
+1150,2233, Gerente Instituto para el Desarrollo de Antioquia IDEA ,01/01/01,31/03/02,,,2014-02-18T17:59:51Z,2014-02-18T17:59:51Z
+1151,2233, Subgerente Financiero Empresa Antioqueña de Energía ,01/01/95,31/12/97,,,2014-02-18T18:04:21Z,2014-02-18T18:04:21Z
+1152,9160, ASESOR UEL ,18/02/05,31/12/06,,,2014-02-18T22:11:00Z,2014-02-18T22:11:00Z
+1153,9160, COORDINADOR PROYECTOS ,07/01/07,10/01/07,,,2014-02-18T22:11:00Z,2014-02-18T22:11:00Z
+1154,9160, INTERVENTOR ,06/01/08,06/01/09,,,2014-02-18T22:11:00Z,2014-02-18T22:11:00Z
+1155,7739, Abogado asesor victimas relleno sanitario Dona Juana ,01/12/12,18/02/14,,,2014-02-19T00:39:50Z,2014-02-19T00:39:50Z
+1156,2353, DIRECTOR EJECUTIVO FUNDACION SOLDADOS HEROES ,17/02/14,NA,,,2014-02-19T02:14:56Z,2014-02-19T02:14:56Z
+1157,2353," DIRECTOR EJECUTIVO , FUNDACION SOLDYER ",18/02/14,10/02/14,,,2014-02-19T02:14:56Z,2014-02-19T02:14:56Z
+1158,8610, Secretaria de Gobierno y Conviencia Ciudadana de Neiva ,NA,NA,,,2014-02-19T02:50:19Z,2014-02-19T13:30:35Z
+1159,8610, Auditora de Calidad –PAMEC- en el Huila ,NA,NA,,,2014-02-19T13:30:35Z,2014-02-19T13:30:35Z
+1160,8610, Vigilancia y Control de las EPS del régimen subsidiado en el Huila ,NA,NA,,,2014-02-19T13:30:35Z,2014-02-19T13:30:35Z
+1161,8610, Profesional de Calidad de Saludcoop regional Huila y Caquetá ,NA,NA,,,2014-02-19T13:30:35Z,2014-02-19T13:30:35Z
+1162,8610, Interventora de la población vinculada en el municipio de Acevedo ,NA,NA,,,2014-02-19T13:30:35Z,2014-02-19T13:30:35Z
+1163,8610, Asesora Cultural de la Asamblea Departamental del Huila ,NA,NA,,,2014-02-19T13:30:35Z,2014-02-19T13:30:35Z
+1164,8610, Terapeuta Ocupacional y Coordinadora del programa de Promoción y Educación para la Salud en el Hospital San Vicente de Paúl de Garzón ,NA,NA,,,2014-02-19T13:30:35Z,2014-02-19T13:30:35Z
+1165,8610, Terapeuta Ocupacional del Seguro Social en Neiva ,NA,NA,,,2014-02-19T13:30:35Z,2014-02-19T13:30:35Z
+1166,8610, Coordinadora del programa Hogar de Paso de la Tercera Edad del corregimiento de la Jagua ,NA,NA,,,2014-02-19T13:30:35Z,2014-02-19T13:30:35Z
+1167,8610," Directora de Proyección Social de la Universidad Cooperativa de Colombia, regional Huila ",NA,NA,,,2014-02-19T13:31:29Z,2014-02-19T13:31:29Z
+1172,7530, Gerente de Coinco ,01/01/13,30/11/13,,,2014-02-20T16:36:33Z,2014-02-20T16:36:33Z
+1173,7530, Asesor en Desarrollo Empresarial ,01/01/12,30/11/12,,,2014-02-20T16:36:33Z,2014-02-20T16:36:33Z
+1174,7530, Coordinador de Desarrollo Empresarial ,01/01/11,30/11/11,,,2014-02-20T16:36:33Z,2014-02-20T16:36:33Z
+1175,8193, Administrador Plazas de Mercado ,NA,NA,,,2014-02-20T18:50:15Z,2014-02-20T18:50:15Z
+1176,8193, Jefe de Comunicaciones. Directorio Departamental Conservador ,NA,NA,,,2014-02-20T18:50:15Z,2014-02-20T18:50:15Z
+1177,8193, Miembro Activo y Fundador. Colegio de Abogados Administrativistas del Valle ,NA,NA,,,2014-02-20T18:50:15Z,2014-02-20T18:50:15Z
+1178,8193, Vicepresidente. Directorio Lloredista Departamental ,NA,NA,,,2014-02-20T18:50:15Z,2014-02-20T18:50:15Z
+1179,1177, Docente Universidad Santiago Cali ,01/01/96,01/01/00,,,2014-02-20T19:42:56Z,2014-02-20T19:42:56Z
+1180,1177, Secretario General de la Asamblea Departamental del Valle del Cauca ,01/01/03,01/01/05,,,2014-02-20T19:42:56Z,2014-02-20T19:42:56Z
+1181,7466, Director Técnico del Sena en Bogotá y Santander. ,NA,NA,,,2014-02-20T19:49:32Z,2014-02-20T19:49:32Z
+1182,7466, Secretario de Obras de Santander ,NA,NA,,,2014-02-20T19:49:32Z,2014-02-20T19:49:32Z
+1183,7466, Secretario de Planeación de Santander ,NA,NA,,,2014-02-20T19:49:32Z,2014-02-20T19:49:32Z
+1184,7466," Gerente Nacional de Ventas de Trefilería Colombiana, TREFILCO S. A ",NA,NA,,,2014-02-20T19:49:32Z,2014-02-20T19:49:32Z
+1186,7467, Medillista Olímpica Atenas - Levantamiento de pesas ,01/01/04,01/01/04,,,2014-02-20T20:02:03Z,2014-02-20T20:02:03Z
+1187,7660, Director de proyectos Fondo Mixto de Cultura de Bogotá ,01/01/98,01/01/00,,,2014-02-20T21:16:52Z,2014-02-20T21:16:52Z
+1188,7660, Director de proyectos Consejo Nacional de Planeación ,01/01/02,01/01/04,,,2014-02-20T21:16:52Z,2014-02-20T21:16:52Z
+1189,8159, Asesor Jurídico SENA - MAGDALENA ,NA,NA,,,2014-02-21T01:33:46Z,2014-02-21T01:33:46Z
+1190,8159, Consultor USAID Programa Cimientos ,NA,NA,,,2014-02-21T01:33:46Z,2014-02-21T01:33:46Z
+1191,8159, Asesor Jurídico Empresas Privadas ,NA,NA,,,2014-02-21T01:33:46Z,2014-02-21T01:33:46Z
+1192,7455, Piloto Comercial AVIANCA ,25/05/04,NA,,,2014-02-21T15:23:09Z,2014-02-21T15:23:09Z
+49,324,Estatal Gerente Loteria del Atlántico Lotería de Atlántico,01/01/97,31/12/97,,,2010-01-17T17:34:58Z,2014-02-21T16:59:02Z
+50,324,Estatal Secretario Privado Gobernación Atlántico Gobernación de Atlántico,01/01/98,31/12/00,,,2010-01-17T17:34:58Z,2014-02-21T16:59:02Z
+1185,7894,Servicios de Salud Empresario A dministrador Público Empresa privada,NA,NA,,,2014-02-20T19:50:15Z,2014-02-24T15:58:42Z
+1193,9298, ABOGADO ,NA,NA,,,2014-02-25T13:03:57Z,2014-02-25T13:03:57Z
+1194,1625, Inspector de Carreteras ,03/10/80,11/10/92,,,2014-02-25T22:49:51Z,2014-02-25T22:49:51Z
+1195,1625, Jefe Unidad INvestigacion Juicios Fiscales y Jurisdiccion Coactiva Contraloria General de la Republica ,25/02/94,25/02/10,,,2014-02-25T22:49:51Z,2014-02-25T22:49:51Z
+1196,1625, Secretario de Gobierno de Manizales ,01/10/05,31/01/06,,,2014-02-25T22:49:51Z,2014-02-25T22:49:51Z
+1197,1625, Subcontralor de Manizales ,01/02/07,01/12/08,,,2014-02-25T22:49:51Z,2014-02-25T22:49:51Z
+1198,1625, Procurador Judicial ante el Tribunal Contencioso Administratvo del Risaralda ,01/02/11,31/10/12,,,2014-02-25T22:49:51Z,2014-02-25T22:49:51Z
+1199,8220, Ejecutivo de Fecode ,NA,NA,,,2014-02-25T22:49:59Z,2014-02-25T22:49:59Z
+1200,8220, Ejecutivo Fecode ,NA,NA,,,2014-02-25T22:49:59Z,2014-02-25T22:49:59Z
+1201,8220, Ejecutivo CUT ,NA,NA,,,2014-02-25T22:49:59Z,2014-02-25T22:49:59Z
+1202,8220, Ejecutivo CUT ,NA,NA,,,2014-02-25T22:49:59Z,2014-02-25T22:49:59Z
+1203,1526," Gerente Hospital San Juan de Dios Santa Rosa de Osos, Antioquia ",01/10/96,28/02/05,,,2014-02-26T00:35:15Z,2014-02-26T00:35:15Z
+1204,1526, Directora Nacional del PAI - Ministerio de Salud ,01/08/05,20/02/06,,,2014-02-26T00:35:15Z,2014-02-26T00:35:15Z
+1205,1526, Gerente Cooperativa de Hospitales de Antioquia COHAN ,21/02/06,04/09/09,,,2014-02-26T00:35:15Z,2014-02-26T00:35:15Z
+1212,7479, Asesor Educativo ,08/01/09,08/02/12,,,2014-02-27T16:47:56Z,2014-02-27T16:47:56Z
+1213,7479, Acaldias ,20/01/82,06/06/84,,,2014-02-27T16:47:56Z,2014-02-27T16:47:56Z
+1214,7479, Director Extensión Politécnico JIC ,15/08/80,16/12/81,,,2014-02-27T16:47:56Z,2014-02-27T16:47:56Z
+1216,7518, Docente de cátedra y práctica clínica.FUMCMedellin ,01/06/96,28/04/03,,,2014-02-27T21:30:29Z,2014-02-27T21:30:29Z
+1217,7518, Docente Universidad CES Medellin ,05/06/05,15/12/10,,,2014-02-27T21:30:29Z,2014-02-27T21:30:29Z
+1215,5050,Educacion y Conocimiento Docente Universidad CES,10/06/05,15/12/10,,,2014-02-27T20:36:33Z,2014-02-27T21:31:49Z
+1226,8920, Asesor de Notariado y Registro ,NA,NA,,,2014-03-02T06:01:25Z,2014-03-02T06:01:25Z
+1227,8920, Coordinador de entidades fiscales en el Congreso ,NA,NA,,,2014-03-02T06:01:25Z,2014-03-02T06:01:25Z
+1228,8920, Coordinador Nacional del Proyecto PNUD ,NA,NA,,,2014-03-02T06:01:25Z,2014-03-02T06:01:25Z
+1218,9597,Ingenieria y Servicios de Construccion Director Contractual Conalvias,01/06/13,27/02/14,,,2014-02-27T21:30:29Z,2014-02-28T01:38:35Z
+1219,9597,Ingenieria y Servicios de Construccion Director de Ingenieria D.C. PORT,01/06/12,30/05/13,,,2014-02-28T01:59:31Z,2014-02-28T02:00:01Z
+1220,9597,Ingenieria y Servicios de Construccion Director Tecnico Consorcio Doble Calzada Bogota - Villaviencio,30/10/10,30/03/11,,,2014-02-28T02:02:51Z,2014-02-28T02:02:51Z
+1221,8304, Gerente KVD ,02/01/10,27/02/14,,,2014-02-28T04:46:31Z,2014-02-28T04:46:31Z
+1222,8304, Gerente Comercial Agrogestiones ,01/01/09,31/12/09,,,2014-02-28T04:46:31Z,2014-02-28T04:46:31Z
+1223,7314, Editora Política W Radio ,NA,NA,,,2014-02-28T17:00:13Z,2014-02-28T17:00:13Z
+1224,7314, Columnista El Heraldo ,NA,NA,,,2014-02-28T17:00:13Z,2014-02-28T17:00:13Z
+1225,7314, Jefe de Prensa Ginna Parody ,NA,NA,,,2014-02-28T17:00:13Z,2014-02-28T17:00:13Z
+1229,8121, Docente ,06/02/96,15/12/99,,,2014-03-04T15:54:14Z,2014-03-04T15:54:14Z
+1230,9405, Gerente de Empresas Publicas de Cundinamarca SA ESP ,15/10/08,15/02/12,,,2014-03-06T16:29:47Z,2014-03-06T16:29:47Z
+1231,7698, DIRECTORA PAC  EPS FAMISANAR ,01/12/11,31/10/13,,,2014-03-06T21:10:00Z,2014-03-06T21:10:00Z
+1232,7698, DIRECTORA RED DE SERVICIOS DE SALUD FAMISANAR ,01/02/11,31/10/11,,,2014-03-06T21:10:00Z,2014-03-06T21:10:00Z
+1233,7698, ASESORA SECRETARIA DE SALUD DE CUNDINAMARCA DIRECCION DESARROLLO DE SERVICIOS ,05/01/09,31/01/11,,,2014-03-06T21:10:00Z,2014-03-06T21:10:00Z
+1234,7698, DIRECTORA PAC  EPS FAMISANAR ,01/12/11,31/10/13,,,2014-03-06T21:10:14Z,2014-03-06T21:10:14Z
+1235,7698, DIRECTORA RED DE SERVICIOS DE SALUD FAMISANAR ,01/02/11,31/10/11,,,2014-03-06T21:10:14Z,2014-03-06T21:10:14Z
+1236,7698, ASESORA SECRETARIA DE SALUD DE CUNDINAMARCA DIRECCION DESARROLLO DE SERVICIOS ,05/01/09,31/01/11,,,2014-03-06T21:10:14Z,2014-03-06T21:10:14Z
+1237,731, Secretaria general del Ministerio Desarrollo Económico. ,NA,NA,,,2014-04-23T11:01:33Z,2014-04-23T11:01:33Z
+1238,731, Analista política de Caracol Radio ,NA,NA,,,2014-04-23T11:01:33Z,2014-04-23T11:01:33Z
+1240,8918, Secretario de Gobierno Municipio de Funza ,09/04/03,02/10/06,,,2014-08-27T10:26:05Z,2014-08-27T10:26:05Z
+1241,8344,Otros Servicios Asesor Desarrollo Organizacional García Zuccardi,09/09/12,09/09/13,,,2014-08-27T10:26:05Z,2014-09-03T18:46:13Z
+1242,8576, Secretario de Salud de Bolívar ,01/01/03,12/01/03,,,2014-09-17T21:29:35Z,2014-09-17T21:29:35Z
+1243,8474, Concejal ,01/01/08,31/12/11,,,2014-10-08T13:49:13Z,2014-10-08T13:49:13Z
+1244,7430, Asesora Congreso de la República ,20/07/06,20/12/11,,,2014-10-09T23:27:16Z,2014-10-09T23:27:16Z
+1245,7430, Asesora en asuntos poblacionales de la Gobernación de Santander ,27/02/12,05/09/13,,,2014-10-09T23:27:16Z,2014-10-09T23:27:16Z
+1246,1468, Abogado ,01/01/98,01/01/09,,,2014-10-10T21:36:48Z,2014-10-10T21:36:48Z
+1247,1468, Asesor ,01/01/98,01/01/09,,,2014-10-10T21:36:48Z,2014-10-10T21:36:48Z
+1248,1468, Director electoral Partido Conservador ,01/01/01,01/01/06,,,2014-10-10T21:36:48Z,2014-10-10T21:36:48Z
+1249,1468, Profesor Universitario ,05/03/95,06/05/98,,,2014-10-10T21:42:24Z,2014-10-10T21:42:24Z
+1250,9724, Geerente del Banco Colpatria ,NA,NA,,,2014-10-21T22:36:39Z,2014-10-21T22:37:30Z
+1251,9724," Directora del Festival Folclórico, Reinado Nacional del Bambuco y Muestra Internacional de Folclor ",NA,NA,,,2014-10-21T22:37:30Z,2014-10-21T22:37:30Z
+1252,9724," Directora del Festival Folclórico, Reinado Popular y Señorita Neiva ",NA,NA,,,2014-10-21T22:37:30Z,2014-10-21T22:37:30Z
+1253,9724, Directora del Banco Finandina sede Neiva ,NA,NA,,,2014-10-21T22:37:30Z,2014-10-21T22:37:30Z
+1254,9435, MINISTRA DE TECNOLOGÍAS DE LA INFORMACIÓN  Y LAS COMUNICACIONES ,19/07/06,31/01/10,,,2014-11-05T20:59:26Z,2014-11-05T20:59:26Z
+1255,9435, DIRECTORA DE COLCIENCIAS ,30/07/03,31/01/06,,,2014-11-05T20:59:26Z,2014-11-05T20:59:26Z
+1256,9435, CONSULTORA ,15/02/10,30/06/14,,,2014-11-05T20:59:26Z,2014-11-05T20:59:26Z
+1257,8598, Director Regional del ICBF en Córdoba ,27/03/07,12/02/13,,,2014-11-19T20:16:43Z,2014-11-19T20:16:43Z
+1258,9387, Secretaria Educación Huila ,02/01/04,01/01/06,,,2015-01-21T15:27:09Z,2015-01-21T15:27:09Z
+1259,9, Rector de la Universidad del Atlántico ,NA,NA,,,2015-11-07T17:57:43Z,2015-11-07T17:57:43Z
+1260,2508," Secretario de Obras e Infraestructura, Gobernación de Nariño ",01/01/04,31/12/07,,,2017-01-19T15:01:02Z,2017-01-19T15:01:02Z
+1261,1460, Tesorera del Departamento de Bolívar ,NA,NA,,,2017-02-06T20:14:25Z,2017-02-06T20:14:25Z
+1262,1460, Secretaria de la Asamblea Departamental de Bolívar ,NA,NA,,,2017-02-06T20:14:25Z,2017-02-06T20:14:25Z
+1263,2504, Secretario de Agricultura del Magdalena ,NA,NA,,,2017-02-06T20:51:42Z,2017-02-06T20:51:42Z
+1264,8637, Secretario general de la Alcaldía de Palmira ,NA,NA,,,2017-02-06T20:54:58Z,2017-02-06T20:54:58Z
+1265,8637, Gerente financiero de las Empresas Municipales de Palmira ,NA,NA,,,2017-02-06T20:54:58Z,2017-02-06T20:54:58Z
+1266,8637, Director financiero de la Imprenta de la Gobernación del Valle ,NA,NA,,,2017-02-06T20:54:58Z,2017-02-06T20:54:58Z
+1267,8637, Subdirector administrativo del Hospital San Vicente de Paúl de Palmira ,NA,NA,,,2017-02-06T20:54:58Z,2017-02-06T20:54:58Z
+1269,14287," sustanciador, juez y conjuez del Tribunal Administrativo de Santander ",NA,NA,,,2018-02-16T21:26:58Z,2018-02-16T21:26:58Z
+1270,14287, Procurador Delegado para la Conciliación Administrativa en Colombia ,NA,NA,,,2018-02-16T21:26:58Z,2018-02-16T21:26:58Z
+1271,14287, Procurador Delegado ante el Consejo de Estado ,NA,NA,,,2018-02-16T21:26:58Z,2018-02-16T21:26:58Z
+1272,14515, Consorcio Proyectamos -CINDE- ,01/01/17,01/03/17,,,2018-02-27T18:59:26Z,2018-02-27T18:59:26Z
+1273,14515, Fundación Amanecer Dorado ,01/06/16,01/01/17,,,2018-02-27T18:59:26Z,2018-02-27T18:59:26Z
+1274,14515, Fundación Jacques de Molay ,01/03/15,01/05/15,,,2018-02-27T18:59:26Z,2018-02-27T18:59:26Z
+1275,14515, Federación Verdad Colombia ,01/04/14,01/04/15,,,2018-02-27T18:59:26Z,2018-02-27T18:59:26Z
+1276,14515, Hispanic American Center for Economic Research – HACER/ Directora en Colombia ,01/03/16,01/06/16,,,2018-02-27T18:59:26Z,2018-02-27T18:59:26Z
+1277,14515, Hacer/Directora en Colombia ,01/04/11,01/08/13,,,2018-02-27T18:59:26Z,2018-02-27T18:59:26Z
+1278,14515, Análisis del Entorno (AdE) -Riesgo político- ,01/04/09,01/09/09,,,2018-02-27T18:59:26Z,2018-02-27T18:59:26Z
+1279,14515, Instituto de Ciencia Política -Área de Proyectos- ,01/08/06,04/02/08,,,2018-02-27T18:59:26Z,2018-02-27T18:59:26Z
+1280,12453, MIEMBRO FUNDADOR DE LA VEEDURÍA CIUDADANA INTERDISCIPLINARIA DE CALDAS ,01/01/16,31/12/16,,,2018-02-28T19:31:22Z,2018-02-28T19:31:22Z
+1281,12453," MIEMBRO DEL CZA MANIZALES, DE LA COOPERATIVA COOMEVA. ",01/01/11,31/12/17,,,2018-02-28T19:31:22Z,2018-02-28T19:31:22Z
+1282,12453, MIEMBRO CLUB DE LEONES LA SUIZA ,01/01/05,31/12/05,,,2018-02-28T19:31:22Z,2018-02-28T19:31:22Z
+1283,12453, PRESIDENTE CLUB SOCIAL Y DEPORTIVO CAPABLANCA ,01/01/96,31/12/04,,,2018-02-28T19:31:22Z,2018-02-28T19:31:22Z
+1284,12453, PRESIDENTE CONSEJO DE ADMINISTRACIÓN  - COMSALUD ,01/01/95,31/05/96,,,2018-02-28T19:31:22Z,2018-02-28T19:31:22Z
+1285,12453, MIEMBRO PRINCIPAL JUNTA SECCIONAL DE SALUD DE CALDAS ,01/01/91,31/12/93,,,2018-02-28T19:31:22Z,2018-02-28T19:31:22Z
+1286,13589, Gerente GeneralINNpulsa Colombia ,01/05/16,01/10/16,,,2018-03-08T12:07:05Z,2018-03-08T12:07:05Z
+1287,13589, Director Mentalidad y cultura InMpulsa ,01/10/15,01/05/16,,,2018-03-08T12:07:05Z,2018-03-08T12:07:05Z
+1288,13589, Docente Cátedra  CESA ,01/02/12,01/12/15,,,2018-03-08T12:07:05Z,2018-03-08T12:07:05Z
+1289,13589, Docente Universidad Javeriana ,01/05/12,01/12/13,,,2018-03-08T12:07:05Z,2018-03-08T12:07:05Z
+1290,13589, Director Ejecutivo Creative lab ,01/12/10,01/12/14,,,2018-03-08T12:07:05Z,2018-03-08T12:07:05Z
+1291,13589, Asesor de proyectos Federación  de  municipios ,01/05/06,01/08/10,,,2018-03-08T12:07:05Z,2018-03-08T12:07:05Z

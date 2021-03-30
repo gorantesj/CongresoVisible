@@ -1,0 +1,17 @@
+id,created_at,edited_at,nombre,lugar,organizacion,telefono,movil,correo,titulo,finalidad,tipo_datos,terminos,reporte_enviado
+1,2016-11-01 17:27:01.259716,2016-11-01 17:27:01.259742,Test,Bogotá,Testing App,2372333,3100000000,testing@testing.com,Prueba,Testear la app,testear la app,TRUE,FALSE
+2,2017-02-17 12:16:38.810158,2017-02-17 12:16:38.810223,Claudia Patricia Blanco,Bucaramanaga,Rama Judicial,3015440541,3015440541,cpattyblanco@hotmail.com,ninguno,"comprender la totalidad de la sentencia, el salvamento de voto es muy importante y no lo he podido leer","Quisiera tener el Salvamento de voto de la sentencia C-493 de 2016, M.P. Dr. Alberto Rojas Ríos, lo he buscado en todas las páginas sin ningún existo.",TRUE,FALSE
+3,2017-04-02 21:15:04.227448,2017-04-02 21:15:04.227509,HENRY ALBERTO SIERRA JAUREGUI,MUNICIPIO DE LOS PATIOS (N. DE S),ABOGADO,5564922,3157486881,hsierra2006@hotmail.com,Profesional,Para presentarlos en juicio,Requisitos que debe reunir un entrevistador especializado de cámara de Gesell,TRUE,FALSE
+4,2017-10-12 23:17:49.143160,2017-10-12 23:17:49.143188,Ruth Milena Murillo gonzalez,Cali (Valle),Adasid Colombia,3962405,3137916434,mimurizalez@yahoo.com,otorgamiento de la pensión familiar ante el fallecimiento del cónyuge o compañero(a) permanente,"Estoy desarrollando la tesis para obtener el grado de abogada, y esta información es vital para la investigación de la pensión familiar en Colombia",Argumento constitucional,TRUE,FALSE
+5,2017-11-02 01:06:55.374395,2017-11-02 01:06:55.374422,Angie Katherine Mipaz,pasto,universidad de nariño,000000000,3108923575,angiemipaz.1995@gmail.com,estudiante,datos academicos,conclusion resumen,TRUE,FALSE
+6,2018-06-28 15:48:32.514826,2018-06-28 15:48:32.514869,BETTY CRESLER DE GRU,"SANTIAGO DE CALI, VALLE DEL CAUCA",ABOGADA INDEPENDIENTE,6686870,3016591122,bettycreslergru@gmail.com,ABOGADA LITIGANTE,Para el ejercicio de mi profesión.,SENTENCIA.,TRUE,FALSE
+7,2018-07-09 01:53:00.986854,2018-07-09 01:53:00.986921,Carlos Eduardo Castro Ruiz,Bahía Malaga Valle del Cauca,Armada Nacional,0315357610,0,carlos.castro@armada.mil.co,Principales cambio en el Régimen de salud de las FFMM frente a la Ley Estatutaria,"Terminar monografia, y así cumplir requisitos para obtener titulo en Derecho Medico","En el proyecto de Ley publicado en la Gaceta 447/13 ""INFORME DE CONCILIACIÓN AL PROYECTO DE LEY ESTATUTARIA 209 DE 2013 SENADO, 267 DE 2013 CÁMARA"", a parece así el,
+
+Artículo 3°. Ámbito de aplicación. La presente ley se aplica a todos los agentes, usuarios y demás que intervengan de manera directa o indirecta, en la prestación del servicio, teniendo en cuenta el marco legal de la actividad que desarrollan, sin perjuicio de lo que se establezca en las normas especiales que regulan la cobertura voluntaria en salud.
+
+pero en el texto definitivo aprobado de la  LEY ESTATUTARIA 209 DE 2013 CÁMARA, 267 DE 2013 en el SENADO. se modifico el articulo, eliminando los regimenes especiales:
+
+Artículo 3°. Ámbito de aplicación. La presente ley se aplica a todos los agentes, usuarios y demás que intervengan de manera directa o indirecta, en la garantía del derecho fundamental a la salud.
+
+¿Cuales fueron los motivos y argumentos, para modificar el articulo? ¿y que implicaciones tiene frente a los regimenes especiales?
+Muchas gracias.",TRUE,FALSE

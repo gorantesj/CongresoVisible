@@ -1,0 +1,1077 @@
+num,seccion,tabla,campo,grupo,campo_gp,tabla_gp,transformar,observaciones,terminado
+1,actividad,actividad,id,2,,,2,tabla obsoleta,1
+1,actividad,actividad,seguido_por_id,2,,,2,tabla obsoleta,1
+1,actividad,actividad,fecha_hora,2,,,2,tabla obsoleta,1
+1,actividad,actividad,tipo_id,2,,,2,tabla obsoleta,1
+1,actividad,actividad,objeto_disparador_id,2,,,2,tabla obsoleta,1
+1,actividad,actividad,objeto_seguido_id,2,,,2,tabla obsoleta,1
+1,actividad,actividad,objeto_seguido_content_type_id,2,,,2,tabla obsoleta,1
+1,actividad,actividad,objeto_disparador_content_type_id,2,,,2,tabla obsoleta,1
+2,actividad,siguea,id,2,,,2,tabla obsoleta,1
+2,actividad,siguea,seguido_type_id,2,,,2,tabla obsoleta,1
+2,actividad,siguea,seguido_id,2,,,2,tabla obsoleta,1
+2,actividad,siguea,seguidor_id,2,,,2,tabla obsoleta,1
+2,actividad,siguea,fecha_hora ,2,,,2,tabla obsoleta,1
+3,actividad,tipoactividad,id,2,,,2,tabla obsoleta,1
+3,actividad,tipoactividad,nombre,2,,,2,tabla obsoleta,1
+4,auth,group_permissions,id,2,,,2,tabla obsoleta,1
+4,auth,group_permissions,group_id,2,,,2,tabla obsoleta,1
+4,auth,group_permissions,permission_id,2,,,2,tabla obsoleta,1
+5,auth,group,id,2,,,2,tabla obsoleta,1
+5,auth,group,name,2,,,2,tabla obsoleta,1
+6,auth,message,id,2,,,2,tabla obsoleta,1
+6,auth,message,user_id,2,,,2,tabla obsoleta,1
+6,auth,message,message,2,,,2,tabla obsoleta,1
+7,auth,permission,id,2,,,2,tabla obsoleta,1
+7,auth,permission,name,2,,,2,tabla obsoleta,1
+7,auth,permission,content_type_id,2,,,2,tabla obsoleta,1
+7,auth,permission,codename,2,,,2,tabla obsoleta,1
+8,auth,user_groups,id,2,,,2,tabla obsoleta,1
+8,auth,user_groups,user_id,2,,,2,tabla obsoleta,1
+8,auth,user_groups,group_id,2,,,2,tabla obsoleta,1
+9,auth,user_user_permissions,id,2,,,2,tabla obsoleta,1
+9,auth,user_user_permissions,user_id,2,,,2,tabla obsoleta,1
+9,auth,user_user_permissions,permission_id,2,,,2,tabla obsoleta,1
+10,auth,user,id,2,,,2,tabla obsoleta,1
+10,auth,user,username,2,,,2,tabla obsoleta,1
+10,auth,user,first_name,2,,,2,tabla obsoleta,1
+10,auth,user,last_name,2,,,2,tabla obsoleta,1
+10,auth,user,email,2,,,2,tabla obsoleta,1
+10,auth,user,password,2,,,2,tabla obsoleta,1
+10,auth,user,is_staff,2,,,2,tabla obsoleta,1
+10,auth,user,is_active,2,,,2,tabla obsoleta,1
+10,auth,user,is_superuser,2,,,2,tabla obsoleta,1
+10,auth,user,last_login,2,,,2,tabla obsoleta,1
+10,auth,user,date_joined,2,,,2,tabla obsoleta,1
+11,ayuda,ayudaseccion,id,2,,,2,tabla obsoleta,1
+11,ayuda,ayudaseccion,orden,2,,,2,tabla obsoleta,1
+11,ayuda,ayudaseccion,fecha_actualizacion,2,,,2,tabla obsoleta,1
+11,ayuda,ayudaseccion,id_video_ayuda,2,,,2,tabla obsoleta,1
+11,ayuda,ayudaseccion,regex_seccion,2,,,2,tabla obsoleta,1
+11,ayuda,ayudaseccion,exacto,2,,,2,tabla obsoleta,1
+12,ayuda,enlaceinteres,id,2,,,2,tabla obsoleta,1
+12,ayuda,enlaceinteres,titulo,2,,,2,tabla obsoleta,1
+12,ayuda,enlaceinteres,enlace,2,,,2,tabla obsoleta,1
+12,ayuda,enlaceinteres,descripcion,2,,,2,tabla obsoleta,1
+12,ayuda,enlaceinteres,seccion_id,2,,,2,tabla obsoleta,1
+12,ayuda,enlaceinteres,orden,2,,,2,tabla obsoleta,1
+13,ayuda,enlacesseccion,id,2,,,2,tabla obsoleta,1
+13,ayuda,enlacesseccion,orden,2,,,2,tabla obsoleta,1
+13,ayuda,enlacesseccion,regex_seccion,2,,,2,tabla obsoleta,1
+14,ayuda,preguntarespuesta,id,2,,,2,tabla obsoleta,1
+14,ayuda,preguntarespuesta,orden,2,,,2,tabla obsoleta,1
+14,ayuda,preguntarespuesta,pregunta,2,,,2,tabla obsoleta,1
+14,ayuda,preguntarespuesta,respuesta,2,,,2,tabla obsoleta,1
+14,ayuda,preguntarespuesta,seccion_id,2,,,2,tabla obsoleta,1
+15,blog,blog,id,2,id,contenido_multimedia,2,tabla obsoleta. Se les entregó una base de datos con todos los posts.,1
+15,blog,blog,autor_id,2,persona_id,contenido_multimedia,2,tabla obsoleta,1
+15,blog,blog,titulo,2,titulo,contenido_multimedia,2,tabla obsoleta,1
+15,blog,blog,descripcion,2,contenido,contenido_multimedia,2,tabla obsoleta,1
+15,blog,blog,tipo_blog_id,2,tipo_publicacion_id,contenido_multimedia,2,tabla obsoleta,1
+15,blog,blog,destacado,2,destacado,contenido_multimedia,2,tabla obsoleta,1
+16,blog,boletin,id,2,id,res_blog_boletin ,2,tabla obsoleta,1
+16,blog,boletin,orden,2,orden,res_blog_boletin ,2,tabla obsoleta,1
+16,blog,boletin,nombre,2,nombre,res_blog_boletin ,2,tabla obsoleta,1
+16,blog,boletin,anio,2,anio,res_blog_boletin ,2,tabla obsoleta,1
+16,blog,boletin,objeto,2,objeto,res_blog_boletin ,2,tabla obsoleta,1
+16,blog,boletin,destacar,2,destacar,res_blog_boletin ,2,tabla obsoleta,1
+16,blog,boletin,archivo,2,archivo,res_blog_boletin ,2,tabla obsoleta,1
+17,blog,post_tags,id,2,,,2,tabla obsoleta,1
+17,blog,post_tags,post_id,2,,,2,tabla obsoleta,1
+17,blog,post_tags,tag_id,2,,,2,tabla obsoleta,1
+18,blog,post,id,2,id,res_blog_post ,2,tabla obsoleta,1
+18,blog,post,created_at,2,created_at,res_blog_post ,2,tabla obsoleta,1
+18,blog,post,edited_at,2,updated_at,res_blog_post ,2,tabla obsoleta,1
+18,blog,post,blog_id,2,blog_id,res_blog_post ,2,tabla obsoleta,1
+18,blog,post,titulo,2,titulo,res_blog_post ,2,tabla obsoleta,1
+18,blog,post,contenido,2,contenido,res_blog_post ,2,tabla obsoleta,1
+18,blog,post,fecha_publicacion,2,fecha_publicacion,res_blog_post ,2,tabla obsoleta,1
+18,blog,post,esta_publicado,2,esta_publicado,res_blog_post ,2,tabla obsoleta,1
+18,blog,post,esta_vetado,2,,contenido_multimedia,2,tabla obsoleta,1
+18,blog,post,destacado,2,,contenido_multimedia,2,tabla obsoleta,1
+18,blog,post,imagen,2,imagen,res_blog_post ,2,tabla obsoleta,1
+18,blog,post,imagen_menu,2,,contenido_multimedia,2,tabla obsoleta,1
+18,blog,post,imagen_menu_seleccionada,2,,contenido_multimedia,2,tabla obsoleta,1
+18,blog,post,ee,2,ee,res_blog_post ,2,tabla obsoleta,1
+19,blog,tag,id,2,,,2,tabla obsoleta,1
+19,blog,tag,nombre,2,,,2,tabla obsoleta,1
+20,blog,tipoblog,id,3,id,res_blog_tipoblog ,2,tabla obsoleta,1
+20,blog,tipoblog,nombre,3,nombre,res_blog_tipoblog ,2,tabla obsoleta,1
+21,celery,periodictaskmeta,id,2,,,2,tabla obsoleta,1
+21,celery,periodictaskmeta,name,2,,,2,tabla obsoleta,1
+21,celery,periodictaskmeta,last_run_at,2,,,2,tabla obsoleta,1
+21,celery,periodictaskmeta,total_run_count,2,,,2,tabla obsoleta,1
+22,celery,taskmeta,id,2,,,2,tabla obsoleta,1
+22,celery,taskmeta,task_id,2,,,2,tabla obsoleta,1
+22,celery,taskmeta,status,2,,,2,tabla obsoleta,1
+22,celery,taskmeta,result,2,,,2,tabla obsoleta,1
+22,celery,taskmeta,date_done,2,,,2,tabla obsoleta,1
+22,celery,taskmeta,traceback,2,,,2,tabla obsoleta,1
+24,congreso,actividadpersona,id,2,,,2,tabla obsoleta,1
+24,congreso,actividadpersona,created_at,2,,,2,tabla obsoleta,1
+24,congreso,actividadpersona,edited_at,2,,,2,tabla obsoleta,1
+24,congreso,actividadpersona,fecha_hora,2,,,2,tabla obsoleta,1
+24,congreso,actividadpersona,persona_id,2,,,2,tabla obsoleta,1
+24,congreso,actividadpersona,tipo_id,2,,,2,tabla obsoleta,1
+24,congreso,actividadpersona,texto,2,,,2,tabla obsoleta,1
+24,congreso,actividadpersona,content_type_id,2,,,2,tabla obsoleta,1
+24,congreso,actividadpersona,object_id,2,,,2,tabla obsoleta,1
+24,congreso,actividadpersona,periodo_id,2,,,2,tabla obsoleta,1
+25,congreso,alianza,id,2,,,2,,1
+25,congreso,alianza,created_at,2,,,2,,1
+25,congreso,alianza,edited_at,2,,,2,,1
+25,congreso,alianza,congresista_alianza_id,2,,,2,,1
+25,congreso,alianza,congresista_alianza2_id,2,,,2,,1
+25,congreso,alianza,periodo_id,2,,,2,,1
+25,congreso,alianza,partido_id,2,,,2,,1
+26,congreso,alianzapartido,id,2,,,2,,1
+26,congreso,alianzapartido,created_at,2,,,2,,1
+26,congreso,alianzapartido,edited_at,2,,,2,,1
+26,congreso,alianzapartido,tiempo,2,,,2,,1
+26,congreso,alianzapartido,partido_origen_id,2,,,2,,1
+26,congreso,alianzapartido,partido_aliado_id,2,,,2,,1
+27,congreso,aval,id,2,,,2,,1
+27,congreso,aval,nombre,2,,,2,,1
+28,congreso,bancada,id,2,,,2,,1
+28,congreso,bancada,created_at,2,,,2,,1
+28,congreso,bancada,edited_at,2,,,2,,1
+28,congreso,bancada,nombre,2,,,2,,1
+28,congreso,bancada,posicion,2,,,2,,1
+29,congreso,camara,id,1,id,corporacions,,,1
+29,congreso,camara,nombre,1,nombre,corporacions,,,1
+30,congreso,campania_sectores,id,2,,,2,,1
+30,congreso,campania_sectores,campania_id,2,,,2,,1
+30,congreso,campania_sectores,sectorindustria_id,2,,,2,,1
+31,congreso,campania,id,2,,,2,,1
+31,congreso,campania,created_at,2,,,2,,1
+31,congreso,campania,edited_at,2,,,2,,1
+31,congreso,campania,congresista_id,2,,,2,,1
+31,congreso,campania,partido_id,2,,,2,,1
+31,congreso,campania,aspira,2,,,2,,1
+31,congreso,campania,departamento_id,2,,,2,,1
+31,congreso,campania,sitio_web,2,,,2,,1
+31,congreso,campania,correo,2,,,2,,1
+31,congreso,campania,propuestas,2,,,2,,1
+31,congreso,campania,costo_total,2,,,2,,1
+31,congreso,campania,circunscripcion,2,,,2,,1
+31,congreso,campania,tipo_voto,2,,,2,,1
+31,congreso,campania,formula_id,2,,,2,,1
+31,congreso,campania,contacto_id,2,,,2,,1
+31,congreso,campania,camara_id,2,,,2,,1
+31,congreso,campania,periodo_id,2,,,2,,1
+31,congreso,campania,inversion_dinero,2,,,2,,1
+31,congreso,campania,financiacion_recursos_propios,2,,,2,,1
+31,congreso,campania,financiacion_prestamos,2,,,2,,1
+31,congreso,campania,financiacion_donaciones,2,,,2,,1
+31,congreso,campania,financiacion_empresa_privada,2,,,2,,1
+31,congreso,campania,fuente_financiacion_personas,2,,,2,,1
+31,congreso,campania,circunscripcion_model_id,2,,,2,,1
+31,congreso,campania,numero_lista,2,,,2,,1
+32,congreso,candidatos_concejo,id,2,,,2,,1
+32,congreso,candidatos_concejo,nombre_completo,2,,,2,,1
+32,congreso,candidatos_concejo,nombres,2,,,2,,1
+32,congreso,candidatos_concejo,apellidos,2,,,2,,1
+32,congreso,candidatos_concejo,cedula,2,,,2,,1
+32,congreso,candidatos_concejo,genero,2,,,2,,1
+32,congreso,candidatos_concejo,telefono_candidato,2,,,2,,1
+32,congreso,candidatos_concejo,email_candidato,2,,,2,,1
+32,congreso,candidatos_concejo,sitio_web,2,,,2,,1
+32,congreso,candidatos_concejo,facebook_candidato,2,,,2,,1
+32,congreso,candidatos_concejo,twitter_candidato,2,,,2,,1
+32,congreso,candidatos_concejo,biografia,2,,,2,,1
+32,congreso,candidatos_concejo,partido_id,2,,,2,,1
+32,congreso,candidatos_concejo,propuestas,2,,,2,,1
+32,congreso,candidatos_concejo,tipo_voto,2,,,2,,1
+32,congreso,candidatos_concejo,imagen_concejo,2,,,2,,1
+32,congreso,candidatos_concejo,por_que_votar,2,,,2,,1
+32,congreso,candidatos_concejo,numero_lista,2,,,2,,1
+32,congreso,candidatos_concejo,actualmente_concejal,2,,,2,,1
+33,congreso,cargo,id,1,id,congresista_trayectoria_privadas,,,1
+33,congreso,cargo,created_at,1,created_at,congresista_trayectoria_privadas,,,1
+33,congreso,cargo,edited_at,1,updated_at,congresista_trayectoria_privadas,,,1
+33,congreso,cargo,persona_id,1,persona_id,congresista_trayectoria_privadas,,,1
+33,congreso,cargo,sector_id,3,,congresista_trayectoria_privadas,,,1
+33,congreso,cargo,cargo,3,,congresista_trayectoria_privadas,,,1
+33,congreso,cargo,entidad,3,,congresista_trayectoria_privadas,,,1
+33,congreso,cargo,fecha_inicio,1,fecha,congresista_trayectoria_privadas,,,1
+33,congreso,cargo,fecha_final,3,,congresista_trayectoria_privadas,,,1
+34,congreso,cargocamara,id,3,id,cargo_legislativos,3,,1
+34,congreso,cargocamara,nombre,3,nombre,cargo_legislativos,3,,1
+35,congreso,cargocomision,id,1,id,cargo_legislativos,,,1
+35,congreso,cargocomision,nombre,1,nombre,cargo_legislativos,,,1
+36,congreso,cargopolitico,id,1,id,congresista_trayectoria_publicas,,,1
+36,congreso,cargopolitico,created_at,1,created_at,congresista_trayectoria_publicas,,,1
+36,congreso,cargopolitico,edited_at,1,updated_at,congresista_trayectoria_publicas,,,1
+36,congreso,cargopolitico,persona_id,1,persona_id,congresista_trayectoria_publicas,,,1
+36,congreso,cargopolitico,cargo,3,cargo,congresista_trayectoria_publicas,,,1
+36,congreso,cargopolitico,fecha_inicio,3,fecha,congresista_trayectoria_publicas,,,1
+36,congreso,cargopolitico,fecha_final,3,fecha_final,congresista_trayectoria_publicas,,,1
+36,congreso,cargopolitico,partido_id,1,partido_id,congresista_trayectoria_publicas,,,1
+36,congreso,cargopolitico,resultado,2,,congresista_trayectoria_publicas,,,1
+36,congreso,cargopolitico,camara_id,2,,congresista_trayectoria_publicas,,,1
+36,congreso,cargopolitico,comision_id,2,,congresista_trayectoria_publicas,,,1
+37,congreso,circunscripcion,id,1,id,circunscripcions,,,1
+37,congreso,circunscripcion,nombre,1,nombre,circunscripcions,,,1
+37,congreso,circunscripcion,departamento_id,1,departamento_id,circunscripcions,,,1
+38,congreso,comision,id,1,id,comisions,,,1
+38,congreso,comision,created_at,1,created_at,comisions,,,1
+38,congreso,comision,edited_at,1,updated_at,comisions,,,1
+38,congreso,comision,nombre,1,nombre,comisions,,,1
+38,congreso,comision,camara_id,1,corporacion_id,comisions,,,1
+38,congreso,comision,permanente,2,,comisions,,,1
+38,congreso,comision,descripcion,1,descripcion,comisions,,,1
+38,congreso,comision,imagen,2,,comisions,,,1
+38,congreso,comision,orden,2,,comisions,,,1
+38,congreso,comision,tipo_comision_id,1,tipo_comision_id,comisions,,,1
+38,congreso,comision,correo,3,,comision_datos_contactos ,,,1
+38,congreso,comision,oficina,3,,comision_datos_contactos ,,,1
+38,congreso,comision,telefono,3,,comision_datos_contactos ,,,1
+38,congreso,comision,url,3,,comision_datos_contactos ,,,1
+39,congreso,congresista,persona_ptr_id,1,persona_id,congresistas,,,
+39,congreso,congresista,partido_politico_id,1,partido_id,congresistas,,,
+39,congreso,congresista,es_candidato,2,,congresistas,,,
+39,congreso,congresista,orgullo,2,,congresistas,,,
+39,congreso,congresista,se_identifica_id,2,,congresistas,,,
+39,congreso,congresista,ha_reemplazado,2,,congresistas,,Tiene puros falsos,
+39,congreso,congresista,es_activo,3,activo,congresistas,,,
+39,congreso,congresista,cantidad_actividades,2,,congresistas,,,
+39,congreso,congresista,cantidad_comentarios,2,,congresistas,,,
+39,congreso,congresista,comision_actual_id,3,,congresistas,,,
+39,congreso,congresista,periodo_actual_id,1,cuatrienio_id,congresistas,,Se agregó el cuatrienio donde estaba el periodo,
+39,congreso,congresista,es_congresista,3,,congresistas,,Guardar todos los que han sido congresitascandidatos.,
+39,congreso,congresista,ha_sido_congresista,2,,congresistas,,,
+39,congreso,congresista,numero_votos_partido,2,,congresistas,,,
+39,congreso,congresista,vota_con_partido,2,,congresistas,,,
+39,congreso,congresista,old_id,2,,congresistas,,,
+39,congreso,congresista,investigado,3,,congresistas,,,
+39,congreso,congresista,slug,2,,congresistas,,,
+39,congreso,congresista,biografia,3,,congresistas,,Este campo podría corresponder al de trayectoria,
+39,congreso,congresista,campania_actual_id,2,,congresistas,,,
+39,congreso,congresista,actividad_actual_id,2,,congresistas,,,
+39,congreso,congresista,numero_oficina,3,,congresistas,,,
+39,congreso,congresista,telefono_oficina,3,,congresistas,,,
+39,congreso,congresista,ha_sido_reemplazo,3,,congresistas,,,
+39,congreso,congresista,tiene_formula_electoral_aspirante_a_la_otra_camara,2,,congresistas,,,
+39,congreso,congresista,formula_electoral,2,,congresistas,,,
+39,congreso,congresista,partido_formula_electoral_id,2,,congresistas,,,
+39,congreso,congresista,ha_estado_en_bancada_diferente,2,,congresistas,,,
+39,congreso,congresista,ha_ejercido_cargo_diferente,2,,congresistas,,Este campo podría corresponder al de trayectoria,
+39,congreso,congresista,cargo_popular,2,,congresistas,,,
+39,congreso,congresista,ha_ejercido_cargo_en_rama_ejecutiva,2,,congresistas,,,
+39,congreso,congresista,ha_sido_dirigente_sindical,2,,congresistas,,,
+39,congreso,congresista,ha_sido_dirigente_gremial,2,,congresistas,,,
+39,congreso,congresista,tiene_pariente_en_la_politica,2,,congresistas,,,
+39,congreso,congresista,es_representante_camara,3,,congresistas,,,
+39,congreso,congresista,es_candidato_camara,2,,congresistas,,,
+39,congreso,congresista,es_senador,3,corporacion_id,congresistas,,,
+39,congreso,congresista,es_candidato_senador,2,,congresistas,,,
+39,congreso,congresista,cargo_ejecutivo,3,,congresistas,,,
+39,congreso,congresista,pariente_politica,2,,congresistas,,,
+39,congreso,congresista,ha_tenido_pariente_en_la_politica,2,,congresistas,,,
+39,congreso,congresista,pariente_politica_inactivo,2,,congresistas,,,
+40,congreso,congresistadebancada,id,,,,,,
+40,congreso,congresistadebancada,created_at,,,,,,
+40,congreso,congresistadebancada,edited_at,,,,,,
+40,congreso,congresistadebancada,fecha_inicio,,,,,,
+40,congreso,congresistadebancada,fecha_fin,,,,,,
+40,congreso,congresistadebancada,congresista_id,,,,,,
+40,congreso,congresistadebancada,bancada_id,,,,,,
+41,congreso,congresistadepartido,id,,,,,,
+41,congreso,congresistadepartido,created_at,,,,,,
+41,congreso,congresistadepartido,edited_at,,,,,,
+41,congreso,congresistadepartido,fecha_inicio,,,,,,
+41,congreso,congresistadepartido,fecha_fin,,,,,,
+41,congreso,congresistadepartido,congresista_id,,,,,,
+41,congreso,congresistadepartido,partido_id,,,,,,
+42,congreso,contadorcongresistas,id,,,,,,
+42,congreso,contadorcongresistas,congresistas,,,,,,
+42,congreso,contadorcongresistas,candidatos,,,,,,
+42,congreso,contadorcongresistas,content_type_id,,,,,,
+42,congreso,contadorcongresistas,object_id,,,,,,
+44,congreso,estadopartido,id,,,,,,
+44,congreso,estadopartido,created_at,,,,,,
+44,congreso,estadopartido,edited_at,,,,,,
+44,congreso,estadopartido,nombre,,,,,,
+44,congreso,estadopartido,es_activo,,,,,,
+46,congreso,integrantecamara,id,,,,,,
+46,congreso,integrantecamara,created_at,,,,,,
+46,congreso,integrantecamara,edited_at,,,,,,
+46,congreso,integrantecamara,cargo_id,,,,,,
+46,congreso,integrantecamara,fecha_inicio,,,,,,
+46,congreso,integrantecamara,fecha_final,,,,,,
+46,congreso,integrantecamara,congresista_id,,,,,,
+46,congreso,integrantecamara,camara_id,,,,,,
+46,congreso,integrantecamara,periodo_id,,,,,,
+47,congreso,integrantecomision,id,,,,,,
+47,congreso,integrantecomision,created_at,,,,,,
+47,congreso,integrantecomision,edited_at,,,,,,
+47,congreso,integrantecomision,cargo_id,,,,,,
+47,congreso,integrantecomision,fecha_inicio,,,,,,
+47,congreso,integrantecomision,fecha_final,,,,,,
+47,congreso,integrantecomision,congresista_id,,,,,,
+47,congreso,integrantecomision,comision_id,,,,,,
+47,congreso,integrantecomision,periodo_id,,,,,,
+48,congreso,link,id,,,,,,
+48,congreso,link,link,,,,,,
+49,congreso,partido_avales,id,,,,,,
+49,congreso,partido_avales,partido_id,,,,,,
+49,congreso,partido_avales,aval_id,,,,,,
+50,congreso,partido_sectores,id,,,,,,
+50,congreso,partido_sectores,partido_id,,,,,,
+50,congreso,partido_sectores,sectorindustria_id,,,,,,
+51,congreso,partido,id,,,,,,
+51,congreso,partido,created_at,,,,,,
+51,congreso,partido,edited_at,,,,,,
+51,congreso,partido,nombre,,,,,,
+51,congreso,partido,fecha_fundacion,,,,,,
+51,congreso,partido,lugar_creacion,,,,,,
+51,congreso,partido,direccion_sede_principal,,,,,,
+51,congreso,partido,sitio_web,,,,,,
+51,congreso,partido,twitter,,,,,,
+51,congreso,partido,telefono,,,,,,
+51,congreso,partido,estatutos,,,,,,
+51,congreso,partido,lineamientos,,,,,,
+51,congreso,partido,resenia_historica,,,,,,
+51,congreso,partido,propuestas,,,,,,
+51,congreso,partido,director_id,,,,,,
+51,congreso,partido,secretario_id,,,,,,
+51,congreso,partido,representante_legal_id,,,,,,
+51,congreso,partido,fundador,,,,,,
+51,congreso,partido,posicion_ideologica,,,,,,
+51,congreso,partido,,,,,,,
+51,congreso,partido,logo,,,,,,
+51,congreso,partido,rango_edad_id,,,,,,
+51,congreso,partido,telefono_contacto,,,,,,
+51,congreso,partido,celular_contacto,,,,,,
+51,congreso,partido,correo_contacto,,,,,,
+51,congreso,partido,direccion_contacto,,,,,,
+51,congreso,partido,estado_id,,,,,,
+51,congreso,partido,nombre_contacto,,,,,,
+51,congreso,partido,old_id,,,,,,
+51,congreso,partido,usuario_id,,,,,,
+51,congreso,partido,feed_rss,,,,,,
+51,congreso,partido,datos_clave,,,,,,
+51,congreso,partido,es_bancada,,,,,,
+52,congreso,periodo,id,,,,,,
+52,congreso,periodo,created_at,,,,,,
+52,congreso,periodo,edited_at,,,,,,
+52,congreso,periodo,fecha_inicio,,,,,,
+52,congreso,periodo,fecha_fin,,,,,,
+52,congreso,periodo,old_id,,,,,,
+52,congreso,periodo,activo,,,,,,
+53,congreso,periodocongresista,id,,,,,,
+53,congreso,periodocongresista,created_at,,,,,,
+53,congreso,periodocongresista,edited_at,,,,,,
+53,congreso,periodocongresista,fecha_inicio,,,,,,
+53,congreso,periodocongresista,fecha_fin,,,,,,
+53,congreso,periodocongresista,tipo_periodo_id,,,,,,
+53,congreso,periodocongresista,periodo_id,,,,,,
+53,congreso,periodocongresista,partido_id,,,,,,
+53,congreso,periodocongresista,congresista_id,,,,,,
+53,congreso,periodocongresista,camara_id,,,,,,
+53,congreso,periodocongresista,depto_mayor_votacion_id,,,,,,
+53,congreso,periodocongresista,numero_lista,,,,,,
+53,congreso,periodocongresista,numero_votos,,,,,,
+53,congreso,periodocongresista,circunscripcion_id,,,,,,
+54,congreso,persona,id,,,,,,
+54,congreso,persona,created_at,,,,,,
+54,congreso,persona,edited_at,,,,,,
+54,congreso,persona,user_id,,,,,,
+54,congreso,persona,facebook_id,,,,,,
+54,congreso,persona,activation_key,,,,,,
+54,congreso,persona,nombres,,,,,,
+54,congreso,persona,apellidos,,,,,,
+54,congreso,persona,sitio_web,,,,,,
+54,congreso,persona,telefono,,,,,,
+54,congreso,persona,cedula,,,,,,
+54,congreso,persona,lugar_cedula_id,,,,,,
+54,congreso,persona,imagen,,,,,,
+54,congreso,persona,anio_nacimiento,,,,,,
+54,congreso,persona,departamento_nacimiento_id,,,,,,
+54,congreso,persona,municipio_nacimiento_id,,,,,,
+54,congreso,persona,nivel_educativo,,,,,,
+54,congreso,persona,rango_edad_id,,,,,,
+54,congreso,persona,profesion_id,,,,,,
+54,congreso,persona,genero_id,,,,,,
+54,congreso,persona,fecha_fallecimiento,,,,,,
+54,congreso,persona,flickr_user,,,,,,
+54,congreso,persona,youtube_user,,,,,,
+54,congreso,persona,tumblr_user,,,,,,
+54,congreso,persona,twitter_user,,,,,,
+54,congreso,persona,linkedin_user,,,,,,
+54,congreso,persona,blogspot_user,,,,,,
+54,congreso,persona,posicion_ideologica,,,,,,
+54,congreso,persona,region_nacimiento_id,,,,,,
+54,congreso,persona,facebook_user,,,,,,
+54,congreso,persona,mini_bio,,,,,,
+54,congreso,persona,estrato,,,,,,
+54,congreso,persona,idrac,,,,,,
+54,congreso,persona,estado_civil,,,,,,
+54,congreso,persona,religion,,,,,,
+54,congreso,persona,frecuencia_actos_religiosos,,,,,,
+55,congreso,posicion,id,,,,,,
+55,congreso,posicion,created_at,,,,,,
+55,congreso,posicion,edited_at,,,,,,
+55,congreso,posicion,congresista_id,,,,,,
+55,congreso,posicion,a_favor,,,,,,
+55,congreso,posicion,comentario,,,,,,
+57,congreso,posicionproposicion,posicion_ptr_id,,,,,,
+57,congreso,posicionproposicion,proposicion_id,,,,,,
+58,congreso,posiciontemaopinion,posicion_ptr_id,,,,,,
+58,congreso,posiciontemaopinion,tema_id,,,,,,
+59,congreso,problema_link,id,,,,,,
+59,congreso,problema_link,problema_id,,,,,,
+59,congreso,problema_link,link_id,,,,,,
+60,congreso,problema,id,,,,,,
+60,congreso,problema,created_at,,,,,,
+60,congreso,problema,edited_at,,,,,,
+60,congreso,problema,tipo_problema_id,,,,,,
+60,congreso,problema,descripcion,,,,,,
+60,congreso,problema,congresista_id,,,,,,
+61,congreso,proposicion,id,,,,,,
+61,congreso,proposicion,created_at,,,,,,
+61,congreso,proposicion,edited_at,,,,,,
+61,congreso,proposicion,nombre,,,,,,
+62,congreso,reemplazo,id,,,,,,
+62,congreso,reemplazo,created_at,,,,,,
+62,congreso,reemplazo,edited_at,,,,,,
+62,congreso,reemplazo,congresista_reemplaza_id,,,,,,
+62,congreso,reemplazo,congresista_reemplado_por_id,,,,,,
+62,congreso,reemplazo,periodo_inicial,,,,,,
+62,congreso,reemplazo,periodo_final,,,,,,
+62,congreso,reemplazo,partido_id,,,,,,
+62,congreso,reemplazo,camara_id,,,,,,
+62,congreso,reemplazo,comision_id,,,,,,
+63,congreso,secretario,persona_ptr_id,,,,,,
+63,congreso,secretario,fecha_inicio,,,,,,
+63,congreso,secretario,fecha_final,,,,,,
+63,congreso,secretario,comision_id,,,,,,
+64,congreso,temaopinion,id,,,,,,
+64,congreso,temaopinion,created_at,,,,,,
+64,congreso,temaopinion,edited_at,,,,,,
+64,congreso,temaopinion,nombre,,,,,,
+64,congreso,temaopinion,descripcion,,,,,,
+64,congreso,temaopinion,activo,,,,,,
+64,congreso,temaopinion,obtenido_votacion,,,,,,
+65,congreso,tipoactividad,id,,,,,,
+65,congreso,tipoactividad,nombre,,,,,,
+66,congreso,tipocomision,id,,,,,,
+66,congreso,tipocomision,nombre,,,,,,
+67,congreso,tipoperiodo,id,,,,,,
+67,congreso,tipoperiodo,nombre,,,,,,
+68,congreso,tipoproblema,id,,,,,,
+68,congreso,tipoproblema,nombre,,,,,,
+69,congreso,trayectoria,id,,,,,,
+69,congreso,trayectoria,id_candidato_concejo_id,,,,,,
+69,congreso,trayectoria,trayectoria_anio,,,,,,
+69,congreso,trayectoria,cargo,,,,,,
+69,congreso,trayectoria,partido,,,,,,
+69,congreso,trayectoria,votos,,,,,,
+69,congreso,trayectoria,es_electo,,,,,,
+70,corte,sentencia,id,,,,,,
+70,corte,sentencia,proyecto_id,,,,,,
+70,corte,sentencia,anio,,,,,,
+70,corte,sentencia,cod_sentencia,,,,,,
+70,corte,sentencia,num_sentencia,,,,,,
+70,corte,sentencia,tipo_caso_id,,,,,,
+70,corte,sentencia,id_norma,,,,,,
+70,corte,sentencia,titulo_norma,,,,,,
+70,corte,sentencia,mas_normas,,,,,,
+70,corte,sentencia,otras_normas,,,,,,
+70,corte,sentencia,numero_camara,,,,,,
+70,corte,sentencia,numero_senado,,,,,,
+70,corte,sentencia,tipo_demanda_id,,,,,,
+70,corte,sentencia,oficio,,,,,,
+70,corte,sentencia,fecha_norma,,,,,,
+71,corte,tipocaso,id,,,,,,
+71,corte,tipocaso,descripcion,,,,,,
+72,corte,tipodemanda,id,,,,,,
+72,corte,tipodemanda,descripcion,,,,,,
+73,CorteAdd,magistrado_ponente,id,,,,,,
+73,CorteAdd,magistrado_ponente,nombre,,,,,,
+74,CorteAdd,sentencia_info,id,,,,,,
+74,CorteAdd,sentencia_info,proyecto_id,,,,,,
+74,CorteAdd,sentencia_info,anio,,,,,,
+74,CorteAdd,sentencia_info,cod_sentencia,,,,,,
+74,CorteAdd,sentencia_info,num_sentencia,,,,,,
+74,CorteAdd,sentencia_info,tipo_caso_id,,,,,,
+74,CorteAdd,sentencia_info,id_norma,,,,,,
+74,CorteAdd,sentencia_info,tema_norma_id,,,,,,
+74,CorteAdd,sentencia_info,tipo_norma_id,,,,,,
+74,CorteAdd,sentencia_info,titulo_norma,,,,,,
+74,CorteAdd,sentencia_info,mas_normas,,,,,,
+74,CorteAdd,sentencia_info,otras_normas,,,,,,
+74,CorteAdd,sentencia_info,numero_camara,,,,,,
+74,CorteAdd,sentencia_info,numero_senado,,,,,,
+74,CorteAdd,sentencia_info,tipo_demanda_id,,,,,,
+74,CorteAdd,sentencia_info,oficio,,,,,,
+74,CorteAdd,sentencia_info,fecha_norma,,,,,,
+74,CorteAdd,sentencia_info,fecha_sentencia,,,,,,
+74,CorteAdd,sentencia_info,nombres_demandante_1,,,,,,
+74,CorteAdd,sentencia_info,apellidos_demandante_1,,,,,,
+74,CorteAdd,sentencia_info,nombres_demandante_2,,,,,,
+74,CorteAdd,sentencia_info,apellidos_demandante_2,,,,,,
+74,CorteAdd,sentencia_info,nombres_demandante_3,,,,,,
+74,CorteAdd,sentencia_info,apellidos_demandante_3,,,,,,
+74,CorteAdd,sentencia_info,nombres_demandante_4,,,,,,
+74,CorteAdd,sentencia_info,apellidos_demandante_4,,,,,,
+74,CorteAdd,sentencia_info,nombres_demandante_5,,,,,,
+74,CorteAdd,sentencia_info,apellidos_demandante_5,,,,,,
+74,CorteAdd,sentencia_info,nombre_procurador,,,,,,
+74,CorteAdd,sentencia_info,apellidos_procurador,,,,,,
+74,CorteAdd,sentencia_info,concepto_procurador,,,,,,
+74,CorteAdd,sentencia_info,decision_corte,,,,,,
+74,CorteAdd,sentencia_info,relator,,,,,,
+74,CorteAdd,sentencia_info,magistrado_ponente_id,,,,,,
+74,CorteAdd,sentencia_info,articulo_1,,,,,,
+74,CorteAdd,sentencia_info,articulo_2,,,,,,
+74,CorteAdd,sentencia_info,articulo_3,,,,,,
+74,CorteAdd,sentencia_info,articulo_4,,,,,,
+74,CorteAdd,sentencia_info,articulo_5,,,,,,
+74,CorteAdd,sentencia_info,articulo_6,,,,,,
+74,CorteAdd,sentencia_info,articulo_7,,,,,,
+74,CorteAdd,sentencia_info,articulo_8,,,,,,
+74,CorteAdd,sentencia_info,articulo_9,,,,,,
+74,CorteAdd,sentencia_info,articulo_10,,,,,,
+74,CorteAdd,sentencia_info,url,,,,,,
+75,CorteAdd,tema_norma,id,,,,,,
+75,CorteAdd,tema_norma,nombre,,,,,,
+76,CorteAdd,tipo_de_caso,id,,,,,,
+76,CorteAdd,tipo_de_caso,nombre,,,,,,
+77,CorteAdd,tipo_de_demanda,id,,,,,,
+77,CorteAdd,tipo_de_demanda,nombre,,,,,,
+78,CorteAdd,tipo_norma,id,,,,,,
+78,CorteAdd,tipo_norma,nombre,,,,,,
+80,django,admin_log,id,,,,,,
+80,django,admin_log,action_time,,,,,,
+80,django,admin_log,user_id,,,,,,
+80,django,admin_log,content_type_id,,,,,,
+80,django,admin_log,object_id,,,,,,
+80,django,admin_log,object_repr,,,,,,
+80,django,admin_log,action_flag,,,,,,
+80,django,admin_log,change_message,,,,,,
+81,django,comment_flags,id,,,,,,
+81,django,comment_flags,user_id,,,,,,
+81,django,comment_flags,comment_id,,,,,,
+81,django,comment_flags,flag,,,,,,
+81,django,comment_flags,flag_date,,,,,,
+82,django,comments,id,,,,,,
+82,django,comments,content_type_id,,,,,,
+82,django,comments,object_pk,,,,,,
+82,django,comments,site_id,,,,,,
+82,django,comments,user_id,,,,,,
+82,django,comments,user_name,,,,,,
+82,django,comments,user_email,,,,,,
+82,django,comments,user_url,,,,,,
+82,django,comments,comment,,,,,,
+82,django,comments,submit_date,,,,,,
+82,django,comments,ip_address,,,,,,
+82,django,comments,is_public,,,,,,
+82,django,comments,is_removed,,,,,,
+83,django,content_type,id,,,,,,
+83,django,content_type,name,,,,,,
+83,django,content_type,app_label,,,,,,
+83,django,content_type,model,,,,,,
+85,django,flatpage_sites,id,,,,,,
+85,django,flatpage_sites,flatpage_id,,,,,,
+85,django,flatpage_sites,site_id,,,,,,
+86,django,flatpage,id,,,,,,
+86,django,flatpage,url,,,,,,
+86,django,flatpage,title,,,,,,
+86,django,flatpage,content,,,,,,
+86,django,flatpage,enable_comments,,,,,,
+86,django,flatpage,template_name,,,,,,
+86,django,flatpage,registration_required,,,,,,
+87,django,project_version,id,,,,,,
+87,django,project_version,signature,,,,,,
+87,django,project_version,when,,,,,,
+89,django,session,session_key,,,,,,
+89,django,session,session_data,,,,,,
+89,django,session,expire_date,,,,,,
+90,django,site,id,,,,,,
+90,django,site,domain,,,,,,
+90,django,site,name,,,,,,
+91,facebookconnect,facebookprofile,id,,,,,,
+91,facebookconnect,facebookprofile,user_id,,,,,,
+91,facebookconnect,facebookprofile,facebook_id,,,,,,
+93,general,departamento,id,,,,,,
+93,general,departamento,nombre,,,,,,
+93,general,departamento,region_id,,,,,,
+93,general,departamento,old_id,,,,,,
+94,general,genero,id,,,,,,
+94,general,genero,nombre,,,,,,
+95,general,municipio,id,,,,,,
+95,general,municipio,nombre,,,,,,
+95,general,municipio,departamento_id,,,,,,
+96,general,profesion,id,,,,,,
+96,general,profesion,nombre,,,,,,
+97,general,rangoedad,id,,,,,,
+97,general,rangoedad,edad_minima,,,,,,
+97,general,rangoedad,edad_maxima,,,,,,
+98,general,region,id,,,,,,
+98,general,region,nombre,,,,,,
+99,general,sectorindustria,id,,,,,,
+99,general,sectorindustria,nombre,,,,,,
+100,general,tema,id,,,,,,
+100,general,tema,created_at,,,,,,
+100,general,tema,edited_at,,,,,,
+100,general,tema,nombre,,,,,,
+100,general,tema,descripcion,,,,,,
+100,general,tema,activo,,,,,,
+101,grappelli,bookmark,id,,,,,,
+101,grappelli,bookmark,user_id,,,,,,
+102,grappelli,bookmarkitem,id,,,,,,
+102,grappelli,bookmarkitem,bookmark_id,,,,,,
+102,grappelli,bookmarkitem,title,,,,,,
+102,grappelli,bookmarkitem,link,,,,,,
+102,grappelli,bookmarkitem,order,,,,,,
+109,grupo,grupo,id,,,,,,
+109,grupo,grupo,created_at,,,,,,
+109,grupo,grupo,edited_at,,,,,,
+109,grupo,grupo,persona_id,,,,,,
+109,grupo,grupo,nombre_grupo,,,,,,
+109,grupo,grupo,nombre_contacto,,,,,,
+109,grupo,grupo,email_contacto,,,,,,
+109,grupo,grupo,sitio_web,,,,,,
+109,grupo,grupo,fecha_fundacion,,,,,,
+109,grupo,grupo,objetivos,,,,,,
+109,grupo,grupo,activo,,,,,,
+109,grupo,grupo,imagen,,,,,,
+109,grupo,grupo,direccion,,,,,,
+109,grupo,grupo,mision,,,,,,
+109,grupo,grupo,vision,,,,,,
+109,grupo,grupo,telefono,,,,,,
+109,grupo,grupo,twitter,,,,,,
+109,grupo,grupo,descripcion,,,,,,
+109,grupo,grupo,facebook,,,,,,
+110,home,banner,id,,,,,,
+110,home,banner,titulo,,,,,,
+110,home,banner,texto,,,,,,
+110,home,banner,img,,,,,,
+110,home,banner,activo,,,,,,
+110,home,banner,orden,,,,,,
+110,home,banner,link,,,,,,
+111,home,feedhome,id,,,,,,
+111,home,feedhome,nombre,,,,,,
+111,home,feedhome,feed_rss,,,,,,
+111,home,feedhome,enlace,,,,,,
+111,home,feedhome,logo,,,,,,
+111,home,feedhome,activo,,,,,,
+112,home,frasemencion,id,,,,,,
+112,home,frasemencion,frase,,,,,,
+112,home,frasemencion,sitio,,,,,,
+112,home,frasemencion,enlace,,,,,,
+113,home,linkfooter,id,,,,,,
+113,home,linkfooter,nombre,,,,,,
+113,home,linkfooter,enlace,,,,,,
+113,home,linkfooter,activo,,,,,,
+113,home,linkfooter,orden,,,,,,
+114,home,seccionhome,id,,,,,,
+114,home,seccionhome,nombre,,,,,,
+114,home,seccionhome,nombre_template,,,,,,
+114,home,seccionhome,activo,,,,,,
+114,home,seccionhome,orden,,,,,,
+117,lib,counter,id,,,,,,
+117,lib,counter,entity_content_type_id,,,,,,
+117,lib,counter,count,,,,,,
+117,lib,counter,counted_content_type_id,,,,,,
+117,lib,counter,counted_object_id,,,,,,
+118,openid,consumer_association,id,,,,,,
+118,openid,consumer_association,server_url,,,,,,
+118,openid,consumer_association,handle,,,,,,
+118,openid,consumer_association,secret,,,,,,
+118,openid,consumer_association,issued,,,,,,
+118,openid,consumer_association,lifetime,,,,,,
+118,openid,consumer_association,assoc_type,,,,,,
+119,openid,consumer_nonce,id,,,,,,
+119,openid,consumer_nonce,server_url,,,,,,
+119,openid,consumer_nonce,timestamp,,,,,,
+119,openid,consumer_nonce,salt,,,,,,
+120,orden,del_dia_cargocitado,id,,,,,,
+120,orden,del_dia_cargocitado,created_at,,,,,,
+120,orden,del_dia_cargocitado,edited_at,,,,,,
+120,orden,del_dia_cargocitado,nombre,,,,,,
+120,orden,del_dia_cargocitado,old_id,,,,,,
+121,orden,del_dia_citacion_citantes,id,,,,,,
+121,orden,del_dia_citacion_citantes,citacion_id,,,,,,
+121,orden,del_dia_citacion_citantes,congresista_id,,,,,,
+122,orden,del_dia_citacion_otros_invitados,id,,,,,,
+122,orden,del_dia_citacion_otros_invitados,citacion_id,,,,,,
+122,orden,del_dia_citacion_otros_invitados,persona_id,,,,,,
+123,orden,del_dia_citacion,itemdeordendeldia_ptr_id,,,,,,
+123,orden,del_dia_citacion,tipo_id,,,,,,
+123,orden,del_dia_citacion,tema_principal_id,,,,,,
+123,orden,del_dia_citacion,tema_secundario_id,,,,,,
+123,orden,del_dia_citacion,plenaria,,,,,,
+123,orden,del_dia_citacion,tags,,,,,,
+123,orden,del_dia_citacion,fecha_proposicion,,,,,,
+123,orden,del_dia_citacion,old_id,,,,,,
+123,orden,del_dia_citacion,detalles,,,,,,
+123,orden,del_dia_citacion,gacetas,,,,,,
+123,orden,del_dia_citacion,cuestionario,,,,,,
+123,orden,del_dia_citacion,numero_proposicion,,,,,,
+123,orden,del_dia_citacion,respuesta,,,,,,
+123,orden,del_dia_citacion,duplicado,,,,,,
+124,orden,del_dia_citado,id,,,,,,
+124,orden,del_dia_citado,created_at,,,,,,
+124,orden,del_dia_citado,edited_at,,,,,,
+124,orden,del_dia_citado,nombres,,,,,,
+124,orden,del_dia_citado,entidad_id,,,,,,
+124,orden,del_dia_citado,cargo_id,,,,,,
+124,orden,del_dia_citado,old_id,,,,,,
+124,orden,del_dia_citado,imagen,,,,,,
+125,orden,del_dia_citadoasistentecitacion,id,,,,,,
+125,orden,del_dia_citadoasistentecitacion,citacion_id,,,,,,
+125,orden,del_dia_citadoasistentecitacion,citado_id,,,,,,
+125,orden,del_dia_citadoasistentecitacion,asiste,,,,,,
+125,orden,del_dia_citadoasistentecitacion,delega_asistencia,,,,,,
+125,orden,del_dia_citadoasistentecitacion,excuso,,,,,,
+126,orden,del_dia_entidadcitado,id,,,,,,
+126,orden,del_dia_entidadcitado,created_at,,,,,,
+126,orden,del_dia_entidadcitado,edited_at,,,,,,
+126,orden,del_dia_entidadcitado,nombre,,,,,,
+126,orden,del_dia_entidadcitado,old_id,,,,,,
+127,orden,del_dia_invitadoasistentecitacion,id,,,,,,
+127,orden,del_dia_invitadoasistentecitacion,citacion_id,,,,,,
+127,orden,del_dia_invitadoasistentecitacion,citado_id,,,,,,
+127,orden,del_dia_invitadoasistentecitacion,asiste,,,,,,
+127,orden,del_dia_invitadoasistentecitacion,delega_asistencia,,,,,,
+127,orden,del_dia_invitadoasistentecitacion,excuso,,,,,,
+128,orden,del_dia_itemdeordendeldia,id,,,,,,
+128,orden,del_dia_itemdeordendeldia,orden,,,,,,
+128,orden,del_dia_itemdeordendeldia,proposito,,,,,,
+128,orden,del_dia_itemdeordendeldia,importante,,,,,,
+128,orden,del_dia_itemdeordendeldia,orden_del_dia_id,,,,,,
+128,orden,del_dia_itemdeordendeldia,realizado,,,,,,
+128,orden,del_dia_itemdeordendeldia,menu_realizado,,,,,,
+129,orden,del_dia_ordendeldia_camaras,id,,,,,,
+129,orden,del_dia_ordendeldia_camaras,ordendeldia_id,,,,,,
+129,orden,del_dia_ordendeldia_camaras,camara_id,,,,,,
+130,orden,del_dia_ordendeldia_comisiones,id,,,,,,
+130,orden,del_dia_ordendeldia_comisiones,ordendeldia_id,,,,,,
+130,orden,del_dia_ordendeldia_comisiones,comision_id,,,,,,
+131,orden,del_dia_ordendeldia,id,,,,,,
+131,orden,del_dia_ordendeldia,fecha_programada,,,,,,
+131,orden,del_dia_ordendeldia,fecha_realizada,,,,,,
+131,orden,del_dia_ordendeldia,comentarios,,,,,,
+131,orden,del_dia_ordendeldia,cuatrienio_id,,,,,,
+131,orden,del_dia_ordendeldia,realizado,,,,,,
+132,orden,del_dia_proyectoenordendia,itemdeordendeldia_ptr_id,,,,,,
+132,orden,del_dia_proyectoenordendia,proyecto_id,,,,,,
+133,orden,del_dia_tipocitacion,id,,,,,,
+133,orden,del_dia_tipocitacion,nombre,,,,,,
+135,proyecto,de_ley_autorproyectoley,id,,,,,,
+135,proyecto,de_ley_autorproyectoley,created_at,,,,,,
+135,proyecto,de_ley_autorproyectoley,edited_at,,,,,,
+135,proyecto,de_ley_autorproyectoley,tipo_autor_id,,,,,,
+135,proyecto,de_ley_autorproyectoley,autor_id,,,,,,
+135,proyecto,de_ley_autorproyectoley,proyecto_ley_id,,,,,,
+136,proyecto,de_ley_clasevotacion,id,,,,,,
+136,proyecto,de_ley_clasevotacion,nombre,,,,,,
+136,proyecto,de_ley_clasevotacion,descripcion,,,,,,
+137,proyecto,de_ley_estadodeproyectodeley_comisiones,id,,,,,,
+137,proyecto,de_ley_estadodeproyectodeley_comisiones,estadodeproyectodeley_id,,,,,,
+137,proyecto,de_ley_estadodeproyectodeley_comisiones,comision_id,,,,,,
+138,proyecto,de_ley_estadodeproyectodeley_ponentes,id,,,,,,
+138,proyecto,de_ley_estadodeproyectodeley_ponentes,estadodeproyectodeley_id,,,,,,
+138,proyecto,de_ley_estadodeproyectodeley_ponentes,congresista_id,,,,,,
+139,proyecto,de_ley_estadodeproyectodeley,id,,,,,,
+139,proyecto,de_ley_estadodeproyectodeley,fecha,,,,,,
+139,proyecto,de_ley_estadodeproyectodeley,estado_id,,,,,,
+139,proyecto,de_ley_estadodeproyectodeley,proyecto_id,,,,,,
+139,proyecto,de_ley_estadodeproyectodeley,gaceta,,,,,,
+139,proyecto,de_ley_estadodeproyectodeley,old_id,,,,,,
+139,proyecto,de_ley_estadodeproyectodeley,nota,,,,,,
+139,proyecto,de_ley_estadodeproyectodeley,camara_id,,,,,,
+139,proyecto,de_ley_estadodeproyectodeley,numero_titulos,,,,,,
+139,proyecto,de_ley_estadodeproyectodeley,numero_articulos,,,,,,
+139,proyecto,de_ley_estadodeproyectodeley,observaciones,,,,,,
+139,proyecto,de_ley_estadodeproyectodeley,orden,,,,,,
+140,proyecto,de_ley_estadoproyectoley,id,,,,,,
+140,proyecto,de_ley_estadoproyectoley,nombre,,,,,,
+140,proyecto,de_ley_estadoproyectoley,old_id,,,,,,
+141,proyecto,de_ley_iniciativa,id,,,,,,
+141,proyecto,de_ley_iniciativa,nombre,,,,,,
+142,proyecto,de_ley_legislatura,id,,,,,,
+142,proyecto,de_ley_legislatura,nombre,,,,,,
+142,proyecto,de_ley_legislatura,fecha_inicio,,,,,,
+142,proyecto,de_ley_legislatura,fecha_fin,,,,,,
+142,proyecto,de_ley_legislatura,cuatrienio_id,,,,,,
+143,proyecto,de_ley_otroautor,id,,,,,,
+143,proyecto,de_ley_otroautor,created_at,,,,,,
+143,proyecto,de_ley_otroautor,edited_at,,,,,,
+143,proyecto,de_ley_otroautor,nombre,,,,,,
+143,proyecto,de_ley_otroautor,imagen,,,,,,
+144,proyecto,de_ley_proyectoley,id,,,,,,
+144,proyecto,de_ley_proyectoley,created_at,,,,,,
+144,proyecto,de_ley_proyectoley,edited_at,,,,,,
+144,proyecto,de_ley_proyectoley,tipo_proyecto_id,,,,,,
+144,proyecto,de_ley_proyectoley,titulo,,,,,,
+144,proyecto,de_ley_proyectoley,tema_principal_id,,,,,,
+144,proyecto,de_ley_proyectoley,tema_secundario_id,,,,,,
+144,proyecto,de_ley_proyectoley,sinapsis,,,,,,
+144,proyecto,de_ley_proyectoley,numero_camara,,,,,,
+144,proyecto,de_ley_proyectoley,numero_senado,,,,,,
+144,proyecto,de_ley_proyectoley,estado_actual_id,,,,,,
+144,proyecto,de_ley_proyectoley,fecha_radicacion,,,,,,
+144,proyecto,de_ley_proyectoley,periodo_id,,,,,,
+144,proyecto,de_ley_proyectoley,iniciativa_id,,,,,,
+144,proyecto,de_ley_proyectoley,tags,,,,,,
+144,proyecto,de_ley_proyectoley,old_id,,,,,,
+144,proyecto,de_ley_proyectoley,se_acumula_a_id,,,,,,
+144,proyecto,de_ley_proyectoley,camara_id,,,,,,
+144,proyecto,de_ley_proyectoley,legislatura_id,,,,,,
+144,proyecto,de_ley_proyectoley,enlace_a_texto,,,,,,
+144,proyecto,de_ley_proyectoley,enlace_a_informe_derecho_justo,,,,,,
+144,proyecto,de_ley_proyectoley,estado_proyecto_ley_actual_id,,,,,,
+144,proyecto,de_ley_proyectoley,alias,,,,,,
+144,proyecto,de_ley_proyectoley,importancia,,,,,,
+144,proyecto,de_ley_proyectoley,destacado,,,,,,
+144,proyecto,de_ley_proyectoley,alcance,,,,,,
+144,proyecto,de_ley_proyectoley,norma,,,,,,
+145,proyecto,de_ley_textos_comparacion,id,,,,,,
+145,proyecto,de_ley_textos_comparacion,base_id,,,,,,
+145,proyecto,de_ley_textos_comparacion,modificado_id,,,,,,
+145,proyecto,de_ley_textos_comparacion,orden,,,,,,
+145,proyecto,de_ley_textos_comparacion,proyecto_id,,,,,,
+145,proyecto,de_ley_textos_comparacion,diferencias_encoded,,,,,,
+146,proyecto,de_ley_textos_textoproyectoley,id,,,,,,
+146,proyecto,de_ley_textos_textoproyectoley,created_at,,,,,,
+146,proyecto,de_ley_textos_textoproyectoley,edited_at,,,,,,
+146,proyecto,de_ley_textos_textoproyectoley,proyecto_ley_id,,,,,,
+146,proyecto,de_ley_textos_textoproyectoley,estado_proyecto_ley_id,,,,,,
+146,proyecto,de_ley_textos_textoproyectoley,texto_html,,,,,,
+146,proyecto,de_ley_textos_textoproyectoley,texto_plano,,,,,,
+147,proyecto,de_ley_tipoproyecto,id,,,,,,
+147,proyecto,de_ley_tipoproyecto,nombre,,,,,,
+148,proyecto,de_ley_tipovotacion,id,,,,,,
+148,proyecto,de_ley_tipovotacion,nombre,,,,,,
+148,proyecto,de_ley_tipovotacion,procedimental,,,,,,
+148,proyecto,de_ley_tipovotacion,descripcion,,,,,,
+149,proyecto,de_ley_votacion_camaras,id,,,,,,
+149,proyecto,de_ley_votacion_camaras,votacion_id,,,,,,
+149,proyecto,de_ley_votacion_camaras,camara_id,,,,,,
+150,proyecto,de_ley_votacion_comisiones,id,,,,,,
+150,proyecto,de_ley_votacion_comisiones,votacion_id,,,,,,
+150,proyecto,de_ley_votacion_comisiones,comision_id,,,,,,
+151,proyecto,de_ley_votacion_estados_proyecto,id,,,,,,
+151,proyecto,de_ley_votacion_estados_proyecto,votacion_id,,,,,,
+151,proyecto,de_ley_votacion_estados_proyecto,estadodeproyectodeley_id,,,,,,
+152,proyecto,de_ley_votacion,id,,,,,,
+152,proyecto,de_ley_votacion,created_at,,,,,,
+152,proyecto,de_ley_votacion,edited_at,,,,,,
+152,proyecto,de_ley_votacion,fecha,,,,,,
+152,proyecto,de_ley_votacion,proyecto_id,,,,,,
+152,proyecto,de_ley_votacion,motivo,,,,,,
+152,proyecto,de_ley_votacion,a_favor,,,,,,
+152,proyecto,de_ley_votacion,en_contra,,,,,,
+152,proyecto,de_ley_votacion,votosFavor,,,,,,
+152,proyecto,de_ley_votacion,votosContra,,,,,,
+152,proyecto,de_ley_votacion,aprobado,,,,,,
+152,proyecto,de_ley_votacion,tipo_votacion_id,,,,,,
+152,proyecto,de_ley_votacion,gaceta,,,,,,
+152,proyecto,de_ley_votacion,acta,,,,,,
+152,proyecto,de_ley_votacion,observaciones,,,,,,
+152,proyecto,de_ley_votacion,votacion_en_dia,,,,,,
+152,proyecto,de_ley_votacion,destacada,,,,,,
+152,proyecto,de_ley_votacion,old_id,,,,,,
+152,proyecto,de_ley_votacion,aprobada,,,,,,
+152,proyecto,de_ley_votacion,cuatrienio_id,,,,,,
+152,proyecto,de_ley_votacion,votosAbstencion,,,,,,
+152,proyecto,de_ley_votacion,numero_no_asistencias,,,,,,
+152,proyecto,de_ley_votacion,clase_votacion_id,,,,,,
+152,proyecto,de_ley_votacion,numero_asistencias,,,,,,
+152,proyecto,de_ley_votacion,datos_importacion,,,,,,
+152,proyecto,de_ley_votacion,resultados_importacion,,,,,,
+153,proyecto,de_ley_votacionpartido,id,,,,,,
+153,proyecto,de_ley_votacionpartido,created_at,,,,,,
+153,proyecto,de_ley_votacionpartido,edited_at,,,,,,
+153,proyecto,de_ley_votacionpartido,numero_votos_si,,,,,,
+153,proyecto,de_ley_votacionpartido,numero_votos_no,,,,,,
+153,proyecto,de_ley_votacionpartido,numero_votos_abstencion,,,,,,
+153,proyecto,de_ley_votacionpartido,opcion_preferida,,,,,,
+153,proyecto,de_ley_votacionpartido,partido_id,,,,,,
+153,proyecto,de_ley_votacionpartido,votacion_id,,,,,,
+154,proyecto,de_ley_voto,id,,,,,,
+154,proyecto,de_ley_voto,created_at,,,,,,
+154,proyecto,de_ley_voto,edited_at,,,,,,
+154,proyecto,de_ley_voto,votacion_id,,,,,,
+154,proyecto,de_ley_voto,voto,,,,,,
+154,proyecto,de_ley_voto,congresista_id,,,,,,
+155,proyecto,de_ley_votociudadano,id,,,,,,
+155,proyecto,de_ley_votociudadano,voto,,,,,,
+155,proyecto,de_ley_votociudadano,votante_id,,,,,,
+155,proyecto,de_ley_votociudadano,proyecto_id,,,,,,
+156,reportes,reporte,id,,,,,,
+156,reportes,reporte,nombre,,,,,,
+156,reportes,reporte,descripcion,,,,,,
+156,reportes,reporte,enlace,,,,,,
+156,reportes,reporte,activo,,,,,,
+156,reportes,reporte,orden,,,,,,
+157,sentencias,articulo,id,,,,,,
+157,sentencias,articulo,numero_articulo,,,,,,
+157,sentencias,articulo,sentencia_id,,,,,,
+158,sentencias,demandante,id,,,,,,
+158,sentencias,demandante,nombres,,,,,,
+158,sentencias,demandante,apellidos,,,,,,
+158,sentencias,demandante,sentencia_id,,,,,,
+160,sentencias,expediente,id,,,,,,
+160,sentencias,expediente,numero_expediente,,,,,,
+160,sentencias,expediente,sentencia_id,,,,,,
+161,sentencias,general,id,,,,,,
+161,sentencias,general,proyecto_id,,,,,,
+161,sentencias,general,codigo_sentencia,,,,,,
+161,sentencias,general,anio,,,,,,
+161,sentencias,general,expedientes_id,,,,,,
+161,sentencias,general,demandante_congresista,,,,,,
+161,sentencias,general,demandantes_id,,,,,,
+161,sentencias,general,partido_congresista_id,,,,,,
+161,sentencias,general,admision,,,,,,
+161,sentencias,general,motivo_inadmision_id,,,,,,
+161,sentencias,general,tipo_caso,,,,,,
+161,sentencias,general,id_norma,,,,,,
+161,sentencias,general,titulo_norma,,,,,,
+161,sentencias,general,mas_normas,,,,,,
+161,sentencias,general,otras_normas,,,,,,
+161,sentencias,general,numero_camara,,,,,,
+161,sentencias,general,numero_senado,,,,,,
+161,sentencias,general,tipo_demanda,,,,,,
+161,sentencias,general,oficio,,,,,,
+161,sentencias,general,articulos_id,,,,,,
+161,sentencias,general,fecha_norma,,,,,,
+161,sentencias,general,fecha_demanda,,,,,,
+161,sentencias,general,fecha_admision,,,,,,
+161,sentencias,general,fecha_sentencia,,,,,,
+161,sentencias,general,tema_norma_id,,,,,,
+161,sentencias,general,tipo_norma_id,,,,,,
+161,sentencias,general,procurador_id,,,,,,
+161,sentencias,general,concepto_procurador,,,,,,
+161,sentencias,general,ministerio_id,,,,,,
+161,sentencias,general,conceptos_intervenciones_id,,,,,,
+161,sentencias,general,intervencion_ciudadana,,,,,,
+161,sentencias,general,concepto_intervencion_cudadana,,,,,,
+161,sentencias,general,intervinientes_id,,,,,,
+161,sentencias,general,presidente_id,,,,,,
+161,sentencias,general,magistrado_original_id,,,,,,
+161,sentencias,general,magistrado_definitivo_id,,,,,,
+161,sentencias,general,decision,,,,,,
+161,sentencias,general,cosa_juzgada,,,,,,
+161,sentencias,general,numero_anio_sentencia_id,,,,,,
+161,sentencias,general,votacion_magistrados_id,,,,,,
+161,sentencias,general,relator,,,,,,
+161,sentencias,general,exhorto,,,,,,
+161,sentencias,general,participacion_conjuez,,,,,,
+161,sentencias,general,primer_salvamento_voto,,,,,,
+161,sentencias,general,sent_anio_primer_salv_id,,,,,,
+161,sentencias,general,segundo_salvamento_voto,,,,,,
+161,sentencias,general,sent_anio_segundo_salv_id,,,,,,
+161,sentencias,general,otras_decisiones,,,,,,
+162,sentencias,intervenciones_y_conceptos,id,,,,,,
+162,sentencias,intervenciones_y_conceptos,nombre_id,,,,,,
+162,sentencias,intervenciones_y_conceptos,intervencion,,,,,,
+162,sentencias,intervenciones_y_conceptos,concepto,,,,,,
+162,sentencias,intervenciones_y_conceptos,sentencia_id,,,,,,
+163,sentencias,interviniente,id,,,,,,
+163,sentencias,interviniente,nombres,,,,,,
+163,sentencias,interviniente,apellidos,,,,,,
+163,sentencias,interviniente,sentencia_id,,,,,,
+164,sentencias,magistradodefinitivo,id,,,,,,
+164,sentencias,magistradodefinitivo,definitivo_id,,,,,,
+164,sentencias,magistradodefinitivo,sentencia_id,,,,,,
+165,sentencias,materia_norma,id,,,,,,
+165,sentencias,materia_norma,tema_id,,,,,,
+165,sentencias,materia_norma,sentencia_id,,,,,,
+166,sentencias,ministerios,id,,,,,,
+166,sentencias,ministerios,ministerios_id,,,,,,
+166,sentencias,ministerios,participacion,,,,,,
+166,sentencias,ministerios,sentencia_id,,,,,,
+167,sentencias,motivo_de_inadmision,id,,,,,,
+167,sentencias,motivo_de_inadmision,nombre,,,,,,
+168,sentencias,nombre_entidad,id,,,,,,
+168,sentencias,nombre_entidad,nombre,,,,,,
+169,sentencias,nombremagistrado,id,,,,,,
+169,sentencias,nombremagistrado,nombre_completo,,,,,,
+169,sentencias,nombremagistrado,avatar,,,,,,
+170,sentencias,nombres_ministerios,id,,,,,,
+170,sentencias,nombres_ministerios,nombre,,,,,,
+170,sentencias,nombres_ministerios,avatar,,,,,,
+171,sentencias,numeroaniosentencia,id,,,,,,
+171,sentencias,numeroaniosentencia,numero_sentencia,,,,,,
+171,sentencias,numeroaniosentencia,anio,,,,,,
+171,sentencias,numeroaniosentencia,sentencia_id,,,,,,
+172,sentencias,partido,id,,,,,,
+172,sentencias,partido,nombre_partido,,,,,,
+173,sentencias,presidentecorte,id,,,,,,
+173,sentencias,presidentecorte,nombre_completo,,,,,,
+173,sentencias,presidentecorte,avatar,,,,,,
+174,sentencias,procurador,id,,,,,,
+174,sentencias,procurador,nombres,,,,,,
+174,sentencias,procurador,apellidos,,,,,,
+174,sentencias,procurador,avatar,,,,,,
+175,sentencias,sentanioprimersalv,id,,,,,,
+175,sentencias,sentanioprimersalv,numero_sentencia,,,,,,
+175,sentencias,sentanioprimersalv,anio,,,,,,
+175,sentencias,sentanioprimersalv,sentencia_id,,,,,,
+176,sentencias,sentaniosegundosalv,id,,,,,,
+176,sentencias,sentaniosegundosalv,numero_sentencia,,,,,,
+176,sentencias,sentaniosegundosalv,anio,,,,,,
+176,sentencias,sentaniosegundosalv,sentencia_id,,,,,,
+177,sentencias,solicitud,id,,,,,,
+177,sentencias,solicitud,created_at,,,,,,
+177,sentencias,solicitud,edited_at,,,,,,
+177,sentencias,solicitud,nombre,,,,,,
+177,sentencias,solicitud,lugar,,,,,,
+177,sentencias,solicitud,organizacion,,,,,,
+177,sentencias,solicitud,telefono,,,,,,
+177,sentencias,solicitud,movil,,,,,,
+177,sentencias,solicitud,correo,,,,,,
+177,sentencias,solicitud,titulo,,,,,,
+177,sentencias,solicitud,finalidad,,,,,,
+177,sentencias,solicitud,tipo_datos,,,,,,
+177,sentencias,solicitud,terminos,,,,,,
+177,sentencias,solicitud,reporte_enviado,,,,,,
+178,sentencias,tema_de_la_norma,id,,,,,,
+178,sentencias,tema_de_la_norma,nombre,,,,,,
+179,sentencias,tipo_de_norma,id,,,,,,
+179,sentencias,tipo_de_norma,nombre,,,,,,
+180,sentencias,votacionmagistrados,id,,,,,,
+180,sentencias,votacionmagistrados,nombre_magistrado_id,,,,,,
+180,sentencias,votacionmagistrados,votacion,,,,,,
+180,sentencias,votacionmagistrados,sentencia_id,,,,,,
+183,social,auth_usersocialauth,id,,,,,,
+183,social,auth_usersocialauth,user_id,,,,,,
+183,social,auth_usersocialauth,provider,,,,,,
+183,social,auth_usersocialauth,uid,,,,,,
+183,social,auth_usersocialauth,extra_data,,,,,,
+184,socialauth,authmeta,id,,,,,,
+184,socialauth,authmeta,user_id,,,,,,
+184,socialauth,authmeta,provider,,,,,,
+184,socialauth,authmeta,is_email_filled,,,,,,
+184,socialauth,authmeta,is_profile_modified,,,,,,
+185,socialauth,facebookuserprofile,id,,,,,,
+185,socialauth,facebookuserprofile,facebook_uid,,,,,,
+185,socialauth,facebookuserprofile,user_id,,,,,,
+185,socialauth,facebookuserprofile,profile_image_url,,,,,,
+185,socialauth,facebookuserprofile,profile_image_url_big,,,,,,
+185,socialauth,facebookuserprofile,profile_image_url_small,,,,,,
+185,socialauth,facebookuserprofile,location,,,,,,
+185,socialauth,facebookuserprofile,url,,,,,,
+185,socialauth,facebookuserprofile,about_me,,,,,,
+187,socialauth,openidprofile,id,,,,,,
+187,socialauth,openidprofile,openid_key,,,,,,
+187,socialauth,openidprofile,user_id,,,,,,
+187,socialauth,openidprofile,is_username_valid,,,,,,
+187,socialauth,openidprofile,email,,,,,,
+187,socialauth,openidprofile,nickname,,,,,,
+188,socialauth,twitteruserprofile,id,,,,,,
+188,socialauth,twitteruserprofile,screen_name,,,,,,
+188,socialauth,twitteruserprofile,user_id,,,,,,
+188,socialauth,twitteruserprofile,access_token,,,,,,
+188,socialauth,twitteruserprofile,profile_image_url,,,,,,
+188,socialauth,twitteruserprofile,location,,,,,,
+188,socialauth,twitteruserprofile,url,,,,,,
+188,socialauth,twitteruserprofile,description,,,,,,
+189,south,migrationhistory,id,,,,,,
+189,south,migrationhistory,app_name,,,,,,
+189,south,migrationhistory,migration,,,,,,
+189,south,migrationhistory,applied,,,,,,
