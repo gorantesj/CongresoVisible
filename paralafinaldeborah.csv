@@ -687,11 +687,11 @@ num,seccion,tabla,campo,grupo,campo_gp,tabla_gp,transformar,observaciones,termin
 119,openid,consumer_nonce,server_url,,,,,,
 119,openid,consumer_nonce,timestamp,,,,,,
 119,openid,consumer_nonce,salt,,,,,,
-120,orden,del_dia_cargocitado,id,2,,,2,,1
-120,orden,del_dia_cargocitado,created_at,2,,,2,,1
-120,orden,del_dia_cargocitado,edited_at,2,,,2,,1
-120,orden,del_dia_cargocitado,nombre,2,,,2,,1
-120,orden,del_dia_cargocitado,old_id,2,,,2,,1
+120,orden,del_dia_cargocitado,id,2,,,2,,
+120,orden,del_dia_cargocitado,created_at,2,,,2,,
+120,orden,del_dia_cargocitado,edited_at,2,,,2,,
+120,orden,del_dia_cargocitado,nombre,2,,,2,,
+120,orden,del_dia_cargocitado,old_id,2,,,2,,
 121,orden,del_dia_citacion_citantes,id,,,,,,
 121,orden,del_dia_citacion_citantes,citacion_id,,,,,,
 121,orden,del_dia_citacion_citantes,congresista_id,,,,,,

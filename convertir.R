@@ -221,7 +221,7 @@ tipo_comisions <- tipo_comisions %>%
          activo,
          usercreated, usermodifed,
          created_at, updated_at)
-write_excel_csv(tipo_comisions, "FinalesDeborah/identicas/tipo_comisions.csv")
+write_excel_csv(tipo_comisions, "Bases de datos nuevas/tipo_comisions.csv")
 
 
 
@@ -233,15 +233,49 @@ departamentos %>%  mutate(activo = NA_character_,
                           created_at= NA_character_, updated_at= NA_character_) %>%
   write_excel_csv("Bases de datos nuevas/departamentos.csv")
 
+# grupo_edads -----------------------------------------------------------
+grupo_edads <- read_csv("Bases de datos nuevas/grupo_edads.csv")
+
+grupo_edads %>%  mutate(activo = NA_character_,
+                          usercreated = NA_character_, usermodifed= NA_character_,
+                          created_at= NA_character_, updated_at= NA_character_) %>%
+  select(id = transformar_id,
+         edad_inicial = transformar_edad_minima , edad_final = transformar_edad_maxima,
+         activo, usercreated, usermodifed, created_at, updated_at
+         ) %>%
+  write_excel_csv("Bases de datos nuevas/grupo_edads.csv")
+
+# tema_proyecto_leys -----------------------------------------------------------
+tema_proyecto_leys <- tablas_res[[100]] %>%  mutate(
+                        usercreated = NA_character_, usermodifed= NA_character_,
+                         updated_at= edited_at)
+tema_proyecto_leys%<>%  select(-edited_at)
+tema_proyecto_leys %>%
+  write_excel_csv("Bases de datos nuevas/tema_proyecto_leys.csv")
+
+# control_politico_citados -----------------------------------------------------------
+control_politico_citados <- read_csv("Bases de datos nuevas/control_politico_citados.csv")
+
+control_politico_citados %>%  mutate(activo = NA_character_,
+                        usercreated = NA_character_, usermodifed= NA_character_) %>%
+
+
+  select(id = transformar_id,
+         edad_inicial = transformar_edad_minima , edad_final = transformar_edad_maxima,
+         activo, usercreated, usermodifed, created_at, updated_at
+  ) %>%
+  write_excel_csv("Bases de datos nuevas/control_politico_citados.csv")
+
+
 # transformación ----------------------------------------------------------
 # Leer campos
 campos <- read_csv("paralafinaldeborah.csv")
 
 # crear_bases(campos, tablas_res)
-crear_bases(campos %>%  filter(num == 94), tablas_res)
+crear_bases(campos %>%  filter(num == 124), tablas_res)
 
 
-tablas_res[[94]]
+tablas_res[[124]]
 
 # Sandbox -----------------------------------------------------------------
 
