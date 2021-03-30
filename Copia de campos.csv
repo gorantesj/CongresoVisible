@@ -345,7 +345,7 @@ num,seccion,tabla,campo,grupo,campo_gp,tabla_gp,transformar,observaciones
 51,congreso,partido,celular_contacto,3,,partido_datos_contactos ,,
 51,congreso,partido,correo_contacto,3,,partido_datos_contactos ,,
 51,congreso,partido,direccion_contacto,3,,partido_datos_contactos ,,
-51,congreso,partido,estado_id,3,estado_id,,,
+51,congreso,partido,estado_id,3,estado_id,partidos,,
 51,congreso,partido,nombre_contacto,3,,partidos,,
 51,congreso,partido,old_id,2,,partidos,,"No sirve, porque old id es de la tabla anterior."
 51,congreso,partido,usuario_id,2,,partidos,,
@@ -357,7 +357,7 @@ num,seccion,tabla,campo,grupo,campo_gp,tabla_gp,transformar,observaciones
 52,congreso,periodo,edited_at,1,updated_at,cuatrienios,,
 52,congreso,periodo,fecha_inicio,1,fecha_inicio,cuatrienios,,
 52,congreso,periodo,fecha_fin,1,fecha_final,cuatrienios,,
-52,congreso,periodo,old_id,1,old_id,cuatrienios,,
+52,congreso,periodo,old_id,2,old_id,cuatrienios,,
 52,congreso,periodo,activo,1,activo,cuatrienios,,
 53,congreso,periodocongresista,id,3,id,res_congreso_periodo_congresista ,,"El desarrollo anterior contempla un seguimiento al periodo en el que un congresista esta activo, nosotros no contemplamos reemplazos temporales o permanentes."
 53,congreso,periodocongresista,created_at,3,created_at,res_congreso_periodo_congresista ,,"El desarrollo anterior contempla un seguimiento al periodo en el que un congresista esta activo, nosotros no contemplamos reemplazos temporales o permanentes."
@@ -421,13 +421,13 @@ num,seccion,tabla,campo,grupo,campo_gp,tabla_gp,transformar,observaciones
 58,congreso,posiciontemaopinion,tema_id,2,,,,
 59,congreso,problema_link,id,2,,,2,Esto no se considera porque lo unico que la vincula es link_id
 59,congreso,problema_link,problema_id,2,,,2,Esto no se considera porque lo unico que la vincula es link_id
-59,congreso,problema_link,link_id,2,,,3,
+59,congreso,problema_link,link_id,2,,,2,Esto no se considera porque lo unico que la vincula es link_id
 60,congreso,problema,id,3,id,investigacions,,Esta tabla se debe crear
 60,congreso,problema,created_at,3,created_at,investigacions,,Esta tabla se debe crear
 60,congreso,problema,edited_at,3,updated_at,investigacions,,Esta tabla se debe crear
 60,congreso,problema,tipo_problema_id,3,tipo_problema_id,investigacions,,Esta tabla se debe crear
-60,congreso,problema,descripcion,3,descripcion,investigacions,,
-60,congreso,problema,congresista_id,3,congresista_id,investigacions,,
+60,congreso,problema,descripcion,3,descripcion,investigacions,,Esta tabla se debe crear
+60,congreso,problema,congresista_id,3,congresista_id,investigacions,,Esta tabla se debe crear
 61,congreso,proposicion,id,2,,,2,
 61,congreso,proposicion,created_at,2,,,2,
 61,congreso,proposicion,edited_at,2,,,2,
