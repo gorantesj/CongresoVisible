@@ -1,0 +1,156 @@
+﻿id,nombre
+1,cambio_estado_proyecto
+2,ponente_de_proyecto
+3,citante_de_citacion
+4,congresista_comenta
+5,proyecto_autor_congresista
+6,votacion_proyecto
+7,proyecto_autor_partido
+8,congresista_vota
+9,congresista_autor_proyecto
+10,partido_vota
+11,partido_autor_proyecto
+12,congresista_escribe_articulo
+13,partido_congresista_autor_proyecto
+14,partido_ponente_de_proyecto
+15,partido_citante_de_citacion
+16,partido_congresista_vota
+17,partido_congresista_comenta
+18,partido_congresista_escribe_articulo
+19,response.write(9206604*9559278)
+20,'+response.write(9206604*9559278)+'
+21,"""+response.write(9206604*9559278)+"""
+22,set|set&set
+23,'set|set&set'
+24,"""set|set&set"""
+25,"
+set|set&set
+"
+26,`set|set&set`
+27,NA
+28,"
+ SomeCustomInjectedHeader:injected_by_wvs"
+29,"
+ SomeCustomInjectedHeader:injected_by_wvs"
+30,"
+ SomeCustomInjectedHeader:injected_by_wvs"
+31,${9999262+10000408}
+32,"12345'""\'\"")"
+33,http://some-inexistent-website.acu/some_inexistent_file_with_long_name?.jpg
+34,1some_inexistent_file_with_long_name
+35,Http://testasp.vulnweb.com/t/fit.txt
+36,http://testasp.vulnweb.com/t/fit.txt?.jpg
+37,testasp.vulnweb.com
+38,partido_congresista_escribe_articulo&n969748=v925121
+39,)
+40,!(()&&!|*|*|
+41,^(#$!@#$)(()))******
+42,../../../../../../../../../../etc/passwd
+43,..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00.jpg
+44,Li4vLi4vLi4vLi4vLi4vLi4vLi4vLi4vLi4vLi4vZXRjL3Bhc3N3ZAAucG5n
+45,/../..//../..//../..//../..//../..//etc/passwd
+46,.\\./.\\./.\\./.\\./.\\./.\\./etc/passwd
+47,/etc/passwd
+48,../..//../..//../..//../..//../..//../..//../..//../..//etc/passwd
+49,../.../.././../.../.././../.../.././../.../.././../.../.././../.../.././etc/passwd
+50,..��..��..��..��..��..��..��..��etc/passwd
+51,file:///etc/passwd
+52,/\../\../\../\../\../\../\../etc/passwd
+53,WEB-INF/web.xml
+54,WEB-INF\web.xml
+55,../../../../../../../../../../windows/win.ini
+56,../../../../../../../../../../boot.ini
+57,������������������������������������������������windows��win.ini
+58,................windowswin.ini
+59,..\..\..\..\..\..\..\..\windows\win.ini
+60,/.\\./.\\./.\\./.\\./.\\./.\\./windows/win.ini
+61,../..//../..//../..//../..//../..//../..//../..//../..//windows/win.ini
+62,../.../.././../.../.././../.../.././../.../.././../.../.././../.../.././windows/win.ini
+63,WEB-INF/web.xml?
+64,WEB-INF\web.xml?
+65,http://testasp.vulnweb.com/t/xss.html?%00.jpg
+66,"'""()"
+67,'
+68,index.php
+69,""""
+70,${@print(md5(acunetix_wvs_security_test))}
+71,index.php/.
+72,${@print(md5(acunetix_wvs_security_test))}\
+73,)))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))
+74,www.vulnweb.com
+75,"'"""
+76,http://hitKQ6LZ0nvTB.bxss.me/
+77,<!--
+78,"1'"""
+79,\
+80,1
+81,@@hDTGu
+82,"'""()&%<acx><ScRiPt >prompt(975999)</ScRiPt>"
+83,JyI=
+84,partido_congresista_comenta%2Cpartido_congresista_escribe_articulo_985769
+85,"�'�"""
+86,"�''�"""""
+87,(select convert(int
+88,CHAR(65)))
+89,partido_congresista_comenta%2Cpartido_congresista_escribe_articulo
+90,TxIoy73u
+91,-1 OR 2+994-994-1=0+0+0+1 --
+92,-1 OR 2+950-950-1=0+0+0+1
+93,-1' OR 2+46-46-1=0+0+0+1 --
+94,"-1"" OR 2+185-185-1=0+0+0+1 --"
+95,if(now()=sysdate()
+96,sleep(6)
+97,0)/*'XOR(if(now()=sysdate()
+98,"0))OR'""XOR(if(now()=sysdate()"
+99,"0))OR""*/"
+100,1 waitfor delay '0:0:6' --
+101,YIL8I50b'
+102,GrMehFEq')
+103,9UJ5GaZs'))
+104,WwtmnosI'
+105,bHbLCFxf')
+106,xApBgF3x'))
+107,response.write(9399937*9140369)
+108,'+response.write(9399937*9140369)+'
+109,"""+response.write(9399937*9140369)+"""
+110,${9999553+9999034}
+111,rxZD33lb
+112,congresista_comenta&n923574=v944597
+113,-1 OR 2+620-620-1=0+0+0+1 --
+114,-1 OR 2+885-885-1=0+0+0+1
+115,-1' OR 2+452-452-1=0+0+0+1 --
+116,"-1"" OR 2+641-641-1=0+0+0+1 --"
+117,IoGdLuVV'
+118,8672p1wi')
+119,9OIkHYSf'))
+120,33GTtEOK'
+121,bvFY7uim')
+122,fVIYX26g'))
+123,http://hitVec4yjSYeY.bxss.me/
+124,@@Sx3Au
+125,"congresista_comenta'""()&%<acx><ScRiPt >prompt(983915)</ScRiPt>"
+126,"'""()&%<acx><ScRiPt >prompt(933472)</ScRiPt>"
+127,congresista_comenta_958059
+128,response.write(9710299*9470073)
+133,@@tO5uQ
+129,'+response.write(9710299*9470073)+'
+131,${9999114+9999809}
+137,zK6OZ44l
+138,-1 OR 2+457-457-1=0+0+0+1 --
+139,-1 OR 2+560-560-1=0+0+0+1
+141,"-1"" OR 2+223-223-1=0+0+0+1 --"
+130,"""+response.write(9710299*9470073)+"""
+132,partido_congresista_escribe_articulo&n961959=v909616
+134,http://hitdXzwSqz2S5.bxss.me/
+135,"'""()&%<acx><ScRiPt >prompt(934925)</ScRiPt>"
+145,82GYJsEW'
+147,SL46xmMW'))
+136,partido_congresista_comenta%2Cpartido_congresista_escribe_articulo_952665
+140,-1' OR 2+486-486-1=0+0+0+1 --
+146,GIHsd23N')
+142,sHSC2Rgd'
+143,K21qzu8M')
+144,LuzUzeiy'))
+148,1acunzrnsctHgG
+149,1acu986PW4K8OF
+150,1acui5l22S7ts7

@@ -1,0 +1,618 @@
+﻿id,name,content_type_id,codename
+22,Can add log entry,8,add_logentry
+23,Can change log entry,8,change_logentry
+24,Can delete log entry,8,delete_logentry
+4,Can add group,2,add_group
+1,Can add permission,1,add_permission
+7,Can add user,3,add_user
+5,Can change group,2,change_group
+2,Can change permission,1,change_permission
+8,Can change user,3,change_user
+6,Can delete group,2,delete_group
+3,Can delete permission,1,delete_permission
+9,Can delete user,3,delete_user
+127,Can add Actividad por Persona,43,add_actividadpersona
+52,Can add bancada,18,add_bancada
+55,Can add camara,19,add_camara
+103,Can add Campaña,35,add_campania
+100,Can add candidato,34,add_candidato
+70,Can add Cargo Profesional,24,add_cargo
+94,Can add Cargo en Comisión,32,add_cargocomision
+73,Can add Cargo Político,25,add_cargopolitico
+58,Can add Comisión,20,add_comision
+79,Can add congresista,27,add_congresista
+82,Can add congresista de bancada,28,add_congresistadebancada
+85,Can add congresista de partido,29,add_congresistadepartido
+49,Can add Contador de Congresistas y Candidatos,17,add_contadorcongresistas
+139,Can add Estado de Proyecto de Ley,47,add_estadodeproyectodeley
+130,Can add Estado de Proyecto de Ley,44,add_estadoproyectoley
+106,Can add Financiador,36,add_financiador
+97,Can add Integrante de Comisión,33,add_integrantecomision
+67,Can add partido,23,add_partido
+88,Can add periodo,30,add_periodo
+91,Can add Periodo de Congresista,31,add_periodocongresista
+61,Can add persona,21,add_persona
+115,Can add Posición de Congresista,39,add_posicion
+118,Can add Posición sobre Tema,40,add_posiciontema
+136,Can add Proyecto de Ley,46,add_proyectoley
+64,Can add secretario,22,add_secretario
+109,Can add tema,37,add_tema
+124,Can add Tipo de Actividad,42,add_tipoactividad
+76,Can add Tipo de Periodo,26,add_tipoperiodo
+133,Can add Tipo de Proyecto,45,add_tipoproyecto
+128,Can change Actividad por Persona,43,change_actividadpersona
+53,Can change bancada,18,change_bancada
+56,Can change camara,19,change_camara
+104,Can change Campaña,35,change_campania
+101,Can change candidato,34,change_candidato
+71,Can change Cargo Profesional,24,change_cargo
+95,Can change Cargo en Comisión,32,change_cargocomision
+74,Can change Cargo Político,25,change_cargopolitico
+59,Can change Comisión,20,change_comision
+80,Can change congresista,27,change_congresista
+83,Can change congresista de bancada,28,change_congresistadebancada
+86,Can change congresista de partido,29,change_congresistadepartido
+50,Can change Contador de Congresistas y Candidatos,17,change_contadorcongresistas
+140,Can change Estado de Proyecto de Ley,47,change_estadodeproyectodeley
+131,Can change Estado de Proyecto de Ley,44,change_estadoproyectoley
+107,Can change Financiador,36,change_financiador
+98,Can change Integrante de Comisión,33,change_integrantecomision
+68,Can change partido,23,change_partido
+89,Can change periodo,30,change_periodo
+92,Can change Periodo de Congresista,31,change_periodocongresista
+62,Can change persona,21,change_persona
+116,Can change Posición de Congresista,39,change_posicion
+119,Can change Posición sobre Tema,40,change_posiciontema
+137,Can change Proyecto de Ley,46,change_proyectoley
+65,Can change secretario,22,change_secretario
+110,Can change tema,37,change_tema
+125,Can change Tipo de Actividad,42,change_tipoactividad
+77,Can change Tipo de Periodo,26,change_tipoperiodo
+134,Can change Tipo de Proyecto,45,change_tipoproyecto
+129,Can delete Actividad por Persona,43,delete_actividadpersona
+54,Can delete bancada,18,delete_bancada
+57,Can delete camara,19,delete_camara
+105,Can delete Campaña,35,delete_campania
+199,Can add Citación,67,add_citacion
+102,Can delete candidato,34,delete_candidato
+72,Can delete Cargo Profesional,24,delete_cargo
+96,Can delete Cargo en Comisión,32,delete_cargocomision
+75,Can delete Cargo Político,25,delete_cargopolitico
+60,Can delete Comisión,20,delete_comision
+81,Can delete congresista,27,delete_congresista
+84,Can delete congresista de bancada,28,delete_congresistadebancada
+87,Can delete congresista de partido,29,delete_congresistadepartido
+51,Can delete Contador de Congresistas y Candidatos,17,delete_contadorcongresistas
+141,Can delete Estado de Proyecto de Ley,47,delete_estadodeproyectodeley
+132,Can delete Estado de Proyecto de Ley,44,delete_estadoproyectoley
+108,Can delete Financiador,36,delete_financiador
+99,Can delete Integrante de Comisión,33,delete_integrantecomision
+69,Can delete partido,23,delete_partido
+90,Can delete periodo,30,delete_periodo
+93,Can delete Periodo de Congresista,31,delete_periodocongresista
+63,Can delete persona,21,delete_persona
+117,Can delete Posición de Congresista,39,delete_posicion
+120,Can delete Posición sobre Tema,40,delete_posiciontema
+138,Can delete Proyecto de Ley,46,delete_proyectoley
+415,Can change Articulo,98,change_post
+66,Can delete secretario,22,delete_secretario
+111,Can delete tema,37,delete_tema
+126,Can delete Tipo de Actividad,42,delete_tipoactividad
+78,Can delete Tipo de Periodo,26,delete_tipoperiodo
+135,Can delete Tipo de Proyecto,45,delete_tipoproyecto
+13,Can add content type,5,add_contenttype
+14,Can change content type,5,change_contenttype
+15,Can delete content type,5,delete_contenttype
+46,Can add evolution,16,add_evolution
+43,Can add version,15,add_version
+47,Can change evolution,16,change_evolution
+44,Can change version,15,change_version
+48,Can delete evolution,16,delete_evolution
+45,Can delete version,15,delete_version
+181,Can add Citación,61,add_citacion
+178,Can add Ítem de Orden del Día,60,add_itemdeordendeldia
+175,Can add Orden del Día,59,add_ordendeldia
+184,Can add otro elemento orden dia,62,add_otroelementoordendia
+166,Can add Sector Industrial,56,add_sectorindustria
+169,Can add Tipo de Citación,57,add_tipocitacion
+172,Can add Tipo de Citante,58,add_tipocitante
+182,Can change Citación,61,change_citacion
+179,Can change Ítem de Orden del Día,60,change_itemdeordendeldia
+176,Can change Orden del Día,59,change_ordendeldia
+185,Can change otro elemento orden dia,62,change_otroelementoordendia
+167,Can change Sector Industrial,56,change_sectorindustria
+170,Can change Tipo de Citación,57,change_tipocitacion
+173,Can change Tipo de Citante,58,change_tipocitante
+183,Can delete Citación,61,delete_citacion
+180,Can delete Ítem de Orden del Día,60,delete_itemdeordendeldia
+177,Can delete Orden del Día,59,delete_ordendeldia
+186,Can delete otro elemento orden dia,62,delete_otroelementoordendia
+168,Can delete Sector Industrial,56,delete_sectorindustria
+171,Can delete Tipo de Citación,57,delete_tipocitacion
+174,Can delete Tipo de Citante,58,delete_tipocitante
+31,Can add Bookmark,11,add_bookmark
+34,Can add Bookmark Item,12,add_bookmarkitem
+37,Can add Help,13,add_help
+40,Can add Help Entry,14,add_helpitem
+25,Can add Navigation,9,add_navigation
+28,Can add Navigation Item,10,add_navigationitem
+32,Can change Bookmark,11,change_bookmark
+35,Can change Bookmark Item,12,change_bookmarkitem
+38,Can change Help,13,change_help
+41,Can change Help Entry,14,change_helpitem
+26,Can change Navigation,9,change_navigation
+29,Can change Navigation Item,10,change_navigationitem
+33,Can delete Bookmark,11,delete_bookmark
+36,Can delete Bookmark Item,12,delete_bookmarkitem
+39,Can delete Help,13,delete_help
+42,Can delete Help Entry,14,delete_helpitem
+27,Can delete Navigation,9,delete_navigation
+30,Can delete Navigation Item,10,delete_navigationitem
+196,Can add Ítem de Orden del Día,66,add_itemdeordendeldia
+193,Can add Orden del Día,65,add_ordendeldia
+187,Can add proyecto en orden dia,63,add_proyectoenordendia
+205,Can add proyecto en orden dia,69,add_proyectoenordendia
+190,Can add Tipo de Citante,64,add_tipocitante
+200,Can change Citación,67,change_citacion
+197,Can change Ítem de Orden del Día,66,change_itemdeordendeldia
+194,Can change Orden del Día,65,change_ordendeldia
+206,Can change proyecto en orden dia,69,change_proyectoenordendia
+188,Can change proyecto en orden dia,63,change_proyectoenordendia
+191,Can change Tipo de Citante,64,change_tipocitante
+201,Can delete Citación,67,delete_citacion
+198,Can delete Ítem de Orden del Día,66,delete_itemdeordendeldia
+195,Can delete Orden del Día,65,delete_ordendeldia
+189,Can delete proyecto en orden dia,63,delete_proyectoenordendia
+207,Can delete proyecto en orden dia,69,delete_proyectoenordendia
+192,Can delete Tipo de Citante,64,delete_tipocitante
+160,Can add departamento,54,add_departamento
+151,Can add Género,51,add_genero
+163,Can add municipio,55,add_municipio
+154,Can add Profesión,52,add_profesion
+148,Can add Rango de Edad,50,add_rangoedad
+157,Can add Región,53,add_region
+161,Can change departamento,54,change_departamento
+152,Can change Género,51,change_genero
+164,Can change municipio,55,change_municipio
+155,Can change Profesión,52,change_profesion
+149,Can change Rango de Edad,50,change_rangoedad
+158,Can change Región,53,change_region
+162,Can delete departamento,54,delete_departamento
+153,Can delete Género,51,delete_genero
+165,Can delete municipio,55,delete_municipio
+156,Can delete Profesión,52,delete_profesion
+150,Can delete Rango de Edad,50,delete_rangoedad
+159,Can delete Región,53,delete_region
+16,Can add session,6,add_session
+17,Can change session,6,change_session
+18,Can delete session,6,delete_session
+19,Can add site,7,add_site
+20,Can change site,7,change_site
+21,Can delete site,7,delete_site
+208,Can add aval,23,add_aval
+209,Can change aval,23,change_aval
+210,Can delete aval,23,delete_aval
+211,Can add Partido Político,24,add_partido
+212,Can change Partido Político,24,change_partido
+213,Can delete Partido Político,24,delete_partido
+214,Can add Cargo Profesional,25,add_cargo
+215,Can change Cargo Profesional,25,change_cargo
+216,Can delete Cargo Profesional,25,delete_cargo
+217,Can add Cargo Político,26,add_cargopolitico
+218,Can change Cargo Político,26,change_cargopolitico
+219,Can delete Cargo Político,26,delete_cargopolitico
+220,Can add Tipo de Periodo,27,add_tipoperiodo
+221,Can change Tipo de Periodo,27,change_tipoperiodo
+222,Can delete Tipo de Periodo,27,delete_tipoperiodo
+223,Can add congresista,28,add_congresista
+224,Can change congresista,28,change_congresista
+225,Can delete congresista,28,delete_congresista
+226,Can add reemplazo,29,add_reemplazo
+227,Can change reemplazo,29,change_reemplazo
+228,Can delete reemplazo,29,delete_reemplazo
+229,Can add alianza,30,add_alianza
+230,Can change alianza,30,change_alianza
+231,Can delete alianza,30,delete_alianza
+232,Can add alianza partido,31,add_alianzapartido
+233,Can change alianza partido,31,change_alianzapartido
+234,Can delete alianza partido,31,delete_alianzapartido
+235,Can add congresista de bancada,32,add_congresistadebancada
+236,Can change congresista de bancada,32,change_congresistadebancada
+237,Can delete congresista de bancada,32,delete_congresistadebancada
+238,Can add congresista de partido,33,add_congresistadepartido
+239,Can change congresista de partido,33,change_congresistadepartido
+240,Can delete congresista de partido,33,delete_congresistadepartido
+241,Can add periodo,34,add_periodo
+242,Can change periodo,34,change_periodo
+243,Can delete periodo,34,delete_periodo
+244,Can add Periodo de Congresista,35,add_periodocongresista
+245,Can change Periodo de Congresista,35,change_periodocongresista
+246,Can delete Periodo de Congresista,35,delete_periodocongresista
+247,Can add Cargo en Comisión,36,add_cargocomision
+248,Can change Cargo en Comisión,36,change_cargocomision
+249,Can delete Cargo en Comisión,36,delete_cargocomision
+250,Can add Integrante de Comisión,37,add_integrantecomision
+251,Can change Integrante de Comisión,37,change_integrantecomision
+252,Can delete Integrante de Comisión,37,delete_integrantecomision
+256,Can add Campaña,39,add_campania
+257,Can change Campaña,39,change_campania
+258,Can delete Campaña,39,delete_campania
+259,Can add Financiador,40,add_financiador
+260,Can change Financiador,40,change_financiador
+261,Can delete Financiador,40,delete_financiador
+262,Can add tema opinion,42,add_temaopinion
+263,Can change tema opinion,42,change_temaopinion
+264,Can delete tema opinion,42,delete_temaopinion
+265,Can add Proposición,43,add_proposicion
+266,Can change Proposición,43,change_proposicion
+267,Can delete Proposición,43,delete_proposicion
+268,Can add Posición de Congresista,44,add_posicion
+269,Can change Posición de Congresista,44,change_posicion
+270,Can delete Posición de Congresista,44,delete_posicion
+271,Can add Posición del Partido frente a Temas,45,add_posicionpartido
+272,Can change Posición del Partido frente a Temas,45,change_posicionpartido
+273,Can delete Posición del Partido frente a Temas,45,delete_posicionpartido
+274,Can add Posición sobre Tema,46,add_posiciontemaopinion
+275,Can change Posición sobre Tema,46,change_posiciontemaopinion
+276,Can delete Posición sobre Tema,46,delete_posiciontemaopinion
+277,Can add Posición sobre Proposición,47,add_posicionproposicion
+278,Can change Posición sobre Proposición,47,change_posicionproposicion
+279,Can delete Posición sobre Proposición,47,delete_posicionproposicion
+286,Can add Estado de Proyecto de Ley,50,add_estadoproyectoley
+287,Can change Estado de Proyecto de Ley,50,change_estadoproyectoley
+288,Can delete Estado de Proyecto de Ley,50,delete_estadoproyectoley
+289,Can add Tipo de Proyecto,51,add_tipoproyecto
+290,Can change Tipo de Proyecto,51,change_tipoproyecto
+291,Can delete Tipo de Proyecto,51,delete_tipoproyecto
+292,Can add Iniciativa,70,add_iniciativa
+293,Can change Iniciativa,70,change_iniciativa
+294,Can delete Iniciativa,70,delete_iniciativa
+295,Can add Proyecto de Ley,52,add_proyectoley
+296,Can change Proyecto de Ley,52,change_proyectoley
+297,Can delete Proyecto de Ley,52,delete_proyectoley
+298,Can add autor proyecto ley,71,add_autorproyectoley
+299,Can change autor proyecto ley,71,change_autorproyectoley
+300,Can delete autor proyecto ley,71,delete_autorproyectoley
+301,Can add Estado de Proyecto de Ley,53,add_estadodeproyectodeley
+302,Can change Estado de Proyecto de Ley,53,change_estadodeproyectodeley
+303,Can delete Estado de Proyecto de Ley,53,delete_estadodeproyectodeley
+304,Can add Votación,54,add_votacion
+305,Can change Votación,54,change_votacion
+306,Can delete Votación,54,delete_votacion
+307,Can add voto,55,add_voto
+308,Can change voto,55,change_voto
+309,Can delete voto,55,delete_voto
+310,Can add Rango de Edad,56,add_rangoedad
+311,Can change Rango de Edad,56,change_rangoedad
+312,Can delete Rango de Edad,56,delete_rangoedad
+313,Can add Género,57,add_genero
+314,Can change Género,57,change_genero
+315,Can delete Género,57,delete_genero
+316,Can add Profesión,58,add_profesion
+317,Can change Profesión,58,change_profesion
+318,Can delete Profesión,58,delete_profesion
+319,Can add Región,59,add_region
+320,Can change Región,59,change_region
+321,Can delete Región,59,delete_region
+322,Can add departamento,60,add_departamento
+323,Can change departamento,60,change_departamento
+324,Can delete departamento,60,delete_departamento
+325,Can add municipio,61,add_municipio
+326,Can change municipio,61,change_municipio
+327,Can delete municipio,61,delete_municipio
+328,Can add Sector Industrial,62,add_sectorindustria
+329,Can change Sector Industrial,62,change_sectorindustria
+330,Can delete Sector Industrial,62,delete_sectorindustria
+331,Can add tema,72,add_tema
+332,Can change tema,72,change_tema
+333,Can delete tema,72,delete_tema
+334,Can add Tipo de Citación,63,add_tipocitacion
+335,Can change Tipo de Citación,63,change_tipocitacion
+336,Can delete Tipo de Citación,63,delete_tipocitacion
+337,Can add comment,73,add_comment
+338,Can change comment,73,change_comment
+339,Can delete comment,73,delete_comment
+340,Can moderate comments,73,can_moderate
+341,Can add comment flag,74,add_commentflag
+342,Can change comment flag,74,change_commentflag
+343,Can delete comment flag,74,delete_commentflag
+344,Can add task meta,75,add_taskmeta
+345,Can change task meta,75,change_taskmeta
+346,Can delete task meta,75,delete_taskmeta
+425,Can delete Entidad de Citado,101,delete_entidadcitado
+426,Can add Cargo de Citado,102,add_cargocitado
+427,Can change Cargo de Citado,102,change_cargocitado
+350,Can add estado partido,77,add_estadopartido
+351,Can change estado partido,77,change_estadopartido
+352,Can delete estado partido,77,delete_estadopartido
+353,Can add Tipo de Votación,78,add_tipovotacion
+354,Can change Tipo de Votación,78,change_tipovotacion
+355,Can delete Tipo de Votación,78,delete_tipovotacion
+356,Can add votacion partido,79,add_votacionpartido
+357,Can change votacion partido,79,change_votacionpartido
+358,Can delete votacion partido,79,delete_votacionpartido
+359,Can add Contador,80,add_counter
+360,Can change Contador,80,change_counter
+361,Can delete Contador,80,delete_counter
+362,Can add banner,81,add_banner
+363,Can change banner,81,change_banner
+364,Can delete banner,81,delete_banner
+365,Can add seccion home,82,add_seccionhome
+366,Can change seccion home,82,change_seccionhome
+367,Can delete seccion home,82,delete_seccionhome
+368,Can add flat page,83,add_flatpage
+369,Can change flat page,83,change_flatpage
+370,Can delete flat page,83,delete_flatpage
+371,Can add Circunscripción,84,add_circunscripcion
+372,Can change Circunscripción,84,change_circunscripcion
+373,Can delete Circunscripción,84,delete_circunscripcion
+374,Can add link footer,85,add_linkfooter
+375,Can change link footer,85,change_linkfooter
+376,Can delete link footer,85,delete_linkfooter
+377,Can add auth meta,86,add_authmeta
+378,Can change auth meta,86,change_authmeta
+379,Can delete auth meta,86,delete_authmeta
+380,Can add openid profile,87,add_openidprofile
+381,Can change openid profile,87,change_openidprofile
+382,Can delete openid profile,87,delete_openidprofile
+383,Can add linked in user profile,88,add_linkedinuserprofile
+384,Can change linked in user profile,88,change_linkedinuserprofile
+385,Can delete linked in user profile,88,delete_linkedinuserprofile
+386,Can add twitter user profile,89,add_twitteruserprofile
+387,Can change twitter user profile,89,change_twitteruserprofile
+388,Can delete twitter user profile,89,delete_twitteruserprofile
+389,Can add facebook user profile,90,add_facebookuserprofile
+390,Can change facebook user profile,90,change_facebookuserprofile
+391,Can delete facebook user profile,90,delete_facebookuserprofile
+392,Can add nonce,91,add_nonce
+393,Can change nonce,91,change_nonce
+394,Can delete nonce,91,delete_nonce
+395,Can add association,92,add_association
+396,Can change association,92,change_association
+397,Can delete association,92,delete_association
+398,Can add Tipo de Problema,93,add_tipoproblema
+399,Can change Tipo de Problema,93,change_tipoproblema
+400,Can delete Tipo de Problema,93,delete_tipoproblema
+401,Can add Problema,94,add_problema
+402,Can change Problema,94,change_problema
+403,Can delete Problema,94,delete_problema
+404,Can add Tipo de Seccion,95,add_tipoblog
+405,Can change Tipo de Seccion,95,change_tipoblog
+406,Can delete Tipo de Seccion,95,delete_tipoblog
+407,Can add Seccion,96,add_blog
+408,Can change Seccion,96,change_blog
+409,Can delete Seccion,96,delete_blog
+410,Puede Administrar Blogs,96,can_admin_blog
+411,Can add Etiqueta,97,add_tag
+412,Can change Etiqueta,97,change_tag
+413,Can delete Etiqueta,97,delete_tag
+414,Can add Articulo,98,add_post
+416,Can delete Articulo,98,delete_post
+417,Can add setting,99,add_setting
+418,Can change setting,99,change_setting
+419,Can delete setting,99,delete_setting
+420,Can add entidad,100,add_entidad
+421,Can change entidad,100,change_entidad
+422,Can delete entidad,100,delete_entidad
+423,Can add Entidad de Citado,101,add_entidadcitado
+424,Can change Entidad de Citado,101,change_entidadcitado
+465,Can add ayuda seccion,115,add_ayudaseccion
+466,Can change ayuda seccion,115,change_ayudaseccion
+467,Can delete ayuda seccion,115,delete_ayudaseccion
+428,Can delete Cargo de Citado,102,delete_cargocitado
+429,Can add Citado,103,add_citado
+430,Can change Citado,103,change_citado
+431,Can delete Citado,103,delete_citado
+432,Can add citado asistente citacion,104,add_citadoasistentecitacion
+433,Can change citado asistente citacion,104,change_citadoasistentecitacion
+434,Can delete citado asistente citacion,104,delete_citadoasistentecitacion
+435,Can add sigue a,105,add_siguea
+436,Can change sigue a,105,change_siguea
+437,Can delete sigue a,105,delete_siguea
+438,Can add Tipo de Actividad,106,add_tipoactividad
+439,Can change Tipo de Actividad,106,change_tipoactividad
+440,Can delete Tipo de Actividad,106,delete_tipoactividad
+441,Can add actividad,107,add_actividad
+442,Can change actividad,107,change_actividad
+443,Can delete actividad,107,delete_actividad
+444,Can add cv comment,73,add_cvcomment
+445,Can change cv comment,73,change_cvcomment
+446,Can delete cv comment,73,delete_cvcomment
+447,Can add Voto de Ciudadano,109,add_votociudadano
+448,Can change Voto de Ciudadano,109,change_votociudadano
+449,Can delete Voto de Ciudadano,109,delete_votociudadano
+450,Can add invitado asistente citacion,110,add_invitadoasistentecitacion
+451,Can change invitado asistente citacion,110,change_invitadoasistentecitacion
+452,Can delete invitado asistente citacion,110,delete_invitadoasistentecitacion
+453,Can add boletin,111,add_boletin
+454,Can change boletin,111,change_boletin
+455,Can delete boletin,111,delete_boletin
+456,Can add grupo,112,add_grupo
+457,Can change grupo,112,change_grupo
+458,Can delete grupo,112,delete_grupo
+459,Can add taskset meta,113,add_tasksetmeta
+460,Can change taskset meta,113,change_tasksetmeta
+461,Can delete taskset meta,113,delete_tasksetmeta
+462,Can add Otro Autor de Proyecto de Ley,114,add_otroautor
+463,Can change Otro Autor de Proyecto de Ley,114,change_otroautor
+464,Can delete Otro Autor de Proyecto de Ley,114,delete_otroautor
+468,Can add pregunta respuesta,116,add_preguntarespuesta
+469,Can change pregunta respuesta,116,change_preguntarespuesta
+470,Can delete pregunta respuesta,116,delete_preguntarespuesta
+471,Can add enlaces seccion,117,add_enlacesseccion
+472,Can change enlaces seccion,117,change_enlacesseccion
+473,Can delete enlaces seccion,117,delete_enlacesseccion
+474,Can add enlace interes,118,add_enlaceinteres
+475,Can change enlace interes,118,change_enlaceinteres
+476,Can delete enlace interes,118,delete_enlaceinteres
+477,Can add frase mencion,119,add_frasemencion
+478,Can change frase mencion,119,change_frasemencion
+479,Can delete frase mencion,119,delete_frasemencion
+480,Can add facebook template,120,add_facebooktemplate
+481,Can change facebook template,120,change_facebooktemplate
+482,Can delete facebook template,120,delete_facebooktemplate
+483,Can add facebook profile,121,add_facebookprofile
+484,Can change facebook profile,121,change_facebookprofile
+485,Can delete facebook profile,121,delete_facebookprofile
+486,Can add legislatura,122,add_legislatura
+487,Can change legislatura,122,change_legislatura
+488,Can delete legislatura,122,delete_legislatura
+489,Can add Feed del Home,123,add_feedhome
+490,Can change Feed del Home,123,change_feedhome
+491,Can delete Feed del Home,123,delete_feedhome
+492,Can add Reporte,124,add_reporte
+493,Can change Reporte,124,change_reporte
+494,Can delete Reporte,124,delete_reporte
+495,Can add migration history,125,add_migrationhistory
+496,Can change migration history,125,change_migrationhistory
+497,Can delete migration history,125,delete_migrationhistory
+498,Can add Tipo de Comisión,126,add_tipocomision
+499,Can change Tipo de Comisión,126,change_tipocomision
+500,Can delete Tipo de Comisión,126,delete_tipocomision
+501,Can add Cargo en Cámara,127,add_cargocamara
+502,Can change Cargo en Cámara,127,change_cargocamara
+503,Can delete Cargo en Cámara,127,delete_cargocamara
+504,Can add Integrante de Cámara,128,add_integrantecamara
+505,Can change Integrante de Cámara,128,change_integrantecamara
+506,Can delete Integrante de Cámara,128,delete_integrantecamara
+507,Puede administrar todos los Aliados (Grupos),112,can_admin_grupo
+508,Puede administrar todos los Partidos,24,can_admin_partido
+509,Puede administrar todos los Congresistas,28,can_admin_congresista
+510,Can add Texto de Proyecto de Ley,130,add_textoproyectoley
+511,Can change Texto de Proyecto de Ley,130,change_textoproyectoley
+512,Can delete Texto de Proyecto de Ley,130,delete_textoproyectoley
+513,Can add Comparación,131,add_comparacion
+514,Can change Comparación,131,change_comparacion
+515,Can delete Comparación,131,delete_comparacion
+516,Can add key map,134,add_keymap
+517,Can change key map,134,change_keymap
+518,Can delete key map,134,delete_keymap
+519,Can add user social auth,135,add_usersocialauth
+520,Can change user social auth,135,change_usersocialauth
+521,Can delete user social auth,135,delete_usersocialauth
+522,Can add nonce,136,add_nonce
+523,Can change nonce,136,change_nonce
+524,Can delete nonce,136,delete_nonce
+525,Can add association,137,add_association
+526,Can change association,137,change_association
+527,Can delete association,137,delete_association
+528,Can add Candidato,28,add_candidato
+529,Can change Candidato,28,change_candidato
+530,Can delete Candidato,28,delete_candidato
+531,Can add Posición de Congresista,138,add_temaposicion
+532,Can change Posición de Congresista,138,change_temaposicion
+533,Can delete Posición de Congresista,138,delete_temaposicion
+534,Can add sentencia,132,add_sentencia
+535,Can change sentencia,132,change_sentencia
+536,Can delete sentencia,132,delete_sentencia
+537,Can add tipo caso,140,add_tipocaso
+538,Can change tipo caso,140,change_tipocaso
+539,Can delete tipo caso,140,delete_tipocaso
+540,Can add tipo demanda,141,add_tipodemanda
+541,Can change tipo demanda,141,change_tipodemanda
+542,Can delete tipo demanda,141,delete_tipodemanda
+543,Can add link,142,add_link
+544,Can change link,142,change_link
+545,Can delete link,142,delete_link
+546,Can add Candidatos al Concejo,144,add_candidatos_concejo
+547,Can change Candidatos al Concejo,144,change_candidatos_concejo
+548,Can delete Candidatos al Concejo,144,delete_candidatos_concejo
+549,Can add Trayectoria Candidato,145,add_trayectoria
+550,Can change Trayectoria Candidato,145,change_trayectoria
+551,Can delete Trayectoria Candidato,145,delete_trayectoria
+552,Can add sentencia_ info,146,add_sentencia_info
+553,Can change sentencia_ info,146,change_sentencia_info
+554,Can delete sentencia_ info,146,delete_sentencia_info
+555,Can add tipo_de_ caso,147,add_tipo_de_caso
+556,Can change tipo_de_ caso,147,change_tipo_de_caso
+557,Can delete tipo_de_ caso,147,delete_tipo_de_caso
+558,Can add tipo_de_ demanda,148,add_tipo_de_demanda
+559,Can change tipo_de_ demanda,148,change_tipo_de_demanda
+560,Can delete tipo_de_ demanda,148,delete_tipo_de_demanda
+561,Can add magistrado_ ponente,149,add_magistrado_ponente
+562,Can change magistrado_ ponente,149,change_magistrado_ponente
+563,Can delete magistrado_ ponente,149,delete_magistrado_ponente
+564,Can add tema_ norma,150,add_tema_norma
+565,Can change tema_ norma,150,change_tema_norma
+566,Can delete tema_ norma,150,delete_tema_norma
+567,Can add tipo_ norma,151,add_tipo_norma
+568,Can change tipo_ norma,151,change_tipo_norma
+569,Can delete tipo_ norma,151,delete_tipo_norma
+570,Can add Solicitud de información,152,add_solicitud
+571,Can change Solicitud de información,152,change_solicitud
+572,Can delete Solicitud de información,152,delete_solicitud
+573,Can add expediente,153,add_expediente
+574,Can change expediente,153,change_expediente
+575,Can delete expediente,153,delete_expediente
+576,Can add demandante,154,add_demandante
+577,Can change demandante,154,change_demandante
+578,Can delete demandante,154,delete_demandante
+579,Can add Partido del Congresista,155,add_partido
+580,Can change Partido del Congresista,155,change_partido
+581,Can delete Partido del Congresista,155,delete_partido
+582,Can add Motivo de la inadmisión,156,add_motivo_de_inadmision
+583,Can change Motivo de la inadmisión,156,change_motivo_de_inadmision
+584,Can delete Motivo de la inadmisión,156,delete_motivo_de_inadmision
+585,Can add Tema de la norma,157,add_tema_de_la_norma
+586,Can change Tema de la norma,157,change_tema_de_la_norma
+587,Can delete Tema de la norma,157,delete_tema_de_la_norma
+588,Can add materia_ norma,158,add_materia_norma
+589,Can change materia_ norma,158,change_materia_norma
+590,Can delete materia_ norma,158,delete_materia_norma
+591,Can add Tipo de la norma,159,add_tipo_de_norma
+592,Can change Tipo de la norma,159,change_tipo_de_norma
+593,Can delete Tipo de la norma,159,delete_tipo_de_norma
+594,Can add Procurador,160,add_procurador
+595,Can change Procurador,160,change_procurador
+596,Can delete Procurador,160,delete_procurador
+597,Can add interviniente,161,add_interviniente
+598,Can change interviniente,161,change_interviniente
+599,Can delete interviniente,161,delete_interviniente
+600,Can add Nombre de la Entidad,162,add_nombre_entidad
+601,Can change Nombre de la Entidad,162,change_nombre_entidad
+602,Can delete Nombre de la Entidad,162,delete_nombre_entidad
+603,Can add Intervención y Concepto,163,add_intervenciones_y_conceptos
+604,Can change Intervención y Concepto,163,change_intervenciones_y_conceptos
+605,Can delete Intervención y Concepto,163,delete_intervenciones_y_conceptos
+606,Can add Presidente de la Corte,164,add_presidentecorte
+607,Can change Presidente de la Corte,164,change_presidentecorte
+608,Can delete Presidente de la Corte,164,delete_presidentecorte
+609,Can add Magistrado,165,add_nombremagistrado
+610,Can change Magistrado,165,change_nombremagistrado
+611,Can delete Magistrado,165,delete_nombremagistrado
+612,Can add Magistrado ponente definitivo,166,add_magistradodefinitivo
+613,Can change Magistrado ponente definitivo,166,change_magistradodefinitivo
+614,Can delete Magistrado ponente definitivo,166,delete_magistradodefinitivo
+615,Can add Votacion de los Magistrados,167,add_votacionmagistrados
+616,Can change Votacion de los Magistrados,167,change_votacionmagistrados
+617,Can delete Votacion de los Magistrados,167,delete_votacionmagistrados
+618,Can add sent anio primer salv,168,add_sentanioprimersalv
+619,Can change sent anio primer salv,168,change_sentanioprimersalv
+620,Can delete sent anio primer salv,168,delete_sentanioprimersalv
+621,Can add sent anio segundo salv,169,add_sentaniosegundosalv
+622,Can change sent anio segundo salv,169,change_sentaniosegundosalv
+623,Can delete sent anio segundo salv,169,delete_sentaniosegundosalv
+624,Can add Número y año de la Sentencia,170,add_numeroaniosentencia
+625,Can change Número y año de la Sentencia,170,change_numeroaniosentencia
+626,Can delete Número y año de la Sentencia,170,delete_numeroaniosentencia
+627,Can add Ministerio,171,add_nombres_ministerios
+628,Can change Ministerio,171,change_nombres_ministerios
+629,Can delete Ministerio,171,delete_nombres_ministerios
+630,Can add Participación del Ministerio,172,add_ministerios
+631,Can change Participación del Ministerio,172,change_ministerios
+632,Can delete Participación del Ministerio,172,delete_ministerios
+633,Can add articulo,173,add_articulo
+634,Can change articulo,173,change_articulo
+635,Can delete articulo,173,delete_articulo
+636,Can add Concepto,174,add_diccionario
+637,Can change Concepto,174,change_diccionario
+638,Can delete Concepto,174,delete_diccionario
+639,Can add Sentencia,175,add_general
+640,Can change Sentencia,175,change_general
+641,Can delete Sentencia,175,delete_general
+642,Can add informes_,176,add_informes_
+643,Can change informes_,176,change_informes_
+644,Can delete informes_,176,delete_informes_
+645,Can add informe PNUD,177,add_informe_pnud
+646,Can change informe PNUD,177,change_informe_pnud
+647,Can delete informe PNUD,177,delete_informe_pnud
