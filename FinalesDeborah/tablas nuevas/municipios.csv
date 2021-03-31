@@ -1,0 +1,475 @@
+﻿id,nombre,departamento_id
+1,Cali,32
+2,Bucaramanga,29
+4,Bogotá,1
+5,Barranquilla,5
+6,Cúcuta,24
+7,Palmira,32
+8,Popayán,11
+9,San Gil,29
+10,Rivera,18
+11,Pereira,27
+12,Medellín,3
+13,Purificacion,31
+14,Carmen de Bolivar,6
+15,Montelibano,14
+16,Duitama,7
+18,Ansermanuevo,32
+19,Magangué,6
+21,Moniquirá,7
+22,Nimaima,15
+24,Pinillos,6
+25,Tarazá,3
+26,Líbano,31
+27,Cartago,32
+28,Socorro,29
+29,Cimitarra,29
+31,Tocaima,15
+32,Mocoa,25
+33,Chitaraque,7
+34,San Calixto,24
+35,Bugalagrande,32
+36,Choachí,15
+37,Guasca,15
+38,Cómbita,7
+39,Cerrito,29
+40,Tenerife,20
+41,Sincelejo,30
+43,Florida,32
+44,Lorica,14
+45,Santa Isabel,31
+46,San Vicente de Chucurí,29
+47,Florencia,9
+48,Manizales,8
+49,Chiquinquirá,7
+50,Paz de Ariporo,10
+51,Marinilla,3
+52,Bello,3
+53,Fusagasugá,15
+54,Sonsón,3
+55,Villa del Rosario,24
+56,San Jerónimo,3
+57,Valledupar,12
+58,Yopal,10
+59,Girón,29
+60,Tarso,3
+61,San Martín,22
+62,La Celia,27
+63,Campoalegre,18
+64,La Plata,18
+65,La Paz,29
+66,Cachipay,15
+67,Río Frío,32
+68,Sahagún,14
+69,Barranco de Loba,6
+70,Rionegro,3
+72,Caparrapí,15
+73,San Juan del Cesar,19
+74,Santa Marta,20
+75,Cubarral,22
+76,Neiva,18
+80,Floridablanca,29
+81,Támesis,3
+82,Piedecuesta,29
+83,Arauca,4
+84,Gámbita,29
+85,Pradera,32
+86,Bogotá,1
+87,Corozal,30
+88,Andes,3
+89,Candelaria,32
+90,Sitio Nuevo,20
+91,San Andrés,28
+92,Garagoa,7
+99,Briceño,7
+100,Marsella,27
+101,Cartagena,6
+102,Duitama,7
+103,Timbiquí,11
+104,Cereté,14
+107,Villavicencio,22
+108,San Pedro de los Milagros,3
+109,Sevilla,32
+110,Bolivar,11
+111,Sogamoso,7
+112,Teruel,18
+113,Chinácota,24
+114,Yumbo,32
+115,Leticia,2
+116,Montería,14
+117,Fundación,20
+118,Yacopí,15
+119,Guamo,31
+120,Valle de San Juan,31
+121,Ovejas,30
+127,Miami EEUU,36
+129,Melgar,31
+130,Remedios,3
+132,Guaitarilla,23
+135,Barbosa,29
+136,Calarcá,26
+137,Espinal,31
+138,Andalucía,32
+140,San Pablo,6
+141,Carmen,6
+142,Iles,23
+143,La Paz,12
+146,Ibagué,31
+147,Armenia,26
+152,Cumbal,23
+154,Pasto,23
+157,Belén de Umbria,27
+174,El Banco,20
+159,San Bernardo del Viento,14
+161,Monterrey,10
+163,Frontino,3
+164,Guaranda,30
+165,Miraflores,17
+17,Sincé,30
+349,Totoró,11
+166,Ocaña,24
+167,Chiriguaná,12
+168,Fundación,20
+169,Pensilvania,8
+170,Taminango,23
+171,Pijao,26
+172,Villahermosa,31
+173,Labranzagrande,7
+350,Guepsa,29
+288,Güicán,7
+175,Icononzo,31
+176,Ciénaga,20
+177,El Cerrito,32
+178,Carolina del Príncipe,3
+179,Envigado,3
+180,Chía,15
+181,Tadó,13
+182,Piendamó,11
+183,La Dorada,8
+184,San Juan Nepomuceno,6
+185,San Andrés,29
+186,Guacarí,32
+187,Pamplona,24
+188,Itsminá,13
+189,Puerto Tejada,11
+190,Guateque,7
+191,Nobsa,7
+192,La Cruz,23
+193,Puerto Colombia,5
+194,Gameza,7
+195,La Primavera,34
+197,Molagavita,29
+198,Barrancabermeja,29
+199,Belén,7
+200,Coello,31
+201,Quimbaya,26
+203,Aguadas,8
+204,Soledad,5
+205,Samaniego,23
+206,San Miguel,29
+208,Circasia,26
+196,Sopetrán,3
+209,Pore,10
+210,Boavita,7
+211,Tierralta,14
+212,Bajo Baudó,13
+213,Gaitania,31
+214,Otanche,7
+215,Guachucal,23
+216,Zipaquirá,15
+217,Pasca,15
+218,Anorí,3
+219,Tamalameque,12
+220,Tangua,23
+221,Calderas,11
+222,Ubaté,15
+223,La Pedrera,2
+225,Marsella,27
+289,Alto Baudó,13
+339,Bolívar,29
+228,Aracataca,20
+229,El Piñon,20
+230,Quibdó,13
+231,Villamaría,8
+232,Tunja,7
+233,Codazzi,12
+234,Río de Oro,12
+235,Alpujarra,31
+236,Entreríos,3
+237,Chinchiná,8
+238,Buenaventura,32
+239,Facatativá,15
+240,San Juan de Rioseco,15
+241,Puerto Inírida,16
+242,Algeciras,18
+243,Yarumal,3
+244,Itagüí,3
+245,Santa Rosa de Osos,3
+246,Argelia,3
+247,Tame,4
+248,San Antero,14
+249,Palermo,7
+250,Tuluá,32
+251,Chinavita,7
+252,Socha,7
+253,Samaná,8
+254,Chocontá,15
+255,Quetame,15
+256,Maceo,3
+257,Santa María,18
+258,Pitalito,18
+259,Pijiño del Carmen,20
+260,Gramalote,24
+261,Dosquebradas,27
+262,Buenavista,26
+263,Los Santos,29
+264,Honda,31
+265,Roldanillo,32
+266,Buga,32
+267,Restrepo,32
+268,Puerto Lleras,22
+269,Caucasia,3
+270,Acacias,22
+271,San Onofre,30
+272,Tarapacá,2
+273,Curumaní,12
+274,Aguachica,12
+275,Uribia,19
+276,Girardot,15
+277,San Luis de Palenque,10
+278,San Benito Abad,30
+279,Santuario,3
+280,Tumaco,23
+281,Ciénaga de Oro,14
+282,Timbío,11
+283,Risaralda,8
+290,Santa Rosa de Cabal,27
+285,Sucre,29
+286,Guaduas,15
+287,Fómeque,15
+291,San José de Albán,23
+292,Cajamarca,31
+293,Guapotá,29
+294,San José de la Montaña,3
+295,Garzón,18
+296,Luruaco,5
+297,Zulia,24
+298,Puerto Leguízamo,25
+299,Maicao,19
+300,Mogotes,29
+301,San Agustín,18
+302,Condoto,13
+303,Baraya,18
+305,Carmen de Carupa,15
+306,Caldono,11
+307,Puerto Rondón,4
+308,Ipiales,23
+309,Bet-jalá Palestina,36
+310,Arenal,6
+311,Plato,20
+312,Riosucio,8
+227,Fonseca,19
+207,Villanueva,19
+340,Palocabildo,31
+30,Riohacha,19
+318,Caicedonia,32
+319,Guacamayas,7
+320,Jamundí,32
+313,San Andrés de Sotavento,14
+341,Paz de Ariporo,10
+315,Soplaviento,6
+316,Sandoná,23
+317,Neira,8
+321,Achí,6
+323,San Diego,12
+324,Yolombó,3
+325,San Vicente Ferrer,3
+326,Pauna,7
+327,Fredonia,3
+328,Gamarra,12
+329,La Paz,12
+330,Juan de la Costa,19
+331,Sampuez,30
+332,San Marcos,30
+336,Mitú,33
+343,Bogotá,1
+348,Cali,32
+366,Santa Bárbara,3
+367,Puerto Boyacá,7
+352,Yaguará,18
+353,Pivijay,20
+354,Pitalito,18
+357,Robles,32
+358,Ciudad Bolívar,3
+360,Bajo Baudó,13
+361,Santa Rita de Ituango,3
+362,Cunday,31
+363,Mallama,23
+364,Chima,29
+368,Betania,3
+369,Sabanalarga,5
+370,Viterbo,8
+371,Sutamarchán,7
+372,Une,15
+373,Calamar,6
+374,Nunchía,10
+375,Guatapé,3
+376,Cáceres,3
+377,Chinú,14
+378,Cocorná,3
+379,Argelia,11
+380,Aldana,23
+381,San Francisco,25
+382,Rovira,31
+383,Zona Bananera,20
+384,Salgar,3
+385,Samacá,7
+386,Aranzazu,8
+387,Sardinata,24
+388,Vélez,29
+389,Riosucio,13
+390,Convención,24
+391,Tello,18
+392,El Cocuy,7
+393,María la Baja,6
+394,Unguía,13
+395,Trujillo,32
+396,Zapatoca,29
+397,Santa Rosalía,34
+398,Altamira,18
+399,Firavitoba,7
+400,Paz del Río,7
+401,Armero,31
+402,Santo Tomás,5
+403,Olaya,11
+404,Santander de Quilichao,11
+405,Pelaya,12
+406,Valencia,14
+407,La Vega,15
+408,Soacha,15
+409,Piedras,31
+410,Murillo,31
+411,Roncesvalles,31
+412,Nemocón,15
+413,Funza,15
+414,Sibaté,15
+415,Cota,15
+416,San José del Guaviare,17
+417,El Retorno,17
+418,Palermo,18
+419,La Florida,23
+420,Arboledas,24
+421,Labateca,24
+422,Turmequé,7
+423,Génova,26
+424,Anserma,8
+425,Carurú,33
+426,Pinchote,29
+427,Villanueva,6
+428,Paipa,7
+429,Balboa,27
+430,Tipacoque,7
+431,San Pedro,30
+432,Pácora,8
+433,Páez,11
+434,Granada,22
+435,Salento,26
+436,Bruselas,36
+438,Momil,14
+439,Villanueva,10
+440,Albania,19
+441,Vigia del Fuerte,3
+442,Marquetalia,8
+443,Aquitania,7
+444,Turbaco,6
+445,La Ceja,3
+446,Herveo,31
+447,Manta,15
+448,Madrid,15
+449,La Palma,15
+450,Quipile,15
+451,Dibulla,19
+452,Topaipí,15
+453,Agua de Dios,15
+454,La Mesa,15
+455,Gachancipá,15
+456,Cajicá,15
+457,Pacho,15
+458,Pueblo Rico,27
+459,Timaná,18
+460,Oiba,29
+461,Villeta,15
+462,Junin,15
+463,Dagua,32
+464,Mariquita,31
+465,Chiscas,7
+466,Landázuri,29
+467,Becerril,12
+468,Mercaderes,11
+469,Charalá,29
+470,Santa Cruz de Monpox,6
+471,Cañasgordas,3
+472,San Joaquín,29
+473,Isnos,18
+474,Sativasur,7
+475,Puerto López,22
+476,Enciso,29
+477,Andagoya,13
+478,Caldas,3
+479,San Jacinto,6
+480,Baranoa,5
+481,San Carlos,3
+482,Sesquilé,15
+483,Caloto,11
+484,Charta,29
+485,San Vicente del Caguán,9
+486,El Charco,23
+487,San Mateo,7
+488,Turbo,3
+489,Cuaspud,23
+490,Arboletes,3
+491,La Chorrera,2
+492,Manaure,19
+493,San Bernardo,15
+494,Saboyá,7
+495,Repelón,5
+496,Acevedo,18
+497,Dabeiba,3
+498,El Paujil,9
+499,Cucunubá,15
+500,Bojayá,13
+501,El Difícil,20
+502,Funes,23
+503,La Virginia,27
+504,Ayapel,14
+505,San Pelayo,14
+506,La Apartada,14
+507,Planadas,31
+508,Dolores,31
+509,Natagaima,31
+510,Pueblo Nuevo,14
+511,El Roble,30
+512,Morroa,30
+513,Aguazul,10
+514,Jerico,3
+515,Don Matías,3
+516,Malaga,29
+517,Pisba,7
+518,Gigante,18
+519,Palmar,29
+520,Barrancas,19
+521,El Dovio,32
+522,Valle del Guamez,25
+523,Liborina,3
+524,Capitanejo,29
+525,Mompox,6
+526,Villapinzón,15
+527,La Unión,23
+528,Barbosa,3
+529,Norcasia,8
+530,Ariguaní,20
+531,Zapayán,20
+532,Ituango,3
+533,Puerto Berrío,3
+534,Toluviejo,30
+535,"Nueva York, Estados Unidos",36
