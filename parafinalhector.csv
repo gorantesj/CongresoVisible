@@ -790,8 +790,8 @@ num,seccion,tabla,campo,grupo,campo_gp,tabla_gp,transformar,observaciones,termin
 140,proyecto,de_ley_estadoproyectoley,id,,,,,,
 140,proyecto,de_ley_estadoproyectoley,nombre,,,,,,
 140,proyecto,de_ley_estadoproyectoley,old_id,,,,,,
-141,proyecto,de_ley_iniciativa,id,1,id,iniciativas,,1,
-141,proyecto,de_ley_iniciativa,nombre,1,nombre,iniciativas,,1,
+141,proyecto,de_ley_iniciativa,id,1,id,iniciativas,,,1
+141,proyecto,de_ley_iniciativa,nombre,1,nombre,iniciativas,,,1
 142,proyecto,de_ley_legislatura,id,,,,,,
 142,proyecto,de_ley_legislatura,nombre,,,,,,
 142,proyecto,de_ley_legislatura,fecha_inicio,,,,,,
@@ -829,12 +829,12 @@ num,seccion,tabla,campo,grupo,campo_gp,tabla_gp,transformar,observaciones,termin
 144,proyecto,de_ley_proyectoley,destacado,,,,,,
 144,proyecto,de_ley_proyectoley,alcance,,,,,,
 144,proyecto,de_ley_proyectoley,norma,,,,,,
-145,proyecto,de_ley_textos_comparacion,id,,,,,,
-145,proyecto,de_ley_textos_comparacion,base_id,,,,,,
-145,proyecto,de_ley_textos_comparacion,modificado_id,,,,,,
-145,proyecto,de_ley_textos_comparacion,orden,,,,,,
-145,proyecto,de_ley_textos_comparacion,proyecto_id,,,,,,
-145,proyecto,de_ley_textos_comparacion,diferencias_encoded,,,,,,
+145,proyecto,de_ley_textos_comparacion,id,2,,,2,No se entiende. Se cree obsoleta la tabla completa,1
+145,proyecto,de_ley_textos_comparacion,base_id,2,,,2,No se entiende. Se cree obsoleta la tabla completa,1
+145,proyecto,de_ley_textos_comparacion,modificado_id,2,,,2,No se entiende. Se cree obsoleta la tabla completa,1
+145,proyecto,de_ley_textos_comparacion,orden,2,,,2,No se entiende. Se cree obsoleta la tabla completa,1
+145,proyecto,de_ley_textos_comparacion,proyecto_id,2,,,2,No se entiende. Se cree obsoleta la tabla completa,1
+145,proyecto,de_ley_textos_comparacion,diferencias_encoded,2,,,2,No se entiende. Se cree obsoleta la tabla completa,1
 146,proyecto,de_ley_textos_textoproyectoley,id,,,,,,
 146,proyecto,de_ley_textos_textoproyectoley,created_at,,,,,,
 146,proyecto,de_ley_textos_textoproyectoley,edited_at,,,,,,
@@ -848,9 +848,9 @@ num,seccion,tabla,campo,grupo,campo_gp,tabla_gp,transformar,observaciones,termin
 148,proyecto,de_ley_tipovotacion,nombre,,,,,,
 148,proyecto,de_ley_tipovotacion,procedimental,,,,,,
 148,proyecto,de_ley_tipovotacion,descripcion,,,,,,
-149,proyecto,de_ley_votacion_camaras,id,,,,,,
-149,proyecto,de_ley_votacion_camaras,votacion_id,,,,,,
-149,proyecto,de_ley_votacion_camaras,camara_id,,,,,,
+149,proyecto,de_ley_votacion_camaras,id,1,id,votacion_camaras,,,
+149,proyecto,de_ley_votacion_camaras,votacion_id,1,votacion_id,votacion_camaras,,,
+149,proyecto,de_ley_votacion_camaras,camara_id,1,camara_id,votacion_camaras,,,
 150,proyecto,de_ley_votacion_comisiones,id,,,,,,
 150,proyecto,de_ley_votacion_comisiones,votacion_id,,,,,,
 150,proyecto,de_ley_votacion_comisiones,comision_id,,,,,,
