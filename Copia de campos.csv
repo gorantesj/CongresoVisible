@@ -708,10 +708,10 @@ num,seccion,tabla,campo,grupo,campo_gp,tabla_gp,transformar,observaciones
 123,orden,del_dia_citacion,old_id,2,,control_politicos,,
 123,orden,del_dia_citacion,detalles,3,,control_politicos,,
 123,orden,del_dia_citacion,gacetas,3,,control_politicos,,
-123,orden,del_dia_citacion,cuestionario,3,,control_politicos,,Filtrar las respuestas y los cuestionarios y entregarselos a congreso
+123,orden,del_dia_citacion,cuestionario,2,,control_politicos,,Filtrar las respuestas y los cuestionarios y entregarselos a congreso
 123,orden,del_dia_citacion,numero_proposicion,3,,control_politicos,,
-123,orden,del_dia_citacion,respuesta,3,,control_politicos,,
-123,orden,del_dia_citacion,duplicado,3,,control_politicos,,Por revisar en la última junta con CV
+123,orden,del_dia_citacion,respuesta,2,,control_politicos,,
+123,orden,del_dia_citacion,duplicado,2,,control_politicos,,Se debe intentar mantener el orden y generar un mecanismo similar en el que duplica el orden del dia cuando este sea aplazado  y solo se le cambie la fecha cuando se registre.
 124,orden,del_dia_citado,id,1,id,control_politico_citados ,,
 124,orden,del_dia_citado,created_at,1,created_at,control_politico_citados ,,
 124,orden,del_dia_citado,edited_at,1,updated_at,control_politico_citados ,,
@@ -785,7 +785,7 @@ num,seccion,tabla,campo,grupo,campo_gp,tabla_gp,transformar,observaciones
 139,proyecto,de_ley_estadodeproyectodeley,camara_id,3,corporacion_id,proyecto_ley_estados,,
 139,proyecto,de_ley_estadodeproyectodeley,numero_titulos,2,,proyecto_ley_estados,,
 139,proyecto,de_ley_estadodeproyectodeley,numero_articulos,2,,proyecto_ley_estados,,
-139,proyecto,de_ley_estadodeproyectodeley,observaciones,2,,proyecto_ley_estados,,el 75% de las observaciones es na.
+139,proyecto,de_ley_estadodeproyectodeley,observaciones,3,,proyecto_ley_estados,,el 75% de las observaciones es na.
 139,proyecto,de_ley_estadodeproyectodeley,orden,3,,proyecto_ley_estados,,duda
 140,proyecto,de_ley_estadoproyectoley,id,1,id,estado_proyecto_leys,,
 140,proyecto,de_ley_estadoproyectoley,nombre,1,nombre,estado_proyecto_leys,,
@@ -824,7 +824,7 @@ num,seccion,tabla,campo,grupo,campo_gp,tabla_gp,transformar,observaciones
 144,proyecto,de_ley_proyectoley,enlace_a_texto,2,,proyecto_leys,,
 144,proyecto,de_ley_proyectoley,enlace_a_informe_derecho_justo,2,,proyecto_leys,,
 144,proyecto,de_ley_proyectoley,estado_proyecto_ley_actual_id,3,,proyecto_leys,,"No entiendo para que sirve, parece un identificador"
-144,proyecto,de_ley_proyectoley,alias,3,,proyecto_leys,,Revisar en la junta final con CV
+144,proyecto,de_ley_proyectoley,alias,3,,proyecto_leys,,Se debe hacer obligatoria
 144,proyecto,de_ley_proyectoley,importancia,2,,proyecto_leys,,
 144,proyecto,de_ley_proyectoley,destacado,2,,proyecto_leys,,
 144,proyecto,de_ley_proyectoley,alcance,3,,proyecto_leys,,
@@ -872,7 +872,7 @@ num,seccion,tabla,campo,grupo,campo_gp,tabla_gp,transformar,observaciones
 152,proyecto,de_ley_votacion,gaceta,1,urlGaceta ,votacions ,,
 152,proyecto,de_ley_votacion,acta,3,,votacions ,,viene llena al 80%
 152,proyecto,de_ley_votacion,observaciones,3,,votacions ,,"preguntar, el 65% es na. Pero hay datos que paren ser relevantes"
-152,proyecto,de_ley_votacion,votacion_en_dia,2,,votacions ,,"¿A qué se refiere? Los valores son del 0- 79, 12%nas"
+152,proyecto,de_ley_votacion,votacion_en_dia,2,,votacions ,,"Espara que las votaciones salgan ordenadas en la pagina web, pero en realidad la variable no importa.  Para darle orden, pero hay que tener en cuenta las fechas del proceso y nosolo fecha porque hay empates."
 152,proyecto,de_ley_votacion,destacada,2,,votacions ,,"
 Votaciones no se la habian considerado un espacio par avotaciones destacadas"
 152,proyecto,de_ley_votacion,old_id,2,,votacions ,,
