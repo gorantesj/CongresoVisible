@@ -726,11 +726,11 @@ num,seccion,tabla,campo,grupo,campo_gp,tabla_gp,transformar,observaciones,termin
 125,orden,del_dia_citadoasistentecitacion,asiste,,,,,,
 125,orden,del_dia_citadoasistentecitacion,delega_asistencia,,,,,,
 125,orden,del_dia_citadoasistentecitacion,excuso,,,,,,
-126,orden,del_dia_entidadcitado,id,,,,,,
-126,orden,del_dia_entidadcitado,created_at,,,,,,
-126,orden,del_dia_entidadcitado,edited_at,,,,,,
-126,orden,del_dia_entidadcitado,nombre,,,,,,
-126,orden,del_dia_entidadcitado,old_id,,,,,,
+126,orden,del_dia_entidadcitado,id,1,id,control_politico_entidads,,,1
+126,orden,del_dia_entidadcitado,created_at,1,created_at,control_politico_entidads,,,1
+126,orden,del_dia_entidadcitado,edited_at,1,updated_at,control_politico_entidads,,,1
+126,orden,del_dia_entidadcitado,nombre,1,nombre,control_politico_entidads,,,1
+126,orden,del_dia_entidadcitado,old_id,2,,control_politico_entidads,,,1
 127,orden,del_dia_invitadoasistentecitacion,id,,,,,,
 127,orden,del_dia_invitadoasistentecitacion,citacion_id,,,,,,
 127,orden,del_dia_invitadoasistentecitacion,citado_id,,,,,,
