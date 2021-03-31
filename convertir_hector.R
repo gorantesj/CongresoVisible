@@ -238,7 +238,7 @@ citacion <- left_join(citacion, orden_dia_comision,by=c("orden_del_dia_id"="orde
 citacion %>% mutate(id=row_number())
 # transformación ----------------------------------------------------------
 
-crear_bases(campos %>% filter(num==141), tabla_res)
+crear_bases(campos %>% filter(num==149), tabla_res)
 
 tabla_res[[123]]
 # Sandbox -----------------------------------------------------------------
