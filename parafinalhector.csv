@@ -797,11 +797,11 @@ num,seccion,tabla,campo,grupo,campo_gp,tabla_gp,transformar,observaciones,termin
 142,proyecto,de_ley_legislatura,fecha_inicio,,,,,,
 142,proyecto,de_ley_legislatura,fecha_fin,,,,,,
 142,proyecto,de_ley_legislatura,cuatrienio_id,,,,,,
-143,proyecto,de_ley_otroautor,id,,,,,,
-143,proyecto,de_ley_otroautor,created_at,,,,,,
-143,proyecto,de_ley_otroautor,edited_at,,,,,,
-143,proyecto,de_ley_otroautor,nombre,,,,,,
-143,proyecto,de_ley_otroautor,imagen,,,,,,
+143,proyecto,de_ley_otroautor,id,1,id,proyecto_ley_autor_otros,,,1
+143,proyecto,de_ley_otroautor,created_at,1,created_at,proyecto_ley_autor_otros,,,1
+143,proyecto,de_ley_otroautor,edited_at,1,updated_at,proyecto_ley_autor_otros,,,1
+143,proyecto,de_ley_otroautor,nombre,1,nombre,proyecto_ley_autor_otros,,,1
+143,proyecto,de_ley_otroautor,imagen,1,imagen,proyecto_ley_autor_otros,,,1
 144,proyecto,de_ley_proyectoley,id,,,,,,
 144,proyecto,de_ley_proyectoley,created_at,,,,,,
 144,proyecto,de_ley_proyectoley,edited_at,,,,,,
@@ -842,15 +842,15 @@ num,seccion,tabla,campo,grupo,campo_gp,tabla_gp,transformar,observaciones,termin
 146,proyecto,de_ley_textos_textoproyectoley,estado_proyecto_ley_id,,,,,,
 146,proyecto,de_ley_textos_textoproyectoley,texto_html,,,,,,
 146,proyecto,de_ley_textos_textoproyectoley,texto_plano,,,,,,
-147,proyecto,de_ley_tipoproyecto,id,,,,,,
-147,proyecto,de_ley_tipoproyecto,nombre,,,,,,
+147,proyecto,de_ley_tipoproyecto,id,1,id,tipo_proyectos,,La tabla deber’a llamarse tipo_proyecto_leys,1
+147,proyecto,de_ley_tipoproyecto,nombre,1,nombre,tipo_proyectos,,La tabla deber’a llamarse tipo_proyecto_leys,1
 148,proyecto,de_ley_tipovotacion,id,,,,,,
 148,proyecto,de_ley_tipovotacion,nombre,,,,,,
 148,proyecto,de_ley_tipovotacion,procedimental,,,,,,
 148,proyecto,de_ley_tipovotacion,descripcion,,,,,,
-149,proyecto,de_ley_votacion_camaras,id,1,id,votacion_camaras,,,
-149,proyecto,de_ley_votacion_camaras,votacion_id,1,votacion_id,votacion_camaras,,,
-149,proyecto,de_ley_votacion_camaras,camara_id,1,camara_id,votacion_camaras,,,
+149,proyecto,de_ley_votacion_camaras,id,1,id,votacion_camaras,,,1
+149,proyecto,de_ley_votacion_camaras,votacion_id,1,votacion_id,votacion_camaras,,,1
+149,proyecto,de_ley_votacion_camaras,camara_id,1,camara_id,votacion_camaras,,,1
 150,proyecto,de_ley_votacion_comisiones,id,,,,,,
 150,proyecto,de_ley_votacion_comisiones,votacion_id,,,,,,
 150,proyecto,de_ley_votacion_comisiones,comision_id,,,,,,
@@ -883,25 +883,25 @@ num,seccion,tabla,campo,grupo,campo_gp,tabla_gp,transformar,observaciones,termin
 152,proyecto,de_ley_votacion,numero_asistencias,,,,,,
 152,proyecto,de_ley_votacion,datos_importacion,,,,,,
 152,proyecto,de_ley_votacion,resultados_importacion,,,,,,
-153,proyecto,de_ley_votacionpartido,id,,,,,,
-153,proyecto,de_ley_votacionpartido,created_at,,,,,,
-153,proyecto,de_ley_votacionpartido,edited_at,,,,,,
-153,proyecto,de_ley_votacionpartido,numero_votos_si,,,,,,
-153,proyecto,de_ley_votacionpartido,numero_votos_no,,,,,,
-153,proyecto,de_ley_votacionpartido,numero_votos_abstencion,,,,,,
-153,proyecto,de_ley_votacionpartido,opcion_preferida,,,,,,
-153,proyecto,de_ley_votacionpartido,partido_id,,,,,,
-153,proyecto,de_ley_votacionpartido,votacion_id,,,,,,
+153,proyecto,de_ley_votacionpartido,id,2,,,2,,
+153,proyecto,de_ley_votacionpartido,created_at,2,,,2,,
+153,proyecto,de_ley_votacionpartido,edited_at,2,,,2,,
+153,proyecto,de_ley_votacionpartido,numero_votos_si,2,,,2,,
+153,proyecto,de_ley_votacionpartido,numero_votos_no,2,,,2,,
+153,proyecto,de_ley_votacionpartido,numero_votos_abstencion,2,,,2,,
+153,proyecto,de_ley_votacionpartido,opcion_preferida,2,,,2,,
+153,proyecto,de_ley_votacionpartido,partido_id,2,,,2,,
+153,proyecto,de_ley_votacionpartido,votacion_id,2,,,2,,
 154,proyecto,de_ley_voto,id,,,,,,
 154,proyecto,de_ley_voto,created_at,,,,,,
 154,proyecto,de_ley_voto,edited_at,,,,,,
 154,proyecto,de_ley_voto,votacion_id,,,,,,
 154,proyecto,de_ley_voto,voto,,,,,,
 154,proyecto,de_ley_voto,congresista_id,,,,,,
-155,proyecto,de_ley_votociudadano,id,,,,,,
-155,proyecto,de_ley_votociudadano,voto,,,,,,
-155,proyecto,de_ley_votociudadano,votante_id,,,,,,
-155,proyecto,de_ley_votociudadano,proyecto_id,,,,,,
+155,proyecto,de_ley_votociudadano,id,2,,,2,,
+155,proyecto,de_ley_votociudadano,voto,2,,,2,,
+155,proyecto,de_ley_votociudadano,votante_id,2,,,2,,
+155,proyecto,de_ley_votociudadano,proyecto_id,2,,,2,,
 156,reportes,reporte,id,2,,,,No hay tabla en diccionario,1
 156,reportes,reporte,nombre,2,,,,No hay tabla en diccionario,1
 156,reportes,reporte,descripcion,2,,,,No hay tabla en diccionario,1
