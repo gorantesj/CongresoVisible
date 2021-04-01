@@ -1,10 +1,10 @@
 library(tidyverse)
 library(readxl)
 # Leer bases de datos
-archivos <- list.files("~/Documents/Excel",full.names = T,all.files = F)
+archivos <- list.files("Tablas anteriores/",full.names = T,all.files = F)
 leer <- safely(read_xlsx)
-tablas2 <- archivos %>% map(~leer(.x))
-tablas_res2 <- tablas2 %>% transpose() %>% pluck("result")
+tablas <- archivos %>% map(~leer(.x))
+tablas_res <- tablas %>% transpose() %>% pluck("result")
 
 # Leer campos
 campos <- read_csv("paralafinal.csv")
@@ -38,7 +38,7 @@ convertir_grupo1 <- function(tabla_nueva, tablas, relaciones){
     map(~{
       # browser()
       res <- tablas[[unique(.x$num)]] %>%
-          select(.x$campo)
+        select(.x$campo)
       names(res) <- .x$campo_gp
       names(res)[which(.x$transformar == 1)] <- paste("transformar",
                                                       .x$campo[which(.x$transformar == 1)],
@@ -46,11 +46,11 @@ convertir_grupo1 <- function(tabla_nueva, tablas, relaciones){
       return(res)
 
     }
-      ) %>%
+    ) %>%
     reduce(bind_cols)
   #browser()
   write_excel_csv(x = campos_nuevos,
-            glue::glue("Bases de datos nuevas/{tabla_nueva}.csv"),)
+                  glue::glue("Bases de datos nuevas/{tabla_nueva}.csv"),)
 }
 
 convertir_grupo22 <- function(tablas, relaciones){
@@ -65,7 +65,7 @@ convertir_grupo22 <- function(tablas, relaciones){
       nombre_tabla <- unique(paste0("respaldo_",.x$seccion, .x$tabla))
       #browser()
       write_excel_csv(x = tablas_nuevas,
-                glue::glue("Bases de datos nuevas/{nombre_tabla}.csv"))
+                      glue::glue("Bases de datos nuevas/{nombre_tabla}.csv"))
     })
 }
 
@@ -75,17 +75,17 @@ graficar_relaciones <- function(carpeta="Base de datos/"){
   nodos <- nodos %>% mutate(label=id,
                             groups=if_ele)
   aristas <- map_df(archivos, ~
-        {
-          relaciones <- tibble(to=read_csv(paste(carpeta, .x, sep="/")) %>%
-                                 select(ends_with("_id")) %>%
-                                 names() %>%
-                                 stringr::str_replace(string = .,
-                                                      pattern = "_id",
-                                                      replacement = "s"))
-          relaciones <- relaciones %>%
-            mutate(from=stringr::str_replace(.x,pattern = ".csv", replacement = ""))
-          }
-        )
+                      {
+                        relaciones <- tibble(to=read_csv(paste(carpeta, .x, sep="/")) %>%
+                                               select(ends_with("_id")) %>%
+                                               names() %>%
+                                               stringr::str_replace(string = .,
+                                                                    pattern = "_id",
+                                                                    replacement = "s"))
+                        relaciones <- relaciones %>%
+                          mutate(from=stringr::str_replace(.x,pattern = ".csv", replacement = ""))
+                      }
+  )
   return(list(nodos, aristas))
 }
 
@@ -95,18 +95,18 @@ graficar_relaciones <- function(carpeta="Base de datos/"){
 
 # Blogs
 # Blog, posts, tipo_blogs, autor
-posts <- tablas_res2[[18]] %>%
-  inner_join(tablas_res2[[15]], by=c("blog_id"="id")) %>%
+posts <- tablas_res[[18]] %>%
+  inner_join(tablas_res[[15]], by=c("blog_id"="id")) %>%
   select(-id,-blog_id, -destacado.x, -destacado.y) %>%
   rename(`titulo_post`=titulo.x,
          `titulo_blog`=titulo.y)
 
 posts <- inner_join(posts,
-           tablas_res2[[10]] %>%
-  select(id,username,first_name,last_name,email),
-  by=c("autor_id"="id"))
+                    tablas_res[[10]] %>%
+                      select(id,username,first_name,last_name,email),
+                    by=c("autor_id"="id"))
 
-posts <- posts %>% inner_join(tablas_res2[[20]], by=c("tipo_blog_id"="id")) %>%
+posts <- posts %>% inner_join(tablas_res[[20]], by=c("tipo_blog_id"="id")) %>%
   mutate(autor=paste(first_name, last_name)) %>%
   select(fecha_publicacion,
          tipo_blog=nombre,
@@ -120,39 +120,135 @@ posts <- posts %>% inner_join(tablas_res2[[20]], by=c("tipo_blog_id"="id")) %>%
 write_excel_csv(posts,"finales/para CV/posts.csv")
 
 # Boletines
-boletin <- tablas_res2[[16]] %>% select(nombre, año=anio, objeto, archivo)
+boletin <- tablas_res[[16]] %>% select(nombre, año=anio, objeto, archivo)
 write_excel_csv(boletin,"finales/para CV/boletin.csv")
+# Congresista -------------------------------------------------------------
+# Para el final
+
+
+# Mezclar con periodos
+congresistas <- inner_join(tablas_res[[39]],
+                           tablas_res[[53]] ,
+                           by=c("persona_ptr_id"= "congresista_id"))
+
+# Falta arreglar el periodo por congresista
+congresistas <- congresistas %>%
+  mutate(curul_id=NA_integer_) %>%
+  select(id,
+         persona_id=persona_ptr_id,
+         corporacion_id=camara_id,
+         cuatrienio_id=periodo_id,
+         partido_id=partido_politico_id,
+         curul_id,
+         circunscripcion_id
+  )
+write_csv(congresistas,
+          file = "finales/cambio en campos/congresistas.csv")
+
+
+# Para CV
+tablas_res[[39]] %>%
+  filter(!(es_congresista|
+             es_senador|
+             es_representante_camara|
+             ha_sido_congresista|
+             ha_reemplazado|
+             ha_sido_reemplazo)|is.na(es_congresista|
+                                        es_senador|
+                                        es_representante_camara|
+                                        ha_sido_congresista|
+                                        ha_reemplazado|
+                                        ha_sido_reemplazo))
+
+# Todos falso
+#
+
+
 # Cargo -------------------------------------------------------------------------
 # Solamente las personas pueden tener cargos
 # Hay que juntar cargo=sector_id, cargo, entidad
 trayectoria_privada <- read_csv("Bases de datos nuevas/congresista_trayectoria_privadas.csv")
-trayectoria_privada <- tablas_res2[[33]] %>%
-  full_join(tablas_res2[[99]], by = c("sector_id"= "id")) %>%
+trayectoria_privada <- tablas_res[[33]] %>%
+  full_join(tablas_res[[99]], by = c("sector_id"= "id")) %>%
   replace_na(replace = list(nombre="", cargo="", entidad="")) %>%
   mutate(cargo=paste(nombre, cargo, entidad)) %>%
   select(id, cargo, fecha_final) %>%
   inner_join(trayectoria_privada) %>%
   select(id, persona_id, cargo, fecha, fecha_final,created_at, updated_at)
 write_csv(trayectoria_privada, file = "finales/cambio en campos/persona_trayectoria_privadas.csv")
-# Cargo cámara
-tablas_res2[[34]] %>%
+# Cargo legislativos, catálogo para cargo camara y cargo comisiones
+tablas_res[[34]] %>%
   select(id, nombre) %>%
   write_csv("finales/tablas nuevas/cargo_corporacions.csv")
+
+# Cargo cámara
+cargo_camara <- tablas_res[[46]] %>%
+  rename(persona_id=congresista_id) %>%
+  inner_join(congresistas %>%
+               select(persona_id,
+                      periodo_id=cuatrienio_id,
+                      congresista_id=id)) %>%
+  mutate(  activo=T,
+           usercreated="",
+           usermodifed=""
+  ) %>%
+  select(id,
+         cuatrienio_id=periodo_id,
+         corporacion_id=camara_id,
+         activo,
+         usercreated,
+         usermodifed,
+         created_at,
+         updated_at=edited_at)
+write_csv(cargo_camara, "finales/tablas nuevas/cargo_camaras.csv")
 
 # Cargo comisiones
 # Se agregaron manualmente
 
 # Cargo político
 # Para la migración hay que eliminar los cargos de cámaras
-tablas_res2[[36]] %>%
-  filter(is.na(x = camara_id)) %>%
-  select(id, persona_id, partido_id, fecha=fecha_inicio, fecha_final) %>%
-  write_csv("finales/cambio en campos/persona_trayectoria_publicas.csv")
+cargo_politico <- tablas_res[[36]] %>%
+  mutate(activo=T, usercreated="", usermodifed="") %>%
+  select(id,
+         persona_id,
+         partido_id,
+         cargo,
+         fecha=fecha_inicio,
+         fecha_final,
+         activo,
+         usercreated,
+         usermodifed,
+         created_at,
+         updated_at=edited_at
+         )
+
+congresista_partido <-  tablas_res[[41]] %>%
+  mutate(id=id+max(cargo_politico$id),
+         cargo="Congresista",
+         activo=T,
+         usercreated="",
+         usermodifed=""
+         ) %>%
+  select(id,
+         persona_id=congresista_id,
+         partido_id,
+         cargo,
+         fecha=fecha_inicio,
+         fecha_final=fecha_fin,
+         activo,
+         usercreated,
+         usermodifed,
+         created_at,
+         updated_at=edited_at
+         )
+rbind(cargo_politico,
+      congresista_partido) %>%
+write_csv("finales/cambio en campos/persona_trayectoria_publicas.csv")
 
 
 # Datos contactos ---------------------------------------------------------
-comision_contacto <- tablas_res2[[38]] %>% select(comision_id=id,
-                            correo:url) %>%
+comision_contacto <- tablas_res[[38]] %>% select(comision_id=id,
+                                                  correo:url) %>%
   tidyr::pivot_longer(cols = -comision_id,
                       names_to = "dato_contacto_id",
                       values_to = "cuenta") %>%
@@ -175,19 +271,34 @@ datos_contacto <-comision_contacto %>%
 write_excel_csv(datos_contacto,"finales/idénticas/dato_contactos.csv")
 
 # Comisiones
-comision_contacto %>% rename(nombre=dato_contacto_id) %>%
+comision_contacto <- comision_contacto %>% rename(nombre=dato_contacto_id) %>%
   inner_join(datos_contacto %>% select(nombre, dato_contacto_id=id),
              by="nombre") %>%
-  select(id, dato_contacto_id, comision_id, cuenta,activo:updated_at) %>%
-  write_csv(file = "finales/idénticas/comision_datos_contactos.csv")
+  select(id, dato_contacto_id, comision_id, cuenta,activo:updated_at)
+write_csv(comision_contacto,file = "finales/idénticas/comision_datos_contactos.csv")
 
-# Congresista -------------------------------------------------------------
-tablas_res2[[39]] %>% count()
+# Congresistas
+congresista_contacto <- inner_join(tablas_res[[39]],
+           congresistas,
+           by=c("persona_ptr_id"= "persona_id")) %>%
+  select(id, numero_oficina, telefono_oficina) %>%
+  tidyr::pivot_longer(-id, values_to = "cuenta",names_to="dato_contacto_id") %>%
+  filter(!is.na(cuenta)) %>%
+  mutate(dato_contacto_id=case_when(dato_contacto_id=="numero_oficina"~2,
+                                    dato_contacto_id=="telefono_oficina"~5
+                                    ),
+         activo=T,
+         usercreate="",
+         usermodified	="",
+         created_at="",
+         updated_at=""
+         )
+write_csv(comision_contacto,file = "finales/idénticas/congresista_datos_contactos.csv")
 
 
 # transformación ----------------------------------------------------------
-
-crear_bases(campos, tablas_res2)
+campos <- read_csv("paralafinal.csv")
+crear_bases(campos %>% filter(num==47), tablas_res)
 
 
 # Sandbox -----------------------------------------------------------------
@@ -208,4 +319,4 @@ campos %>% group_by(num, seccion,  tabla) %>% count(grupo) %>%
          Observaciones=case_when(`Grupo 2`==`Número de campos`~"Tabla obsoleta",
                                  `Grupo 1`==`Número de campos`~"Tabla migrada al 100%")) %>%
 
-write_excel_csv("tablas_originales.csv")
+  write_excel_csv("tablas_originales.csv")
