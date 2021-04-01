@@ -1,5 +1,6 @@
 library(tidyverse)
 library(readxl)
+library(stringr)
 # Leer bases de datos
 archivos <- list.files("Tablas anteriores",full.names = T,all.files = F)
 leer <- safely(read_xlsx)
@@ -246,9 +247,44 @@ proyecto %>%  mutate(proyecto_ley_id=NA_character_,
                        usermodifed=NA_character_,
                        usercreated=NA_character_) %>%
   write_excel_csv("Bases de datos nuevas/proyecto_ley_autor_otros.csv")
+
+#personas --------------------
+
+personas <- read_csv("Bases de datos nuevas/personas.csv")
+
+#Limpiar nombres y apellidos de NAs
+
+personasfinal <- personas %>%
+            filter(!is.na(nombres)) %>%
+            filter(!is.na(apellidos))
+
+#Quitar símbolos
+personasfinal <- mutate(personasfinal, nombres=stringr::str_replace_all(nombres, pattern = "[^[:alnum:][:space:]]", replacement = ""))
+
+#Quitar números
+personasfinal <- mutate(personasfinal, nombres=stringr::str_replace_all(nombres, pattern = "[^[:alpha:][:space:]]", replacement = ""))
+
+#Homologar mayus y minus
+personasfinal <- mutate(personasfinal, nombres=stringr::str_to_lower(nombres))
+personasfinal <- mutate(personasfinal, nombres=stringr::str_to_title(nombres))
+
+#Lo mismo para apellidos
+personasfinal <- mutate(personasfinal, apellidos=stringr::str_replace_all(apellidos, pattern = "[^[:alnum:][:space:]]", replacement = ""))
+personasfinal <- mutate(personasfinal, apellidos=stringr::str_replace_all(apellidos, pattern = "[^[:alpha:][:space:]]", replacement = ""))
+personasfinal <- mutate(personasfinal, apellidos=stringr::str_to_lower(apellidos))
+personasfinal <- mutate(personasfinal, apellidos=stringr::str_to_title(apellidos))
+
+personasfinal <-  personasfinal%>%
+  write_excel_csv("Bases de datos nuevas/personas.csv")
+
+
+
+
+
+
 # transformación ----------------------------------------------------------
 
-crear_bases(campos %>% filter(num==153), tabla_res)
+crear_bases(campos %>% filter(num==54), tabla_res)
 
 tabla_res[[155]] %>% View()
 # Sandbox -----------------------------------------------------------------
