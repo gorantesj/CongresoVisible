@@ -193,6 +193,16 @@ generos %>%  mutate(activo=NA_character_,
                     created_at=NA_character_,
                     updated_at=NA_character_) %>%
         write_excel_csv("Bases de datos nuevas/generos.csv")
+# iniciativas -------------------------------------------------------------
+
+iniciativas <- read_csv("Bases de datos nuevas/iniciativas.csv")
+
+iniciativas %>%  mutate(activo=NA_character_,
+                    usercreated=NA_character_,
+                    usermodifed=NA_character_,
+                    created_at=NA_character_,
+                    updated_at=NA_character_) %>%
+  write_excel_csv("Bases de datos nuevas/iniciativas.csv")
 # Orden del día citación citantes  -------------------------------------------------------------
 
 
@@ -226,11 +236,21 @@ orden_dia_comision <- tabla_res[[130]] %>%
 citacion <- left_join(citacion, orden_dia_comision,by=c("orden_del_dia_id"="ordendeldia_id"))
 
 citacion %>% mutate(id=row_number())
+# proyecto ley autor -------------------------------------------------------------
+
+
+proyecto <- read_csv("Bases de datos nuevas/proyecto_ley_autor_otros.csv")
+
+proyecto %>%  mutate(proyecto_ley_id=NA_character_,
+                       activo=NA_character_,
+                       usermodifed=NA_character_,
+                       usercreated=NA_character_) %>%
+  write_excel_csv("Bases de datos nuevas/proyecto_ley_autor_otros.csv")
 # transformación ----------------------------------------------------------
 
-crear_bases(campos %>% filter(num==123), tabla_res)
+crear_bases(campos %>% filter(num==153), tabla_res)
 
-tabla_res[[123]]
+tabla_res[[155]] %>% View()
 # Sandbox -----------------------------------------------------------------
 
 
