@@ -1,0 +1,173 @@
+﻿id,name,app_label,model
+1,permission,auth,permission
+2,group,auth,group
+3,user,auth,user
+5,content type,contenttypes,contenttype
+6,session,sessions,session
+7,site,sites,site
+8,log entry,admin,logentry
+9,Navigation,grappelli,navigation
+10,Navigation Item,grappelli,navigationitem
+11,Bookmark,grappelli,bookmark
+12,Bookmark Item,grappelli,bookmarkitem
+13,Help,grappelli,help
+14,Help Entry,grappelli,helpitem
+15,version,django_evolution,version
+16,evolution,django_evolution,evolution
+17,Contador de Congresistas y Candidatos,congreso,contadorcongresistas
+18,bancada,congreso,bancada
+19,camara,congreso,camara
+20,Comisión,congreso,comision
+21,persona,congreso,persona
+22,secretario,congreso,secretario
+23,aval,congreso,aval
+24,Partido Político,congreso,partido
+25,Cargo Profesional,congreso,cargo
+26,Cargo Político,congreso,cargopolitico
+27,Tipo de Periodo,congreso,tipoperiodo
+28,congresista,congreso,congresista
+29,reemplazo,congreso,reemplazo
+30,alianza,congreso,alianza
+31,alianza partido,congreso,alianzapartido
+32,congresista de bancada,congreso,congresistadebancada
+33,congresista de partido,congreso,congresistadepartido
+34,periodo,congreso,periodo
+35,Periodo de Congresista,congreso,periodocongresista
+36,Cargo en Comisión,congreso,cargocomision
+37,Integrante de Comisión,congreso,integrantecomision
+39,Campaña,congreso,campania
+40,Financiador,congreso,financiador
+42,tema opinion,congreso,temaopinion
+43,Proposición,congreso,proposicion
+44,Posición de Congresista,congreso,posicion
+45,Posición del Partido frente a Temas,congreso,posicionpartido
+46,Posición sobre Tema,congreso,posiciontemaopinion
+47,Posición sobre Proposición,congreso,posicionproposicion
+50,Estado de Proyecto de Ley,proyecto_de_ley,estadoproyectoley
+51,Tipo de Proyecto,proyecto_de_ley,tipoproyecto
+52,Proyecto de Ley,proyecto_de_ley,proyectoley
+53,Estado de Proyecto de Ley,proyecto_de_ley,estadodeproyectodeley
+54,Votación,proyecto_de_ley,votacion
+55,voto,proyecto_de_ley,voto
+56,Rango de Edad,general,rangoedad
+57,Género,general,genero
+58,Profesión,general,profesion
+59,Región,general,region
+60,departamento,general,departamento
+61,municipio,general,municipio
+62,Sector Industrial,general,sectorindustria
+63,Tipo de Citación,orden_del_dia,tipocitacion
+64,Tipo de Citante,orden_del_dia,tipocitante
+65,Orden del Día,orden_del_dia,ordendeldia
+66,Ítem de Orden del Día,orden_del_dia,itemdeordendeldia
+67,Citación,orden_del_dia,citacion
+69,proyecto en orden dia,orden_del_dia,proyectoenordendia
+70,Iniciativa,proyecto_de_ley,iniciativa
+71,autor proyecto ley,proyecto_de_ley,autorproyectoley
+72,tema,general,tema
+73,comment,comments,comment
+74,comment flag,comments,commentflag
+75,task meta,celery,taskmeta
+115,ayuda seccion,ayuda,ayudaseccion
+77,estado partido,congreso,estadopartido
+78,Tipo de Votación,proyecto_de_ley,tipovotacion
+79,votacion partido,proyecto_de_ley,votacionpartido
+80,Contador,lib,counter
+81,banner,home,banner
+82,seccion home,home,seccionhome
+83,flat page,flatpages,flatpage
+84,Circunscripción,congreso,circunscripcion
+85,link footer,home,linkfooter
+86,auth meta,socialauth,authmeta
+87,openid profile,socialauth,openidprofile
+88,linked in user profile,socialauth,linkedinuserprofile
+89,twitter user profile,socialauth,twitteruserprofile
+90,facebook user profile,socialauth,facebookuserprofile
+91,nonce,openid_consumer,nonce
+92,association,openid_consumer,association
+93,Tipo de Problema,congreso,tipoproblema
+94,Problema,congreso,problema
+95,Tipo de Seccion,blog,tipoblog
+96,Seccion,blog,blog
+97,Etiqueta,blog,tag
+98,Articulo,blog,post
+99,setting,dbsettings,setting
+100,entidad,congreso,entidad
+101,Entidad de Citado,orden_del_dia,entidadcitado
+102,Cargo de Citado,orden_del_dia,cargocitado
+103,Citado,orden_del_dia,citado
+104,citado asistente citacion,orden_del_dia,citadoasistentecitacion
+105,sigue a,actividad,siguea
+106,Tipo de Actividad,actividad,tipoactividad
+107,actividad,actividad,actividad
+108,cv comment,actividad,cvcomment
+109,Voto de Ciudadano,proyecto_de_ley,votociudadano
+110,invitado asistente citacion,orden_del_dia,invitadoasistentecitacion
+111,boletin,blog,boletin
+112,grupo,grupo,grupo
+113,taskset meta,celery,tasksetmeta
+114,Otro Autor de Proyecto de Ley,proyecto_de_ley,otroautor
+116,pregunta respuesta,ayuda,preguntarespuesta
+117,enlaces seccion,ayuda,enlacesseccion
+118,enlace interes,ayuda,enlaceinteres
+119,frase mencion,home,frasemencion
+120,facebook template,facebookconnect,facebooktemplate
+121,facebook profile,facebookconnect,facebookprofile
+122,legislatura,proyecto_de_ley,legislatura
+123,Feed del Home,home,feedhome
+124,Reporte,reportes,reporte
+125,migration history,south,migrationhistory
+126,Tipo de Comisión,congreso,tipocomision
+127,Cargo en Cámara,congreso,cargocamara
+128,Integrante de Cámara,congreso,integrantecamara
+129,Clase de Votación,proyecto_de_ley,clasevotacion
+130,Texto de Proyecto de Ley,proyecto_de_ley_textos,textoproyectoley
+131,Comparación,proyecto_de_ley_textos,comparacion
+132,sentencia,corte,sentencia
+134,key map,django_select2,keymap
+135,user social auth,social_auth,usersocialauth
+136,nonce,social_auth,nonce
+137,association,social_auth,association
+138,Posición de Congresista,congreso,temaposicion
+139,Candidato,congreso,candidato
+140,tipo caso,corte,tipocaso
+141,tipo demanda,corte,tipodemanda
+142,link,congreso,link
+143,periodic task,djcelery,periodictask
+144,Candidatos al Concejo,congreso,candidatos_concejo
+145,Trayectoria Candidato,congreso,trayectoria
+146,sentencia_ info,CorteAdd,sentencia_info
+147,tipo_de_ caso,CorteAdd,tipo_de_caso
+148,tipo_de_ demanda,CorteAdd,tipo_de_demanda
+149,magistrado_ ponente,CorteAdd,magistrado_ponente
+150,tema_ norma,CorteAdd,tema_norma
+151,tipo_ norma,CorteAdd,tipo_norma
+152,Solicitud de información,sentencias,solicitud
+153,expediente,sentencias,expediente
+154,demandante,sentencias,demandante
+155,Partido del Congresista,sentencias,partido
+156,Motivo de la inadmisión,sentencias,motivo_de_inadmision
+157,Tema de la norma,sentencias,tema_de_la_norma
+158,materia_ norma,sentencias,materia_norma
+159,Tipo de la norma,sentencias,tipo_de_norma
+160,Procurador,sentencias,procurador
+161,interviniente,sentencias,interviniente
+162,Nombre de la Entidad,sentencias,nombre_entidad
+163,Intervención y Concepto,sentencias,intervenciones_y_conceptos
+164,Presidente de la Corte,sentencias,presidentecorte
+165,Magistrado,sentencias,nombremagistrado
+166,Magistrado ponente definitivo,sentencias,magistradodefinitivo
+167,Votacion de los Magistrados,sentencias,votacionmagistrados
+168,sent anio primer salv,sentencias,sentanioprimersalv
+169,sent anio segundo salv,sentencias,sentaniosegundosalv
+170,Número y año de la Sentencia,sentencias,numeroaniosentencia
+171,Ministerio,sentencias,nombres_ministerios
+172,Participación del Ministerio,sentencias,ministerios
+173,articulo,sentencias,articulo
+174,Concepto,sentencias,diccionario
+175,Sentencia,sentencias,general
+176,informes_,informes_pnud,informes_
+177,informe PNUD,informes_pnud,informe_pnud
+178,worker,djcelery,workerstate
+179,interval,djcelery,intervalschedule
+180,crontab,djcelery,crontabschedule

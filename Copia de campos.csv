@@ -345,7 +345,7 @@ num,seccion,tabla,campo,grupo,campo_gp,tabla_gp,transformar,observaciones
 51,congreso,partido,celular_contacto,3,,partido_datos_contactos ,,
 51,congreso,partido,correo_contacto,3,,partido_datos_contactos ,,
 51,congreso,partido,direccion_contacto,3,,partido_datos_contactos ,,
-51,congreso,partido,estado_id,3,estado_id,,,
+51,congreso,partido,estado_id,3,estado_id,partidos,,
 51,congreso,partido,nombre_contacto,3,,partidos,,
 51,congreso,partido,old_id,2,,partidos,,"No sirve, porque old id es de la tabla anterior."
 51,congreso,partido,usuario_id,2,,partidos,,
@@ -357,7 +357,7 @@ num,seccion,tabla,campo,grupo,campo_gp,tabla_gp,transformar,observaciones
 52,congreso,periodo,edited_at,1,updated_at,cuatrienios,,
 52,congreso,periodo,fecha_inicio,1,fecha_inicio,cuatrienios,,
 52,congreso,periodo,fecha_fin,1,fecha_final,cuatrienios,,
-52,congreso,periodo,old_id,1,old_id,cuatrienios,,
+52,congreso,periodo,old_id,2,old_id,cuatrienios,,
 52,congreso,periodo,activo,1,activo,cuatrienios,,
 53,congreso,periodocongresista,id,3,id,res_congreso_periodo_congresista ,,"El desarrollo anterior contempla un seguimiento al periodo en el que un congresista esta activo, nosotros no contemplamos reemplazos temporales o permanentes."
 53,congreso,periodocongresista,created_at,3,created_at,res_congreso_periodo_congresista ,,"El desarrollo anterior contempla un seguimiento al periodo en el que un congresista esta activo, nosotros no contemplamos reemplazos temporales o permanentes."
@@ -381,10 +381,10 @@ num,seccion,tabla,campo,grupo,campo_gp,tabla_gp,transformar,observaciones
 54,congreso,persona,activation_key,2,,personas,,
 54,congreso,persona,nombres,3,nombres,personas,,
 54,congreso,persona,apellidos,3,apellidos,personas,,
-54,congreso,persona,sitio_web,3,,personas,,
-54,congreso,persona,telefono,3,,personas,,
-54,congreso,persona,cedula,3,,personas,,
-54,congreso,persona,lugar_cedula_id,2,,personas,,
+54,congreso,persona,sitio_web,3,,datos_contactos,,
+54,congreso,persona,telefono,3,,datos_contactos,,
+54,congreso,persona,cedula,3,,datos_contactos,,
+54,congreso,persona,lugar_cedula_id,2,,datos_contactos,,
 54,congreso,persona,imagen,3,,personas,,
 54,congreso,persona,anio_nacimiento,3,fechaNacimiento,personas,,Está en camel
 54,congreso,persona,departamento_nacimiento_id,3,departamento_id,personas,,Está en camel
@@ -395,11 +395,11 @@ num,seccion,tabla,campo,grupo,campo_gp,tabla_gp,transformar,observaciones
 54,congreso,persona,genero_id,3,genero_id,personas,,
 54,congreso,persona,fecha_fallecimiento,3,,personas,,
 54,congreso,persona,flickr_user,3,,personas,,
-54,congreso,persona,youtube_user,3,,personas,,
-54,congreso,persona,tumblr_user,3,,personas,,
-54,congreso,persona,twitter_user,3,,personas,,
-54,congreso,persona,linkedin_user,3,,personas,,
-54,congreso,persona,blogspot_user,3,,personas,,
+54,congreso,persona,youtube_user,3,,datos_contactos,,
+54,congreso,persona,tumblr_user,3,,datos_contactos,,
+54,congreso,persona,twitter_user,3,,datos_contactos,,
+54,congreso,persona,linkedin_user,3,,datos_contactos,,
+54,congreso,persona,blogspot_user,3,,datos_contactos,,
 54,congreso,persona,posicion_ideologica,2,,personas,,
 54,congreso,persona,region_nacimiento_id,3,,personas,,
 54,congreso,persona,facebook_user,3,,personas,,
@@ -421,13 +421,13 @@ num,seccion,tabla,campo,grupo,campo_gp,tabla_gp,transformar,observaciones
 58,congreso,posiciontemaopinion,tema_id,2,,,,
 59,congreso,problema_link,id,2,,,2,Esto no se considera porque lo unico que la vincula es link_id
 59,congreso,problema_link,problema_id,2,,,2,Esto no se considera porque lo unico que la vincula es link_id
-59,congreso,problema_link,link_id,2,,,3,
+59,congreso,problema_link,link_id,2,,,2,Esto no se considera porque lo unico que la vincula es link_id
 60,congreso,problema,id,3,id,investigacions,,Esta tabla se debe crear
 60,congreso,problema,created_at,3,created_at,investigacions,,Esta tabla se debe crear
 60,congreso,problema,edited_at,3,updated_at,investigacions,,Esta tabla se debe crear
 60,congreso,problema,tipo_problema_id,3,tipo_problema_id,investigacions,,Esta tabla se debe crear
-60,congreso,problema,descripcion,3,descripcion,investigacions,,
-60,congreso,problema,congresista_id,3,congresista_id,investigacions,,
+60,congreso,problema,descripcion,3,descripcion,investigacions,,Esta tabla se debe crear
+60,congreso,problema,congresista_id,3,congresista_id,investigacions,,Esta tabla se debe crear
 61,congreso,proposicion,id,2,,,2,
 61,congreso,proposicion,created_at,2,,,2,
 61,congreso,proposicion,edited_at,2,,,2,
@@ -708,10 +708,10 @@ num,seccion,tabla,campo,grupo,campo_gp,tabla_gp,transformar,observaciones
 123,orden,del_dia_citacion,old_id,2,,control_politicos,,
 123,orden,del_dia_citacion,detalles,3,,control_politicos,,
 123,orden,del_dia_citacion,gacetas,3,,control_politicos,,
-123,orden,del_dia_citacion,cuestionario,3,,control_politicos,,Filtrar las respuestas y los cuestionarios y entregarselos a congreso
+123,orden,del_dia_citacion,cuestionario,2,,control_politicos,,Filtrar las respuestas y los cuestionarios y entregarselos a congreso
 123,orden,del_dia_citacion,numero_proposicion,3,,control_politicos,,
-123,orden,del_dia_citacion,respuesta,3,,control_politicos,,
-123,orden,del_dia_citacion,duplicado,3,,control_politicos,,Por revisar en la última junta con CV
+123,orden,del_dia_citacion,respuesta,2,,control_politicos,,
+123,orden,del_dia_citacion,duplicado,2,,control_politicos,,Se debe intentar mantener el orden y generar un mecanismo similar en el que duplica el orden del dia cuando este sea aplazado  y solo se le cambie la fecha cuando se registre.
 124,orden,del_dia_citado,id,1,id,control_politico_citados ,,
 124,orden,del_dia_citado,created_at,1,created_at,control_politico_citados ,,
 124,orden,del_dia_citado,edited_at,1,updated_at,control_politico_citados ,,
@@ -785,7 +785,7 @@ num,seccion,tabla,campo,grupo,campo_gp,tabla_gp,transformar,observaciones
 139,proyecto,de_ley_estadodeproyectodeley,camara_id,3,corporacion_id,proyecto_ley_estados,,
 139,proyecto,de_ley_estadodeproyectodeley,numero_titulos,2,,proyecto_ley_estados,,
 139,proyecto,de_ley_estadodeproyectodeley,numero_articulos,2,,proyecto_ley_estados,,
-139,proyecto,de_ley_estadodeproyectodeley,observaciones,2,,proyecto_ley_estados,,el 75% de las observaciones es na.
+139,proyecto,de_ley_estadodeproyectodeley,observaciones,3,,proyecto_ley_estados,,el 75% de las observaciones es na.
 139,proyecto,de_ley_estadodeproyectodeley,orden,3,,proyecto_ley_estados,,duda
 140,proyecto,de_ley_estadoproyectoley,id,1,id,estado_proyecto_leys,,
 140,proyecto,de_ley_estadoproyectoley,nombre,1,nombre,estado_proyecto_leys,,
@@ -824,7 +824,7 @@ num,seccion,tabla,campo,grupo,campo_gp,tabla_gp,transformar,observaciones
 144,proyecto,de_ley_proyectoley,enlace_a_texto,2,,proyecto_leys,,
 144,proyecto,de_ley_proyectoley,enlace_a_informe_derecho_justo,2,,proyecto_leys,,
 144,proyecto,de_ley_proyectoley,estado_proyecto_ley_actual_id,3,,proyecto_leys,,"No entiendo para que sirve, parece un identificador"
-144,proyecto,de_ley_proyectoley,alias,3,,proyecto_leys,,Revisar en la junta final con CV
+144,proyecto,de_ley_proyectoley,alias,3,,proyecto_leys,,Se debe hacer obligatoria
 144,proyecto,de_ley_proyectoley,importancia,2,,proyecto_leys,,
 144,proyecto,de_ley_proyectoley,destacado,2,,proyecto_leys,,
 144,proyecto,de_ley_proyectoley,alcance,3,,proyecto_leys,,
@@ -872,7 +872,7 @@ num,seccion,tabla,campo,grupo,campo_gp,tabla_gp,transformar,observaciones
 152,proyecto,de_ley_votacion,gaceta,1,urlGaceta ,votacions ,,
 152,proyecto,de_ley_votacion,acta,3,,votacions ,,viene llena al 80%
 152,proyecto,de_ley_votacion,observaciones,3,,votacions ,,"preguntar, el 65% es na. Pero hay datos que paren ser relevantes"
-152,proyecto,de_ley_votacion,votacion_en_dia,2,,votacions ,,"¿A qué se refiere? Los valores son del 0- 79, 12%nas"
+152,proyecto,de_ley_votacion,votacion_en_dia,2,,votacions ,,"Espara que las votaciones salgan ordenadas en la pagina web, pero en realidad la variable no importa.  Para darle orden, pero hay que tener en cuenta las fechas del proceso y nosolo fecha porque hay empates."
 152,proyecto,de_ley_votacion,destacada,2,,votacions ,,"
 Votaciones no se la habian considerado un espacio par avotaciones destacadas"
 152,proyecto,de_ley_votacion,old_id,2,,votacions ,,

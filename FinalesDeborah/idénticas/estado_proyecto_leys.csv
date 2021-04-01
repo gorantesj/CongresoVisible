@@ -1,0 +1,45 @@
+﻿id,nombre,activo,usercreated,usermodifed,created_at,updated_at
+74,Concepto Institucional,NA,NA,NA,NA,NA
+41,Acto Legislativo,NA,NA,NA,NA,NA
+77,Objeción Parcial del Ejecutivo,NA,NA,NA,NA,NA
+76,Objeción Total del Ejecutivo,NA,NA,NA,NA,NA
+12,Aprobada conciliación en Senado,NA,NA,NA,NA,NA
+13,Aprobada conciliación en Cámara,NA,NA,NA,NA,NA
+78,Informe Legislativo a las Objeciones del Ejecutivo,NA,NA,NA,NA,NA
+15,Radicado,NA,NA,NA,NA,NA
+79,Aprobado Informe de Objeciones,NA,NA,NA,NA,NA
+17,Aprobado Primer Debate,NA,NA,NA,NA,NA
+19,Aprobado Segundo Debate,NA,NA,NA,NA,NA
+81,Declarado Exequible Total,NA,NA,NA,NA,NA
+21,Aprobado Tercer Debate,NA,NA,NA,NA,NA
+82,Declarado Exequible Parcial,NA,NA,NA,NA,NA
+23,Aprobado Cuarto Debate,NA,NA,NA,NA,NA
+25,Aprobado Quinto Debate,NA,NA,NA,NA,NA
+27,Aprobado Sexto Debate,NA,NA,NA,NA,NA
+29,Aprobado Séptimo Debate,NA,NA,NA,NA,NA
+31,Aprobado Octavo Debate,NA,NA,NA,NA,NA
+32,Archivado en Debate,NA,NA,NA,NA,NA
+33,Archivado por Vencimiento de Términos,NA,NA,NA,NA,NA
+34,Retirado por el Autor,NA,NA,NA,NA,NA
+36,Objetado Por Presidencia,NA,NA,NA,NA,NA
+37,En Conciliación,NA,NA,NA,NA,NA
+38,Declarado Inexequible Parcial,NA,NA,NA,NA,NA
+39,Declarado Inexequible Total,NA,NA,NA,NA,NA
+40,Sancionado como Ley,NA,NA,NA,NA,NA
+42,Publicada Ponencia Primer Debate,NA,NA,NA,NA,NA
+43,Publicada Ponencia Segundo Debate,NA,NA,NA,NA,NA
+44,Publicada Ponencia Tercer Debate,NA,NA,NA,NA,NA
+45,Publicada Ponencia Cuarto Debate,NA,NA,NA,NA,NA
+46,Publicada Ponencia Quinto Debate,NA,NA,NA,NA,NA
+47,Publicada Ponencia Sexto Debate,NA,NA,NA,NA,NA
+48,Publicada Ponencia Séptimo Debate,NA,NA,NA,NA,NA
+49,Publicada Ponencia Octavo Debate,NA,NA,NA,NA,NA
+51,Enviado a Comisión para Primer Debate,NA,NA,NA,NA,NA
+52,Enviado a  la Corte para Control,NA,NA,NA,NA,NA
+56,Publicación,NA,NA,NA,NA,NA
+63,Aprobada Conciliación,NA,NA,NA,NA,NA
+68,Acumulado,NA,NA,NA,NA,NA
+70,Archivado por Tránsito de Legislatura,NA,NA,NA,NA,NA
+72,Publicada ponencia primer y tercer debate,NA,NA,NA,NA,NA
+73,Aprobado Primer y Tercer Debate,NA,NA,NA,NA,NA
+75,Rechazado informe de objeciones,NA,NA,NA,NA,NA

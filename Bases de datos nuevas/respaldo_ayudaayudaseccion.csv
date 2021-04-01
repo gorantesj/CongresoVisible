@@ -1,7 +1,0 @@
-id,orden,fecha_actualizacion,id_video_ayuda,regex_seccion,exacto
-3,2,2012-04-24,OerwZ_V922c,/votaciones/,FALSE
-2,1,2010-06-01,iZ7XGWMNjG0,/congresistas/,FALSE
-4,3,2010-08-30,nmlLk8pcsTw,/citaciones/,FALSE
-5,4,2010-08-30,jJnTtydr9eU,/orden-del-dia/,FALSE
-6,5,2010-09-22,35T5yFerp-c,/,TRUE
-7,0,2012-04-27,OI1Xjjz-4LA,/partidos/,FALSE

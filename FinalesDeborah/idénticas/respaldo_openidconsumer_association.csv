@@ -1,0 +1,3 @@
+﻿id,server_url,handle,secret,issued,lifetime,assoc_type
+426,https://www.google.com/accounts/o8/ud,1.AMlYA9XgD2F-NpHgEj2Bn8tvL0_hcNgkIXl3N4VxhlmLSaa1wKeNm6otaVYnCA,"3x6P2i8hIR0Vu3EPTftRJK7q/Vs=
+",1384251607,1384251607,HMAC-SHA1

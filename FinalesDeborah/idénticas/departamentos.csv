@@ -1,0 +1,38 @@
+﻿id,nombre,region_id,activo,usercreated,usermodifed,created_at,updated_at
+2,Amazonas,6,NA,NA,NA,NA,NA
+3,Antioquia,1,NA,NA,NA,NA,NA
+4,Arauca,9,NA,NA,NA,NA,NA
+6,Bolívar,4,NA,NA,NA,NA,NA
+5,Atlántico,4,NA,NA,NA,NA,NA
+7,Boyacá,1,NA,NA,NA,NA,NA
+8,Caldas,1,NA,NA,NA,NA,NA
+9,Caquetá,6,NA,NA,NA,NA,NA
+10,Casanare,9,NA,NA,NA,NA,NA
+11,Cauca,8,NA,NA,NA,NA,NA
+12,Cesar,4,NA,NA,NA,NA,NA
+13,Chocó,8,NA,NA,NA,NA,NA
+15,Cundinamarca,1,NA,NA,NA,NA,NA
+14,Córdoba,4,NA,NA,NA,NA,NA
+1,Distrito Capital,1,NA,NA,NA,NA,NA
+36,Extranjero,3,NA,NA,NA,NA,NA
+16,Guainía,6,NA,NA,NA,NA,NA
+18,Huila,1,NA,NA,NA,NA,NA
+17,Guaviare,6,NA,NA,NA,NA,NA
+20,Magdalena,4,NA,NA,NA,NA,NA
+22,Meta,9,NA,NA,NA,NA,NA
+23,Nariño,8,NA,NA,NA,NA,NA
+38,Comunidades Afro,5,NA,NA,NA,NA,NA
+24,Norte de Santander,1,NA,NA,NA,NA,NA
+25,Putumayo,6,NA,NA,NA,NA,NA
+26,Quindío,1,NA,NA,NA,NA,NA
+27,Risaralda,1,NA,NA,NA,NA,NA
+28,San Andrés y Providencia,10,NA,NA,NA,NA,NA
+29,Santander,1,NA,NA,NA,NA,NA
+30,Sucre,4,NA,NA,NA,NA,NA
+31,Tolima,1,NA,NA,NA,NA,NA
+32,Valle del Cauca,1,NA,NA,NA,NA,NA
+33,Vaupés,6,NA,NA,NA,NA,NA
+34,Vichada,9,NA,NA,NA,NA,NA
+39,Comunidades Indígenas,5,NA,NA,NA,NA,NA
+40,Minorías Políticas,5,NA,NA,NA,NA,NA
+19,La Guajira,4,NA,NA,NA,NA,NA
