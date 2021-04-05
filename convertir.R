@@ -95,7 +95,11 @@ graficar_relaciones <- function(carpeta="Base de datos/"){
 
 # Blogs
 # Blog, posts, tipo_blogs, autor
+<<<<<<< HEAD
+posts <- tablas_res[[18]] %>%
+=======
 posts <- tablas_res2[[18]] %>%
+>>>>>>> 03048d4e0e240a4e1df759a48a30af7f9ba68c8e
   inner_join(tablas_res[[15]], by=c("blog_id"="id")) %>%
   select(-id,-blog_id, -destacado.x, -destacado.y) %>%
   rename(`titulo_post`=titulo.x,
@@ -122,6 +126,48 @@ write_excel_csv(posts,"finales/para CV/posts.csv")
 # Boletines
 boletin <- tablas_res[[16]] %>% select(nombre, año=anio, objeto, archivo)
 write_excel_csv(boletin,"finales/para CV/boletin.csv")
+# Congresista -------------------------------------------------------------
+# Para el final
+
+
+# Mezclar con periodos
+congresistas <- inner_join(tablas_res[[39]],
+                           tablas_res[[53]] ,
+                           by=c("persona_ptr_id"= "congresista_id"))
+
+# Falta arreglar el periodo por congresista
+congresistas <- congresistas %>%
+  mutate(curul_id=NA_integer_) %>%
+  select(id,
+         persona_id=persona_ptr_id,
+         corporacion_id=camara_id,
+         cuatrienio_id=periodo_id,
+         partido_id=partido_politico_id,
+         curul_id,
+         circunscripcion_id
+  )
+write_csv(congresistas,
+          file = "finales/cambio en campos/congresistas.csv")
+
+
+# Para CV
+tablas_res[[39]] %>%
+  filter(!(es_congresista|
+             es_senador|
+             es_representante_camara|
+             ha_sido_congresista|
+             ha_reemplazado|
+             ha_sido_reemplazo)|is.na(es_congresista|
+                                        es_senador|
+                                        es_representante_camara|
+                                        ha_sido_congresista|
+                                        ha_reemplazado|
+                                        ha_sido_reemplazo))
+
+# Todos falso
+#
+
+
 # Cargo -------------------------------------------------------------------------
 # Solamente las personas pueden tener cargos
 # Hay que juntar cargo=sector_id, cargo, entidad
@@ -134,25 +180,94 @@ trayectoria_privada <- tablas_res[[33]] %>%
   inner_join(trayectoria_privada) %>%
   select(id, persona_id, cargo, fecha, fecha_final,created_at, updated_at)
 write_csv(trayectoria_privada, file = "finales/cambio en campos/persona_trayectoria_privadas.csv")
+<<<<<<< HEAD
+# Cargo legislativos, catálogo para cargo camara y cargo comisiones
+=======
 # Cargo cámara
+>>>>>>> 03048d4e0e240a4e1df759a48a30af7f9ba68c8e
 tablas_res[[34]] %>%
   select(id, nombre) %>%
   write_csv("finales/tablas nuevas/cargo_corporacions.csv")
+
+# Cargo cámara
+cargo_camara <- tablas_res[[46]] %>%
+  rename(persona_id=congresista_id) %>%
+  inner_join(congresistas %>%
+               select(persona_id,
+                      periodo_id=cuatrienio_id,
+                      congresista_id=id)) %>%
+  mutate(  activo=T,
+           usercreated="",
+           usermodifed=""
+  ) %>%
+  select(id,
+         cuatrienio_id=periodo_id,
+         corporacion_id=camara_id,
+         activo,
+         usercreated,
+         usermodifed,
+         created_at,
+         updated_at=edited_at)
+write_csv(cargo_camara, "finales/tablas nuevas/cargo_camaras.csv")
 
 # Cargo comisiones
 # Se agregaron manualmente
 
 # Cargo político
 # Para la migración hay que eliminar los cargos de cámaras
+<<<<<<< HEAD
+cargo_politico <- tablas_res[[36]] %>%
+  mutate(activo=T, usercreated="", usermodifed="") %>%
+  select(id,
+         persona_id,
+         partido_id,
+         cargo,
+         fecha=fecha_inicio,
+         fecha_final,
+         activo,
+         usercreated,
+         usermodifed,
+         created_at,
+         updated_at=edited_at
+         )
+
+congresista_partido <-  tablas_res[[41]] %>%
+  mutate(id=id+max(cargo_politico$id),
+         cargo="Congresista",
+         activo=T,
+         usercreated="",
+         usermodifed=""
+         ) %>%
+  select(id,
+         persona_id=congresista_id,
+         partido_id,
+         cargo,
+         fecha=fecha_inicio,
+         fecha_final=fecha_fin,
+         activo,
+         usercreated,
+         usermodifed,
+         created_at,
+         updated_at=edited_at
+         )
+rbind(cargo_politico,
+      congresista_partido) %>%
+write_csv("finales/cambio en campos/persona_trayectoria_publicas.csv")
+=======
 tablas_res[[36]] %>%
   filter(is.na(x = camara_id)) %>%
   select(id, persona_id, partido_id, fecha=fecha_inicio, fecha_final) %>%
   write_csv("finales/cambio en campos/persona_trayectoria_publicas.csv")
+>>>>>>> 03048d4e0e240a4e1df759a48a30af7f9ba68c8e
 
 
 # Datos contactos ---------------------------------------------------------
 comision_contacto <- tablas_res[[38]] %>% select(comision_id=id,
+<<<<<<< HEAD
+                                                  correo:url) %>%
+=======
                                                  correo:url) %>%
+>>>>>>> 03048d4e0e240a4e1df759a48a30af7f9ba68c8e
   tidyr::pivot_longer(cols = -comision_id,
                       names_to = "dato_contacto_id",
                       values_to = "cuenta") %>%
@@ -175,12 +290,36 @@ datos_contacto <-comision_contacto %>%
 write_excel_csv(datos_contacto,"finales/idénticas/dato_contactos.csv")
 
 # Comisiones
-comision_contacto %>% rename(nombre=dato_contacto_id) %>%
+comision_contacto <- comision_contacto %>% rename(nombre=dato_contacto_id) %>%
   inner_join(datos_contacto %>% select(nombre, dato_contacto_id=id),
              by="nombre") %>%
-  select(id, dato_contacto_id, comision_id, cuenta,activo:updated_at) %>%
-  write_csv(file = "finales/idénticas/comision_datos_contactos.csv")
+  select(id, dato_contacto_id, comision_id, cuenta,activo:updated_at)
+write_csv(comision_contacto,file = "finales/idénticas/comision_datos_contactos.csv")
 
+<<<<<<< HEAD
+# Congresistas
+congresista_contacto <- inner_join(tablas_res[[39]],
+           congresistas,
+           by=c("persona_ptr_id"= "persona_id")) %>%
+  select(id, numero_oficina, telefono_oficina) %>%
+  tidyr::pivot_longer(-id, values_to = "cuenta",names_to="dato_contacto_id") %>%
+  filter(!is.na(cuenta)) %>%
+  mutate(dato_contacto_id=case_when(dato_contacto_id=="numero_oficina"~2,
+                                    dato_contacto_id=="telefono_oficina"~5
+                                    ),
+         activo=T,
+         usercreate="",
+         usermodified	="",
+         created_at="",
+         updated_at=""
+         )
+write_csv(comision_contacto,file = "finales/idénticas/congresista_datos_contactos.csv")
+
+
+# transformación ----------------------------------------------------------
+campos <- read_csv("paralafinal.csv")
+crear_bases(campos %>% filter(num==47), tablas_res)
+=======
 # Congresista -------------------------------------------------------------
 tablas_res[[39]] %>% count()
 
@@ -305,6 +444,7 @@ campos <- read_csv("paralafinaldeborah.csv")
 # crear_bases(campos, tablas_res)
 crear_bases(campos %>%  filter(num == 124), tablas_res)
 
+>>>>>>> 03048d4e0e240a4e1df759a48a30af7f9ba68c8e
 
 tablas_res[[133]]
 
