@@ -253,20 +253,51 @@ tema_proyecto_leys%<>%  select(-edited_at)
 tema_proyecto_leys %>%
   write_excel_csv("Bases de datos nuevas/tema_proyecto_leys.csv")
 
-# control_politico_citados -----------------------------------------------------------
+# control_politico_citados  se va a convertir en persona 124 -----------------------------------------------------------
 control_politico_citados <- read_csv("Bases de datos nuevas/control_politico_citados.csv")
+# Filtar las que sin nombre
+aux <- control_politico_citados %>%  filter(!is.na(nombre)) %>%
+ mutate(activo = NA_character_, usercreated = NA_character_, usermodifed= NA_character_)
 
-control_politico_citados %>%  mutate(activo = NA_character_,
-                        usercreated = NA_character_, usermodifed= NA_character_) %>%
+# control_politico_id S (control_politicos)-> 123
+tablas_res[[123]]
+
+# comision_cargo_congresista_id (comision_cargo_congresistas)->35 catalogo?
+tablas_res[[35]]
+
+# tipo_citacion_id (tipo_citacions)-> 133 catalogo
+tablas_res[[133]]
 
 
-  select(id = transformar_id,
-         edad_inicial = transformar_edad_minima , edad_final = transformar_edad_maxima,
-         activo, usercreated, usermodifed, created_at, updated_at
-  ) %>%
+
   write_excel_csv("Bases de datos nuevas/control_politico_citados.csv")
 
 
+# control_politico_entidads -----------------------------------------------------------
+control_politico_entidads <- read_csv("Bases de datos nuevas/control_politico_entidads.csv")
+
+control_politico_entidads %>%  mutate(activo = NA_character_,
+                          usercreated = NA_character_, usermodifed= NA_character_
+                          ) %>%
+  write_excel_csv("Bases de datos nuevas/control_politico_entidads.csv")
+
+# estado_proyecto_leys -----------------------------------------------------------
+control_politico_entidads <- read_csv("Bases de datos nuevas/estado_proyecto_leys.csv")
+
+control_politico_entidads %>%  mutate(activo = NA_character_,
+                                      usercreated = NA_character_, usermodifed= NA_character_,
+                                      created_at= NA_character_, updated_at= NA_character_
+) %>%
+  write_excel_csv("Bases de datos nuevas/estado_proyecto_leys.csv")
+
+# legislaturas -----------------------------------------------------------
+legislaturas <- read_csv("Bases de datos nuevas/legislaturas.csv")
+
+legislaturas %>%  mutate(activo = NA_character_,
+                                      usercreated = NA_character_, usermodifed= NA_character_,
+                                      created_at= NA_character_, updated_at= NA_character_
+) %>%
+  write_excel_csv("Bases de datos nuevas/legislaturas.csv")
 # transformación ----------------------------------------------------------
 # Leer campos
 campos <- read_csv("paralafinaldeborah.csv")
@@ -275,7 +306,7 @@ campos <- read_csv("paralafinaldeborah.csv")
 crear_bases(campos %>%  filter(num == 124), tablas_res)
 
 
-tablas_res[[124]]
+tablas_res[[133]]
 
 # Sandbox -----------------------------------------------------------------
 
