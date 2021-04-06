@@ -268,10 +268,27 @@ proyecto %>%  mutate(proyecto_ley_id=NA_character_,
                        usercreated=NA_character_) %>%
   write_excel_csv("Bases de datos nuevas/proyecto_ley_autor_otros.csv")
 
+#grado estudios----------
+
+grad <- read_csv("finales_hector/tablas nuevas/personas.csv") %>%
+  select(grado_estudios) %>%
+  unique() %>%
+  filter(!is.na(grado_estudios)) %>%
+  arrange(grado_estudios) %>%
+  mutate(id=row_number()) %>%
+  rename(nombre=grado_estudios) %>%
+  mutate(activo=NA_character_,
+         usercreated=NA_character_,
+         usermodifed=NA_character_,
+         created_at=NA_character_,
+         updated_at=NA_character_) %>%
+  write_excel_csv("finales_hector/tablas nuevas/grado_estudios.csv")
 #personas --------------------
 
-personas <- read_csv("Bases de datos nuevas/personas.csv")
-
+personas <- read_csv("finales_hector/tablas nuevas/personas.csv")
+grado <- read_csv("finales_hector/tablas nuevas/grado_estudios.csv") %>%
+         select(nombre, id) %>%
+         rename(grado_estudio_id=id)
 #Limpiar nombres y apellidos de NAs
 
 personasfinal <- personas %>%
@@ -295,7 +312,19 @@ personasfinal <- mutate(personasfinal, apellidos=stringr::str_to_lower(apellidos
 personasfinal <- mutate(personasfinal, apellidos=stringr::str_to_title(apellidos))
 
 personasfinal <-  personasfinal%>%
-  write_excel_csv("Bases de datos nuevas/personas.csv")
+   mutate(activo=  NA_character_,
+   usercreated=NA_character_,
+   usermodifed=NA_character_,
+   perfil_educativo=NA_character_) %>%
+   rename(municipio_id_nacimiento=municipio_nacimiento_id)
+
+
+personasfinal <- left_join(personasfinal,grado, by=c("grado_estudios"="nombre"))
+
+
+personasfinal <- personasfinal %>%
+                select(-grado_estudios) %>%
+  write_excel_csv("finales_hector/tablas nuevas/personas.csv")
 
 
 
@@ -323,6 +352,9 @@ secretario <- inner_join(secretario, personas, by=c("persona_id"="id")) %>%
 
 
 
+
+
+
 #control_politico_citados----------
 
 
@@ -330,7 +362,8 @@ control_citados <- tabla_res[[125]] %>%
                    mutate(persona_id=citado_id+14657)
 
 
-personas <- read_csv("FinalesDeborah/tablas nuevas/personas.csv")
+personas <- read_csv("FinalesDeborah/tablas nuevas/personas.csv") %>%
+
 
 siestan <- inner_join(control_citados, personas, by=c("persona_id"="id"))
 noestan <- anti_join(control_citados, personas, by=c("persona_id"="id"))
