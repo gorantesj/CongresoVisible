@@ -268,7 +268,7 @@ proyecto %>%  mutate(proyecto_ley_id=NA_character_,
                        usercreated=NA_character_) %>%
   write_excel_csv("Bases de datos nuevas/proyecto_ley_autor_otros.csv")
 
-#grado estudios----------
+# catalogo grado estudios----------
 
 grad <- read_csv("Bases de datos nuevas/personas.csv") %>%
   select(grado_estudios) %>%
@@ -299,7 +299,7 @@ grad <- read_csv("Bases de datos nuevas/personas.csv") %>%
   select(id, nombre_final, activo:updated_at) %>%
   rename(nombre=nombre_final) %>%
   write_excel_csv("finales_hector/tablas nuevas/grado_estudios.csv")
-#personas --------------------
+# personas --------------------
 
 personas <- read_csv("finales_hector/tablas nuevas/personas.csv")
 grado <- read_csv("finales_hector/tablas nuevas/grado_estudios.csv") %>%
@@ -348,7 +348,7 @@ personasfinal <- personasfinal %>%
 
 
 
-#secretario----------
+# secretario----------
 
 secretario <- tabla_res[[63]] %>%
               mutate(id=row_number(),
@@ -371,9 +371,7 @@ secretario <- inner_join(secretario, personas, by=c("persona_id"="id")) %>%
 
 
 
-
-
-#control_politico_citados----------
+# control_politico_citados----------
 
 
 control_citados <- tabla_res[[125]] %>%
@@ -384,13 +382,13 @@ control_citados <- tabla_res[[125]] %>%
                                  if_else(asiste==F & delega_asistencia==T & excuso==T, 4, 5))))) %>%
                    select(-asiste, -delega_asistencia, -excuso, -citado_id) %>%
                    rename(control_politico_id=citacion_id) %>%
-                   mutate(activo=NA_character_,
+                   mutate(
+                   tipo_citado=1,
+                   activo=NA_character_,
                    usercreated=NA_character_,
                    usermodifed=NA_character_,
                    created_at=NA_character_,
-                   updated_at=NA_character_,
-                   tipo_citado="citado") %>%
-                   write_excel_csv("finales_hector/cambios en campos/control_politico_citado.csv")
+                   updated_at=NA_character_)
 
 
 
@@ -424,7 +422,7 @@ citacion_prueba <- left_join(citacion_prueba, orden_dia_cuatrienio,by=c("orden_d
 #Fin de Pruebas
 
 
-#asistencias------------------
+# catalogo asistencias------------------
 
 asistencias <- read_csv("finales_hector/cambios en campos/control_politico_citado.csv") %>%
                select(asistencia_id) %>%
@@ -439,28 +437,54 @@ asistencias <- read_csv("finales_hector/cambios en campos/control_politico_citad
 
 
 
-#Invitado asistente citacion----------------
+# Invitado asistente citacion----------------
 
 invi <- tabla_res[[127]] %>%
         mutate(persona_id=citado_id+14657,
          asistencia_id=if_else(asiste==T, 1,
-                               if_else(asiste==F & delega_asistencia==T & excuso==F, 2,
-                                       if_else(asiste==F & delega_asistencia==F & excuso==T, 3,
-                                               if_else(asiste==F & delega_asistencia==T & excuso==T, 4, 5))))) %>%
+                       if_else(asiste==F & delega_asistencia==T & excuso==F, 2,
+                       if_else(asiste==F & delega_asistencia==F & excuso==T, 3,
+                       if_else(asiste==F & delega_asistencia==T & excuso==T, 4, 5))))) %>%
   select(-asiste, -delega_asistencia, -excuso, -citado_id) %>%
   rename(control_politico_id=citacion_id) %>%
-  mutate(activo=NA_character_,
+  mutate(tipo_citado=0,
+         activo=NA_character_,
          usercreated=NA_character_,
          usermodifed=NA_character_,
          created_at=NA_character_,
          updated_at=NA_character_)
 
+final <- bind_rows(invi, control_citados) %>%
+  write_excel_csv("finales_hector/cambios en campos/control_politico_citados.csv")
+
+
+
+
+# agenda legislativas------
+
+agenda <- read_csv("Bases de datos nuevas/agenda_legislativas.csv")
+
+
+
+
+
+
+# tipo citacions---------
+
+tipocita <- read_csv("Bases de datos nuevas/tipo_citacions.csv") %>%
+  mutate(activo=NA_character_,
+         usercreated=NA_character_,
+         usermodifed=NA_character_,
+         created_at=NA_character_,
+         updated_at=NA_character_) %>%
+  write_excel_csv("finales_hector/idénticas/tipo_citacions.csv")
+
 
 # transformación ----------------------------------------------------------
 
-crear_bases(campos %>% filter(num==127), tabla_res)
+crear_bases(campos %>% filter(num==131), tabla_res)
 
-tabla_res[[127]] %>%  View()
+tabla_res[[131]] %>%  View()
 # Sandbox -----------------------------------------------------------------
 
 
