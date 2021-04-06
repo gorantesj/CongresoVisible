@@ -1,18 +1,18 @@
-﻿nombre,id,activo,usercreated,usermodifed,created_at,updated_at
-B,1,NA,NA,NA,NA,NA
-BI,2,NA,NA,NA,NA,NA
-D,3,NA,NA,NA,NA,NA
-E,4,NA,NA,NA,NA,NA
-M,5,NA,NA,NA,NA,NA
-NR,6,NA,NA,NA,NA,NA
-NS,7,NA,NA,NA,NA,NA
-O,8,NA,NA,NA,NA,NA
-P,9,NA,NA,NA,NA,NA
-PI,10,NA,NA,NA,NA,NA
-Po,11,NA,NA,NA,NA,NA
-T,12,NA,NA,NA,NA,NA
-TE,13,NA,NA,NA,NA,NA
-TEI,14,NA,NA,NA,NA,NA
-TI,15,NA,NA,NA,NA,NA
-U,16,NA,NA,NA,NA,NA
-UI,17,NA,NA,NA,NA,NA
+﻿id,nombre,activo,usercreated,usermodifed,created_at,updated_at
+1,Bachillerato,NA,NA,NA,NA,NA
+2,Bachillerato incompleto,NA,NA,NA,NA,NA
+3,Doctorado,NA,NA,NA,NA,NA
+4,Especialización,NA,NA,NA,NA,NA
+5,Maestría,NA,NA,NA,NA,NA
+6,NR,NA,NA,NA,NA,NA
+7,NS,NA,NA,NA,NA,NA
+8,O,NA,NA,NA,NA,NA
+9,Primaria,NA,NA,NA,NA,NA
+10,Primaria incompleta,NA,NA,NA,NA,NA
+11,Po,NA,NA,NA,NA,NA
+12,Técnica,NA,NA,NA,NA,NA
+13,Tecnológica,NA,NA,NA,NA,NA
+14,Tecnológica incompleta,NA,NA,NA,NA,NA
+15,Técnica incompleta,NA,NA,NA,NA,NA
+16,Universitaria,NA,NA,NA,NA,NA
+17,Universitaria Incompleta,NA,NA,NA,NA,NA

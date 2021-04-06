@@ -720,23 +720,23 @@ num,seccion,tabla,campo,grupo,campo_gp,tabla_gp,transformar,observaciones,termin
 124,orden,del_dia_citado,cargo_id,2,,control_politico_citados ,,,1
 124,orden,del_dia_citado,old_id,2,,control_politico_citados ,,,1
 124,orden,del_dia_citado,imagen,3,,control_politico_citados ,,,1
-125,orden,del_dia_citadoasistentecitacion,id,2,,control_politico_citados ,,,
-125,orden,del_dia_citadoasistentecitacion,citacion_id,3,control_politico_id ,control_politico_citados ,,,
-125,orden,del_dia_citadoasistentecitacion,citado_id,2,,control_politico_citados ,,,
-125,orden,del_dia_citadoasistentecitacion,asiste,3,,control_politico_citados ,,,
-125,orden,del_dia_citadoasistentecitacion,delega_asistencia,3,,control_politico_citados ,,,
-125,orden,del_dia_citadoasistentecitacion,excuso,3,,control_politico_citados ,,,
+125,orden,del_dia_citadoasistentecitacion,id,2,,control_politico_citados ,,,1
+125,orden,del_dia_citadoasistentecitacion,citacion_id,3,control_politico_id ,control_politico_citados ,,,1
+125,orden,del_dia_citadoasistentecitacion,citado_id,2,,control_politico_citados ,,,1
+125,orden,del_dia_citadoasistentecitacion,asiste,3,,control_politico_citados ,,,1
+125,orden,del_dia_citadoasistentecitacion,delega_asistencia,3,,control_politico_citados ,,,1
+125,orden,del_dia_citadoasistentecitacion,excuso,3,,control_politico_citados ,,,1
 126,orden,del_dia_entidadcitado,id,,,,,,1
 126,orden,del_dia_entidadcitado,created_at,,,,,,1
 126,orden,del_dia_entidadcitado,edited_at,,,,,,1
 126,orden,del_dia_entidadcitado,nombre,,,,,,1
 126,orden,del_dia_entidadcitado,old_id,,,,,,1
-127,orden,del_dia_invitadoasistentecitacion,id,,,,,,
-127,orden,del_dia_invitadoasistentecitacion,citacion_id,,,,,,
-127,orden,del_dia_invitadoasistentecitacion,citado_id,,,,,,
-127,orden,del_dia_invitadoasistentecitacion,asiste,,,,,,
-127,orden,del_dia_invitadoasistentecitacion,delega_asistencia,,,,,,
-127,orden,del_dia_invitadoasistentecitacion,excuso,,,,,,
+127,orden,del_dia_invitadoasistentecitacion,id,1,,,,,
+127,orden,del_dia_invitadoasistentecitacion,citacion_id,1,,,,,
+127,orden,del_dia_invitadoasistentecitacion,citado_id,1,,,,,
+127,orden,del_dia_invitadoasistentecitacion,asiste,1,,,,,
+127,orden,del_dia_invitadoasistentecitacion,delega_asistencia,1,,,,,
+127,orden,del_dia_invitadoasistentecitacion,excuso,1,,,,,
 128,orden,del_dia_itemdeordendeldia,id,,,,,,1
 128,orden,del_dia_itemdeordendeldia,orden,,,,,,1
 128,orden,del_dia_itemdeordendeldia,proposito,,,,,,1
