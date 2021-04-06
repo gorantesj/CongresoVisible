@@ -869,7 +869,7 @@ num,seccion,tabla,campo,grupo,campo_gp,tabla_gp,transformar,observaciones
 152,proyecto,de_ley_votacion,votosContra,3,,votacions ,,
 152,proyecto,de_ley_votacion,aprobado,2,,votacions ,,Tine solo nas
 152,proyecto,de_ley_votacion,tipo_votacion_id,3,,votacions ,,"Se van a obviar las procedimentales. Se quedan solamente: Actos legislativos, proyectos de ley y estatutarias."
-152,proyecto,de_ley_votacion,gaceta,1,urlGaceta ,votacions ,,
+152,proyecto,de_ley_votacion,gaceta,1,,votacions ,,
 152,proyecto,de_ley_votacion,acta,3,,votacions ,,viene llena al 80%
 152,proyecto,de_ley_votacion,observaciones,3,,votacions ,,"preguntar, el 65% es na. Pero hay datos que paren ser relevantes"
 152,proyecto,de_ley_votacion,votacion_en_dia,2,,votacions ,,"Espara que las votaciones salgan ordenadas en la pagina web, pero en realidad la variable no importa.  Para darle orden, pero hay que tener en cuenta las fechas del proceso y nosolo fecha porque hay empates."
