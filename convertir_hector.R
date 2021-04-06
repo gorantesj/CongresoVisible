@@ -218,25 +218,45 @@ citaciones %>%  mutate(activo=NA_character_,
 
 # Control político -----------------------------------------------------------------
 
-citacion <- tabla_res[[123]]
+controlpol <- tabla_res[[123]]%>%
+  mutate(id=row_number(),
+         activo=NA_character_,
+         usercreated=NA_character_,
+         usermodifed=NA_character_,
+         created_at=NA_character_,
+         updated_at=NA_character_,
+         estado_control_politico_id=NA_character_)
 
-orden_dia <- tabla_res[[128]] %>%
-             select(id, orden_del_dia_id)
+orden_diaitem <- tabla_res[[128]] %>%
+             select(id, proposito, orden_del_dia_id, realizado)
 
-citacion <- left_join(citacion, orden_dia, by=c("itemdeordendeldia_ptr_id"="id"))
+controlpol_orden <- left_join(controlpol, orden_diaitem, by=c("itemdeordendeldia_ptr_id"="id"))
 
-orden_dia_citacion <- tabla_res[[131]] %>%
+orden_dia_cuatrienio <- tabla_res[[131]] %>%
             select(id, cuatrienio_id)
 
-citacion <- left_join(citacion, orden_dia_citacion,by=c("orden_del_dia_id"="id"))
+controlpol_orden <- left_join(controlpol_orden, orden_dia_citacion,by=c("orden_del_dia_id"="id"))
 
 orden_dia_comision <- tabla_res[[130]] %>%
            select(ordendeldia_id, comision_id)
 
 
-citacion <- left_join(citacion, orden_dia_comision,by=c("orden_del_dia_id"="ordendeldia_id"))
+controlpol_orden <- left_join(controlpol_orden, orden_dia_comision,by=c("orden_del_dia_id"="ordendeldia_id"))
 
-citacion %>% mutate(id=row_number())
+corpo <- tabla_res[[38]]
+
+comi <- read_csv("finales/idénticas/comisions.csv") %>%
+        select(id, corporacion_id)
+
+comi2 <- read_csv("finales/idénticas/corporacions.csv")
+controlpol_orden <- left_join(controlpol_orden, comi,by=c("comision_id"="id"))
+controlpol_orden <- rename(controlpol_orden, agenda_legislativa_actividad_id=itemdeordendeldia_ptr_id,
+                           tipo_control_politico_id=tipo_id,
+                           titulo=proposito,
+                           fecha=fecha_proposicion)
+controlpol_orden <- select(controlpol_orden, id, cuatrienio_id, comision_id, estado_control_politico_id, titulo, fecha, activo:updated_at,
+                           tema_principal_id:tags, detalles, gacetas, numero_proposicion)%>%
+  write_excel_csv("finales_hector/cambios en campos/control_politicos.csv")
 # proyecto ley autor -------------------------------------------------------------
 
 
@@ -282,11 +302,66 @@ personasfinal <-  personasfinal%>%
 
 
 
+
+#secretario----------
+
+secretario <- tabla_res[[63]] %>%
+              mutate(id=row_number(),
+                     activo=NA_character_,
+                     usercreated=NA_character_,
+                     usermodifed=NA_character_,
+                     created_at=NA_character_,
+                     updated_at=NA_character_) %>%
+              rename("persona_id"="persona_ptr_id")
+
+personas <- read_csv("finales_hector/tablas nuevas/personas.csv") %>%
+            select(id)
+
+secretario <- inner_join(secretario, personas, by=c("persona_id"="id")) %>%
+              select(id,persona_id, activo:updated_at) %>%
+              write_excel_csv("finales_hector/cambios en campos/secretarios.csv")
+
+
+
+#control_politico_citados----------
+
+
+control_citados <- tabla_res[[125]] %>%
+                   mutate(persona_id=citado_id+14657)
+
+
+personas <- read_csv("FinalesDeborah/tablas nuevas/personas.csv")
+
+siestan <- inner_join(control_citados, personas, by=c("persona_id"="id"))
+noestan <- anti_join(control_citados, personas, by=c("persona_id"="id"))
+set.seed(2021)
+muestra <- control_citados %>% sample_n(5)
+citacion_prueba <- tabla_res[[123]] %>% filter(itemdeordendeldia_ptr_id %in% muestra$citacion_id)
+
+
+#
+# prueba <- tabla_res[[124]] %>% filter(id %in% muestra)
+
+orden_diaitem <- tabla_res[[128]] %>%
+  select(id,  proposito, realizado, orden_del_dia_id)
+
+citacion_prueba <- left_join(citacion_prueba, orden_diaitem, by=c("itemdeordendeldia_ptr_id"="id"))
+
+orden_dia_cuatrienio <- tabla_res[[131]] %>%
+  select(id, fecha_programada, fecha_realizada, comentarios, cuatrienio_id)
+
+
+citacion_prueba <- left_join(citacion_prueba, orden_dia_cuatrienio,by=c("orden_del_dia_id"="id"))
+
+
+
+
+
 # transformación ----------------------------------------------------------
 
-crear_bases(campos %>% filter(num==54), tabla_res)
+crear_bases(campos %>% filter(num==63), tabla_res)
 
-tabla_res[[155]] %>% View()
+tabla_res[[125]] %>%  View()
 # Sandbox -----------------------------------------------------------------
 
 
