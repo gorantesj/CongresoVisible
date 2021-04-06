@@ -712,14 +712,14 @@ num,seccion,tabla,campo,grupo,campo_gp,tabla_gp,transformar,observaciones,termin
 123,orden,del_dia_citacion,numero_proposicion,3,,control_politicos,,,1
 123,orden,del_dia_citacion,respuesta,2,,control_politicos,,,1
 123,orden,del_dia_citacion,duplicado,2,,control_politicos,,,1
-124,orden,del_dia_citado,id,,,,,,1
-124,orden,del_dia_citado,created_at,,,,,,1
-124,orden,del_dia_citado,edited_at,,,,,,1
-124,orden,del_dia_citado,nombres,,,,,,1
-124,orden,del_dia_citado,entidad_id,,,,,,1
-124,orden,del_dia_citado,cargo_id,,,,,,1
-124,orden,del_dia_citado,old_id,,,,,,1
-124,orden,del_dia_citado,imagen,,,,,,1
+124,orden,del_dia_citado,id,1,id,control_politico_citados ,,,1
+124,orden,del_dia_citado,created_at,1,created_at,control_politico_citados ,,,1
+124,orden,del_dia_citado,edited_at,1,updated_at,control_politico_citados ,,,1
+124,orden,del_dia_citado,nombres,3,,control_politico_citados ,,,1
+124,orden,del_dia_citado,entidad_id,2,,control_politico_citados ,,,1
+124,orden,del_dia_citado,cargo_id,2,,control_politico_citados ,,,1
+124,orden,del_dia_citado,old_id,2,,control_politico_citados ,,,1
+124,orden,del_dia_citado,imagen,3,,control_politico_citados ,,,1
 125,orden,del_dia_citadoasistentecitacion,id,2,,control_politico_citados ,,,
 125,orden,del_dia_citadoasistentecitacion,citacion_id,3,control_politico_id ,control_politico_citados ,,,
 125,orden,del_dia_citadoasistentecitacion,citado_id,2,,control_politico_citados ,,,
