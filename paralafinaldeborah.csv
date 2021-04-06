@@ -774,7 +774,7 @@ num,seccion,tabla,campo,grupo,campo_gp,tabla_gp,transformar,observaciones,termin
 137,proyecto,de_ley_estadodeproyectodeley_comisiones,comision_id,,,,,,
 138,proyecto,de_ley_estadodeproyectodeley_ponentes,id,1,id,proyecto_ley_ponentes,,,
 138,proyecto,de_ley_estadodeproyectodeley_ponentes,estadodeproyectodeley_id,1,proyecto_ley_estado_id,proyecto_ley_ponentes,,,
-138,proyecto,de_ley_estadodeproyectodeley_ponentes,congresista_id,1,congresista_id,proyecto_ley_ponentes,,,
+138,proyecto,de_ley_estadodeproyectodeley_ponentes,congresista_id,1,congresista_id,proyecto_ley_ponentes,,La opci—n debe provenir de un cat‡logo,
 139,proyecto,de_ley_estadodeproyectodeley,id,,,,,,
 139,proyecto,de_ley_estadodeproyectodeley,fecha,,,,,,
 139,proyecto,de_ley_estadodeproyectodeley,estado_id,,,,,,
