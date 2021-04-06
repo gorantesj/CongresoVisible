@@ -1,0 +1,18 @@
+﻿id,nombre,activo,usercreated,usermodifed,created_at,updated_at
+1,Bachillerato,NA,NA,NA,NA,NA
+2,Bachillerato incompleto,NA,NA,NA,NA,NA
+3,Doctorado,NA,NA,NA,NA,NA
+4,Especialización,NA,NA,NA,NA,NA
+5,Maestría,NA,NA,NA,NA,NA
+6,NR,NA,NA,NA,NA,NA
+7,NS,NA,NA,NA,NA,NA
+8,O,NA,NA,NA,NA,NA
+9,Primaria,NA,NA,NA,NA,NA
+10,Primaria incompleta,NA,NA,NA,NA,NA
+11,Po,NA,NA,NA,NA,NA
+12,Técnica,NA,NA,NA,NA,NA
+13,Tecnológica,NA,NA,NA,NA,NA
+14,Tecnológica incompleta,NA,NA,NA,NA,NA
+15,Técnica incompleta,NA,NA,NA,NA,NA
+16,Universitaria,NA,NA,NA,NA,NA
+17,Universitaria Incompleta,NA,NA,NA,NA,NA

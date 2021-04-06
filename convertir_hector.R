@@ -268,10 +268,43 @@ proyecto %>%  mutate(proyecto_ley_id=NA_character_,
                        usercreated=NA_character_) %>%
   write_excel_csv("Bases de datos nuevas/proyecto_ley_autor_otros.csv")
 
+#grado estudios----------
+
+grad <- read_csv("Bases de datos nuevas/personas.csv") %>%
+  select(grado_estudios) %>%
+  unique() %>%
+  filter(!is.na(grado_estudios)) %>%
+  arrange(grado_estudios) %>%
+  mutate(id=row_number()) %>%
+  rename(nombre=grado_estudios) %>%
+  mutate(activo=NA_character_,
+         usercreated=NA_character_,
+         usermodifed=NA_character_,
+         created_at=NA_character_,
+         updated_at=NA_character_) %>%
+  mutate(nombre_final=if_else(nombre=="B", "Bachillerato",
+                      if_else(nombre=="BI", "Bachillerato incompleto",
+                      if_else(nombre=="D", "Doctorado",
+                      if_else(nombre=="E", "Especialización",
+                      if_else(nombre=="M", "Maestría",
+                      if_else(nombre=="NR" | nombre=="NS" | nombre=="O"| nombre=="Po", nombre,
+                      if_else(nombre=="P", "Primaria",
+                      if_else(nombre=="PI", "Primaria incompleta",
+                      if_else(nombre=="T", "Técnica",
+                      if_else(nombre=="TE", "Tecnológica",
+                      if_else(nombre=="TEI", "Tecnológica incompleta",
+                      if_else(nombre=="TI", "Técnica incompleta",
+                      if_else(nombre=="U", "Universitaria", "Universitaria Incompleta")))))))))))))) %>%
+  select(-nombre) %>%
+  select(id, nombre_final, activo:updated_at) %>%
+  rename(nombre=nombre_final) %>%
+  write_excel_csv("finales_hector/tablas nuevas/grado_estudios.csv")
 #personas --------------------
 
-personas <- read_csv("Bases de datos nuevas/personas.csv")
-
+personas <- read_csv("finales_hector/tablas nuevas/personas.csv")
+grado <- read_csv("finales_hector/tablas nuevas/grado_estudios.csv") %>%
+         select(nombre, id) %>%
+         rename(grado_estudio_id=id)
 #Limpiar nombres y apellidos de NAs
 
 personasfinal <- personas %>%
@@ -295,7 +328,19 @@ personasfinal <- mutate(personasfinal, apellidos=stringr::str_to_lower(apellidos
 personasfinal <- mutate(personasfinal, apellidos=stringr::str_to_title(apellidos))
 
 personasfinal <-  personasfinal%>%
-  write_excel_csv("Bases de datos nuevas/personas.csv")
+   mutate(activo=  NA_character_,
+   usercreated=NA_character_,
+   usermodifed=NA_character_,
+   perfil_educativo=NA_character_) %>%
+   rename(municipio_id_nacimiento=municipio_nacimiento_id)
+
+
+personasfinal <- left_join(personasfinal,grado, by=c("grado_estudios"="nombre"))
+
+
+personasfinal <- personasfinal %>%
+                select(-grado_estudios) %>%
+  write_excel_csv("finales_hector/tablas nuevas/personas.csv")
 
 
 
@@ -323,14 +368,38 @@ secretario <- inner_join(secretario, personas, by=c("persona_id"="id")) %>%
 
 
 
+
+
+
+
+
 #control_politico_citados----------
 
 
 control_citados <- tabla_res[[125]] %>%
-                   mutate(persona_id=citado_id+14657)
+                   mutate(persona_id=citado_id+14657,
+                   asistencia_id=if_else(asiste==T, 1,
+                                 if_else(asiste==F & delega_asistencia==T & excuso==F, 2,
+                                 if_else(asiste==F & delega_asistencia==F & excuso==T, 3,
+                                 if_else(asiste==F & delega_asistencia==T & excuso==T, 4, 5))))) %>%
+                   select(-asiste, -delega_asistencia, -excuso, -citado_id) %>%
+                   rename(control_politico_id=citacion_id) %>%
+                   mutate(activo=NA_character_,
+                   usercreated=NA_character_,
+                   usermodifed=NA_character_,
+                   created_at=NA_character_,
+                   updated_at=NA_character_,
+                   tipo_citado="citado") %>%
+                   write_excel_csv("finales_hector/cambios en campos/control_politico_citado.csv")
 
 
-personas <- read_csv("FinalesDeborah/tablas nuevas/personas.csv")
+
+
+
+
+#Pruebas
+personas <- read_csv("FinalesDeborah/tablas nuevas/personas.csv") %>%
+
 
 siestan <- inner_join(control_citados, personas, by=c("persona_id"="id"))
 noestan <- anti_join(control_citados, personas, by=c("persona_id"="id"))
@@ -352,16 +421,46 @@ orden_dia_cuatrienio <- tabla_res[[131]] %>%
 
 
 citacion_prueba <- left_join(citacion_prueba, orden_dia_cuatrienio,by=c("orden_del_dia_id"="id"))
+#Fin de Pruebas
+
+
+#asistencias------------------
+
+asistencias <- read_csv("finales_hector/cambios en campos/control_politico_citado.csv") %>%
+               select(asistencia_id) %>%
+               filter(!is.na(asistencia_id)) %>%
+               unique() %>%
+               rename(id=asistencia_id) %>%
+               mutate(nombre=if_else(id==1, "Asiste",
+                              if_else(id==2, "Delega asistencia",
+                              if_else(id==3, "Excuso",
+                              if_else(id==4, "Delega asistencia y excuso", "No asiste, no delega y no excuso")))))
 
 
 
+
+#Invitado asistente citacion----------------
+
+invi <- tabla_res[[127]] %>%
+        mutate(persona_id=citado_id+14657,
+         asistencia_id=if_else(asiste==T, 1,
+                               if_else(asiste==F & delega_asistencia==T & excuso==F, 2,
+                                       if_else(asiste==F & delega_asistencia==F & excuso==T, 3,
+                                               if_else(asiste==F & delega_asistencia==T & excuso==T, 4, 5))))) %>%
+  select(-asiste, -delega_asistencia, -excuso, -citado_id) %>%
+  rename(control_politico_id=citacion_id) %>%
+  mutate(activo=NA_character_,
+         usercreated=NA_character_,
+         usermodifed=NA_character_,
+         created_at=NA_character_,
+         updated_at=NA_character_)
 
 
 # transformación ----------------------------------------------------------
 
-crear_bases(campos %>% filter(num==63), tabla_res)
+crear_bases(campos %>% filter(num==127), tabla_res)
 
-tabla_res[[125]] %>%  View()
+tabla_res[[127]] %>%  View()
 # Sandbox -----------------------------------------------------------------
 
 
