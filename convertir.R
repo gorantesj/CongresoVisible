@@ -95,11 +95,8 @@ graficar_relaciones <- function(carpeta="Base de datos/"){
 
 # Blogs
 # Blog, posts, tipo_blogs, autor
-<<<<<<< HEAD
-posts <- tablas_res[[18]] %>%
-=======
+
 posts <- tablas_res2[[18]] %>%
->>>>>>> 03048d4e0e240a4e1df759a48a30af7f9ba68c8e
   inner_join(tablas_res[[15]], by=c("blog_id"="id")) %>%
   select(-id,-blog_id, -destacado.x, -destacado.y) %>%
   rename(`titulo_post`=titulo.x,
@@ -180,11 +177,9 @@ trayectoria_privada <- tablas_res[[33]] %>%
   inner_join(trayectoria_privada) %>%
   select(id, persona_id, cargo, fecha, fecha_final,created_at, updated_at)
 write_csv(trayectoria_privada, file = "finales/cambio en campos/persona_trayectoria_privadas.csv")
-<<<<<<< HEAD
+
 # Cargo legislativos, catálogo para cargo camara y cargo comisiones
-=======
-# Cargo cámara
->>>>>>> 03048d4e0e240a4e1df759a48a30af7f9ba68c8e
+
 tablas_res[[34]] %>%
   select(id, nombre) %>%
   write_csv("finales/tablas nuevas/cargo_corporacions.csv")
@@ -215,7 +210,6 @@ write_csv(cargo_camara, "finales/tablas nuevas/cargo_camaras.csv")
 
 # Cargo político
 # Para la migración hay que eliminar los cargos de cámaras
-<<<<<<< HEAD
 cargo_politico <- tablas_res[[36]] %>%
   mutate(activo=T, usercreated="", usermodifed="") %>%
   select(id,
@@ -253,21 +247,11 @@ congresista_partido <-  tablas_res[[41]] %>%
 rbind(cargo_politico,
       congresista_partido) %>%
 write_csv("finales/cambio en campos/persona_trayectoria_publicas.csv")
-=======
-tablas_res[[36]] %>%
-  filter(is.na(x = camara_id)) %>%
-  select(id, persona_id, partido_id, fecha=fecha_inicio, fecha_final) %>%
-  write_csv("finales/cambio en campos/persona_trayectoria_publicas.csv")
->>>>>>> 03048d4e0e240a4e1df759a48a30af7f9ba68c8e
+
 
 
 # Datos contactos ---------------------------------------------------------
-comision_contacto <- tablas_res[[38]] %>% select(comision_id=id,
-<<<<<<< HEAD
-                                                  correo:url) %>%
-=======
-                                                 correo:url) %>%
->>>>>>> 03048d4e0e240a4e1df759a48a30af7f9ba68c8e
+comision_contacto <- tablas_res[[38]] %>% select(comision_id=id, correo:url) %>%
   tidyr::pivot_longer(cols = -comision_id,
                       names_to = "dato_contacto_id",
                       values_to = "cuenta") %>%
@@ -296,7 +280,6 @@ comision_contacto <- comision_contacto %>% rename(nombre=dato_contacto_id) %>%
   select(id, dato_contacto_id, comision_id, cuenta,activo:updated_at)
 write_csv(comision_contacto,file = "finales/idénticas/comision_datos_contactos.csv")
 
-<<<<<<< HEAD
 # Congresistas
 congresista_contacto <- inner_join(tablas_res[[39]],
            congresistas,
@@ -319,7 +302,7 @@ write_csv(comision_contacto,file = "finales/idénticas/congresista_datos_contac
 # transformación ----------------------------------------------------------
 campos <- read_csv("paralafinal.csv")
 crear_bases(campos %>% filter(num==47), tablas_res)
-=======
+
 # Congresista -------------------------------------------------------------
 tablas_res[[39]] %>% count()
 
@@ -413,7 +396,6 @@ campos <- read_csv("paralafinaldeborah.csv")
 # crear_bases(campos, tablas_res)
 crear_bases(campos %>%  filter(num == 124), tablas_res)
 
->>>>>>> 03048d4e0e240a4e1df759a48a30af7f9ba68c8e
 
 tablas_res[[124]]
 
