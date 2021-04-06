@@ -403,7 +403,7 @@ num,seccion,tabla,campo,grupo,campo_gp,tabla_gp,transformar,observaciones
 54,congreso,persona,posicion_ideologica,2,,personas,,
 54,congreso,persona,region_nacimiento_id,3,,personas,,
 54,congreso,persona,facebook_user,3,,personas,,
-54,congreso,persona,mini_bio,3,,personas,,
+54,congreso,persona,mini_bio,3,,personas,,Para cv
 54,congreso,persona,estrato,2,,personas,,
 54,congreso,persona,idrac,2,,personas,,
 54,congreso,persona,estado_civil,2,,personas,,
