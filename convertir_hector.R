@@ -257,7 +257,7 @@ controlpol_orden <- rename(controlpol_orden, agenda_legislativa_actividad_id=ite
 controlpol_orden <- select(controlpol_orden, id, cuatrienio_id, comision_id, estado_control_politico_id, titulo, fecha, activo:updated_at,
                            tema_principal_id:tags, detalles, gacetas, numero_proposicion)%>%
   write_excel_csv("finales_hector/cambios en campos/control_politicos.csv")
-# proyecto ley autor -------------------------------------------------------------
+# proyecto ley autor otros -------------------------------------------------------------
 
 
 proyecto <- read_csv("Bases de datos nuevas/proyecto_ley_autor_otros.csv")
@@ -547,7 +547,7 @@ proyecto_ley_comisions <- read_csv("Bases de datos nuevas/proyecto_ley_comisions
 
 crear_bases(campos %>% filter(num==143), tabla_res)
 
-proyectos <- tabla_res[[144]]
+fb <- tabla_res[[91]]
 # Sandbox -----------------------------------------------------------------
 
 
