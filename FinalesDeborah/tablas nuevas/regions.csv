@@ -1,9 +1,9 @@
-﻿id,nombre
-3,Extranjero
-5,Circunscripción Especial
-6,Amazonía
-8,Pacífica
-1,Andina
-4,Caribe
-9,Orinoquía
-10,Insular
+﻿id,nombre,activo,usercreated,usermodifed,created_at,updated_at
+3,Extranjero,T,,,,
+5,Circunscripción Especial,T,,,,
+6,Amazonía,T,,,,
+8,Pacífica,T,,,,
+1,Andina,T,,,,
+4,Caribe,T,,,,
+9,Orinoquía,T,,,,
+10,Insular,T,,,,
