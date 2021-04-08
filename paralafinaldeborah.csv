@@ -625,25 +625,25 @@ num,seccion,tabla,campo,grupo,campo_gp,tabla_gp,transformar,observaciones,termin
 102,grappelli,bookmarkitem,title,2,,,2,,1
 102,grappelli,bookmarkitem,link,2,,,2,,1
 102,grappelli,bookmarkitem,order,2,,,2,,1
-109,grupo,grupo,id,,,,,,
-109,grupo,grupo,created_at,,,,,,
-109,grupo,grupo,edited_at,,,,,,
-109,grupo,grupo,persona_id,,,,,,
-109,grupo,grupo,nombre_grupo,,,,,,
-109,grupo,grupo,nombre_contacto,,,,,,
-109,grupo,grupo,email_contacto,,,,,,
-109,grupo,grupo,sitio_web,,,,,,
-109,grupo,grupo,fecha_fundacion,,,,,,
-109,grupo,grupo,objetivos,,,,,,
-109,grupo,grupo,activo,,,,,,
-109,grupo,grupo,imagen,,,,,,
-109,grupo,grupo,direccion,,,,,,
-109,grupo,grupo,mision,,,,,,
-109,grupo,grupo,vision,,,,,,
-109,grupo,grupo,telefono,,,,,,
-109,grupo,grupo,twitter,,,,,,
-109,grupo,grupo,descripcion,,,,,,
-109,grupo,grupo,facebook,,,,,,
+109,grupo,grupo,id,1,id,entidads,,,
+109,grupo,grupo,created_at,1,created_at,entidads,,,
+109,grupo,grupo,edited_at,1,updated_at,entidads,,,
+109,grupo,grupo,persona_id,1,persona_id,entidads,,,
+109,grupo,grupo,nombre_grupo,1,nombre,entidads,,,
+109,grupo,grupo,nombre_contacto,1,contacto,datos_contacto,,,
+109,grupo,grupo,email_contacto,1,email,datos_contacto,,,
+109,grupo,grupo,sitio_web,1,sitio_web,datos_contacto,,,
+109,grupo,grupo,fecha_fundacion,1,fecha_fundacion,entidads,,,
+109,grupo,grupo,objetivos,1,objetivos,entidads,,,
+109,grupo,grupo,activo,1,activo,entidads,,,
+109,grupo,grupo,imagen,1,imagen,entidads,,,
+109,grupo,grupo,direccion,1,direccion,datos_contacto,,,
+109,grupo,grupo,mision,1,mision,entidads,,,
+109,grupo,grupo,vision,1,vision,entidads,,,
+109,grupo,grupo,telefono,1,telefono,datos_contacto,,,
+109,grupo,grupo,twitter,1,twitter,datos_contacto,,,
+109,grupo,grupo,descripcion,1,descripcion,datos_contacto,,,
+109,grupo,grupo,facebook,1,facebook,datos_contacto,,,
 110,home,banner,id,2,,,2,,1
 110,home,banner,titulo,2,,,2,,1
 110,home,banner,texto,2,,,2,,1
@@ -857,32 +857,32 @@ num,seccion,tabla,campo,grupo,campo_gp,tabla_gp,transformar,observaciones,termin
 151,proyecto,de_ley_votacion_estados_proyecto,id,1,id,votacion_estados,,,1
 151,proyecto,de_ley_votacion_estados_proyecto,votacion_id,1,votacion_id,votacion_estados,,,1
 151,proyecto,de_ley_votacion_estados_proyecto,estadodeproyectodeley_id,1,proyecto_ley_estado_id,votacion_estados,,,1
-152,proyecto,de_ley_votacion,id,1,id,votacions,,,
-152,proyecto,de_ley_votacion,created_at,1,created_at,votacions,,,
-152,proyecto,de_ley_votacion,edited_at,1,updated_at,votacions,,,
-152,proyecto,de_ley_votacion,fecha,1,fecha,votacions,,,
-152,proyecto,de_ley_votacion,proyecto_id,1,proyecto_de_ley_id,votacions,,,
-152,proyecto,de_ley_votacion,motivo,1,motivo,votacions,,Se tiene que agrgar,
-152,proyecto,de_ley_votacion,a_favor,2,,votacions,,tiene puroos nas,
-152,proyecto,de_ley_votacion,en_contra,2,,votacions,,tiene puroos nas,
-152,proyecto,de_ley_votacion,votosFavor,1,votosFavor,votacions,,,
-152,proyecto,de_ley_votacion,votosContra,1,votosContra,votacions,,,
-152,proyecto,de_ley_votacion,aprobado,2,,votacions,,Tine solo nas,
-152,proyecto,de_ley_votacion,tipo_votacion_id,1,tipo_votacion_id,votacions,,"Se van a obviar las procedimentales. Se quedan solamente: Actos legislativos, proyectos de ley y estatutarias.",
-152,proyecto,de_ley_votacion,gaceta,1,gaceta,votacions,,,
-152,proyecto,de_ley_votacion,acta,1,acta,votacions,,viene llena al 80%,
-152,proyecto,de_ley_votacion,observaciones,1,observaciones,votacions,,"preguntar, el 65% es na. Pero hay datos que paren ser relevantes",
-152,proyecto,de_ley_votacion,votacion_en_dia,2,,votacions,,"Espara que las votaciones salgan ordenadas en la pagina web, pero en realidad la variable no importa.  Para darle orden, pero hay que tener en cuenta las fechas del proceso y nosolo fecha porque hay empates.",
-152,proyecto,de_ley_votacion,destacada,2,,votacions,,,
-152,proyecto,de_ley_votacion,old_id,2,,votacions,,,
-152,proyecto,de_ley_votacion,aprobada,1,aprobada,votacions,,,
-152,proyecto,de_ley_votacion,cuatrienio_id,1,cuatrienio_id,votacions,,No hay tabla en diccionario,
-152,proyecto,de_ley_votacion,votosAbstencion,1,votosAbstencion,votacions,,Porque es votos a favot y contra,
-152,proyecto,de_ley_votacion,numero_no_asistencias,1,numero_no_asistencias,votacions,,,
-152,proyecto,de_ley_votacion,clase_votacion_id,1,clase_votacion_id,votacions,,,
-152,proyecto,de_ley_votacion,numero_asistencias,1,numero_asistencias,votacions,,No hay tabla en diccionario,
-152,proyecto,de_ley_votacion,datos_importacion,2,,votacions,,Revision con CV por si alimenta otra tabla,
-152,proyecto,de_ley_votacion,resultados_importacion,2,,votacions,,Revision con CV por si alimenta otra tabla,
+152,proyecto,de_ley_votacion,id,1,id,votacions,,,1
+152,proyecto,de_ley_votacion,created_at,1,created_at,votacions,,,1
+152,proyecto,de_ley_votacion,edited_at,1,updated_at,votacions,,,1
+152,proyecto,de_ley_votacion,fecha,1,fecha,votacions,,,1
+152,proyecto,de_ley_votacion,proyecto_id,1,proyecto_de_ley_id,votacions,,,1
+152,proyecto,de_ley_votacion,motivo,1,motivo,votacions,,Se tiene que agrgar,1
+152,proyecto,de_ley_votacion,a_favor,2,,votacions,,tiene puroos nas,1
+152,proyecto,de_ley_votacion,en_contra,2,,votacions,,tiene puroos nas,1
+152,proyecto,de_ley_votacion,votosFavor,1,votosFavor,votacions,,,1
+152,proyecto,de_ley_votacion,votosContra,1,votosContra,votacions,,,1
+152,proyecto,de_ley_votacion,aprobado,2,,votacions,,Tine solo nas,1
+152,proyecto,de_ley_votacion,tipo_votacion_id,1,tipo_votacion_id,votacions,,"Se van a obviar las procedimentales. Se quedan solamente: Actos legislativos, proyectos de ley y estatutarias.",1
+152,proyecto,de_ley_votacion,gaceta,1,gaceta,votacions,,,1
+152,proyecto,de_ley_votacion,acta,1,acta,votacions,,viene llena al 80%,1
+152,proyecto,de_ley_votacion,observaciones,1,observaciones,votacions,,"preguntar, el 65% es na. Pero hay datos que paren ser relevantes",1
+152,proyecto,de_ley_votacion,votacion_en_dia,2,,votacions,,"Espara que las votaciones salgan ordenadas en la pagina web, pero en realidad la variable no importa.  Para darle orden, pero hay que tener en cuenta las fechas del proceso y nosolo fecha porque hay empates.",1
+152,proyecto,de_ley_votacion,destacada,2,,votacions,,,1
+152,proyecto,de_ley_votacion,old_id,2,,votacions,,,1
+152,proyecto,de_ley_votacion,aprobada,1,aprobada,votacions,,,1
+152,proyecto,de_ley_votacion,cuatrienio_id,1,cuatrienio_id,votacions,,No hay tabla en diccionario,1
+152,proyecto,de_ley_votacion,votosAbstencion,1,votosAbstencion,votacions,,Porque es votos a favot y contra,1
+152,proyecto,de_ley_votacion,numero_no_asistencias,1,numero_no_asistencias,votacions,,,1
+152,proyecto,de_ley_votacion,clase_votacion_id,1,clase_votacion_id,votacions,,,1
+152,proyecto,de_ley_votacion,numero_asistencias,1,numero_asistencias,votacions,,No hay tabla en diccionario,1
+152,proyecto,de_ley_votacion,datos_importacion,2,,votacions,,Revision con CV por si alimenta otra tabla,1
+152,proyecto,de_ley_votacion,resultados_importacion,2,,votacions,,Revision con CV por si alimenta otra tabla,1
 153,proyecto,de_ley_votacionpartido,id,2,,,2,,1
 153,proyecto,de_ley_votacionpartido,created_at,2,,,2,,1
 153,proyecto,de_ley_votacionpartido,edited_at,2,,,2,,1

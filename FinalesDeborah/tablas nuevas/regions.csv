@@ -1,4 +1,5 @@
 ﻿id,nombre,activo,usercreated,usermodifed,created_at,updated_at
+<<<<<<< HEAD
 3,Extranjero,T,,,,
 5,Circunscripción Especial,T,,,,
 6,Amazonía,T,,,,
@@ -7,3 +8,13 @@
 4,Caribe,T,,,,
 9,Orinoquía,T,,,,
 10,Insular,T,,,,
+=======
+3,Extranjero,NA,NA,NA,NA,NA
+5,Circunscripción Especial,NA,NA,NA,NA,NA
+6,Amazonía,NA,NA,NA,NA,NA
+8,Pacífica,NA,NA,NA,NA,NA
+1,Andina,NA,NA,NA,NA,NA
+4,Caribe,NA,NA,NA,NA,NA
+9,Orinoquía,NA,NA,NA,NA,NA
+10,Insular,NA,NA,NA,NA,NA
+>>>>>>> d31e54f40a54f5005dd910c4fdbe253528b83ecb
