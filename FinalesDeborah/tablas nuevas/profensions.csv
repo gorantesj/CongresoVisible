@@ -1,50 +1,50 @@
-﻿id,nombre
-174,Abogado/a
-175,Administrador/a de empresas
-176,Antropólogo/a
-177,Arquitecto/a
-178,Artista
-179,Biólogo/a
-180,Ciencias de la Salud
-181,Comunicador/a social
-182,Contador/a
-184,Docente
-185,Economista
-228,Bibliotecólogo/a
-187,Esteticista
-188,Filosofo/a
-189,Físico/a
-190,Geógrafo/a
-191,Geólogo/a
-192,Historiador/a
-193,Ingeniero/a
-195,Matemático/a
-196,Politólogo/a
-197,Psicólogo/a
-198,Químico/a
-199,Trabajador social
-200,No profesional
-202,Guía turístico
-203,Internacionalista
-204,Religioso
-209,Empresario
-217,Veterinario/a
-218,Estudiante
-219,Sociólogo/a
-221,Carrera militar
-222,Piloto
-223,Deportista
-230,Publicista
-236,Comercio Exterior
-237,Obras Públicas
-238,Odontólogo/a
-239,Gobierno
-201,Administrador/a público/a
-227,Agrónomo/a
-241,Diseñador/a
-240,Secretario/a
-242,Zootecnista
-243,Teólogo/a
-244,Auxilar de Enfermería
-245,Licenciado
-234,Mercadeo / Negocios Internacionales
+﻿id,nombre,activo,usercreated,usermodifed,created_at,updated_at
+174,Abogado/a,NA,NA,NA,NA,NA
+175,Administrador/a de empresas,NA,NA,NA,NA,NA
+176,Antropólogo/a,NA,NA,NA,NA,NA
+177,Arquitecto/a,NA,NA,NA,NA,NA
+178,Artista,NA,NA,NA,NA,NA
+179,Biólogo/a,NA,NA,NA,NA,NA
+180,Ciencias de la Salud,NA,NA,NA,NA,NA
+181,Comunicador/a social,NA,NA,NA,NA,NA
+182,Contador/a,NA,NA,NA,NA,NA
+184,Docente,NA,NA,NA,NA,NA
+185,Economista,NA,NA,NA,NA,NA
+228,Bibliotecólogo/a,NA,NA,NA,NA,NA
+187,Esteticista,NA,NA,NA,NA,NA
+188,Filosofo/a,NA,NA,NA,NA,NA
+189,Físico/a,NA,NA,NA,NA,NA
+190,Geógrafo/a,NA,NA,NA,NA,NA
+191,Geólogo/a,NA,NA,NA,NA,NA
+192,Historiador/a,NA,NA,NA,NA,NA
+193,Ingeniero/a,NA,NA,NA,NA,NA
+195,Matemático/a,NA,NA,NA,NA,NA
+196,Politólogo/a,NA,NA,NA,NA,NA
+197,Psicólogo/a,NA,NA,NA,NA,NA
+198,Químico/a,NA,NA,NA,NA,NA
+199,Trabajador social,NA,NA,NA,NA,NA
+200,No profesional,NA,NA,NA,NA,NA
+202,Guía turístico,NA,NA,NA,NA,NA
+203,Internacionalista,NA,NA,NA,NA,NA
+204,Religioso,NA,NA,NA,NA,NA
+209,Empresario,NA,NA,NA,NA,NA
+217,Veterinario/a,NA,NA,NA,NA,NA
+218,Estudiante,NA,NA,NA,NA,NA
+219,Sociólogo/a,NA,NA,NA,NA,NA
+221,Carrera militar,NA,NA,NA,NA,NA
+222,Piloto,NA,NA,NA,NA,NA
+223,Deportista,NA,NA,NA,NA,NA
+230,Publicista,NA,NA,NA,NA,NA
+236,Comercio Exterior,NA,NA,NA,NA,NA
+237,Obras Públicas,NA,NA,NA,NA,NA
+238,Odontólogo/a,NA,NA,NA,NA,NA
+239,Gobierno,NA,NA,NA,NA,NA
+201,Administrador/a público/a,NA,NA,NA,NA,NA
+227,Agrónomo/a,NA,NA,NA,NA,NA
+241,Diseñador/a,NA,NA,NA,NA,NA
+240,Secretario/a,NA,NA,NA,NA,NA
+242,Zootecnista,NA,NA,NA,NA,NA
+243,Teólogo/a,NA,NA,NA,NA,NA
+244,Auxilar de Enfermería,NA,NA,NA,NA,NA
+245,Licenciado,NA,NA,NA,NA,NA
+234,Mercadeo / Negocios Internacionales,NA,NA,NA,NA,NA
