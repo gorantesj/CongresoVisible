@@ -764,7 +764,7 @@ num,seccion,tabla,campo,grupo,campo_gp,tabla_gp,transformar,observaciones
 135,proyecto,de_ley_autorproyectoley,created_at,1,created_at,proyecto_ley_autors,,
 135,proyecto,de_ley_autorproyectoley,edited_at,1,updated_at,proyecto_ley_autors,,
 135,proyecto,de_ley_autorproyectoley,tipo_autor_id,3,,proyecto_ley_autors,,No se identifica a que se refiere
-135,proyecto,de_ley_autorproyectoley,autor_id,1,congresista_id,"proyecto_ley_autors, proyecto_ley_autor_otros",1,Se necesita identificar que autores son congresistas y cuales no
+135,proyecto,de_ley_autorproyectoley,autor_id,1,congresista_id,"proyecto_ley_autors, proyecto_ley_autor_otros",,Se necesita identificar que autores son congresistas y cuales no
 135,proyecto,de_ley_autorproyectoley,proyecto_ley_id,1,proyecto_ley_id,proyecto_ley_autors,,
 136,proyecto,de_ley_clasevotacion,id,3,id,,,
 136,proyecto,de_ley_clasevotacion,nombre,3,nombre,,,

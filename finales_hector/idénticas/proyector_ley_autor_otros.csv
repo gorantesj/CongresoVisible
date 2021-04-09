@@ -1,0 +1,278 @@
+﻿id,created_at,updated_at,nombre,activo,usermodifed,usercreated
+2,2010/06/08 20:46:57,2010/06/08 20:46:57,"Ministro de Hacienda y Crédito Público, Oscar Iván Zuluaga",NA,NA,NA
+3,2010/06/08 20:54:30,2010/07/15 19:31:24,"Ministra de Educación Nacional, Cecilia María Vélez White",NA,NA,NA
+4,2010/06/08 20:57:15,2010/06/08 20:57:15,"Ministro del Interior y de Justicia, Fabio Valencia Cossio",NA,NA,NA
+5,2010/06/08 21:01:41,2010/06/08 21:01:41,"Ministro de la Protección Social, Diego Palacio Betancourt",NA,NA,NA
+7,2010/06/08 21:41:16,2010/06/08 21:41:16,"Ministro de Transporte, Andrés Uriel Gallego",NA,NA,NA
+8,2010/06/08 21:48:08,2010/06/08 21:48:08,"Ministra de Tecnologías de la Información y las Comunicaciones, María del Rosario Guerra de la Espriella",NA,NA,NA
+90,2010/12/06 14:32:42,2010/12/06 14:32:42,"Viceministro de Minas y Energía, Tomás González",NA,NA,NA
+11,2010/06/24 21:57:54,2010/06/24 21:57:54,Iniciativa Popular,NA,NA,NA
+6,2010/06/08 21:07:14,2010/06/08 21:07:14,"Viceministro de Justicia y del Derecho, Miguel Ceballos",NA,NA,NA
+15,2010/06/25 13:07:58,2010/06/25 13:07:58,"Ministro de Comercio, Industria y Turismo, Luis Guillermo Plata",NA,NA,NA
+16,2010/06/25 13:12:59,2010/06/25 13:12:59,"Ministro de Ambiente, Vivienda y Desarrollo Territorial, Juan Lozano Ramírez",NA,NA,NA
+17,2010/06/25 22:32:17,2010/06/25 22:32:17,"Fiscal General de la Nación, (E) Guillermo Mendoza Diago",NA,NA,NA
+18,2010/06/28 18:46:17,2010/06/28 18:46:17,"Ministro de Defensa Nacional, Juan Manuel Santos",NA,NA,NA
+10,2010/06/24 20:02:22,2010/06/24 20:02:22,"Procurador General de la Nación, Edgardo José Maya Villazón",NA,NA,NA
+20,2010/06/28 20:15:41,2010/06/28 20:15:41,"Ministro de Defensa Nacional, Gabriel Silva Luján",NA,NA,NA
+12,2010/06/24 22:15:21,2010/06/24 22:15:21,"Ministro de Agricultura y Desarrollo Rural, Andrés Fernández",NA,NA,NA
+43,2010/07/10 23:20:38,2010/07/10 23:20:38,"Viceministra de Hacienda y Crédito Público, Gloria Inés Cortés Arango",NA,NA,NA
+22,2010/06/29 15:42:32,2010/06/29 15:42:32,"Contralor General de la Nación, Julio César Turbay Quintero",NA,NA,NA
+23,2010/06/29 20:39:36,2010/06/29 20:43:02,"Ministro de Relaciones Exteriores, Guillermo Fernández de Soto",NA,NA,NA
+13,2010/06/24 22:15:43,2010/07/10 16:58:55,"Ministro de Agricultura y Desarrollo Rural, Andrés Felipe Arias Leiva",NA,NA,NA
+24,2010/06/29 20:40:20,2010/06/29 20:42:46,"Ministra de Comercio Exterior, Marta Lucía Ramírez",NA,NA,NA
+26,2010/06/29 23:14:03,2010/06/29 23:15:58,"Ministra de Relaciones Exteriores, Carolina Barco Isackson",NA,NA,NA
+30,2010/06/30 21:21:50,2010/08/18 16:31:53,"Presidente Consejo de Estado, Ramiro Saavedra Becerra",NA,NA,NA
+31,2010/07/01 20:38:45,2010/07/01 20:38:45,"Ministra de Relaciones Exteriores, María Emma Mejía Vélez",NA,NA,NA
+28,2010/06/30 21:20:31,2010/06/30 21:20:31,"Fiscal General de la Nación, Mario Iguarán Arana",NA,NA,NA
+29,2010/06/30 21:21:31,2010/06/30 21:21:31,"Presidente Corte Suprema de Justicia, Yesid Ramírez Bastidas",NA,NA,NA
+32,2010/07/07 15:41:26,2010/07/07 15:41:26,"Ministro del Interior y de Justicia, Carlos Holguín Sardi",NA,NA,NA
+33,2010/07/07 16:19:14,2010/07/07 16:19:14,"Ministro de Comercio, Industria y Turismo, Jorge Humberto Botero",NA,NA,NA
+34,2010/07/07 16:49:33,2010/07/07 16:49:33,"Ministro de Relaciones Exteriores, María Consuelo Araújo Castro",NA,NA,NA
+52,2010/08/18 16:35:47,2012/08/02 18:42:32,"Ministro de Hacienda y Crédito Público, Juan Carlos Echeverry",NA,NA,NA
+36,2010/07/07 17:20:54,2010/07/07 17:20:54,"Ministro de Relaciones Exteriores, Fernando Araújo Perdomo",NA,NA,NA
+37,2010/07/07 17:34:53,2010/07/07 17:34:53,"Ministra de Cultura, Elvira Cuervo de Jaramillo",NA,NA,NA
+38,2010/07/07 17:46:53,2010/07/07 17:46:53,"Ministro de Minas y Energía, Luis Ernesto Mejía Castro",NA,NA,NA
+39,2010/07/07 17:59:19,2010/07/07 17:59:19,"Ministra de Ambiente, Vivienda y Desarrollo Territorial, Sandra Suárez Pérez",NA,NA,NA
+21,2010/06/28 21:57:22,2010/07/07 19:26:35,"Ministro del Interior y de Justicia, Sabas Pretelt de la Vega",NA,NA,NA
+40,2010/07/09 14:43:46,2010/07/09 14:43:46,"Viceministro de Agricultura y Desarrollo Rural, Juan Camilo Salazar Rueda",NA,NA,NA
+41,2010/07/09 20:50:33,2010/07/09 20:50:33,"Defensor del Pueblo, Volmar Pérez Ortiz",NA,NA,NA
+42,2010/07/10 23:17:25,2010/07/10 23:17:25,"Viceministro de Relaciones Exteriores, Camilo Reyes Rodríguez",NA,NA,NA
+44,2010/07/11 23:42:16,2010/07/11 23:42:16,"Presidente del Consejo Superior de la Judicatura, José Alfredo Escobar Araujo",NA,NA,NA
+45,2010/07/13 20:58:08,2010/07/13 20:58:08,"Viceministra de Medio Ambiente, Claudia Patricia Mora Pineda",NA,NA,NA
+35,2010/07/07 17:04:04,2010/07/13 21:28:15,"Viceministra de Cultura, María Cecilia Donado García",NA,NA,NA
+46,2010/07/14 17:17:46,2010/07/14 17:17:46,"Presidenta Consejo Nacional Electoral, Clelia América Sánchez de Alfonso",NA,NA,NA
+47,2010/07/14 20:05:01,2010/07/14 20:05:01,"Ministro de Defensa Nacional, Camilo Ospina Bernal",NA,NA,NA
+48,2010/08/04 20:48:00,2010/08/18 16:25:34,"Vocero Federación Nacional de Concejos, Antonio Galán Sarmiento",NA,NA,NA
+49,2010/08/05 20:15:09,2010/08/05 21:58:09,"Ministro de Ambiente Vivienda y Desarrollo Territorial, Carlos Costa Posada",NA,NA,NA
+14,2010/06/25 13:04:40,2010/08/10 20:11:44,"Ministra de Cultura, Paula Marcela Moreno Zapata",NA,NA,NA
+50,2010/08/18 16:20:15,2010/08/18 16:20:15,"Ministro del Interior y de Justicia, Germán Vargas Lleras",NA,NA,NA
+51,2010/08/18 16:34:11,2010/08/18 16:34:11,"Ministra de Relaciones Exteriores, María Angela Holguín",NA,NA,NA
+53,2010/08/18 16:37:30,2010/08/18 16:37:30,"Ministro de Defensa Nacional, Rodrigo Rivera Salazar",NA,NA,NA
+54,2010/08/23 15:04:36,2010/08/23 15:04:36,"Ministro de la Protección Social, Mauricio Santamaría Salamanca",NA,NA,NA
+55,2010/08/23 15:06:05,2010/08/23 15:06:05,"Ministro de Comercio, Industria y Turismo, Sergio Diazgranados Guida",NA,NA,NA
+56,2010/08/24 21:07:51,2010/08/24 21:07:51,"Presidente del Consejo de Estado, Rafael Ostau De Lafont",NA,NA,NA
+57,2010/08/24 21:45:44,2010/08/24 21:45:44,"Directora del Departamento Administrativo de la Función Pública,  Elizabeth  Rodríguez  Taylor.",NA,NA,NA
+112,2011/01/26 18:23:36,2011/01/26 18:23:36,"Fiscal General de la Nación, Jaime Córdoba triviño",NA,NA,NA
+83,2010/11/10 19:05:27,2010/11/10 19:05:27,"Ministro del Interior y de Justicia, Fernando Londoño Hoyos",NA,NA,NA
+84,2010/11/10 21:50:59,2010/11/10 21:50:59,"Defensor del Pueblo, Eduardo Cifuentes Muñoz",NA,NA,NA
+85,2010/11/12 14:50:17,2010/11/12 14:50:17,"Viceministro de Hacienda y Crédito Público,  Juan Ricardo Ortega López",NA,NA,NA
+86,2010/11/12 15:23:10,2010/11/12 15:23:10,"Ministro (E)  de Relaciones Exteriores, Jaime Girón Duarte",NA,NA,NA
+59,2010/08/25 17:06:10,2010/08/25 17:07:26,"Procurador General de la Nación, Alejandro Ordoñez Maldonado",NA,NA,NA
+64,2010/09/01 19:26:58,2010/09/01 19:26:58,"Presidente Consejo Electoral, Oscar Giraldo Jiménez",NA,NA,NA
+63,2010/08/30 20:57:41,2010/08/30 20:58:52,"Presidente del Consejo Nacional Electoral, Ciro Muñoz Oñate",NA,NA,NA
+66,2010/09/02 16:28:17,2010/09/02 16:28:17,"Ministro de Minas y Energía, Carlos Rodado Noriega",NA,NA,NA
+67,2010/09/02 19:56:41,2010/09/02 19:56:41,"Contralor Encargado, Roberto Pablo Hoyos Botero",NA,NA,NA
+69,2010/09/08 16:41:31,2010/09/08 16:41:31,"Ministro de Agricultura y Desarrollo Rural, Juan Camilo Restrepo",NA,NA,NA
+70,2010/09/09 20:38:21,2010/09/09 20:38:21,"Viceministro de Desarrollo Económico, Juan Alfredo Pinto Saavedra",NA,NA,NA
+71,2010/09/09 21:13:21,2010/09/09 21:13:21,"Procurador General de la Nación, Jaime Bernal Cuellar",NA,NA,NA
+72,2010/09/28 22:14:24,2010/09/28 22:14:24,"Fiscal General de la Nación, Luis Camilo Osorio Isaza",NA,NA,NA
+68,2010/09/02 22:01:52,2010/09/29 22:14:34,"Ministro de Agricultura y Desarrollo Rural, Carlos Gustavo Cano",NA,NA,NA
+79,2010/10/20 20:46:02,2010/10/20 20:46:02,"Ministra de Educación (e), Juana Inés Díaz",NA,NA,NA
+74,2010/10/05 21:55:50,2010/10/05 21:55:50,"Ministro de Defensa Nacional, Jorge Alberto Uribe Echavarria",NA,NA,NA
+75,2010/10/11 20:30:31,2010/10/11 20:30:31,"Contralor General de la Nación, Antonio Hernández Gamarra",NA,NA,NA
+82,2010/11/08 19:39:49,2010/11/08 19:39:49,"Presidente del Consejo Superior de la Judicatura, Guillermo Bueno Miranda.",NA,NA,NA
+77,2010/10/13 22:04:31,2011/01/25 18:18:39,"Ministro de Defensa Nacional, Martha Lucía Ramírez",NA,NA,NA
+78,2010/10/13 22:08:29,2010/10/13 22:08:29,"Presidenta del Consejo Superior de la Judicatura,  Lucía  Arbelaez de Tobón",NA,NA,NA
+80,2010/10/21 19:56:56,2011/03/10 16:57:12,"Ministra de Cultura, María Consuelo Araujo",NA,NA,NA
+88,2010/11/16 20:33:23,2010/11/16 20:33:23,"Ministro de la Protección Social, Juan Luis Londoño de la Cuesta",NA,NA,NA
+89,2010/11/16 21:48:53,2010/11/16 21:48:53,"Ministra de Ambiente, Vivienda y Desarrollo Territorial,  Cecilia  Rodríguez  González - Rubio",NA,NA,NA
+91,2011/01/13 21:04:11,2011/01/13 21:04:11,"Ministra de Justicia y del Derecho, Almabeatriz Rengifo López",NA,NA,NA
+92,2011/01/13 21:51:56,2011/01/13 21:51:56,"Ministro de Minas y Energía, Orlando Cabrales Martínez",NA,NA,NA
+93,2011/01/14 16:00:59,2011/01/14 16:00:59,"Ministro de Hacienda y Crédito Público, Juan Camilo Restrepo",NA,NA,NA
+94,2011/01/14 17:37:47,2011/01/14 17:37:47,"Ministro de Hacienda y Crédito Público, Antonio Urdinola",NA,NA,NA
+95,2011/01/14 19:30:18,2011/01/14 19:30:18,"Ministro de Transporte, Rodrigo Marín Bernal",NA,NA,NA
+96,2011/01/14 19:58:58,2011/01/14 19:58:58,"Ministro de Medio Ambiente, Eduardo Verano de la Rosa",NA,NA,NA
+97,2011/01/14 20:37:24,2011/01/14 20:37:24,"Ministro de Comunicaciones, José Fernando Bautista Quintero",NA,NA,NA
+98,2011/01/14 20:46:29,2011/01/14 20:46:29,"Ministro de Relaciones Exteriores, Camilo Reyes Rodríguez",NA,NA,NA
+99,2011/01/14 20:47:25,2011/01/14 20:47:25,"Ministro de Desarrollo Económico, Carlos Julio Gaitán González",NA,NA,NA
+100,2011/01/17 17:20:22,2011/01/17 17:20:22,"Ministro de Educación, Jaime Niño Diez",NA,NA,NA
+101,2011/01/17 19:27:12,2011/01/17 19:27:12,"Fiscal General de la Nación, Alfonso Gómez Méndez",NA,NA,NA
+102,2011/01/19 16:19:19,2011/01/19 16:19:19,"Presidente del Consejo Superior de la Judicatura, Gustavo Cuello Iriarte",NA,NA,NA
+103,2011/01/19 18:50:21,2011/01/19 18:50:21,"Ministro del Interior, Alfonso López Caballero",NA,NA,NA
+104,2011/01/21 21:25:44,2011/01/21 21:25:44,"Ministro del Interior, Néstor Humberto Martínez Neira",NA,NA,NA
+105,2011/01/24 19:09:53,2011/01/24 19:09:53,"Ministro de Defensa Nacional, Rodrigo Lloreda Caicedo",NA,NA,NA
+87,2010/11/16 17:13:56,2010/11/16 17:13:56,"Ministro de Tecnologías de la Información (e), Daniel Enrique Medina Velandia",NA,NA,NA
+106,2011/01/25 18:21:52,2011/01/25 18:21:52,"Ministro de Desarrollo Económico, Fernando Araújo Perdomo",NA,NA,NA
+108,2011/01/25 18:34:43,2011/01/25 18:34:43,"Defensor del Pueblo, José Fernando Castro Caycedo",NA,NA,NA
+110,2011/01/25 19:03:31,2011/01/25 19:03:31,"Ministra de Comunicaciones, Claudia de Francisco",NA,NA,NA
+111,2011/01/26 18:21:50,2011/01/26 18:21:50,"Ministro de Justicia y del Derecho, Parmenio Cuéllar Bastidas",NA,NA,NA
+107,2011/01/25 18:25:11,2012/06/22 06:01:09,"Director del Departamento Nacional de Planeación, Jaime Ruiz Llano",NA,NA,NA
+76,2010/10/11 20:33:24,2011/03/10 16:59:13,"Procurador General de la Nación (E), Carlos Darío Gómez Pavajeau.",NA,NA,NA
+142,2011/05/03 21:53:28,2011/05/03 21:53:28,"Ministro de Minas y Energía, Ramiro Valencia Cossio",NA,NA,NA
+143,2011/05/04 18:51:54,2011/05/04 18:51:54,"Ministro de Desarrollo Económico, Eduardo Pizano de Narváez",NA,NA,NA
+155,2011/08/16 20:42:35,2011/08/16 20:42:35,"Presidente del Consejo de Estado, Mauricio Fajardo Gómez",NA,NA,NA
+114,2011/01/31 22:24:46,2011/01/31 22:24:46,"Presidente del Consejo Superior de la Judicatura, Rómulo González Trujillo",NA,NA,NA
+115,2011/02/01 16:49:11,2011/02/01 16:49:11,"Ministro de Agricultura y Desarrollo Rural, Carlos Roberto Murgas Guerrero",NA,NA,NA
+116,2011/02/01 19:46:44,2011/02/01 19:46:44,"Ministro de Transporte, Mauricio Cárdenas Santamaría",NA,NA,NA
+117,2011/02/02 20:26:48,2011/02/02 20:26:48,"Ministro de Defensa (E), Fernando Tapias Stahelin",NA,NA,NA
+118,2011/02/07 18:13:14,2011/02/07 18:13:14,"Contralor General de la Nación, Carlos Ossa Escobar",NA,NA,NA
+119,2011/02/07 22:06:53,2011/02/07 22:06:53,"Ministro de Salud, Virgilio Galvis Ramírez",NA,NA,NA
+120,2011/02/14 19:21:49,2011/02/15 16:24:05,"Ministro de Justicia, Rómulo González Trujillo",NA,NA,NA
+121,2011/02/14 19:39:55,2011/02/15 16:26:42,"Ministro de Educación, Germán Bula Escobar",NA,NA,NA
+144,2011/05/09 21:48:21,2011/05/09 21:48:46,"Viceministra de Medio Ambiente, Claudia Martínez Zuleta",NA,NA,NA
+145,2011/05/10 20:05:42,2011/05/10 20:05:42,"Ministro de Defensa Nacional, Gustavo Bell Lemus",NA,NA,NA
+122,2011/02/15 18:25:23,2011/02/15 18:25:23,"Ministro de Desarrollo Económico, Jaime Alberto Cabal",NA,NA,NA
+156,2011/08/19 20:05:52,2011/08/19 20:05:52,"Ministro de Justicia, Juan Carlos Esguerra Portocarrero",NA,NA,NA
+124,2011/02/16 15:28:42,2011/02/16 15:28:42,"Ministra de Trabajo y Seguridad Social, Gina Magnolia Riaño Barón",NA,NA,NA
+125,2011/02/16 19:31:09,2011/02/16 19:31:09,"Ministro de Minas y Energía, Luis Carlos Valenzuela Delgado",NA,NA,NA
+126,2011/02/17 16:56:06,2011/02/17 16:56:06,"Viceministra de Relaciones Exteriores, Clemencia Forero Ucrós",NA,NA,NA
+146,2011/05/11 17:02:44,2011/05/11 17:02:44,"Presidente Consejo Nacional Electoral, Luis Felipe Vergara Cabal",NA,NA,NA
+127,2011/02/17 16:57:09,2011/02/17 16:59:22,"Viceministro de Desarrollo Empresarial, Ricardo Duarte Duarte",NA,NA,NA
+128,2011/02/17 18:56:16,2011/02/17 18:56:16,"Viceministra de Relaciones Exteriores, María Fernanda Campo",NA,NA,NA
+129,2011/02/17 19:59:49,2011/02/17 19:59:49,"Ministro de Agricultura y Desarrollo Rural, Rodrigo Villalba Mosquera",NA,NA,NA
+130,2011/02/25 20:39:43,2011/02/25 20:39:43,"Ministro de Defensa Nacional, Luis Fernando Ramírez Acuña",NA,NA,NA
+131,2011/02/28 20:26:28,2011/02/28 20:26:28,"Ministro de Transporte, Gustavo Adolfo Canal Mora",NA,NA,NA
+132,2011/03/10 15:11:05,2011/03/10 16:43:04,"Ministro del Interior, Armando Estrada Villa",NA,NA,NA
+147,2011/05/11 21:31:50,2011/05/11 21:31:50,"Ministro de Educación, Francisco José Lloreda",NA,NA,NA
+81,2010/11/04 19:31:27,2011/03/10 16:55:12,"Viceministro de Minas y Energía, Manuel F. Maiguashca Olano",NA,NA,NA
+133,2011/03/11 15:22:34,2011/03/11 15:22:34,"Contralora General de la República, Sandra Morelli Rico",NA,NA,NA
+134,2011/03/14 21:38:39,2011/03/14 22:02:34,"Ministro de Hacienda y Crédito Público, Juan Manuel Santos",NA,NA,NA
+148,2011/05/27 20:28:16,2011/05/27 20:28:16,"Ministra de Ambiente Vivienda y Desarrollo Territorial, Beatriz Uribe",NA,NA,NA
+135,2011/03/15 19:36:10,2011/03/15 19:36:10,"Viceministra de Comercio Exterior, Angela María Orozco Gómez",NA,NA,NA
+136,2011/03/18 21:16:06,2011/03/18 21:16:06,"Ministro del Interior, Humberto de la Calle Lombana",NA,NA,NA
+137,2011/03/18 21:18:09,2011/03/18 21:18:09,"Director Departamento Administrativo de la Función Pública, Mauricio Zuluaga Ruiz",NA,NA,NA
+138,2011/03/24 22:13:40,2011/03/24 22:13:40,"Ministra de Comunicaciones, María del Rosario Sintes Ulloa",NA,NA,NA
+139,2011/04/05 21:26:21,2011/04/05 21:26:21,"Ministro de Desarrollo Económico, Augusto Ramírez Ocampo",NA,NA,NA
+140,2011/04/06 14:31:48,2011/04/06 14:31:48,"Ministro de Tecnologías de la Información, Diego Ernesto Molano Vega",NA,NA,NA
+65,2010/09/01 22:11:15,2011/04/06 14:50:20,"Ministra de Cultura, Mariana Garcés Córdoba",NA,NA,NA
+141,2011/04/18 20:44:21,2011/04/18 20:44:21,"Ministro de Trabajo y Seguridad Social, Angelino Garzón",NA,NA,NA
+149,2011/05/30 19:44:23,2011/05/30 19:44:23,"Ministro de Transporte, (e) Federmán Quiroga Ríos",NA,NA,NA
+150,2011/06/01 19:33:15,2011/06/01 19:33:15,"Ministra de Comunicaciones, Angela Montoya Holguín",NA,NA,NA
+151,2011/06/02 21:22:58,2011/06/02 21:22:58,"Ministra de Cultura, Araceli Morales López",NA,NA,NA
+152,2011/06/02 21:51:47,2011/06/02 21:51:47,"Viceministro de Hacienda, Federico Renjifo Vélez",NA,NA,NA
+123,2011/02/15 18:28:50,2011/06/07 20:39:48,"Ministro de Medio Ambiente, Juan Mayr Maldonado",NA,NA,NA
+153,2011/06/07 21:07:37,2011/06/07 21:07:37,"Ministra de Salud, Sara Ordónez Noriega",NA,NA,NA
+154,2011/06/07 21:10:20,2011/06/07 21:10:20,"Ministro de Minas y Energía, Carlos Caballero Argáez",NA,NA,NA
+157,2011/08/19 20:11:07,2011/08/19 20:11:07,"Ministro del Interior, Germán Vargas Lleras",NA,NA,NA
+158,2011/08/25 14:51:09,2011/08/25 14:51:09,"Registrador Nacional del Estado Civil, Iván Duque Escobar",NA,NA,NA
+159,2011/08/25 21:30:40,2011/08/25 21:30:40,"Ministro de Hacienda y Crédito Público, Roberto Junguito Bonett",NA,NA,NA
+160,2011/09/08 21:16:40,2011/09/08 21:16:40,"Ministra de Comunicaciones, Martha Elena Pinto de De Hart",NA,NA,NA
+161,2011/09/09 19:09:23,2011/09/09 19:09:23,"Presidente de la Corte Suprema de Justicia,  Francisco Escobar Henríquez",NA,NA,NA
+162,2011/09/09 19:28:10,2011/09/09 19:28:10,"Ministro de Defensa Nacional, Gilberto Echeverry Mejía",NA,NA,NA
+163,2011/09/12 15:12:14,2011/09/12 15:12:14,"Ministra de Educación Nacional, María Fernanda Campo Saavedra",NA,NA,NA
+164,2011/09/12 17:09:24,2011/09/12 17:09:24,"Ministro de Transporte, Germán Cardona",NA,NA,NA
+165,2011/09/12 18:41:53,2011/09/12 18:41:53,"Presidente Consejo Nacional Electoral, Guillermo Francisco Reyes González",NA,NA,NA
+166,2011/09/12 22:06:31,2011/09/12 22:06:31,"Presidente Consejo Superior de la Judicatura, Carlos Enrique Marín Vélez",NA,NA,NA
+167,2011/09/12 22:20:10,2011/09/12 22:20:10,"Director Departamento Administrativo de la Función Pública, Fernando Grillo Rubiano",NA,NA,NA
+168,2011/09/21 22:23:02,2011/09/21 22:23:02,"Fiscal General de la Nación, Viviane Morales Hoyos",NA,NA,NA
+169,2011/10/03 19:45:10,2011/10/03 19:45:10,"Presidente del Consejo Nacional Electoral, José Joaquín Vives Pérez",NA,NA,NA
+170,2011/10/19 18:59:44,2011/10/19 18:59:44,"Viceministro de Cultura, Oscar Rueda García",NA,NA,NA
+171,2011/10/31 15:44:21,2011/10/31 15:44:21,"Ministro de Minas y Energía, Mauricio Cárdenas Santamaría",NA,NA,NA
+173,2011/11/08 20:11:33,2011/11/08 20:11:33,"Director del Departamento Nacional de Planeación, Hernando José Gómez Restrepo",NA,NA,NA
+174,2011/11/28 15:25:41,2011/11/28 15:25:41,"Ministro de Defensa Nacional, Juan Carlos Pinzón",NA,NA,NA
+175,2012/03/20 16:39:18,2012/03/20 16:39:18,"Viceministro de Justicia, Pablo Felipe Robledo",NA,NA,NA
+177,2012/03/20 18:53:04,2012/03/20 18:53:04,"Viceministro de Comercio Exterior, Gabriel Duque Mildenberg",NA,NA,NA
+178,2012/04/25 15:11:47,2012/04/25 15:11:47,"Presidente del Consejo de Estado, Gustavo Gómez Aranguren",NA,NA,NA
+179,2012/04/27 15:10:19,2012/04/27 15:10:19,"Ministro Encargado de Vivienda, Ciudad y Territorio, Luis Felipe Henao Cardona",NA,NA,NA
+180,2012/04/30 20:40:05,2012/04/30 20:40:05,"Ministro de Trabajo, Rafael Pardo",NA,NA,NA
+176,2012/03/20 16:56:23,2012/06/05 20:26:37,"Presidente del Consejo Nacional Electoral, José Joaquín Plata",NA,NA,NA
+1,2010/06/08 20:45:17,2010/06/08 20:45:17,"Ministro de Relaciones Exteriores, Jaime Bermúdez Merizalde",NA,NA,NA
+9,2010/06/23 21:49:45,2010/07/01 19:10:36,"Ministro de Minas y Energía, Hernán Martínez Torres",NA,NA,NA
+58,2010/08/25 16:54:03,2010/08/25 16:55:27,"Director del Departamento Administrativo de Seguridad D.A.S., Felipe Muñoz Gómez",NA,NA,NA
+172,2011/10/31 15:47:01,2011/10/31 15:47:01,"Viceministro de Hacienda y Crédito Público, Bruce Mac Master Rojas",NA,NA,NA
+181,2012/08/02 22:54:52,2012/08/02 22:54:52,"Vicepresidente del Consejo Nacional Electoral, Pablo Guillermo Gil de la Hoz",NA,NA,NA
+182,2012/09/03 14:34:15,2012/09/03 14:34:15,"Ministra de Justicia y del Derecho, Ruth Stella Correa Palacio",NA,NA,NA
+185,2012/10/04 23:53:52,2012/10/04 23:53:52,"Ministro del Interior, Fernando Carrillo Flórez",NA,NA,NA
+186,2012/10/10 17:49:11,2012/10/10 17:49:11,"Ministro de Minas y Energías, Federico Rengifo Vélez",NA,NA,NA
+187,2012/10/18 16:45:42,2012/10/18 16:45:42,"Ministro de Ambiente y Desarrollo Sostenible, Juan Gabriel Uribe",NA,NA,NA
+188,2012/11/14 19:57:30,2012/11/14 19:57:30,"Ministra de Transporte, Cecilia Alvarez",NA,NA,NA
+190,2013/02/14 15:14:26,2013/02/14 15:14:26,"Presidente del Consejo Superior de la Judicatura, Ricardo Monroy Church",NA,NA,NA
+191,2013/03/19 18:39:37,2013/03/19 18:39:37,"Defensor del Pueblo, Jorge Armando Otálora",NA,NA,NA
+192,2013/03/20 18:24:16,2013/03/20 18:24:16,"Presidente del Consejo Nacional Electoral, Carlos Ardila Ballesteros",NA,NA,NA
+194,2013/04/04 16:06:52,2013/04/04 16:06:52,"Fiscal General de la Nación, Eduardo Montealegre Lynett",NA,NA,NA
+195,2013/08/14 21:42:00,2013/08/14 21:42:55,"Presidenta Consejo Nacional Electoral, Nora Tapia Montoya",NA,NA,NA
+197,2013/08/15 15:54:51,2013/08/15 15:54:51,"Wilson Ruiz Orejuela, Presidente Sala Jurisdiccional Disciplinaria Consejo Superior de la Judicatura",NA,NA,NA
+196,2013/08/15 15:49:58,2013/08/15 15:57:06,"Pedro Sanabria Buitrago, Presidente Consejo Superior de la Judicatura",NA,NA,NA
+198,2013/08/15 16:40:20,2013/08/15 16:42:35,"Edgar Carlos Sanabria Melo, Presidente Sala Administrativa Consejo Superior de la Judicatura",NA,NA,NA
+201,2013/10/30 18:40:33,2013/11/13 17:11:54,"Ministro de Justicia y del Derecho, Alfonso Gómez Méndez",NA,NA,NA
+199,2013/09/16 18:23:14,2013/11/13 17:20:36,"Ministro de Minas y Energía, Federico Renjifo Vélez",NA,NA,NA
+193,2013/03/20 18:25:48,2013/11/13 19:17:44,"Vicepresidente del Consejo Nacional Electoral, Nora Tapia Montoya",NA,NA,NA
+113,2011/01/31 21:33:37,2013/11/13 19:27:30,"Ministro de Trabajo y Seguridad Social, Hernando Yepes Arcila",NA,NA,NA
+109,2011/01/25 18:44:35,2013/11/13 19:30:17,"Viceministro de Medio Ambiente, Luis Fernando Gaviria Trujillo",NA,NA,NA
+202,2013/11/06 21:36:13,2013/11/13 19:31:58,"Ministro del Interior, Aurelio Iragorri Valencia",NA,NA,NA
+200,2013/10/03 19:01:49,2013/11/13 19:49:57,"Ministro de Agricultura y Desarrollo Rural, Rubén Darío Lizarralde",NA,NA,NA
+203,2014/04/02 11:30:35,2014/04/02 11:30:35,"Ministro de Vivienda, Luis Felipe Henao Cardona",NA,NA,NA
+204,2014/05/16 13:58:26,2014/05/16 13:58:26,"Ministro de Comercio, Industria y Turismo, Santiago Rojas",NA,NA,NA
+207,2014/08/12 11:20:21,2014/08/12 11:20:21,"Ministro de Trabajo, Luis Eduardo Garzón",NA,NA,NA
+206,2014/08/12 11:18:30,2014/08/12 11:19:01,"Ministro de Ambiente y Desarrollo Sostenible, Gabriel Vallejo López",NA,NA,NA
+208,2014/08/12 11:22:19,2014/08/12 11:22:19,"Ministro de Minas y Energía, Tomás González Estrada",NA,NA,NA
+205,2014/08/12 11:14:31,2014/08/12 11:24:50,"Ministro del Interior, Juan Fernando Cristo Bustos",NA,NA,NA
+209,2014/08/12 11:24:37,2014/08/12 11:25:06,"Ministro de Justicia y del Derecho, Yesid Reyes Alvarado",NA,NA,NA
+210,2014/08/12 11:26:37,2014/08/12 11:26:47,"Ministra de Comercio, Industria y Turismo, Cecilia Álvarez-Correa Glen",NA,NA,NA
+213,2014/08/12 11:30:42,2014/08/12 11:35:54,"Ministro de Agricultura y Desarrollo Rural, Aurelio Iragorri Valencia",NA,NA,NA
+214,2014/08/12 11:38:39,2014/08/12 11:38:39,"Director Departamento Nacional de Planeación, DNP, Simón Gaviria",NA,NA,NA
+212,2014/08/12 11:29:38,2014/08/12 11:39:39,"Ministra de Educación Nacional, Gina Parody",NA,NA,NA
+216,2014/09/15 16:19:52,2014/09/15 16:19:52,"Viceministra de Relaciones Exteriores, Patty Londoño Jaramillo",NA,NA,NA
+211,2014/08/12 11:28:21,2014/11/20 20:25:38,"Ministra de Transporte, Natalia Abello Vives",NA,NA,NA
+217,2015/05/06 18:19:50,2015/05/06 18:19:50,"Presidente Consejo Nacional Electoral, Emiliano Rivera Bravo",NA,NA,NA
+218,2015/08/12 14:04:28,2015/08/12 14:04:28,"Contralor General de la República, Edgardo Maya Villazón",NA,NA,NA
+219,2015/08/20 17:01:05,2015/08/20 17:01:57,"Director de Coldeportes, Andrés Botero Phillipsbourne",NA,NA,NA
+183,2012/09/19 16:32:48,2015/08/25 20:35:32,"Ministro de Hacienda y Crédito Público, Mauricio Cárdenas Santamaría",NA,NA,NA
+220,2015/09/23 15:15:43,2015/09/23 15:15:43,"Ministro de Defensa Nacional, Luis Carlos Villegas Echeverry",NA,NA,NA
+221,2016/04/19 15:40:03,2016/04/19 15:40:03,Fiscal General de la Nación (E): Jorge Fernando Perdomo Torres,NA,NA,NA
+222,2016/04/19 15:40:42,2016/04/19 15:40:42,Ministra de Justicia y del Derecho (E): Ana María Ramos Serrano,NA,NA,NA
+224,2016/07/29 15:16:19,2016/07/29 15:16:51,"Ministro de Minas y Energía, Germán Arce Zapata",NA,NA,NA
+223,2016/07/29 15:13:17,2016/07/29 15:18:50,"Ministro de Ambiente y Desarrollo Sostenible, Luis Gilberto Murillo",NA,NA,NA
+225,2016/07/29 15:31:56,2016/07/29 15:31:56,"Ministra de Comercio, Industria y Turismo, María Claudia Lacouture",NA,NA,NA
+242,2018/03/21 16:06:57,2018/03/21 16:06:57,"Ministro de Agricultura y Desarrollo Rural, Juan Guillermo Zuluaga Cardona",NA,NA,NA
+243,2018/05/18 14:10:17,2018/05/18 14:10:17,"Procurador General de la Nación, Fernando Carrillo Flórez",NA,NA,NA
+227,2016/08/09 19:25:24,2016/08/09 19:25:36,"Ministro de Transporte, Jorge Eduardo Rojas",NA,NA,NA
+228,2016/09/12 19:35:19,2016/09/12 19:35:19,"Ministra de Vivienda, Ciudad y Territorio, Elsa Noguera",NA,NA,NA
+244,2018/06/14 14:01:31,2018/06/14 14:01:54,"Ministro de Vivienda, Ciudad y Territorio, Camilo Sánchez Ortega",NA,NA,NA
+229,2016/09/27 16:56:46,2016/09/27 19:33:30,"Ministro de Justicia y del Derecho, Jorge Eduardo Londoño Ulloa",NA,NA,NA
+230,2016/10/07 16:55:28,2016/10/07 16:55:28,"Ministra de Trabajo, Clara López Obregón",NA,NA,NA
+231,2016/10/24 20:01:07,2016/10/24 20:01:07,"Ministro de Educación (E), Francisco Cardona Acosta",NA,NA,NA
+184,2012/09/25 15:47:04,2016/10/26 21:17:29,"Ministro de Salud y Protección Social, Alejandro Gaviria Uribe",NA,NA,NA
+232,2016/11/01 20:11:21,2016/11/01 20:12:17,"Vicefiscal General de la Nación, María Paulina Riveros Dueñas",NA,NA,NA
+233,2017/03/17 16:05:11,2017/03/17 16:05:11,"Ministro de Justicia y del Derecho, Enrique Gil Botero",NA,NA,NA
+234,2017/03/21 19:59:54,2017/03/21 20:03:56,"Presidente Sala Penal de la Corte Suprema de Justicia, Eugenio Fernández",NA,NA,NA
+226,2016/08/03 15:43:36,2017/03/23 14:20:11,"Fiscal General de la Nación, Néstor Humberto Martínez",NA,NA,NA
+235,2017/04/19 16:54:32,2017/04/19 16:54:32,"Defensor del Pueblo, Carlos Alfonso Negret Mosquera",NA,NA,NA
+236,2017/05/05 20:43:21,2017/05/05 20:43:21,"Ministra de Educación Nacional, Yaneth Giha",NA,NA,NA
+237,2017/07/26 16:10:04,2017/07/26 16:10:04,"Ministro del Interior, Guillermo Rivera Flórez",NA,NA,NA
+238,2017/08/01 20:09:39,2017/08/01 20:09:39,"Ministra del Trabajo, Griselda Janeth Restrepo Gallego",NA,NA,NA
+239,2017/08/03 18:59:41,2017/08/03 18:59:41,"Ministro de Tecnologías de la Información y las Comunicaciones, David Luna",NA,NA,NA
+240,2017/10/18 16:42:43,2017/10/18 16:43:04,"Ministra de Comercio, Industria y Turismo, María Lorena Gutiérrez Botero",NA,NA,NA
+241,2018/03/16 16:22:27,2018/03/16 16:22:45,"Germán Bula Escobar, Presidente del Consejo de Estado",NA,NA,NA
+245,2018/08/08 14:31:50,2018/08/08 14:31:57,"Ministro de Defensa Nacional, Guillermo Botero Nieto",NA,NA,NA
+246,2018/08/08 14:36:26,2018/08/08 14:36:31,"Ministro de Agricultura y Desarrollo Rural, Andrés Valencia Pinzón",NA,NA,NA
+247,2018/08/08 14:38:58,2018/08/08 14:38:58,Ministra del Interior Nancy Patricia Gutiérrez Castañeda,NA,NA,NA
+248,2018/08/08 15:01:27,2018/08/08 15:01:27,"Ministro de Ambiente y Desarrollo Sostenible, Ricardo José Lozano",NA,NA,NA
+25,2010/06/29 23:01:06,2018/08/08 15:04:04,"Ministro de Hacienda y Crédito Público, Alberto Carrasquilla Barrera",NA,NA,NA
+249,2018/08/08 15:06:16,2018/08/08 15:06:19,"Ministra de Educación, María Victoria Angulo González",NA,NA,NA
+250,2018/08/08 15:08:30,2018/08/08 15:08:44,"Ministro de Relaciones Exteriores, Carlos Holmes Trujillo",NA,NA,NA
+251,2018/08/08 15:12:02,2018/08/08 15:12:16,"Ministra de Tecnologías de la Información y las Comunicaciones, Sylvia Constaín Rengifo",NA,NA,NA
+258,2018/08/08 15:34:33,2018/08/08 15:34:33,"Ministra de Justicia y del Derecho, Gloria María Borrero Restrepo",NA,NA,NA
+253,2018/08/08 15:22:36,2018/08/08 15:22:49,"Ministra de Cultura, Carmen Inés Vásquez Camacho",NA,NA,NA
+254,2018/08/08 15:25:19,2018/08/08 15:25:35,"Ministro de Comercio, Industria y Turismo, José Manuel Restrepo",NA,NA,NA
+255,2018/08/08 15:27:54,2018/08/08 15:27:54,"Ministra de Transporte, Ángela María Orozco Gómez",NA,NA,NA
+256,2018/08/08 15:30:08,2018/08/08 15:30:08,"Ministra del Trabajo, Alicia Arango Olmos",NA,NA,NA
+257,2018/08/08 15:31:58,2018/08/08 15:31:58,"Ministro de Salud y Protección Social, Juan Pablo Uribe Restrepo",NA,NA,NA
+252,2018/08/08 15:19:13,2018/08/08 15:32:31,"Ministro de Vivienda, Ciudad y Territorio, Ministro de Vivienda - Jonathan Malagón González",NA,NA,NA
+259,2018/08/08 15:39:37,2018/08/08 15:39:37,"Ministra de Minas y Energía, María Fernanda Suárez Londoño",NA,NA,NA
+260,2019/02/12 16:42:16,2019/02/12 16:42:16,Directora del Departamento Nacional de Planeación Gloria Amparo Alonso Másmela,NA,NA,NA
+189,2012/11/23 14:54:19,2019/04/26 17:09:16,"Contralor General de la Nación, Carlos Felipe Córdoba Larrante",NA,NA,NA
+261,2019/05/23 15:39:03,2019/05/23 15:39:03,"Ministra de Justicia y del Derecho, Margarita Cabello Blanco",NA,NA,NA
+262,2019/07/23 14:46:51,2019/07/23 14:47:08,Fiscal General de la Nación (E) Fabio Espitia Garzón,NA,NA,NA
+264,2019/08/27 20:43:04,2019/08/27 20:43:04,"Viceministra de Relaciones Exteriores, Luz Stella Jara Portilla",NA,NA,NA
+263,2019/08/05 16:41:35,2019/08/27 20:54:43,"Presidenta del Consejo de Estado, Lucy Jeannette Bermúdez Bermúdez",NA,NA,NA
+265,2019/10/11 20:18:42,2019/10/11 20:18:52,"Ministro del Deporte, Ernesto Lucena Barrero",NA,NA,NA
+266,2019/12/03 19:12:48,2019/12/03 19:13:20,"Ministro de Defensa Nacional, Carlos Holmes Trujillo",NA,NA,NA
+267,2019/12/03 19:13:57,2019/12/03 19:13:57,"Ministra de Relaciones Exteriores, Claudia Blum",NA,NA,NA
+268,2020/07/25 16:13:21,2020/07/25 16:13:21,"Ministra de las Tecnologías de la Información y las Comunicaciones, Karen Abudinen",NA,NA,NA
+269,2020/07/25 16:16:08,2020/07/25 16:16:34,"Ministro de Salud y Protección Social, Fernando Ruiz Gómez",NA,NA,NA
+270,2020/07/25 16:18:07,2020/07/25 16:18:07,"Ministra del Interior, Alicia Arango Olmos",NA,NA,NA
+271,2020/07/25 16:51:44,2020/07/25 16:51:44,"Ministro de Minas y Energía, Diego Mesa Puyo",NA,NA,NA
+272,2020/08/17 21:47:34,2020/08/17 21:47:34,"Ministra de Ciencia, Tecnología e Innovación, Mabel Gisela Torres",NA,NA,NA
+273,2020/08/26 21:36:46,2020/08/26 21:37:57,"Presidente del Consejo Nacional Electoral, Hernán Penagos Giraldo",NA,NA,NA
+274,2020/08/26 21:38:41,2020/08/26 21:38:41,"Registrador Nacional del Estado Civil, Alexánder Vega Rocha",NA,NA,NA
+275,2020/08/27 17:53:57,2020/08/27 17:53:57,"Ministro de Agricultura y Desarrollo Rural, Rodolfo Zea Navarro",NA,NA,NA
+276,2020/09/01 14:17:26,2020/09/01 14:17:31,"Viceministro de Política Criminal y Justicia Restaurativa, Javier Augusto Sarmiento Olarte",NA,NA,NA
+277,2020/09/04 17:27:05,2020/09/04 17:27:20,"Viceministro de Empleo y Pensiones, Andrés Felipe Uribe Medina",NA,NA,NA
+278,2020/09/04 17:30:10,2020/09/04 17:31:25,"Ministro de Trabajo, Ángel Custodio Cabrera Báez",NA,NA,NA
+279,2020/09/07 20:42:15,2020/09/07 20:42:15,"Presidenta del Consejo Superior de la Judicatura, Diana Alexandra Remolina Botía",NA,NA,NA
+280,2020/09/17 16:13:48,2020/09/17 16:14:04,"Director del Dane, Juan Daniel Oviedo Arango",NA,NA,NA
+281,2020/11/02 18:15:07,2020/11/02 18:18:13,"Ministro de Justicia y del Derecho, Wilson Ruiz Orejuela",NA,NA,NA
+282,2020/11/02 18:19:39,2020/11/02 18:19:39,"Defensor del Pueblo, Carlos Ernesto Camargo Assis",NA,NA,NA
+283,2020/11/02 18:22:01,2020/11/02 18:22:01,"Fiscal General de la Nación, Francisco Barbosa Delgado",NA,NA,NA
+284,2021/03/17 13:40:28,2021/03/17 13:40:59,"Ministro del Interior, Daniel Palacios Martínez",NA,NA,NA
