@@ -257,16 +257,15 @@ controlpol_orden <- rename(controlpol_orden, agenda_legislativa_actividad_id=ite
 controlpol_orden <- select(controlpol_orden, id, cuatrienio_id, comision_id, estado_control_politico_id, titulo, fecha, activo:updated_at,
                            tema_principal_id:tags, detalles, gacetas, numero_proposicion)%>%
   write_excel_csv("finales_hector/cambios en campos/control_politicos.csv")
-# proyecto ley autor -------------------------------------------------------------
+# proyecto ley autor otros -------------------------------------------------------------
 
 
 proyecto <- read_csv("Bases de datos nuevas/proyecto_ley_autor_otros.csv")
 
-proyecto %>%  mutate(proyecto_ley_id=NA_character_,
-                       activo=NA_character_,
+proyecto %>%  mutate(activo=NA_character_,
                        usermodifed=NA_character_,
                        usercreated=NA_character_) %>%
-  write_excel_csv("Bases de datos nuevas/proyecto_ley_autor_otros.csv")
+  write_excel_csv("finales_hector/idénticas/proyector_ley_autor_otros.csv")
 
 # catalogo grado estudios----------
 
@@ -462,8 +461,33 @@ final <- bind_rows(invi, control_citados) %>%
 
 # agenda legislativas------
 
-agenda <- read_csv("Bases de datos nuevas/agenda_legislativas.csv")
+agenda_camaras <- tabla_res[[128]] %>%
+                  select()
+agenda_comisiones <- tabla_res[[129]] %>%
+                     rename(comision_id=id,
+                            agenda_legislativa=ordendeldia_id,
+                            corporacion_id=camara_id) %>%
+                     arrange(desc(agenda_legislativa)) %>%
+                     mutate(id=row_number(),
+                            activo=NA_character_,
+                            usercreated=NA_character_,
+                            usermodifed=NA_character_,
+                            created_at=NA_character_,
+                            updated_at=NA_character_
+                            ) %>%
+                     select(id, agenda_legislativa,corporacion_id, comision_id, id:updated_at) %>%
+                     write_excel_csv("finales_hector/tablas nuevas/agenda_legislativa_comisions.csv")
 
+
+agenda_legislativas <- read_csv("Bases de datos nuevas/agenda_legislativas.csv") %>%
+                       mutate(
+                         activo=NA_character_,
+                         usercreated=NA_character_,
+                         usermodifed=NA_character_,
+                         created_at=NA_character_,
+                         updated_at=NA_character_
+                          ) %>%
+                         write_excel_csv("finales_hector/idénticas/agenda_legislativas.csv")
 
 
 
@@ -479,12 +503,51 @@ tipocita <- read_csv("Bases de datos nuevas/tipo_citacions.csv") %>%
          updated_at=NA_character_) %>%
   write_excel_csv("finales_hector/idénticas/tipo_citacions.csv")
 
+# proyecto autors---------
+
+proyecto_autor <- read_csv("Bases de datos nuevas/proyecto_ley_autors.csv")
+
+
+proyecto_autor_congresista <- read_csv("Bases de datos nuevas/proyecto_ley_autors.csv")
+
+congresista <- read_csv("finales/cambio en campos/congresistas.csv") %>%
+              select(id, persona_id)
+
+congresita_excel <- tabla_res[[39]]
+
+personas <- tabla_res[[54]] %>%
+            select(id, nombres, apellidos)
+
+
+partido <- tabla_res[[51]]
+
+
+tabla_gerardo <- tabla_res[[143]]
+
+proyecto_autor_congresista<- left_join(proyecto_autor_congresista, personas, by=c("congresista_id"="id"))
+
+son_na <- proyecto_autor_congresista %>%
+          filter(is.na(nombres))
+
+
+proyecto_autor_congresista <- left_join(proyecto_autor_congresista, congresista, by=c("congresista_id"="id"))
+
+
+proyecto_autor %>% filter(tipo_autor_id==24) %>% View()
+proyecto_ley_comisions <- read_csv("Bases de datos nuevas/proyecto_ley_comisions.csv")%>%
+  mutate(activo=NA_character_,
+         usercreated=NA_character_,
+         usermodifed=NA_character_,
+         created_at=NA_character_,
+         updated_at=NA_character_) %>%
+  write_excel_csv("finales_hector/idénticas/proyecto_ley_comisions.csv")
+
 
 # transformación ----------------------------------------------------------
 
-crear_bases(campos %>% filter(num==131), tabla_res)
+crear_bases(campos %>% filter(num==143), tabla_res)
 
-tabla_res[[131]] %>%  View()
+fb <- tabla_res[[91]]
 # Sandbox -----------------------------------------------------------------
 
 
