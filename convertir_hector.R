@@ -346,7 +346,6 @@ personasfinal <- personasfinal %>%
 
 
 
-
 # secretario----------
 
 secretario <- tabla_res[[63]] %>%
@@ -362,7 +361,7 @@ personas <- read_csv("finales_hector/tablas nuevas/personas.csv") %>%
             select(id)
 
 secretario <- inner_join(secretario, personas, by=c("persona_id"="id")) %>%
-              select(id,persona_id, activo:updated_at) %>%
+              select(id, persona_id:updated_at) %>%
               write_excel_csv("finales_hector/cambios en campos/secretarios.csv")
 
 
@@ -543,10 +542,14 @@ proyecto_ley_comisions <- read_csv("Bases de datos nuevas/proyecto_ley_comisions
   write_excel_csv("finales_hector/idénticas/proyecto_ley_comisions.csv")
 
 
+
+# facebook
+fb <- tabla_res[[91]]
+datos_contacto <- read_csv("finales/idénticas/comision_datos_contactos.csv")
 # transformación ----------------------------------------------------------
 
 crear_bases(campos %>% filter(num==143), tabla_res)
-
+personas <- read_csv("finales_hector/tablas nuevas/personas.csv")
 fb <- tabla_res[[91]]
 # Sandbox -----------------------------------------------------------------
 
