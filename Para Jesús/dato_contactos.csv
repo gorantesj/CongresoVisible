@@ -1,0 +1,24 @@
+﻿id,nombre,Tipo,activo,usercreated,usermodified,created_at,updated_at
+1,correo,1,TRUE,NA,NA,NA,NA
+2,oficina,1,TRUE,NA,NA,NA,NA
+3,telefono,1,TRUE,NA,NA,NA,NA
+4,url,2,TRUE,NA,NA,NA,NA
+5,telefono oficina,1,TRUE,NA,NA,NA,NA
+6,facebook,2,TRUE,NA,NA,NA,NA
+7,cedula,1,TRUE,NA,NA,NA,NA
+8,sitio web,2,TRUE,NA,NA,NA,NA
+9,twitter,2,TRUE,NA,NA,NA,NA
+10,tumblr,2,TRUE,NA,NA,NA,NA
+11,flickr,2,TRUE,NA,NA,NA,NA
+12,youtube,1,TRUE,NA,NA,NA,NA
+13,linkedin,2,TRUE,NA,NA,NA,NA
+14,blogspot,2,TRUE,NA,NA,NA,NA
+6,facebook,2,TRUE,NA,NA,NA,NA
+7,cedula,1,TRUE,NA,NA,NA,NA
+8,sitio web,2,TRUE,NA,NA,NA,NA
+9,twitter,2,TRUE,NA,NA,NA,NA
+10,tumblr,2,TRUE,NA,NA,NA,NA
+11,flickr,2,TRUE,NA,NA,NA,NA
+12,youtube,1,TRUE,NA,NA,NA,NA
+13,linkedin,2,TRUE,NA,NA,NA,NA
+14,blogspot,2,TRUE,NA,NA,NA,NA
