@@ -235,7 +235,7 @@ controlpol_orden <- left_join(controlpol, orden_diaitem, by=c("itemdeordendeldia
 orden_dia_cuatrienio <- tabla_res[[131]] %>%
             select(id, cuatrienio_id)
 
-controlpol_orden <- left_join(controlpol_orden, orden_dia_citacion,by=c("orden_del_dia_id"="id"))
+controlpol_orden <- left_join(controlpol_orden, orden_dia_cuatrienio,by=c("orden_del_dia_id"="id"))
 
 orden_dia_comision <- tabla_res[[130]] %>%
            select(ordendeldia_id, comision_id)
@@ -250,11 +250,18 @@ comi <- read_csv("finales/idénticas/comisions.csv") %>%
 
 comi2 <- read_csv("finales/idénticas/corporacions.csv")
 controlpol_orden <- left_join(controlpol_orden, comi,by=c("comision_id"="id"))
+
+
+
 controlpol_orden <- rename(controlpol_orden, agenda_legislativa_actividad_id=itemdeordendeldia_ptr_id,
                            tipo_control_politico_id=tipo_id,
                            titulo=proposito,
                            fecha=fecha_proposicion)
-controlpol_orden <- select(controlpol_orden, id, cuatrienio_id, comision_id, estado_control_politico_id, titulo, fecha, activo:updated_at,
+
+# aver <- anti_join(controlpol_orden, controlpol, by=c("agenda_legislativa_actividad_id"="itemdeordendeldia_ptr_id"))
+
+controlpol_orden <- select(controlpol_orden, id, agenda_legislativa_actividad_id, cuatrienio_id, comision_id,
+                           estado_control_politico_id, titulo, fecha, activo:updated_at,
                            tema_principal_id:tags, detalles, gacetas, numero_proposicion)%>%
   write_excel_csv("finales_hector/cambios en campos/control_politicos.csv")
 # proyecto ley autor otros -------------------------------------------------------------
@@ -505,7 +512,6 @@ tipocita <- read_csv("Bases de datos nuevas/tipo_citacions.csv") %>%
 # proyecto autors---------
 
 proyecto_autor <- read_csv("Bases de datos nuevas/proyecto_ley_autors.csv")
-
 
 proyecto_autor_congresista <- read_csv("Bases de datos nuevas/proyecto_ley_autors.csv")
 
