@@ -95,7 +95,8 @@ proyecto_final_senado %>%
   hc_chart(style = list(fontFamily = "Avenir next"
   ))%>%
   hc_chart(style = list(fontFamily = "Avenir next"
-  ))
+  ))%>%
+  hc_title(text = "Origen de las iniciativas en el Senado")
 
 ```
 
@@ -112,7 +113,7 @@ proyecto_final_camara %>%
   hc_colors(colors = pal(7)) %>%
   hc_chart(style = list(fontFamily = "Avenir next"
   ))%>%
-  hc_title(text = "Origen de las iniciativas en el Senado")
+  hc_title(text = "Origen de las iniciativas en la Cámara de Representantes")
 
 ```
 
