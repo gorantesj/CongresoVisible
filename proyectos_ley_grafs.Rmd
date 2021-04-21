@@ -1,0 +1,219 @@
+---
+title: "proyectos_de_ley"
+output: html_document
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(echo = F, 
+message = F,
+warning = F, 
+fig.asp = 0.8, 
+fig.width = 7, 
+out.width = "100%",
+dpi = 300,
+collapse = TRUE,
+comment = "#>"
+) 
+```
+
+
+```{r, include = FALSE}
+library(pacman)
+p_load(tidyverse, magrittr, highcharter, lubridate, devtools, viridis, hrbrthemes, mapdata, here)
+library(ggchicklet)
+library(randomNames)
+
+```
+
+
+
+
+```{r}
+pal <- colorRampPalette(c("#66CCFF", "#17789E", "#6AEEB0", "#379E80", "#F78031", "#374B9E", "#666666"))
+proyecto <- read_csv(here("Para Jesús", "proyecto_leys.csv"))
+
+iniciativas <- read_csv(here("Para Jesús", "iniciativas.csv")) %>% 
+               select(id, nombre) %>% 
+               rename("iniciativa"="nombre")
+tipo_proyecto <- read_csv(here("Para Jesús", "tipo_proyectos.csv")) %>% 
+               select(id, nombre)%>% 
+               rename("tipo_proyecto"="nombre")
+legis <- read_csv(here("Para Jesús", "legislaturas.csv")) %>% 
+               select(id:fechaFin) %>% 
+               rename("legislatura"="nombre")
+corpo <- read_csv(here("Para Jesús", "corporacions.csv")) %>% 
+               select(id, nombre)%>% 
+               rename("corporacion"="nombre")
+proyecto_estado <- read_csv(here("Para Jesús", "proyecto_ley_estados.csv")) %>% 
+                   select(proyecto_ley_id, estado_proyecto_ley_id)
+estado_proyecto <- read_csv(here("Para Jesús", "estado_proyecto_leys.csv")) %>% 
+                   select(id, nombre) %>% 
+                   rename("estado_proyecto"="nombre")
+estado_final <- left_join(proyecto_estado, estado_proyecto, by=c("estado_proyecto_ley_id"="id")) %>% 
+                select(proyecto_ley_id, estado_proyecto)
+
+
+proyecto_final <- left_join(proyecto, iniciativas, by=c("iniciativa_id"="id"))
+
+proyecto_final <- left_join(proyecto_final, tipo_proyecto, by=c("tipo_proyecto_id"="id"))
+
+proyecto_final <- left_join(proyecto_final, legis, by=c("legislatura_id"="id"))
+
+proyecto_final <- left_join(proyecto_final, corpo, by=c("corporacion_id"="id"))
+
+proyecto_final <- left_join(proyecto_final, estado_final, by=c("id" ="proyecto_ley_id"))
+
+
+
+proyecto_final_senado <- proyecto_final %>% 
+                         filter(legislatura_id==max(legislatura_id) & corporacion=="Senado" & tipo_proyecto=="Proyecto de Ley")  %>% 
+                         count(tipo_proyecto, iniciativa) 
+
+
+
+```
+
+```{r}
+proyecto_final_senado <- proyecto_final %>% 
+                         filter(legislatura_id==max(legislatura_id) & corporacion=="Senado" & tipo_proyecto=="Proyecto de Ley")  %>% 
+                         count(tipo_proyecto, iniciativa) 
+
+proyecto_final_senado %>% 
+  hchart(hcaes(from = iniciativa, to  = tipo_proyecto, weight =n), type = "sankey")%>%
+  hc_colors(colors = pal(7)) 
+
+```
+
+
+```{r}
+
+  proyecto_final_senado %>% 
+  hchart(hcaes(x = iniciativa,  value = n), type = "treemap")%>%
+  hc_plotOptions(treemap = list(borderRadius = 7, colorByPoint = T,
+                                dataLabels = list(style = list(fontFamily = "Avenir next", fontSize = "16px")))) %>%
+  hc_colors(colors = pal(7)) %>%
+  hc_chart(style = list(fontFamily = "Avenir next"
+  ))%>%
+  hc_chart(style = list(fontFamily = "Avenir next"
+  ))
+
+```
+
+
+
+
+```{r}
+proyecto_final_camara <- proyecto_final %>% 
+                         filter(legislatura_id==max(legislatura_id) & corporacion!="Senado"& tipo_proyecto=="Proyecto de Ley") %>% 
+                         count(tipo_proyecto, iniciativa) 
+    
+proyecto_final_camara %>% 
+  hchart(hcaes(from = iniciativa, to  = tipo_proyecto, weight =n), type = "sankey") %>%
+  hc_colors(colors = pal(7)) %>%
+  hc_chart(style = list(fontFamily = "Avenir next"
+  ))%>%
+  hc_title(text = "Origen de las iniciativas en el Senado")
+
+```
+
+
+```{r}
+
+
+  proyecto_final_camara %>% 
+  hchart(hcaes(x = iniciativa,  value = n), type = "treemap")%>%
+  hc_plotOptions(treemap = list(borderRadius = 7, colorByPoint = T,
+                                dataLabels = list(style = list(fontFamily = "Avenir next", fontSize = "16px")))) %>%
+  hc_colors(colors = pal(7)) %>%
+  hc_chart(style = list(fontFamily = "Avenir next"
+  )) %>%
+  hc_title(text = "Origen de las iniciativas en la Cámara de Representantes")
+
+```
+
+
+
+
+
+```{r}
+
+temas <- read_csv(here("Para Jesús", "temas.csv")) %>% 
+         select(id, nombre) %>% 
+         rename("tema"="nombre")
+
+proyecto_temas <- left_join(proyecto_final, temas, by=c("tema_id_principal"="id")) 
+
+proyecto_temas_senado <- proyecto_temas %>% 
+                         filter(legislatura_id==max(legislatura_id) & corporacion=="Senado"& tipo_proyecto=="Proyecto de Ley") %>% 
+                         count(tema) %>% 
+                         arrange(desc(n)) 
+                         
+proyecto_temas_senado <- proyecto_temas_senado[1:10,]
+
+  proyecto_temas_senado %>% 
+  hchart(hcaes(x = tema,  value = n), type = "treemap")%>%
+  hc_plotOptions(treemap = list(borderRadius = 7, colorByPoint = T,
+                                dataLabels = list(style = list(fontFamily = "Avenir next", fontSize = "16px")))) %>%
+  hc_colors(colors = pal(7)) %>%
+  hc_chart(style = list(fontFamily = "Avenir next"
+  ))%>%
+  hc_title(text = "Temas de los proyectos de la ley en el Senado")
+
+
+```
+
+
+```{r}
+proyecto_temas_camara <- proyecto_temas %>% 
+                         filter(legislatura_id==max(legislatura_id) & corporacion!="Senado"& tipo_proyecto=="Proyecto de Ley") %>% 
+                         count(tema) %>% 
+                         arrange(desc(n)) 
+                         
+proyecto_temas_camara <- proyecto_temas_camara[1:10,]
+
+  proyecto_temas_camara %>% 
+  hchart(hcaes(x = tema,  value = n), type = "treemap")%>%
+  hc_plotOptions(treemap = list(borderRadius = 7, colorByPoint = T,
+                                dataLabels = list(style = list(fontFamily = "Avenir next", fontSize = "16px")))) %>%
+  hc_colors(colors = pal(7)) %>%
+  hc_chart(style = list(fontFamily = "Avenir next"
+  ))%>%
+  hc_title(text = "Temas de los proyectos de la ley en la Cámara de Representantes")
+
+
+
+
+```
+
+```{r}
+estado_proyecto_graf <- proyecto_final %>% 
+                        filter(legislatura_id==max(legislatura_id) & corporacion=="Senado" & tipo_proyecto=="Proyecto de Ley")  %>% 
+                        count(iniciativa, estado_proyecto) 
+
+estado_proyecto_graf %>% 
+  hchart(hcaes(from = iniciativa, to  = estado_proyecto, weight =n), type = "sankey") %>%
+  hc_colors(colors = pal(7)) %>%
+  hc_chart(style = list(fontFamily = "Avenir next", color="BLACK"
+  ))%>%
+  hc_title(text = "Estado del proyecto, según origen de las iniciativas en el Senado")
+
+
+```
+
+
+
+```{r}
+estado_proyecto_graf_camara <- proyecto_final %>% 
+                        filter(legislatura_id==max(legislatura_id) & corporacion!="Senado" & tipo_proyecto=="Proyecto de Ley")  %>% 
+                        count(iniciativa, estado_proyecto) 
+
+estado_proyecto_graf_camara %>% 
+  hchart(hcaes(from = iniciativa, to  = estado_proyecto, weight =n), type = "sankey") %>%
+  hc_colors(colors = pal(7)) %>%
+  hc_chart(style = list(fontFamily = "Avenir next", color="BLACK"
+  ))%>%
+  hc_title(text = "Estado del proyecto, según origen de las iniciativas en la Cámara de Representantes")
+
+
+```
+
