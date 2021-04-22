@@ -259,12 +259,20 @@ controlpol_orden <- rename(controlpol_orden, agenda_legislativa_actividad_id=ite
                            fecha=fecha_proposicion)
 
 # aver <- anti_join(controlpol_orden, controlpol, by=c("agenda_legislativa_actividad_id"="itemdeordendeldia_ptr_id"))
-
-controlpol_orden <- select(controlpol_orden, id, agenda_legislativa_actividad_id, cuatrienio_id, comision_id,corporacion_id, tipo_control_politico_id,
+legislatura <- tabla_res[[142]] %>%
+               select(id, cuatrienio_id) %>%
+               rename("legislatura_id"="id")
+controlpol_orden <- left_join(controlpol_orden, legislatura,by="cuatrienio_id")
+controlpol_orden <- select(controlpol_orden, id, agenda_legislativa_actividad_id,
+                           cuatrienio_id, legislatura_id,
+                           comision_id,corporacion_id, tipo_control_politico_id,
                            estado_control_politico_id, titulo, fecha,
                            tema_principal_id:tags, detalles, gacetas, numero_proposicion, activo:updated_at) %>%
   write_excel_csv("finales_hector/cambios en campos/control_politicos.csv") %>%
   write_excel_csv("Para Jesús/control_politicos.csv")
+
+
+
 
 
 
