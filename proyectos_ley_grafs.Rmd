@@ -51,7 +51,7 @@ estado_proyecto <- read_csv(here("Para Jesús", "estado_proyecto_leys.csv")) %>%
                    rename("estado_proyecto"="nombre")
 estado_final <- left_join(proyecto_estado, estado_proyecto, by=c("estado_proyecto_ley_id"="id")) %>% 
                 select(proyecto_ley_id, estado_proyecto)
-
+cuatri <- read_csv(here("Para Jesús", "cuatrienios.csv"))
 
 proyecto_final <- left_join(proyecto, iniciativas, by=c("iniciativa_id"="id"))
 
@@ -72,6 +72,11 @@ proyecto_final_senado <- proyecto_final %>%
 
 
 ```
+
+
+
+
+
 
 ```{r}
 proyecto_final_senado <- proyecto_final %>% 
@@ -217,4 +222,47 @@ estado_proyecto_graf_camara %>%
 
 
 ```
+
+```{r}
+citantes <- read_csv(here("Para Jesús", "control_politico_citantes.csv"))
+
+citacions <- read_csv(here("Para Jesús", "control_politicos.csv")) %>% 
+             select(id, cuatrienio_id) %>% 
+             rename("control_politico_id"="id")
+personas <- read_csv(here("Para Jesús", "personas.csv")) %>% 
+            select(id:apellidos) %>% 
+            rename("persona_id"="id")
+
+congresistas <- read_csv(here("Para Jesús", "congresistas.csv")) %>% 
+                select(id:partido_id) %>% 
+                rename("congresista_id"="id")
+citantes <- left_join(citantes, congresistas, by="congresista_id")
+citantes <- left_join(citantes, corpo, by=c("corporacion_id"="id"))
+citantes <- left_join(citantes, personas, by="persona_id")
+
+
+citan_suma <- citantes %>%
+              filter(!is.na(nombres) | !is.na(apellidos)) %>% 
+              mutate(nombre_final=paste(nombres, apellidos, sep=" ")) %>% 
+              count(nombre_final) %>% 
+              arrange(desc(n))
+citan_suma <- citan_suma[1:20,]
+citan_suma %>% 
+   hchart(hcaes(x = nombre_final, y = n), type = "lollipop") %>% 
+     hc_colors(colors = pal(1)) %>%
+  hc_chart(style = list(fontFamily = "Avenir next", color="BLACK"
+  ))%>%
+  hc_title(text = "Congresistas con mayor número de citaciones de Debates de Control Político ")
+```
+
+
+```{r}
+
+
+
+
+
+```
+
+
 

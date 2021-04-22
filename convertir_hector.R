@@ -260,9 +260,9 @@ controlpol_orden <- rename(controlpol_orden, agenda_legislativa_actividad_id=ite
 
 # aver <- anti_join(controlpol_orden, controlpol, by=c("agenda_legislativa_actividad_id"="itemdeordendeldia_ptr_id"))
 
-controlpol_orden <- select(controlpol_orden, id, agenda_legislativa_actividad_id, cuatrienio_id, comision_id,
-                           estado_control_politico_id, titulo, fecha, activo:updated_at,
-                           tema_principal_id:tags, detalles, gacetas, numero_proposicion)%>%
+controlpol_orden <- select(controlpol_orden, id, agenda_legislativa_actividad_id, cuatrienio_id, comision_id,corporacion_id, tipo_control_politico_id,
+                           estado_control_politico_id, titulo, fecha,
+                           tema_principal_id:tags, detalles, gacetas, numero_proposicion, activo:updated_at) %>%
   write_excel_csv("finales_hector/cambios en campos/control_politicos.csv")
 # proyecto ley autor otros -------------------------------------------------------------
 
