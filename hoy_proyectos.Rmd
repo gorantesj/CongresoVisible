@@ -58,7 +58,7 @@ proyectos %>%
 
 
 ```{r}
-pal <- colorRampPalette(c("#2B6170", "#93ACAF"))
+pal <- colorRampPalette(colores)
 
 tibble(x = c("Economía", "Salud", "Finanzas", "Infraestructura",
              "Gobierno", "Comunicación", "Transportes", "Hacienda", "Derechos humanos",
