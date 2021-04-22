@@ -1,4 +1,4 @@
-﻿id,cuatrienio_id,comision_id,estado_control_politico_id,titulo,fecha,activo,usercreated,usermodifed,created_at,updated_at,tema_principal_id,tema_secundario_id,plenaria,tags,detalles,gacetas,numero_proposicion
+﻿id,cuatrienio_id,comision_id,estado_control_politico_id,titulo,fecha,activo,usercreated,usermodifed,created_at,updated_at,tema_id_principal,tema_id_secundario,plenaria,tags,detalles,gacetas,numero_proposicion
 1,2,NA,NA,Debatir sobre  la injerencia de los factores delincuenciales en los procesos electorales.,NA,NA,NA,NA,NA,NA,101,NA,TRUE,NA,NA,NA,57
 2,2,NA,NA,Debate sobre servicios públicos domiciliarios,NA,NA,NA,NA,NA,NA,38,38,TRUE,servicios públicos,NA,NA,17
 3,2,NA,NA,Debatir sobre la situación del rio Magdalena,NA,NA,NA,NA,NA,NA,3,NA,TRUE,NA,NA,NA,255
