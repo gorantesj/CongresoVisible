@@ -45,12 +45,18 @@ corpo <- read_csv(here("Para Jesús", "corporacions.csv")) %>%
                select(id, nombre)%>% 
                rename("corporacion"="nombre")
 proyecto_estado <- read_csv(here("Para Jesús", "proyecto_ley_estados.csv")) %>% 
-                   select(proyecto_ley_id, estado_proyecto_ley_id)
+                   select(proyecto_ley_id, estado_proyecto_ley_id, fecha)
 estado_proyecto <- read_csv(here("Para Jesús", "estado_proyecto_leys.csv")) %>% 
                    select(id, nombre) %>% 
                    rename("estado_proyecto"="nombre")
 estado_final <- left_join(proyecto_estado, estado_proyecto, by=c("estado_proyecto_ley_id"="id")) %>% 
-                select(proyecto_ley_id, estado_proyecto)
+                select(fecha, proyecto_ley_id, estado_proyecto) %>% 
+                group_by(proyecto_ley_id) %>% 
+                filter(fecha==max(fecha)) %>% 
+                ungroup()
+
+
+
 cuatri <- read_csv(here("Para Jesús", "cuatrienios.csv"))
 
 proyecto_final <- left_join(proyecto, iniciativas, by=c("iniciativa_id"="id"))
@@ -61,13 +67,11 @@ proyecto_final <- left_join(proyecto_final, legis, by=c("legislatura_id"="id"))
 
 proyecto_final <- left_join(proyecto_final, corpo, by=c("corporacion_id"="id"))
 
-proyecto_final <- left_join(proyecto_final, estado_final, by=c("id" ="proyecto_ley_id"))
+proyecto_final <- inner_join(proyecto_final, estado_final, by=c("id" ="proyecto_ley_id"))
 
 
 
-proyecto_final_senado <- proyecto_final %>% 
-                         filter(legislatura_id==max(legislatura_id) & corporacion=="Senado" & tipo_proyecto=="Proyecto de Ley")  %>% 
-                         count(tipo_proyecto, iniciativa) 
+
 
 
 
@@ -258,8 +262,12 @@ citan_suma %>%
 
 ```{r}
 
+autor <- read_csv(here("Para Jesús", "proyecto_ley_autors.csv")) %>% 
+         filter(tipo_autor_id==28) %>%   
+         select(proyecto_ley_id, congresista_id)
 
-
+proy_ley <- proyecto_final %>% 
+            select()
 
 
 ```
