@@ -1,6 +1,8 @@
 library(tidyverse)
 library(readxl)
 library(stringr)
+library(purrr)
+pacman::p_load(fuzzyjoin, lubridate)
 # Leer bases de datos
 archivos <- list.files("Tablas anteriores",full.names = T,all.files = F)
 leer <- safely(read_xlsx)
@@ -259,10 +261,27 @@ controlpol_orden <- rename(controlpol_orden, agenda_legislativa_actividad_id=ite
                            fecha=fecha_proposicion)
 
 # aver <- anti_join(controlpol_orden, controlpol, by=c("agenda_legislativa_actividad_id"="itemdeordendeldia_ptr_id"))
-legislatura <- tabla_res[[142]] %>%
-               select(id, cuatrienio_id) %>%
-               rename("legislatura_id"="id")
-controlpol_orden <- left_join(controlpol_orden, legislatura,by="cuatrienio_id")
+  legis <- tabla_res[[142]] %>%
+           select(id, fecha_inicio, fecha_fin) %>%
+           rename("legislatura_id"="id") %>%
+           mutate(fecha_inicio=ymd(fecha_inicio),
+                  fecha_fin=ymd(fecha_fin))
+  controlpol_orden <- mutate(controlpol_orden, fecha=ymd(fecha))
+
+  controlpol_orden <-  fuzzy_left_join(controlpol_orden, legis, by=c("fecha"="fecha_inicio", "fecha"="fecha_fin"),
+                             match_fun = list(`>=`, `<=`)
+  )
+
+
+#   controlpol_orden <- controlpol_orden %>%
+#   mutate(legislatura_id=map2_chr(.x=id, .y=fecha, .f= ~{
+#   preliminar<-legis %>%
+#   filter(id==.x, fecha_inicio>=.y, fecha_fin<=.y) %>% pull(id)
+#
+# }))
+#   if(is_empty(preliminar)) preliminar<-NA
+#   return(preliminar)
+
 controlpol_orden <- select(controlpol_orden, id, agenda_legislativa_actividad_id,
                            cuatrienio_id, legislatura_id,
                            comision_id,corporacion_id, tipo_control_politico_id,
