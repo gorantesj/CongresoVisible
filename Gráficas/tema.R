@@ -22,7 +22,8 @@ thm <- hc_theme(
                labels = list(style= list(fontSize = "18px"))),
   plotOptions = list(bar = list(borderRadius =5),
                      scatter = list(marker = list(radius = 8)),
-                     treemap = list(borderRadius =5),
+                     treemap = list(borderRadius =5,
+                                    dataLabels = style = list(fontFamily = "Bell MT", fontSize = "16px")),
                      errorbar = list(maxPointWidth = 20))
 
 )
