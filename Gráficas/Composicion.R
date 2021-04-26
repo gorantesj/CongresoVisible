@@ -22,30 +22,7 @@ depa <- read_csv("Para Jesús/departamentos.csv")
 
 
 # Tema
-thm <- hc_theme(
-  colors = c("#66CCFF", "#17789E", "#6AEEB0", "#379E80", "#F78031", "#374B9E"),
-  chart = list( style = list(fontFamily = "Bell MT", fontSize = "20px")),
-  title = list( style = list(  color = "#17789E", fontSize = "22px", fontWeight= 'bold')),
-  subtitle = list(  style = list(    color = "#666666"  ) ),
-  legend = list( itemStyle = list(  color = "black"   ),
-                 itemHoverStyle = list( color = "gray")  ),
-  tooltip = list(borderWidth =0, shadow = F,
-                 headerFormat= '<span style="font-size: 20px"><b>{point.key}</span><br/></b>',
-                 shape = "square",
-                 style = list( fontSize = "16px")),
-  yAxis = list(lineWidth = 3,title = list(style= list(fontSize = "16px")),
-               tickAmount = 5,
-               labels = list(style= list(fontSize = "15px"))),
-  xAxis = list(lineWidth = 0,title = list(style= list(fontSize = "16px")),
-               labels = list(style= list(fontSize = "18px"))),
-  plotOptions = list(bar = list(borderRadius =5),
-                     scatter = list(marker = list(radius = 8)),
-                     treemap = list(borderRadius =5),
-                     errorbar = list(maxPointWidth = 20))
-)
-
-
-
+source("Gráficas/tema.R")
 
 # Partidos - Distribución de asientos - Senadores --------------------
 
@@ -102,7 +79,8 @@ aux <-congresistas %>%
                      labels = c("18 - 29","30 - 49","40 - 49",
                                 "50 - 59","60 - 69", "70 - 79",
                                 "80 - 89", "90 o más"))) %>%
-  filter( !is.na(edad)) %>% select(legislatura, corporacion, partido, edad, rango, genero)
+  filter( !is.na(edad)) %>% select(legislatura, corporacion, partido, edad, rango, genero) %>%
+   filter(legislatura== 28)
 
 
 aux <-  data_to_boxplot(data = aux  ,
@@ -227,10 +205,11 @@ inv %>%
   summarise(n = n(), miembros = paste(nombre_congresista, collapse=", ")) %>%
   mutate(corporacion = case_when(is.na(corporacion)~"No congresista", T~corporacion)) %>%
   filter(!inves == "Otro") %>%
-  mutate(miembros = case_when(corporacion== "No congresista"~"", T~miembros)) %>%
+  mutate(miembros = case_when(corporacion== "No congresista"~"", T~miembros),
+         corporacion = factor(corporacion, c("Cámara de Representantes", "Senado", "No congresista"))) %>%
   arrange(desc(n)) %>%
   hchart(hcaes(x = inves, y = n, group = corporacion), type = "bar") %>%
-  hc_tooltip(pointFormat = '<b>{point.n}</b><br> miembros: {point.miembros}')%>%
+  hc_tooltip(pointFormat = '<b>{series.name}: {point.n}</b><br> Miembros: {point.miembros}')%>%
   hc_title(text = "Investigaciones") %>%
   hc_xAxis(title = list(text = "Tipo")) %>%
   hc_yAxis(title = list(text = "Total")) %>%
@@ -263,7 +242,8 @@ pl_autor %>%
                                minSize = "20%",
                                marker = list(fillOpacity = .91,lineWidth=0))) %>%
   hc_title(text = "Total de Proyectos de Ley presentados por género") %>%
-  hc_add_theme( thm)
+  hc_add_theme( thm) %>%
+  hc_tooltip(enabled= F)
 
 
 # congresistas - partidos -------------------------------------------------
