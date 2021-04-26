@@ -1,5 +1,5 @@
 ---
-title: "proyectos_de_ley"
+title: "Congreso Hoy"
 output: html_document
 ---
 
@@ -93,14 +93,15 @@ proyecto_final <- inner_join(proyecto_final, estado_final, by=c("id" ="proyecto_
 ```
 
 
+# Proyectos de ley
 
-
-
+### Origen de las iniciativas
 
 ```{r}
 proyecto_final_senado <- proyecto_final %>% 
                          filter(legislatura_id==max(legislatura_id) & corporacion=="Senado" & tipo_proyecto=="Proyecto de Ley")  %>% 
-                         count(tipo_proyecto, iniciativa) 
+                         count(tipo_proyecto, iniciativa) %>% 
+                         arrange(desc(n))
 
 
 
@@ -110,9 +111,13 @@ proyecto_final_senado <- proyecto_final %>%
 ```{r}
 
   proyecto_final_senado %>% 
-  hchart(hcaes(x = iniciativa,  value = n), type = "treemap")%>%
+  hchart(hcaes(x = iniciativa, y = n), type = "bar") %>% 
+  hc_title(text = "Origen de las iniciativas en el Senado")%>%
+  
   hc_add_theme(thm) %>% 
-  hc_title(text = "Origen de las iniciativas en el Senado")
+  hc_xAxis(title = list(text = "Iniciativa")) %>%
+  hc_yAxis(title = list(text = "Total"))
+
 
 ```
 
@@ -122,7 +127,8 @@ proyecto_final_senado <- proyecto_final %>%
 ```{r}
 proyecto_final_camara <- proyecto_final %>% 
                          filter(legislatura_id==max(legislatura_id) & corporacion!="Senado"& tipo_proyecto=="Proyecto de Ley") %>% 
-                         count(tipo_proyecto, iniciativa) 
+                         count(tipo_proyecto, iniciativa) %>% 
+                         arrange(desc(n))
 
 ```
 
@@ -131,17 +137,18 @@ proyecto_final_camara <- proyecto_final %>%
 
 
   proyecto_final_camara %>% 
-  hchart(hcaes(x = iniciativa,  value = n), type = "treemap")%>%
-  hc_plotOptions(treemap = list(borderRadius = 7, colorByPoint = T,
-                                dataLabels = list(style = list(fontFamily = "Avenir next", fontSize = "16px")))) %>%
+  hchart(hcaes(x = iniciativa, y = n), type = "bar") %>% 
   hc_title(text = "Origen de las iniciativas en la Cámara de Representantes")%>%
-  hc_add_theme(thm)
+  hc_add_theme(thm)%>% 
+  hc_xAxis(title = list(text = "Iniciativa")) %>%
+  hc_yAxis(title = list(text = "Total"), tickAmount = 6)
+
 
 ```
 
 
 
-
+### Temas de los proyectos de ley
 
 ```{r}
 
@@ -184,6 +191,12 @@ proyecto_temas_camara <- proyecto_temas_camara[1:10,]
 
 
 ```
+
+
+### Estados de los proyectos de ley
+
+
+
 ```{r}
 estado_proyecto_graf <- proyecto_final %>% 
                         filter(legislatura_id==max(legislatura_id) & corporacion=="Senado" & tipo_proyecto=="Proyecto de Ley")  %>% 
@@ -236,6 +249,10 @@ estado_proyecto_graf_camara %>%
 
 ```
 
+
+# Congresistas más activos
+
+
 ```{r}
 citantes <- read_csv(here("Para Jesús", "control_politico_citantes.csv"))
 
@@ -270,7 +287,9 @@ citan_suma_se <- citantes %>%
   citan_suma_se %>% 
   hchart(hcaes(x = nombre_final, y = n), type = "bar") %>% 
   hc_title(text = "Representantes con mayor número de citaciones de Debates de Control Político")%>%
-  hc_add_theme(thm)
+  hc_add_theme(thm)%>% 
+  hc_xAxis(title = list(text = "Nombre")) %>%
+  hc_yAxis(title = list(text = "Total"))
 
 ```
 
@@ -285,7 +304,9 @@ citan_suma_re <- citantes %>%
 citan_suma_re %>% 
    hchart(hcaes(x = nombre_final, y = n), type = "bar") %>% 
   hc_title(text = "Senadores con mayor número de citaciones de Debates de Control Político")%>%
-  hc_add_theme(thm)
+  hc_add_theme(thm)%>% 
+  hc_xAxis(title = list(text = "Nombre")) %>%
+  hc_yAxis(title = list(text = "Total"))
 
 
 
@@ -320,7 +341,10 @@ autor_suma_sen <- autor_suma_sen[1:20,]
 autor_suma_sen %>% 
    hchart(hcaes(x = nombre_final, y = n), type = "lollipop") %>% 
  hc_title(text = "Senadores con mayor número de autorías de proyectos de ley")%>%
-  hc_add_theme(thm)
+  hc_add_theme(thm) %>% 
+  hc_chart(inverted = T)%>% 
+  hc_xAxis(title = list(text = "Nombre")) %>%
+  hc_yAxis(title = list(text = "Total"))
 
 
 ```
@@ -339,7 +363,11 @@ autor_suma_rep <- autor_suma_rep[1:20,]
 autor_suma_rep %>% 
    hchart(hcaes(x = nombre_final, y = n), type = "lollipop") %>% 
   hc_title(text = "Representantes con mayor número de autorías de proyectos de ley")%>%
-  hc_add_theme(thm)
+  hc_add_theme(thm)%>%
+  hc_add_theme(thm) %>% 
+  hc_chart(inverted = T)%>% 
+  hc_xAxis(title = list(text = "Nombre")) %>%
+  hc_yAxis(title = list(text = "Total"))
 
 
 
@@ -347,6 +375,8 @@ autor_suma_rep %>%
 
 ```
 
+
+# Actividad por partidos políticos
 
 ```{r}
 
@@ -366,7 +396,11 @@ partidos_suma_rep <- autor %>%
 partidos_suma_rep %>% 
    hchart(hcaes(x = partido, y = n), type = "lollipop") %>% 
  hc_title(text = "Partidos con mayor número de autorías de proyectos de ley, en la Cámara de Representantes")%>%
-  hc_add_theme(thm)
+  hc_add_theme(thm)%>%
+  hc_add_theme(thm) %>% 
+  hc_chart(inverted = T)%>% 
+  hc_xAxis(title = list(text = "Partido")) %>%
+  hc_yAxis(title = list(text = "Total"))
 
 
 ```
@@ -381,8 +415,9 @@ partidos_suma_sen <- autor %>%
 partidos_suma_sen %>% 
    hchart(hcaes(x = partido, y = n), type = "lollipop") %>% 
  hc_title(text = "Partidos con mayor número de autorías de proyectos de ley, en el Senado")%>%
-  hc_add_theme(thm)
-
+  hc_add_theme(thm) %>%
+  hc_add_theme(thm) %>% 
+  hc_chart(inverted = T)
 
 
 
@@ -431,7 +466,9 @@ citan_partido_re <- citantes %>%
 citan_partido_re %>% 
    hchart(hcaes(x = partido, y = n), type = "bar") %>% 
   hc_title(text = "Partidos en la Cámara de Representantes con mayor número de citaciones de Debates de Control Político")%>%
-  hc_add_theme(thm)
+  hc_add_theme(thm) %>% 
+  hc_xAxis(title = list(text = "Partido")) %>%
+  hc_yAxis(title = list(text = "Total"))
 
 
 ```
