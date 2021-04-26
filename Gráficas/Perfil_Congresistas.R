@@ -26,21 +26,8 @@ control <- read_csv("Para Jesús/control_politicos.csv")
 control_pol <- read_csv("Para Jesús/control_politico_citantes.csv")
 
 # Tema
-thm <- hc_theme(
-  colors = c("#66CCFF", "#17789E", "#6AEEB0", "#379E80", "#F78031", "#374B9E"),
-  chart = list( style = list(fontFamily = "Bell MT", fontSize = "20px")),
-  title = list( style = list(  color = "#17789E", fontSize = "22px", fontWeight= 'bold')),
-  subtitle = list(  style = list(    color = "#666666"  ) ),
-  legend = list( itemStyle = list(  color = "black"   ),
-                 itemHoverStyle = list( color = "gray")  ),
-  tooltip = list(borderWidth =0, shadow = F, style = list( fontSize = "16px")),
-  yAxis = list(lineWidth = 3,title = list(style= list(fontSize = "16px")),
-               tickAmount = 5,
-               labels = list(style= list(fontSize = "15px"))),
-  xAxis = list(lineWidth = 0,title = list(style= list(fontSize = "16px")),
-               labels = list(style= list(fontSize = "18px"))),
-  plotOptions = list(bar = list(borderRadius =5), treemap = list(borderRadius =5))
-)
+source("Gráficas/tema.R")
+
 
 
 # Temas más recurrentes  --------------------
@@ -59,81 +46,54 @@ aux0 <- pl %>%
         dplyr::left_join(temas %>%
           select(tema_id_principal = id, nombre_temas = nombre),
           by = "tema_id_principal")%>%
-        filter(congresista_id == 1) %>%
+        filter(congresista_id == 3) %>%
         group_by(nombre_temas) %>%
         summarise(count = n()) %>%
         ungroup() %>%
+        mutate(nombre_temas_2 = case_when(count < (0.7)*mean(count) ~ "", T~nombre_temas) ) %>%
         dplyr::arrange(-count)
 
-  aux1 <- aux0 %>%
-          mutate(n = 1:nrow(aux0)) %>%
-          filter(n <= 10) %>% select(-n)
-
-  otros <- aux0 %>%
-          mutate(n = 1:nrow(aux0)) %>%
-          filter(n > 10) %>%
-          dplyr::summarise(count = n(), nombre_temas = "Otros")
+    aux0 %>%
+    hchart(hcaes(x = nombre_temas, value = count), type = "treemap")%>%
+    hc_plotOptions(treemap = list(colorByPoint = T,
+      dataLabels = list(enabled = T, format = '{point.nombre_temas_2}'))) %>%
+    hc_title(text = "Temas más recurrentes") %>%
+    hc_add_theme(thm)
 
 
-  aux2 %>% bind_rows(otros) %>%
-  hchart("pie", hcaes(x = nombre_temas, y = count)) %>%
-  hc_title(text = "Temas más recurrentes") %>%
-  hc_add_theme(thm)
+#  Número de Proyectos de Ley como autor & Número de Proyectos de Ley como ponente  --------------------
+
+    aux <- pl_autor %>%
+      dplyr::left_join(congresistas %>%
+                         select(congresista_id = id,persona_id, corporacion_id, cuatrienio_id),
+                       by = "congresista_id") %>%
+      dplyr::left_join(personas %>%
+                         select(persona_id = id, nombres, apellidos, genero_id),
+                       by = "persona_id") %>%
+      dplyr::mutate(nombre_congresista = paste(nombres, apellidos)) %>%
+      dplyr::filter(congresista_id == 3) %>%
+      dplyr::summarise(n = n(), categoria = "Número de Proyectos de Ley como autor") %>%
+      dplyr::bind_rows(
+        pl_ponentes %>%
+          dplyr::left_join(congresistas %>%
+                             select(congresista_id = id,persona_id, corporacion_id, cuatrienio_id),
+                           by = "congresista_id") %>%
+          dplyr::left_join(personas %>%
+                             select(persona_id = id, nombres, apellidos, genero_id),
+                           by = "persona_id") %>%
+          dplyr::mutate(nombre_congresista = paste(nombres, apellidos)) %>%
+          dplyr::filter(congresista_id == 3) %>%
+          dplyr::summarise(n = n(), categoria = "Número de Proyectos de Ley como ponente"))
+
+    aux %>%
+      hchart( "pie", hcaes(x = categoria, y = n)) %>%
+      hc_add_theme(thm) %>%
+      hc_tooltip(enabled = T) %>%
+      hc_tooltip(pointFormat = '<b>{point.n}</b>') %>%
+      hc_title(text = "Perfil del congresista")
 
 
-# Número de Proyectos de Ley como autor --------------------
-
-aux <- pl_autor %>%
-  dplyr::left_join(congresistas %>%
-    select(congresista_id = id,persona_id, corporacion_id, cuatrienio_id),
-    by = "congresista_id") %>%
-  dplyr::left_join(personas %>%
-    select(persona_id = id, nombres, apellidos, genero_id),
-    by = "persona_id") %>%
-  dplyr::mutate(nombre_congresista = paste(nombres, apellidos))
-
-aux %>%
-  dplyr::filter(congresista_id == 1) %>%
-  dplyr::summarise(n = n()) %>%
-  hchart("bubble", hcaes(x = 1, y = 1, size = n)) %>%
-  hc_xAxis(lineWidth =0, labels = list(enabled= F), title= list(enabled= F)) %>%
-  hc_yAxis(lineWidth =0, labels = list(enabled= F), title= list(enabled= F), gridLineWidth =0) %>%
-  hc_plotOptions(bubble = list(colorByPoint = F,
-    dataLabels = list(enabled = T, style = list(fontSize = "50px")),
-      maxSize = "50%",
-      minSize = "20%",
-      marker = list(fillOpacity = .91,lineWidth=0))) %>%
-  hc_title(text = "Número de Proyectos de Ley como autor") %>%
-  hc_add_theme(thm)
-
-
-# Número de Proyectos de Ley como ponente --------------------
-
-aux <- pl_ponentes %>%
-        dplyr::left_join(congresistas %>%
-          select(congresista_id = id,persona_id, corporacion_id, cuatrienio_id),
-            by = "congresista_id") %>%
-        dplyr::left_join(personas %>%
-          select(persona_id = id, nombres, apellidos, genero_id),
-            by = "persona_id") %>%
-        dplyr::mutate(nombre_congresista = paste(nombres, apellidos))
-
-aux %>%
-  dplyr::filter(congresista_id == 1) %>%
-  dplyr::summarise(n = n()) %>%
-  hchart("bubble", hcaes(x = 1, y = 1, size = n)) %>%
-  hc_xAxis(lineWidth =0, labels = list(enabled= F), title= list(enabled= F)) %>%
-  hc_yAxis(lineWidth =0, labels = list(enabled= F), title= list(enabled= F), gridLineWidth =0) %>%
-  hc_plotOptions(bubble = list(colorByPoint = F,
-                               dataLabels = list(enabled = T, style = list(fontSize = "50px")),
-                               maxSize = "50%",
-                               minSize = "20%",
-                               marker = list(fillOpacity = .91,lineWidth=0))) %>%
-  hc_title(text = "Número de Proyectos de Ley como ponente") %>%
-  hc_add_theme(thm)
-
-
-# Número de citaciones --------------------
+# Número de citaciones  --------------------
 
 aux <- congresistas %>% select(congresista_id = id, persona_id) %>%
        dplyr::left_join(personas %>%
@@ -151,62 +111,10 @@ aux %>%
   hc_xAxis(lineWidth =0, labels = list(enabled= F), title= list(enabled= F)) %>%
   hc_yAxis(lineWidth =0, labels = list(enabled= F), title= list(enabled= F), gridLineWidth =0) %>%
   hc_plotOptions(bubble = list(colorByPoint = F,
-                               dataLabels = list(enabled = T, style = list(fontSize = "50px")),
-                               maxSize = "50%",
-                               minSize = "20%",
-                               marker = list(fillOpacity = .91,lineWidth=0))) %>%
+                dataLabels = list(enabled = T, style = list(fontSize = "50px")),
+                maxSize = "50%",
+                minSize = "20%",
+                marker = list(fillOpacity = .91,lineWidth=0))) %>%
   hc_title(text = "Número de citaciones") %>%
+  hc_tooltip(enabled = F) %>%
   hc_add_theme(thm)
-
-
-# Juntas -----------------
-
-aux <- pl_autor %>%
-      dplyr::left_join(congresistas %>%
-        select(congresista_id = id,persona_id, corporacion_id, cuatrienio_id),
-        by = "congresista_id") %>%
-      dplyr::left_join(personas %>%
-        select(persona_id = id, nombres, apellidos, genero_id),
-        by = "persona_id") %>%
-      dplyr::mutate(nombre_congresista = paste(nombres, apellidos)) %>%
-      dplyr::filter(congresista_id == 3) %>%
-      dplyr::summarise(n = n(), categoria = "Número de Proyectos de Ley como autor") %>%
-      dplyr::bind_rows(
-        pl_ponentes %>%
-        dplyr::left_join(congresistas %>%
-          select(congresista_id = id,persona_id, corporacion_id, cuatrienio_id),
-          by = "congresista_id") %>%
-        dplyr::left_join(personas %>%
-          select(persona_id = id, nombres, apellidos, genero_id),
-          by = "persona_id") %>%
-        dplyr::mutate(nombre_congresista = paste(nombres, apellidos)) %>%
-        dplyr::filter(congresista_id == 3) %>%
-        dplyr::summarise(n = n(), categoria = "Número de Proyectos de Ley como ponente")) %>%
-        dplyr::bind_rows(
-        congresistas %>% select(congresista_id = id, persona_id) %>%
-        dplyr::left_join(personas %>%
-          select(persona_id = id, nombres, apellidos),
-          by = "persona_id") %>%
-        dplyr::mutate(nombre_congresista = paste(nombres, apellidos)) %>%
-        dplyr::left_join(control_pol %>%
-          select(congresista_id, citados_id= id),
-          by = "congresista_id") %>%
-        dplyr::filter(congresista_id == 3) %>%
-        dplyr::summarise(n = n(), categoria = "Número de citaciones"))
-
-
-  aux %>%
-  hchart(hcaes(x = 3:1, size = n, y = 1, group = categoria), type = "bubble") %>%
-  hc_xAxis(lineWidth =0, labels = list(enabled= F), title= list(enabled= F)) %>%
-  hc_yAxis(lineWidth =0, labels = list(enabled= F), title= list(enabled= F), gridLineWidth =0) %>%
-  hc_plotOptions(bubble = list(colorByPoint = F,
-    dataLabels = list(enabled = T, style = list(fontSize = "30px")),
-    maxSize = "50%",
-    minSize = "20%",
-    marker = list(fillOpacity = .91,lineWidth=0))) %>%
-  hc_title(text = "Perfil del congresista") %>%
-  hc_add_theme(thm) %>%
-  hc_tooltip(enabled = F)
-
-  # treemap
-
