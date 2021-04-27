@@ -116,7 +116,9 @@ proyecto_final_senado <- proyecto_final %>%
   
   hc_add_theme(thm) %>% 
   hc_xAxis(title = list(text = "Iniciativa")) %>%
-  hc_yAxis(title = list(text = "Total"))
+  hc_yAxis(title = list(text = "Total")) %>% 
+ hc_plotOptions(bar=list(borderRadius =5, colorByPoint = T))%>%
+  hc_tooltip(pointFormat = '<b>{point.n}</b>')
 
 
 ```
@@ -141,7 +143,9 @@ proyecto_final_camara <- proyecto_final %>%
   hc_title(text = "Origen de las iniciativas en la Cámara de Representantes")%>%
   hc_add_theme(thm)%>% 
   hc_xAxis(title = list(text = "Iniciativa")) %>%
-  hc_yAxis(title = list(text = "Total"), tickAmount = 6)
+  hc_yAxis(title = list(text = "Total"), tickAmount = 6)%>% 
+ hc_plotOptions(bar=list(borderRadius =5, colorByPoint = T))%>%
+  hc_tooltip(pointFormat = '<b>{point.n}</b> ')
 
 
 ```
@@ -254,10 +258,11 @@ estado_proyecto_graf_camara %>%
 
 
 ```{r}
+# citantes <- read_csv(here("Bases de datos nuevas", "control_politico_citantes.csv"))
 citantes <- read_csv(here("Para Jesús", "control_politico_citantes.csv"))
 
 citacions <- read_csv(here("Para Jesús", "control_politicos.csv")) %>% 
-             select(id, legislatura_id) %>% 
+             select(id, legislatura_id, fecha) %>% 
              unique() %>% 
              rename("control_politico_id"="id")
 
@@ -272,14 +277,15 @@ congresistas <- read_csv(here("Para Jesús", "congresistas.csv")) %>%
 
 citantes <- left_join(citantes, citacions, by="control_politico_id")
 citantes <- left_join(citantes, congresistas, by="congresista_id")
-citantes <- left_join(citantes, corpo, by=c("corporacion_id"="id"))
 citantes <- left_join(citantes, personas, by="persona_id")
+
+citantes <- left_join(citantes, corpo, by=c("corporacion_id"="id"))
 
 
 citan_suma_se <- citantes %>%
               filter(legislatura_id==max(legislatura_id, na.rm=T)) %>%
               filter(corporacion!="Senado") %>%
-              filter(!is.na(nombres) | !is.na(apellidos)) %>% 
+              # filter(!is.na(nombres) | !is.na(apellidos)) %>% 
               mutate(nombre_final=paste(nombres, apellidos, sep=" ")) %>% 
               count(nombre_final) %>% 
               arrange(desc(n))
@@ -288,8 +294,8 @@ citan_suma_se <- citantes %>%
   hchart(hcaes(x = nombre_final, y = n), type = "bar") %>% 
   hc_title(text = "Representantes con mayor número de citaciones de Debates de Control Político")%>%
   hc_add_theme(thm)%>% 
-  hc_xAxis(title = list(text = "Nombre")) %>%
-  hc_yAxis(title = list(text = "Total"))
+  hc_xAxis(title = list(text = "")) %>%
+  hc_yAxis(title = list(text = "Total"), allowDecimals=F)
 
 ```
 
@@ -305,8 +311,8 @@ citan_suma_re %>%
    hchart(hcaes(x = nombre_final, y = n), type = "bar") %>% 
   hc_title(text = "Senadores con mayor número de citaciones de Debates de Control Político")%>%
   hc_add_theme(thm)%>% 
-  hc_xAxis(title = list(text = "Nombre")) %>%
-  hc_yAxis(title = list(text = "Total"))
+  hc_xAxis(title = list(text = "")) %>%
+  hc_yAxis(title = list(text = "Total"), allowDecimals=F)
 
 
 
@@ -323,16 +329,14 @@ proy_ley <- proyecto_final %>%
             select(id, titulo, legislatura_id)
 legis <- read_csv(here::here("Para Jesús", "legislaturas.csv"))
 autor <- left_join(autor, proy_ley, by=c("proyecto_ley_id"="id"))
-
+autor <- left_join(autor, personas, by=c("congresista_id"="persona_id"))
 autor <- left_join(autor, congresistas, by="congresista_id")
-
-autor <- left_join(autor, personas, by="persona_id")
 
 
 
 autor_suma_sen <- autor %>%
               filter(legislatura_id==max(legislatura_id, na.rm = T)) %>% 
-              filter(!is.na(nombres) | !is.na(apellidos)) %>% 
+              # filter(!is.na(nombres) | !is.na(apellidos)) %>% 
               filter(corporacion_id==1) %>% 
               mutate(nombre_final=paste(nombres, apellidos, sep=" ")) %>% 
               count(nombre_final) %>% 
@@ -343,7 +347,7 @@ autor_suma_sen %>%
  hc_title(text = "Senadores con mayor número de autorías de proyectos de ley")%>%
   hc_add_theme(thm) %>% 
   hc_chart(inverted = T)%>% 
-  hc_xAxis(title = list(text = "Nombre")) %>%
+  hc_xAxis(title = list(text = " ")) %>%
   hc_yAxis(title = list(text = "Total"))
 
 
@@ -354,7 +358,7 @@ autor_suma_sen %>%
 ```{r}
 autor_suma_rep <- autor %>%
               filter(legislatura_id==max(legislatura_id, na.rm = T)) %>% 
-              filter(!is.na(nombres) | !is.na(apellidos)) %>% 
+              # filter(!is.na(nombres) | !is.na(apellidos)) %>% 
               filter(corporacion_id!=1) %>% 
               mutate(nombre_final=paste(nombres, apellidos, sep=" ")) %>% 
               count(nombre_final) %>% 
@@ -366,7 +370,7 @@ autor_suma_rep %>%
   hc_add_theme(thm)%>%
   hc_add_theme(thm) %>% 
   hc_chart(inverted = T)%>% 
-  hc_xAxis(title = list(text = "Nombre")) %>%
+  hc_xAxis(title = list(text = " ")) %>%
   hc_yAxis(title = list(text = "Total"))
 
 
@@ -399,7 +403,7 @@ partidos_suma_rep %>%
   hc_add_theme(thm)%>%
   hc_add_theme(thm) %>% 
   hc_chart(inverted = T)%>% 
-  hc_xAxis(title = list(text = "Partido")) %>%
+  hc_xAxis(title = list(text = "")) %>%
   hc_yAxis(title = list(text = "Total"))
 
 
@@ -417,7 +421,9 @@ partidos_suma_sen %>%
  hc_title(text = "Partidos con mayor número de autorías de proyectos de ley, en el Senado")%>%
   hc_add_theme(thm) %>%
   hc_add_theme(thm) %>% 
-  hc_chart(inverted = T)
+  hc_chart(inverted = T)%>% 
+  hc_xAxis(title = list(text = "")) %>%
+  hc_yAxis(title = list(text = "Total"))
 
 
 
@@ -448,7 +454,9 @@ citan_partido_sen <- citantes %>%
 citan_partido_sen %>% 
    hchart(hcaes(x = partido, y = n), type = "bar") %>% 
   hc_title(text = "Partidos en el Senado con mayor número de citaciones de Debates de Control Político")%>%
-  hc_add_theme(thm)
+  hc_add_theme(thm)%>% 
+  hc_xAxis(title = list(text = "")) %>%
+  hc_yAxis(title = list(text = "Total"))
 
 
 
@@ -467,7 +475,7 @@ citan_partido_re %>%
    hchart(hcaes(x = partido, y = n), type = "bar") %>% 
   hc_title(text = "Partidos en la Cámara de Representantes con mayor número de citaciones de Debates de Control Político")%>%
   hc_add_theme(thm) %>% 
-  hc_xAxis(title = list(text = "Partido")) %>%
+  hc_xAxis(title = list(text = "")) %>%
   hc_yAxis(title = list(text = "Total"))
 
 
@@ -519,3 +527,14 @@ partido_temas_rep %>%
 
 
 ```
+
+
+```{r}
+
+citados <- read_csv(here::here("Bases de datos nuevas", "control_politico_citados.csv"))
+
+
+
+```
+
+
