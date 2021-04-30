@@ -61,8 +61,12 @@ temas <- read_csv(here("Para Jesús", "temas.csv")) %>%
 cuatri <- read_csv(here("Para Jesús", "cuatrienios.csv")) %>% 
           select(id, fecha_inicio_cuatri=fecha_inicio) %>% 
           arrange(fecha_inicio_cuatri) %>% 
-          mutate(cuatrienio=row(.), 
-                 cuatrienio= factor(cuatrienio, labels = c("")))
+          mutate(cuatrienio=row_number(), 
+                 cuatrienio=factor(cuatrienio, labels = c("Cuatrienio 1994", "Cuatrienio 1998", 
+                                                           "Cuatrienio 2002", "Cuatrienio 2006", 
+                                                           "Cuatrienio 2010", "Cuatrienio 2004", 
+                                                           "Cuatrienio 2008")))  
+
 
 proyecto_final <- left_join(proyecto, iniciativas, by=c("iniciativa_id"="id"))
 
@@ -189,12 +193,13 @@ proyecto <- read_csv(here("Para Jesús", "proyecto_leys.csv")) %>%
             select(id, tipo_proyecto_id, cuatrienio_id, fecha_radicacion) %>% 
             left_join(tipo_proyecto, by=c("tipo_proyecto_id"="id")) %>% 
             left_join(estado_final, by=c("id"="proyecto_ley_id")) %>% 
+            left_join(cuatri, by=c("cuatrienio_id"="id")) %>% 
             filter(!is.na(estado_proyecto)) %>% 
             unique() %>% 
             mutate(dif=fecha_aproba-fecha_radicacion, 
                    dif=as.numeric(dif))
 aux <-  data_to_boxplot(data = proyecto  ,
-                         variable = dif, group_var =cuatrienio_id, group_var2 = tipo_proyecto)
+                         variable = dif, group_var =cuatrienio, group_var2 = tipo_proyecto)
 
 highchart() %>%
   hc_xAxis(type = "category") %>%
@@ -212,9 +217,224 @@ highchart() %>%
 
 
 ```
+#### Compisición partidista
+
+```{r}
+
+# edad - composición partidista
+congresistas <- read_csv(here("Para Jesús", "congresistas.csv"))
+partidos <- read_csv(here("Para Jesús", "partidos.csv"))
+personas <- read_csv(here("Para Jesús", "personas.csv")) %>% 
+       filter(!is.na(fechaNacimiento)) 
+
+personas$dia <- substr(personas$fechaNacimiento, 1,2)
+personas$mes <- substr(personas$fechaNacimiento, 4,5)
+personas$year <- substr(personas$fechaNacimiento, 7,8)
+personas$year_ <- paste0("19", personas$year)
+personas$nacim <- paste(personas$year_, personas$mes, personas$dia, sep="/")
+
+
+aux <- congresistas %>% 
+       select(congresista_id = id, persona_id, cuatrienio_id, partido_id) %>%
+       left_join(partidos %>%
+       select(partido_id =id, partido  = nombre, color),
+       by = "partido_id" ) %>%
+       left_join(personas %>%
+       select(persona_id = id, nacim),
+       by = "persona_id") %>%
+       left_join(cuatri, by=c("cuatrienio_id"="id")) %>% 
+       filter(!is.na(nacim)) %>%
+       mutate(nacim = lubridate::ymd(nacim), 
+              edad =round(as.numeric(fecha_inicio_cuatri- nacim)/365, 0)) 
 
 
 
 
+barras <- aux %>%
+       group_by(partido) %>%
+       summarise(mediana=median(edad)) %>% 
+       ungroup() %>% 
+       arrange(desc(mediana))
+
+barras_viejos <- barras %>% 
+                 arrange(desc(mediana))
+
+barras_viejos <- barras_viejos[1:10,]
+
+
+barras_viejos %>%  hchart(hcaes(y = mediana, x = partido), type = "bar") %>%
+  hc_title(text = "Top 5 partidos con congresitas de mayor edad") %>%
+  hc_xAxis(title = list(text = " ")) %>%
+  hc_yAxis(title = list(text = "Mediana de edad")) %>%
+  hc_tooltip(shared = T,
+             pointFormat = '<br/>Mediana de edad:  <b>{point.mediana}</b>') %>%
+  hc_add_theme( thm)%>% 
+ hc_plotOptions(bar=list(borderRadius =5, colorByPoint = T))
+
+
+
+
+
+
+
+
+
+
+```
+
+```{r}
+
+barras_jov <- barras %>% 
+                 arrange(mediana)
+
+barras_jov <- barras_jov[1:10,]
+
+
+barras_jov %>%  hchart(hcaes(y = mediana, x = partido), type = "bar") %>%
+  hc_title(text = "Top 5 partidos con congresitas más jóvenes") %>%
+  hc_xAxis(title = list(text = " ")) %>%
+  hc_yAxis(title = list(text = "Mediana de edad")) %>%
+  hc_tooltip(shared = T,
+             pointFormat = '<br/>Mediana de edad:  <b>{point.mediana}</b>') %>%
+  hc_add_theme( thm)%>% 
+ hc_plotOptions(bar=list(borderRadius =5, colorByPoint = T))
+
+
+
+
+
+
+```
+
+```{r}
+
+# c_dem <- aux %>% 
+#          filter(partido=="Conservador Colombiano")
+
+cuat1 <- aux %>% 
+         filter(cuatrienio=="Cuatrienio 1998")
+
+cuat2 <- aux %>% 
+         filter(cuatrienio=="Cuatrienio 2002")
+cuat3 <- aux %>% 
+         filter(cuatrienio=="Cuatrienio 2006")
+cuat4 <- aux %>% 
+         filter(cuatrienio=="Cuatrienio 2010")
+cuat5 <- aux %>% 
+         filter(cuatrienio=="Cuatrienio 2014")
+cuat6 <- aux %>% 
+         filter(cuatrienio=="Cuatrienio 2018")
+
+
+  
+  
+  hchart(
+  density(cuat1$edad), 
+  type = "area", 
+  color = "#66CCFF", name = "Cuatrienio 1998"
+  ) %>% 
+  hc_add_series(
+  density(cuat2$edad), 
+  type = "area", 
+  color = "#17789E", name = "Cuatrienio 2002"
+  )%>% 
+  hc_add_series(
+  density(cuat3$edad), 
+  type = "area", 
+  color = "#6AEEB0", name = "Cuatrienio 2006"
+  )%>% 
+  hc_add_series(
+  density(cuat4$edad), 
+  type = "area", 
+  color = "#379E80", name = "Cuatrienio 2010"
+  ) %>%
+  hc_title(text = "Distribución de edad en el congreso por cuatrienio") %>%
+  hc_add_theme( thm)
+
+
+
+
+
+```
+
+
+```{r}
+
+
+c_dem <- aux %>%
+         filter(partido=="Conservador Colombiano")
+
+cuat1 <- c_dem %>% 
+         filter(cuatrienio=="Cuatrienio 1998")
+
+cuat2 <- c_dem %>% 
+         filter(cuatrienio=="Cuatrienio 2002")
+cuat3 <- c_dem %>% 
+         filter(cuatrienio=="Cuatrienio 2006")
+cuat4 <- c_dem %>% 
+         filter(cuatrienio=="Cuatrienio 2010")
+cuat5 <- c_dem %>% 
+         filter(cuatrienio=="Cuatrienio 2014")
+cuat6 <- c_dem %>% 
+         filter(cuatrienio=="Cuatrienio 2018")
+
+
+  
+  
+  hchart(
+  density(cuat1$edad), 
+  type = "area", 
+  color = "#66CCFF", name = "Cuatrienio 1998"
+  ) %>% 
+  hc_add_series(
+  density(cuat2$edad), 
+  type = "area", 
+  color = "#17789E", name = "Cuatrienio 2002"
+  )%>% 
+  hc_add_series(
+  density(cuat3$edad), 
+  type = "area", 
+  color = "#6AEEB0", name = "Cuatrienio 2006"
+  )%>% 
+  hc_add_series(
+  density(cuat4$edad), 
+  type = "area", 
+  color = "#379E80", name = "Cuatrienio 2010"
+  ) %>%
+  hc_title(text = "Distribución de edad del Partido Conservador Colombiano por cuatrienio") %>%
+  hc_add_theme( thm)
+
+
+
+
+
+
+```
+```{r}
+
+#Composición
+aux <- congresistas %>% 
+       select(congresista_id = id, persona_id, cuatrienio_id, partido_id) %>%
+       left_join(partidos %>%
+       select(partido_id =id, partido  = nombre, color),
+       by = "partido_id" ) %>%
+       left_join(personas %>%
+       select(persona_id = id, nacim),
+       by = "persona_id") %>%
+       left_join(cuatri, by=c("cuatrienio_id"="id")) %>% 
+       count(partido, cuatrienio) %>% 
+       filter(n>=10) %>% 
+       arrange(cuatrienio)
+
+aux %>% 
+  hchart(hcaes(from = partido, to  = cuatrienio, weight =n), type = "sankey") %>%
+  hc_title(text = "Partidos con mayor representación en el Congreso, por cuatrienio")%>%
+  hc_add_theme(thm)
+
+
+
+
+
+```
 
 
