@@ -18,6 +18,7 @@ comment = "#>"
 
 
 ```{r, include = FALSE}
+#librerías
 library(pacman)
 p_load(tidyverse, magrittr, highcharter, lubridate, devtools, viridis, hrbrthemes, mapdata, here)
 library(ggchicklet)
@@ -26,6 +27,8 @@ library(randomNames)
 ```
 
 ```{r, include = FALSE}
+#bases
+
 source(here("Gráficas", "tema.R"))
 proyecto <- read_csv(here("Para Jesús", "proyecto_leys.csv"))
 
@@ -56,7 +59,10 @@ temas <- read_csv(here("Para Jesús", "temas.csv")) %>%
          select(id, tema=nombre)
 
 cuatri <- read_csv(here("Para Jesús", "cuatrienios.csv")) %>% 
-          select(id, fecha_inicio_cuatri=fecha_inicio)
+          select(id, fecha_inicio_cuatri=fecha_inicio) %>% 
+          arrange(fecha_inicio_cuatri) %>% 
+          mutate(cuatrienio=row(.), 
+                 cuatrienio= factor(cuatrienio, labels = c("")))
 
 proyecto_final <- left_join(proyecto, iniciativas, by=c("iniciativa_id"="id"))
 
@@ -76,6 +82,52 @@ proyecto_final <- left_join(proyecto_final, cuatri, by=c("cuatrienio_id" ="id"))
 
 ```
 
+## Proyectos de Ley
+
+### Total de proyectos sancionados como Ley
+
+
+```{r}
+sancionados <- proyecto_final %>% 
+               filter(estado_proyecto=="Sancionado como Ley") %>%
+               mutate(fecha=substr(fecha_inicio_cuatri,1,4)) %>% 
+               count(fecha)
+sancionados %>%
+  hchart(hcaes(x = fecha, y = n), type = "line") %>%
+  hc_plotOptions(line= list(lineWidth = 4,
+                            marker = list(radius =0),
+                            stickyTracking=F)) %>%
+    hc_chart(style = list(fontFamily = "Avenir next"), polar = T) %>% 
+    hc_add_theme(thm) %>% 
+  hc_tooltip(
+    borderWidth= 0,
+    outside = T,
+    textOutline= "3px contrast",
+    shadow=F,
+    shared = T,
+    split = F,
+    headerFormat= '<span style="font-size: 20px">{point.key}</span><br/>',
+    pointFormat = '{point.n}'  ) %>% 
+  hc_xAxis(crosshair = T, title = list(text = ""),
+           lineWidth = 0, tickWidth  = 0, gridLineWidth =0,
+           showLastLabel= T,
+           labels = list(step = 1, style = list(fontSize = "16px", color = "#001c44") )) %>% 
+  hc_yAxis(crosshair = T, title = list(text = ""), tickAmount = 3,
+           dashStyle = "dot",
+           gridLineWidth =.5, showFirstLabel = T,
+           labels = list( style = list(fontSize = "12px") )) %>% 
+  hc_title(text = "Total de Proyectos de Ley sancionados por año")
+
+  # hc_colors(colors = c("#1A535C", "#FFE66D")) %>%
+
+
+
+
+
+
+```
+
+### Temas recurrentes
 
 ```{r}
 
@@ -121,46 +173,7 @@ temas %>%
 
 
 
-
-```{r}
-sancionados <- proyecto_final %>% 
-               filter(estado_proyecto=="Sancionado como Ley") %>%
-               mutate(fecha=substr(fecha_inicio_cuatri,1,4)) %>% 
-               count(fecha)
-sancionados %>%
-  hchart(hcaes(x = fecha, y = n), type = "line") %>%
-  hc_plotOptions(line= list(lineWidth = 4,
-                            marker = list(radius =0),
-                            stickyTracking=F)) %>%
-    hc_chart(style = list(fontFamily = "Avenir next"), polar = T) %>% 
-    hc_add_theme(thm) %>% 
-  hc_tooltip(
-    borderWidth= 0,
-    outside = T,
-    textOutline= "3px contrast",
-    shadow=F,
-    shared = T,
-    split = F,
-    headerFormat= '<span style="font-size: 20px">{point.key}</span><br/>',
-    pointFormat = '{point.n}'  ) %>% 
-  hc_xAxis(crosshair = T, title = list(text = ""),
-           lineWidth = 0, tickWidth  = 0, gridLineWidth =0,
-           showLastLabel= T,
-           labels = list(step = 1, style = list(fontSize = "16px", color = "#001c44") )) %>% 
-  hc_yAxis(crosshair = T, title = list(text = ""), tickAmount = 3,
-           dashStyle = "dot",
-           gridLineWidth =.5, showFirstLabel = T,
-           labels = list( style = list(fontSize = "12px") )) %>% 
-  hc_title(text = "Total de Proyectos de Ley sancionados por año")
-
-  # hc_colors(colors = c("#1A535C", "#FFE66D")) %>%
-
-
-
-
-
-
-```
+### Tiempo de sanción como Ley por cada tipo proyecto 
 
 ```{r}
 
@@ -199,5 +212,9 @@ highchart() %>%
 
 
 ```
+
+
+
+
 
 
