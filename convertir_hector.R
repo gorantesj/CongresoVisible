@@ -583,9 +583,38 @@ proyecto_ley_comisions <- read_csv("Bases de datos nuevas/proyecto_ley_comisions
 # facebook
 fb <- tabla_res[[91]]
 datos_contacto <- read_csv("finales/idénticas/comision_datos_contactos.csv")
+
+
+# tabla ministros y partidos ----------------------------------------------
+
+
+partido <- tabla_res[[51]]
+
+
+tabla_gerardo <- tabla_res[[143]]
+
+
+# proyecto autors nueva ---------------------------------------------------
+
+proyecto_ley_autores_legislativos <- read_csv(here::here("Para Jesús", "proyecto_ley_autors.csv")) %>%
+                                     filter(tipo_autor_id==28) %>%
+                                     select(id, persona_id=congresista_id, tipo_autor_id, proyecto_ley_id, created_at, updated_at) %>%
+                                     mutate(activo=NA_character_,
+                                     usercreated=NA_character_,
+                                     usermodifed=NA_character_)%>%
+                                     write_excel_csv("Bases de datos nuevas/proyecto_ley_autores_legislativos.csv")
+
+proyecto_ley_autors <- read_csv(here::here("Para Jesús", "proyecto_ley_autors.csv")) %>%
+                       filter(tipo_autor_id!=28) %>%
+                       select(id, persona_id=congresista_id, tipo_autor_id, proyecto_ley_id, created_at, updated_at) %>%
+                       mutate(activo=NA_character_,
+                       usercreated=NA_character_,
+                       usermodifed=NA_character_)%>%
+  write_excel_csv("Bases de datos nuevas/proyecto_ley_autors.csv")
+
 # transformación ----------------------------------------------------------
 
-crear_bases(campos %>% filter(num==143), tabla_res)
+crear_bases(campos %>% filter(num==121), tabla_res)
 personas <- read_csv("finales_hector/tablas nuevas/personas.csv")
 fb <- tabla_res[[91]]
 # Sandbox -----------------------------------------------------------------
