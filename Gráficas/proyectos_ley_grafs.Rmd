@@ -31,7 +31,7 @@ library(randomNames)
 ```{r}
 pal <- colorRampPalette(c("#66CCFF", "#17789E", "#6AEEB0", "#379E80", "#F78031", "#374B9E", "#666666"))
 thm <- hc_theme(
-  colors = c("#66CCFF", "#17789E", "#6AEEB0", "#379E80", "#F78031", "#374B9E"),
+  colors =c("#66CCFF", "#17789E", "#6AEEB0", "#379E80", "#F78031", "#374B9E", "#666666", "#ff7f00", "#a65628", "#f781bf"),
   chart = list( style = list(fontFamily = "Bell MT", fontSize = "20px")),
   title = list( style = list(  color = "#17789E", fontSize = "22px", fontWeight= 'bold')),
   subtitle = list(  style = list(    color = "#666666"  ) ),

@@ -5,7 +5,7 @@ library(lubridate)
 
 
 thm <- hc_theme(
-  colors = c("#66CCFF", "#17789E", "#6AEEB0", "#379E80", "#F78031", "#374B9E"),
+  colors =c("#66CCFF", "#17789E", "#6AEEB0", "#379E80", "#F78031", "#374B9E", "#666666", "#984ea3", "#a65628", "#f781bf"),
   chart = list( style = list(fontFamily = "Bell MT", fontSize = "20px")),
   title = list( style = list(  color = "#17789E", fontSize = "22px", fontWeight= 'bold')),
   subtitle = list(  style = list(    color = "#666666"  ) ),
@@ -22,7 +22,7 @@ thm <- hc_theme(
                labels = list(style= list(fontSize = "18px"))),
   plotOptions = list(bar = list(borderRadius =5),
                      scatter = list(marker = list(radius = 8)),
-                     treemap = list(borderRadius =5,
+                     treemap = list(borderRadius =5, colorByPoint = T,
                                     dataLabels = list(style = list(fontFamily = "Bell MT", fontSize = "16px"))),
                      errorbar = list(maxPointWidth = 20))
 

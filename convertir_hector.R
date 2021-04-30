@@ -500,9 +500,13 @@ final <- bind_rows(invi, control_citados) %>%
 
 agenda_camaras <- tabla_res[[128]] %>%
                   select()
-agenda_comisiones <- tabla_res[[129]] %>%
-                     rename(comision_id=id,
-                            agenda_legislativa=ordendeldia_id,
+
+comisions <- tabla_res[[38]] %>%
+             select(id, camara_id)
+
+agenda_comisiones <- tabla_res[[130]] %>%
+                     left_join(comisions, by=c("comision_id"="id")) %>%
+                     rename(agenda_legislativa=ordendeldia_id,
                             corporacion_id=camara_id) %>%
                      arrange(desc(agenda_legislativa)) %>%
                      mutate(id=row_number(),
@@ -512,8 +516,8 @@ agenda_comisiones <- tabla_res[[129]] %>%
                             created_at=NA_character_,
                             updated_at=NA_character_
                             ) %>%
-                     select(id, agenda_legislativa,corporacion_id, comision_id, id:updated_at) %>%
-                     write_excel_csv("finales_hector/tablas nuevas/agenda_legislativa_comisions.csv")
+                     write_excel_csv("finales_hector/tablas nuevas/agenda_legislativa_comisions.csv")%>%
+                    write_excel_csv("Para Jesús/agenda_legislativa_comisions.csv")
 
 
 agenda_legislativas <- read_csv("Bases de datos nuevas/agenda_legislativas.csv") %>%
@@ -602,7 +606,8 @@ proyecto_ley_autores_legislativos <- read_csv(here::here("Para Jesús", "proyect
                                      mutate(activo=NA_character_,
                                      usercreated=NA_character_,
                                      usermodifed=NA_character_)%>%
-                                     write_excel_csv("Bases de datos nuevas/proyecto_ley_autores_legislativos.csv")
+                                     write_excel_csv("Bases de datos nuevas/proyecto_ley_autores_legislativos.csv") %>%
+                                     write_excel_csv("Para Jesús/proyecto_ley_autores_legislativos.csv")
 
 proyecto_ley_autors <- read_csv(here::here("Para Jesús", "proyecto_ley_autors.csv")) %>%
                        filter(tipo_autor_id!=28) %>%
@@ -610,7 +615,8 @@ proyecto_ley_autors <- read_csv(here::here("Para Jesús", "proyecto_ley_autors.c
                        mutate(activo=NA_character_,
                        usercreated=NA_character_,
                        usermodifed=NA_character_)%>%
-  write_excel_csv("Bases de datos nuevas/proyecto_ley_autors.csv")
+  write_excel_csv("Bases de datos nuevas/proyecto_ley_autors.csv")%>%
+  write_excel_csv("Para Jesús/proyecto_ley_autors.csv")
 
 # transformación ----------------------------------------------------------
 
