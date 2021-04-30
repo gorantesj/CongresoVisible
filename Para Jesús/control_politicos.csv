@@ -1,3 +1,74 @@
+<<<<<<< HEAD
+﻿id,cuatrienio_id,comision_id,estado_control_politico_id,titulo,fecha,activo,usercreated,usermodifed,created_at,updated_at,tema_id_principal,tema_id_secundario,plenaria,tags,detalles,gacetas,numero_proposicion
+1,2,NA,NA,Debatir sobre  la injerencia de los factores delincuenciales en los procesos electorales.,NA,NA,NA,NA,NA,NA,101,NA,TRUE,NA,NA,NA,57
+2,2,NA,NA,Debate sobre servicios públicos domiciliarios,NA,NA,NA,NA,NA,NA,38,38,TRUE,servicios públicos,NA,NA,17
+3,2,NA,NA,Debatir sobre la situación del rio Magdalena,NA,NA,NA,NA,NA,NA,3,NA,TRUE,NA,NA,NA,255
+4,6,5,NA,"Debatir la situación de la minería en Colombia y, especialmente, de la pequeña minería",NA,NA,NA,NA,NA,NA,56,3,FALSE,"Minería, pequeña minería, medio ambiente",NA,22-nov,NA
+5,4,NA,NA,Administración del Servicio Exterior de la República.,NA,NA,NA,NA,NA,NA,108,124,TRUE,Servicio Exterior de la República,<p>No se Realizo</p>,NA,17
+6,2,7,NA,Por el cual se modifican parcialmente las leyes 785 y 793 de 2002 y se dictan otras disposiciones. (extinción de dominio),NA,NA,NA,NA,NA,NA,122,122,FALSE,Extinción de dominio,NA,NA,NA
+7,6,2,NA,Para explicar las políticas de gestión a desarrollar a raíz de la creación de Colpensiones,15/09/10,NA,NA,NA,NA,NA,10,NA,FALSE,"pensiones, colpensiones",NA,NA,16-oct
+8,6,9,NA,Discutir los avances de la estrategia empresarial de ECOPETROL.,NA,NA,NA,NA,NA,NA,56,41,FALSE,"ECOPETROL, empresa colombiana de petróleos, estrategia empresarial.",NA,NA,NA
+9,2,11,NA,Debate sobre resultados de la gestión del Ministerio de Minas en marco de los tratados comerciales internacionales.,NA,NA,NA,NA,NA,NA,56,108,FALSE,"TLC, Minas,",NA,NA,NA
+10,4,NA,NA,Situación de empresas de telecomunicaciones.,NA,NA,NA,NA,NA,NA,38,53,TRUE,telecomunicaciones,Se Realizó. A ser transmitida por el Canal Institucional.,NA,53 y aditivas
+11,4,NA,NA,"Situación general del Departamento  Archipiélago de San Andrés, Providencia y Santa Catalina.",NA,NA,NA,NA,NA,NA,64,5,TRUE,"San Andrés, Providencia, Santa Catalina",Se realizó. A ser transmitido por Canal Institucional,NA,83
+12,4,NA,NA,"Sobre el estado actual, los dilemas, retos y oportunidades de las políticas para combatir la pobreza y el desempleo en Colombia.",NA,NA,NA,NA,NA,NA,116,22,TRUE,"pobreza, desempleo",NA,NA,1
+13,2,7,NA,Discutir la seguridad en las ciudades capitales del país,NA,NA,NA,NA,NA,NA,123,119,FALSE,seguridad,NA,NA,None
+14,2,NA,NA,Evaluación de la política antidrogas del Gobierno Nacional.,NA,NA,NA,NA,NA,NA,10,122,TRUE,"antidrogas, drogas",NA,NA,43
+15,2,NA,NA,"Situación del Banco de la República, pronósticos macroeconómicos, manejo de la inflación, entre otras.",NA,NA,NA,NA,NA,NA,NA,NA,TRUE,NA,adcionalmente se invitaron a todos los demás miembros de la Junta Directiva del Banco de la República,NA,307
+16,2,NA,NA,Impacto del TLC con Estados Unidos en la economía nacional,NA,NA,NA,NA,NA,NA,NA,NA,TRUE,NA,NA,NA,19
+17,2,NA,NA,Responsabilidad del Presidente de la Republica en el desarrollo de las AUC en Antioquia y el desempeño de las Cooperativas de seguridad Convivir.,NA,NA,NA,NA,NA,NA,NA,NA,TRUE,NA,NA,NA,269
+18,2,NA,NA,Medidas de Orden Público adoptadas en Bogotá con motivo de la visita del presidente de los Estados Unidos.,NA,NA,NA,NA,NA,NA,108,123,TRUE,Presidente Estados Unidos,NA,NA,100
+19,2,NA,NA,Relaciones entre dirigentes políticos y paramilitares,NA,NA,NA,NA,NA,NA,NA,NA,TRUE,NA,NA,NA,264
+20,2,NA,NA,Situación de los trasladados de la Ceja a la carcel de Itagüi.,05/12/06,NA,NA,NA,NA,NA,119,123,TRUE,"Ceja, Itagüi",NA,NA,92
+21,2,NA,NA,Alcances del acuerdo logrado con la firma COMMSA,NA,NA,NA,NA,NA,NA,100,NA,TRUE,COMMSA,Aplazado.,NA,97
+22,2,NA,NA,Balance y perspectivas de los resultados agropecuarios,NA,NA,NA,NA,NA,NA,8,NA,TRUE,resultados agropecuarios,NA,NA,120
+23,2,NA,NA,"Pronunciamiento del Gobierno Nacional de reestructurar el Instituto de Seguro Social (ISS), con la posibilidad de generar tres nuevas empresas",NA,NA,NA,NA,NA,NA,10,NA,TRUE,ISS,NA,NA,21
+24,2,NA,NA,Cobertura y recursos de sistema nacional de salud,NA,NA,NA,NA,NA,NA,10,NA,TRUE,sistema nacional de salud,NA,NA,17
+25,2,NA,NA,Prácticas restrictivas en la industria del cemento,NA,NA,NA,NA,NA,NA,73,NA,TRUE,cemento,NA,NA,46
+26,2,NA,NA,"Plan de desarrollo ""Hacia un Estado Comunitario 2002-2006""",NA,NA,NA,NA,NA,NA,NA,NA,TRUE,NA,NA,NA,41
+27,2,NA,NA,"Problemática de la supresión y liquidación de las empresas sociales del estado-ESE, creadas por el decreto Ley 1750 de 2003, situación que ha generado la llamada crisis general del Seguro Social",NA,NA,NA,NA,NA,NA,NA,NA,TRUE,NA,NA,NA,24
+28,2,NA,NA,Reestructuración del Instituto del Seguro Social,NA,NA,NA,NA,NA,NA,NA,NA,TRUE,NA,NA,NA,21
+29,2,NA,NA,Cobertura en salud e inversión de recursos.,NA,NA,NA,NA,NA,NA,NA,NA,TRUE,NA,NA,NA,17
+30,2,NA,NA,"Plan de desarrollo ""Hacia un Estado Comunitario 2002- 2006""",NA,NA,NA,NA,NA,NA,119,NA,TRUE,Hacia un Estado Comunitario,Transmisión por Señal Colombia.,NA,41
+31,2,NA,NA,Convenios realizados con Fonade y recursos de inversión de las vigencias 2004-2005,NA,NA,NA,NA,NA,NA,NA,NA,TRUE,NA,NA,NA,2
+32,4,NA,NA,"Informe sobre como el Gobierno Nacional ejerce la inspección, vigilancia y control para que las asociadas y/o compañias petroleras le garanticen a las entidades territoriales la retribución de las compensaciones ambientales, por el impacto social y económico producido por el uso del agua",NA,NA,NA,NA,NA,NA,NA,NA,TRUE,NA,Realizada,NA,221
+33,4,NA,NA,"Informe sobre el proceso de paz con las Autodefensas, ELN, FARC y particularmente el acuerdo humanitario.",NA,NA,NA,NA,NA,NA,NA,NA,TRUE,NA,Realizada,NA,146
+34,4,NA,NA,Debate sobre la Ley contra la explotacion sexual infantil.,09/08/05,NA,NA,NA,NA,NA,28,122,FALSE,explotacion sexual infantil,Se Realizó,NA,39
+35,4,NA,NA,"Cuestionario sobre Informe de las Naciones Unidas para los Derechos Humanos sobre posibles irregularidades de la aplicación de la Ley de Justicia y Paz. Investigaciones que se adelantan contra el Exdirector del DAS, Jorge Aurelio Noguera Cotes.",NA,NA,NA,NA,NA,NA,94,123,TRUE,"Naciones Unidas para los Derechos Humanos, Ley de Justicia y Paz, LJP, DAS, Jorge Aurelio Noguera Cotes.",NA,NA,202
+36,4,7,NA,Seguridad de miembros del Congreso.,NA,NA,NA,NA,NA,NA,123,20,FALSE,"Seguridad, congresistas",No se realizó.,NA,NA
+37,4,12,NA,"Debate sobre los programas, recursos, la gestión y las expectativas de la Administración Postal Nacional-Adopostal.",NA,NA,NA,NA,NA,NA,53,NA,FALSE,Adopostal,No se realizó.,NA,20
+38,4,4,NA,Discutir sobre  las irregularidades que se vienen presentando en la cancillería.,19/04/06,NA,NA,NA,NA,NA,108,NA,FALSE,NA,NA,NA,42
+39,6,NA,NA,Debate sobre los derechos de los partidos de oposición en Colombia y las garantías a éstos por parte del Gobierno Nacional.,NA,NA,NA,NA,NA,NA,130,20,FALSE,"oposición, gobierno, coalición",NA,NA,NA
+40,2,2,NA,Debatir sobre la Política de vivienda y residuos hospitalarios en el país,NA,NA,NA,NA,NA,NA,125,10,FALSE,"residuos hospitalarios, política de vivienda",NA,NA,02-ago
+41,4,NA,NA,Situación de empresas de telecomunicaciones.,10/08/05,NA,NA,NA,NA,NA,38,53,TRUE,telecomunicaciones,<p>No se Realiz&oacute;.</p>,NA,53 y aditivas
+42,6,8,NA,Debatir sobre el proceso de venta accionaria de la empresa Satena,01/06/11,NA,NA,NA,NA,NA,100,41,FALSE,"Satena, acciones",NA,NA,18-nov
+43,4,NA,NA,"Discutir sobre el Proyecto de Ley No.264/04 de Cámara o 25/04 de Senado""Por medio del cual se expide la ley general forestal.""",02/08/05,NA,NA,NA,NA,NA,3,120,TRUE,"ley general forestal, indígenas",<p>realizada con propisici&oacute;n aditiva 114</p>,NA,28
+44,4,NA,NA,Resultado de la visita tripartita de la OIT.,NA,NA,NA,NA,NA,NA,22,120,TRUE,OIT,<p>No se Realizo</p>,NA,172
+45,4,NA,NA,Reglamentación del gobierno nacional y en especial del Ministerio de Protección Social respecto a la Ley 972/05 sobre atención del Estado a los enfermos de VIH/SIDA,04/10/05,NA,NA,NA,NA,NA,10,NA,FALSE,"VIH/SIDA, Ministerio de Protección Social",<p>A ser transmitido por el Canal Institucional.</p>,NA,136
+46,4,NA,NA,Discutir sobre la situación de los cultivos de arroz frente al TLC,09/08/05,NA,NA,NA,NA,NA,8,41,TRUE,"Arroz, TLC",<p>Se Realiz&oacute;.</p>,NA,50
+47,6,6,NA,"Debatir sobre el Proyecto de Ley No. 177 de 2012 Cámara: Por medio de la cual se crea el Programa Nacional para el Fomento de la Articulación entre la Educación Media, Educación para el Trabajo y el Desarrollo Humano, y Educación Superior, se otorgan subsidios para el desarrollo de la articulación y se dictan otras disposiciones. [Articulación de la educación]",14/05/13,NA,NA,NA,NA,NA,2,NA,FALSE,"educación media, desarrollo humano, educación superior,",NA,NA,58/13
+48,4,NA,NA,Discutir sobre la explotación y transporte de carbón en el departamento del Cesar y el correspondiente pago de impuestos y regalías.,NA,NA,NA,NA,NA,NA,56,134,TRUE,"Carbón, Cesár",<p>Se realiz&oacute;.</p>,NA,5
+49,6,7,NA,"Debatir sobre observaciones acerca de la asignación presupuestal de cada institución, en el proyecto de presupuesto nacional para la vigencia fiscal 2014.",NA,NA,NA,NA,NA,NA,NA,NA,FALSE,"Presupuesto General de la Nación, economía, vigencia fiscal 2014",NA,NA,NA
+50,4,NA,NA,Situación de servicios públicos Municipio de López de Micay y situación de centrales eléctricas.,NA,NA,NA,NA,NA,NA,38,56,TRUE,"servicios públicos, centrales eléctricas",<p>Se realizo</p>,NA,8
+51,4,NA,NA,"Situación de servicios públicos Municipio de López de Micay, situación de centrales eléctricas y venta de electrificadoras en el país.",NA,NA,NA,NA,NA,NA,56,NA,TRUE,"López de Micay, centrales eléctricas",<p>Se realiz&oacute;. Transmisi&oacute;n por Se&ntilde;al Colombia.</p>,NA,8  y aditivas
+52,6,2,NA,Debatir sobre los Proyectos Ordinarios de Leyes Reformatorios al Sistema General de Seguridad Social en Salud (PL 210 DE 2013 Senado y sus Acumulados los PL 051 de 2012Senado y 233 de 2013 Senado).,30/07/13,NA,NA,NA,NA,NA,10,NA,FALSE,"seguridad social, salud.",NA,NA,2
+53,6,9,NA,Informar sobre la situación actual de la empresa Grajales y las consecuencias que se han generado en los municipios del norte del Valle del Cauca,NA,NA,NA,NA,NA,NA,8,116,FALSE,Grajales,NA,NA,NA
+54,2,8,NA,Debatir sobre los residuos peligrosos en el departamento del Atlántico y distrito de Barranquilla,NA,NA,NA,NA,NA,NA,10,NA,FALSE,"Residuos peligros, Atlántico, Barranquilla",<p>Proposiciones 03/07 y 06/07</p>,NA,03-jul
+55,4,7,NA,Propuesta del señor Presidente sobre la compra de coca a productores.,NA,NA,NA,NA,NA,NA,123,8,FALSE,Coca,No se realizó.,NA,NA
+56,4,9,NA,Debate sobre la reducción de Zonas de Reserva Forestal de los Cerros Orientales de Bogotá.,NA,NA,NA,NA,NA,NA,3,NA,FALSE,"Cerros Orientales de Bogotá, Reserva Forestal",NA,NA,"45 y aditiva, 42 y 34"
+57,4,7,NA,"Debate sobre las garantías de imparcialidad y transparencia que ofrece el sistema electoral colombiano, de cara a las elecciones del año 2006.",NA,NA,NA,NA,NA,NA,101,NA,FALSE,"Transparencia, imparcialidad, sistema electoral, elecciones 2006",NA,NA,NA
+58,4,12,NA,"Para que se absuelva cuestionario relacionado con la venta y privatización de algunas Empresas Electrificadoras Regionales, en especial la Empresa Electrificadora del Meta.",27/07/05,NA,NA,NA,NA,NA,56,41,FALSE,"Empresas Electrificadoras Regionales, Empresa Electrificadora del Meta, privatización",NA,NA,10
+59,6,11,NA,Debatir sobre el homicidio de unos miembros del Ejército colombiano el pasado 20 de julio y el impacto que estos hechos tienen sobre el proceso de paz.,24/07/13,NA,NA,NA,NA,NA,119,123,FALSE,"ejercito nacional, proceso de paz, conflicto armado",NA,NA,ene-13
+60,2,9,NA,Debate sobre el desarrollo de minería de materiales de construcción en la zona del Tunjuelito y demás asuntos afines.,NA,NA,NA,NA,NA,NA,56,123,FALSE,"Tunjuelito, Río Tunjuelito, Minería, Materiales de Construcción",NA,NA,05-sep
+61,6,5,NA,"Déficit cuantitativo y cualitativo de vivienda, tanto rural como urbana, en Colombia. Política medioambiental.",31/08/10,NA,NA,NA,NA,NA,125,138,FALSE,"Vivienda y Desarrollo Territorial, Vivienda de interés social,",NA,NA,026/10
+62,2,NA,NA,"Discutir sobre Proyecto de Ley 43/07 S ""Por la cual se regulan los contratos de adhesión a los sistemas abiertos de tarjetas de pago y la tarifa intercambiaria de intercambio""",NA,NA,NA,NA,NA,NA,41,NA,FALSE,NA,Todos los citados asistieron.,NA,10
+63,2,13,NA,Discusión sobre la resolución No. 08 del 2006,NA,NA,NA,NA,NA,NA,41,NA,FALSE,"economía, Banco de la República",NA,NA,NA
+64,2,NA,NA,Debate sobre el l narcotráfico como principal combustible que nutre a las organizaciones criminales,NA,NA,NA,NA,NA,NA,NA,NA,TRUE,NA,NA,NA,9
+65,2,NA,NA,Debate sobre el empleo de datos estadísticos en temas laborales y sobre el impacto que en la generación ha tenido  la reforma laboral,NA,NA,NA,NA,NA,NA,124,22,TRUE,"datos estadísticos, empleo, laboral",NA,NA,55
+66,2,8,NA,Discusión con los Invitados.,25/10/06,NA,NA,NA,NA,NA,124,NA,FALSE,NA,NA,NA,10
+67,6,3,NA,Debatir sobre el aumento del 8% adicional de los educadores vinculados por el Decreto Ley 1278 del 2002. También se debatirá sobre el desarrollo integral de la sexualidad a la educación en Colombia,NA,NA,NA,NA,NA,NA,22,2,FALSE,"educación, magisterio, CNSC, Comisión Nacional del Servicio Civil.",<p>Proposici&oacute;n aditiva a la No. 04/10.</p>,NA,04-oct
+68,2,NA,NA,Debate sobre cambio climático y seguridad alimentaria (Segunda Vez que se cita en esta legislatura),NA,NA,NA,NA,NA,NA,8,2,TRUE,"Cambio Climático, Seguridad Alimentaria","
+=======
 ﻿id,agenda_legislativa_actividad_id,cuatrienio_id,legislatura_id,comision_id,corporacion_id,tipo_control_politico_id,estado_control_politico_id,titulo,fecha,tema_principal_id,tema_secundario_id,plenaria,tags,detalles,gacetas,numero_proposicion,activo,usercreated,usermodifed,created_at,updated_at
 1,120,2,NA,NA,NA,1,NA,Debatir sobre  la injerencia de los factores delincuenciales en los procesos electorales.,NA,101,NA,TRUE,NA,NA,NA,57,NA,NA,NA,NA,NA
 2,113,2,NA,NA,NA,1,NA,Debate sobre servicios públicos domiciliarios,NA,38,38,TRUE,servicios públicos,NA,NA,17,NA,NA,NA,NA,NA
@@ -65,8 +136,20 @@
 64,146,2,NA,NA,NA,1,NA,Debate sobre el l narcotráfico como principal combustible que nutre a las organizaciones criminales,NA,NA,NA,TRUE,NA,NA,NA,9,NA,NA,NA,NA,NA
 65,131,2,NA,NA,NA,1,NA,Debate sobre el empleo de datos estadísticos en temas laborales y sobre el impacto que en la generación ha tenido  la reforma laboral,NA,124,22,TRUE,"datos estadísticos, empleo, laboral",NA,NA,55,NA,NA,NA,NA,NA
 66,16916,2,13,8,1,1,NA,Discusión con los Invitados.,2006-10-25,124,NA,FALSE,NA,NA,NA,10,NA,NA,NA,NA,NA
+<<<<<<< HEAD
+66,16916,2,14,8,1,1,NA,Discusión con los Invitados.,2006-10-25,124,NA,FALSE,NA,NA,NA,10,NA,NA,NA,NA,NA
+66,16916,2,15,8,1,1,NA,Discusión con los Invitados.,2006-10-25,124,NA,FALSE,NA,NA,NA,10,NA,NA,NA,NA,NA
+66,16916,2,16,8,1,1,NA,Discusión con los Invitados.,2006-10-25,124,NA,FALSE,NA,NA,NA,10,NA,NA,NA,NA,NA
+67,18318,6,18,3,1,1,NA,Debatir sobre el aumento del 8% adicional de los educadores vinculados por el Decreto Ley 1278 del 2002. También se debatirá sobre el desarrollo integral de la sexualidad a la educación en Colombia,NA,22,2,FALSE,"educación, magisterio, CNSC, Comisión Nacional del Servicio Civil.",<p>Proposici&oacute;n aditiva a la No. 04/10.</p>,NA,04/10,NA,NA,NA,NA,NA
+67,18318,6,19,3,1,1,NA,Debatir sobre el aumento del 8% adicional de los educadores vinculados por el Decreto Ley 1278 del 2002. También se debatirá sobre el desarrollo integral de la sexualidad a la educación en Colombia,NA,22,2,FALSE,"educación, magisterio, CNSC, Comisión Nacional del Servicio Civil.",<p>Proposici&oacute;n aditiva a la No. 04/10.</p>,NA,04/10,NA,NA,NA,NA,NA
+67,18318,6,20,3,1,1,NA,Debatir sobre el aumento del 8% adicional de los educadores vinculados por el Decreto Ley 1278 del 2002. También se debatirá sobre el desarrollo integral de la sexualidad a la educación en Colombia,NA,22,2,FALSE,"educación, magisterio, CNSC, Comisión Nacional del Servicio Civil.",<p>Proposici&oacute;n aditiva a la No. 04/10.</p>,NA,04/10,NA,NA,NA,NA,NA
+67,18318,6,17,3,1,1,NA,Debatir sobre el aumento del 8% adicional de los educadores vinculados por el Decreto Ley 1278 del 2002. También se debatirá sobre el desarrollo integral de la sexualidad a la educación en Colombia,NA,22,2,FALSE,"educación, magisterio, CNSC, Comisión Nacional del Servicio Civil.",<p>Proposici&oacute;n aditiva a la No. 04/10.</p>,NA,04/10,NA,NA,NA,NA,NA
+68,22796,2,13,NA,NA,1,NA,Debate sobre cambio climático y seguridad alimentaria (Segunda Vez que se cita en esta legislatura),NA,8,2,TRUE,"Cambio Climático, Seguridad Alimentaria","
+>>>>>>> ceaab2a5f98f6301c6e0775d8eade3109b0b6bcc
+=======
 67,18318,6,NA,3,1,1,NA,Debatir sobre el aumento del 8% adicional de los educadores vinculados por el Decreto Ley 1278 del 2002. También se debatirá sobre el desarrollo integral de la sexualidad a la educación en Colombia,NA,22,2,FALSE,"educación, magisterio, CNSC, Comisión Nacional del Servicio Civil.",<p>Proposici&oacute;n aditiva a la No. 04/10.</p>,NA,04/10,NA,NA,NA,NA,NA
 68,22796,2,NA,NA,NA,1,NA,Debate sobre cambio climático y seguridad alimentaria (Segunda Vez que se cita en esta legislatura),NA,8,2,TRUE,"Cambio Climático, Seguridad Alimentaria","
+>>>>>>> c19cce54bbd35295d79b8d80ed20363d32d1b691
 Juan Carlos Restrepo Escobar X
 Griselda Janeth Restrepo Gallego X
 Claudia Yadira Inés Rodríguez de Castellanos X
