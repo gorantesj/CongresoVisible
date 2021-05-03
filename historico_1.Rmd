@@ -169,7 +169,17 @@ temas %>%
   temas %>% 
   filter(fecha_inicio_cuatri==max(fecha_inicio_cuatri)) %>% 
   hchart(hcaes(x = tema,  value = porc), type = "treemap")%>%
-  hc_title(text = "Temas de los proyectos en el cuatrienio")%>%
+  hc_title(text = "Temas de los proyectos en el cuatrienio 2008")%>%
+  hc_add_theme(thm)%>%
+  hc_tooltip(pointFormat = 'Total: <b>{point.n}</b><br/>Porcentaje:  <b>{point.porc}</b>')
+
+```
+```{r}
+
+  temas %>% 
+  filter(fecha_inicio_cuatri==min(fecha_inicio_cuatri)) %>% 
+  hchart(hcaes(x = tema,  value = porc), type = "treemap")%>%
+  hc_title(text = "Temas de los proyectos en el cuatrienio 1998")%>%
   hc_add_theme(thm)%>%
   hc_tooltip(pointFormat = 'Total: <b>{point.n}</b><br/>Porcentaje:  <b>{point.porc}</b>')
 
@@ -410,6 +420,9 @@ cuat6 <- c_dem %>%
 
 
 ```
+
+
+
 ```{r}
 
 #Composición
@@ -437,4 +450,54 @@ aux %>%
 
 ```
 
+#### Votación
+
+```{r}
+
+proyectos <- read_csv(here("Para Jesús", "proyecto_leys.csv"))
+
+votacion <- read_csv(here("Para Jesús", "votacions.csv"))
+
+iniciativas <- read_csv(here("Para Jesús", "iniciativas.csv")) %>% 
+               select(id, nombre)
+
+
+
+```
+
+```{r}
+
+proy <- proyectos %>% 
+       select(id, cuatrienio_id, corporacion_id, iniciativa_id, corporacion_id) %>% 
+       left_join(iniciativas, by=c("iniciativa_id"="id")) %>% 
+       select(id, nombre, corporacion_id)
+
+
+vot <- votacion %>% 
+       select(proyecto_de_ley_id,fecha, esPlenaria, votosFavor, votosContra) %>% 
+       filter(esPlenaria==1) %>% 
+       group_by(proyecto_de_ley_id) %>% 
+       filter(fecha==max(fecha)) %>% 
+       ungroup()
+
+proy_vot_todos <- inner_join(vot, proy, by=c("proyecto_de_ley_id"="id")) %>% 
+            select(nombre, votosFavor, votosContra, corporacion_id)
+
+
+
+####En el senado-----
+
+proy_vot <- filter(proy_vot_todos, corporacion_id==1)
+proy_vot <- gather(proy_vot, votos, total, votosFavor:votosContra) %>% 
+            group_by(nombre, votos) %>% 
+            summarise(total=sum(total, na.rm = T)) %>% 
+            ungroup()
+
+proy_vot %>%   hchart(hcaes(from = nombre, to  = votos, weight =total), type = "sankey") %>%
+  hc_title(text = "Sentido del voto según origen de iniciativa en la actual legislatura del Senado") %>%
+  hc_add_theme( thm) 
+  
+
+
+```
 
