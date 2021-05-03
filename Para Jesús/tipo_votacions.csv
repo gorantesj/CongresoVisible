@@ -1,0 +1,28 @@
+﻿id,nombre,procedimental,descripcion,activo,usercreated,usermodifed,created_at,updated_at
+1,Acto Legislativo,FALSE,"Se denominan actos legislativos las normas expedidas por el Congreso que tienen por objeto modificar, reformar, adicionar o derogar los textos constitucionales",NA,NA,NA,NA,NA
+2,Proyecto de Ley,FALSE,"Es la propuesta de ley que se presenta ante el Congreso y que aún no ha sido aprobada ni ratificada por el mismo. Los proyectos de ley pueden ser presentados por los diferentes Congresistas de forma individual o a través de las bancadas, por el gobierno nacional a través de los ministros y  por iniciativa popular.",NA,NA,NA,NA,NA
+3,Ley Estatutaria,FALSE,"Se tramitarán como proyectos de ley estatutaria, de conformidad con el artículo 152 y concordantes de la Constitución Nacional, los referidos a las siguientes materias:
+
+1. Derechos y deberes fundamentales de las personas y los procedimientos y recursos para su protección
+2. Administración de justicia
+3. Organización y régimen de los partidos y movimientos políticos
+4. Estatuto de la oposición y funciones electorales, reglamentando la participación de las minorias
+5. Instituciones y mecanismos de participación ciudadana
+6. Estados de excepción",NA,NA,NA,NA,NA
+4,Proposiciones,FALSE,"Una proposición es una moción o iniciativa que se presenta por escrito ante la mesa directiva para ser considerada consideración y en una Comisión o de una de las Cámaras. Las proposiciones se clasifican, para su trámite, en: 
+
+1. Proposición principal: Aquella que se presenta por primera vez para su consideración
+2. Proposición Sustitutiva: Es la que tiende a reemplazar a la principal y se discute y decide primero de la que se pretende     sustituir 
+3. Proposición suspensiva: Es la que tiene por objeto suspender el debate mientras se considera otro asunto que deba decidirse con prelación
+4. Proposición modificativa: Es la que aclara a la principal
+5. Proposición especial: Es la que no admite discusión, y que puede presentarse oralmente",NA,NA,NA,NA,NA
+5,Impedimentos,FALSE,"Todo Senador o Representante solicitará ser declarado impedido para conocer y participar sobre determinado proyecto o decisión trascendental, al observar un conflicto de interés.",NA,NA,NA,NA,NA
+6,Aprobación de Actas,TRUE,"De las sesiones de las Cámaras y sus Comisiones Permanentes, especialmente, se levantarán actas que contendrán una relación sucinta de los temas debatidos, las personas que han intervenido, los mensajes leídos, las proposiciones presentadas, las comisiones designadas y las decisiones adoptadas.
+
+Abierta la sesión, el Presidente someterá a discusión, sin hacerla leer, el acta de la sesión anterior, puesta previamente en conocimiento de los miembros de la corporación, bien por su publicación en la Gaceta del Congreso, o bien mediante reproducción por cualquier otro medio mecánico",NA,NA,NA,NA,NA
+7,Orden del Día,TRUE,"Entiéndase por orden del día la serie de negocios o asuntos que se someten en cada sesión a la información, discusión y decisión de las Cámaras legislativas y sus Comisiones permanentes",NA,NA,NA,NA,NA
+8,Declaración de Sesión Informal,FALSE,NA,NA,NA,NA,NA,NA
+9,Otros Asuntos,FALSE,NA,NA,NA,NA,NA,NA
+11,Duplicado,FALSE,NA,NA,NA,NA,NA,NA
+12,Elecciones,TRUE,NA,NA,NA,NA,NA,NA
+10,Sesión permanente,TRUE,"Son sesiones permanente las que durante la última media hora de la sesión se decretan para continuar con el orden del día hasta finalizar el día, si fuere el caso.",NA,NA,NA,NA,NA
