@@ -33,22 +33,23 @@ source(here("Gráficas", "tema.R"))
 proyecto <- read_csv(here("Para Jesús", "proyecto_leys.csv"))
 
 iniciativas <- read_csv(here("Para Jesús", "iniciativas.csv")) %>% 
-               select(id, nombre) %>% 
-               rename("iniciativa"="nombre")
+               select(id, iniciativa = nombre) 
+
 tipo_proyecto <- read_csv(here("Para Jesús", "tipo_proyectos.csv")) %>% 
-               select(id, nombre)%>% 
-               rename("tipo_proyecto"="nombre")
+               select(id, tipo_proyecto = nombre)
+
 legis <- read_csv(here("Para Jesús", "legislaturas.csv")) %>% 
-               select(id:fechaFin) %>% 
-               rename("legislatura"="nombre")
+               select(id:cuatrienio_id, legislatura = nombre) 
+
 corpo <- read_csv(here("Para Jesús", "corporacions.csv")) %>% 
-               select(id, nombre)%>% 
-               rename("corporacion"="nombre")
+               select(id, corporacion = nombre)
+
 proyecto_estado <- read_csv(here("Para Jesús", "proyecto_ley_estados.csv")) %>% 
                    select(proyecto_ley_id, estado_proyecto_ley_id, fecha)
+
 estado_proyecto <- read_csv(here("Para Jesús", "estado_proyecto_leys.csv")) %>% 
-                   select(id, nombre) %>% 
-                   rename("estado_proyecto"="nombre")
+                   select(id, estado_proyecto = nombre) 
+
 estado_final <- left_join(proyecto_estado, estado_proyecto, by=c("estado_proyecto_ley_id"="id")) %>% 
                 select(fecha, proyecto_ley_id, estado_proyecto) %>% 
                 group_by(proyecto_ley_id) %>% 
@@ -58,21 +59,18 @@ estado_final <- left_join(proyecto_estado, estado_proyecto, by=c("estado_proyect
 temas <- read_csv(here("Para Jesús", "temas.csv")) %>% 
          select(id, tema=nombre)
 
-cuatri <- read_csv(here("Para Jesús", "cuatrienios.csv")) %>% 
-          select(id, fecha_inicio_cuatri=fecha_inicio) %>% 
-          arrange(fecha_inicio_cuatri) %>% 
-          mutate(cuatrienio=row_number(), 
-                 cuatrienio=factor(cuatrienio, labels = c("Cuatrienio 1994", "Cuatrienio 1998", 
-                                                           "Cuatrienio 2002", "Cuatrienio 2006", 
-                                                           "Cuatrienio 2010", "Cuatrienio 2004", 
-                                                           "Cuatrienio 2008")))  
-
+cuatri <- read_csv(here("Para Jesús", "cuatrienios.csv")) %>%
+          select(cuatrienio_id = id, fecha_inicio_cuatri=fecha_inicio) %>%
+          arrange(fecha_inicio_cuatri) %>% mutate(cuatrienio=row_number(),
+          cuatrienio=factor(cuatrienio, labels = c("Cuatrienio 1994", "Cuatrienio 1998",
+          "Cuatrienio 2002", "Cuatrienio 2006", "Cuatrienio 2010", "Cuatrienio 2004",
+          "Cuatrienio 2008")))
 
 proyecto_final <- left_join(proyecto, iniciativas, by=c("iniciativa_id"="id"))
 
 proyecto_final <- left_join(proyecto_final, tipo_proyecto, by=c("tipo_proyecto_id"="id"))
 
-proyecto_final <- left_join(proyecto_final, legis, by=c("legislatura_id"="id"))
+proyecto_final <- left_join(proyecto_final, legis, by=c("legislatura_id"="id", "cuatrienio_id"))
 
 proyecto_final <- left_join(proyecto_final, corpo, by=c("corporacion_id"="id"))
 
@@ -80,10 +78,17 @@ proyecto_final <- inner_join(proyecto_final, estado_final, by=c("id" ="proyecto_
 
 proyecto_final <- left_join(proyecto_final, temas, by=c("tema_id_principal" ="id"))
 
-proyecto_final <- left_join(proyecto_final, cuatri, by=c("cuatrienio_id" ="id"))
+proyecto_final <- left_join(proyecto_final, cuatri, by="cuatrienio_id")
 
 
+congresistas <- read_csv("Para Jesús/congresistas.csv")
+partidos <- read_csv("Para Jesús/partidos.csv")
+personas <- read_csv("Para Jesús/personas.csv")
+sexo <- read_csv("Para Jesús/generos.csv")
 
+control_pol_0 <- read_csv("Para Jesús/control_politico_citados.csv")
+control_pol_1 <- read_csv("Para Jesús/control_politico_citantes.csv")
+control_pol_2 <- read_csv("Para Jesús/control_politicos.csv")
 ```
 
 ## Proyectos de Ley
@@ -91,7 +96,7 @@ proyecto_final <- left_join(proyecto_final, cuatri, by=c("cuatrienio_id" ="id"))
 ### Total de proyectos sancionados como Ley
 
 
-```{r}
+```{r total-pl-comoley, echo =FALSE }
 sancionados <- proyecto_final %>% 
                filter(estado_proyecto=="Sancionado como Ley") %>%
                mutate(fecha=substr(fecha_inicio_cuatri,1,4)) %>% 
@@ -133,7 +138,7 @@ sancionados %>%
 
 ### Temas recurrentes
 
-```{r}
+```{r temas-recurrentes, echo =FALSE}
 
 temas_prueba <- proyecto_final %>% 
                 count(tema) %>% 
@@ -164,7 +169,7 @@ temas %>%
 
 
 
-```{r}
+```{r temas-recurrentes-2, echo =FALSE}
 
   temas %>% 
   filter(fecha_inicio_cuatri==max(fecha_inicio_cuatri)) %>% 
@@ -179,7 +184,7 @@ temas %>%
 
 ### Tiempo de sanción como Ley por cada tipo proyecto 
 
-```{r}
+```{r tiempo-sansionley, echo =FALSE}
 
 proyecto_estado <- read_csv(here("Para Jesús", "proyecto_ley_estados.csv")) %>% 
                    select(proyecto_ley_id, estado_proyecto_ley_id, fecha)
@@ -189,11 +194,12 @@ estado_proyecto <- read_csv(here("Para Jesús", "estado_proyecto_leys.csv")) %>%
 estado_final <- left_join(proyecto_estado, estado_proyecto, by=c("estado_proyecto_ley_id"="id")) %>% 
                 filter(estado_proyecto=="Sancionado como Ley") %>% 
                 rename("fecha_aproba"="fecha")
+
 proyecto <- read_csv(here("Para Jesús", "proyecto_leys.csv")) %>% 
             select(id, tipo_proyecto_id, cuatrienio_id, fecha_radicacion) %>% 
             left_join(tipo_proyecto, by=c("tipo_proyecto_id"="id")) %>% 
             left_join(estado_final, by=c("id"="proyecto_ley_id")) %>% 
-            left_join(cuatri, by=c("cuatrienio_id"="id")) %>% 
+            left_join(cuatri, by="cuatrienio_id") %>% 
             filter(!is.na(estado_proyecto)) %>% 
             unique() %>% 
             mutate(dif=fecha_aproba-fecha_radicacion, 
@@ -219,13 +225,13 @@ highchart() %>%
 ```
 #### Compisición partidista
 
-```{r}
+```{r proporcion-mujeres-1, echo =FALSE}
 # Composición partidista - proporción de mujeres --------------------
 
 # Histórico
 aux <- congresistas %>% select(congresista_id = id, persona_id, cuatrienio_id, partido_id) %>%
-  left_join(legislatura %>%
-    select(legislatura_id = id, cuatrienio_id, legislatura = nombre, fechaInicio, fechaFin),
+  left_join(legis %>%
+    select(legislatura_id = id, cuatrienio_id, legislatura, fechaInicio, fechaFin),
     by = "cuatrienio_id") %>%
   left_join(partidos %>%
     select(partido_id =id, partido  = nombre, color),
@@ -250,12 +256,16 @@ aux <- congresistas %>% select(congresista_id = id, persona_id, cuatrienio_id, p
     hc_xAxis(title = list(text = "Fecha cuatrienios")) %>%
     hc_yAxis(title = list(text = "Porcentaje"), min=0) %>%
     hc_add_theme(thm)
+```
   
+  
+  
+```{r proporcion-mujeres-2, echo =FALSE}
    # Por cuatrienio
   id <- 1
   aux <- congresistas %>% select(congresista_id = id, persona_id, cuatrienio_id, partido_id) %>% 
     left_join(partidos %>%
-      select(partido_id =id, partido  = nombre, color),
+      select(partido_id =id, partido  = nombre),
       by = "partido_id" ) %>%
     left_join(personas %>%
       select(persona_id = id, genero_id),
@@ -278,8 +288,8 @@ aux <- congresistas %>% select(congresista_id = id, persona_id, cuatrienio_id, p
 
   base2 <- aux %>%
     count(genero, partido) %>%
-    mutate(color = if_else(genero == "Masculino", "#308446",
-           if_else(genero == "Femenino","#f5973d","#808080")),
+    mutate(color = if_else(genero == "Masculino", "#17789e",
+           if_else(genero == "Femenino","#66CCFF","#808080")),
            parent=str_to_id(partido),
            id = as.character(row_number())) %>%
     rename("name"= "genero", "value"="n")
@@ -308,13 +318,13 @@ aux <- congresistas %>% select(congresista_id = id, persona_id, cuatrienio_id, p
     hc_title(text = "Proporción de mujeres") %>%
     hc_add_theme(thm)
 ```
-```{r}
+```{r  total-citaciones, echo =FALSE}
 
 # Total de citaciones     --------------------------------
 
   aux <- congresistas %>% select(congresista_id = id, persona_id, cuatrienio_id, partido_id) %>%
-    left_join(legislatura %>%
-      select(legislatura_id = id, cuatrienio_id, legislatura = nombre, fechaInicio, fechaFin),
+    left_join(legis %>%
+      select(legislatura_id = id, cuatrienio_id, legislatura, fechaInicio),
       by = "cuatrienio_id") %>%
     left_join(partidos %>%
       select(partido_id =id, partido  = nombre, color),
@@ -339,12 +349,12 @@ aux <- congresistas %>% select(congresista_id = id, persona_id, cuatrienio_id, p
     hc_add_theme(thm)
 
 ```
-```{r}
+```{r  partidos-mayor-representacion-1, echo =FALSE}
 # Partidos con mayor representación -----------------------------------------------------
 
     aux <- congresistas %>% select(congresista_id = id, persona_id, cuatrienio_id, partido_id) %>%
-      left_join(legislatura %>%
-        select(legislatura_id = id, cuatrienio_id, legislatura = nombre, fechaInicio),
+      left_join(legis %>%
+        select(legislatura_id = id, cuatrienio_id, legislatura, fechaInicio),
         by = "cuatrienio_id") %>%
       left_join(partidos %>%
         select(partido_id =id, partido = nombre),
@@ -365,7 +375,9 @@ aux <- congresistas %>% select(congresista_id = id, persona_id, cuatrienio_id, p
       hc_xAxis(title = list(text = "Fecha cuatrienios")) %>%
       hc_yAxis(title = list(text = "Porcentaje"), min=0) %>%
       hc_add_theme(thm)
+```
 
+```{r partidos-mayor-representacion-2, echo =FALSE}
     aux %>% filter(cuatrienio_id == id) %>%
       group_by(fechaInicio, partido) %>%
       summarise(n = n())%>%
@@ -379,23 +391,16 @@ aux <- congresistas %>% select(congresista_id = id, persona_id, cuatrienio_id, p
 
 ```
 
-```{r}
+```{r  numero-iniciativas, echo =FALSE}
 # Número de iniciativas gubernamentales por cuatrienio  ---------------------------------------
 
- aux <- pl %>%
-    left_join(
-      inicia %>% select(iniciativa_id = id, origen_iniciativa = nombre),
-      by = "iniciativa_id") %>%
-    left_join(legislatura %>%
-      select(legislatura_id = id, cuatrienio_id, legislatura = nombre, fechaInicio),
-      by = c("cuatrienio_id", "legislatura_id")) %>%
-    filter(origen_iniciativa == "Gubernamental") %>%
-    group_by(legislatura) %>%
+ aux <- proyecto_final %>%
+     group_by(cuatrienio) %>% 
     summarise(n = n()) %>%
     na.omit()
 
     aux %>% # Ordenar por factores la y
-      hchart('bar', hcaes(x = 'legislatura', y = n, group = 'legislatura')) %>%
+      hchart('bar', hcaes(x = 'cuatrienio', y = n, group = 'cuatrienio')) %>%
       hc_tooltip(pointFormat = 'Núm. iniciativas gubernamentales : {point.n}')%>%
       hc_title(text = "Número de iniciativas gubernamentales") %>%
       hc_xAxis(title = list(text = "")) %>%
@@ -404,7 +409,7 @@ aux <- congresistas %>% select(congresista_id = id, persona_id, cuatrienio_id, p
 
 ```
 
-```{r}
+```{r edad-partidista-old, echo =FALSE}
 # edad - composición partidista
 congresistas <- read_csv(here("Para Jesús", "congresistas.csv"))
 partidos <- read_csv(here("Para Jesús", "partidos.csv"))
@@ -426,7 +431,7 @@ aux <- congresistas %>%
        left_join(personas %>%
        select(persona_id = id, nacim),
        by = "persona_id") %>%
-       left_join(cuatri, by=c("cuatrienio_id"="id")) %>% 
+       left_join(cuatri, by="cuatrienio_id") %>% 
        filter(!is.na(nacim)) %>%
        mutate(nacim = lubridate::ymd(nacim), 
               edad =round(as.numeric(fecha_inicio_cuatri- nacim)/365, 0)) 
@@ -455,7 +460,7 @@ barras_viejos %>%  hchart(hcaes(y = mediana, x = partido), type = "bar") %>%
 
 ```
 
-```{r}
+```{r edad-partidista-young, echo =FALSE}
 
 barras_jov <- barras %>% 
                  arrange(mediana)
@@ -474,7 +479,7 @@ barras_jov %>%  hchart(hcaes(y = mediana, x = partido), type = "bar") %>%
 
 ```
 
-```{r}
+```{r edad-partidista-distribucion, echo =FALSE}
 
 # c_dem <- aux %>% 
 #          filter(partido=="Conservador Colombiano")
@@ -526,7 +531,7 @@ cuat6 <- aux %>%
 ```
 
 
-```{r}
+```{r edad-partidista-dist-partido, echo =FALSE}
 
 
 c_dem <- aux %>%
@@ -590,7 +595,7 @@ aux <- congresistas %>%
        left_join(personas %>%
        select(persona_id = id, nacim),
        by = "persona_id") %>%
-       left_join(cuatri, by=c("cuatrienio_id"="id")) %>% 
+       left_join(cuatri, by="cuatrienio_id") %>% 
        count(partido, cuatrienio) %>% 
        filter(n>=10) %>% 
        arrange(cuatrienio)
@@ -600,35 +605,17 @@ aux %>%
   hc_title(text = "Partidos con mayor representación en el Congreso, por cuatrienio")%>%
   hc_add_theme(thm)
 
-
-
-
-
 ```
 
-```{r}
+```{r iniciativas-gubernamentales-ley, echo =FALSE}
 
 # Iniciativas gubernamentales sancionadas como ley por cuatrienio  -----------------------------
 
-aux <- pl %>%
-        select(proyecto_ley_id = id, iniciativa_id, legislatura_id, cuatrienio_id) %>%
-      left_join(
-        inicia %>% select(iniciativa_id = id, origen_iniciativa = nombre),
-        by = "iniciativa_id") %>%
-      left_join(legislatura %>%
-                  select(legislatura_id = id, cuatrienio_id, legislatura = nombre, fechaInicio),
-                by = c("cuatrienio_id", "legislatura_id")) %>%
-      filter(origen_iniciativa == "Gubernamental") %>%
-      left_join(proy_estado,
-        by = "proyecto_ley_id") %>%
-      left_join(estado_proy %>%
-        select(estado_proyecto_ley_id = id, estado_proyecto = nombre),
-        by = "estado_proyecto_ley_id") %>%
-      filter(estado_proyecto == "Sancionado como Ley")  %>%
-          left_join(cuatri, by = "cuatrienio_id") %>% 
-          group_by(cuatrienio) %>%
-        summarise(n = n()) %>%
-        na.omit()
+aux <- proyecto_final %>%
+      filter(iniciativa == "Gubernamental", estado_proyecto == "Sancionado como Ley")  %>%
+      group_by(cuatrienio) %>%
+      summarise(n = n()) %>%
+      na.omit()
 
     aux %>% # Una serie de tiempo, como la línea y el punto, evolucion
       hchart('bar', hcaes(x = 'cuatrienio', y = n, group = 'cuatrienio')) %>%
@@ -650,8 +637,8 @@ aux <- pl %>%
 
     aux <- control_pol_2 %>%
             select(control_politico_id = id, cuatrienio_id, tipo_control_politico_id, titulo) %>%
-           left_join(legislatura %>%
-            select(legislatura_id = id, cuatrienio_id, legislatura = nombre, fechaInicio) ,
+           left_join(legis %>%
+            select(legislatura_id = id, cuatrienio_id, legislatura, fechaInicio) ,
             by = "cuatrienio_id") %>%
           filter(tipo_control_politico_id == 1, !grepl("Debat", titulo)) %>%
           left_join(cuatri, by = "cuatrienio_id") %>% 
