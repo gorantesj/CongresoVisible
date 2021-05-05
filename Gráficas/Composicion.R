@@ -75,28 +75,27 @@ aux <-congresistas %>%
   mutate(nombre_congresista = paste(nombres, apellidos),
          fechaNacimiento = dmy(fechaNacimiento),
          edad =as.integer(as.numeric( today()-fechaNacimiento)/365 ),
-         rango = cut(edad,c(17,29,39,49,59,69,79, 89,100),
-                     labels = c("18 - 29","30 - 49","40 - 49",
-                                "50 - 59","60 - 69", "70 - 79",
-                                "80 - 89", "90 o más"))) %>%
-  filter( !is.na(edad)) %>% select(legislatura, corporacion, partido, edad, rango, genero) %>%
+         rango  = case_when(edad < 18 ~ "Menores de 18",
+                            edad>=18 & edad<30~ "18 - 29",
+                            edad>=30 & edad<40~ "30 - 39",
+                            edad>=40 & edad<50~ "40 - 49",
+                            edad>=50 & edad<60~ "50 - 59",
+                            edad>=60 & edad<70~ "60 - 69",
+                            edad>=70 & edad<80~ "70 - 79",
+                            edad>=80~ "80 o más")) %>%
+  # filter( !is.na(edad)) %>%
+  select(legislatura, corporacion, partido, edad, rango, genero) %>%
    filter(legislatura== 28)
 
-
-aux <-  data_to_boxplot(data = aux  ,
-                         variable = edad, group_var =partido, group_var2 = genero )
-
-highchart() %>%
-  hc_xAxis(type = "category") %>%
-  hc_add_series_list(aux)  %>%
-  hc_title(text = "Edad y género por partido") %>%
+aux %>%  group_by(partido) %>%  summarise(mediana = median(edad)) %>%
+  arrange(desc(mediana)) %>%
+  hchart(hcaes(x = partido, y = mediana), type = "lollipop") %>%
+  hc_title(text = "Edad mediana por partido") %>%
   hc_xAxis(title = list(text = "Partido")) %>%
-  hc_yAxis(title = list(text = "Edad"), tickAmount = 6) %>%
-  hc_plotOptions(series = list(showInLegend = F)) %>%
-  hc_chart(inverted = T, zoomType = "x")%>%
-  hc_tooltip(shared= T,
-             pointFormat= '<span style="color:{point.color}">●</span> <b> {series.name}</b><br/>Máximo: {point.high}<br/>3º cuantil: {point.q3}<br/>Mediana: {point.median}<br/>1º cuantil: {point.q1}<br/>Mínimo: {point.low}<br/>') %>%
-  hc_add_theme( thm)
+  hc_yAxis(title = list(text = "Mediana")) %>%
+  hc_add_theme(thm) %>%
+  hc_chart(inverted= T)
+
 # Congresistas - Pirámide Poblacional de Edad y sexo ----------------------
 
 aux <-congresistas %>%
@@ -111,15 +110,21 @@ aux <-congresistas %>%
   mutate(nombre_congresista = paste(nombres, apellidos),
          fechaNacimiento = dmy(fechaNacimiento),
          edad =as.integer(as.numeric( today()-fechaNacimiento)/365 ),
-         rango = cut(edad,c(17,29,39,49,59,69,79, 89,100),
-                     labels = c("18 - 29","30 - 39","40 - 49",
-                                "50 - 59","60 - 69", "70 - 79",
-                                "80 - 89", "90 o más"))) %>%
-  count(corporacion, legislatura, genero, rango)
+         rango  = case_when(edad < 18 ~ "Menores de 18",
+                            edad>=18 & edad<30~ "18 - 29",
+                            edad>=30 & edad<40~ "30 - 39",
+                            edad>=40 & edad<50~ "40 - 49",
+                            edad>=50 & edad<60~ "50 - 59",
+                            edad>=60 & edad<70~ "60 - 69",
+                            edad>=70 & edad<80~ "70 - 79",
+                            edad>=80~ "80 o más")) %>%
+  count(corporacion, legislatura,cuatrienio_id, genero, rango)
 
-aux%>%  filter(!is.na(rango), legislatura == 28,
+aux%>%  filter( legislatura == 28,
                corporacion == "Cámara de Representantes") %>%
-  mutate(n2 = case_when(genero == "Masculino"~ n*-1, T~ n %>%  as.double())) %>%
+  mutate(n2 = case_when(genero == "Masculino"~ n*-1, T~ n %>%  as.double()),
+         rango = factor(rango, c("Menores de 18", "18 - 29","30 - 39","40 - 49",
+                                 "50 - 59","60 - 69", "70 - 79", "80 o más"))) %>%
   arrange(desc(rango) )%>%
   hchart(hcaes(y = n2, x = rango, group = genero), type = "bar") %>%
   hc_plotOptions(bar = list(stacking = T))%>%
@@ -133,12 +138,11 @@ aux%>%  filter(!is.na(rango), legislatura == 28,
              headerFormat= '<span style="font-size: 20px"><b>Rango: {point.key} años</span><br/></b>') %>%
   hc_add_theme( thm)
 
-aux%>%  filter(!is.na(rango), legislatura == 28,
+aux%>%  filter( legislatura == 28,
                corporacion == "Senado") %>% ungroup() %>%
   mutate(n2 = case_when(genero == "Masculino"~ n*-1, T~ n %>%  as.double()),
-         rango = factor(rango, c("18 - 29","30 - 39","40 - 49",
-                                 "50 - 59","60 - 69", "70 - 79",
-                                 "80 - 89", "90 o más"))) %>%
+         rango = factor(rango, c("Menores de 18", "18 - 29","30 - 39","40 - 49",
+                                 "50 - 59","60 - 69", "70 - 79", "80 o más"))) %>%
   arrange(desc(rango) )%>%
   hchart(hcaes(y = n2, x = rango, group = genero), type = "bar") %>%
   hc_plotOptions(bar = list(stacking = T))%>%
@@ -157,15 +161,36 @@ aux%>%  filter(!is.na(rango), legislatura == 28,
 
 
 aux <- congresistas %>%
+  # left_join(legislatura %>%  select(legislatura = id, cuatrienio_id),
+  #           by = "cuatrienio_id") %>%
   left_join(corporacion %>%  select(id, corporacion =nombre),
             by = c("corporacion_id" = "id")) %>%
-  count(persona_id, corporacion) %>%
-  group_by(corporacion) %>%  summarise(media = mean(n), minimo = min(n), maxi = max(n), media2=round( mean(n), 1))
+  count(persona_id, corporacion)
 
-aux %>%
+hchart(aux %>%  filter(corporacion == "Senado") %>%  pull(n))
+aux %>% filter(corporacion== "Senado") %>%
+  hchart( hcaes(group = corporacion, x = n), type = "histogram")
+
+hchart( density(aux %>%  filter(corporacion == "Senado") %>%  pull(n)), type = "area",
+  color = "steelblue") %>%
+  hc_add_theme(thm)
+
+hchart( density(aux %>%  filter(corporacion == "Cámara de Representantes") %>%
+                  pull(n)), type = "area",
+        color = "steelblue", name = "") %>%
+  hc_plotOptions(density = list(legend= list(enabled = F))) %>%
+  hc_add_theme(thm)
+
+
+ aux %>%
+  group_by(corporacion) %>%
+  summarise(media = mean(n), minimo = min(n), maxi = max(n), media2=round( mean(n), 1)) %>%
   hchart(hcaes(x = corporacion, high = maxi, low = minimo , group= corporacion),
          type = "errorbar") %>%
-  hc_add_series(aux, hcaes(x = corporacion,  y= media, group= corporacion), type = "scatter") %>%
+  hc_add_series(aux %>%
+                  group_by(corporacion) %>%
+                  summarise(media = mean(n), minimo = min(n), maxi = max(n), media2=round( mean(n), 1)),
+                hcaes(x = corporacion,  y= media, group= corporacion), type = "scatter") %>%
   hc_plotOptions(errorbar = list(showInLegend = F,tooltip = list(enabled = F))) %>%
   hc_title(text = "Cuatrienios ") %>%
   hc_xAxis(title = list(text = "")) %>%
@@ -184,7 +209,7 @@ inv %>%
             by = "tipo_investigacion_id") %>%
   left_join(congresistas %>%
               select(congresista_id = id,persona_id, corporacion_id, cuatrienio_id),
-            by = "congresista_id") %>%
+            by = "persona_id") %>%
   left_join(corporacion %>%  select(id, corporacion =nombre),
             by = c("corporacion_id" = "id")) %>%
   # left_join(legislatura %>%  select(legislatura = id, cuatrienio_id),
@@ -223,6 +248,8 @@ pl_autor %>%
   left_join(congresistas %>%
               select(congresista_id = id,persona_id, corporacion_id, cuatrienio_id),
             by = "congresista_id") %>%
+   # left_join(legislatura %>%  select(legislatura = id, cuatrienio_id),
+   #           by = "cuatrienio_id") %>%
   left_join(personas %>%  select(persona_id = id, nombres, apellidos, genero_id),
             by = "persona_id") %>%
   mutate(nombre_congresista = paste(nombres, apellidos)) %>%
@@ -257,9 +284,10 @@ congresistas %>%
             by = c("partido_id" = "id")) %>%
   left_join(personas %>%  select(persona_id = id, nombres, apellidos),
             by = "persona_id") %>%
+   filter(legislatura== 28) %>%
   mutate(nombre_congresista = paste(nombres, apellidos)) %>%
   group_by(corporacion, legislatura, partido) %>%  summarise(n = n()) %>%
-  mutate(partido2 = case_when(n<6~"", T~partido) ) %>%
+  mutate(partido2 = case_when(n< mean(n)~"", T~partido) ) %>%
   filter(corporacion == "Cámara de Representantes", legislatura == 28) %>%
   hchart(hcaes(x = partido, value= n), type = "treemap")%>%
   hc_plotOptions(treemap = list(colorByPoint = T,
@@ -267,3 +295,45 @@ congresistas %>%
                                                   format = '{point.partido2}'))) %>%
   hc_title(text = "Congresistas por partido") %>%
   hc_add_theme( thm)
+
+
+
+# sandbox -----------------------------------------------------------------
+
+ inv %>%
+   left_join(tipo_inv %>%  select(tipo_investigacion_id = id, tipo = nombre),
+             by = "tipo_investigacion_id") %>%
+   # left_join(congresistas %>%
+   #             select(congresista_id = id,persona_id, corporacion_id, cuatrienio_id),
+   #           by = "persona_id") %>%
+   # left_join(corporacion %>%  select(id, corporacion =nombre),
+   #           by = c("corporacion_id" = "id")) %>%
+   # left_join(legislatura %>%  select(legislatura = id, cuatrienio_id),
+   #           by = "cuatrienio_id") %>%
+   # left_join(personas %>%  select(persona_id = id, nombres, apellidos),
+   #           by = "persona_id") %>%
+   # mutate(nombre_congresista = paste(nombres, apellidos)) %>%
+   mutate( inves = if_else(str_detect(tipo,
+                                      pattern = "Atención: Pérdida de investidura"),
+                           "Pérdida de investidura", "Otro"),
+           inves = if_else(str_detect(tipo,
+                                      pattern = "Renunció a la curul"),
+                           "Renunció a la curul", inves),
+           inves = if_else(str_detect(tipo,
+                                      pattern = "Silla Vacía"),
+                           "Silla Vacía", inves)) %>%
+   # filter(cuatrienio_id == 8) %>%
+   # group_by(inves) %>%
+   # summarise(n = n(), miembros = paste(nombre_congresista, collapse=", ")) %>%
+   count(inves) %>%
+   # mutate(corporacion = case_when(is.na(corporacion)~"No congresista", T~corporacion)) %>%
+   filter(!inves == "Otro") %>%
+   # mutate(miembros = case_when(corporacion== "No congresista"~"", T~miembros),
+   #        corporacion = factor(corporacion, c("Cámara de Representantes", "Senado", "No congresista"))) %>%
+   arrange(desc(n)) %>%
+   hchart(hcaes(x = inves, y = n), type = "bar") %>%
+   hc_tooltip(pointFormat = '<b>{series.name}: {point.n}</b><br> {point.miembros}')%>%
+   hc_title(text = "Investigaciones") %>%
+   hc_xAxis(title = list(text = "Tipo")) %>%
+   hc_yAxis(title = list(text = "Total")) %>%
+   hc_add_theme( thm)

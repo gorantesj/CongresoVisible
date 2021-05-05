@@ -111,8 +111,9 @@ aux %>%  group_by(partido) %>%  summarise(mediana = median(edad)) %>%
   hc_title(text = "Edad mediana por partido") %>%
   hc_xAxis(title = list(text = "Partido")) %>%
   hc_yAxis(title = list(text = "Mediana")) %>% 
+  hc_tooltip(pointFormat = '{point.mediana} años') %>%
   hc_add_theme(thm) %>% 
-  hc_chart(inverted= T)
+  hc_chart(inverted= T, zoomType = "x")
 ```
 
 
@@ -156,7 +157,8 @@ aux%>%  filter( legislatura == 28,
   hc_tooltip(shared = T,
              pointFormat = '{series.name}: <b>{point.n}</b><br/>',
              headerFormat= '<span style="font-size: 20px"><b>Rango: {point.key} años</span><br/></b>') %>%
-  hc_add_theme( thm)
+  hc_add_theme( thm) %>% 
+  hc_colors(c("#0B3B5D", "#17789E"))
 
 aux%>%  filter( legislatura == 28,
                corporacion == "Senado") %>% ungroup() %>%
@@ -169,12 +171,13 @@ aux%>%  filter( legislatura == 28,
   hc_title(text = "Pirámide poblacional") %>%
   hc_subtitle(text = "Senado") %>%
   hc_xAxis(title = list(text = "Rango de edad")) %>%
-  hc_yAxis(title = list(text = "Total de congresistas"),
+  hc_yAxis(title = list(text = "Total de congresistas"), reversedStacks = F,
            labels  = list( formatter = JS("function(){ return Math.abs(this.value); }")) )%>%
   hc_tooltip(shared = T,
-             pointFormat = '{series.name}: <b>{point.n}</b><br/>',
+             pointFormat = '{series.name}: <b>{point.n} </b><br/>',
              headerFormat= '<span style="font-size: 20px"><b>Rango: {point.key} años</span><br/></b>') %>%
-  hc_add_theme( thm)
+  hc_add_theme( thm) %>% 
+  hc_colors(c("#0B3B5D", "#17789E"))
 
 
 ```
@@ -198,7 +201,8 @@ aux %>%
   hc_yAxis(title = list(text = "Mínimo, promedio y máximo de cuatrienios"), min=0) %>%
   hc_tooltip(pointFormat = 'Media: {point.media2}<br>Mínimo: {point.minimo}<br>Máximo: {point.maxi}') %>%
   hc_chart(inverted= T) %>%
-  hc_add_theme( thm)
+  hc_add_theme( thm)%>% 
+  hc_colors(c("#0B3B5D", "#17789E"))
 ```
 
 ```{r, warning=F, message=F, echo=F }
@@ -236,7 +240,7 @@ aux %>%
    #        corporacion = factor(corporacion, c("Cámara de Representantes", "Senado", "No congresista"))) %>%
    arrange(desc(n)) %>%
    hchart(hcaes(x = inves, y = n), type = "bar") %>%
-   hc_tooltip(pointFormat = '<b>{series.name}: {point.n}</b><br> {point.miembros}')%>%
+   hc_tooltip(pointFormat = '<b> {point.n}</b> {point.miembros}')%>%
    hc_title(text = "Investigaciones") %>%
    hc_xAxis(title = list(text = "Tipo")) %>%
    hc_yAxis(title = list(text = "Total")) %>%
@@ -279,7 +283,7 @@ aux %>%
    #        corporacion = factor(corporacion, c("Cámara de Representantes", "Senado", "No congresista"))) %>%
    arrange(desc(n)) %>%
    hchart(hcaes(x = inves, y = n), type = "bar") %>%
-   hc_tooltip(pointFormat = '<b>{series.name}: {point.n}</b><br> {point.miembros}')%>%
+   hc_tooltip(pointFormat ='<b> {point.n}</b> {point.miembros}')%>%
    hc_title(text = "Investigaciones") %>%
    hc_xAxis(title = list(text = "Tipo")) %>%
    hc_yAxis(title = list(text = "Total")) %>%
@@ -289,24 +293,33 @@ aux %>%
 
 ```{r, warning=F, message=F, echo=F }
 
-# 
-# congresistas %>%
-#   left_join(legislatura %>%  select(legislatura = id, cuatrienio_id),
-#             by = "cuatrienio_id") %>%
-#   left_join(corporacion %>%  select(id, corporacion =nombre),
-#             by = c("corporacion_id" = "id")) %>%
-#   left_join(partidos %>%  select(id,partido  = nombre, color),
-#             by = c("partido_id" = "id")) %>%
-#   left_join(personas %>%  select(persona_id = id, nombres, apellidos),
-#             by = "persona_id") %>%
-#   mutate(nombre_congresista = paste(nombres, apellidos)) %>%
-#   group_by(corporacion, legislatura, partido) %>%  summarise(n = n()) %>%
-#   mutate(partido2 = case_when(n< mean(n)~"", T~partido) ) %>%
-#   filter(corporacion == "Cámara de Representantes", legislatura == 28) %>%
-#   hchart(hcaes(x = partido, value= n), type = "treemap")%>%
-#   hc_plotOptions(treemap = list(colorByPoint = T,
-#                                 dataLabels = list(enabled = T,
-#                                                   format = '{point.partido2}'))) %>%
-#   hc_title(text = "Congresistas por partido") %>%
-#   hc_add_theme( thm)
+pl_autor %>%
+   left_join(personas %>%  select(persona_id = id, genero_id, nombres, apellidos), 
+             by = "persona_id") %>% 
+  left_join(congresistas %>%
+              select(congresista_id = id,persona_id, corporacion_id, cuatrienio_id),
+            by = "persona_id") %>%
+   # left_join(legislatura %>%  select(legislatura = id, cuatrienio_id),
+   #           by = "cuatrienio_id") %>%
+  mutate(nombre_congresista = paste0(nombres, apellidos)) %>%
+  left_join(sexo %>% select(genero_id = id, genero = nombre), by = "genero_id") %>%
+  filter(cuatrienio_id== 8) %>%
+  select(congresista_id, proyecto_ley_id, genero) %>%
+  group_by(genero, proyecto_ley_id) %>%  summarise() %>%  count(genero) %>%
+   ungroup() %>% 
+   mutate(pct = round(n*100/sum(n))) %>% 
+  hchart(hcaes(x = genero, size = n, y= 1, group = genero), type = "bubble") %>%
+  hc_xAxis(lineWidth =0, labels = list(enabled= F), title= list(enabled= F)) %>%
+  hc_yAxis(lineWidth =0, labels = list(enabled= F), title= list(enabled= F),
+           gridLineWidth =0) %>%
+  hc_plotOptions(bubble = list(colorByPoint = F,
+                               dataLabels = list(enabled = T,
+                                                 # inside = F,
+                                                 style = list(fontSize = "20px")),
+                               maxSize = "50%",
+                               minSize = "20%",
+                               marker = list(fillOpacity = .91,lineWidth=0))) %>%
+  hc_title(text = "Total de Proyectos de Ley presentados por género") %>%
+  hc_add_theme( thm) %>%
+  hc_tooltip(pointFormat = "{point.pct}%")
 ```

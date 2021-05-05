@@ -5,7 +5,7 @@ library(lubridate)
 
 
 thm <- hc_theme(
-  colors =c("#04192E","#062647", "#0B3B5D","#0D4568", "#0F4F73", "#136489", "#17789E",
+  colors =c("#062647", "#0B3B5D","#0D4568", "#0F4F73", "#136489", "#17789E",
             "#3B90B5", "#5EA8CC", "#5EA8CC", "#82C0E3","#56A2C7", "#94CCEF", "#A5D8FA",
             "#C1E3FA", "#DCEEFA", "#E3F2FE"),
   chart = list( style = list(fontFamily = "Bell MT", fontSize = "20px")),
