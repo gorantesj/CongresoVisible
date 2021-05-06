@@ -184,7 +184,10 @@ temas %>%
   hc_title(text = "Temas de los proyectos en el cuatrienio 2008")%>%
   hc_add_theme(thm)%>%
   hc_tooltip(pointFormat = 'Total: <b>{point.n}</b> <b> ({point.porc})%</b>') %>% 
-  hc_plotOptions(series = list(colorByPoint =T)) 
+  hc_plotOptions(series = list(colorByPoint =T))  
+  # hc_colorAxis(minColor = "#d7dfa4",
+  #                  maxColor = "#96A43A") %>% 
+  # hc_colorAxis(dataClasses = color_classes(temas$porc))
 
 ```
 ```{r}
@@ -522,7 +525,8 @@ hchart(
     color = "#379E80", name = "2010-2014"
   ) %>%
   hc_title(text = "Distribución de edad en el congreso por cuatrienio") %>%
-  hc_add_theme( thm)
+  hc_add_theme( thm)%>% 
+  hc_tooltip(valueDecimals= 2)
 
 
 
@@ -575,7 +579,8 @@ hchart(
     color = "#379E80", name = "2010-2014"
   ) %>%
   hc_title(text = "Distribución de edad del Partido Conservador Colombiano por cuatrienio") %>%
-  hc_add_theme( thm)
+  hc_add_theme( thm)%>% 
+  hc_tooltip(valueDecimals= 2)
 
 
 
