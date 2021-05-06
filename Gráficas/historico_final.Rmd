@@ -22,7 +22,7 @@ comment = "#>"
 library(pacman)
 p_load(tidyverse, magrittr, highcharter, lubridate, devtools, viridis, hrbrthemes, mapdata, here)
 library(ggchicklet)
-library(randomNames)
+# library(randomNames)
 
 ```
 
@@ -81,14 +81,14 @@ proyecto_final <- left_join(proyecto_final, temas, by=c("tema_id_principal" ="id
 proyecto_final <- left_join(proyecto_final, cuatri, by="cuatrienio_id")
 
 
-congresistas <- read_csv("Para Jesús/congresistas.csv")
-partidos <- read_csv("Para Jesús/partidos.csv")
-personas <- read_csv("Para Jesús/personas.csv")
-sexo <- read_csv("Para Jesús/generos.csv")
+congresistas <- read_csv(here("Para Jesús/congresistas.csv"))
+partidos <- read_csv("Para Jesús/partidos.csv" %>%  here())
+personas <- read_csv("Para Jesús/personas.csv" %>%  here())
+sexo <- read_csv("Para Jesús/generos.csv" %>%  here())
 
-control_pol_0 <- read_csv("Para Jesús/control_politico_citados.csv")
-control_pol_1 <- read_csv("Para Jesús/control_politico_citantes.csv")
-control_pol_2 <- read_csv("Para Jesús/control_politicos.csv")
+control_pol_0 <- read_csv("Para Jesús/control_politico_citados.csv" %>%  here())
+control_pol_1 <- read_csv("Para Jesús/control_politico_citantes.csv" %>%  here())
+control_pol_2 <- read_csv("Para Jesús/control_politicos.csv"  %>% here())
 ```
 
 ## Proyectos de Ley
@@ -349,14 +349,14 @@ aux <- congresistas %>% select(congresista_id = id, persona_id, cuatrienio_id, p
     left_join(control_pol_1 %>%
       select(congresista_id, control_politico_id),
       by = "congresista_id") %>%
-    left_join(control_pol_2 %>%
-      select(control_politico_id = id, tipo_control_politico_id) %>%
-      filter(tipo_control_politico_id == 1),
-      by = "control_politico_id") %>% 
+    # left_join(control_pol_2 %>%
+    #   select(control_politico_id = id, tipo_control_politico_id) %>%
+    #   filter(tipo_control_politico_id == 1),
+    #   by = "control_politico_id") %>%
       left_join(cuatri, by="cuatrienio_id")%>%
     group_by(partido, cuatrienio) %>%
-    summarise(n = n()) %>% 
-    filter(n<2000 & n>400) 
+    summarise(n = n()) %>%
+    filter(n<2000 & n>400)
 
   # aux %>%
   #   hchart('bar', hcaes(x = 'partido', y = n, group = 'cuatrienio')) %>%
@@ -364,13 +364,13 @@ aux <- congresistas %>% select(congresista_id = id, persona_id, cuatrienio_id, p
   #   hc_title(text = "Total de Citaciones") %>%
   #   hc_xAxis(title = list(text = "")) %>%
   #   hc_yAxis(title = list(text = "Número de citaciones")) %>%
-  #   hc_add_theme(thm) 
-  # 
-  
-  aux %>% 
+  #   hc_add_theme(thm)
+  #
+
+  aux %>%
   hchart(hcaes(from = partido, to  = cuatrienio, weight =n), type = "sankey") %>%
   hc_title(text = "Total de citaciones por partido político") %>%
-  hc_add_theme( thm) 
+  hc_add_theme( thm)
   
 
 ```
@@ -635,24 +635,24 @@ aux <- proyecto_final %>%
 ```{r}
 # Debates de control político citados por cuatrienio -------------------------------------------
 
-    aux <- control_pol_2 %>%
-            select(control_politico_id = id, cuatrienio_id, tipo_control_politico_id, titulo) %>%
-           left_join(legis %>%
-            select(legislatura_id = id, cuatrienio_id, legislatura, fechaInicio) ,
-            by = "cuatrienio_id") %>%
-          filter(tipo_control_politico_id == 1, !grepl("Debat", titulo)) %>%
-          left_join(cuatri, by = "cuatrienio_id") %>%
-          group_by(cuatrienio) %>%
-          summarise(n = n())
-
-    aux %>% # Una serie de tiempo, como la línea y el punto, evolucion
-      hchart('bar', hcaes(x = 'cuatrienio', y = n)) %>%
-      hc_tooltip(pointFormat = 'Núm. iniciativas gubernamentales : {point.n}')%>%
-      hc_title(text = "Debates de control político citados por cuatrienio") %>%
-      hc_xAxis(title = list(text = "")) %>%
-      hc_yAxis(title = list(text = "")) %>%
-      hc_plotOptions(bar=list(borderRadius =5, colorByPoint = F))%>%
-      hc_add_theme(thm)
+    # aux <- control_pol_2 %>%
+    #         select(control_politico_id = id, cuatrienio_id, tipo_control_politico_id, titulo) %>%
+    #        left_join(legis %>%
+    #         select(legislatura_id = id, cuatrienio_id, legislatura, fechaInicio) ,
+    #         by = "cuatrienio_id") %>%
+    #       filter(tipo_control_politico_id == 1, !grepl("Debat", titulo)) %>%
+    #       left_join(cuatri, by = "cuatrienio_id") %>%
+    #       group_by(cuatrienio) %>%
+    #       summarise(n = n())
+    # 
+    # aux %>% # Una serie de tiempo, como la línea y el punto, evolucion
+    #   hchart('bar', hcaes(x = 'cuatrienio', y = n)) %>%
+    #   hc_tooltip(pointFormat = 'Núm. iniciativas gubernamentales : {point.n}')%>%
+    #   hc_title(text = "Debates de control político citados por cuatrienio") %>%
+    #   hc_xAxis(title = list(text = "")) %>%
+    #   hc_yAxis(title = list(text = "")) %>%
+    #   hc_plotOptions(bar=list(borderRadius =5, colorByPoint = F))%>%
+    #   hc_add_theme(thm)
 ```
 
 #### Votación
