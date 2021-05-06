@@ -1,0 +1,710 @@
+---
+title: "Histórico"
+output: html_document
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(echo = F, 
+message = F,
+warning = F, 
+fig.asp = 0.8, 
+fig.width = 7, 
+out.width = "100%",
+dpi = 300,
+collapse = TRUE,
+comment = "#>"
+) 
+```
+
+
+```{r, include = FALSE}
+#librerías
+library(pacman)
+p_load(tidyverse, magrittr, highcharter, lubridate, devtools, viridis, hrbrthemes, mapdata, here)
+library(ggchicklet)
+library(randomNames)
+
+```
+
+```{r, include = FALSE}
+#bases
+
+source(here("Gráficas", "tema.R"))
+proyecto <- read_csv(here("Para Jesús", "proyecto_leys.csv"))
+
+iniciativas <- read_csv(here("Para Jesús", "iniciativas.csv")) %>% 
+               select(id, iniciativa = nombre) 
+
+tipo_proyecto <- read_csv(here("Para Jesús", "tipo_proyectos.csv")) %>% 
+               select(id, tipo_proyecto = nombre)
+
+legis <- read_csv(here("Para Jesús", "legislaturas.csv")) %>% 
+               select(id:cuatrienio_id, legislatura = nombre) 
+
+corpo <- read_csv(here("Para Jesús", "corporacions.csv")) %>% 
+               select(id, corporacion = nombre)
+
+proyecto_estado <- read_csv(here("Para Jesús", "proyecto_ley_estados.csv")) %>% 
+                   select(proyecto_ley_id, estado_proyecto_ley_id, fecha)
+
+estado_proyecto <- read_csv(here("Para Jesús", "estado_proyecto_leys.csv")) %>% 
+                   select(id, estado_proyecto = nombre) 
+
+estado_final <- left_join(proyecto_estado, estado_proyecto, by=c("estado_proyecto_ley_id"="id")) %>% 
+                select(fecha, proyecto_ley_id, estado_proyecto) %>% 
+                group_by(proyecto_ley_id) %>% 
+                filter(fecha==max(fecha)) %>% 
+                ungroup()
+
+temas <- read_csv(here("Para Jesús", "temas.csv")) %>% 
+         select(id, tema=nombre)
+
+cuatri <- read_csv(here("Para Jesús", "cuatrienios.csv")) %>%
+          select(cuatrienio_id = id, fecha_inicio_cuatri=fecha_inicio) %>%
+          arrange(fecha_inicio_cuatri) %>% mutate(cuatrienio=row_number(),
+          cuatrienio=factor(cuatrienio, labels = c("1994-1998", "1998-2002",
+          "2002-2006", "2006-2010", "2010-2014", "2014-2018",
+          "2018-2022")))
+
+proyecto_final <- left_join(proyecto, iniciativas, by=c("iniciativa_id"="id"))
+
+proyecto_final <- left_join(proyecto_final, tipo_proyecto, by=c("tipo_proyecto_id"="id"))
+
+proyecto_final <- left_join(proyecto_final, legis, by=c("legislatura_id"="id", "cuatrienio_id"))
+
+proyecto_final <- left_join(proyecto_final, corpo, by=c("corporacion_id"="id"))
+
+proyecto_final <- inner_join(proyecto_final, estado_final, by=c("id" ="proyecto_ley_id"))
+
+proyecto_final <- left_join(proyecto_final, temas, by=c("tema_id_principal" ="id"))
+
+proyecto_final <- left_join(proyecto_final, cuatri, by="cuatrienio_id")
+
+
+congresistas <- read_csv("Para Jesús/congresistas.csv")
+partidos <- read_csv("Para Jesús/partidos.csv")
+personas <- read_csv("Para Jesús/personas.csv")
+sexo <- read_csv("Para Jesús/generos.csv")
+
+control_pol_0 <- read_csv("Para Jesús/control_politico_citados.csv")
+control_pol_1 <- read_csv("Para Jesús/control_politico_citantes.csv")
+control_pol_2 <- read_csv("Para Jesús/control_politicos.csv")
+```
+
+## Proyectos de Ley
+
+### Total de proyectos sancionados como Ley
+
+
+```{r total-pl-comoley, echo =FALSE }
+sancionados <- proyecto_final %>% 
+               filter(estado_proyecto=="Sancionado como Ley") %>%
+               count(cuatrienio)
+# sancionados %>%
+#   hchart(hcaes(x = fecha, y = n), type = "line") %>%
+#   hc_plotOptions(line= list(lineWidth = 4,
+#                             marker = list(radius =0),
+#                             stickyTracking=F)) %>%
+#     hc_chart(style = list(fontFamily = "Avenir next"), polar = T) %>% 
+#     hc_add_theme(thm) %>% 
+#   hc_tooltip(
+#     borderWidth= 0,
+#     outside = T,
+#     textOutline= "3px contrast",
+#     shadow=F,
+#     shared = T,
+#     split = F,
+#     headerFormat= '<span style="font-size: 20px">{point.key}</span><br/>',
+#     pointFormat = '{point.n}'  ) %>% 
+#   hc_xAxis(crosshair = T, title = list(text = ""),
+#            lineWidth = 0, tickWidth  = 0, gridLineWidth =0,
+#            showLastLabel= T,
+#            labels = list(step = 1, style = list(fontSize = "16px", color = "#001c44") )) %>% 
+#   hc_yAxis(crosshair = T, title = list(text = ""), tickAmount = 3,
+#            dashStyle = "dot",
+#            gridLineWidth =.5, showFirstLabel = T,
+#            labels = list( style = list(fontSize = "12px") )) %>% 
+#   hc_title(text = "Total de Proyectos de Ley sancionados por año")
+
+  # hc_colors(colors = c("#1A535C", "#FFE66D")) %>%
+
+
+    sancionados %>% # Ordenar por factores la y
+      hchart('bar', hcaes(x = cuatrienio, y = n)) %>%
+      hc_tooltip(pointFormat = 'Total de proyectos sancionados : {point.n}')%>%
+      hc_title(text = "Total de Proyectos de Ley sancionados por año") %>%
+      hc_xAxis(title = list(text = "")) %>%
+      hc_yAxis(title = list(text = "")) %>%
+      hc_plotOptions(bar=list(borderRadius =5, colorByPoint = F))%>%
+      hc_add_theme(thm)
+
+
+
+```
+
+### Temas recurrentes
+
+```{r temas-recurrentes, echo =FALSE}
+
+temas_prueba <- proyecto_final %>% 
+                count(tema) %>% 
+                arrange(desc(n))
+       
+temas_prueba <- temas_prueba[1:10,]
+tema_vec <- temas_prueba$tema
+
+temas <- proyecto_final %>% 
+         filter(tema %in% tema_vec) %>% 
+         count(fecha_inicio_cuatri, tema) %>% 
+         group_by(fecha_inicio_cuatri) %>% 
+         mutate(totales=sum(n, na.rm=T)) %>% 
+         ungroup() %>% 
+         mutate(porc=round((n/totales)*100, 2))
+
+temas %>% 
+  hchart(hcaes(x = fecha_inicio_cuatri, y =porc, group= tema), type = "area") %>%
+  hc_plotOptions(area = list(stacking = T)) %>% 
+      hc_add_theme(thm) %>%  
+  hc_xAxis(title = list(text = "")) %>%
+  hc_yAxis(title = list(text = "Porcentaje"))%>%
+  hc_tooltip(pointFormat = 'Total: <b>{point.n}</b><br/>Porcentaje:  <b>{point.porc}</b>')
+
+
+
+```
+
+
+
+```{r temas-recurrentes-2, echo =FALSE}
+
+  temas %>% 
+  filter(fecha_inicio_cuatri==max(fecha_inicio_cuatri)) %>% 
+  hchart(hcaes(x = tema,  value = porc), type = "treemap")%>%
+  hc_title(text = "Temas de los proyectos en el cuatrienio 2008")%>%
+  hc_add_theme(thm)%>%
+  hc_tooltip(pointFormat = 'Total: <b>{point.n}</b><br/>Porcentaje:  <b>{point.porc}</b>')
+
+```
+```{r}
+
+  temas %>% 
+  filter(fecha_inicio_cuatri==min(fecha_inicio_cuatri)) %>% 
+  hchart(hcaes(x = tema,  value = porc), type = "treemap")%>%
+  hc_title(text = "Temas de los proyectos en el cuatrienio 1998")%>%
+  hc_add_theme(thm)%>%
+  hc_tooltip(pointFormat = 'Total: <b>{point.n}</b><br/>Porcentaje:  <b>{point.porc}</b>')
+
+```
+
+
+
+### Tiempo de sanción como Ley por cada tipo proyecto 
+
+```{r tiempo-sansionley, echo =FALSE}
+
+proyecto_estado <- read_csv(here("Para Jesús", "proyecto_ley_estados.csv")) %>% 
+                   select(proyecto_ley_id, estado_proyecto_ley_id, fecha)
+estado_proyecto <- read_csv(here("Para Jesús", "estado_proyecto_leys.csv")) %>% 
+                   select(id, nombre) %>% 
+                   rename("estado_proyecto"="nombre")
+estado_final <- left_join(proyecto_estado, estado_proyecto, by=c("estado_proyecto_ley_id"="id")) %>% 
+                filter(estado_proyecto=="Sancionado como Ley") %>% 
+                rename("fecha_aproba"="fecha")
+
+proyecto <- read_csv(here("Para Jesús", "proyecto_leys.csv")) %>% 
+            select(id, tipo_proyecto_id, cuatrienio_id, fecha_radicacion) %>% 
+            left_join(tipo_proyecto, by=c("tipo_proyecto_id"="id")) %>% 
+            left_join(estado_final, by=c("id"="proyecto_ley_id")) %>% 
+            left_join(cuatri, by="cuatrienio_id") %>% 
+            filter(!is.na(estado_proyecto)) %>% 
+            unique() %>% 
+            mutate(dif=fecha_aproba-fecha_radicacion, 
+                   dif=as.numeric(dif))
+aux <-  data_to_boxplot(data = proyecto  ,
+                         variable = dif, group_var =cuatrienio, group_var2 = tipo_proyecto)
+
+highchart() %>%
+  hc_xAxis(type = "category") %>%
+  hc_add_series_list(aux)  %>%
+  hc_title(text = "Tiempo de sanción de Proyectos de Ley") %>%
+  hc_xAxis(title = list(text = "Cuatrienio")) %>%
+  hc_yAxis(title = list(text = "Días"), tickAmount = 6, min=0) %>%
+  hc_plotOptions(series = list(showInLegend = T)) %>% 
+  # hc_chart(inverted = T, zoomType = "x") %>%
+  hc_tooltip(shared= F,
+             pointFormat= '<span style="color:{point.color}">●</span> <b> {series.name}</b><br/>Máximo: {point.high}<br/>3º cuantil: {point.q3}<br/>Mediana: {point.median}<br/>1º cuantil: {point.q1}<br/>Mínimo: {point.low}<br/>') %>%
+  hc_add_theme( thm)
+
+
+
+
+```
+## Compisición partidista
+### Proporción de mujeres
+
+```{r proporcion-mujeres-1, echo =FALSE}
+
+aux <- congresistas %>% select(congresista_id = id, persona_id, cuatrienio_id, partido_id) %>%
+  left_join(legis %>%
+    select(legislatura_id = id, cuatrienio_id, legislatura, fechaInicio, fechaFin),
+    by = "cuatrienio_id") %>%
+  left_join(partidos %>%
+    select(partido_id =id, partido  = nombre, color),
+    by = "partido_id" ) %>%
+  left_join(personas %>%
+    select(persona_id = id, genero_id),
+    by = "persona_id") %>%
+  left_join(sexo %>%
+    select(genero_id = id, genero = nombre),
+    by = "genero_id") %>%
+  filter(!is.na(genero)) %>% 
+  group_by(fechaInicio, genero) %>%
+  summarise(n = n())%>%
+  mutate(pct = round(100*n / sum(n), 1))
+
+  aux %>%
+    hchart(hcaes(x = 'fechaInicio', group = 'genero', y = 'pct'), type = "area") %>%
+    hc_plotOptions(area = list(stacking = T)) %>%
+    hc_title(text = "Proporción de mujeres") %>%
+    hc_subtitle(text = "Historico") %>%
+    hc_tooltip(pointFormat = '{point.pct} %') %>%
+    hc_xAxis(title = list(text = "Fecha cuatrienios")) %>%
+    hc_yAxis(title = list(text = "Porcentaje"), min=0) %>%
+    hc_add_theme(thm)
+```
+  
+  
+  
+```{r proporcion-mujeres-2, echo =FALSE}
+   # Por cuatrienio
+  id <- 1
+  aux <- congresistas %>% select(congresista_id = id, persona_id, cuatrienio_id, partido_id) %>% 
+    left_join(partidos %>%
+      select(partido_id =id, partido  = nombre),
+      by = "partido_id" ) %>%
+    left_join(personas %>%
+      select(persona_id = id, genero_id),
+      by = "persona_id") %>%
+    left_join(sexo %>%
+      select(genero_id = id, genero = nombre),
+      by = "genero_id") %>%
+    left_join(cuatri, by = "cuatrienio_id") %>%
+    filter(!is.na(genero), cuatrienio_id == id) 
+  
+  
+   base1 <- aux %>%
+    select(partido) %>%
+    unique()
+
+  base1 <- base1 %>%
+    mutate(id = str_to_id(partido)) %>%
+    bind_cols(tibble(color = hcl.colors(nrow(base1), palette = "viridis"))) %>%
+    rename("name" = "partido")
+
+  base2 <- aux %>%
+    count(genero, partido) %>%
+    mutate(color = if_else(genero == "Masculino", "#17789e",
+           if_else(genero == "Femenino","#66CCFF","#808080")),
+           parent=str_to_id(partido),
+           id = as.character(row_number())) %>%
+    rename("name"= "genero", "value"="n") %>% 
+    mutate(partido=if_else(value<5," ", partido)) 
+  
+
+  dde <- list(base1, base2) %>%
+    purrr::map(mutate_if, is.factor, as.character) %>%
+    bind_rows() %>%
+    list_parse() %>%
+    purrr::map(function(x) x[!is.na(x)])
+
+
+  highchart() %>%
+    hc_chart(type = "treemap") %>%
+     hc_add_series(
+      data = dde, allowDrillToNode = TRUE,
+      levelIsConstant = TRUE, textOverflow = "clip",
+      dataLabels = list(color = "white"),
+      levels = list(
+        list(level = 1, borderWidth = 1,
+              dataLabels = list(enabled = TRUE, verticalAlign = "top",
+                align = "left", style = list(fontSize = "12px", textOutline = FALSE)) ),
+        list(level = 2, borderWidth = 0, dataLabels = list(enabled = FALSE))
+    )) %>% 
+    hc_title(text = "Proporción de mujeres") %>%
+    hc_add_theme(thm)%>%
+    hc_colors("transparent")
+```
+### Total de citaciones
+
+```{r  total-citaciones, echo =FALSE}
+
+
+  aux <- congresistas %>% select(congresista_id = id, persona_id, cuatrienio_id, partido_id) %>%
+    left_join(legis %>%
+      select(legislatura_id = id, cuatrienio_id, legislatura, fechaInicio),
+      by = "cuatrienio_id") %>%
+    left_join(partidos %>%
+      select(partido_id =id, partido  = nombre, color),
+      by = "partido_id" ) %>%
+    left_join(control_pol_1 %>%
+      select(congresista_id, control_politico_id),
+      by = "congresista_id") %>%
+    left_join(control_pol_2 %>%
+      select(control_politico_id = id, tipo_control_politico_id) %>%
+      filter(tipo_control_politico_id == 1),
+      by = "control_politico_id") %>% 
+      left_join(cuatri, by="cuatrienio_id")%>%
+    group_by(partido, cuatrienio) %>%
+    summarise(n = n()) %>% 
+    filter(n<2000 & n>400) 
+
+  # aux %>%
+  #   hchart('bar', hcaes(x = 'partido', y = n, group = 'cuatrienio')) %>%
+  #   hc_tooltip(pointFormat = 'Número de citaciones: {point.n}')%>%
+  #   hc_title(text = "Total de Citaciones") %>%
+  #   hc_xAxis(title = list(text = "")) %>%
+  #   hc_yAxis(title = list(text = "Número de citaciones")) %>%
+  #   hc_add_theme(thm) 
+  # 
+  
+  aux %>% 
+  hchart(hcaes(from = partido, to  = cuatrienio, weight =n), type = "sankey") %>%
+  hc_title(text = "Total de citaciones por partido político") %>%
+  hc_add_theme( thm) 
+  
+
+```
+
+
+```{r  numero-iniciativas, echo =FALSE}
+# Número de iniciativas gubernamentales por cuatrienio  ---------------------------------------
+
+ aux <- proyecto_final %>%
+     group_by(cuatrienio) %>% 
+    summarise(n = n()) 
+
+    aux %>% # Ordenar por factores la y
+      hchart('bar', hcaes(x = 'cuatrienio', y = n)) %>%
+      hc_title(text = "Número de iniciativas gubernamentales") %>%
+      hc_xAxis(title = list(text = "")) %>%
+      hc_yAxis(title = list(text = "")) %>%
+      hc_plotOptions(bar=list(borderRadius =10), series = list(showInLegend = T)) %>% 
+      hc_add_theme(thm) %>% 
+      hc_tooltip(pointFormat = 'Núm. iniciativas gubernamentales : {point.n}')
+
+     
+
+
+```
+
+
+### Edad
+
+```{r edad-partidista-old, echo =FALSE}
+# edad - composición partidista
+congresistas <- read_csv(here("Para Jesús", "congresistas.csv"))
+partidos <- read_csv(here("Para Jesús", "partidos.csv"))
+personas <- read_csv(here("Para Jesús", "personas.csv")) %>% 
+       filter(!is.na(fechaNacimiento)) 
+
+personas$dia <- substr(personas$fechaNacimiento, 1,2)
+personas$mes <- substr(personas$fechaNacimiento, 4,5)
+personas$year <- substr(personas$fechaNacimiento, 7,8)
+personas$year_ <- paste0("19", personas$year)
+personas$nacim <- paste(personas$year_, personas$mes, personas$dia, sep="/")
+
+
+aux <- congresistas %>% 
+       select(congresista_id = id, persona_id, cuatrienio_id, partido_id) %>%
+       left_join(partidos %>%
+       select(partido_id =id, partido  = nombre, color),
+       by = "partido_id" ) %>%
+       left_join(personas %>%
+       select(persona_id = id, nacim),
+       by = "persona_id") %>%
+       left_join(cuatri, by="cuatrienio_id") %>% 
+       filter(!is.na(nacim)) %>%
+       mutate(nacim = lubridate::ymd(nacim), 
+              edad =round(as.numeric(fecha_inicio_cuatri- nacim)/365, 0)) 
+
+
+barras <- aux %>%
+       group_by(partido) %>%
+       summarise(mediana=median(edad)) %>% 
+       ungroup() %>% 
+       arrange(desc(mediana))
+
+barras_viejos <- barras %>% 
+                 arrange(desc(mediana))
+
+barras_viejos <- barras_viejos[1:10,]
+
+barras_viejos %>%  hchart(hcaes(y = mediana, x = partido), type = "bar") %>%
+  hc_title(text = "Top 5 partidos con congresitas de mayor edad") %>%
+  hc_xAxis(title = list(text = " ")) %>%
+  hc_yAxis(title = list(text = "Mediana de edad")) %>%
+  hc_tooltip(shared = T,
+             pointFormat = '<br/>Mediana de edad:  <b>{point.mediana}</b>') %>%
+  hc_add_theme( thm)%>% 
+ hc_plotOptions(bar=list(borderRadius =5, colorByPoint = T))
+
+
+```
+
+```{r edad-partidista-young, echo =FALSE}
+
+barras_jov <- barras %>% 
+                 arrange(mediana)
+
+barras_jov <- barras_jov[1:10,]
+
+
+barras_jov %>%  hchart(hcaes(y = mediana, x = partido), type = "bar") %>%
+  hc_title(text = "Top 5 partidos con congresitas más jóvenes") %>%
+  hc_xAxis(title = list(text = " ")) %>%
+  hc_yAxis(title = list(text = "Mediana de edad")) %>%
+  hc_tooltip(shared = T,
+             pointFormat = '<br/>Mediana de edad:  <b>{point.mediana}</b>') %>%
+  hc_add_theme( thm)%>% 
+ hc_plotOptions(bar=list(borderRadius =5, colorByPoint = T))
+
+```
+
+```{r edad-partidista-distribucion, echo =FALSE}
+
+# c_dem <- aux %>% 
+#          filter(partido=="Conservador Colombiano")
+
+cuat1 <- aux %>% 
+         filter(cuatrienio=="1998-2002")
+
+cuat2 <- aux %>% 
+         filter(cuatrienio=="2002-2006")
+cuat3 <- aux %>% 
+         filter(cuatrienio=="2006-2010")
+cuat4 <- aux %>% 
+         filter(cuatrienio=="2010-2014")
+cuat5 <- aux %>% 
+         filter(cuatrienio=="2014-2018")
+cuat6 <- aux %>% 
+         filter(cuatrienio=="2018-2022")
+
+
+  
+  
+  hchart(
+  density(cuat1$edad), 
+  type = "area", 
+  color = "#66CCFF", name = "1998-2002"
+  ) %>% 
+  hc_add_series(
+  density(cuat2$edad), 
+  type = "area", 
+  color = "#17789E", name = "2002-2006"
+  )%>% 
+  hc_add_series(
+  density(cuat3$edad), 
+  type = "area", 
+  color = "#6AEEB0", name = "2010-2014"
+  )%>% 
+  hc_add_series(
+  density(cuat4$edad), 
+  type = "area", 
+  color = "#379E80", name = "2010-2014"
+  ) %>%
+  hc_title(text = "Distribución de edad en el congreso por cuatrienio") %>%
+  hc_add_theme( thm)
+
+
+
+
+
+```
+
+
+```{r edad-partidista-dist-partido, echo =FALSE}
+
+
+c_dem <- aux %>%
+         filter(partido=="Conservador Colombiano")
+
+cuat1 <- c_dem %>% 
+        filter(cuatrienio=="1998-2002")
+
+cuat2 <- c_dem %>% 
+          filter(cuatrienio=="2002-2006")
+cuat3 <- c_dem %>% 
+        filter(cuatrienio=="2006-2010")
+cuat4 <- c_dem %>% 
+         filter(cuatrienio=="2010-2014")
+cuat5 <- c_dem %>% 
+         filter(cuatrienio=="2014-2018")
+cuat6 <- c_dem %>% 
+         filter(cuatrienio=="2018-2022")
+
+
+  
+  
+  hchart(
+  density(cuat1$edad), 
+  type = "area", 
+  color = "#66CCFF", name = "1998-2002"
+  ) %>% 
+  hc_add_series(
+  density(cuat2$edad), 
+  type = "area", 
+  color = "#17789E", name = "2002-2006"
+  )%>% 
+  hc_add_series(
+  density(cuat3$edad), 
+  type = "area", 
+  color = "#6AEEB0", name = "2006-2010"
+  )%>% 
+  hc_add_series(
+  density(cuat4$edad), 
+  type = "area", 
+  color = "#379E80", name = "2010-2014"
+  ) %>%
+  hc_title(text = "Distribución de edad del Partido Conservador Colombiano por cuatrienio") %>%
+  hc_add_theme( thm)
+
+
+
+
+
+
+```
+
+
+### Partidos con mayor representación
+
+
+```{r}
+
+#Composición
+aux <- congresistas %>% 
+       select(congresista_id = id, persona_id, cuatrienio_id, partido_id) %>%
+       left_join(partidos %>%
+       select(partido_id =id, partido  = nombre, color),
+       by = "partido_id" ) %>%
+       left_join(personas %>%
+       select(persona_id = id, nacim),
+       by = "persona_id") %>%
+       left_join(cuatri, by="cuatrienio_id") %>% 
+       count(partido, cuatrienio) %>% 
+       filter(n>=10) %>% 
+       arrange(cuatrienio)
+
+aux %>% 
+  hchart(hcaes(from = partido, to  = cuatrienio, weight =n), type = "sankey") %>%
+  hc_title(text = "Partidos con mayor representación en el Congreso, por cuatrienio")%>%
+  hc_add_theme(thm)
+
+```
+
+## Relación Ejecutivo - Legislativo 
+
+### Iniciativas gubernamentales sancionadas como ley por cuatrienio 
+
+
+```{r iniciativas-gubernamentales-ley, echo =FALSE}
+
+
+aux <- proyecto_final %>%
+      filter(iniciativa == "Gubernamental", estado_proyecto == "Sancionado como Ley")  %>%
+      group_by(cuatrienio) %>%
+      summarise(n = n()) %>%
+      na.omit()
+
+    aux %>% # Una serie de tiempo, como la línea y el punto, evolucion
+      hchart('bar', hcaes(x = 'cuatrienio', y = n)) %>%
+      hc_tooltip(pointFormat = 'Núm. iniciativas gubernamentales : {point.n}')%>%
+      hc_title(text = "Número de iniciativas gubernamentales sancionadas como ley") %>%
+      hc_xAxis(title = list(text = "")) %>%
+      hc_yAxis(title = list(text = "")) %>%
+      hc_plotOptions(bar=list(borderRadius =5, colorByPoint = F))%>%
+      hc_add_theme(thm)
+
+    # Highcharts, area de gradado
+    # Gubernamental vs no gubernamental, treemap, lineas de votos a favor, separadas por tipo de iniativa,
+    # Sankey, dos divisiones a favor o encontra, corte a favor en contra
+    # Heatmap particosvs cuatrienio, porcentaje favorable(z)
+
+```
+
+```{r}
+# Debates de control político citados por cuatrienio -------------------------------------------
+
+    aux <- control_pol_2 %>%
+            select(control_politico_id = id, cuatrienio_id, tipo_control_politico_id, titulo) %>%
+           left_join(legis %>%
+            select(legislatura_id = id, cuatrienio_id, legislatura, fechaInicio) ,
+            by = "cuatrienio_id") %>%
+          filter(tipo_control_politico_id == 1, !grepl("Debat", titulo)) %>%
+          left_join(cuatri, by = "cuatrienio_id") %>%
+          group_by(cuatrienio) %>%
+          summarise(n = n())
+
+    aux %>% # Una serie de tiempo, como la línea y el punto, evolucion
+      hchart('bar', hcaes(x = 'cuatrienio', y = n)) %>%
+      hc_tooltip(pointFormat = 'Núm. iniciativas gubernamentales : {point.n}')%>%
+      hc_title(text = "Debates de control político citados por cuatrienio") %>%
+      hc_xAxis(title = list(text = "")) %>%
+      hc_yAxis(title = list(text = "")) %>%
+      hc_plotOptions(bar=list(borderRadius =5, colorByPoint = F))%>%
+      hc_add_theme(thm)
+```
+
+#### Votación
+
+```{r}
+
+proyectos <- read_csv(here("Para Jesús", "proyecto_leys.csv"))
+
+votacion <- read_csv(here("Para Jesús", "votacions.csv"))
+
+iniciativas <- read_csv(here("Para Jesús", "iniciativas.csv")) %>% 
+               select(id, nombre)
+
+
+
+```
+
+```{r}
+
+proy <- proyectos %>% 
+       select(id, cuatrienio_id, corporacion_id, iniciativa_id, corporacion_id) %>% 
+       left_join(iniciativas, by=c("iniciativa_id"="id")) %>% 
+       select(id, nombre, corporacion_id)
+
+
+vot <- votacion %>% 
+       select(proyecto_de_ley_id,fecha, esPlenaria, votosFavor, votosContra) %>% 
+       filter(esPlenaria==1) %>% 
+       group_by(proyecto_de_ley_id) %>% 
+       filter(fecha==max(fecha)) %>% 
+       ungroup()
+
+proy_vot_todos <- inner_join(vot, proy, by=c("proyecto_de_ley_id"="id")) %>% 
+            select(nombre, votosFavor, votosContra, corporacion_id)
+
+
+
+####En el senado-----
+
+proy_vot <- filter(proy_vot_todos, corporacion_id==1)
+proy_vot <- gather(proy_vot, votos, total, votosFavor:votosContra) %>% 
+            group_by(nombre, votos) %>% 
+            summarise(total=sum(total, na.rm = T)) %>% 
+            ungroup()
+
+proy_vot %>%   hchart(hcaes(from = nombre, to  = votos, weight =total), type = "sankey") %>%
+  hc_title(text = "Sentido del voto según origen de iniciativa en la actual legislatura del Senado") %>%
+  hc_add_theme( thm) 
+  
+
+```
+
+
+
+
