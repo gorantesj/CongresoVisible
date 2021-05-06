@@ -58,6 +58,7 @@ proyectos %>%
 
 
 ```{r}
+library(colorRamps)
 pal <- colorRampPalette(colores)
 
 tibble(x = c("Economía", "Salud", "Finanzas", "Infraestructura",
@@ -68,12 +69,9 @@ tibble(x = c("Economía", "Salud", "Finanzas", "Infraestructura",
   hchart(hcaes(x = x,  value = n), type = "treemap")%>%
   hc_plotOptions(treemap = list(borderRadius = 7, colorByPoint = T,
                                 dataLabels = list(style = list(fontFamily = "Avenir next", fontSize = "16px")))) %>%
-  hc_colors(colors = pal(11)) %>%
+  # hc_colors(colors = pal(11)) %>%
   hc_chart(style = list(fontFamily = "Avenir next"
   ))
-
-
-
 ```
 
 ### Estatus
