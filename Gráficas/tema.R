@@ -2,7 +2,12 @@ library(tidyverse)
 library(highcharter)
 library(readr)
 library(lubridate)
-
+hcoptslang <- getOption("highcharter.lang")
+hcoptslang$weekdays<- c("Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado")
+hcoptslang$shortMonths <- c("Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dic")
+hcoptslang$months <- c("Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre")
+hcoptslang$thousandsSep <- c(",")
+options(highcharter.lang = hcoptslang)
 
 thm <- hc_theme(
   colors =c("#062647", "#0B3B5D","#0D4568", "#0F4F73", "#136489", "#17789E",
