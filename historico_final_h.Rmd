@@ -706,5 +706,12 @@ proy_vot %>%   hchart(hcaes(from = nombre, to  = votos, weight =total), type = "
 ```
 
 
+```{r}
+depa <- read_csv(here("Para Jesús",  "departamentos.csv"))
 
+
+
+
+
+```
 

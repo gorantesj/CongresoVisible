@@ -159,7 +159,8 @@ temas <- proyecto_final %>%
   group_by(fecha_inicio_cuatri) %>% 
   mutate(totales=sum(n, na.rm=T)) %>% 
   ungroup() %>% 
-  mutate(porc=round((n/totales)*100))
+  mutate(porc=round((n/totales)*100)) %>% 
+  filter(fecha_inicio_cuatri!="1994-07-20")
 
 temas %>% 
   hchart(hcaes(x = fecha_inicio_cuatri, y =porc, group= tema), type = "area") %>%
@@ -180,6 +181,7 @@ temas %>%
 
 temas %>% 
   filter(fecha_inicio_cuatri==max(fecha_inicio_cuatri)) %>% 
+  mutate(tema=paste(tema, paste0(porc, "%"), sep="\n")) %>% 
   hchart(hcaes(x = tema,  value = porc), type = "treemap")%>%
   hc_title(text = "Temas de los proyectos en el cuatrienio 2008")%>%
   hc_add_theme(thm)%>%
@@ -191,6 +193,7 @@ temas %>%
 
 temas %>% 
   filter(fecha_inicio_cuatri==min(fecha_inicio_cuatri)) %>% 
+  mutate(tema=paste(tema, paste0(porc, "%"), sep="\n")) %>% 
   hchart(hcaes(x = tema,  value = porc), type = "treemap")%>%
   hc_title(text = "Temas de los proyectos en el cuatrienio 1998")%>%
   hc_add_theme(thm)%>%
@@ -248,8 +251,8 @@ highchart() %>%
 ```{r proporcion-mujeres-1, echo =FALSE}
 
 aux <- congresistas %>% select(congresista_id = id, persona_id, cuatrienio_id, partido_id) %>%
-  left_join(legis %>%
-              select(legislatura_id = id, cuatrienio_id, legislatura, fechaInicio, fechaFin),
+  left_join(cuatri %>%
+              select(cuatrienio_id, fechaInicio=fecha_inicio_cuatri),
             by = "cuatrienio_id") %>%
   left_join(partidos %>%
               select(partido_id =id, partido  = nombre, color),
@@ -347,9 +350,7 @@ highchart() %>%
 
 
 aux <- congresistas %>% select(congresista_id = id, persona_id, cuatrienio_id, partido_id) %>%
-  left_join(legis %>%
-              select(legislatura_id = id, cuatrienio_id, legislatura, fechaInicio),
-            by = "cuatrienio_id") %>%
+  left_join(cuatri, by="cuatrienio_id")%>%
   left_join(partidos %>%
               select(partido_id =id, partido  = nombre, color),
             by = "partido_id" ) %>%
@@ -360,10 +361,11 @@ aux <- congresistas %>% select(congresista_id = id, persona_id, cuatrienio_id, p
   #   select(control_politico_id = id, tipo_control_politico_id) %>%
   #   filter(tipo_control_politico_id == 1),
   #   by = "control_politico_id") %>%
-  left_join(cuatri, by="cuatrienio_id")%>%
+
   group_by(partido, cuatrienio) %>%
-  summarise(n = n()) %>%
-  filter(n<2000 & n>400)
+  summarise(n = n()) %>% 
+  filter(n>50) %>% 
+  arrange((cuatrienio))
 
 # aux %>%
 #   hchart('bar', hcaes(x = 'partido', y = n, group = 'cuatrienio')) %>%
@@ -645,24 +647,21 @@ aux %>% # Una serie de tiempo, como la línea y el punto, evolucion
 ```{r}
 # Debates de control político citados por cuatrienio -------------------------------------------
 
-# aux <- control_pol_2 %>%
-#         select(control_politico_id = id, cuatrienio_id, tipo_control_politico_id, titulo) %>%
-#        left_join(legis %>%
-#         select(legislatura_id = id, cuatrienio_id, legislatura, fechaInicio) ,
-#         by = "cuatrienio_id") %>%
-#       filter(tipo_control_politico_id == 1, !grepl("Debat", titulo)) %>%
-#       left_join(cuatri, by = "cuatrienio_id") %>%
-#       group_by(cuatrienio) %>%
-#       summarise(n = n())
-# 
-# aux %>% # Una serie de tiempo, como la línea y el punto, evolucion
-#   hchart('bar', hcaes(x = 'cuatrienio', y = n)) %>%
-#   hc_tooltip(pointFormat = 'Núm. iniciativas gubernamentales : {point.n}')%>%
-#   hc_title(text = "Debates de control político citados por cuatrienio") %>%
-#   hc_xAxis(title = list(text = "")) %>%
-#   hc_yAxis(title = list(text = "")) %>%
-#   hc_plotOptions(bar=list(borderRadius =5, colorByPoint = F))%>%
-#   hc_add_theme(thm)
+aux <- control_pol_2 %>%
+        select(control_politico_id = id, cuatrienio_id, tipo_control_politico_id, titulo) %>%
+      filter(tipo_control_politico_id == 1, !grepl("Debat", titulo)) %>%
+      left_join(cuatri, by = "cuatrienio_id") %>%
+      group_by(cuatrienio) %>%
+      summarise(n = n())
+
+aux %>% # Una serie de tiempo, como la línea y el punto, evolucion
+  hchart('bar', hcaes(x = 'cuatrienio', y = n)) %>%
+  hc_tooltip(pointFormat = 'Núm. iniciativas gubernamentales : {point.n}')%>%
+  hc_title(text = "Debates de control político citados por cuatrienio") %>%
+  hc_xAxis(title = list(text = "")) %>%
+  hc_yAxis(title = list(text = "")) %>%
+  hc_plotOptions(bar=list(borderRadius =5, colorByPoint = F))%>%
+  hc_add_theme(thm)
 ```
 
 #### Votación
