@@ -533,6 +533,14 @@ agenda_legislativas <- read_csv("Bases de datos nuevas/agenda_legislativas.csv")
 
 
 
+# actividads  -------------------------------------------------------------
+
+act <- read_csv("Bases de datos nuevas/agenda_legislativa_actividads.csv")
+
+act2 <- read_csv("FinalesDeborah/cambio en campos/agenda_legislativa_actividads.csv")
+
+orden_dia<- tabla_res[[128]]
+orden_dia_programada<- tabla_res[[131]]
 
 # tipo citacions---------
 
@@ -620,7 +628,8 @@ proyecto_ley_autors <- read_csv(here::here("Para Jesús", "proyecto_ley_autors.c
 
 # transformación ----------------------------------------------------------
 
-crear_bases(campos %>% filter(num==121), tabla_res)
+crear_bases(campos %>% filter(num==128), tabla_res)
+
 personas <- read_csv("finales_hector/tablas nuevas/personas.csv")
 fb <- tabla_res[[91]]
 # Sandbox -----------------------------------------------------------------
