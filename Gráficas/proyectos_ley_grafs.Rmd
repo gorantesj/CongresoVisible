@@ -29,22 +29,7 @@ library(randomNames)
 
 
 ```{r}
-pal <- colorRampPalette(c("#66CCFF", "#17789E", "#6AEEB0", "#379E80", "#F78031", "#374B9E", "#666666"))
-thm <- hc_theme(
-  colors =c("#66CCFF", "#17789E", "#6AEEB0", "#379E80", "#F78031", "#374B9E", "#666666", "#ff7f00", "#a65628", "#f781bf"),
-  chart = list( style = list(fontFamily = "Bell MT", fontSize = "20px")),
-  title = list( style = list(  color = "#17789E", fontSize = "22px", fontWeight= 'bold')),
-  subtitle = list(  style = list(    color = "#666666"  ) ),
-  legend = list( itemStyle = list(  color = "black"   ),
-                 itemHoverStyle = list( color = "gray")  ),
-  tooltip = list(borderWidth =0, shadow = F, style = list( fontSize = "16px")),
-  yAxis = list(lineWidth = 3,title = list(style= list(fontSize = "16px")),
-               tickAmount = 5,
-               labels = list(style= list(fontSize = "15px"))),
-  xAxis = list(lineWidth = 0,title = list(style= list(fontSize = "16px")),
-               labels = list(style= list(fontSize = "18px"))),
-  plotOptions = list(bar = list(borderRadius =5), treemap = list(borderRadius =5, colorByPoint = T))
-)
+source(here("Gráficas", "tema.R"))
 proyecto <- read_csv(here("Para Jesús", "proyecto_leys.csv"))
 
 iniciativas <- read_csv(here("Para Jesús", "iniciativas.csv")) %>% 
@@ -165,7 +150,10 @@ proyecto_temas <- left_join(proyecto_final, temas, by=c("tema_id_principal"="id"
 proyecto_temas_senado <- proyecto_temas %>% 
                          filter(legislatura_id==max(legislatura_id) & corporacion=="Senado"& tipo_proyecto=="Proyecto de Ley") %>% 
                          count(tema) %>% 
-                         arrange(desc(n)) 
+                         arrange(desc(n)) %>% 
+                         mutate(totales=sum(n, na.rm=T), 
+                                porc=round((n/totales)*100, 1), 
+                                tema=paste(tema, paste0(porc, "%"), sep="\n"))
                          
 proyecto_temas_senado <- proyecto_temas_senado[1:10,]
 
@@ -182,8 +170,10 @@ proyecto_temas_senado <- proyecto_temas_senado[1:10,]
 proyecto_temas_camara <- proyecto_temas %>% 
                          filter(legislatura_id==max(legislatura_id) & corporacion!="Senado"& tipo_proyecto=="Proyecto de Ley") %>% 
                          count(tema) %>% 
-                         arrange(desc(n)) 
-                         
+                         arrange(desc(n))%>% 
+                         mutate(totales=sum(n, na.rm=T), 
+                                porc=round((n/totales)*100, 1), 
+                                tema=paste(tema, paste0(porc, "%"), sep="\n"))
 proyecto_temas_camara <- proyecto_temas_camara[1:10,]
 
   proyecto_temas_camara %>% 
@@ -204,7 +194,10 @@ proyecto_temas_camara <- proyecto_temas_camara[1:10,]
 ```{r}
 estado_proyecto_graf <- proyecto_final %>% 
                         filter(legislatura_id==max(legislatura_id) & corporacion=="Senado" & tipo_proyecto=="Proyecto de Ley")  %>% 
-                        count(estado_proyecto) 
+                        count(estado_proyecto)%>% 
+                         mutate(totales=sum(n, na.rm=T), 
+                                porc=round((n/totales)*100, 1), 
+                                estado_proyecto=paste(estado_proyecto, paste0(porc, "%"), sep="\n")) 
 
 
   estado_proyecto_graf %>% 
@@ -232,8 +225,11 @@ estado_proyecto_graf %>%
 ```{r}
 estado_proyecto_graf_camara <- proyecto_final %>% 
                         filter(legislatura_id==max(legislatura_id) & corporacion!="Senado" & tipo_proyecto=="Proyecto de Ley")  %>% 
-                        count(estado_proyecto) 
-  estado_proyecto_graf_camara %>% 
+                        count(estado_proyecto) %>% 
+                         mutate(totales=sum(n, na.rm=T), 
+                                porc=round((n/totales)*100, 1), 
+                                estado_proyecto=paste(estado_proyecto, paste0(porc, "%"), sep="\n")) 
+estado_proyecto_graf_camara %>% 
   hchart(hcaes(x = estado_proyecto,  value = n), type = "treemap")%>%
   hc_title(text = "Estado de los proyectos de la ley en la Cámara de Representantes")%>%
   hc_add_theme(thm)
@@ -321,16 +317,16 @@ citan_suma_re %>%
 
 ```{r}
 
-autor <- read_csv(here("Para Jesús", "proyecto_ley_autors.csv")) %>% 
+autor <- read_csv(here("Para Jesús", "proyecto_ley_autores_legislativos.csv")) %>% 
          filter(tipo_autor_id==28) %>%   
-         select(proyecto_ley_id, congresista_id)
+         select(proyecto_ley_id, persona_id)
 
 proy_ley <- proyecto_final %>% 
             select(id, titulo, legislatura_id)
 legis <- read_csv(here::here("Para Jesús", "legislaturas.csv"))
 autor <- left_join(autor, proy_ley, by=c("proyecto_ley_id"="id"))
-autor <- left_join(autor, personas, by=c("congresista_id"="persona_id"))
-autor <- left_join(autor, congresistas, by="congresista_id")
+autor <- left_join(autor, personas, by="persona_id")
+autor <- left_join(autor, congresistas, by="persona_id")
 
 
 

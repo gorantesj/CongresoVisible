@@ -1,0 +1,507 @@
+---
+title: "queries_congreso_hoy"
+output: html_document
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(echo = F, 
+                      message = F,
+                      warning = F, 
+                      fig.asp = 0.8, 
+                      fig.width = 7, 
+                      out.width = "100%",
+                      dpi = 300,
+                      collapse = TRUE,
+                      comment = "#>"
+) 
+```
+
+```{r, include = FALSE}
+library(DBI)
+library(tidyverse)
+library(RMySQL)
+library(highcharter)
+library(here)
+con <- dbConnect(
+  drv = RMariaDB::MariaDB(),
+  dbname = "prueba33_congresovisible",
+  host = "162.241.62.202",
+  username = "prueba33_cv_user",
+  password = "CongresoVisible2020",
+  port = 3306, timeout = 200, timezone = "America/Mexico_City"
+)
+
+setwd("~/Documents/Git/CongresoVisible/")
+source(here("Gráficas", "tema.R"))
+congresistas <- read_csv("Para Jesús/congresistas.csv")
+corporacion <- read_csv("Para Jesús/corporacions.csv")
+legislatura <- read_csv("Para Jesús/legislaturas.csv")
+partidos <- read_csv("Para Jesús/partidos.csv")
+cuatrienios <- read_csv("Para Jesús/cuatrienios.csv")
+personas <- read_csv("Para Jesús/personas.csv")
+reemplazos <- read_csv("Para Jesús/congresista_reemplazos.csv")
+sexo <- read_csv("Para Jesús/generos.csv")
+inv <- read_csv("Para Jesús/investigacions.csv")
+tipo_inv<-read_csv("Para Jesús/tipo_investigacions.csv")
+pl <- read_csv("Para Jesús/proyecto_leys.csv")
+pl_autor <- read_csv("Para Jesús/proyecto_ley_autors.csv")
+pl_tipo <- read_csv("Para Jesús/tipo_proyectos.csv")
+circ <- read_csv("Para Jesús/circunscripcions.csv")
+depa <- read_csv("Para Jesús/departamentos.csv")
+
+```
+
+```{r}
+
+
+ tbl(con, "congresistas") %>% 
+    left_join(
+      tbl(con, "legislaturas") %>%  select(legislatura = id, cuatrienio_id),
+      by = c("cuatrienio_id")
+    ) %>% 
+      left_join(
+      tbl(con, "corporacions") %>%  select(corporacion_id= id, corporacion =nombre),
+      by = c("corporacion_id")
+    ) %>% 
+  left_join(
+    tbl(con, "partidos") %>%  select(partido_id =id,partido  = nombre, color),
+    by = "partido_id" 
+  ) %>% 
+  left_join(
+    tbl(con, "personas") %>%  select(persona_id = id, nombres, apellidos),
+    by = c("persona_id")
+  ) %>%
+  mutate(nombre_congresista = paste(nombres, apellidos)) %>%
+  group_by(corporacion, partido, cuatrienio_id,legislatura, color) %>%
+  summarise(n = n(), miembros = str_flatten(nombre_congresista, collapse=", ")) %>% 
+  filter(corporacion == "Senado de la República", legislatura ==27) %>%
+  arrange(desc(n)) %>%
+  ungroup() %>% 
+  show_query()
+
+
+```
+
+
+
+
+```{r}
+aux <- congresistas %>%
+  left_join(legislatura %>%  select(legislatura = id, cuatrienio_id),
+            by = "cuatrienio_id") %>%
+  left_join(corporacion %>%  select(corporacion_id= id, corporacion =nombre),
+            by = "corporacion_id" ) %>%
+  left_join(partidos %>%  select(partido_id =id,partido  = nombre, color),
+            by = "partido_id" ) %>%
+  left_join(personas %>%  select(persona_id = id, nombres, apellidos),
+            by = "persona_id") %>%
+  mutate(nombre_congresista = paste(nombres, apellidos)) %>%
+  group_by(corporacion, partido, cuatrienio_id, legislatura, color) %>%
+  summarise(n = n(), miembros = paste(nombre_congresista, collapse=", "))
+
+aux %>% filter(corporacion == "Senado", legislatura ==27) %>%
+  arrange(desc(n)) %>%ungroup() %>% 
+  mutate(pct = round(n*100/sum(n))) %>% 
+  hchart(hcaes(label = partido, y = n, name = partido), type = "item") %>%
+  hc_title(text = "Asientos por partido") %>%
+  hc_subtitle(text = "Senadores") %>%
+  hc_tooltip(pointFormat = '<b>{point.n} </b>congresistas. ({point.pct}%)<br> Miembros: {point.miembros}') %>%
+  hc_add_theme( thm)
+
+```
+
+```{r}
+ tbl(con, "congresistas") %>% 
+    left_join(
+      tbl(con, "legislaturas") %>%  select(legislatura = id, cuatrienio_id),
+      by = c("cuatrienio_id")
+    ) %>% 
+      left_join(
+      tbl(con, "corporacions") %>%  select(corporacion_id= id, corporacion =nombre),
+      by = c("corporacion_id")
+    ) %>% 
+  left_join(
+    tbl(con, "partidos") %>%  select(partido_id =id,partido  = nombre, color),
+    by = "partido_id" 
+  ) %>% 
+  left_join(
+    tbl(con, "personas") %>%  select(persona_id = id, nombres, apellidos),
+    by = c("persona_id")
+  ) %>%
+  mutate(nombre_congresista = paste(nombres, apellidos)) %>%
+  group_by(corporacion, partido, cuatrienio_id,legislatura, color) %>%
+  summarise(n = n(), miembros = str_flatten(nombre_congresista, collapse=", ")) %>% 
+  filter(corporacion == "Cámara de Representantes", legislatura ==27) %>%
+  arrange(desc(n)) %>%
+  ungroup() %>% 
+  show_query()
+
+
+```
+
+```{r}
+aux %>% filter(corporacion == "Cámara de Representantes",  legislatura ==27) %>%
+  arrange(desc(n))%>%ungroup() %>% 
+  mutate(pct = round(n*100/sum(n))) %>% 
+  hchart(hcaes(label = partido, y = n, name = partido), type = "item") %>%
+  hc_title(text = "Asientos por partido") %>%
+  hc_subtitle(text = "Cámara de Representantes") %>%
+  hc_tooltip(pointFormat = '<b>{point.n} </b>congresistas. ({point.pct}%)<br> Miembros: {point.miembros}') %>%
+  hc_add_theme( thm)
+
+
+
+```
+
+```{r}
+
+ tbl(con, "congresistas") %>% 
+    left_join(
+      tbl(con, "legislaturas") %>%  select(legislatura = id, cuatrienio_id),
+      by = c("cuatrienio_id")
+    ) %>% 
+      left_join(
+      tbl(con, "corporacions") %>%  select(corporacion_id= id, corporacion =nombre),
+      by = c("corporacion_id")
+    ) %>% 
+  left_join(
+    tbl(con, "partidos") %>%  select(partido_id =id,partido  = nombre, color),
+    by = "partido_id" 
+  ) %>% 
+  left_join(
+    tbl(con, "personas") %>%  select(persona_id = id, nombres, apellidos, genero_id, fechaNacimiento),
+    by = c("persona_id")
+  ) %>%
+    left_join(
+    tbl(con, "generos") %>% select(genero_id = id, genero = nombre),
+    by = c("genero_id")
+  ) %>%
+  mutate(nombre_congresista = paste(nombres, apellidos),
+         edad =round(DATEDIFF(CURDATE(),fechaNacimiento)/365) ,
+         rango  = case_when(edad < 18 ~ "Menores de 18",
+                            edad>=18 & edad<30~ "18 - 29",
+                            edad>=30 & edad<40~ "30 - 39",
+                            edad>=40 & edad<50~ "40 - 49",
+                            edad>=50 & edad<60~ "50 - 59",
+                            edad>=60 & edad<70~ "60 - 69",
+                            edad>=70 & edad<80~ "70 - 79",
+                            edad>=80~ "80 o más")) %>%
+    select(legislatura, corporacion, partido, edad, rango, genero) %>%
+   filter(legislatura== 27) %>% 
+  group_by(partido) %>%  
+  summarise(mediana = mean(edad, na.rm=T)) %>%  
+  arrange(desc(mediana)) %>% 
+  show_query()
+
+```
+
+
+```{r, warning=F, message=F, echo=F }
+
+
+aux <-congresistas %>%
+  left_join(legislatura %>%  select(legislatura = id, cuatrienio_id),
+            by = "cuatrienio_id") %>%
+  left_join(corporacion %>%  select(id, corporacion =nombre),
+            by = c("corporacion_id" = "id")) %>%
+  left_join(partidos %>%  select(id,partido  = nombre, color),
+            by = c("partido_id" = "id")) %>%
+  left_join(personas %>%  select(persona_id = id, nombres, apellidos,
+                                 genero_id, fechaNacimiento),
+            by = "persona_id") %>%
+  left_join(sexo %>% select(genero_id = id, genero = nombre), by = "genero_id") %>%
+  mutate(nombre_congresista = paste(nombres, apellidos),
+         fechaNacimiento = dmy(fechaNacimiento),
+         edad =as.integer(as.numeric( today()-fechaNacimiento)/365 ),
+         rango  = case_when(edad < 18 ~ "Menores de 18",
+                            edad>=18 & edad<30~ "18 - 29",
+                            edad>=30 & edad<40~ "30 - 39",
+                            edad>=40 & edad<50~ "40 - 49",
+                            edad>=50 & edad<60~ "50 - 59",
+                            edad>=60 & edad<70~ "60 - 69",
+                            edad>=70 & edad<80~ "70 - 79",
+                            edad>=80~ "80 o más")) %>%
+  # filter( !is.na(edad)) %>%
+  select(legislatura, corporacion, partido, edad, rango, genero) %>%
+   filter(legislatura== 27)
+
+aux %>%  group_by(partido) %>%  summarise(mediana = median(edad)) %>%  
+  arrange(desc(mediana)) %>% 
+  hchart(hcaes(x = partido, y = mediana), type = "lollipop") %>% 
+  hc_title(text = "Edad mediana por partido") %>%
+  hc_xAxis(title = list(text = "Partido")) %>%
+  hc_yAxis(title = list(text = "Mediana")) %>% 
+  hc_tooltip(pointFormat = '{point.mediana} años') %>%
+  hc_add_theme(thm) %>% 
+  hc_chart(inverted= T, zoomType = "x")
+
+
+```
+
+```{r}
+
+ tbl(con, "congresistas") %>% 
+    left_join(
+      tbl(con, "legislaturas") %>%  select(legislatura = id, cuatrienio_id),
+      by = c("cuatrienio_id")
+    ) %>% 
+      left_join(
+      tbl(con, "corporacions") %>%  select(corporacion_id= id, corporacion =nombre),
+      by = c("corporacion_id")
+    ) %>% 
+  left_join(
+    tbl(con, "partidos") %>%  select(partido_id =id,partido  = nombre, color),
+    by = "partido_id" 
+  ) %>% 
+  left_join(
+    tbl(con, "personas") %>%  select(persona_id = id, nombres, apellidos, genero_id, fechaNacimiento),
+    by = c("persona_id")
+  ) %>%
+    left_join(
+    tbl(con, "generos") %>% select(genero_id = id, genero = nombre),
+    by = c("genero_id")
+  ) %>%
+  mutate(nombre_congresista = paste(nombres, apellidos),
+         edad =round(DATEDIFF(CURDATE(),fechaNacimiento)/365) ,
+         rango  = case_when(edad < 18 ~ "Menores de 18",
+                            edad>=18 & edad<30~ "18 - 29",
+                            edad>=30 & edad<40~ "30 - 39",
+                            edad>=40 & edad<50~ "40 - 49",
+                            edad>=50 & edad<60~ "50 - 59",
+                            edad>=60 & edad<70~ "60 - 69",
+                            edad>=70 & edad<80~ "70 - 79",
+                            edad>=80~ "80 o más")) %>%
+  count(corporacion, legislatura,cuatrienio_id, genero, rango) %>% 
+  filter( legislatura == 27,
+          corporacion == "Cámara de Representantes") %>%
+  mutate(n2 = case_when(genero == "Masculino"~ n*-1, T~ n)) %>% 
+  show_query()
+
+```
+
+
+```{r, warning=F, message=F, echo=F }
+
+aux <-congresistas %>%
+  left_join(legislatura %>%  select(legislatura = id, cuatrienio_id),
+            by = "cuatrienio_id") %>%
+  left_join(corporacion %>%  select(id, corporacion =nombre),
+            by = c("corporacion_id" = "id")) %>%
+  left_join(personas %>%  select(persona_id = id, nombres, apellidos,
+                                 genero_id, fechaNacimiento),
+            by = "persona_id") %>%
+  left_join(sexo %>% select(genero_id = id, genero = nombre), by = "genero_id") %>%
+  mutate(nombre_congresista = paste(nombres, apellidos),
+         fechaNacimiento = dmy(fechaNacimiento),
+         edad =as.integer(as.numeric( today()-fechaNacimiento)/365 ),
+         rango  = case_when(edad < 18 ~ "Menores de 18",
+                            edad>=18 & edad<30~ "18 - 29",
+                            edad>=30 & edad<40~ "30 - 39",
+                            edad>=40 & edad<50~ "40 - 49",
+                            edad>=50 & edad<60~ "50 - 59",
+                            edad>=60 & edad<70~ "60 - 69",
+                            edad>=70 & edad<80~ "70 - 79",
+                            edad>=80~ "80 o más")) %>%
+  count(corporacion, legislatura,cuatrienio_id, genero, rango)
+
+aux%>%  filter( legislatura == 28,
+               corporacion == "Cámara de Representantes") %>%
+  mutate(n2 = case_when(genero == "Masculino"~ n*-1, T~ n %>%  as.double()),
+         rango = factor(rango, c("Menores de 18", "18 - 29","30 - 39","40 - 49",
+                                 "50 - 59","60 - 69", "70 - 79", "80 o más"))) %>%
+  arrange(desc(rango) )%>%
+  hchart(hcaes(y = n2, x = rango, group = genero), type = "bar") %>%
+  hc_plotOptions(bar = list(stacking = T))%>%
+  hc_title(text = "Pirámide poblacional") %>%
+  hc_subtitle(text = "Cámara de Representantes") %>%
+  hc_xAxis(title = list(text = "Rango de edad")) %>%
+  hc_yAxis(title = list(text = "Total de congresistas"),
+           labels  = list( formatter = JS("function(){ return Math.abs(this.value); }")) )%>%
+  hc_tooltip(shared = T,
+             pointFormat = '{series.name}: <b>{point.n}</b><br/>',
+             headerFormat= '<span style="font-size: 20px"><b>Rango: {point.key} años</span><br/></b>') %>%
+  hc_add_theme( thm) %>% 
+  hc_colors(c("#0B3B5D", "#17789E"))
+```
+
+
+
+```{r}
+
+ tbl(con, "congresistas") %>% 
+    left_join(
+      tbl(con, "legislaturas") %>%  select(legislatura = id, cuatrienio_id),
+      by = c("cuatrienio_id")
+    ) %>% 
+      left_join(
+      tbl(con, "corporacions") %>%  select(corporacion_id= id, corporacion =nombre),
+      by = c("corporacion_id")
+    ) %>% 
+  left_join(
+    tbl(con, "partidos") %>%  select(partido_id =id,partido  = nombre, color),
+    by = "partido_id" 
+  ) %>% 
+  left_join(
+    tbl(con, "personas") %>%  select(persona_id = id, nombres, apellidos, genero_id, fechaNacimiento),
+    by = c("persona_id")
+  ) %>%
+    left_join(
+    tbl(con, "generos") %>% select(genero_id = id, genero = nombre),
+    by = c("genero_id")
+  ) %>%
+  mutate(nombre_congresista = paste(nombres, apellidos),
+         edad =round(DATEDIFF(CURDATE(),fechaNacimiento)/365) ,
+         rango  = case_when(edad < 18 ~ "Menores de 18",
+                            edad>=18 & edad<30~ "18 - 29",
+                            edad>=30 & edad<40~ "30 - 39",
+                            edad>=40 & edad<50~ "40 - 49",
+                            edad>=50 & edad<60~ "50 - 59",
+                            edad>=60 & edad<70~ "60 - 69",
+                            edad>=70 & edad<80~ "70 - 79",
+                            edad>=80~ "80 o más")) %>%
+  count(corporacion, legislatura,cuatrienio_id, genero, rango) %>% 
+  filter( legislatura == 27,
+          corporacion == "Senado de la República") %>%
+  mutate(n2 = case_when(genero == "Masculino"~ n*-1, T~ n)) %>% 
+  show_query()
+
+```
+
+
+
+```{r, warning=F, message=F, echo=F }
+
+aux%>%  filter( legislatura == 28,
+               corporacion == "Senado") %>% ungroup() %>%
+  mutate(n2 = case_when(genero == "Masculino"~ n*-1, T~ n %>%  as.double()),
+         rango = factor(rango, c("Menores de 18", "18 - 29","30 - 39","40 - 49",
+                                 "50 - 59","60 - 69", "70 - 79", "80 o más"))) %>%
+  arrange(desc(rango) )%>%
+  hchart(hcaes(y = n2, x = rango, group = genero), type = "bar") %>%
+  hc_plotOptions(bar = list(stacking = T))%>%
+  hc_title(text = "Pirámide poblacional") %>%
+  hc_subtitle(text = "Senado") %>%
+  hc_xAxis(title = list(text = "Rango de edad")) %>%
+  hc_yAxis(title = list(text = "Total de congresistas"), reversedStacks = F,
+           labels  = list( formatter = JS("function(){ return Math.abs(this.value); }")) )%>%
+  hc_tooltip(shared = T,
+             pointFormat = '{series.name}: <b>{point.n} </b><br/>',
+             headerFormat= '<span style="font-size: 20px"><b>Rango: {point.key} años</span><br/></b>') %>%
+  hc_add_theme( thm) %>% 
+  hc_colors(c("#0B3B5D", "#17789E"))
+
+
+```
+
+```{r}
+
+ tbl(con, "congresistas") %>% 
+    left_join(
+      tbl(con, "corporacions") %>%  select(corporacion_id = id, corporacion =nombre),
+      by = c("corporacion_id")
+    ) %>% 
+  count(persona_id, corporacion) %>%
+  group_by(corporacion) %>%  
+  summarise(media = mean(n), minimo = min(n), maxi = max(n), media2=round( mean(n), 1)) %>% 
+  show_query()
+
+
+  
+  
+  
+```
+
+```{r, warning=F, message=F, echo=F }
+
+
+aux <- congresistas %>%
+  left_join(corporacion %>%  
+            select(id, corporacion =nombre),
+            by = c("corporacion_id" = "id")) %>%
+  count(persona_id, corporacion) %>%
+  group_by(corporacion) %>%  summarise(media = mean(n), minimo = min(n), maxi = max(n), media2=round( mean(n), 1))
+
+aux %>%
+  hchart(hcaes(x = corporacion, high = maxi, low = minimo , group= corporacion),
+         type = "errorbar") %>%
+  hc_add_series(aux, hcaes(x = corporacion,  y= media, group= corporacion), type = "scatter") %>%
+  hc_plotOptions(errorbar = list(showInLegend = F,tooltip = list(enabled = F))) %>%
+  hc_title(text = "Cuatrienios ") %>%
+  hc_xAxis(title = list(text = "")) %>%
+  hc_yAxis(title = list(text = "Mínimo, promedio y máximo de cuatrienios"), min=0) %>%
+  hc_tooltip(pointFormat = 'Media: {point.media2}<br>Mínimo: {point.minimo}<br>Máximo: {point.maxi}') %>%
+  hc_chart(inverted= T) %>%
+  hc_add_theme( thm)%>% 
+  hc_colors(c("#0B3B5D", "#17789E"))
+```
+
+
+
+
+```{r}
+
+ tbl(con, "proyecto_ley_autor_legislativos") %>% 
+    left_join(
+      tbl(con, "congresistas") %>% 
+        select(congresista_id=persona_id , corporacion_id, cuatrienio_id),
+            by = "congresista_id") %>% 
+      left_join(
+      tbl(con, "personas") %>% 
+        select(congresista_id=id , genero_id, nombres, apellidos),
+            by = "congresista_id") %>% 
+  mutate(nombre_congresista = paste0(nombres, apellidos)) %>%
+  left_join(
+  tbl(con, "generos") %>% select(genero_id = id, genero = nombre),
+  by = c("genero_id")
+  )  %>% 
+  filter(cuatrienio_id== 8) %>%
+  select(congresista_id, proyecto_ley_id, genero) %>%
+  group_by(genero, proyecto_ley_id) %>%  
+  summarise() %>%  
+  count(genero) %>%
+   ungroup() %>% 
+  show_query()
+
+  
+
+
+  
+  
+  
+```
+
+
+```{r, warning=F, message=F, echo=F }
+
+pl_autor %>%
+   left_join(personas %>%  select(persona_id = id, genero_id, nombres, apellidos), 
+             by = "persona_id") %>% 
+  left_join(congresistas %>%
+              select(congresista_id = id,persona_id, corporacion_id, cuatrienio_id),
+            by = "persona_id") %>%
+   # left_join(legislatura %>%  select(legislatura = id, cuatrienio_id),
+   #           by = "cuatrienio_id") %>%
+  mutate(nombre_congresista = paste0(nombres, apellidos)) %>%
+  left_join(sexo %>% select(genero_id = id, genero = nombre), by = "genero_id") %>%
+  filter(cuatrienio_id== 8) %>%
+  select(congresista_id, proyecto_ley_id, genero) %>%
+  group_by(genero, proyecto_ley_id) %>%  summarise() %>%  count(genero) %>%
+   ungroup() %>% 
+   mutate(pct = round(n*100/sum(n))) %>% 
+  hchart(hcaes(x = genero, size = n, y= 1, group = genero), type = "bubble") %>%
+  hc_xAxis(lineWidth =0, labels = list(enabled= F), title= list(enabled= F)) %>%
+  hc_yAxis(lineWidth =0, labels = list(enabled= F), title= list(enabled= F),
+           gridLineWidth =0) %>%
+  hc_plotOptions(bubble = list(colorByPoint = F,
+                               dataLabels = list(enabled = T,
+                                                 # inside = F,
+                                                 style = list(fontSize = "20px")),
+                               maxSize = "50%",
+                               minSize = "20%",
+                               marker = list(fillOpacity = .91,lineWidth=0))) %>%
+  hc_title(text = "Total de Proyectos de Ley presentados por género") %>%
+  hc_add_theme( thm) %>%
+  hc_tooltip(pointFormat = "{point.pct}%")
+
+
+```
