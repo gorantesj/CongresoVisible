@@ -209,14 +209,24 @@ iniciativas %>%  mutate(activo=NA_character_,
 # Orden del día citación citantes  -------------------------------------------------------------
 
 
-citaciones <- read_csv("Bases de datos nuevas/control_politico_citantes.csv")
+citantes <- read_csv("Bases de datos nuevas/control_politico_citantes.csv")
+orden_diaitem <- tabla_res[[128]]
+citacions <- read.csv(here("Para Jesús", "control_politicos.csv"), sep="|")%>%
+  select(id_control=id, control_politico_id=agenda_legislativa_actividad_id)
+congresis <- read_csv(here("Para Jesús","congresistas.csv")) %>%
+             select(congresista_id=id, persona_id)
 
-citaciones %>%  mutate(activo=NA_character_,
+citantes_final <- citantes %>%
+        left_join( citacions,
+                      by="control_politico_id") %>%
+            left_join(congresis, by="persona_id") %>%
+            select(id, -control_politico_id, control_politico_id=id_control, congresista_id)%>%
+  mutate(activo=NA_character_,
                     usercreated=NA_character_,
                     usermodifed=NA_character_,
                     created_at=NA_character_,
                     updated_at=NA_character_) %>%
-  write_excel_csv("Bases de datos nuevas/control_politico_citantes.csv")
+  write_excel_csv("Para Jesús/control_politico_citantes.csv")
 
 # Control político -----------------------------------------------------------------
 
@@ -431,9 +441,8 @@ control_citados <- tabla_res[[125]] %>%
 
 
 
-
 #Pruebas
-personas <- read_csv("FinalesDeborah/tablas nuevas/personas.csv") %>%
+personas <- read_csv("FinalesDeborah/tablas nuevas/personas.csv")
 
 
 siestan <- inner_join(control_citados, personas, by=c("persona_id"="id"))
@@ -444,7 +453,7 @@ citacion_prueba <- tabla_res[[123]] %>% filter(itemdeordendeldia_ptr_id %in% mue
 
 
 #
-# prueba <- tabla_res[[124]] %>% filter(id %in% muestra)
+prueba <- tabla_res[[124]]
 
 orden_diaitem <- tabla_res[[128]] %>%
   select(id,  proposito, realizado, orden_del_dia_id)
@@ -629,7 +638,7 @@ proyecto_ley_autors <- read_csv(here::here("Para Jesús", "proyecto_ley_autors.c
 
 # transformación ----------------------------------------------------------
 
-crear_bases(campos %>% filter(num==128), tabla_res)
+crear_bases(campos %>% filter(num==121), tabla_res)
 
 personas <- read_csv("finales_hector/tablas nuevas/personas.csv")
 fb <- tabla_res[[91]]
