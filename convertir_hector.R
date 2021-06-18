@@ -239,23 +239,24 @@ orden_dia_cuatrienio <- tabla_res[[131]] %>%
 
 controlpol_orden <- left_join(controlpol_orden, orden_dia_cuatrienio,by=c("orden_del_dia_id"="id"))
 
-orden_dia_comision <- tabla_res[[130]] %>%
-           select(ordendeldia_id, comision_id)
+# orden_dia_comision <- tabla_res[[130]] %>%
+#            select(ordendeldia_id, comision_id)
+#
+#
+# controlpol_orden <- left_join(controlpol_orden, orden_dia_comision,by=c("orden_del_dia_id"="ordendeldia_id"))
+#
+# corpo <- tabla_res[[38]]
+# comi <- read_csv("finales/idénticas/comisions.csv") %>%
+#         select(id, corporacion_id)
+#
+# comi2 <- read_csv("finales/idénticas/corporacions.csv")
+# controlpol_orden <- left_join(controlpol_orden, comi,by=c("comision_id"="id"))
 
 
-controlpol_orden <- left_join(controlpol_orden, orden_dia_comision,by=c("orden_del_dia_id"="ordendeldia_id"))
-
-corpo <- tabla_res[[38]]
-
-comi <- read_csv("finales/idénticas/comisions.csv") %>%
-        select(id, corporacion_id)
-
-comi2 <- read_csv("finales/idénticas/corporacions.csv")
-controlpol_orden <- left_join(controlpol_orden, comi,by=c("comision_id"="id"))
 
 
-
-controlpol_orden <- rename(controlpol_orden, agenda_legislativa_actividad_id=itemdeordendeldia_ptr_id,
+controlpol_orden <- rename(controlpol_orden,
+                           agenda_legislativa_actividad_id=itemdeordendeldia_ptr_id,
                            tipo_control_politico_id=tipo_id,
                            titulo=proposito,
                            fecha=fecha_proposicion)
@@ -283,15 +284,15 @@ controlpol_orden <- rename(controlpol_orden, agenda_legislativa_actividad_id=ite
 #   return(preliminar)
 
 controlpol_orden <- select(controlpol_orden, id, agenda_legislativa_actividad_id,
-                           cuatrienio_id, legislatura_id,
-                           comision_id,corporacion_id, tipo_control_politico_id,
+                           cuatrienio_id, legislatura_id, tipo_control_politico_id,
                            estado_control_politico_id, titulo, fecha,
                            tema_principal_id:tags, detalles, gacetas, numero_proposicion, activo:updated_at) %>%
-  write_excel_csv("finales_hector/cambios en campos/control_politicos.csv") %>%
-  write_excel_csv("Para Jesús/control_politicos.csv")
+  write_excel_csv("finales_hector/cambios en campos/control_politicos.csv")
 
 
+write_delim(controlpol_orden, "Para Jesús/control_politicos.csv",delim="|")
 
+controlpol_orden %>% count(id) %>% arrange(desc(n))
 
 
 
