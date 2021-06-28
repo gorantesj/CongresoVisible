@@ -127,7 +127,7 @@ tbl(con,
 
 ```
 
-
+## No reacciona al filtro
 ```{r total-pl-comoley, echo =FALSE }
 
 
@@ -175,7 +175,7 @@ sancionados %>% # Ordenar por factores la y
 ```
 
 
-
+## No reacciona al filtro
 ```{r temas-recurrentes, echo =FALSE}
 
 temas_prueba <- proyecto_final %>% 
@@ -236,7 +236,7 @@ temas %>%
 
 
 
-
+## Sí reacciona al filtro
 ```{r temas-recurrentes-2, echo =FALSE}
 
 temas %>% 
@@ -251,47 +251,7 @@ temas %>%
 ```
 
 
-```{r}
-  tbl(con, "proyecto_leys") %>% 
-  count(tema_id_principal) %>% 
-  arrange(desc(n)) %>% 
-  head(10) %>% 
-  left_join(
-    tbl(con, "proyecto_leys") %>% 
-  select(id, cuatrienio_id, tema_id_principal),
-    by = c("tema_id_principal")
-  ) %>%
-  left_join(
-    tbl(con, "temas") %>% 
-      select(tema_id_principal=id, tema=nombre),
-    by = c("tema_id_principal")
-  ) %>% 
-  left_join(
-    tbl(con, "cuatrienios") %>%  
-      select(cuatrienio_id = id, cuatrienio=nombre), 
-    by = "cuatrienio_id" 
-  ) %>% 
-  count(cuatrienio, tema) %>% 
-  filter(n!=1) %>% 
-  filter(cuatrienio=="1998-2002") %>% 
-  show_query()
 
-
-```
-
-
-
-```{r}
-
-temas %>% 
-  filter(fecha_inicio_cuatri==min(fecha_inicio_cuatri)) %>% 
-  mutate(tema=paste(tema, paste0(porc, "%"), sep="\n")) %>% 
-  hchart(hcaes(x = tema,  value = porc), type = "treemap")%>%
-  hc_title(text = "Temas de los proyectos en el cuatrienio 1998")%>%
-  hc_add_theme(thm)%>%
-  hc_tooltip(pointFormat = 'Total: <b>{point.n}</b> <b> ({point.porc})%</b>')
-
-```
 
 ```{r}
 tbl(con, 
@@ -317,13 +277,13 @@ tbl(con,
       select(cuatrienio_id = id, cuatrienio=nombre), 
     by = "cuatrienio_id" 
   ) %>% 
-  mutate(dif=fecha-fecha_radicacion) %>% 
-  show_query()
-
+  mutate(dif=DATEDIFF(fecha,fecha_radicacion),
+         variable_deborah=round(dif/365, 2)) %>% 
+show_query()
 
 
 ```
-
+## No reacciona al filtro
 ```{r tiempo-sansionley, echo =FALSE}
 #PENDIENTE
 proyecto_estado <- read_csv(here("Para Jesús", "proyecto_ley_estados.csv")) %>% 
@@ -395,7 +355,7 @@ highchart() %>%
 ```
 
 
-
+## No reacciona al filtro
 
 ```{r proporcion-mujeres-1, echo =FALSE}
 
@@ -464,7 +424,7 @@ aux %>%
 
 
 
-
+## Sí reacciona al filtro
 ```{r proporcion-mujeres-2, echo =FALSE}
 # Por cuatrienio
 id <- 1
@@ -550,7 +510,7 @@ highchart() %>%
 ```
 
 
-
+## No reacciona al filtro
 ```{r  numero-iniciativas, echo =FALSE}
 # Número de iniciativas gubernamentales por cuatrienio  ---------------------------------------
 
@@ -589,15 +549,16 @@ aux %>% # Ordenar por factores la y
     by = c("persona_id")
   ) %>%
   mutate(edad =round(DATEDIFF(CURDATE(),fechaNacimiento)/365)) %>% 
-  group_by(partido) %>%
+  group_by(partido, cuatrienio) %>%
   summarise(mediana=mean(edad, na.rm=T)) %>% 
   ungroup() %>% 
+  filter(cuatrienio=="1998-2002") %>% 
   arrange(desc(mediana)) %>% 
   head(10) %>% 
   show_query()
          
 ```        
-         
+## Sí reacciona al filtro
 
 ```{r edad-partidista-old, echo =FALSE}
 # edad - composición partidista
@@ -667,14 +628,18 @@ barras_viejos %>%  hchart(hcaes(y = mediana, x = partido), type = "bar") %>%
     by = c("persona_id")
   ) %>%
   mutate(edad =round(DATEDIFF(CURDATE(),fechaNacimiento)/365)) %>% 
-  group_by(partido) %>%
+  group_by(partido, cuatrienio) %>%
   summarise(mediana=mean(edad, na.rm=T)) %>% 
   ungroup() %>% 
+  filter(!is.na(mediana)) %>% 
+  filter(cuatrienio=="1998-2002") %>% 
   arrange(mediana) %>% 
   head(10) %>% 
   show_query()
          
 ```  
+## Sí reacciona al filtro
+
 ```{r edad-partidista-young, echo =FALSE}
 
 barras_jov <- barras %>% 
@@ -695,13 +660,15 @@ barras_jov %>%  hchart(hcaes(y = mediana, x = partido), type = "bar") %>%
 ```
 
 # Queries para gráfica distribución de edad (6)
+## No reacciona al filtro
+
 
 ```{r}
 
- tbl(con, "congresistas") %>% 
+cuat1<- tbl(con, "congresistas") %>% 
   left_join(
       tbl(con, "cuatrienios") %>%  
-      select(cuatrienio_id=id, cuatrienio=nombre),
+      select(cuatrienio_id=id, cuatrienio=nombre, fechaInicio),
       by = c("cuatrienio_id")
     ) %>% 
   left_join(
@@ -712,15 +679,19 @@ barras_jov %>%  hchart(hcaes(y = mediana, x = partido), type = "bar") %>%
     tbl(con, "personas") %>%  select(persona_id = id, nombres, apellidos, genero_id, fechaNacimiento),
     by = c("persona_id")
   ) %>%
-  mutate(edad =round(DATEDIFF(CURDATE(),fechaNacimiento)/365)) %>% 
-  filter(cuatrienio=="1998-2002") %>% 
-  show_query()
+    filter(cuatrienio=="1998-2002", 
+         !is.na(fechaNacimiento)) %>%
+  mutate(fechaInicio=DATE(CONCAT(`fechaInicio`, '-07-20')),
+        edad = round(DATEDIFF(fechaInicio,fechaNacimiento)/365)) %>% 
+  filter(edad>=25) %>% 
+        collect()
+
          
 ```  
 
 ```{r}
 
- tbl(con, "congresistas") %>% 
+cuat2 <- tbl(con, "congresistas") %>% 
   left_join(
       tbl(con, "cuatrienios") %>%  
       select(cuatrienio_id=id, cuatrienio=nombre),
@@ -735,14 +706,15 @@ barras_jov %>%  hchart(hcaes(y = mediana, x = partido), type = "bar") %>%
     by = c("persona_id")
   ) %>%
   mutate(edad =round(DATEDIFF(CURDATE(),fechaNacimiento)/365)) %>% 
-  filter(cuatrienio=="2002-2006")%>% 
+  filter(cuatrienio=="2002-2006", 
+         !is.na(edad))%>%
   show_query()
          
 ``` 
 
 ```{r}
 
- tbl(con, "congresistas") %>% 
+cuat3 <- tbl(con, "congresistas") %>% 
   left_join(
       tbl(con, "cuatrienios") %>%  
       select(cuatrienio_id=id, cuatrienio=nombre),
@@ -757,14 +729,15 @@ barras_jov %>%  hchart(hcaes(y = mediana, x = partido), type = "bar") %>%
     by = c("persona_id")
   ) %>%
   mutate(edad =round(DATEDIFF(CURDATE(),fechaNacimiento)/365)) %>% 
-  filter(cuatrienio=="2006-2010")%>% 
+  filter(cuatrienio=="2006-2010", 
+         !is.na(edad))%>%
   show_query()
          
 ``` 
 
 ```{r}
 
- tbl(con, "congresistas") %>% 
+cuat4 <- tbl(con, "congresistas") %>% 
   left_join(
       tbl(con, "cuatrienios") %>%  
       select(cuatrienio_id=id, cuatrienio=nombre),
@@ -779,7 +752,8 @@ barras_jov %>%  hchart(hcaes(y = mediana, x = partido), type = "bar") %>%
     by = c("persona_id")
   ) %>%
   mutate(edad =round(DATEDIFF(CURDATE(),fechaNacimiento)/365)) %>% 
-  filter(cuatrienio=="2010-2014")%>% 
+  filter(cuatrienio=="2010-2014", 
+         !is.na(edad))%>%
   show_query()
          
 ``` 
@@ -787,7 +761,7 @@ barras_jov %>%  hchart(hcaes(y = mediana, x = partido), type = "bar") %>%
 
 ```{r}
 
- tbl(con, "congresistas") %>% 
+ cuat5 <- tbl(con, "congresistas") %>% 
   left_join(
       tbl(con, "cuatrienios") %>%  
       select(cuatrienio_id=id, cuatrienio=nombre),
@@ -802,7 +776,8 @@ barras_jov %>%  hchart(hcaes(y = mediana, x = partido), type = "bar") %>%
     by = c("persona_id")
   ) %>%
   mutate(edad =round(DATEDIFF(CURDATE(),fechaNacimiento)/365)) %>% 
-  filter(cuatrienio=="2014-2018")%>% 
+  filter(cuatrienio=="2014-2018",
+         !is.na(edad))%>%
   show_query()
          
 ``` 
@@ -811,7 +786,7 @@ barras_jov %>%  hchart(hcaes(y = mediana, x = partido), type = "bar") %>%
 
 ```{r}
 
- tbl(con, "congresistas") %>% 
+ cuat6 <- tbl(con, "congresistas") %>% 
   left_join(
       tbl(con, "cuatrienios") %>%  
       select(cuatrienio_id=id, cuatrienio=nombre),
@@ -826,10 +801,13 @@ barras_jov %>%  hchart(hcaes(y = mediana, x = partido), type = "bar") %>%
     by = c("persona_id")
   ) %>%
   mutate(edad =round(DATEDIFF(CURDATE(),fechaNacimiento)/365)) %>% 
-  filter(cuatrienio=="2018-2022")%>% 
+  filter(cuatrienio=="2018-2022",
+         !is.na(edad))%>%
   show_query()
          
 ``` 
+
+## No reacciona al filtro
 
 ```{r edad-partidista-distribucion, echo =FALSE}
 
@@ -900,6 +878,7 @@ hchart(
   show_query()
          
 ``` 
+## No reacciona al filtro
 
 ```{r}
 
@@ -956,7 +935,7 @@ tbl(con,
   show_query()
 ```
 
-
+## No reacciona al filtro
 
 ```{r iniciativas-gubernamentales-ley, echo =FALSE}
 

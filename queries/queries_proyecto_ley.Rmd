@@ -321,6 +321,7 @@ proyecto_temas_camara <- proyecto_temas_camara[1:10,]
   filter(corporacion=="Senado de la República") %>% 
   filter(legislatura_id==27) %>% 
   count(estado_proyecto) %>% 
+ OVER ()) THEN (`estado_proyecto`) WHEN NOT(`n` > AVG(`n`) OVER ()) THEN ('') END
   show_query()
 
 ```
@@ -668,7 +669,7 @@ partidos_suma_rep %>%
 ```
 
 ```{r}
-tbl(con, "proyecto_ley_autor_legislativos") %>% 
+aver <- tbl(con, "proyecto_ley_autor_legislativos") %>% 
   select(proyecto_ley_id, congresista_id) %>% 
 left_join(tbl(con, "proyecto_leys") %>% 
   select(id, legislatura_id, corporacion_id, tipo_proyecto_id, tema_id_principal),
@@ -683,7 +684,7 @@ left_join(tbl(con, "proyecto_leys") %>%
   left_join(
   tbl(con, "tipo_proyectos") %>%  select(id, tipo_proyecto = nombre),
   by = c("tipo_proyecto_id" = "id")
-  ) %>%
+  ) %>% 
  left_join(
  tbl(con, "personas") %>%  select(id, nombres, apellidos),
  by = c("congresista_id" = "id")
@@ -691,26 +692,40 @@ left_join(tbl(con, "proyecto_leys") %>%
  left_join(
  tbl(con, "congresistas") %>%  select(persona_id, partido_id),
  by = c("congresista_id" = "persona_id")
-  )%>%
+  ) %>%
  left_join(
- tbl(con, "partidos") %>%  select(id, partido=nombre),
+ tbl(con, "partidos") %>%  select(id, color, partido=nombre),
  by = c("partido_id" = "id")
   ) %>%  
   left_join(
   tbl(con, "temas") %>%  select(id, tema = nombre),
   by = c("tema_id_principal" = "id")
   )  %>% 
-  filter(tipo_proyecto=="Proyecto de Ley") %>% 
-  filter(corporacion=="Senado de la República") %>% 
-  filter(legislatura_id==27) %>% 
-  count(partido, tema) %>%  
+  distinct() %>% 
+inner_join(
+tbl(con, "proyecto_leys") %>% 
+  select(id, legislatura_id, corporacion_id, tipo_proyecto_id, tema_id_principal) %>% 
+  left_join(tbl(con, "temas") %>%  select(id, tema = nombre),
+  by = c("tema_id_principal" = "id")
+  ) %>% 
+  count(tema) %>% 
   arrange(desc(n)) %>% 
- filter(n>=30)  %>% 
+  head(20), 
+ by= "tema"
+) %>% 
+filter(tipo_proyecto=="Proyecto de Ley" & corporacion=="Senado de la República" & legislatura_id==27) %>% 
+count(partido, tema) %>% 
+filter(!is.na(partido)) %>%   
 show_query()
+  
+  
 
 
 
 ```
+
+
+
 
 ```{r}
 
@@ -729,14 +744,14 @@ partido_temas_sen<- autor %>%
               ungroup()
 
 
-partido_temas_sen %>% 
-  hchart(hcaes(from = partido, to  = tema, weight =n), type = "sankey") %>%
+aver  %>% 
+  hchart(hcaes(from = tema, to  = partido, weight =n), type = "sankey") %>%
   hc_title(text = "Temas recurrentes por partido político en el Senado")%>%
   hc_add_theme(thm)
 
 ```
 ```{r}
-tbl(con, "proyecto_ley_autor_legislativos") %>% 
+aver <- tbl(con, "proyecto_ley_autor_legislativos") %>% 
   select(proyecto_ley_id, congresista_id) %>% 
 left_join(tbl(con, "proyecto_leys") %>% 
   select(id, legislatura_id, corporacion_id, tipo_proyecto_id, tema_id_principal),
@@ -768,13 +783,13 @@ left_join(tbl(con, "proyecto_leys") %>%
   tbl(con, "temas") %>%  select(id, tema = nombre),
   by = c("tema_id_principal" = "id")
   )  %>% 
-  filter(tipo_proyecto=="Proyecto de Ley") %>% 
-  filter(corporacion=="Cámara de Representantes") %>% 
-  filter(legislatura_id==27) %>% 
+  # filter(tipo_proyecto=="Proyecto de Ley") %>% 
+  # filter(corporacion=="Cámara de Representantes") %>% 
+  # filter(legislatura_id==27) %>% 
   count(partido, tema) %>%  
   arrange(desc(n)) %>% 
  filter(n>=30)  %>% 
-show_query()
+collect()
 
 
 ```
@@ -792,7 +807,7 @@ partido_temas_sen<- autor %>%
               ungroup()
 
 
-partido_temas_sen %>% 
+aver  %>% 
   hchart(hcaes(from = partido, to  = tema, weight =n), type = "sankey") %>%
   hc_title(text = "Temas recurrentes por partido político en la Cámara de Representantes")%>%
   hc_add_theme(thm)
